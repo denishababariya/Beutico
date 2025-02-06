@@ -3060,7 +3060,7 @@ header.style-2 .nav-right::after {
   top: 0;
   height: 0%;
   width: 0.5px;
-  background: rgba(0, 0, 0, 0.6);
+  background: #ffb9c6;
   transition: 0.3s;
   transition-delay: 0.5s;
 }
@@ -3071,7 +3071,7 @@ header.style-2 .nav-right::after {
   bottom: 0;
   height: 0%;
   width: 0.5px;
-  background: pink;
+  background: #ffb9c6;
   transition: 0.3s;
   transition-delay: 0.6s;
 }
@@ -3082,7 +3082,7 @@ header.style-2 .nav-right::after {
   top: -0.5px;
   width: 0%;
   height: 0.5px;
-  background: pink;
+  background: #ffb9c6;
   transition: 0.3s;
   transition-delay: 0.9s;
 }
@@ -3093,7 +3093,7 @@ header.style-2 .nav-right::after {
   bottom: -0.5px;
   width: 0%;
   height: 0.5px;
-  background: pink;
+  background: #ffb9c6;
   transition: 0.3s;
   transition-delay: 0.9s;
 }
@@ -3256,6 +3256,7 @@ header.style-2 .nav-right::after {
   border: 1px solid #ececec;
   padding: 15px;
   transition: 0.5s;
+  box-shadow: #f5e6e8 0px 2px 5px;
 }
 .product-card .product-card-img {
   display: flex;
@@ -4232,7 +4233,7 @@ header.style-2 .nav-right::after {
   display: block;
   height: 1px;
   width: 15px;
-  background-color: var(--gray-dark, pink);
+  background-color: var(--gray-dark, #f18296);
   transition: all 0.3s ease-out;
 }
 .product-view-modal .modal-dialog .modal-content .modal-body .close-btn::after {
@@ -4249,7 +4250,8 @@ header.style-2 .nav-right::after {
   Just For You section
 ........................*/
 .just-for-section {
-  background-color: #fcf7ee;
+  /* background-color: #e91e6312; */
+  background-color: #ffe0e454;
   padding: 100px 0 100px 0;
   position: relative;
   z-index: 1;
@@ -6964,7 +6966,7 @@ header.style-2 .nav-right::after {
  Category page section
 ........................*/
 .category-card {
-  border: 1px solid var(--primary-color1);
+  border: 1px solid #bd5360;
   transition: 0.5s;
 }
 .category-card .category-card-img {
@@ -6976,7 +6978,7 @@ header.style-2 .nav-right::after {
   }
 }
 .category-card .category-card-content {
-  border-top: 1px solid var(--primary-color1);
+  border-top: 1px solid #bd5360;
   transition: 0.75s;
   position: relative;
   overflow: hidden;
@@ -6985,7 +6987,7 @@ header.style-2 .nav-right::after {
 .category-card .category-card-content a {
   text-align: center;
   padding: 20px 0;
-  color: var(--primary-color1);
+  color: #bd5360;
   font-family: var(--font-Jost);
   font-size: 20px;
   font-weight: 600;
@@ -7006,7 +7008,7 @@ header.style-2 .nav-right::after {
   height: 150%;
   width: 150%;
   bottom: 0;
-  background-color: var(--primary-color1);
+  background-color: #bd5360;
   transform-origin: right;
   transform: skewX(-45deg) scale(0, 1);
   z-index: -1;
@@ -7048,7 +7050,7 @@ header.style-2 .nav-right::after {
 }
 
 .category-section .category-section-title p {
-  color: var(--primary-color1);
+  color: #bd5360;
   font-family: var(--font-Jost);
   font-size: 13px;
   font-weight: 400;
@@ -10766,8 +10768,8 @@ header.style-2 .nav-right::after {
 home2 Topbar Css
 =======================================*/
 .top-bar2 {
-  background-color: var(--primary-color1);
-  padding: 15px 0;
+  background-color: rgb(189 83 117);
+  padding: 4px 0;
 }
 @media (max-width: 576px) {
   .top-bar2 {
