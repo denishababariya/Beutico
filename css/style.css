@@ -13,12 +13,12 @@
   --font-Jost: "Jost", sans-serif;
   --font-Kalam: "Kalam", sans-serif;
   --white-color: #fff;
-  --pink-color: #e24788;
-  --title-color: rgb(0, 0, 0);
-  --text-color: rgb(0, 0, 0);
-  --text-color2: rgb(202, 81, 138);
-  --text-color3: rgb(243, 117, 170);
-  --primary-color1: rgb(0, 0, 0);
+  --black-color: #000000;
+  --title-color: #13141a;
+  --text-color: #212121;
+  --text-color2: #ababab;
+  --text-color3: #969696;
+  --primary-color1: #222222;
   --bg-color: #f2f2f2;
 }
 
@@ -519,7 +519,7 @@ p {
   border-radius: 200px;
   transition: 0.5s;
 }
-.primary-btn3.pink-bg {
+.primary-btn3.black-bg {
   background-color: var(--primary-color1);
   color: var(--white-color);
 }
@@ -727,7 +727,7 @@ input, .comment-section .contact-form textarea, .form-inner textarea {
   display: block;
   height: 1px;
   width: 15px;
-  background-color: var(--gray-dark, pink);
+  background-color: var(--gray-dark, #000);
   transition: all 0.3s ease-out;
 }
 .page-load-modal .modal .modal-dialog .modal-content .modal-body .popup-wrapper .modal-clode-btn::after {
@@ -2317,7 +2317,7 @@ header.style-2 .nav-right .search-area .search-input .serch-close::before, heade
   display: block;
   height: 1px;
   width: 15px;
-  background-color: var(--gray-dark, pink);
+  background-color: var(--gray-dark, #000);
   transition: all 0.3s ease-out;
 }
 header.style-2 .nav-right .search-area .search-input .serch-close::after {
@@ -3071,7 +3071,7 @@ header.style-2 .nav-right::after {
   bottom: 0;
   height: 0%;
   width: 0.5px;
-  background: pink;
+  background: #000;
   transition: 0.3s;
   transition-delay: 0.6s;
 }
@@ -3082,7 +3082,7 @@ header.style-2 .nav-right::after {
   top: -0.5px;
   width: 0%;
   height: 0.5px;
-  background: pink;
+  background: #000;
   transition: 0.3s;
   transition-delay: 0.9s;
 }
@@ -3093,7 +3093,7 @@ header.style-2 .nav-right::after {
   bottom: -0.5px;
   width: 0%;
   height: 0.5px;
-  background: pink;
+  background: #000;
   transition: 0.3s;
   transition-delay: 0.9s;
 }
@@ -4232,7 +4232,7 @@ header.style-2 .nav-right::after {
   display: block;
   height: 1px;
   width: 15px;
-  background-color: var(--gray-dark, pink);
+  background-color: var(--gray-dark, #000);
   transition: all 0.3s ease-out;
 }
 .product-view-modal .modal-dialog .modal-content .modal-body .close-btn::after {
@@ -8654,7 +8654,7 @@ header.style-2 .nav-right::after {
   display: block;
   height: 1px;
   width: 15px;
-  background-color: var(--gray-dark, pink);
+  background-color: var(--gray-dark, #000);
   transition: all 0.3s ease-out;
 }
 @media (max-width: 576px) {
@@ -8815,6 +8815,8 @@ header.style-2 .nav-right::after {
   background-size: cover;
   background-repeat: no-repeat;
   transition: transform 0.5s ease-out;
+
+  
 }
 .shop-details-top-section .shop-details-img .nav-pills {
   position: absolute;
@@ -10497,7 +10499,7 @@ header.style-2 .nav-right::after {
   }
 }
 .faq-section .faq-title h1 svg {
-  fill: pink;
+  fill: #000;
   margin-left: 15px;
 }
 .faq-section .faq-title h1 span {
@@ -12318,10 +12320,10 @@ Testimonial-Section Css
   white-space: nowrap;
 }
 .eg-table thead tr th:first-child {
-  border-left: 1px solid pink;
+  border-left: 1px solid #000;
 }
 .eg-table thead tr th:last-child {
-  border-right: 1px solid pink;
+  border-right: 1px solid #000;
 }
 @media (max-width: 767px) {
   .eg-table thead tr th {
