@@ -10768,7 +10768,7 @@ header.style-2 .nav-right::after {
 home2 Topbar Css
 =======================================*/
 .top-bar2 {
-  background-color: rgb(189 83 117);
+  background-color: #1b1b1b;
   padding: 4px 0;
 }
 @media (max-width: 576px) {
