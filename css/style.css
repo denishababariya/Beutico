@@ -8242,7 +8242,7 @@ header.style-2 .nav-right::after {
 }
 .shop-details-content .product-info {
   padding-top: 25px;
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
 }
 .shop-details-content .product-info .product-info-list {
   margin: 0;
