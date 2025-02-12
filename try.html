@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>360° Product Viewer</title>
+  <style>
+    body {
+      margin: 0;
+      background: #eee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    /* Viewer માટેનું સ્ટાઈલ */
+    #viewer {
+      width: 400px;
+      height: 400px;
+      background-size: cover;
+      background-position: center;
+      cursor: grab;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div id="viewer"></div>
+
+  <script>
+    // પ્રોડક્ટના 360° દર્શાવવાના માટેની ઈમેજ URLs
+    const images = [
+      "https://placehold.co/400x400?text=Angle+1",
+      "https://placehold.co/400x400?text=Angle+2",
+      "https://placehold.co/400x400?text=Angle+3",
+      "https://placehold.co/400x400?text=Angle+4",
+      "https://placehold.co/400x400?text=Angle+5",
+      "https://placehold.co/400x400?text=Angle+6",
+      "https://placehold.co/400x400?text=Angle+7",
+      "https://placehold.co/400x400?text=Angle+8",
+      "https://placehold.co/400x400?text=Angle+9",
+      "https://placehold.co/400x400?text=Angle+10"
+      // જો તમારે વધુ ઈમેજ જોઈએ, તો અહીં ઉમેરો.
+    ];
+    
+    let currentImage = 0;         // હાલ બતાવી રહેલી ઈમેજ index
+    const viewer = document.getElementById('viewer');
+    let isDragging = false;       // ડ્રેગ થવાનું state track કરવા માટે
+    let startX = 0;               // ડ્રેગ શરુ થતા સમયે X પોઝિશન
+    const sensitivity = 10;       // સેંસિટિવિટી - માઉસની આંદોલનથી બદલાવ માટેના પિક્સલ
+    
+    // viewer ને અપડેટ કરવા માટેનું ફંક્શન
+    function updateViewer() {
+      viewer.style.backgroundImage = "url('" + images[currentImage] + "')";
+    }
+    
+    // શરૂઆતમાં પહેલી ઈમેજ દર્શાવો
+    updateViewer();
+    
+    // માઉસ સાથે ડ્રેગ કરવા માટેના ઇવેન્ટ હેન્ડલર્સ
+    viewer.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      startX = e.clientX;
+    });
+    
+    window.addEventListener('mouseup', () => {
+      isDragging = false;
+    });
+    
+    window.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+      const diff = e.clientX - startX;
+      if (Math.abs(diff) > sensitivity) {
+        if (diff > 0) {
+          // જો માઉસ જમણ તરફ ખેંચે, તો ઈમેજ index વધારવું
+          currentImage = (currentImage + 1) % images.length;
+        } else {
+          // જો માઉસ ડાબી તરફ ખેંચે, તો ઈમેજ index ઘટાડવું
+          currentImage = (currentImage - 1 + images.length) % images.length;
+        }
+        updateViewer();
+        startX = e.clientX;
+      }
+    });
+    
+    // Touch support (mobile માટે)
+    viewer.addEventListener('touchstart', (e) => {
+      isDragging = true;
+      startX = e.touches[0].clientX;
+    });
+    
+    window.addEventListener('touchend', () => {
+      isDragging = false;
+    });
+    
+    window.addEventListener('touchmove', (e) => {
+      if (!isDragging) return;
+      const diff = e.touches[0].clientX - startX;
+      if (Math.abs(diff) > sensitivity) {
+        if (diff > 0) {
+          currentImage = (currentImage + 1) % images.length;
+        } else {
+          currentImage = (currentImage - 1 + images.length) % images.length;
+        }
+        updateViewer();
+        startX = e.touches[0].clientX;
+      }
+    });
+  </script>
+</body>
+</html>
+
