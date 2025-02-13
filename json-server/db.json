@@ -105,5 +105,43 @@
     { "id": 90, "category_id": 6, "sub_name": "Hair Chains" },
     { "id": 91, "category_id": 6, "sub_name": "Tiara & Crowns" },
     { "id": 92, "category_id": 6, "sub_name": "Hair Extensions" }
+  ],
+  "offer": [
+    {
+      "id": 1,
+      "product_id": [1, 2, 3, 4, 5, 6],
+      "offer_type": "Discount",
+      "offer_value": 10,
+      "offer_start_date": "2022-01-01",
+      "offer_end_date": "2022-01-31"
+    },
+    {
+      "id": 2,
+      "product_id": [7, 8, 9, 10, 11, 12],
+      "offer_type": "Buy One Get One Free",
+      "offer_value": 0,
+      "offer_start_date": "2022-02-01",
+      "offer_end_date": "2022-02-28"
+    }
+  ],
+  "review": [
+    {
+      "id": 1,
+      "product_id": 1,
+      "rating": 5,
+      "review": "Good product",
+      "reviewer": "John Doe",
+      "reviewer_email": "johndoe@gmail.com",
+      "review_date": "2022-01-01"
+    },
+    {
+      "id": 2,
+      "product_id": 2,
+      "rating": 4,
+      "review": "Good product...!",
+      "reviewer": "Jeni Doe",
+      "reviewer_email": "jenidoe@gmail.com",
+      "review_date": "2022-01-01"
+      }
   ]
 }

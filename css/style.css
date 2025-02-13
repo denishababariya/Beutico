@@ -107,7 +107,28 @@ p {
   clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
   object-fit: cover;
 }
+.x_shap .swiper-slide a:hover::before {
+  transform-origin: left;
+  animation: shine 0.75s;
+}
+.x_shap .swiper-slide a::before {
+  content: "";
+  background: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  left: -75%;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  transform: skewX(-25deg);
+  transform-origin: right;
+  transition: transform 0.4s ease-in;
+}
 
+.x_shap .swiper-slide a 
+{
+  position: relative;
+  display: block;
+}
 @media (min-width: 992px) and (max-width: 1199px) {
   .pt-120 {
     padding-top: 100px;
