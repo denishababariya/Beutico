@@ -1,11 +1,31 @@
 {
   "category": [
-    { "id": 1, "cat_name": "Skin" },
-    { "id": 2, "cat_name": "Makeup" },
-    { "id": 3, "cat_name": "Hair" },
-    { "id": 4, "cat_name": "Baby & Kids" },
-    { "id": 5, "cat_name": "Jewelry" },
-    { "id": 6, "cat_name": "Accessories" }
+    {
+      "id": 1,
+      "cat_name": "Skin",
+      "cat_img": "/img/home2/home2-category-img2.png"
+    },
+    {
+      "id": 3,
+      "cat_name": "Hair",
+      "cat_img": "/img/home2/home2-category-img3.png"
+    },
+    {
+      "id": 4,
+      "cat_name": "Baby & Kids",
+      "cat_img": "/img/home2/home2-category-img4.png"
+    },
+    {
+      "id": 2,
+      "cat_name": "Makeup",
+      "cat_img": "/img/home2/home2-category-img5.png"
+    },
+    { "id": 5, "cat_name": "Jewelry", "cat_img": "/img/home1/HC1.png" },
+    {
+      "id": 6,
+      "cat_name": "Accessories",
+      "cat_img": "/img/home2/home2-category-img6.png"
+    }
   ],
   "subcategory": [
     { "id": 1, "category_id": 1, "sub_name": "Cleanser" },
@@ -106,6 +126,1677 @@
     { "id": 91, "category_id": 6, "sub_name": "Tiara & Crowns" },
     { "id": 92, "category_id": 6, "sub_name": "Hair Extensions" }
   ],
+
+ "product": [
+  {
+    "id": 1,
+    "cat_id": 1,
+    "sub_id": 1,
+    "products": [
+      {
+        "id": 1,
+        "sku": "CL-001",
+        "name": "Foaming Cleanser",
+        "description": "Gentle foaming action cleanses deeply.",
+        "price": 15.99,
+        "weight": "150ml",
+        "stock": 80,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/cl001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "cat_id": 1,
+    "sub_id": 2,
+    "products": [
+      {
+        "id": 1,
+        "sku": "EX-001",
+        "name": "Mild Exfoliator",
+        "description": "Removes dead skin cells gently.",
+        "price": 18.5,
+        "weight": "100ml",
+        "stock": 60,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/ex001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "cat_id": 1,
+    "sub_id": 3,
+    "products": [
+      {
+        "id": 1,
+        "sku": "SE-001",
+        "name": "Vitamin C Serum",
+        "description": "Brightens and evens skin tone.",
+        "price": 25.0,
+        "weight": "30ml",
+        "stock": 50,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/se001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "cat_id": 1,
+    "sub_id": 4,
+    "products": [
+      {
+        "id": 1,
+        "sku": "FO-001",
+        "name": "Rosehip Face Oil",
+        "description": "Hydrates and restores glow.",
+        "price": 19.99,
+        "weight": "50ml",
+        "stock": 60,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/fo001.jpg"]
+      },
+      {
+        "sku": "FO-002",
+        "name": "Argan Face Oil",
+        "description": "Nourishes and protects skin.",
+        "price": 21.5,
+        "weight": "50ml",
+        "stock": 55,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/fo002.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "cat_id": 1,
+    "sub_id": 5,
+    "products": [
+      {
+        "id": 1,
+        "sku": "SC-001",
+        "name": "SPF 50 Sunscreen",
+        "description": "High protection against UV rays.",
+        "price": 22.99,
+        "weight": "100ml",
+        "stock": 45,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/sc001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "cat_id": 1,
+    "sub_id": 6,
+    "products": [
+      {
+        "id": 1,
+        "sku": "MO-001",
+        "name": "Hydrating Moisturizer",
+        "description": "Long-lasting hydration.",
+        "price": 20.5,
+        "weight": "200ml",
+        "stock": 70,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/mo001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "cat_id": 1,
+    "sub_id": 7,
+    "products": [
+      {
+        "id": 1,
+        "sku": "CP-001",
+        "name": "AHA BHA Peel",
+        "description": "Resurfaces skin for a smooth finish.",
+        "price": 30.0,
+        "weight": "50ml",
+        "stock": 40,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/cp001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "cat_id": 1,
+    "sub_id": 8,
+    "products": [
+      {
+        "id": 1,
+        "sku": "TO-001",
+        "name": "Balancing Toner",
+        "description": "Restores skin's pH balance.",
+        "price": 14.99,
+        "weight": "200ml",
+        "stock": 65,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/to001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "cat_id": 1,
+    "sub_id": 9,
+    "products": [
+      {
+        "id": 1,
+        "sku": "FM-001",
+        "name": "Clay Face Mask",
+        "description": "Detoxifies and purifies skin.",
+        "price": 17.99,
+        "weight": "100ml",
+        "stock": 55,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/fm001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "cat_id": 1,
+    "sub_id": 10,
+    "products": [
+      {
+        "id": 1,
+        "sku": "EC-001",
+        "name": "Hydrating Eye Cream",
+        "description": "Reduces puffiness and dark circles.",
+        "price": 22.99,
+        "weight": "30ml",
+        "stock": 45,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/ec001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "cat_id": 1,
+    "sub_id": 11,
+    "products": [
+      {
+        "id": 1,
+        "sku": "FW-001",
+        "name": "Tea Tree Face Wash",
+        "description": "Cleanses and fights acne.",
+        "price": 14.99,
+        "weight": "150ml",
+        "stock": 70,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/fw001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "cat_id": 1,
+    "sub_id": 12,
+    "products": [
+      {
+        "id": 1,
+        "sku": "SS-001",
+        "name": "Long-Lasting Setting Spray",
+        "description": "Keeps makeup fresh all day.",
+        "price": 16.99,
+        "weight": "100ml",
+        "stock": 50,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/ss001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "cat_id": 1,
+    "sub_id": 13,
+    "products": [
+      {
+        "id": 1,
+        "sku": "CC-001",
+        "name": "Full Coverage Concealer",
+        "description": "Covers blemishes and dark spots.",
+        "price": 12.99,
+        "weight": "10ml",
+        "stock": 65,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/cc001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "cat_id": 1,
+    "sub_id": 14,
+    "products": [
+      {
+        "id": 1,
+        "sku": "EX-001",
+        "name": "Gentle Face Exfoliant",
+        "description": "Removes dead skin cells and brightens.",
+        "price": 18.99,
+        "weight": "120ml",
+        "stock": 60,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/ex001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "cat_id": 1,
+    "sub_id": 15,
+    "products": [
+      {
+        "id": 1,
+        "sku": "PR-001",
+        "name": "Silk Finish Primer",
+        "description": "Smoothens skin for makeup application.",
+        "price": 15.99,
+        "weight": "50ml",
+        "stock": 55,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/pr001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "cat_id": 1,
+    "sub_id": 16,
+    "products": [
+      {
+        "id": 1,
+        "sku": "BC-001",
+        "name": "Moisturizing Body Cleanser",
+        "description": "Gently cleanses and hydrates skin.",
+        "price": 19.99,
+        "weight": "250ml",
+        "stock": 80,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/bc001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "cat_id": 1,
+    "sub_id": 17,
+    "products": [
+      {
+        "id": 1,
+        "sku": "BG-001",
+        "name": "Aloe Vera Body Gel",
+        "description": "Soothes and cools the skin.",
+        "price": 14.99,
+        "weight": "200ml",
+        "stock": 75,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/bg001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "cat_id": 1,
+    "sub_id": 18,
+    "products": [
+      {
+        "id": 1,
+        "sku": "BB-001",
+        "name": "Nourishing Body Balm",
+        "description": "Deeply moisturizes dry skin.",
+        "price": 24.99,
+        "weight": "150ml",
+        "stock": 50,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/bb001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "cat_id": 1,
+    "sub_id": 19,
+    "products": [
+      {
+        "id": 1,
+        "sku": "BW-001",
+        "name": "Coconut Milk Body Wash",
+        "description": "Softens and cleanses the skin.",
+        "price": 17.99,
+        "weight": "300ml",
+        "stock": 65,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/bw001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "cat_id": 1,
+    "sub_id": 20,
+    "products": [
+      {
+        "id": 1,
+        "sku": "BS-001",
+        "name": "Coffee Body Scrub",
+        "description": "Exfoliates and smoothens skin.",
+        "price": 20.99,
+        "weight": "200g",
+        "stock": 55,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/bs001.jpg"]
+      }
+    ]
+  },
+
+  {
+    "id": 21,
+    "cat_id": 2,
+    "sub_id": 21,
+    "products": [
+      {
+        "id": 1,
+        "sku": "PR-001",
+        "name": "Hydrating Primer",
+        "description": "Prepares and smooths skin.",
+        "price": 15.99,
+        "weight": "30ml",
+        "stock": 40,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/pr001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "cat_id": 2,
+    "sub_id": 22,
+    "products": [
+      {
+        "id": 1,
+        "sku": "FD-001",
+        "name": "Matte Foundation",
+        "description": "Long-lasting and oil-free.",
+        "price": 25.5,
+        "weight": "50ml",
+        "stock": 30,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/fd001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "cat_id": 2,
+    "sub_id": 23,
+    "products": [
+      {
+        "id": 1,
+        "sku": "CC-001",
+        "name": "Full Coverage Concealer",
+        "description": "Covers dark circles and blemishes.",
+        "price": 12.99,
+        "weight": "10ml",
+        "stock": 50,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/cc001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "cat_id": 2,
+    "sub_id": 24,
+    "products": [
+      {
+        "id": 1,
+        "sku": "PW-001",
+        "name": "Translucent Setting Powder",
+        "description": "Controls shine and sets makeup.",
+        "price": 18.99,
+        "weight": "20g",
+        "stock": 45,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/pw001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "cat_id": 2,
+    "sub_id": 25,
+    "products": [
+      {
+        "id": 1,
+        "sku": "BL-001",
+        "name": "Rosy Glow Blush",
+        "description": "Gives cheeks a natural flush.",
+        "price": 14.5,
+        "weight": "15g",
+        "stock": 35,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/bl001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "cat_id": 2,
+    "sub_id": 26,
+    "products": [
+      {
+        "id": 1,
+        "sku": "BR-001",
+        "name": "Sun-Kissed Bronzer",
+        "description": "Adds warmth and dimension.",
+        "price": 16.99,
+        "weight": "15g",
+        "stock": 38,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/br001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "cat_id": 2,
+    "sub_id": 27,
+    "products": [
+      {
+        "id": 1,
+        "sku": "HL-001",
+        "name": "Glow Highlighter",
+        "description": "Enhances and illuminates skin.",
+        "price": 19.99,
+        "weight": "10g",
+        "stock": 25,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/hl001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "cat_id": 2,
+    "sub_id": 28,
+    "products": [
+      {
+        "id": 1,
+        "sku": "CT-001",
+        "name": "Contour Stick",
+        "description": "Defines and sculpts features.",
+        "price": 17.5,
+        "weight": "12g",
+        "stock": 33,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/ct001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "cat_id": 2,
+    "sub_id": 29,
+    "products": [
+      {
+        "id": 1,
+        "sku": "ES-001",
+        "name": "Neutral Eyeshadow Palette",
+        "description": "A blend of warm and cool tones for everyday wear.",
+        "price": 25.99,
+        "weight": "12g",
+        "stock": 40,
+        "brand": "Orna Beauty",
+        "images": ["https://example.com/images/es001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "cat_id": 2,
+    "sub_id": 30,
+    "products": [
+      {
+        "id": 1,
+        "sku": "EL-001",
+        "name": "Waterproof Liquid Eyeliner",
+        "description": "Long-lasting and smudge-proof formula.",
+        "price": 12.99,
+        "weight": "5ml",
+        "stock": 60,
+        "brand": "Orna Beauty",
+        "images": ["https://example.com/images/el001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "cat_id": 2,
+    "sub_id": 31,
+    "products": [
+      {
+        "id": 1,
+        "sku": "MS-001",
+        "name": "Volumizing Mascara",
+        "description": "Gives dramatic volume and length.",
+        "price": 14.99,
+        "weight": "10ml",
+        "stock": 50,
+        "brand": "Orna Beauty",
+        "images": ["https://example.com/images/ms001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "cat_id": 2,
+    "sub_id": 32,
+    "products": [
+      {
+        "id": 1,
+        "sku": "LB-001",
+        "name": "Hydrating Lip Balm",
+        "description": "Moisturizes and nourishes lips.",
+        "price": 8.99,
+        "weight": "4g",
+        "stock": 80,
+        "brand": "Orna Beauty",
+        "images": ["https://example.com/images/lb001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "cat_id": 2,
+    "sub_id": 33,
+    "products": [
+      {
+        "id": 1,
+        "sku": "LS-001",
+        "name": "Matte Lipstick - Red",
+        "description": "Highly pigmented, long-lasting matte formula.",
+        "price": 15.99,
+        "weight": "3.5g",
+        "stock": 65,
+        "brand": "Orna Beauty",
+        "images": ["https://example.com/images/ls001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "cat_id": 2,
+    "sub_id": 34,
+    "products": [
+      {
+        "id": 1,
+        "sku": "LG-001",
+        "name": "Sheer Shine Lip Gloss",
+        "description": "Glossy and non-sticky finish.",
+        "price": 13.99,
+        "weight": "5ml",
+        "stock": 70,
+        "brand": "Orna Beauty",
+        "images": ["https://example.com/images/lg001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "cat_id": 2,
+    "sub_id": 35,
+    "products": [
+      {
+        "id": 1,
+        "sku": "SS-001",
+        "name": "Long-Lasting Setting Spray",
+        "description": "Keeps makeup fresh all day.",
+        "price": 18.99,
+        "weight": "100ml",
+        "stock": 45,
+        "brand": "Orna Beauty",
+        "images": ["https://example.com/images/ss001.jpg"]
+      }
+    ]
+  },
+
+  {
+    "id": 36,
+    "cat_id": 3,
+    "sub_id": 36,
+    "products": [
+      {
+        "id": 1,
+        "sku": "SH-001",
+        "name": "Herbal Shampoo",
+        "description": "Cleanses and nourishes hair.",
+        "price": 12.99,
+        "weight": "250ml",
+        "stock": 80,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/sh001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "cat_id": 3,
+    "sub_id": 37,
+    "products": [
+      {
+        "id": 1,
+        "sku": "CO-001",
+        "name": "Moisturizing Conditioner",
+        "description": "Smoothens and hydrates hair.",
+        "price": 14.99,
+        "weight": "250ml",
+        "stock": 75,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/co001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "cat_id": 3,
+    "sub_id": 38,
+    "products": [
+      {
+        "id": 1,
+        "sku": "HM-001",
+        "name": "Repairing Hair Mask",
+        "description": "Strengthens and restores hair.",
+        "price": 18.99,
+        "weight": "200ml",
+        "stock": 60,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/hm001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "cat_id": 3,
+    "sub_id": 39,
+    "products": [
+      {
+        "id": 1,
+        "sku": "HC-001",
+        "name": "Natural Brown Hair Color",
+        "description": "Long-lasting and ammonia-free.",
+        "price": 9.99,
+        "weight": "100g",
+        "stock": 50,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/hc001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "cat_id": 3,
+    "sub_id": 40,
+    "products": [
+      {
+        "id": 1,
+        "sku": "HO-001",
+        "name": "Coconut Hair Oil",
+        "description": "Deeply nourishes and strengthens hair.",
+        "price": 10.5,
+        "weight": "150ml",
+        "stock": 90,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/ho001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "cat_id": 3,
+    "sub_id": 41,
+    "products": [
+      {
+        "id": 1,
+        "sku": "HR-001",
+        "name": "Velcro Hair Rollers",
+        "description": "Adds volume and curls effortlessly.",
+        "price": 7.99,
+        "weight": "Set of 6",
+        "stock": 40,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/hr001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "cat_id": 3,
+    "sub_id": 42,
+    "products": [
+      {
+        "id": 1,
+        "sku": "HS-001",
+        "name": "Strong Hold Hair Spray",
+        "description": "Keeps hairstyles in place all day.",
+        "price": 11.99,
+        "weight": "250ml",
+        "stock": 70,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/hs001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "cat_id": 3,
+    "sub_id": 43,
+    "products": [
+      {
+        "id": 1,
+        "sku": "HM-001",
+        "name": "Volume Hair Mousse",
+        "description": "Gives hair volume and hold.",
+        "price": 15.99,
+        "weight": "200ml",
+        "stock": 45,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/hm001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "cat_id": 3,
+    "sub_id": 44,
+    "products": [
+      {
+        "id": 1,
+        "sku": "CI-001",
+        "name": "Ceramic Curling Iron",
+        "description": "Creates smooth and bouncy curls.",
+        "price": 29.99,
+        "weight": "1.2kg",
+        "stock": 30,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/ci001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "cat_id": 3,
+    "sub_id": 45,
+    "products": [
+      {
+        "id": 1,
+        "sku": "DS-001",
+        "name": "Refresh Dry Shampoo",
+        "description": "Absorbs oil and refreshes hair instantly.",
+        "price": 12.99,
+        "weight": "150ml",
+        "stock": 60,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/ds001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "cat_id": 3,
+    "sub_id": 46,
+    "products": [
+      {
+        "id": 1,
+        "sku": "HD-001",
+        "name": "Smooth Hair Detangler",
+        "description": "Eases knots and tames frizz.",
+        "price": 14.5,
+        "weight": "200ml",
+        "stock": 40,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/hd001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "cat_id": 3,
+    "sub_id": 47,
+    "products": [
+      {
+        "id": 1,
+        "sku": "HC-001",
+        "name": "Nourishing Hair Cream",
+        "description": "Moisturizes and strengthens hair.",
+        "price": 16.5,
+        "weight": "150ml",
+        "stock": 35,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/hc001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "cat_id": 3,
+    "sub_id": 48,
+    "products": [
+      {
+        "id": 1,
+        "sku": "HW-001",
+        "name": "Strong Hold Hair Wax",
+        "description": "Provides long-lasting style and texture.",
+        "price": 13.99,
+        "weight": "100g",
+        "stock": 50,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/hw001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "cat_id": 3,
+    "sub_id": 49,
+    "products": [
+      {
+        "id": 1,
+        "sku": "HP-001",
+        "name": "Shiny Hair Pomade",
+        "description": "Gives a glossy finish with firm hold.",
+        "price": 18.99,
+        "weight": "120g",
+        "stock": 40,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/hp001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "cat_id": 3,
+    "sub_id": 50,
+    "products": [
+      {
+        "id": 1,
+        "sku": "HT-001",
+        "name": "Beach Wave Texturizer",
+        "description": "Creates natural beachy waves.",
+        "price": 17.5,
+        "weight": "150ml",
+        "stock": 45,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/ht001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "cat_id": 4,
+    "sub_id": 51,
+    "products": [
+      {
+        "id": 1,
+        "sku": "BL-001",
+        "name": "Gentle Baby Lotion",
+        "description": "Hydrates and nourishes baby skin.",
+        "price": 12.99,
+        "weight": "200ml",
+        "stock": 60,
+        "brand": "Orna Baby",
+        "images": ["https://example.com/images/bl001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "cat_id": 4,
+    "sub_id": 52,
+    "products": [
+      {
+        "id": 1,
+        "sku": "BP-001",
+        "name": "Talc-Free Baby Powder",
+        "description": "Keeps baby skin fresh and dry.",
+        "price": 8.99,
+        "weight": "150g",
+        "stock": 70,
+        "brand": "Orna Baby",
+        "images": ["https://example.com/images/bp001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "cat_id": 4,
+    "sub_id": 53,
+    "products": [
+      {
+        "id": 1,
+        "sku": "BSW-001",
+        "name": "Tear-Free Baby Shampoo & Wash",
+        "description": "Mild and gentle cleansing for babies.",
+        "price": 14.5,
+        "weight": "250ml",
+        "stock": 50,
+        "brand": "Orna Baby",
+        "images": ["https://example.com/images/bsw001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "cat_id": 4,
+    "sub_id": 54,
+    "products": [
+      {
+        "id": 1,
+        "sku": "BW-001",
+        "name": "Organic Baby Wipes",
+        "description": "Soft and hypoallergenic wipes.",
+        "price": 6.99,
+        "weight": "80 wipes",
+        "stock": 90,
+        "brand": "Orna Baby",
+        "images": ["https://example.com/images/bw001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "cat_id": 4,
+    "sub_id": 55,
+    "products": [
+      {
+        "id": 1,
+        "sku": "BS-001",
+        "name": "Natural Baby Soap",
+        "description": "Gentle cleansing bar for babies.",
+        "price": 5.99,
+        "weight": "100g",
+        "stock": 80,
+        "brand": "Orna Baby",
+        "images": ["https://example.com/images/bs001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "cat_id": 4,
+    "sub_id": 56,
+    "products": [
+      {
+        "id": 1,
+        "sku": "BSUN-001",
+        "name": "SPF 50 Baby Sunscreen",
+        "description": "Broad-spectrum protection for babies.",
+        "price": 15.99,
+        "weight": "100ml",
+        "stock": 45,
+        "brand": "Orna Baby",
+        "images": ["https://example.com/images/bsun001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "cat_id": 4,
+    "sub_id": 57,
+    "products": [
+      {
+        "id": 1,
+        "sku": "BIR-001",
+        "name": "Natural Baby Insect Repellent",
+        "description": "Protects against mosquitoes and bugs.",
+        "price": 10.5,
+        "weight": "120ml",
+        "stock": 40,
+        "brand": "Orna Baby",
+        "images": ["https://example.com/images/bir001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "cat_id": 4,
+    "sub_id": 58,
+    "products": [
+      {
+        "id": 1,
+        "sku": "BRC-001",
+        "name": "Soothing Baby Rash Cream",
+        "description": "Relieves diaper rash and irritation.",
+        "price": 9.99,
+        "weight": "75g",
+        "stock": 65,
+        "brand": "Orna Baby",
+        "images": ["https://example.com/images/brc001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "cat_id": 4,
+    "sub_id": 59,
+    "products": [
+      {
+        "id": 1,
+        "sku": "BHO-001",
+        "name": "Nourishing Baby Hair Oil",
+        "description": "Strengthens and softens baby hair.",
+        "price": 11.99,
+        "weight": "100ml",
+        "stock": 55,
+        "brand": "Orna Baby",
+        "images": ["https://example.com/images/bho001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "cat_id": 4,
+    "sub_id": 60,
+    "products": [
+      {
+        "id": 1,
+        "sku": "KSC-001",
+        "name": "2-in-1 Kids Shampoo & Conditioner",
+        "description": "Mild formula for kids' hair care.",
+        "price": 13.5,
+        "weight": "300ml",
+        "stock": 40,
+        "brand": "Orna Kids",
+        "images": ["https://example.com/images/ksc001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "cat_id": 4,
+    "sub_id": 61,
+    "products": [
+      {
+        "id": 1,
+        "sku": "KBW-001",
+        "name": "Gentle Kids Body Wash",
+        "description": "Soft cleansing for kids' skin.",
+        "price": 10.99,
+        "weight": "250ml",
+        "stock": 50,
+        "brand": "Orna Kids",
+        "images": ["https://example.com/images/kbw001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "cat_id": 4,
+    "sub_id": 62,
+    "products": [
+      {
+        "id": 1,
+        "sku": "KM-001",
+        "name": "Hydrating Kids Moisturizer",
+        "description": "Keeps kids' skin soft and healthy.",
+        "price": 12.99,
+        "weight": "200ml",
+        "stock": 60,
+        "brand": "Orna Kids",
+        "images": ["https://example.com/images/km001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "cat_id": 5,
+    "sub_id": 63,
+    "products": [
+      {
+        "id": 1,
+        "sku": "NL-001",
+        "name": "Gold Necklace Set",
+        "description": "Elegant 22K gold necklace with matching earrings.",
+        "price": 299.99,
+        "weight": "50g",
+        "stock": 20,
+        "brand": "Orna Jewels",
+        "images": ["https://example.com/images/nl001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "cat_id": 5,
+    "sub_id": 64,
+    "products": [
+      {
+        "id": 1,
+        "sku": "ER-001",
+        "name": "Diamond Stud Earrings",
+        "description": "Classic diamond studs in white gold.",
+        "price": 149.99,
+        "weight": "5g",
+        "stock": 30,
+        "brand": "Orna Jewels",
+        "images": ["https://example.com/images/er001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "cat_id": 5,
+    "sub_id": 65,
+    "products": [
+      {
+        "id": 1,
+        "sku": "RG-001",
+        "name": "Sapphire Engagement Ring",
+        "description": "Blue sapphire ring with a diamond halo.",
+        "price": 199.99,
+        "weight": "10g",
+        "stock": 15,
+        "brand": "Orna Jewels",
+        "images": ["https://example.com/images/rg001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 66,
+    "cat_id": 5,
+    "sub_id": 66,
+    "products": [
+      {
+        "id": 1,
+        "sku": "BR-001",
+        "name": "Gold Charm Bracelet",
+        "description": "14K gold bracelet with customizable charms.",
+        "price": 129.99,
+        "weight": "20g",
+        "stock": 25,
+        "brand": "Orna Jewels",
+        "images": ["https://example.com/images/br001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 67,
+    "cat_id": 5,
+    "sub_id": 67,
+    "products": [
+      {
+        "id": 1,
+        "sku": "BG-001",
+        "name": "Traditional Gold Bangles",
+        "description": "Set of 4 handcrafted gold bangles.",
+        "price": 249.99,
+        "weight": "40g",
+        "stock": 18,
+        "brand": "Orna Jewels",
+        "images": ["https://example.com/images/bg001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "cat_id": 5,
+    "sub_id": 68,
+    "products": [
+      {
+        "id": 1,
+        "sku": "MT-001",
+        "name": "Kundan Maang Tikka",
+        "description": "Traditional maang tikka with kundan stones.",
+        "price": 59.99,
+        "weight": "10g",
+        "stock": 35,
+        "brand": "Orna Jewels",
+        "images": ["https://example.com/images/mt001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 69,
+    "cat_id": 5,
+    "sub_id": 69,
+    "products": [
+      {
+        "id": 1,
+        "sku": "NR-001",
+        "name": "Gold Nose Ring",
+        "description": "Small gold nose ring with pearl accent.",
+        "price": 39.99,
+        "weight": "5g",
+        "stock": 40,
+        "brand": "Orna Jewels",
+        "images": ["https://example.com/images/nr001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 70,
+    "cat_id": 5,
+    "sub_id": 70,
+    "products": [
+      {
+        "id": 1,
+        "sku": "AN-001",
+        "name": "Silver Anklet",
+        "description": "Delicate silver anklet with bells.",
+        "price": 49.99,
+        "weight": "15g",
+        "stock": 22,
+        "brand": "Orna Jewels",
+        "images": ["https://example.com/images/an001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 71,
+    "cat_id": 5,
+    "sub_id": 71,
+    "products": [
+      {
+        "id": 1,
+        "sku": "TR-001",
+        "name": "Sterling Silver Toe Ring",
+        "description": "Adjustable silver toe ring.",
+        "price": 19.99,
+        "weight": "5g",
+        "stock": 50,
+        "brand": "Orna Jewels",
+        "images": ["https://example.com/images/tr001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 72,
+    "cat_id": 5,
+    "sub_id": 72,
+    "products": [
+      {
+        "id": 1,
+        "sku": "WB-001",
+        "name": "Gold Waist Belt",
+        "description": "Heavy gold kamarbandh with intricate design.",
+        "price": 349.99,
+        "weight": "80g",
+        "stock": 10,
+        "brand": "Orna Jewels",
+        "images": ["https://example.com/images/wb001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 73,
+    "cat_id": 5,
+    "sub_id": 73,
+    "products": [
+      {
+        "id": 1,
+        "sku": "BRH-001",
+        "name": "Vintage Pearl Brooch",
+        "description": "Elegant pearl brooch with gold detailing.",
+        "price": 89.99,
+        "weight": "12g",
+        "stock": 15,
+        "brand": "Orna Jewels",
+        "images": ["https://example.com/images/brh001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 74,
+    "cat_id": 5,
+    "sub_id": 74,
+    "products": [
+      {
+        "id": 1,
+        "sku": "AL-001",
+        "name": "Gold Armlet",
+        "description": "Traditional gold bajubandh with gemstones.",
+        "price": 159.99,
+        "weight": "30g",
+        "stock": 12,
+        "brand": "Orna Jewels",
+        "images": ["https://example.com/images/al001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 75,
+    "cat_id": 5,
+    "sub_id": 75,
+    "products": [
+      {
+        "id": 1,
+        "sku": "HF-001",
+        "name": "Bridal Haath Phool",
+        "description": "Intricate bridal hand harness with pearls.",
+        "price": 99.99,
+        "weight": "20g",
+        "stock": 10,
+        "brand": "Orna Jewels",
+        "images": ["https://example.com/images/hf001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 76,
+    "cat_id": 5,
+    "sub_id": 76,
+    "products": [
+      {
+        "id": 1,
+        "sku": "CH-001",
+        "name": "Bridal Chooda Set",
+        "description": "Red and white bridal chooda set.",
+        "price": 129.99,
+        "weight": "45g",
+        "stock": 25,
+        "brand": "Orna Jewels",
+        "images": ["https://example.com/images/ch001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 77,
+    "cat_id": 5,
+    "sub_id": 77,
+    "products": [
+      {
+        "id": 1,
+        "sku": "PD-001",
+        "name": "Diamond Pendant",
+        "description": "Solitaire diamond pendant in gold.",
+        "price": 189.99,
+        "weight": "8g",
+        "stock": 15,
+        "brand": "Orna Jewels",
+        "images": ["https://example.com/images/pd001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 78,
+    "cat_id": 6,
+    "sub_id": 78,
+    "products": [
+      {
+        "id": 1,
+        "sku": "HC-001",
+        "name": "Pearl Hair Clip",
+        "description": "Elegant pearl-studded hair clip.",
+        "price": 5.99,
+        "weight": "10g",
+        "stock": 100,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/hc001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 79,
+    "cat_id": 6,
+    "sub_id": 79,
+    "products": [
+      {
+        "id": 1,
+        "sku": "HB-001",
+        "name": "Elastic Hair Band",
+        "description": "Strong and durable elastic hair band.",
+        "price": 2.99,
+        "weight": "5g",
+        "stock": 200,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/hb001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 80,
+    "cat_id": 6,
+    "sub_id": 80,
+    "products": [
+      {
+        "id": 1,
+        "sku": "HT-001",
+        "name": "Soft Hair Tie Set",
+        "description": "Pack of 10 soft and flexible hair ties.",
+        "price": 4.5,
+        "weight": "20g",
+        "stock": 150,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/ht001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 81,
+    "cat_id": 6,
+    "sub_id": 81,
+    "products": [
+      {
+        "id": 1,
+        "sku": "HBND-001",
+        "name": "Fabric Headband",
+        "description": "Stylish and comfortable headband.",
+        "price": 6.99,
+        "weight": "15g",
+        "stock": 80,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/hbnd001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 82,
+    "cat_id": 6,
+    "sub_id": 82,
+    "products": [
+      {
+        "id": 1,
+        "sku": "HP-001",
+        "name": "Gold Hair Pin Set",
+        "description": "Set of 5 decorative gold hair pins.",
+        "price": 7.5,
+        "weight": "12g",
+        "stock": 120,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/hp001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 83,
+    "cat_id": 6,
+    "sub_id": 83,
+    "products": [
+      {
+        "id": 1,
+        "sku": "SC-001",
+        "name": "Velvet Scrunchie Pack",
+        "description": "Set of 3 soft velvet scrunchies.",
+        "price": 8.99,
+        "weight": "25g",
+        "stock": 90,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/sc001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 84,
+    "cat_id": 6,
+    "sub_id": 84,
+    "products": [
+      {
+        "id": 1,
+        "sku": "HCMB-001",
+        "name": "Wooden Hair Comb",
+        "description": "Anti-static and eco-friendly wooden comb.",
+        "price": 9.5,
+        "weight": "30g",
+        "stock": 75,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/hcmb001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 85,
+    "cat_id": 6,
+    "sub_id": 85,
+    "products": [
+      {
+        "id": 1,
+        "sku": "HST-001",
+        "name": "Decorative Hair Stick",
+        "description": "Handcrafted wooden hair stick.",
+        "price": 12.99,
+        "weight": "18g",
+        "stock": 50,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/hst001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 86,
+    "cat_id": 6,
+    "sub_id": 86,
+    "products": [
+      {
+        "id": 1,
+        "sku": "HCL-001",
+        "name": "Acrylic Hair Claw",
+        "description": "Strong grip hair claw clip.",
+        "price": 6.5,
+        "weight": "22g",
+        "stock": 85,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/hcl001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 87,
+    "cat_id": 6,
+    "sub_id": 87,
+    "products": [
+      {
+        "id": 1,
+        "sku": "BA-001",
+        "name": "Golden Barrette",
+        "description": "Elegant gold-plated barrette.",
+        "price": 9.99,
+        "weight": "50g",
+        "stock": 100,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/ba001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 88,
+    "cat_id": 6,
+    "sub_id": 88,
+    "products": [
+      {
+        "id": 1,
+        "sku": "HW-001",
+        "name": "Silk Hair Wrap",
+        "description": "Soft silk wrap for hair protection.",
+        "price": 15.99,
+        "weight": "200g",
+        "stock": 80,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/hw001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 89,
+    "cat_id": 6,
+    "sub_id": 89,
+    "products": [
+      {
+        "id": 1,
+        "sku": "HB-001",
+        "name": "Velvet Hair Bow",
+        "description": "Classic velvet bow for styling.",
+        "price": 7.99,
+        "weight": "30g",
+        "stock": 120,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/hb001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 90,
+    "cat_id": 6,
+    "sub_id": 90,
+    "products": [
+      {
+        "id": 1,
+        "sku": "HC-001",
+        "name": "Pearl Hair Chain",
+        "description": "Elegant pearl-studded hair chain.",
+        "price": 19.99,
+        "weight": "75g",
+        "stock": 60,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/hc001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 91,
+    "cat_id": 6,
+    "sub_id": 91,
+    "products": [
+      {
+        "id": 1,
+        "sku": "TC-001",
+        "name": "Crystal Tiara",
+        "description": "Beautiful crystal-studded tiara.",
+        "price": 29.99,
+        "weight": "150g",
+        "stock": 40,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/tc001.jpg"]
+      }
+    ]
+  },
+  {
+    "id": 92,
+    "cat_id": 6,
+    "sub_id": 92,
+    "products": [
+      {
+        "id": 1,
+        "sku": "HE-001",
+        "name": "Clip-in Hair Extensions",
+        "description": "Natural-looking hair extensions.",
+        "price": 49.99,
+        "weight": "300g",
+        "stock": 30,
+        "brand": "Orna Care",
+        "images": ["https://example.com/images/he001.jpg"]
+      }
+    ]
+  }
+],
   "offer": [
     {
       "id": 1,
@@ -142,6 +1833,6 @@
       "reviewer": "Jeni Doe",
       "reviewer_email": "jenidoe@gmail.com",
       "review_date": "2022-01-01"
-      }
+    }
   ]
 }

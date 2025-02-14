@@ -78,8 +78,25 @@ document.addEventListener("DOMContentLoaded", function() {
                 megaMenuDiv.appendChild(megaMenuWrap); // Append the mega menu wrap to the mega menu div
                 li.appendChild(megaMenuDiv); // Append the mega menu div to the list item
                 categoryList.appendChild(li); // Append the list item to the category list
+
+                // Add click event to the anchor
+                a.addEventListener('click', function(event) {
+                    event.preventDefault(); // Prevent default anchor behavior
+                    const isActive = li.classList.toggle('active'); // Toggle active class on the li
+
+                    // Modify the style or class based on the active state
+                    if (isActive) {
+                        megaMenuDiv.style.display = 'block'; // Show the mega menu
+                        icon.classList.remove('bi-plus'); // Change icon to minus
+                        icon.classList.add('bi-dash'); // Add minus icon class
+                    } else {
+                        megaMenuDiv.style.display = 'none'; // Hide the mega menu
+                        icon.classList.remove('bi-dash'); // Change icon back to plus
+                        icon.classList.add('bi-plus'); // Add plus icon class
+                    }
+                });
             });
         });
     })
     .catch(error => console.error('There was a problem with the fetch operation:', error));
-});     
+});
