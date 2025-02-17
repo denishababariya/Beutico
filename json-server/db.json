@@ -129,6 +129,7 @@
 
   
     "product": [
+
       {
         "id": 1,
         "sku": "GC-001",
@@ -142,8 +143,8 @@
         "brand": "Orna Care",
         "tags": ["hydrating", "aloe vera", "gentle"],
         "images": [
-          "https://example.com/images/gc001_1.jpg",
-          "https://example.com/images/gc001_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -159,8 +160,8 @@
         "brand": "Orna Care",
         "tags": ["foaming", "deep cleanse"],
         "images": [
-          "https://example.com/images/",
-          "https://example.com/images/gc002_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -176,8 +177,8 @@
         "brand": "Orna Care",
         "tags": ["exfoliating", "gentle"],
         "images": [
-          "https://example.com/images/gc003_1.jpg",
-          "https://example.com/images/gc003_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -193,8 +194,8 @@
         "brand": "Orna Care",
         "tags": ["brightening", "vitamin C"],
         "images": [
-          "https://example.com/images/gc004_1.jpg",
-          "https://example.com/images/gc004_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -210,8 +211,8 @@
         "brand": "Orna Care",
         "tags": ["hydrating", "gel"],
         "images": [
-          "https://example.com/images/gc005_1.jpg",
-          "https://example.com/images/gc005_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
   
@@ -228,8 +229,8 @@
         "brand": "Orna Care",
         "tags": ["exfoliating", "gentle"],
         "images": [
-          "https://example.com/images/ex001_1.jpg",
-          "https://example.com/images/ex001_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -245,8 +246,8 @@
         "brand": "Orna Care",
         "tags": ["brightening", "exfoliating"],
         "images": [
-          "https://example.com/images/ex002_1.jpg",
-          "https://example.com/images/ex002_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -262,8 +263,8 @@
         "brand": "Orna Care",
         "tags": ["scrub", "exfoliating"],
         "images": [
-          "https://example.com/images/ex003_1.jpg",
-          "https://example.com/images/ex003_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -279,8 +280,8 @@
         "brand": "Orna Care",
         "tags": ["hydrating", "exfoliating"],
         "images": [
-          "https://example.com/images/ex004_1.jpg",
-          "https://example.com/images/ex004_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -296,8 +297,8 @@
         "brand": "Orna Care",
         "tags": ["deep cleansing", "exfoliating"],
         "images": [
-          "https://example.com/images/ex005_1.jpg",
-          "https://example.com/images/ex005_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
   
@@ -314,8 +315,8 @@
         "brand": "Orna Care",
         "tags": ["vitamin C", "brightening"],
         "images": [
-          "https://example.com/images/se001_1.jpg",
-          "https://example.com/images/se001_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -331,8 +332,8 @@
         "brand": "Orna Care",
         "tags": ["hydrating", "hyaluronic acid"],
         "images": [
-          "https://example.com/images/se002_1.jpg",
-          "https://example.com/images/se002_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -348,8 +349,8 @@
         "brand": "Orna Care",
         "tags": ["anti-aging", "retinol"],
         "images": [
-          "https://example.com/images/se003_1.jpg",
-          "https://example.com/images/se003_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -365,8 +366,8 @@
         "brand": "Orna Care",
         "tags": ["niacinamide", "oil control"],
         "images": [
-          "https://example.com/images/se004_1.jpg",
-          "https://example.com/images/se004_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -382,8 +383,8 @@
         "brand": "Orna Care",
         "tags": ["brightening", "revitalizing"],
         "images": [
-          "https://example.com/images/se005_1.jpg",
-          "https://example.com/images/se005_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
   
@@ -401,8 +402,8 @@
         "brand": "Orna Care",
         "tags": ["rosehip", "hydrating"],
         "images": [
-          "https://example.com/images/fo001_1.jpg",
-          "https://example.com/images/fo001_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -418,8 +419,8 @@
         "brand": "Orna Care",
         "tags": ["argan", "nourishing"],
         "images": [
-          "https://example.com/images/fo002_1.jpg",
-          "https://example.com/images/fo002_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -435,8 +436,8 @@
         "brand": "Orna Care",
         "tags": ["jojoba", "balancing"],
         "images": [
-          "https://example.com/images/fo003_1.jpg",
-          "https://example.com/images/fo003_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -452,8 +453,8 @@
         "brand": "Orna Care",
         "tags": ["squalane", "lightweight"],
         "images": [
-          "https://example.com/images/fo004_1.jpg",
-          "https://example.com/images/fo004_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -469,8 +470,8 @@
         "brand": "Orna Care",
         "tags": ["marula", "antioxidants"],
         "images": [
-          "https://example.com/images/fo005_1.jpg",
-          "https://example.com/images/fo005_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
   
@@ -488,8 +489,8 @@
         "brand": "Orna Care",
         "tags": ["sunscreen", "SPF 50"],
         "images": [
-          "https://example.com/images/sc001_1.jpg",
-          "https://example.com/images/sc001_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -504,9 +505,9 @@
         "weight": "100ml",
         "brand": "Orna Care",
         "tags": ["matte", "sunscreen"],
-        "images": [
-          "https://example.com/images/sc002_1.jpg",
-          "https://example.com/images/sc002_2.jpg"
+       "images": [
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -522,8 +523,8 @@
         "brand": "Orna Care",
         "tags": ["tinted", "sunscreen"],
         "images": [
-          "https://example.com/images/sc003_1.jpg",
-          "https://example.com/images/sc003_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -539,8 +540,8 @@
         "brand": "Orna Care",
         "tags": ["hydrating", "sunscreen"],
         "images": [
-          "https://example.com/images/sc004_1.jpg",
-          "https://example.com/images/sc004_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -556,8 +557,8 @@
         "brand": "Orna Care",
         "tags": ["water-resistant", "sunscreen"],
         "images": [
-          "https://example.com/images/sc005_1.jpg",
-          "https://example.com/images/sc005_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
   
@@ -575,8 +576,8 @@
         "brand": "Orna Care",
         "tags": ["hydrating", "moisturizer"],
         "images": [
-          "https://example.com/images/mo001_1.jpg",
-          "https://example.com/images/mo001_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -591,9 +592,9 @@
         "weight": "200ml",
         "brand": "Orna Care",
         "tags": ["lightweight", "moisturizer"],
-        "images": [
-          "https://example.com/images/mo002_1.jpg",
-          "https://example.com/images/mo002_2.jpg"
+       "images": [
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -608,9 +609,9 @@
         "weight": "200ml",
         "brand": "Orna Care",
         "tags": ["rich", "moisturizer"],
-        "images": [
-          "https://example.com/images/mo003_1.jpg",
-          "https://example.com/images/mo003_2.jpg"
+       "images": [
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -626,8 +627,8 @@
         "brand": "Orna Care",
         "tags": ["night cream", "moisturizer"],
         "images": [
-          "https://example.com/images/mo004_1.jpg",
-          "https://example.com/images/mo004_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -643,8 +644,8 @@
         "brand": "Orna Care",
         "tags": ["gel", "moisturizer"],
         "images": [
-          "https://example.com/images/mo005_1.jpg",
-          "https://example.com/images/mo005_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
  
@@ -660,9 +661,9 @@
         "weight": "50ml",
         "brand": "Orna Care",
         "tags": ["AHA", "BHA", "peel"],
-        "images": [
-          "https://example.com/images/cp001_1.jpg",
-          "https://example.com/images/cp001_2.jpg"
+       "images": [
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -678,8 +679,8 @@
         "brand": "Orna Care",
         "tags": ["glycolic", "peel"],
         "images": [
-          "https://example.com/images/cp002_1.jpg",
-          "https://example.com/images/cp002_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -694,9 +695,9 @@
         "weight": "50ml",
         "brand": "Orna Care",
         "tags": ["lactic", "peel"],
-        "images": [
-          "https://example.com/images/cp003_1.jpg",
-          "https://example.com/images/cp003_2.jpg"
+       "images": [
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -711,9 +712,9 @@
         "weight": "50ml",
         "brand": "Orna Care",
         "tags": ["enzyme", "peel"],
-        "images": [
-          "https://example.com/images/cp004_1.jpg",
-          "https://example.com/images/cp004_2.jpg"
+       "images": [
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -729,8 +730,8 @@
         "brand": "Orna Care",
         "tags": ["charcoal", "peel"],
         "images": [
-          "https://example.com/images/cp005_1.jpg",
-          "https://example.com/images/cp005_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
   
@@ -747,8 +748,8 @@
         "brand": "Orna Care",
         "tags": ["balancing", "toner"],
         "images": [
-          "https://example.com/images/to001_1.jpg",
-          "https://example.com/images/to001_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -764,8 +765,8 @@
         "brand": "Orna Care",
         "tags": ["hydrating", "toner"],
         "images": [
-          "https://example.com/images/to002_1.jpg",
-          "https://example.com/images/to002_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -781,8 +782,8 @@
         "brand": "Orna Care",
         "tags": ["exfoliating", "toner"],
         "images": [
-          "https://example.com/images/to003_1.jpg",
-          "https://example.com/images/to003_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -798,8 +799,8 @@
         "brand": "Orna Care",
         "tags": ["clarifying", "toner"],
         "images": [
-          "https://example.com/images/to004_1.jpg",
-          "https://example.com/images/to004_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -814,9 +815,9 @@
         "weight": "200ml",
         "brand": "Orna Care",
         "tags": ["soothing", "toner"],
-        "images": [
-          "https://example.com/images/to005_1.jpg",
-          "https://example.com/images/to005_2.jpg"
+       "images": [
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
 
@@ -833,8 +834,8 @@
         "brand": "Orna Care",
         "tags": ["clay", "mask"],
         "images": [
-          "https://example.com/images/fm001_1.jpg",
-          "https://example.com/images/fm001_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -850,8 +851,8 @@
         "brand": "Orna Care",
         "tags": ["hydrating", "mask"],
         "images": [
-          "https://example.com/images/fm002_1.jpg",
-          "https://example.com/images/fm002_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -867,8 +868,8 @@
         "brand": "Orna Care",
         "tags": ["brightening", "mask"],
         "images": [
-          "https://example.com/images/fm003_1.jpg",
-          "https://example.com/images/fm003_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -884,8 +885,8 @@
         "brand": "Orna Care",
         "tags": ["charcoal", "mask"],
         "images": [
-          "https://example.com/images/fm004_1.jpg",
-          "https://example.com/images/fm004_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -901,8 +902,8 @@
         "brand": "Orna Care",
         "tags": ["sheet", "mask"],
         "images": [
-          "https://example.com/images/fm005_1.jpg",
-          "https://example.com/images/fm005_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
 
@@ -918,9 +919,9 @@
         "weight": "30ml",
         "brand": "Orna Care",
         "tags": ["hydrating", "eye cream"],
-        "images": [
-          "https://example.com/images/ec001_1.jpg",
-          "https://example.com/images/ec001_2.jpg"
+       "images": [
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -935,9 +936,9 @@
         "weight": "30ml",
         "brand": "Orna Care",
         "tags": ["brightening", "eye cream"],
-        "images": [
-          "https://example.com/images/ec002_1.jpg",
-          "https://example.com/images/ec002_2.jpg"
+       "images": [
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -952,9 +953,9 @@
         "weight": "30ml",
         "brand": "Orna Care",
         "tags": ["anti-aging", "eye cream"],
-        "images": [
-          "https://example.com/images/ec003_1.jpg",
-          "https://example.com/images/ec003_2.jpg"
+       "images": [
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -970,8 +971,8 @@
         "brand": "Orna Care",
         "tags": ["cooling", "eye gel"],
         "images": [
-          "https://example.com/images/ec004_1.jpg",
-          "https://example.com/images/ec004_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -987,8 +988,8 @@
         "brand": "Orna Care",
         "tags": ["firming", "eye cream"],
         "images": [
-          "https://example.com/images/ec005_1.jpg",
-          "https://example.com/images/ec005_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
 
@@ -1005,8 +1006,8 @@
         "brand": "Orna Care",
         "tags": ["tea tree", "face wash"],
         "images": [
-          "https://example.com/images/fw001_1.jpg",
-          "https://example.com/images/fw001_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -1021,9 +1022,9 @@
         "weight": "150ml",
         "brand": "Orna Care",
         "tags": ["foaming", "face wash"],
-        "images": [
-          "https://example.com/images/fw002_1.jpg",
-          "https://example.com/images/fw002_2.jpg"
+       "images": [
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -1039,8 +1040,8 @@
         "brand": "Orna Care",
         "tags": ["gel", "face wash"],
         "images": [
-          "https://example.com/images/fw003_1.jpg",
-          "https://example.com/images/fw003_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -1055,9 +1056,9 @@
         "weight": "150ml",
         "brand": "Orna Care",
         "tags": ["cleansing milk", "face wash"],
-        "images": [
-          "https://example.com/images/fw004_1.jpg",
-          "https://example.com/images/fw004_2.jpg"
+       "images": [
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -1072,9 +1073,9 @@
         "weight": "200ml",
         "brand": "Orna Care",
         "tags": ["micellar", "face wash"],
-        "images": [
-          "https://example.com/images/fw005_1.jpg",
-          "https://example.com/images/fw005_2.jpg"
+       "images": [
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
 
@@ -1090,9 +1091,9 @@
         "weight": "100ml",
         "brand": "Orna Care",
         "tags": ["setting spray", "makeup"],
-        "images": [
-          "https://example.com/images/ss001_1.jpg",
-          "https://example.com/images/ss001_2.jpg"
+       "images": [
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -1108,8 +1109,8 @@
         "brand": "Orna Care",
         "tags": ["matte", "setting spray"],
         "images": [
-          "https://example.com/images/ss002_1.jpg",
-          "https://example.com/images/ss002_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -1125,8 +1126,8 @@
         "brand": "Orna Care",
         "tags": ["hydrating", "setting spray"],
         "images": [
-          "https://example.com/images/ss003_1.jpg",
-          "https://example.com/images/ss003_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -1142,8 +1143,8 @@
         "brand": "Orna Care",
         "tags": ["cooling", "setting spray"],
         "images": [
-          "https://example.com/images/ss004_1.jpg",
-          "https://example.com/images/ss004_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -1159,8 +1160,8 @@
         "brand": "Orna Care",
         "tags": ["SPF", "setting spray"],
         "images": [
-          "https://example.com/images/ss005_1.jpg",
-          "https://example.com/images/ss005_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
  
@@ -1176,9 +1177,9 @@
         "weight": "10ml",
         "brand": "Orna Care",
         "tags": ["concealer", "full coverage"],
-        "images": [
-          "https://example.com/images/cc001_1.jpg",
-          "https://example.com/images/cc001_2.jpg"
+       "images": [
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -1194,8 +1195,8 @@
         "brand": "Orna Care",
         "tags": ["lightweight", "concealer"],
         "images": [
-          "https://example.com/images/cc002_1.jpg",
-          "https://example.com/images/cc002_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -1211,8 +1212,8 @@
         "brand": "Orna Care",
         "tags": ["creamy", "concealer"],
         "images": [
-          "https://example.com/images/cc003_1.jpg",
-          "https://example.com/images/cc003_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -1228,8 +1229,8 @@
         "brand": "Orna Care",
         "tags": ["waterproof", "concealer"],
         "images": [
-          "https://example.com/images/cc004_1.jpg",
-          "https://example.com/images/cc004_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -1245,8 +1246,8 @@
         "brand": "Orna Care",
         "tags": ["brightening", "concealer"],
         "images": [
-          "https://example.com/images/cc005_1.jpg",
-          "https://example.com/images/cc005_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
 
@@ -1263,8 +1264,8 @@
         "brand": "Orna Care",
         "tags": ["gentle", "exfoliant"],
         "images": [
-          "https://example.com/images/ex001_1.jpg",
-          "https://example.com/images/ex001_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -1280,8 +1281,8 @@
         "brand": "Orna Care",
         "tags": ["deep cleansing", "exfoliant"],
         "images": [
-          "https://example.com/images/ex002_1.jpg",
-          "https://example.com/images/ex002_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -1297,8 +1298,8 @@
         "brand": "Orna Care",
         "tags": ["brightening", "exfoliant"],
         "images": [
-          "https://example.com/images/ex003_1.jpg",
-          "https://example.com/images/ex003_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -1314,8 +1315,8 @@
         "brand": "Orna Care",
         "tags": ["hydrating", "exfoliant"],
         "images": [
-          "https://example.com/images/ex004_1.jpg",
-          "https://example.com/images/ex004_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -1331,8 +1332,8 @@
         "brand": "Orna Care",
         "tags": ["charcoal", "exfoliant"],
         "images": [
-          "https://example.com/images/ex005_1.jpg",
-          "https://example.com/images/ex005_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
 
@@ -1349,8 +1350,8 @@
         "brand": "Orna Care",
         "tags": ["primer", "silk finish"],
         "images": [
-          "https://example.com/images/pr001_1.jpg",
-          "https://example.com/images/pr001_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -1366,8 +1367,8 @@
         "brand": "Orna Care",
         "tags": ["hydrating", "primer"],
         "images": [
-          "https://example.com/images/pr002_1.jpg",
-          "https://example.com/images/pr002_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -1383,8 +1384,8 @@
         "brand": "Orna Care",
         "tags": ["mattifying", "primer"],
         "images": [
-          "https://example.com/images/pr003_1.jpg",
-          "https://example.com/images/pr003_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -1400,8 +1401,8 @@
         "brand": "Orna Care",
         "tags": ["illuminating", "primer"],
         "images": [
-          "https://example.com/images/pr004_1.jpg",
-          "https://example.com/images/pr004_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -1417,8 +1418,8 @@
         "brand": "Orna Care",
         "tags": ["pore minimizing", "primer"],
         "images": [
-          "https://example.com/images/pr005_1.jpg",
-          "https://example.com/images/pr005_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
 
@@ -1435,8 +1436,8 @@
         "brand": "Orna Care",
         "tags": ["moisturizing", "body cleanser"],
         "images": [
-          "https://example.com/images/bc001_1.jpg",
-          "https://example.com/images/bc001_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -1452,8 +1453,8 @@
         "brand": "Orna Care",
         "tags": ["exfoliating", "body cleanser"],
         "images": [
-          "https://example.com/images/bc002_1.jpg",
-          "https://example.com/images/bc002_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -1469,8 +1470,8 @@
         "brand": "Orna Care",
         "tags": ["refreshing", "body cleanser"],
         "images": [
-          "https://example.com/images/bc003_1.jpg",
-          "https://example.com/images/bc003_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -1486,8 +1487,8 @@
         "brand": "Orna Care",
         "tags": ["cleansing", "body wash"],
         "images": [
-          "https://example.com/images/bc004_1.jpg",
-          "https://example.com/images/bc004_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -1503,8 +1504,8 @@
         "brand": "Orna Care",
         "tags": ["nourishing", "body cleanser"],
         "images": [
-          "https://example.com/images/bc005_1.jpg",
-          "https://example.com/images/bc005_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
   
@@ -1522,8 +1523,8 @@
         "brand": "Orna Care",
         "tags": ["aloe vera", "body gel"],
         "images": [
-          "https://example.com/images/bg001_1.jpg",
-          "https://example.com/images/bg001_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -1539,8 +1540,8 @@
         "brand": "Orna Care",
         "tags": ["cooling", "body gel"],
         "images": [
-          "https://example.com/images/bg002_1.jpg",
-          "https://example.com/images/bg002_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -1556,8 +1557,8 @@
         "brand": "Orna Care",
         "tags": ["hydrating", "body gel"],
         "images": [
-          "https://example.com/images/bg003_1.jpg",
-          "https://example.com/images/bg003_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -1573,8 +1574,8 @@
         "brand": "Orna Care",
         "tags": ["nourishing", "body gel"],
         "images": [
-          "https://example.com/images/bg004_1.jpg",
-          "https://example.com/images/bg004_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -1590,8 +1591,8 @@
         "brand": "Orna Care",
         "tags": ["refreshing", "body gel"],
         "images": [
-          "https://example.com/images/bg005_1.jpg",
-          "https://example.com/images/bg005_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
   
@@ -1609,8 +1610,8 @@
         "brand": "Orna Care",
         "tags": ["nourishing", "body balm"],
         "images": [
-          "https://example.com/images/bb001_1.jpg",
-          "https://example.com/images/bb001_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -1626,8 +1627,8 @@
         "brand": "Orna Care",
         "tags": ["soothing", "body balm"],
         "images": [
-          "https://example.com/images/bb002_1.jpg",
-          "https://example.com/images/bb002_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -1643,8 +1644,8 @@
         "brand": "Orna Care",
         "tags": ["repairing", "body balm"],
         "images": [
-          "https://example.com/images/bb003_1.jpg",
-          "https://example.com/images/bb003_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -1660,8 +1661,8 @@
         "brand": "Orna Care",
         "tags": ["hydrating", "body balm"],
         "images": [
-          "https://example.com/images/bb004_1.jpg",
-          "https://example.com/images/bb004_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -1677,8 +1678,8 @@
         "brand": "Orna Care",
         "tags": ["cooling", "body balm"],
         "images": [
-          "https://example.com/images/bb005_1.jpg",
-          "https://example.com/images/bb005_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
   
@@ -1696,8 +1697,8 @@
         "brand": "Orna Care",
         "tags": ["coconut", "body wash"],
         "images": [
-          "https://example.com/images/bw001_1.jpg",
-          "https://example.com/images/bw001_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -1713,8 +1714,8 @@
         "brand": "Orna Care",
         "tags": ["refreshing", "body wash"],
         "images": [
-          "https://example.com/images/bw002_1.jpg",
-          "https://example.com/images/bw002_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -1730,8 +1731,8 @@
         "brand": "Orna Care",
         "tags": ["moisturizing", "body wash"],
         "images": [
-          "https://example.com/images/bw003_1.jpg",
-          "https://example.com/images/bw003_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -1747,8 +1748,8 @@
         "brand": "Orna Care",
         "tags": ["exfoliating", "body wash"],
         "images": [
-          "https://example.com/images/bw004_1.jpg",
-          "https://example.com/images/bw004_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -1764,8 +1765,8 @@
         "brand": "Orna Care",
         "tags": ["gel", "body wash"],
         "images": [
-          "https://example.com/images/bw005_1.jpg",
-          "https://example.com/images/bw005_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
   
@@ -1783,8 +1784,8 @@
         "brand": "Orna Care",
         "tags": ["coffee", "body scrub"],
         "images": [
-          "https://example.com/images/bs001_1.jpg",
-          "https://example.com/images/bs001_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -1800,8 +1801,8 @@
         "brand": "Orna Care",
         "tags": ["sugar", "body scrub"],
         "images": [
-          "https://example.com/images/bs002_1.jpg",
-          "https://example.com/images/bs002_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -1817,8 +1818,8 @@
         "brand": "Orna Care",
         "tags": ["salt", "body scrub"],
         "images": [
-          "https://example.com/images/bs003_1.jpg",
-          "https://example.com/images/bs003_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -1834,8 +1835,8 @@
         "brand": "Orna Care",
         "tags": ["herbal", "body scrub"],
         "images": [
-          "https://example.com/images/bs004_1.jpg",
-          "https://example.com/images/bs004_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -1851,8 +1852,8 @@
         "brand": "Orna Care",
         "tags": ["polish", "body scrub"],
         "images": [
-          "https://example.com/images/bs005_1.jpg",
-          "https://example.com/images/bs005_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },{
         "id": 101,
@@ -1867,8 +1868,8 @@
         "brand": "Orna Makeup",
         "tags": ["hydrating", "primer"],
         "images": [
-          "https://example.com/images/pr001_1.jpg",
-          "https://example.com/images/pr001_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -1884,8 +1885,8 @@
         "brand": "Orna Makeup",
         "tags": ["mattifying", "primer"],
         "images": [
-          "https://example.com/images/pr002_1.jpg",
-          "https://example.com/images/pr002_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -1901,8 +1902,8 @@
         "brand": "Orna Makeup",
         "tags": ["illuminating", "primer"],
         "images": [
-          "https://example.com/images/pr003_1.jpg",
-          "https://example.com/images/pr003_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -1918,8 +1919,8 @@
         "brand": "Orna Makeup",
         "tags": ["pore minimizing", "primer"],
         "images": [
-          "https://example.com/images/pr004_1.jpg",
-          "https://example.com/images/pr004_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -1935,8 +1936,8 @@
         "brand": "Orna Makeup",
         "tags": ["color correcting", "primer"],
         "images": [
-          "https://example.com/images/pr005_1.jpg",
-          "https://example.com/images/pr005_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -1952,8 +1953,8 @@
         "brand": "Orna Makeup",
         "tags": ["liquid", "foundation"],
         "images": [
-          "https://example.com/images/fd001_1.jpg",
-          "https://example.com/images/fd001_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -1969,8 +1970,8 @@
         "brand": "Orna Makeup",
         "tags": ["matte", "foundation"],
         "images": [
-          "https://example.com/images/fd002_1.jpg",
-          "https://example.com/images/fd002_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -1986,8 +1987,8 @@
         "brand": "Orna Makeup",
         "tags": ["hydrating", "foundation"],
         "images": [
-          "https://example.com/images/fd003_1.jpg",
-          "https://example.com/images/fd003_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -2003,8 +2004,8 @@
         "brand": "Orna Makeup",
         "tags": ["full coverage", "foundation"],
         "images": [
-          "https://example.com/images/fd004_1.jpg",
-          "https://example.com/images/fd004_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -2020,8 +2021,8 @@
         "brand": "Orna Makeup",
         "tags": ["BB cream", "foundation"],
         "images": [
-          "https://example.com/images/fd005_1.jpg",
-          "https://example.com/images/fd005_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -2037,8 +2038,8 @@
         "brand": "Orna Makeup",
         "tags": ["liquid", "concealer"],
         "images": [
-          "https://example.com/images/cn001_1.jpg",
-          "https://example.com/images/cn001_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -2054,8 +2055,8 @@
         "brand": "Orna Makeup",
         "tags": ["cream", "concealer"],
         "images": [
-          "https://example.com/images/cn002_1.jpg",
-          "https://example.com/images/cn002_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -2071,8 +2072,8 @@
         "brand": "Orna Makeup",
         "tags": ["stick", "concealer"],
         "images": [
-          "https://example.com/images/cn003_1.jpg",
-          "https://example.com/images/cn003_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -2088,8 +2089,8 @@
         "brand": "Orna Makeup",
         "tags": ["color correcting", "concealer"],
         "images": [
-          "https://example.com/images/cn004_1.jpg",
-          "https://example.com/images/cn004_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -2105,8 +2106,8 @@
         "brand": "Orna Makeup",
         "tags": ["waterproof", "concealer"],
         "images": [
-          "https://example.com/images/cn005_1.jpg",
-          "https://example.com/images/cn005_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -2122,8 +2123,8 @@
         "brand": "Orna Makeup",
         "tags": ["translucent", "powder"],
         "images": [
-          "https://example.com/images/pw001_1.jpg",
-          "https://example.com/images/pw001_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -2139,8 +2140,8 @@
         "brand": "Orna Makeup",
         "tags": ["matte", "powder"],
         "images": [
-          "https://example.com/images/pw002_1.jpg",
-          "https://example.com/images/pw002_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -2156,8 +2157,8 @@
         "brand": "Orna Makeup",
         "tags": ["banana", "powder"],
         "images": [
-          "https://example.com/images/pw003_1.jpg",
-          "https://example.com/images/pw003_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -2173,8 +2174,8 @@
         "brand": "Orna Makeup",
         "tags": ["finishing", "powder"],
         "images": [
-          "https://example.com/images/pw004_1.jpg",
-          "https://example.com/images/pw004_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -2190,8 +2191,8 @@
         "brand": "Orna Makeup",
         "tags": ["setting spray", "powder"],
         "images": [
-          "https://example.com/images/pw005_1.jpg",
-          "https://example.com/images/pw005_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -2207,8 +2208,8 @@
         "brand": "Orna Makeup",
         "tags": ["powder", "blush"],
         "images": [
-          "https://example.com/images/bl001_1.jpg",
-          "https://example.com/images/bl001_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -2224,8 +2225,8 @@
         "brand": "Orna Makeup",
         "tags": ["cream", "blush"],
         "images": [
-          "https://example.com/images/bl002_1.jpg",
-          "https://example.com/images/bl002_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -2241,8 +2242,8 @@
         "brand": "Orna Makeup",
         "tags": ["liquid", "blush"],
         "images": [
-          "https://example.com/images/bl003_1.jpg",
-          "https://example.com/images/bl003_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -2258,8 +2259,8 @@
         "brand": "Orna Makeup",
         "tags": ["gel", "blush"],
         "images": [
-          "https://example.com/images/bl004_1.jpg",
-          "https://example.com/images/bl004_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       {
@@ -2275,8 +2276,8 @@
         "brand": "Orna Makeup",
         "tags": ["tinted", "blush"],
         "images": [
-          "https://example.com/images/bl005_1.jpg",
-          "https://example.com/images/bl005_2.jpg"
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
         ]
       },
       
@@ -2293,9 +2294,9 @@
       "brand": "Orna Makeup",
       "tags": ["matte", "bronzer"],
       "images": [
-        "https://example.com/images/br001_1.jpg",
-        "https://example.com/images/br001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 127,
@@ -2310,9 +2311,9 @@
       "brand": "Orna Makeup",
       "tags": ["shimmer", "bronzer"],
       "images": [
-        "https://example.com/images/br002_1.jpg",
-        "https://example.com/images/br002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 128,
@@ -2327,9 +2328,9 @@
       "brand": "Orna Makeup",
       "tags": ["cream", "bronzer"],
       "images": [
-        "https://example.com/images/br003_1.jpg",
-        "https://example.com/images/br003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 129,
@@ -2344,9 +2345,9 @@
       "brand": "Orna Makeup",
       "tags": ["liquid", "bronzer"],
       "images": [
-        "https://example.com/images/br004_1.jpg",
-        "https://example.com/images/br004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 130,
@@ -2361,9 +2362,9 @@
       "brand": "Orna Makeup",
       "tags": ["palette", "bronzer"],
       "images": [
-        "https://example.com/images/br005_1.jpg",
-        "https://example.com/images/br005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
 
     
@@ -2380,9 +2381,9 @@
       "brand": "Orna Makeup",
       "tags": ["powder", "highlighter"],
       "images": [
-        "https://example.com/images/hl001_1.jpg",
-        "https://example.com/images/hl001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 132,
@@ -2397,9 +2398,9 @@
       "brand": "Orna Makeup",
       "tags": ["liquid", "highlighter"],
       "images": [
-        "https://example.com/images/hl002_1.jpg",
-        "https://example.com/images/hl002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 133,
@@ -2414,9 +2415,9 @@
       "brand": "Orna Makeup",
       "tags": ["cream", "highlighter"],
       "images": [
-        "https://example.com/images/hl003_1.jpg",
-        "https://example.com/images/hl003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 134,
@@ -2431,9 +2432,9 @@
       "brand": "Orna Makeup",
       "tags": ["stick", "highlighter"],
       "images": [
-        "https://example.com/images/hl004_1.jpg",
-        "https://example.com/images/hl004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 135,
@@ -2448,9 +2449,9 @@
       "brand": "Orna Makeup",
       "tags": ["palette", "highlighter"],
       "images": [
-        "https://example.com/images/hl005_1.jpg",
-        "https://example.com/images/hl005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
 
     
@@ -2467,9 +2468,9 @@
       "brand": "Orna Makeup",
       "tags": ["stick", "contour"],
       "images": [
-        "https://example.com/images/ct001_1.jpg",
-        "https://example.com/images/ct001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 137,
@@ -2484,9 +2485,9 @@
       "brand": "Orna Makeup",
       "tags": ["cream", "contour"],
       "images": [
-        "https://example.com/images/ct002_1.jpg",
-        "https://example.com/images/ct002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 138,
@@ -2501,9 +2502,9 @@
       "brand": "Orna Makeup",
       "tags": ["powder", "contour"],
       "images": [
-        "https://example.com/images/ct003_1.jpg",
-        "https://example.com/images/ct003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 139,
@@ -2518,9 +2519,9 @@
       "brand": "Orna Makeup",
       "tags": ["palette", "contour"],
       "images": [
-        "https://example.com/images/ct004_1.jpg",
-        "https://example.com/images/ct004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 140,
@@ -2535,9 +2536,9 @@
       "brand": "Orna Makeup",
       "tags": ["liquid", "contour"],
       "images": [
-        "https://example.com/images/ct005_1.jpg",
-        "https://example.com/images/ct005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
 
 
@@ -2554,9 +2555,9 @@
       "brand": "Orna Makeup",
       "tags": ["palette", "eyeshadow"],
       "images": [
-        "https://example.com/images/es001_1.jpg",
-        "https://example.com/images/es001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 142,
@@ -2571,9 +2572,9 @@
       "brand": "Orna Makeup",
       "tags": ["single", "eyeshadow"],
       "images": [
-        "https://example.com/images/es002_1.jpg",
-        "https://example.com/images/es002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 143,
@@ -2588,9 +2589,9 @@
       "brand": "Orna Makeup",
       "tags": ["cream", "eyeshadow"],
       "images": [
-        "https://example.com/images/es003_1.jpg",
-        "https://example.com/images/es003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 144,
@@ -2605,9 +2606,9 @@
       "brand": "Orna Makeup",
       "tags": ["liquid", "eyeshadow"],
       "images": [
-        "https://example.com/images/es004_1.jpg",
-        "https://example.com/images/es004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 145,
@@ -2622,9 +2623,9 @@
       "brand": "Orna Makeup",
       "tags": ["stick", "eyeshadow"],
       "images": [
-        "https://example.com/images/es005_1.jpg",
-        "https://example.com/images/es005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
 
     {
@@ -2640,9 +2641,9 @@
       "brand": "Orna Makeup",
       "tags": ["liquid", "eyeliner"],
       "images": [
-        "https://example.com/images/el001_1.jpg",
-        "https://example.com/images/el001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 147,
@@ -2657,9 +2658,9 @@
       "brand": "Orna Makeup",
       "tags": ["gel", "eyeliner"],
       "images": [
-        "https://example.com/images/el002_1.jpg",
-        "https://example.com/images/el002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 148,
@@ -2674,9 +2675,9 @@
       "brand": "Orna Makeup",
       "tags": ["pencil", "eyeliner"],
       "images": [
-        "https://example.com/images/el003_1.jpg",
-        "https://example.com/images/el003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 149,
@@ -2691,9 +2692,9 @@
       "brand": "Orna Makeup",
       "tags": ["retractable", "eyeliner"],
       "images": [
-        "https://example.com/images/el004_1.jpg",
-        "https://example.com/images/el004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 150,
@@ -2708,9 +2709,9 @@
       "brand": "Orna Makeup",
       "tags": ["waterproof", "eyeliner"],
       "images": [
-        "https://example.com/images/el005_1.jpg",
-        "https://example.com/images/el005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
 
     {
@@ -2726,9 +2727,9 @@
       "brand": "Orna Makeup",
       "tags": ["lengthening", "mascara"],
       "images": [
-        "https://example.com/images/ms001_1.jpg",
-        "https://example.com/images/ms001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 152,
@@ -2743,9 +2744,9 @@
       "brand": "Orna Makeup",
       "tags": ["volumizing", "mascara"],
       "images": [
-        "https://example.com/images/ms002_1.jpg",
-        "https://example.com/images/ms002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 153,
@@ -2760,9 +2761,9 @@
       "brand": "Orna Makeup",
       "tags": ["waterproof", "mascara"],
       "images": [
-        "https://example.com/images/ms003_1.jpg",
-        "https://example.com/images/ms003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 154,
@@ -2777,9 +2778,9 @@
       "brand": "Orna Makeup",
       "tags": ["curling", "mascara"],
       "images": [
-        "https://example.com/images/ms004_1.jpg",
-        "https://example.com/images/ms004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 155,
@@ -2794,9 +2795,9 @@
       "brand": "Orna Makeup",
       "tags": ["lengthening", "volumizing", "mascara"],
       "images": [
-        "https://example.com/images/ms005_1.jpg",
-        "https://example.com/images/ms005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
 
     {
@@ -2812,9 +2813,9 @@
       "brand": "Orna Makeup",
       "tags": ["hydrating", "lip balm"],
       "images": [
-        "https://example.com/images/lb001_1.jpg",
-        "https://example.com/images/lb001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 157,
@@ -2829,9 +2830,9 @@
       "brand": "Orna Makeup",
       "tags": ["tinted", "lip balm"],
       "images": [
-        "https://example.com/images/lb002_1.jpg",
-        "https://example.com/images/lb002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 158,
@@ -2846,9 +2847,9 @@
       "brand": "Orna Makeup",
       "tags": ["scented", "lip balm"],
       "images": [
-        "https://example.com/images/lb003_1.jpg",
-        "https://example.com/images/lb003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 159,
@@ -2863,9 +2864,9 @@
       "brand": "Orna Makeup",
       "tags": ["organic", "lip balm"],
       "images": [
-        "https://example.com/images/lb004_1.jpg",
-        "https://example.com/images/lb004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 160,
@@ -2880,9 +2881,9 @@
       "brand": "Orna Makeup",
       "tags": ["SPF", "lip balm"],
       "images": [
-        "https://example.com/images/lb005_1.jpg",
-        "https://example.com/images/lb005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
 
     {
@@ -2898,9 +2899,9 @@
       "brand": "Orna Makeup",
       "tags": ["matte", "lipstick"],
       "images": [
-        "https://example.com/images/ls001_1.jpg",
-        "https://example.com/images/ls001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 162,
@@ -2915,9 +2916,9 @@
       "brand": "Orna Makeup",
       "tags": ["cream", "lipstick"],
       "images": [
-        "https://example.com/images/ls002_1.jpg",
-        "https://example.com/images/ls002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 163,
@@ -2932,9 +2933,9 @@
       "brand": "Orna Makeup",
       "tags": ["liquid", "lipstick"],
       "images": [
-        "https://example.com/images/ls003_1.jpg",
-        "https://example.com/images/ls003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 164,
@@ -2949,9 +2950,9 @@
       "brand": "Orna Makeup",
       "tags": ["glossy", "lipstick"],
       "images": [
-        "https://example.com/images/ls004_1.jpg",
-        "https://example.com/images/ls004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 165,
@@ -2966,9 +2967,9 @@
       "brand": "Orna Makeup",
       "tags": ["hydrating", "lipstick"],
       "images": [
-        "https://example.com/images/ls005_1.jpg",
-        "https://example.com/images/ls005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
 
 
@@ -2985,9 +2986,9 @@
       "brand": "Orna Makeup",
       "tags": ["clear", "lip gloss"],
       "images": [
-        "https://example.com/images/lg001_1.jpg",
-        "https://example.com/images/lg001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 167,
@@ -3002,9 +3003,9 @@
       "brand": "Orna Makeup",
       "tags": ["tinted", "lip gloss"],
       "images": [
-        "https://example.com/images/lg002_1.jpg",
-        "https://example.com/images/lg002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 168,
@@ -3019,9 +3020,9 @@
       "brand": "Orna Makeup",
       "tags": ["shimmer", "lip gloss"],
       "images": [
-        "https://example.com/images/lg003_1.jpg",
-        "https://example.com/images/lg003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 169,
@@ -3036,9 +3037,9 @@
       "brand": "Orna Makeup",
       "tags": ["hydrating", "lip gloss"],
       "images": [
-        "https://example.com/images/lg004_1.jpg",
-        "https://example.com/images/lg004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 170,
@@ -3053,9 +3054,9 @@
       "brand": "Orna Makeup",
       "tags": ["long-lasting", "lip gloss"],
       "images": [
-        "https://example.com/images/lg005_1.jpg",
-        "https://example.com/images/lg005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
 
 
@@ -3072,9 +3073,9 @@
       "brand": "Orna Makeup",
       "tags": ["matte", "setting spray"],
       "images": [
-        "https://example.com/images/ss001_1.jpg",
-        "https://example.com/images/ss001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 172,
@@ -3089,9 +3090,9 @@
       "brand": "Orna Makeup",
       "tags": ["dewy", "setting spray"],
       "images": [
-        "https://example.com/images/ss002_1.jpg",
-        "https://example.com/images/ss002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 173,
@@ -3106,9 +3107,9 @@
       "brand": "Orna Makeup",
       "tags": ["long-lasting", "setting spray"],
       "images": [
-        "https://example.com/images/ss003_1.jpg",
-        "https://example.com/images/ss003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 174,
@@ -3123,9 +3124,9 @@
       "brand": "Orna Makeup",
       "tags": ["hydrating", "setting spray"],
       "images": [
-        "https://example.com/images/ss004_1.jpg",
-        "https://example.com/images/ss004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 175,
@@ -3140,9 +3141,9 @@
       "brand": "Orna Makeup",
       "tags": ["cooling", "setting spray"],
       "images": [
-        "https://example.com/images/ss005_1.jpg",
-        "https://example.com/images/ss005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     
     {
@@ -3158,9 +3159,9 @@
       "brand": "Orna Hair",
       "tags": ["gentle", "shampoo"],
       "images": [
-        "https://example.com/images/sh001_1.jpg",
-        "https://example.com/images/sh001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 177,
@@ -3175,9 +3176,9 @@
       "brand": "Orna Hair",
       "tags": ["moisturizing", "shampoo"],
       "images": [
-        "https://example.com/images/sh002_1.jpg",
-        "https://example.com/images/sh002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 178,
@@ -3192,9 +3193,9 @@
       "brand": "Orna Hair",
       "tags": ["clarifying", "shampoo"],
       "images": [
-        "https://example.com/images/sh003_1.jpg",
-        "https://example.com/images/sh003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 179,
@@ -3209,9 +3210,9 @@
       "brand": "Orna Hair",
       "tags": ["color protect", "shampoo"],
       "images": [
-        "https://example.com/images/sh004_1.jpg",
-        "https://example.com/images/sh004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 180,
@@ -3226,9 +3227,9 @@
       "brand": "Orna Hair",
       "tags": ["anti-dandruff", "shampoo"],
       "images": [
-        "https://example.com/images/sh005_1.jpg",
-        "https://example.com/images/sh005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
 
     {
@@ -3244,9 +3245,9 @@
       "brand": "Orna Hair",
       "tags": ["hydrating", "conditioner"],
       "images": [
-        "https://example.com/images/co001_1.jpg",
-        "https://example.com/images/co001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 182,
@@ -3261,9 +3262,9 @@
       "brand": "Orna Hair",
       "tags": ["repairing", "conditioner"],
       "images": [
-        "https://example.com/images/co002_1.jpg",
-        "https://example.com/images/co002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 183,
@@ -3278,9 +3279,9 @@
       "brand": "Orna Hair",
       "tags": ["color protect", "conditioner"],
       "images": [
-        "https://example.com/images/co003_1.jpg",
-        "https://example.com/images/co003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 184,
@@ -3295,9 +3296,9 @@
       "brand": "Orna Hair",
       "tags": ["leave-in", "conditioner"],
       "images": [
-        "https://example.com/images/co004_1.jpg",
-        "https://example.com/images/co004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 185,
@@ -3312,9 +3313,9 @@
       "brand": "Orna Hair",
       "tags": ["deep conditioning", "conditioner"],
       "images": [
-        "https://example.com/images/co005_1.jpg",
-        "https://example.com/images/co005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
 
 
@@ -3331,9 +3332,9 @@
       "brand": "Orna Hair",
       "tags": ["nourishing", "hair mask"],
       "images": [
-        "https://example.com/images/hm001_1.jpg",
-        "https://example.com/images/hm001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 187,
@@ -3348,9 +3349,9 @@
       "brand": "Orna Hair",
       "tags": ["repairing", "hair mask"],
       "images": [
-        "https://example.com/images/hm002_1.jpg",
-        "https://example.com/images/hm002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 188,
@@ -3365,9 +3366,9 @@
       "brand": "Orna Hair",
       "tags": ["color protect", "hair mask"],
       "images": [
-        "https://example.com/images/hm003_1.jpg",
-        "https://example.com/images/hm003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 189,
@@ -3382,9 +3383,9 @@
       "brand": "Orna Hair",
       "tags": ["hydrating", "hair mask"],
       "images": [
-        "https://example.com/images/hm004_1.jpg",
-        "https://example.com/images/hm004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 190,
@@ -3399,9 +3400,9 @@
       "brand": "Orna Hair",
       "tags": ["intense repair", "hair mask"],
       "images": [
-        "https://example.com/images/hm005_1.jpg",
-        "https://example.com/images/hm005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
 
     {
@@ -3417,9 +3418,9 @@
       "brand": "Orna Hair",
       "tags": ["permanent", "hair color"],
       "images": [
-        "https://example.com/images/hc001_1.jpg",
-        "https://example.com/images/hc001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 192,
@@ -3434,9 +3435,9 @@
       "brand": "Orna Hair",
       "tags": ["semi-permanent", "hair color"],
       "images": [
-        "https://example.com/images/hc002_1.jpg",
-        "https://example.com/images/hc002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 193,
@@ -3451,9 +3452,9 @@
       "brand": "Orna Hair",
       "tags": ["cream", "hair color"],
       "images": [
-        "https://example.com/images/hc003_1.jpg",
-        "https://example.com/images/hc003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 194,
@@ -3468,9 +3469,9 @@
       "brand": "Orna Hair",
       "tags": ["kit", "hair color"],
       "images": [
-        "https://example.com/images/hc004_1.jpg",
-        "https://example.com/images/hc004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 195,
@@ -3485,9 +3486,9 @@
       "brand": "Orna Hair",
       "tags": ["remover", "hair color"],
       "images": [
-        "https://example.com/images/hc005_1.jpg",
-        "https://example.com/images/hc005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
 
 
@@ -3504,9 +3505,9 @@
       "brand": "Orna Hair",
       "tags": ["argan", "hair oil"],
       "images": [
-        "https://example.com/images/ho001_1.jpg",
-        "https://example.com/images/ho001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 197,
@@ -3521,9 +3522,9 @@
       "brand": "Orna Hair",
       "tags": ["coconut", "hair oil"],
       "images": [
-        "https://example.com/images/ho002_1.jpg",
-        "https://example.com/images/ho002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 198,
@@ -3538,9 +3539,9 @@
       "brand": "Orna Hair",
       "tags": ["jojoba", "hair oil"],
       "images": [
-        "https://example.com/images/ho003_1.jpg",
-        "https://example.com/images/ho003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 199,
@@ -3555,9 +3556,9 @@
       "brand": "Orna Hair",
       "tags": ["olive", "hair oil"],
       "images": [
-        "https://example.com/images/ho004_1.jpg",
-        "https://example.com/images/ho004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 200,
@@ -3572,9 +3573,9 @@
       "brand": "Orna Hair",
       "tags": ["growth", "hair oil"],
       "images": [
-        "https://example.com/images/ho005_1.jpg",
-        "https://example.com/images/ho005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     
     {
@@ -3590,9 +3591,9 @@
       "brand": "Orna Hair",
       "tags": ["velcro", "hair rollers"],
       "images": [
-        "https://example.com/images/hr001_1.jpg",
-        "https://example.com/images/hr001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 202,
@@ -3607,9 +3608,9 @@
       "brand": "Orna Hair",
       "tags": ["thermal", "hair rollers"],
       "images": [
-        "https://example.com/images/hr002_1.jpg",
-        "https://example.com/images/hr002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 203,
@@ -3624,9 +3625,9 @@
       "brand": "Orna Hair",
       "tags": ["flexible", "hair rollers"],
       "images": [
-        "https://example.com/images/hr003_1.jpg",
-        "https://example.com/images/hr003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 204,
@@ -3641,9 +3642,9 @@
       "brand": "Orna Hair",
       "tags": ["magnetic", "hair rollers"],
       "images": [
-        "https://example.com/images/hr004_1.jpg",
-        "https://example.com/images/hr004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 205,
@@ -3658,9 +3659,9 @@
       "brand": "Orna Hair",
       "tags": ["sponge", "hair rollers"],
       "images": [
-        "https://example.com/images/hr005_1.jpg",
-        "https://example.com/images/hr005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
  
     {
@@ -3676,9 +3677,9 @@
       "brand": "Orna Hair",
       "tags": ["strong hold", "hair spray"],
       "images": [
-        "https://example.com/images/hs001_1.jpg",
-        "https://example.com/images/hs001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 207,
@@ -3693,9 +3694,9 @@
       "brand": "Orna Hair",
       "tags": ["flexible hold", "hair spray"],
       "images": [
-        "https://example.com/images/hs002_1.jpg",
-        "https://example.com/images/hs002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 208,
@@ -3710,9 +3711,9 @@
       "brand": "Orna Hair",
       "tags": ["shine", "hair spray"],
       "images": [
-        "https://example.com/images/hs003_1.jpg",
-        "https://example.com/images/hs003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 209,
@@ -3727,9 +3728,9 @@
       "brand": "Orna Hair",
       "tags": ["humidity resistant", "hair spray"],
       "images": [
-        "https://example.com/images/hs004_1.jpg",
-        "https://example.com/images/hs004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 210,
@@ -3744,9 +3745,9 @@
       "brand": "Orna Hair",
       "tags": ["volumizing", "hair spray"],
       "images": [
-        "https://example.com/images/hs005_1.jpg",
-        "https://example.com/images/hs005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
 
     {
@@ -3762,9 +3763,9 @@
       "brand": "Orna Hair",
       "tags": ["volumizing", "hair mousse"],
       "images": [
-        "https://example.com/images/hm001_1.jpg",
-        "https://example.com/images/hm001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 212,
@@ -3779,9 +3780,9 @@
       "brand": "Orna Hair",
       "tags": ["curl defining", "hair mousse"],
       "images": [
-        "https://example.com/images/hm002_1.jpg",
-        "https://example.com/images/hm002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 213,
@@ -3796,9 +3797,9 @@
       "brand": "Orna Hair",
       "tags": ["smoothing", "hair mousse"],
       "images": [
-        "https://example.com/images/hm003_1.jpg",
-        "https://example.com/images/hm003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 214,
@@ -3813,9 +3814,9 @@
       "brand": "Orna Hair",
       "tags": ["heat protecting", "hair mousse"],
       "images": [
-        "https://example.com/images/hm004_1.jpg",
-        "https://example.com/images/hm004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 215,
@@ -3830,9 +3831,9 @@
       "brand": "Orna Hair",
       "tags": ["lightweight", "hair mousse"],
       "images": [
-        "https://example.com/images/hm005_1.jpg",
-        "https://example.com/images/hm005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
 
     {
@@ -3848,9 +3849,9 @@
       "brand": "Orna Hair",
       "tags": ["ceramic", "curling iron"],
       "images": [
-        "https://example.com/images/ci001_1.jpg",
-        "https://example.com/images/ci001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 217,
@@ -3865,9 +3866,9 @@
       "brand": "Orna Hair",
       "tags": ["tourmaline", "curling iron"],
       "images": [
-        "https://example.com/images/ci002_1.jpg",
-        "https://example.com/images/ci002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 218,
@@ -3882,9 +3883,9 @@
       "brand": "Orna Hair",
       "tags": ["adjustable", "curling iron"],
       "images": [
-        "https://example.com/images/ci003_1.jpg",
-        "https://example.com/images/ci003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 219,
@@ -3899,9 +3900,9 @@
       "brand": "Orna Hair",
       "tags": ["mini", "curling iron"],
       "images": [
-        "https://example.com/images/ci004_1.jpg",
-        "https://example.com/images/ci004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 220,
@@ -3916,9 +3917,9 @@
       "brand": "Orna Hair",
       "tags": ["professional", "curling iron"],
       "images": [
-        "https://example.com/images/ci005_1.jpg",
-        "https://example.com/images/ci005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
 
 
@@ -3935,9 +3936,9 @@
       "brand": "Orna Hair",
       "tags": ["volumizing", "dry shampoo"],
       "images": [
-        "https://example.com/images/ds001_1.jpg",
-        "https://example.com/images/ds001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 222,
@@ -3952,9 +3953,9 @@
       "brand": "Orna Hair",
       "tags": ["cleansing", "dry shampoo"],
       "images": [
-        "https://example.com/images/ds002_1.jpg",
-        "https://example.com/images/ds002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 223,
@@ -3969,9 +3970,9 @@
       "brand": "Orna Hair",
       "tags": ["refreshing", "dry shampoo"],
       "images": [
-        "https://example.com/images/ds003_1.jpg",
-        "https://example.com/images/ds003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 224,
@@ -3986,9 +3987,9 @@
       "brand": "Orna Hair",
       "tags": ["fragrance", "dry shampoo"],
       "images": [
-        "https://example.com/images/ds004_1.jpg",
-        "https://example.com/images/ds004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 225,
@@ -4003,9 +4004,9 @@
       "brand": "Orna Hair",
       "tags": ["natural", "dry shampoo"],
       "images": [
-        "https://example.com/images/ds005_1.jpg",
-        "https://example.com/images/ds005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
 
     {
@@ -4021,9 +4022,9 @@
       "brand": "Orna Hair",
       "tags": ["leave-in", "hair detangler"],
       "images": [
-        "https://example.com/images/hd001_1.jpg",
-        "https://example.com/images/hd001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 227,
@@ -4038,9 +4039,9 @@
       "brand": "Orna Hair",
       "tags": ["spray", "hair detangler"],
       "images": [
-        "https://example.com/images/hd002_1.jpg",
-        "https://example.com/images/hd002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 228,
@@ -4055,9 +4056,9 @@
       "brand": "Orna Hair",
       "tags": ["cream", "hair detangler"],
       "images": [
-        "https://example.com/images/hd003_1.jpg",
-        "https://example.com/images/hd003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 229,
@@ -4072,9 +4073,9 @@
       "brand": "Orna Hair",
       "tags": ["natural", "hair detangler"],
       "images": [
-        "https://example.com/images/hd004_1.jpg",
-        "https://example.com/images/hd004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 230,
@@ -4089,9 +4090,9 @@
       "brand": "Orna Hair",
       "tags": ["brush", "hair detangler"],
       "images": [
-        "https://example.com/images/hd005_1.jpg",
-        "https://example.com/images/hd005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
 
 
@@ -4108,9 +4109,9 @@
       "brand": "Orna Hair",
       "tags": ["moisturizing", "hair cream"],
       "images": [
-        "https://example.com/images/hc001_1.jpg",
-        "https://example.com/images/hc001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 232,
@@ -4125,9 +4126,9 @@
       "brand": "Orna Hair",
       "tags": ["styling", "hair cream"],
       "images": [
-        "https://example.com/images/hc002_1.jpg",
-        "https://example.com/images/hc002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 233,
@@ -4142,9 +4143,9 @@
       "brand": "Orna Hair",
       "tags": ["curl defining", "hair cream"],
       "images": [
-        "https://example.com/images/hc003_1.jpg",
-        "https://example.com/images/hc003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 234,
@@ -4159,9 +4160,9 @@
       "brand": "Orna Hair",
       "tags": ["frizz control", "hair cream"],
       "images": [
-        "https://example.com/images/hc004_1.jpg",
-        "https://example.com/images/hc004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 235,
@@ -4176,9 +4177,9 @@
       "brand": "Orna Hair",
       "tags": ["repairing", "hair cream"],
       "images": [
-        "https://example.com/images/hc005_1.jpg",
-        "https://example.com/images/hc005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
 
     {
@@ -4194,9 +4195,9 @@
       "brand": "Orna Hair",
       "tags": ["matte", "hair wax"],
       "images": [
-        "https://example.com/images/hw001_1.jpg",
-        "https://example.com/images/hw001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 237,
@@ -4211,9 +4212,9 @@
       "brand": "Orna Hair",
       "tags": ["shine", "hair wax"],
       "images": [
-        "https://example.com/images/hw002_1.jpg",
-        "https://example.com/images/hw002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 238,
@@ -4228,9 +4229,9 @@
       "brand": "Orna Hair",
       "tags": ["flexible", "hair wax"],
       "images": [
-        "https://example.com/images/hw003_1.jpg",
-        "https://example.com/images/hw003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 239,
@@ -4245,9 +4246,9 @@
       "brand": "Orna Hair",
       "tags": ["strong hold", "hair wax"],
       "images": [
-        "https://example.com/images/hw004_1.jpg",
-        "https://example.com/images/hw004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 240,
@@ -4262,9 +4263,9 @@
       "brand": "Orna Hair",
       "tags": ["natural", "hair wax"],
       "images": [
-        "https://example.com/images/hw005_1.jpg",
-        "https://example.com/images/hw005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 241,
@@ -4279,9 +4280,9 @@
       "brand": "Orna Hair",
       "tags": ["shine", "hair pomade"],
       "images": [
-        "https://example.com/images/hp001_1.jpg",
-        "https://example.com/images/hp001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 242,
@@ -4296,9 +4297,9 @@
       "brand": "Orna Hair",
       "tags": ["matte", "hair pomade"],
       "images": [
-        "https://example.com/images/hp002_1.jpg",
-        "https://example.com/images/hp002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 243,
@@ -4313,9 +4314,9 @@
       "brand": "Orna Hair",
       "tags": ["flexible", "hair pomade"],
       "images": [
-        "https://example.com/images/hp003_1.jpg",
-        "https://example.com/images/hp003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 244,
@@ -4330,9 +4331,9 @@
       "brand": "Orna Hair",
       "tags": ["strong hold", "hair pomade"],
       "images": [
-        "https://example.com/images/hp004_1.jpg",
-        "https://example.com/images/hp004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 245,
@@ -4347,9 +4348,9 @@
       "brand": "Orna Hair",
       "tags": ["natural", "hair pomade"],
       "images": [
-        "https://example.com/images/hp005_1.jpg",
-        "https://example.com/images/hp005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
 
     {
@@ -4365,9 +4366,9 @@
       "brand": "Orna Hair",
       "tags": ["texturizing", "hair texturizer"],
       "images": [
-        "https://example.com/images/ht001_1.jpg",
-        "https://example.com/images/ht001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 247,
@@ -4382,9 +4383,9 @@
       "brand": "Orna Hair",
       "tags": ["texturizing", "hair texturizer"],
       "images": [
-        "https://example.com/images/ht002_1.jpg",
-        "https://example.com/images/ht002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 248,
@@ -4399,9 +4400,9 @@
       "brand": "Orna Hair",
       "tags": ["texturizing", "hair texturizer"],
       "images": [
-        "https://example.com/images/ht003_1.jpg",
-        "https://example.com/images/ht003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 249,
@@ -4416,9 +4417,9 @@
       "brand": "Orna Hair",
       "tags": ["texturizing", "hair texturizer"],
       "images": [
-        "https://example.com/images/ht004_1.jpg",
-        "https://example.com/images/ht004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 250,
@@ -4433,9 +4434,9 @@
       "brand": "Orna Hair",
       "tags": ["texturizing", "hair texturizer"],
       "images": [
-        "https://example.com/images/ht005_1.jpg",
-        "https://example.com/images/ht005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 251,
@@ -4450,9 +4451,9 @@
       "brand": "Orna Baby",
       "tags": ["lotion", "baby"],
       "images": [
-        "https://example.com/images/bl001_1.jpg",
-        "https://example.com/images/bl001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 252,
@@ -4467,9 +4468,9 @@
       "brand": "Orna Baby",
       "tags": ["cream", "baby"],
       "images": [
-        "https://example.com/images/bl002_1.jpg",
-        "https://example.com/images/bl002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 253,
@@ -4484,9 +4485,9 @@
       "brand": "Orna Baby",
       "tags": ["soothing", "baby"],
       "images": [
-        "https://example.com/images/bl003_1.jpg",
-        "https://example.com/images/bl003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 254,
@@ -4501,9 +4502,9 @@
       "brand": "Orna Baby",
       "tags": ["massage", "baby"],
       "images": [
-        "https://example.com/images/bl004_1.jpg",
-        "https://example.com/images/bl004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 255,
@@ -4518,9 +4519,9 @@
       "brand": "Orna Baby",
       "tags": ["organic", "baby"],
       "images": [
-        "https://example.com/images/bl005_1.jpg",
-        "https://example.com/images/bl005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
 
     {
@@ -4536,9 +4537,9 @@
       "brand": "Orna Baby",
       "tags": ["powder", "baby"],
       "images": [
-        "https://example.com/images/bp001_1.jpg",
-        "https://example.com/images/bp001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 257,
@@ -4553,9 +4554,9 @@
       "brand": "Orna Baby",
       "tags": ["natural", "baby"],
       "images": [
-        "https://example.com/images/bp002_1.jpg",
-        "https://example.com/images/bp002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 258,
@@ -4570,9 +4571,9 @@
       "brand": "Orna Baby",
       "tags": ["cornstarch", "baby"],
       "images": [
-        "https://example.com/images/bp003_1.jpg",
-        "https://example.com/images/bp003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 259,
@@ -4587,9 +4588,9 @@
       "brand": "Orna Baby",
       "tags": ["herbal", "baby"],
       "images": [
-        "https://example.com/images/bp004_1.jpg",
-        "https://example.com/images/bp004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 260,
@@ -4604,9 +4605,9 @@
       "brand": "Orna Baby",
       "tags": ["dusting", "baby"],
       "images": [
-        "https://example.com/images/bp005_1.jpg",
-        "https://example.com/images/bp005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
 
     {
@@ -4622,9 +4623,9 @@
       "brand": "Orna Baby",
       "tags": ["shampoo", "baby"],
       "images": [
-        "https://example.com/images/bs001_1.jpg",
-        "https://example.com/images/bs001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 262,
@@ -4639,9 +4640,9 @@
       "brand": "Orna Baby",
       "tags": ["body wash", "baby"],
       "images": [
-        "https://example.com/images/bs002_1.jpg",
-        "https://example.com/images/bs002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 263,
@@ -4656,9 +4657,9 @@
       "brand": "Orna Baby",
       "tags": ["2-in-1", "baby"],
       "images": [
-        "https://example.com/images/bs003_1.jpg",
-        "https://example.com/images/bs003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 264,
@@ -4673,9 +4674,9 @@
       "brand": "Orna Baby",
       "tags": ["organic", "baby"],
       "images": [
-        "https://example.com/images/bs004_1.jpg",
-        "https://example.com/images/bs004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 265,
@@ -4690,9 +4691,9 @@
       "brand": "Orna Baby",
       "tags": ["foaming", "baby"],
       "images": [
-        "https://example.com/images/bs005_1.jpg",
-        "https://example.com/images/bs005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
 
     {
@@ -4708,9 +4709,9 @@
       "brand": "Orna Baby",
       "tags": ["wipes", "baby"],
       "images": [
-        "https://example.com/images/bw001_1.jpg",
-        "https://example.com/images/bw001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 267,
@@ -4725,9 +4726,9 @@
       "brand": "Orna Baby",
       "tags": ["moisturizing", "baby"],
       "images": [
-        "https://example.com/images/bw002_1.jpg",
-        "https://example.com/images/bw002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 268,
@@ -4742,9 +4743,9 @@
       "brand": "Orna Baby",
       "tags": ["organic", "baby"],
       "images": [
-        "https://example.com/images/bw003_1.jpg",
-        "https://example.com/images/bw003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 269,
@@ -4759,9 +4760,9 @@
       "brand": "Orna Baby",
       "tags": ["travel", "baby"],
       "images": [
-        "https://example.com/images/bw004_1.jpg",
-        "https://example.com/images/bw004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 270,
@@ -4776,9 +4777,9 @@
       "brand": "Orna Baby",
       "tags": ["cleansing", "baby"],
       "images": [
-        "https://example.com/images/bw005_1.jpg",
-        "https://example.com/images/bw005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
 
 
@@ -4795,9 +4796,9 @@
       "brand": "Orna Baby",
       "tags": ["soap", "baby"],
       "images": [
-        "https://example.com/images/bso001_1.jpg",
-        "https://example.com/images/bso001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 272,
@@ -4812,9 +4813,9 @@
       "brand": "Orna Baby",
       "tags": ["organic", "baby"],
       "images": [
-        "https://example.com/images/bso002_1.jpg",
-        "https://example.com/images/bso002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 273,
@@ -4829,9 +4830,9 @@
       "brand": "Orna Baby",
       "tags": ["glycerin", "baby"],
       "images": [
-        "https://example.com/images/bso003_1.jpg",
-        "https://example.com/images/bso003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 274,
@@ -4846,9 +4847,9 @@
       "brand": "Orna Baby",
       "tags": ["castile", "baby"],
       "images": [
-        "https://example.com/images/bso004_1.jpg",
-        "https://example.com/images/bso004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 275,
@@ -4863,9 +4864,9 @@
       "brand": "Orna Baby",
       "tags": ["herbal", "baby"],
       "images": [
-        "https://example.com/images/bso005_1.jpg",
-        "https://example.com/images/bso005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     
     {
@@ -4881,9 +4882,9 @@
       "brand": "Orna Baby",
       "tags": ["sunscreen", "baby"],
       "images": [
-        "https://example.com/images/bs001_1.jpg",
-        "https://example.com/images/bs001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 277,
@@ -4898,9 +4899,9 @@
       "brand": "Orna Baby",
       "tags": ["organic", "sunscreen"],
       "images": [
-        "https://example.com/images/bs002_1.jpg",
-        "https://example.com/images/bs002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 278,
@@ -4915,9 +4916,9 @@
       "brand": "Orna Baby",
       "tags": ["mineral", "sunscreen"],
       "images": [
-        "https://example.com/images/bs003_1.jpg",
-        "https://example.com/images/bs003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 279,
@@ -4932,9 +4933,9 @@
       "brand": "Orna Baby",
       "tags": ["sunscreen", "stick"],
       "images": [
-        "https://example.com/images/bs004_1.jpg",
-        "https://example.com/images/bs004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 280,
@@ -4949,9 +4950,9 @@
       "brand": "Orna Baby",
       "tags": ["lotion", "sunscreen"],
       "images": [
-        "https://example.com/images/bs005_1.jpg",
-        "https://example.com/images/bs005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
 
 
@@ -4968,9 +4969,9 @@
       "brand": "Orna Baby",
       "tags": ["insect repellent", "natural"],
       "images": [
-        "https://example.com/images/bir001_1.jpg",
-        "https://example.com/images/bir001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 282,
@@ -4985,9 +4986,9 @@
       "brand": "Orna Baby",
       "tags": ["herbal", "insect repellent"],
       "images": [
-        "https://example.com/images/bir002_1.jpg",
-        "https://example.com/images/bir002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 283,
@@ -5002,9 +5003,9 @@
       "brand": "Orna Baby",
       "tags": ["spray", "insect repellent"],
       "images": [
-        "https://example.com/images/bir003_1.jpg",
-        "https://example.com/images/bir003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 284,
@@ -5019,9 +5020,9 @@
       "brand": "Orna Baby",
       "tags": ["roll-on", "insect repellent"],
       "images": [
-        "https://example.com/images/bir004_1.jpg",
-        "https://example.com/images/bir004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 285,
@@ -5036,9 +5037,9 @@
       "brand": "Orna Baby",
       "tags": ["wipes", "insect repellent"],
       "images": [
-        "https://example.com/images/bir005_1.jpg",
-        "https://example.com/images/bir005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
 
     {
@@ -5054,9 +5055,9 @@
       "brand": "Orna Baby",
       "tags": ["rash cream", "baby"],
       "images": [
-        "https://example.com/images/brc001_1.jpg",
-        "https://example.com/images/brc001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 287,
@@ -5071,9 +5072,9 @@
       "brand": "Orna Baby",
       "tags": ["organic", "rash cream"],
       "images": [
-        "https://example.com/images/brc002_1.jpg",
-        "https://example.com/images/brc002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 288,
@@ -5088,9 +5089,9 @@
       "brand": "Orna Baby",
       "tags": ["zinc oxide", "rash cream"],
       "images": [
-        "https://example.com/images/brc003_1.jpg",
-        "https://example.com/images/brc003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 289,
@@ -5105,9 +5106,9 @@
       "brand": "Orna Baby",
       "tags": ["herbal", "rash cream"],
       "images": [
-        "https://example.com/images/brc004_1.jpg",
-        "https://example.com/images/brc004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 290,
@@ -5122,9 +5123,9 @@
       "brand": "Orna Baby",
       "tags": ["moisturizing", "rash cream"],
       "images": [
-        "https://example.com/images/brc005_1.jpg",
-        "https://example.com/images/brc005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
 
 
@@ -5141,9 +5142,9 @@
       "brand": "Orna Baby",
       "tags": ["hair oil", "baby"],
       "images": [
-        "https://example.com/images/bho001_1.jpg",
-        "https://example.com/images/bho001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 292,
@@ -5158,9 +5159,9 @@
       "brand": "Orna Baby",
       "tags": ["organic", "hair oil"],
       "images": [
-        "https://example.com/images/bho002_1.jpg",
-        "https://example.com/images/bho002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 293,
@@ -5175,9 +5176,9 @@
       "brand": "Orna Baby",
       "tags": ["coconut", "hair oil"],
       "images": [
-        "https://example.com/images/bho003_1.jpg",
-        "https://example.com/images/bho003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 294,
@@ -5192,9 +5193,9 @@
       "brand": "Orna Baby",
       "tags": ["almond", "hair oil"],
       "images": [
-        "https://example.com/images/bho004_1.jpg",
-        "https://example.com/images/bho004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 295,
@@ -5209,9 +5210,9 @@
       "brand": "Orna Baby",
       "tags": ["herbal", "hair oil"],
       "images": [
-        "https://example.com/images/bho005_1.jpg",
-        "https://example.com/images/bho005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
 
     {
@@ -5227,9 +5228,9 @@
       "brand": "Orna Kids",
       "tags": ["2-in-1", "kids"],
       "images": [
-        "https://example.com/images/ksc001_1.jpg",
-        "https://example.com/images/ksc001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 297,
@@ -5244,9 +5245,9 @@
       "brand": "Orna Kids",
       "tags": ["strawberry", "kids"],
       "images": [
-        "https://example.com/images/ksc002_1.jpg",
-        "https://example.com/images/ksc002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 298,
@@ -5261,9 +5262,9 @@
       "brand": "Orna Kids",
       "tags": ["coconut", "kids"],
       "images": [
-        "https://example.com/images/ksc003_1.jpg",
-        "https://example.com/images/ksc003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 299,
@@ -5278,9 +5279,9 @@
       "brand": "Orna Kids",
       "tags": ["apple", "kids"],
       "images": [
-        "https://example.com/images/ksc004_1.jpg",
-        "https://example.com/images/ksc004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 300,
@@ -5295,9 +5296,9 @@
       "brand": "Orna Kids",
       "tags": ["berry", "kids"],
       "images": [
-        "https://example.com/images/ksc005_1.jpg",
-        "https://example.com/images/ksc005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
 
 
@@ -5314,9 +5315,9 @@
       "brand": "Orna Kids",
       "tags": ["body wash", "kids"],
       "images": [
-        "https://example.com/images/kbs001_1.jpg",
-        "https://example.com/images/kbs001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 302,
@@ -5331,9 +5332,9 @@
       "brand": "Orna Kids",
       "tags": ["bubble bath", "kids"],
       "images": [
-        "https://example.com/images/kbs002_1.jpg",
-        "https://example.com/images/kbs002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 303,
@@ -5348,9 +5349,9 @@
       "brand": "Orna Kids",
       "tags": ["foaming", "body wash"],
       "images": [
-        "https://example.com/images/kbs003_1.jpg",
-        "https://example.com/images/kbs003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 304,
@@ -5365,9 +5366,9 @@
       "brand": "Orna Kids",
       "tags": ["natural", "soap"],
       "images": [
-        "https://example.com/images/kbs004_1.jpg",
-        "https://example.com/images/kbs004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 305,
@@ -5382,9 +5383,9 @@
       "brand": "Orna Kids",
       "tags": ["fun", "soap"],
       "images": [
-        "https://example.com/images/kbs005_1.jpg",
-        "https://example.com/images/kbs005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
 
     {
@@ -5400,9 +5401,9 @@
       "brand": "Orna Kids",
       "tags": ["moisturizer", "kids"],
       "images": [
-        "https://example.com/images/km001_1.jpg",
-        "https://example.com/images/km001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 307,
@@ -5417,9 +5418,9 @@
       "brand": "Orna Kids",
       "tags": ["hydrating", "cream"],
       "images": [
-        "https://example.com/images/km002_1.jpg",
-        "https://example.com/images/km002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 308,
@@ -5434,9 +5435,9 @@
       "brand": "Orna Kids",
       "tags": ["organic", "moisturizer"],
       "images": [
-        "https://example.com/images/km003_1.jpg",
-        "https://example.com/images/km003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 309,
@@ -5451,9 +5452,9 @@
       "brand": "Orna Kids",
       "tags": ["nourishing", "cream"],
       "images": [
-        "https://example.com/images/km004_1.jpg",
-        "https://example.com/images/km004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 310,
@@ -5468,9 +5469,9 @@
       "brand": "Orna Kids",
       "tags": ["fun", "moisturizer"],
       "images": [
-        "https://example.com/images/km005_1.jpg",
-        "https://example.com/images/km005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     
     {
@@ -5486,9 +5487,9 @@
       "brand": "Orna Jewelry",
       "tags": ["necklace", "gold"],
       "images": [
-        "img/rent-product/necklace/necklace (1).png",
-        "https://example.com/images/n001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 312,
@@ -5503,9 +5504,9 @@
       "brand": "Orna Jewelry",
       "tags": ["necklace", "silver"],
       "images": [
-        "img/rent-product/necklace/necklace (2).png",
-        "https://example.com/images/n002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 313,
@@ -5520,9 +5521,9 @@
       "brand": "Orna Jewelry",
       "tags": ["necklace", "beaded"],
       "images": [
-        "img/rent-product/necklace/necklace (3).png",
-        "https://example.com/images/n003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 314,
@@ -5537,9 +5538,9 @@
       "brand": "Orna Jewelry",
       "tags": ["necklace", "choker"],
       "images": [
-        "img/rent-product/necklace/necklace (4).png",
-        "https://example.com/images/n004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 315,
@@ -5554,9 +5555,9 @@
       "brand": "Orna Jewelry",
       "tags": ["necklace", "statement"],
       "images": [
-        "img/rent-product/necklace/necklace (5).png",
-        "https://example.com/images/n005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
 
 
@@ -5573,9 +5574,9 @@
       "brand": "Orna Jewelry",
       "tags": ["earrings", "hoop"],
       "images": [
-        "/img/rent-product/earrings/earrings (1).png",
-        "https://example.com/images/e001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 317,
@@ -5590,9 +5591,9 @@
       "brand": "Orna Jewelry",
       "tags": ["earrings", "stud"],
       "images": [
-        "/img/rent-product/earrings/earrings (2).png",
-        "https://example.com/images/e002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 318,
@@ -5607,9 +5608,9 @@
       "brand": "Orna Jewelry",
       "tags": ["earrings", "dangle"],
       "images": [
-        "/img/rent-product/earrings/earrings (3).png",
-        "https://example.com/images/e003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 319,
@@ -5624,9 +5625,9 @@
       "brand": "Orna Jewelry",
       "tags": ["earrings", "pearl"],
       "images": [
-        "/img/rent-product/earrings/earrings (4).png",
-        "https://example.com/images/e004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 320,
@@ -5641,9 +5642,9 @@
       "brand": "Orna Jewelry",
       "tags": ["earrings", "beaded"],
       "images": [
-        "/img/rent-product/earrings/earrings (5).png",
-        "https://example.com/images/e005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
 
 
@@ -5660,9 +5661,9 @@
       "brand": "Orna Jewelry",
       "tags": ["ring", "gold"],
       "images": [
-        "https://example.com/images/r001_1.jpg",
-        "https://example.com/images/r001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 322,
@@ -5677,9 +5678,9 @@
       "brand": "Orna Jewelry",
       "tags": ["ring", "silver"],
       "images": [
-        "https://example.com/images/r002_1.jpg",
-        "https://example.com/images/r002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 323,
@@ -5694,9 +5695,9 @@
       "brand": "Orna Jewelry",
       "tags": ["ring", "gemstone"],
       "images": [
-        "https://example.com/images/r003_1.jpg",
-        "https://example.com/images/r003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 324,
@@ -5711,9 +5712,9 @@
       "brand": "Orna Jewelry",
       "tags": ["ring", "stackable"],
       "images": [
-        "https://example.com/images/r004_1.jpg",
-        "https://example.com/images/r004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 325,
@@ -5728,9 +5729,9 @@
       "brand": "Orna Jewelry",
       "tags": ["ring", "vintage"],
       "images": [
-        "https://example.com/images/r005_1.jpg",
-        "https://example.com/images/r005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
 
 
@@ -5747,9 +5748,9 @@
       "brand": "Orna Jewelry",
       "tags": ["bracelet", "charm"],
       "images": [
-        "https://example.com/images/b001_1.jpg",
-        "https://example.com/images/b001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 327,
@@ -5764,9 +5765,9 @@
       "brand": "Orna Jewelry",
       "tags": ["bracelet", "leather"],
       "images": [
-        "https://example.com/images/b002_1.jpg",
-        "https://example.com/images/b002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 328,
@@ -5781,9 +5782,9 @@
       "brand": "Orna Jewelry",
       "tags": ["bracelet", "beaded"],
       "images": [
-        "https://example.com/images/b003_1.jpg",
-        "https://example.com/images/b003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 329,
@@ -5798,9 +5799,9 @@
       "brand": "Orna Jewelry",
       "tags": ["bracelet", "gold"],
       "images": [
-        "https://example.com/images/b004_1.jpg",
-        "https://example.com/images/b004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 330,
@@ -5815,9 +5816,9 @@
       "brand": "Orna Jewelry",
       "tags": ["bracelet", "cuff"],
       "images": [
-        "https://example.com/images/b005_1.jpg",
-        "https://example.com/images/b005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
 
 
@@ -5834,9 +5835,9 @@
       "brand": "Orna Jewelry",
       "tags": ["bangles", "traditional"],
       "images": [
-        "https://example.com/images/bg001_1.jpg",
-        "https://example.com/images/bg001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 332,
@@ -5851,9 +5852,9 @@
       "brand": "Orna Jewelry",
       "tags": ["bangles", "colorful"],
       "images": [
-        "https://example.com/images/bg002_1.jpg",
-        "https://example.com/images/bg002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 333,
@@ -5868,9 +5869,9 @@
       "brand": "Orna Jewelry",
       "tags": ["bangles", "gold"],
       "images": [
-        "https://example.com/images/bg003_1.jpg",
-        "https://example.com/images/bg003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 334,
@@ -5885,9 +5886,9 @@
       "brand": "Orna Jewelry",
       "tags": ["bangles", "silver"],
       "images": [
-        "https://example.com/images/bg004_1.jpg",
-        "https://example.com/images/bg004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 335,
@@ -5902,9 +5903,9 @@
       "brand": "Orna Jewelry",
       "tags": ["bangles", "beaded"],
       "images": [
-        "https://example.com/images/bg005_1.jpg",
-        "https://example.com/images/bg005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 336,
@@ -5919,9 +5920,9 @@
       "brand": "Orna Jewelry",
       "tags": ["maang tikka", "traditional"],
       "images": [
-        "https://example.com/images/mt001_1.jpg",
-        "https://example.com/images/mt001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 337,
@@ -5936,9 +5937,9 @@
       "brand": "Orna Jewelry",
       "tags": ["maang tikka", "gold"],
       "images": [
-        "https://example.com/images/mt002_1.jpg",
-        "https://example.com/images/mt002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 338,
@@ -5953,9 +5954,9 @@
       "brand": "Orna Jewelry",
       "tags": ["maang tikka", "kundan"],
       "images": [
-        "https://example.com/images/mt003_1.jpg",
-        "https://example.com/images/mt003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 339,
@@ -5970,9 +5971,9 @@
       "brand": "Orna Jewelry",
       "tags": ["maang tikka", "crystal"],
       "images": [
-        "https://example.com/images/mt004_1.jpg",
-        "https://example.com/images/mt004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 340,
@@ -5987,9 +5988,9 @@
       "brand": "Orna Jewelry",
       "tags": ["maang tikka", "floral"],
       "images": [
-        "https://example.com/images/mt005_1.jpg",
-        "https://example.com/images/mt005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     }, {
       "id": 341,
       "sku": "NR-001",
@@ -6003,9 +6004,9 @@
       "brand": "Orna Jewelry",
       "tags": ["nose ring", "traditional"],
       "images": [
-        "https://example.com/images/nr001_1.jpg",
-        "https://example.com/images/nr001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 342,
@@ -6020,9 +6021,9 @@
       "brand": "Orna Jewelry",
       "tags": ["nose ring", "gold"],
       "images": [
-        "https://example.com/images/nr002_1.jpg",
-        "https://example.com/images/nr002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 343,
@@ -6037,9 +6038,9 @@
       "brand": "Orna Jewelry",
       "tags": ["nose ring", "kundan"],
       "images": [
-        "https://example.com/images/nr003_1.jpg",
-        "https://example.com/images/nr003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 344,
@@ -6054,9 +6055,9 @@
       "brand": "Orna Jewelry",
       "tags": ["nose ring", "crystal"],
       "images": [
-        "https://example.com/images/nr004_1.jpg",
-        "https://example.com/images/nr004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 345,
@@ -6071,9 +6072,9 @@
       "brand": "Orna Jewelry",
       "tags": ["nose ring", "floral"],
       "images": [
-        "https://example.com/images/nr005_1.jpg",
-        "https://example.com/images/nr005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 346,
@@ -6088,9 +6089,9 @@
       "brand": "Orna Jewelry",
       "tags": ["anklet", "traditional"],
       "images": [
-        "https://example.com/images/a001_1.jpg",
-        "https://example.com/images/a001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 347,
@@ -6105,9 +6106,9 @@
       "brand": "Orna Jewelry",
       "tags": ["anklet", "gold"],
       "images": [
-        "https://example.com/images/a002_1.jpg",
-        "https://example.com/images/a002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 348,
@@ -6122,9 +6123,9 @@
       "brand": "Orna Jewelry",
       "tags": ["anklet", "beaded"],
       "images": [
-        "https://example.com/images/a003_1.jpg",
-        "https://example.com/images/a003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 349,
@@ -6139,9 +6140,9 @@
       "brand": "Orna Jewelry",
       "tags": ["anklet", "silver"],
       "images": [
-        "https://example.com/images/a004_1.jpg",
-        "https://example.com/images/a004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 350,
@@ -6156,9 +6157,9 @@
       "brand": "Orna Jewelry",
       "tags": ["anklet", "charm"],
       "images": [
-        "https://example.com/images/a005_1.jpg",
-        "https://example.com/images/a005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     
     {
@@ -6174,9 +6175,9 @@
       "brand": "Orna Jewelry",
       "tags": ["toe ring", "traditional"],
       "images": [
-        "https://example.com/images/tr001_1.jpg",
-        "https://example.com/images/tr001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 352,
@@ -6191,9 +6192,9 @@
       "brand": "Orna Jewelry",
       "tags": ["toe ring", "gold"],
       "images": [
-        "https://example.com/images/tr002_1.jpg",
-        "https://example.com/images/tr002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 353,
@@ -6208,9 +6209,9 @@
       "brand": "Orna Jewelry",
       "tags": ["toe ring", "silver"],
       "images": [
-        "https://example.com/images/tr003_1.jpg",
-        "https://example.com/images/tr003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 354,
@@ -6225,9 +6226,9 @@
       "brand": "Orna Jewelry",
       "tags": ["toe ring", "beaded"],
       "images": [
-        "https://example.com/images/tr004_1.jpg",
-        "https://example.com/images/tr004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 355,
@@ -6242,9 +6243,9 @@
       "brand": "Orna Jewelry",
       "tags": ["toe ring", "charm"],
       "images": [
-        "https://example.com/images/tr005_1.jpg",
-        "https://example.com/images/tr005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
 
     {
@@ -6260,9 +6261,9 @@
       "brand": "Orna Jewelry",
       "tags": ["waist belt", "traditional"],
       "images": [
-        "https://example.com/images/wb001_1.jpg",
-        "https://example.com/images/wb001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 357,
@@ -6277,9 +6278,9 @@
       "brand": "Orna Jewelry",
       "tags": ["waist belt", "gold"],
       "images": [
-        "https://example.com/images/wb002_1.jpg",
-        "https://example.com/images/wb002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 358,
@@ -6294,9 +6295,9 @@
       "brand": "Orna Jewelry",
       "tags": ["waist belt", "beaded"],
       "images": [
-        "https://example.com/images/wb003_1.jpg",
-        "https://example.com/images/wb003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 359,
@@ -6311,9 +6312,9 @@
       "brand": "Orna Jewelry",
       "tags": ["waist belt", "silver"],
       "images": [
-        "https://example.com/images/wb004_1.jpg",
-        "https://example.com/images/wb004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 360,
@@ -6328,9 +6329,9 @@
       "brand": "Orna Jewelry",
       "tags": ["waist belt", "charm"],
       "images": [
-        "https://example.com/images/wb005_1.jpg",
-        "https://example.com/images/wb005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
 
     {
@@ -6346,9 +6347,9 @@
       "brand": "Orna Jewelry",
       "tags": ["brooch", "floral"],
       "images": [
-        "https://example.com/images/b001_1.jpg",
-        "https://example.com/images/b001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 362,
@@ -6363,9 +6364,9 @@
       "brand": "Orna Jewelry",
       "tags": ["brooch", "gold"],
       "images": [
-        "https://example.com/images/b002_1.jpg",
-        "https://example.com/images/b002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 363,
@@ -6380,9 +6381,9 @@
       "brand": "Orna Jewelry",
       "tags": ["brooch", "kundan"],
       "images": [
-        "https://example.com/images/b003_1.jpg",
-        "https://example.com/images/b003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 364,
@@ -6397,9 +6398,9 @@
       "brand": "Orna Jewelry",
       "tags": ["brooch", "crystal"],
       "images": [
-        "https://example.com/images/b004_1.jpg",
-        "https://example.com/images/b004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 365,
@@ -6414,9 +6415,9 @@
       "brand": "Orna Jewelry",
       "tags": ["brooch", "vintage"],
       "images": [
-        "https://example.com/images/b005_1.jpg",
-        "https://example.com/images/b005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
 
 
@@ -6433,9 +6434,9 @@
       "brand": "Orna Jewelry",
       "tags": ["armlet", "traditional"],
       "images": [
-        "https://example.com/images/ab001_1.jpg",
-        "https://example.com/images/ab001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 367,
@@ -6450,9 +6451,9 @@
       "brand": "Orna Jewelry",
       "tags": ["armlet", "gold"],
       "images": [
-        "https://example.com/images/ab002_1.jpg",
-        "https://example.com/images/ab002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 368,
@@ -6467,9 +6468,9 @@
       "brand": "Orna Jewelry",
       "tags": ["armlet", "kundan"],
       "images": [
-        "https://example.com/images/ab003_1.jpg",
-        "https://example.com/images/ab003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 369,
@@ -6484,9 +6485,9 @@
       "brand": "Orna Jewelry",
       "tags": ["armlet", "crystal"],
       "images": [
-        "https://example.com/images/ab004_1.jpg",
-        "https://example.com/images/ab004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 370,
@@ -6501,9 +6502,9 @@
       "brand": "Orna Jewelry",
       "tags": ["armlet", "floral"],
       "images": [
-        "https://example.com/images/ab005_1.jpg",
-        "https://example.com/images/ab005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
 
 
@@ -6520,9 +6521,9 @@
       "brand": "Orna Jewelry",
       "tags": ["haath phool", "traditional"],
       "images": [
-        "https://example.com/images/hp001_1.jpg",
-        "https://example.com/images/hp001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 372,
@@ -6537,9 +6538,9 @@
       "brand": "Orna Jewelry",
       "tags": ["haath phool", "gold"],
       "images": [
-        "https://example.com/images/hp002_1.jpg",
-        "https://example.com/images/hp002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 373,
@@ -6554,9 +6555,9 @@
       "brand": "Orna Jewelry",
       "tags": ["haath phool", "kundan"],
       "images": [
-        "https://example.com/images/hp003_1.jpg",
-        "https://example.com/images/hp003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 374,
@@ -6571,9 +6572,9 @@
       "brand": "Orna Jewelry",
       "tags": ["haath phool", "crystal"],
       "images": [
-        "https://example.com/images/hp004_1.jpg",
-        "https://example.com/images/hp004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 375,
@@ -6588,9 +6589,9 @@
       "brand": "Orna Jewelry",
       "tags": ["haath phool", "floral"],
       "images": [
-        "https://example.com/images/hp005_1.jpg",
-        "https://example.com/images/hp005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
 
     {
@@ -6606,9 +6607,9 @@
       "brand": "Orna Jewelry",
       "tags": ["chooda", "traditional"],
       "images": [
-        "https://example.com/images/c001_1.jpg",
-        "https://example.com/images/c001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 377,
@@ -6623,9 +6624,9 @@
       "brand": "Orna Jewelry",
       "tags": ["chooda", "gold"],
       "images": [
-        "https://example.com/images/c002_1.jpg",
-        "https://example.com/images/c002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 378,
@@ -6640,9 +6641,9 @@
       "brand": "Orna Jewelry",
       "tags": ["chooda", "kundan"],
       "images": [
-        "https://example.com/images/c003_1.jpg",
-        "https://example.com/images/c003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 379,
@@ -6657,9 +6658,9 @@
       "brand": "Orna Jewelry",
       "tags": ["chooda", "crystal"],
       "images": [
-        "https://example.com/images/c004_1.jpg",
-        "https://example.com/images/c004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 380,
@@ -6674,9 +6675,9 @@
       "brand": "Orna Jewelry",
       "tags": ["chooda", "floral"],
       "images": [
-        "https://example.com/images/c005_1.jpg",
-        "https://example.com/images/c005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
 
     {
@@ -6692,9 +6693,9 @@
       "brand": "Orna Jewelry",
       "tags": ["pendant", "gold"],
       "images": [
-        "https://example.com/images/p001_1.jpg",
-        "https://example.com/images/p001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 382,
@@ -6709,9 +6710,9 @@
       "brand": "Orna Jewelry",
       "tags": ["pendant", "silver"],
       "images": [
-        "https://example.com/images/p002_1.jpg",
-        "https://example.com/images/p002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 383,
@@ -6726,9 +6727,9 @@
       "brand": "Orna Jewelry",
       "tags": ["pendant", "kundan"],
       "images": [
-        "https://example.com/images/p003_1.jpg",
-        "https://example.com/images/p003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 384,
@@ -6743,9 +6744,9 @@
       "brand": "Orna Jewelry",
       "tags": ["pendant", "crystal"],
       "images": [
-        "https://example.com/images/p004_1.jpg",
-        "https://example.com/images/p004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 385,
@@ -6760,10 +6761,11 @@
       "brand": "Orna Jewelry",
       "tags": ["pendant", "floral"],
       "images": [
-        "https://example.com/images/p005_1.jpg",
-        "https://example.com/images/p005_2.jpg"
-      ]
-    },    
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
+    },
+    
     {
       "id": 386,
       "sku": "HC-001",
@@ -6777,9 +6779,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair clip", "decorative"],
       "images": [
-        "",
-        "https://example.com/images/hc001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 387,
@@ -6794,9 +6796,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair clip", "flower"],
       "images": [
-        "https://example.com/images/hc002_1.jpg",
-        "https://example.com/images/hc002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 388,
@@ -6811,9 +6813,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair clip", "bling"],
       "images": [
-        "https://example.com/images/hc003_1.jpg",
-        "https://example.com/images/hc003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 389,
@@ -6828,9 +6830,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair clip", "classic"],
       "images": [
-        "https://example.com/images/hc004_1.jpg",
-        "https://example.com/images/hc004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 390,
@@ -6845,9 +6847,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair clip", "vintage"],
       "images": [
-        "https://example.com/images/hc005_1.jpg",
-        "https://example.com/images/hc005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
 
     {
@@ -6863,9 +6865,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair band", "cotton"],
       "images": [
-        "https://example.com/images/hb001_1.jpg",
-        "https://example.com/images/hb001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 392,
@@ -6880,9 +6882,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair band", "silk"],
       "images": [
-        "https://example.com/images/hb002_1.jpg",
-        "https://example.com/images/hb002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 393,
@@ -6897,9 +6899,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair band", "elastic"],
       "images": [
-        "https://example.com/images/hb003_1.jpg",
-        "https://example.com/images/hb003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 394,
@@ -6914,9 +6916,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair band", "printed"],
       "images": [
-        "https://example.com/images/hb004_1.jpg",
-        "https://example.com/images/hb004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 395,
@@ -6931,10 +6933,11 @@
       "brand": "Orna Accessories",
       "tags": ["hair band", "braided"],
       "images": [
-        "https://example.com/images/hb005_1.jpg",
-        "https://example.com/images/hb005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
+
     {
       "id": 396,
       "sku": "HT-001",
@@ -6948,9 +6951,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair tie", "basic"],
       "images": [
-        "https://example.com/images/ht001_1.jpg",
-        "https://example.com/images/ht001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 397,
@@ -6965,9 +6968,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair tie", "colorful"],
       "images": [
-        "https://example.com/images/ht002_1.jpg",
-        "https://example.com/images/ht002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 398,
@@ -6982,9 +6985,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair tie", "no-snag"],
       "images": [
-        "https://example.com/images/ht003_1.jpg",
-        "https://example.com/images/ht003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 399,
@@ -6999,9 +7002,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair tie", "spiral"],
       "images": [
-        "https://example.com/images/ht004_1.jpg",
-        "https://example.com/images/ht004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 400,
@@ -7016,10 +7019,11 @@
       "brand": "Orna Accessories",
       "tags": ["hair tie", "fabric"],
       "images": [
-        "https://example.com/images/ht005_1.jpg",
-        "https://example.com/images/ht005_2.jpg"
-      ]
-    },    
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
+    },
+    
     {
       "id": 401,
       "sku": "HB-006",
@@ -7033,9 +7037,9 @@
       "brand": "Orna Accessories",
       "tags": ["headband", "floral"],
       "images": [
-        "https://example.com/images/hb006_1.jpg",
-        "https://example.com/images/hb006_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 402,
@@ -7050,9 +7054,9 @@
       "brand": "Orna Accessories",
       "tags": ["headband", "sparkly"],
       "images": [
-        "https://example.com/images/hb007_1.jpg",
-        "https://example.com/images/hb007_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 403,
@@ -7067,9 +7071,9 @@
       "brand": "Orna Accessories",
       "tags": ["headband", "knitted"],
       "images": [
-        "https://example.com/images/hb008_1.jpg",
-        "https://example.com/images/hb008_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 404,
@@ -7084,9 +7088,9 @@
       "brand": "Orna Accessories",
       "tags": ["headband", "leather"],
       "images": [
-        "https://example.com/images/hb009_1.jpg",
-        "https://example.com/images/hb009_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 405,
@@ -7101,10 +7105,11 @@
       "brand": "Orna Accessories",
       "tags": ["headband", "velvet"],
       "images": [
-        "https://example.com/images/hb010_1.jpg",
-        "https://example.com/images/hb010_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
+
     {
       "id": 406,
       "sku": "HP-001",
@@ -7118,9 +7123,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair pin", "decorative"],
       "images": [
-        "https://example.com/images/hp001_1.jpg",
-        "https://example.com/images/hp001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 407,
@@ -7135,9 +7140,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair pin", "bobby"],
       "images": [
-        "https://example.com/images/hp002_1.jpg",
-        "https://example.com/images/hp002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 408,
@@ -7152,9 +7157,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair pin", "crystal"],
       "images": [
-        "https://example.com/images/hp003_1.jpg",
-        "https://example.com/images/hp003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 409,
@@ -7169,9 +7174,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair pin", "flower"],
       "images": [
-        "https://example.com/images/hp004_1.jpg",
-        "https://example.com/images/hp004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 410,
@@ -7186,10 +7191,11 @@
       "brand": "Orna Accessories",
       "tags": ["hair pin", "vintage"],
       "images": [
-        "https://example.com/images/hp005_1.jpg",
-        "https://example.com/images/hp005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
+
     {
       "id": 411,
       "sku": "S-001",
@@ -7203,9 +7209,9 @@
       "brand": "Orna Accessories",
       "tags": ["scrunchie", "silk"],
       "images": [
-        "https://example.com/images/s001_1.jpg",
-        "https://example.com/images/s001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 412,
@@ -7220,9 +7226,9 @@
       "brand": "Orna Accessories",
       "tags": ["scrunchie", "cotton"],
       "images": [
-        "https://example.com/images/s002_1.jpg",
-        "https://example.com/images/s002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 413,
@@ -7237,9 +7243,9 @@
       "brand": "Orna Accessories",
       "tags": ["scrunchie", "printed"],
       "images": [
-        "https://example.com/images/s003_1.jpg",
-        "https://example.com/images/s003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 414,
@@ -7254,9 +7260,9 @@
       "brand": "Orna Accessories",
       "tags": ["scrunchie", "velvet"],
       "images": [
-        "https://example.com/images/s004_1.jpg",
-        "https://example.com/images/s004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 415,
@@ -7271,9 +7277,9 @@
       "brand": "Orna Accessories",
       "tags": ["scrunchie", "bling"],
       "images": [
-        "https://example.com/images/s005_1.jpg",
-        "https://example.com/images/s005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     
     {
@@ -7289,9 +7295,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair comb", "decorative"],
       "images": [
-        "https://example.com/images/hc006_1.jpg",
-        "https://example.com/images/hc006_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 417,
@@ -7306,9 +7312,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair comb", "wooden"],
       "images": [
-        "https://example.com/images/hc007_1.jpg",
-        "https://example.com/images/hc007_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 418,
@@ -7323,9 +7329,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair comb", "plastic"],
       "images": [
-        "https://example.com/images/hc008_1.jpg",
-        "https://example.com/images/hc008_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 419,
@@ -7340,9 +7346,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair comb", "wide-tooth"],
       "images": [
-        "https://example.com/images/hc009_1.jpg",
-        "https://example.com/images/hc009_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 420,
@@ -7357,9 +7363,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair comb", "fine-tooth"],
       "images": [
-        "https://example.com/images/hc010_1.jpg",
-        "https://example.com/images/hc010_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
 
     {
@@ -7375,9 +7381,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair stick", "bamboo"],
       "images": [
-        "https://example.com/images/hs001_1.jpg",
-        "https://example.com/images/hs001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 422,
@@ -7392,9 +7398,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair stick", "decorative"],
       "images": [
-        "https://example.com/images/hs002_1.jpg",
-        "https://example.com/images/hs002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 423,
@@ -7409,9 +7415,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair stick", "metal"],
       "images": [
-        "https://example.com/images/hs003_1.jpg",
-        "https://example.com/images/hs003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 424,
@@ -7426,9 +7432,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair stick", "wooden"],
       "images": [
-        "https://example.com/images/hs004_1.jpg",
-        "https://example.com/images/hs004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 425,
@@ -7443,9 +7449,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair stick", "colorful"],
       "images": [
-        "https://example.com/images/hs005_1.jpg",
-        "https://example.com/images/hs005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
 
     {
@@ -7461,9 +7467,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair claw", "large"],
       "images": [
-        "https://example.com/images/hc011_1.jpg",
-        "https://example.com/images/hc011_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 427,
@@ -7478,9 +7484,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair claw", "decorative"],
       "images": [
-        "https://example.com/images/hc012_1.jpg",
-        "https://example.com/images/hc012_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 428,
@@ -7495,9 +7501,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair claw", "mini"],
       "images": [
-        "https://example.com/images/hc013_1.jpg",
-        "https://example.com/images/hc013_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 429,
@@ -7512,9 +7518,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair claw", "colorful"],
       "images": [
-        "https://example.com/images/hc014_1.jpg",
-        "https://example.com/images/hc014_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 430,
@@ -7529,9 +7535,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair claw", "classic"],
       "images": [
-        "https://example.com/images/hc015_1.jpg",
-        "https://example.com/images/hc015_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     
     {
@@ -7547,9 +7553,9 @@
       "brand": "Orna Accessories",
       "tags": ["barrette", "decorative"],
       "images": [
-        "https://example.com/images/b001_1.jpg",
-        "https://example.com/images/b001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 432,
@@ -7564,9 +7570,9 @@
       "brand": "Orna Accessories",
       "tags": ["barrette", "floral"],
       "images": [
-        "https://example.com/images/b002_1.jpg",
-        "https://example.com/images/b002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 433,
@@ -7581,9 +7587,9 @@
       "brand": "Orna Accessories",
       "tags": ["barrette", "sparkly"],
       "images": [
-        "https://example.com/images/b003_1.jpg",
-        "https://example.com/images/b003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 434,
@@ -7598,9 +7604,9 @@
       "brand": "Orna Accessories",
       "tags": ["barrette", "classic"],
       "images": [
-        "https://example.com/images/b004_1.jpg",
-        "https://example.com/images/b004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 435,
@@ -7615,9 +7621,9 @@
       "brand": "Orna Accessories",
       "tags": ["barrette", "vintage"],
       "images": [
-        "https://example.com/images/b005_1.jpg",
-        "https://example.com/images/b005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
 
     {
@@ -7633,9 +7639,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair wrap", "silk"],
       "images": [
-        "https://example.com/images/hw001_1.jpg",
-        "https://example.com/images/hw001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 437,
@@ -7650,9 +7656,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair wrap", "cotton"],
       "images": [
-        "https://example.com/images/hw002_1.jpg",
-        "https://example.com/images/hw002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 438,
@@ -7667,9 +7673,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair wrap", "printed"],
       "images": [
-        "https://example.com/images/hw003_1.jpg",
-        "https://example.com/images/hw003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 439,
@@ -7684,9 +7690,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair wrap", "velvet"],
       "images": [
-        "https://example.com/images/hw004_1.jpg",
-        "https://example.com/images/hw004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 440,
@@ -7701,9 +7707,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair wrap", "bling"],
       "images": [
-        "https://example.com/images/hw005_1.jpg",
-        "https://example.com/images/hw005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
 
     {
@@ -7719,9 +7725,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair bow", "classic"],
       "images": [
-        "https://example.com/images/hb006_1.jpg",
-        "https://example.com/images/hb006_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 442,
@@ -7736,9 +7742,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair bow", "floral"],
       "images": [
-        "https://example.com/images/hb007_1.jpg",
-        "https://example.com/images/hb007_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 443,
@@ -7753,9 +7759,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair bow", "sparkly"],
       "images": [
-        "https://example.com/images/hb008_1.jpg",
-        "https://example.com/images/hb008_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 444,
@@ -7770,9 +7776,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair bow", "vintage"],
       "images": [
-        "https://example.com/images/hb009_1.jpg",
-        "https://example.com/images/hb009_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 445,
@@ -7787,9 +7793,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair bow", "colorful"],
       "images": [
-        "https://example.com/images/hb010_1.jpg",
-        "https://example.com/images/hb010_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
 
     {
@@ -7805,9 +7811,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair chain", "gold"],
       "images": [
-        "https://example.com/images/hc016_1.jpg",
-        "https://example.com/images/hc016_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 447,
@@ -7822,9 +7828,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair chain", "silver"],
       "images": [
-        "https://example.com/images/hc017_1.jpg",
-        "https://example.com/images/hc017_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 448,
@@ -7839,9 +7845,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair chain", "beaded"],
       "images": [
-        "https://example.com/images/hc018_1.jpg",
-        "https://example.com/images/hc018_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 449,
@@ -7856,9 +7862,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair chain", "crystal"],
       "images": [
-        "https://example.com/images/hc019_1.jpg",
-        "https://example.com/images/hc019_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 450,
@@ -7873,9 +7879,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair chain", "charm"],
       "images": [
-        "https://example.com/images/hc020_1.jpg",
-        "https://example.com/images/hc020_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
 
     {
@@ -7891,9 +7897,9 @@
       "brand": "Orna Accessories",
       "tags": ["tiara", "gold"],
       "images": [
-        "https://example.com/images/tc001_1.jpg",
-        "https://example.com/images/tc001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 452,
@@ -7908,9 +7914,9 @@
       "brand": "Orna Accessories",
       "tags": ["crown", "silver"],
       "images": [
-        "https://example.com/images/tc002_1.jpg",
-        "https://example.com/images/tc002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 453,
@@ -7925,9 +7931,9 @@
       "brand": "Orna Accessories",
       "tags": ["tiara", "floral"],
       "images": [
-        "https://example.com/images/tc003_1.jpg",
-        "https://example.com/images/tc003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 454,
@@ -7942,9 +7948,9 @@
       "brand": "Orna Accessories",
       "tags": ["tiara", "crystal"],
       "images": [
-        "https://example.com/images/tc004_1.jpg",
-        "https://example.com/images/tc004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 455,
@@ -7959,9 +7965,9 @@
       "brand": "Orna Accessories",
       "tags": ["crown", "vintage"],
       "images": [
-        "https://example.com/images/tc005_1.jpg",
-        "https://example.com/images/tc005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
 
     {
@@ -7977,9 +7983,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair extension", "clip-in"],
       "images": [
-        "https://example.com/images/he001_1.jpg",
-        "https://example.com/images/he001_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 457,
@@ -7994,9 +8000,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair extension", "tape-in"],
       "images": [
-        "https://example.com/images/he002_1.jpg",
-        "https://example.com/images/he002_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 458,
@@ -8011,9 +8017,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair extension", "micro-link"],
       "images": [
-        "https://example.com/images/he003_1.jpg",
-        "https://example.com/images/he003_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 459,
@@ -8028,9 +8034,9 @@
       "brand": "Orna Accessories",
       "tags": ["hair extension", "synthetic"],
       "images": [
-        "https://example.com/images/he004_1.jpg",
-        "https://example.com/images/he004_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     },
     {
       "id": 460,
@@ -8045,15 +8051,10 @@
       "brand": "Orna Accessories",
       "tags": ["hair extension", "human hair"],
       "images": [
-        "https://example.com/images/he005_1.jpg",
-        "https://example.com/images/he005_2.jpg"
-      ]
+         "../img/skin/SUBCAT1 (1).png",
+         "../img/skin/SUBCAT1 (1).png"
+        ]
     }
-
-
-
- 
-
   
     ],
   "offer": [
