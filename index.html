@@ -16,21 +16,19 @@
     <!--  FancyBox CSS  -->
     <link rel="stylesheet" href="/css/jquery.fancybox.min.css" />
 
-  <!-- Fontawesome CSS -->
-  <link href="/css/fontawesome.min.css" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet" href="">
-
-  <!-- box icon css -->
-  <link rel="stylesheet" href="/css/boxicons.min.css" />
-  <!-- slider CSS -->
-  <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="/css/slick-theme.css" />
-  <link rel="stylesheet" href="/css/slick.css" />
-  <!--  Style CSS  -->
-  <link rel="stylesheet" href="/css/style.css" />
-  <title>OrnaCare - Beauty & jewelery</title>
-  <link rel="icon" href="/img/logo1.png" type="image/gif" />
-</head>
+    <!-- Fontawesome CSS -->
+    <link href="/css/fontawesome.min.css" rel="stylesheet" />
+    <!-- box icon css -->
+    <link rel="stylesheet" href="/css/boxicons.min.css" />
+    <!-- slider CSS -->
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/css/slick-theme.css" />
+    <link rel="stylesheet" href="/css/slick.css" />
+    <!--  Style CSS  -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>OrnaCare - Beauty & jewelery</title>
+    <link rel="icon" href="/img/logo1.png" type="image/gif" />
+  </head>
 
   <body>
     <div class="top-bar2">
@@ -1991,16 +1989,16 @@
                 </a>
                 <div class="overlay">
                   <div class="cart-area">
-                    <a href="cart.html" class="hover-btn3 add-cart-btn">
+                    <a href="cart.html" class="hover-btn3 add-cart-btn" onclick="localStorage.setItem('selectedProductId', '${product.id}')">
                       <i class="bi bi-bag-check"></i> Drop in Basket
                     </a>
                   </div>
                 </div>
               </div>
               <div class="product-card-content">
-               <h6>
-          <a href="product-default.html" class="hover-underline" >${product.name}</a>
-        </h6>
+                <h6>
+                  <a href="product-default.html" class="hover-underline">${product.name}</a>
+                </h6>
                 <p><a href="shop-list.html">${product.brand}</a></p>
                 <p class="price">$${product.price} <del>$200.00</del></p>
                 <div class="rating">
