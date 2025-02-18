@@ -432,7 +432,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 
-
 //   for you card
 // Function to fetch products from API
 async function fetchProducts() {
