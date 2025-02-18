@@ -1989,7 +1989,7 @@
                 </a>
                 <div class="overlay">
                   <div class="cart-area">
-                    <a href="cart.html" class="hover-btn3 add-cart-btn" onclick="localStorage.setItem('selectedProductId', '${product.id}')">
+                    <a href="cart.html" class="hover-btn3 add-cart-btn" >
                       <i class="bi bi-bag-check"></i> Drop in Basket
                     </a>
                   </div>
@@ -1997,7 +1997,7 @@
               </div>
               <div class="product-card-content">
                 <h6>
-                  <a href="product-default.html" class="hover-underline">${product.name}</a>
+                  <a href="product-default.html" class="hover-underline" onclick="localStorage.setItem('selectedProductId', '${product.id}')">${product.name}</a>
                 </h6>
                 <p><a href="shop-list.html">${product.brand}</a></p>
                 <p class="price">$${product.price} <del>$200.00</del></p>
