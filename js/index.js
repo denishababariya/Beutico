@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .catch(error => console.error('There was a problem with the fetch operation:', error));
 });
 
-
+// rental products
 document.addEventListener("DOMContentLoaded", function () {
     fetch('http://localhost:3000/product', {
         method: 'GET',
@@ -286,6 +286,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 productCard.appendChild(productCardContent);
                 colDiv.appendChild(productCard);
                 categoryContainer.appendChild(colDiv);
+
+
+                // denisha
+                const borderSpan = document.createElement('span');
+                borderSpan.className = 'for-border';
+                productCard.appendChild(borderSpan);
             });
         }
 

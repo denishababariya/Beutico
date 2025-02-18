@@ -18,6 +18,8 @@
 
   <!-- Fontawesome CSS -->
   <link href="/css/fontawesome.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet" href="">
+
   <!-- box icon css -->
   <link rel="stylesheet" href="/css/boxicons.min.css" />
   <!-- slider CSS -->
@@ -1043,12 +1045,8 @@
         <h3>Rental Product</h3>
         <div class="all-product hover-underline">
           <a href="shop-list.html">*View All Product
-            <svg width="33" height="13" viewBox="0 0 33 13" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M25.5083 7.28L0.491206 7.25429C0.36093 7.25429 0.23599 7.18821 0.143871 7.0706C0.0517519 6.95299 0 6.79347 0 6.62714C0 6.46081 0.0517519 6.3013 0.143871 6.18369C0.23599 6.06607 0.36093 6 0.491206 6L25.5088 6.02571C25.6391 6.02571 25.764 6.09179 25.8561 6.2094C25.9482 6.32701 26 6.48653 26 6.65286C26 6.81919 25.9482 6.9787 25.8561 7.09631C25.764 7.21393 25.6386 7.28 25.5083 7.28Z" />
-              <path
-                d="M33.0001 6.50854C29.2204 7.9435 24.5298 10.398 21.623 13L23.9157 6.50034L21.6317 0C24.5358 2.60547 29.2224 5.06539 33.0001 6.50854Z" />
-            </svg>
+            <i class="fa-solid fa-arrow-right" style="width:33px, height=13px"></i>
+            
           </a>
         </div>
       </div>
@@ -1064,12 +1062,7 @@
         <h3>Best Selling Product</h3>
         <div class="all-product hover-underline">
           <a href="shop-list.html">*View All Product
-            <svg width="33" height="13" viewBox="0 0 33 13" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M25.5083 7.28L0.491206 7.25429C0.36093 7.25429 0.23599 7.18821 0.143871 7.0706C0.0517519 6.95299 0 6.79347 0 6.62714C0 6.46081 0.0517519 6.3013 0.143871 6.18369C0.23599 6.06607 0.36093 6 0.491206 6L25.5088 6.02571C25.6391 6.02571 25.764 6.09179 25.8561 6.2094C25.9482 6.32701 26 6.48653 26 6.65286C26 6.81919 25.9482 6.9787 25.8561 7.09631C25.764 7.21393 25.6386 7.28 25.5083 7.28Z" />
-              <path
-                d="M33.0001 6.50854C29.2204 7.9435 24.5298 10.398 21.623 13L23.9157 6.50034L21.6317 0C24.5358 2.60547 29.2224 5.06539 33.0001 6.50854Z" />
-            </svg>
+            <i class="fa-solid fa-arrow-right" style="width:33px, height=13px"></i>
           </a>
         </div>
       </div>
@@ -1637,12 +1630,7 @@
         <h3>Just For You</h3>
         <div class="all-product hover-underline">
           <a href="shop-list.html">*View All Product
-            <svg width="33" height="13" viewBox="0 0 33 13" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M25.5083 7.28L0.491206 7.25429C0.36093 7.25429 0.23599 7.18821 0.143871 7.0706C0.0517519 6.95299 0 6.79347 0 6.62714C0 6.46081 0.0517519 6.3013 0.143871 6.18369C0.23599 6.06607 0.36093 6 0.491206 6L25.5088 6.02571C25.6391 6.02571 25.764 6.09179 25.8561 6.2094C25.9482 6.32701 26 6.48653 26 6.65286C26 6.81919 25.9482 6.9787 25.8561 7.09631C25.764 7.21393 25.6386 7.28 25.5083 7.28Z" />
-              <path
-                d="M33.0001 6.50854C29.2204 7.9435 24.5298 10.398 21.623 13L23.9157 6.50034L21.6317 0C24.5358 2.60547 29.2224 5.06539 33.0001 6.50854Z" />
-            </svg>
+            <i class="fa-solid fa-arrow-right" style="width:33px, height=13px"></i>
           </a>
         </div>
       </div>
@@ -2274,7 +2262,7 @@
                           <span>$229.00 <del>$250.00</del></span>
                           <div class="rating">
                             <ul>
-                              <li><i class="bi bi-star-fill"></i></li>
+                              <li><i class="bi bi-star-fill"></i></li> 
                               <li><i class="bi bi-star-fill"></i></li>
                               <li><i class="bi bi-star-fill"></i></li>
                               <li><i class="bi bi-star-fill"></i></li>
@@ -5811,10 +5799,10 @@
       fetch('http://localhost:3000/category').then(response => response.json()),
       fetch('http://localhost:3000/product').then(response => response.json())
     ])
-   
+
       .then(([categories, products]) => {
         // Get the selected category from local storage
-        
+
         const selectedCategory = localStorage.getItem('JUSTFORYOUCategory');
 
         // Find the category ID based on the selected category name
@@ -5837,7 +5825,7 @@
 
         randomProducts.forEach(product => {
           const productCard = `
-          <div class="col-xl-4 col-md-6">
+          <div class="col-xl-4 col-md-6" onclick="localStorage.setItem('selectedProductId', '${product.id}')">
             <div class="product-card style-2 hover-btn">
               <div class="product-card-img double-img">
                 <a href="product-default.html">
@@ -5854,9 +5842,9 @@
                 </div>
               </div>
               <div class="product-card-content">
-                <h6>
-                  <a href="product-default.html" class="hover-underline">${product.name}</a>
-                </h6>
+               <h6>
+          <a href="product-default.html" class="hover-underline" >${product.name}</a>
+        </h6>
                 <p><a href="shop-list.html">${product.brand}</a></p>
                 <p class="price">$${product.price} <del>$200.00</del></p>
                 <div class="rating">

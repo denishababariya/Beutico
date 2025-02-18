@@ -15362,3 +15362,6 @@ Testimonial-Section Css
 
 /*# sourceMappingURL=style.css.map */
 
+.product-sku .sku-value{
+  color: var(--text-color3) !important;
+}
