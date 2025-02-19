@@ -106,107 +106,54 @@ document.addEventListener("DOMContentLoaded", function () {
             }
           });
         });
+        const pagesLi = document.createElement('li');
+      pagesLi.classList.add('menu-item-has-children');
+
+      const pagesLink = document.createElement('a');
+      pagesLink.href = '#';
+      pagesLink.classList.add('drop-down');
+      pagesLink.textContent = 'Pages';
+
+      const icon = document.createElement('i');
+      icon.classList.add('bi', 'bi-plus', 'dropdown-icon');
+
+      const subMenu = document.createElement('ul');
+      subMenu.classList.add('sub-menu');
+
+      // Create sub-menu items
+      const subItems = [
+        { href: 'about-us.html', text: 'About Us' },
+        { href: 'contact.html', text: 'Contact Us' },
+        { href: 'faq.html', text: 'FAQ' }
+      ];
+
+      subItems.forEach(item => {
+        const subLi = document.createElement('li');
+        const subA = document.createElement('a');
+        subA.href = item.href;
+        subA.textContent = item.text;
+        subLi.appendChild(subA);
+        subMenu.appendChild(subLi);
       });
+
+      // Append everything together
+      pagesLi.appendChild(pagesLink);
+      pagesLi.appendChild(icon);
+      pagesLi.appendChild(subMenu);
+      categoryList.appendChild(pagesLi);
+      });
+
+      // Create the new list item for "Pages"
+      
     })
+
     .catch(error => console.error('There was a problem with the fetch operation:', error));
 });
 
 // ... start header page ...
-const categoryList = document.getElementById('categoryList'); // Get the category list element
-
-// Create the new list item for "Pages"
-const pagesLi = document.createElement('li');
-pagesLi.classList.add('menu-item-has-children');
-
-const pagesLink = document.createElement('a');
-pagesLink.href = '#';
-pagesLink.classList.add('drop-down');
-pagesLink.textContent = 'Pages';
-
-const icon = document.createElement('i');
-icon.classList.add('bi', 'bi-plus', 'dropdown-icon');
-
-const subMenu = document.createElement('ul');
-subMenu.classList.add('sub-menu');
-
-// Create sub-menu items
-const subItems = [
-  { href: 'about-us.html', text: 'About Us' },
-  { href: 'contact.html', text: 'Contact Us' },
-  { href: 'faq.html', text: 'FAQ' }
-];
-
-subItems.forEach(item => {
-  const subLi = document.createElement('li');
-  const subA = document.createElement('a');
-  subA.href = item.href;
-  subA.textContent = item.text;
-  subLi.appendChild(subA);
-  subMenu.appendChild(subLi);
-});
-
-// Append everything together
-pagesLi.appendChild(pagesLink);
-pagesLi.appendChild(icon);
-pagesLi.appendChild(subMenu);
-categoryList.appendChild(pagesLi); // Append the new list item to the category list
+// Append the new list item to the category list
 // ... end header page  ...
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   fetch('http://localhost:3000/category', {
-//       method: 'GET',
-//       headers: {
-//           'Content-Type': 'application/json',
-//       }
-//   })
-//   .then(response => response.json())
-//   .then(categories => {
-//       const categoryList = document.getElementById('categoryList');
-
-//       return fetch('http://localhost:3000/subcategory', {
-//           method: 'GET',
-//           headers: {
-//               'Content-Type': 'application/json',
-//           }
-//       })
-//       .then(response => response.json())
-//       .then(subcategories => {
-//           categories.forEach(category => {
-//               const li = document.createElement('li');
-//               li.classList.add('menu-item-has-children');
-
-//               const a = document.createElement('a');
-//               a.href = "#";
-//               a.classList.add('drop-down');
-//               a.textContent = category.cat_name;
-
-//               const icon = document.createElement('i');
-//               icon.classList.add('bi', 'bi-plus', 'dropdown-icon');
-
-//               const subMenu = document.createElement('ul');
-//               subMenu.classList.add('sub-menu');
-
-//               subcategories.filter(sub => sub.cat_id === Number(category.id))
-//               .forEach(sub => {
-//                   const subLi = document.createElement('li');
-//                   const subA = document.createElement('a');
-//                   subA.href = 'shop-list.html';
-//                   subA.textContent = sub.sub_name;
-//                   subLi.appendChild(subA);
-//                   subMenu.appendChild(subLi);
-//               });
-
-//               li.appendChild(a);
-//               li.appendChild(icon);
-//               if (subMenu.children.length > 0) {
-//                   li.appendChild(subMenu);
-//               }
-//               categoryList.appendChild(li);
-//           });
-//       });
-//   })
-//   .catch(error => console.error('Fetch error:', error));
-// });
 
 
 // popular categories
