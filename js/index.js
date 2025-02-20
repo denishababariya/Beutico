@@ -150,12 +150,6 @@ document.addEventListener("DOMContentLoaded", function () {
     .catch(error => console.error('There was a problem with the fetch operation:', error));
 });
 
-// ... start header page ...
-// Append the new list item to the category list
-// ... end header page  ...
-
-
-
 // popular categories
 document.addEventListener("DOMContentLoaded", function () {
   // Fetch categories
@@ -947,3 +941,62 @@ document.addEventListener("DOMContentLoaded", async function () {
     console.error("Error fetching data:", error);
   }
 });
+// end suggest
+
+
+// start review
+document.addEventListener("DOMContentLoaded", async function fetchReviews() {
+  try {
+      const response = await fetch('http://localhost:3000/review'); // Ensure this is the correct API endpoint
+      const data = await response.json();
+
+      console.log("API Response:", data); // Debugging: Check the structure of the response
+
+      const reviewsContainer = document.getElementById('x_testimonial');
+      reviewsContainer.innerHTML = ''; // Clear previous content
+
+      // Check if `data` is an array
+      if (!data || !Array.isArray(data) || data.length === 0) {
+          console.error("Invalid response format or no reviews found:", data);
+          reviewsContainer.innerHTML = '<p>No reviews available.</p>';
+          return;
+      }
+
+      data.forEach((review) => {  // Use `data` directly since it's an array
+          const reviewElement = document.createElement('div');
+          reviewElement.classList.add('swiper-slide');
+
+          reviewElement.innerHTML = `
+              <div class="say-about-card">
+                  <div class="say-about-card-top">
+                      <ul>
+                          ${'<li><i class="bi bi-star-fill"></i></li>'.repeat(review.rating || 0)}
+                      </ul>
+                  </div>
+                  <p>“${review.review || "No review text available"}”</p>
+                  <div class="say-about-card-bottom">
+                      <div class="author-area">
+                          <div class="author-img">
+                              <img src="${review.author?.image || 'default-avatar.png'}" 
+                                   alt="${review.author?.name || 'Anonymous'}" />
+                          </div>
+                          <div class="author">
+                              <h5>${review.author?.name || "Anonymous"}</h5>
+                              <p>${review.author?.date || "No date available"}</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          `;
+
+          reviewsContainer.appendChild(reviewElement);
+      });
+
+  } catch (error) {
+      console.error('Error fetching reviews:', error);
+      document.getElementById('x_testimonial').innerHTML = '<p>Error loading reviews. Please try again later.</p>';
+  }
+});
+
+
+// end review
