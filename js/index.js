@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
+  let activeCategory = null; // Track currently active category
+
   // Fetch categories
   fetch('http://localhost:3000/category', {
     method: 'GET',
@@ -6,59 +8,35 @@ document.addEventListener("DOMContentLoaded", function () {
       'Content-Type': 'application/json',
     }
   })
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok ' + response.statusText);
-      }
-      return response.json();
-    })
+    .then(response => response.json())
     .then(categories => {
-      console.log('Categories:', categories); // Log the categories
-      const categoryList = document.getElementById('categoryList'); // Get the category list element
+      const categoryList = document.getElementById('categoryList');
 
-      // Fetch subcategories
       return fetch('http://localhost:3000/subcategory', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
         }
-      }).then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok ' + response.statusText);
-        }
-        return response.json();
-      }).then(subcategories => {
-        console.log('All subcategories:', subcategories); // Log all subcategories
-
-        // Log IDs for debugging
+      }).then(response => response.json()).then(subcategories => {
+        
         categories.forEach(category => {
-          console.log(`Category ID: ${category.id} (Type: ${typeof category.id})`);
-        });
-        subcategories.forEach(sub => {
-          console.log(`Subcategory Category ID: ${sub.cat_id} (Type: ${typeof sub.cat_id})`);
-        });
+          const li = document.createElement('li');
+          li.classList.add('menu-item-has-children', 'position-inherit');
 
-        // Iterate over each category
-        categories.forEach(category => {
-          const li = document.createElement('li'); // Create a new list item
-          li.classList.add('menu-item-has-children', 'position-inherit'); // Add classes to the li
+          const a = document.createElement('a');
+          a.classList.add('drop-down');
+          a.href = `#${category.cat_name}`;
+          a.textContent = category.cat_name;
 
-          const a = document.createElement('a'); // Create a new anchor element
-          a.classList.add('drop-down'); // Add class to the a
-          a.href = `#${category.cat_name}`; // Set the href attribute (modify as needed)
-          a.textContent = category.cat_name; // Set the text to the category name
-
-          // Create the icon element
           const icon = document.createElement('i');
-          icon.classList.add('bi', 'bi-plus', 'dropdown-icon'); // Add classes to the icon
+          icon.classList.add('bi', 'bi-plus', 'dropdown-icon');
 
-          a.appendChild(icon); // Append the icon to the anchor after the text
-          li.appendChild(a); // Append the anchor to the list item
+          a.appendChild(icon);
+          li.appendChild(a);
 
-          // Create the mega menu div
           const megaMenuDiv = document.createElement('div');
           megaMenuDiv.classList.add('mega-menu2');
-          megaMenuDiv.style.backgroundImage = `url('/img/home1/megamenu2-${category.cat_name.toLowerCase()}-bg.png')`; // Set background image
+          megaMenuDiv.style.backgroundImage = `url('/img/home1/megamenu2-${category.cat_name.toLowerCase()}-bg.png')`;
 
           const megaMenuWrap = document.createElement('div');
           megaMenuWrap.classList.add('megamenu-wrap');
@@ -66,94 +44,62 @@ document.addEventListener("DOMContentLoaded", function () {
           const subCategoryList = document.createElement('ul');
           subCategoryList.classList.add('menu-row');
 
-          // Filter subcategories for the current category
-          const filteredSubcategories = subcategories.filter(sub => sub.cat_id === Number(category.id)); // Convert category.id to a number
-          console.log('Filtered subcategories for', category.cat_name, ':', filteredSubcategories); // Log filtered subcategories
+          const filteredSubcategories = subcategories.filter(sub => sub.cat_id === Number(category.id));
 
-          // Iterate over filtered subcategories
           filteredSubcategories.forEach(sub => {
             const subLi = document.createElement('li');
             subLi.classList.add('menu-single-item');
 
             const subA = document.createElement('a');
-            subA.href = `shop-list.html`; // Set the link for the subcategory with ID and name
-            subA.textContent = sub.sub_name; // Set the text to the subcategory name
+            subA.href = `shop-list.html`;
+            subA.textContent = sub.sub_name;
 
-            // Store subcategory ID in local storage on click
             subA.addEventListener('click', function () {
-              localStorage.setItem('selectedSubcategoryId', sub.id); // Store the subcategory ID
+              localStorage.setItem('selectedSubcategoryId', sub.id);
             });
 
-            subLi.appendChild(subA); // Append the sub anchor to the sub list item
-            subCategoryList.appendChild(subLi); // Append the sub list item to the subcategory list
-
-            console.log('Appended subcategory:', sub.sub_name); // Log each appended subcategory
+            subLi.appendChild(subA);
+            subCategoryList.appendChild(subLi);
           });
 
-          megaMenuWrap.appendChild(subCategoryList); // Append the subcategory list to the mega menu wrap
-          megaMenuDiv.appendChild(megaMenuWrap); // Append the mega menu wrap to the mega menu div
-          li.appendChild(megaMenuDiv); // Append the mega menu div to the list item
-          categoryList.appendChild(li); // Append the list item to the category list
+          megaMenuWrap.appendChild(subCategoryList);
+          megaMenuDiv.appendChild(megaMenuWrap);
+          li.appendChild(megaMenuDiv);
+          categoryList.appendChild(li);
 
           a.addEventListener('click', function (event) {
-            event.preventDefault(); // Prevent default anchor behavior
-            const isActive = li.classList.toggle('active'); // Toggle active class on the li
+            event.preventDefault();
 
-            // Modify the style or class based on the active state
+            // If another category is active, remove its active class
+            if (activeCategory && activeCategory !== li) {
+              activeCategory.classList.remove('active');
+              activeCategory.querySelector('.mega-menu2').style.display = 'none';
+              const prevIcon = activeCategory.querySelector('.dropdown-icon');
+              prevIcon.classList.remove('bi-dash');
+              prevIcon.classList.add('bi-plus');
+            }
+
+            const isActive = li.classList.toggle('active');
+
             if (isActive) {
-              megaMenuDiv.style.display = 'block'; // Show the mega menu
-              icon.classList.remove('bi-plus'); // Change icon to minus
-              icon.classList.add('bi-dash'); // Add minus icon class
+              megaMenuDiv.style.display = 'block';
+              icon.classList.remove('bi-plus');
+              icon.classList.add('bi-dash');
+              activeCategory = li; // Store currently active category
             } else {
-              megaMenuDiv.style.display = 'none'; // Hide the mega menu
-              icon.classList.remove('bi-dash'); // Change icon back to plus
-              icon.classList.add('bi-plus'); // Add plus icon class
+              megaMenuDiv.style.display = 'none';
+              icon.classList.remove('bi-dash');
+              icon.classList.add('bi-plus');
+              activeCategory = null;
             }
           });
         });
-        const pagesLi = document.createElement('li');
-        pagesLi.classList.add('menu-item-has-children');
-
-        const pagesLink = document.createElement('a');
-        pagesLink.href = '#';
-        pagesLink.classList.add('drop-down');
-        pagesLink.textContent = 'Pages';
-
-        const icon = document.createElement('i');
-        icon.classList.add('bi', 'bi-plus', 'dropdown-icon');
-
-        const subMenu = document.createElement('ul');
-        subMenu.classList.add('sub-menu');
-
-        // Create sub-menu items
-        const subItems = [
-          { href: 'about-us.html', text: 'About Us' },
-          { href: 'contact.html', text: 'Contact Us' },
-          { href: 'faq.html', text: 'FAQ' }
-        ];
-
-        subItems.forEach(item => {
-          const subLi = document.createElement('li');
-          const subA = document.createElement('a');
-          subA.href = item.href;
-          subA.textContent = item.text;
-          subLi.appendChild(subA);
-          subMenu.appendChild(subLi);
-        });
-
-        // Append everything together
-        pagesLi.appendChild(pagesLink);
-        pagesLi.appendChild(icon);
-        pagesLi.appendChild(subMenu);
-        categoryList.appendChild(pagesLi);
       });
 
-      // Create the new list item for "Pages"
-
     })
-
     .catch(error => console.error('There was a problem with the fetch operation:', error));
 });
+
 
 // popular categories
 document.addEventListener("DOMContentLoaded", function () {
