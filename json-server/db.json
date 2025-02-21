@@ -9693,6 +9693,164 @@
         "../img/skin/SUBCAT1 (5).png",
         "../img/skin/landscape.png"
       ]
+    },    {
+      "id": 461,
+      "sku": "HE-002",
+      "name": "Tape-In Hair Extensions",
+      "cat_id": 6,
+      "sub_cat_id": 92,
+      "description": "Seamless tape-in hair extensions.",
+      "additional_description": "Natural look and feel.",
+      "price": 59.99,
+      "weight": "100g",
+      "brand": "Orna Accessories",
+      "tags": ["hair extension", "tape-in"],
+      "images": [
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
+      ]
+    },
+    {
+      "id": 462,
+      "sku": "HE-003",
+      "name": "Micro-Link Hair Extensions",
+      "cat_id": 6,
+      "sub_cat_id": 92,
+      "description": "Micro-link hair extensions for a natural look.",
+      "additional_description": "No glue or heat required.",
+      "price": 69.99,
+      "weight": "100g",
+      "brand": "Orna Accessories",
+      "tags": ["hair extension", "micro-link"],
+      "images": [
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
+      ]
+    },
+    {
+      "id": 463,
+      "sku": "HE-004",
+      "name": "Synthetic Hair Extensions",
+      "cat_id": 6,
+      "sub_cat_id": 92,
+      "description": "High-quality synthetic hair extensions.",
+      "additional_description": "Affordable and easy to style.",
+      "price": 29.99,
+      "weight": "100g",
+      "brand": "Orna Accessories",
+      "tags": ["hair extension", "synthetic"],
+      "images": [
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
+      ]
+    },
+    {
+      "id": 464,
+      "sku": "HE-005",
+      "name": "Human Hair Extensions",
+      "cat_id": 6,
+      "sub_cat_id": 92,
+      "description": "100% human hair extensions.",
+      "additional_description": "Can be styled just like your own hair.",
+      "price": 89.99,
+      "weight": "100g",
+      "brand": "Orna Accessories",
+      "tags": ["hair extension", "human hair"],
+      "images": [
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
+      ]
+    },    {
+      "id": 465,
+      "sku": "HE-002",
+      "name": "Tape-In Hair Extensions",
+      "cat_id": 6,
+      "sub_cat_id": 92,
+      "description": "Seamless tape-in hair extensions.",
+      "additional_description": "Natural look and feel.",
+      "price": 59.99,
+      "weight": "100g",
+      "brand": "Orna Accessories",
+      "tags": ["hair extension", "tape-in"],
+      "images": [
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
+      ]
+    },
+    {
+      "id": 466,
+      "sku": "HE-003",
+      "name": "Micro-Link Hair Extensions",
+      "cat_id": 6,
+      "sub_cat_id": 92,
+      "description": "Micro-link hair extensions for a natural look.",
+      "additional_description": "No glue or heat required.",
+      "price": 69.99,
+      "weight": "100g",
+      "brand": "Orna Accessories",
+      "tags": ["hair extension", "micro-link"],
+      "images": [
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
+      ]
+    },
+    {
+      "id": 467,
+      "sku": "HE-004",
+      "name": "Synthetic Hair Extensions",
+      "cat_id": 6,
+      "sub_cat_id": 92,
+      "description": "High-quality synthetic hair extensions.",
+      "additional_description": "Affordable and easy to style.",
+      "price": 29.99,
+      "weight": "100g",
+      "brand": "Orna Accessories",
+      "tags": ["hair extension", "synthetic"],
+      "images": [
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
+      ]
+    },
+    {
+      "id": 468,
+      "sku": "HE-005",
+      "name": "Human Hair Extensions",
+      "cat_id": 6,
+      "sub_cat_id": 92,
+      "description": "100% human hair extensions.",
+      "additional_description": "Can be styled just like your own hair.",
+      "price": 89.99,
+      "weight": "100g",
+      "brand": "Orna Accessories",
+      "tags": ["hair extension", "human hair"],
+      "images": [
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
+      ]
     }
   ],
   "offer": [
@@ -9824,5 +9982,13 @@
           "image": "img/home2/testimonial-author-img10.png"
         }
       }   
-  ]
+  ],
+  "rentalproduct" : [
+      {
+        "id": 1,
+        "product_id": 1,
+        "rental_start_date": "2023-06-01",
+        "rental_end_date": "2023-06-10"
+      }
+  ] 
 }
