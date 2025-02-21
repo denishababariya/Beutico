@@ -76,8 +76,13 @@ document.addEventListener("DOMContentLoaded", function () {
             subLi.classList.add('menu-single-item');
 
             const subA = document.createElement('a');
-            subA.href = 'shop-list.html'; // Set the link for the subcategory
+            subA.href = `shop-list.html`; // Set the link for the subcategory with ID and name
             subA.textContent = sub.sub_name; // Set the text to the subcategory name
+
+            // Store subcategory ID in local storage on click
+            subA.addEventListener('click', function () {
+              localStorage.setItem('selectedSubcategoryId', sub.id); // Store the subcategory ID
+            });
 
             subLi.appendChild(subA); // Append the sub anchor to the sub list item
             subCategoryList.appendChild(subLi); // Append the sub list item to the subcategory list
@@ -107,44 +112,44 @@ document.addEventListener("DOMContentLoaded", function () {
           });
         });
         const pagesLi = document.createElement('li');
-      pagesLi.classList.add('menu-item-has-children');
+        pagesLi.classList.add('menu-item-has-children');
 
-      const pagesLink = document.createElement('a');
-      pagesLink.href = '#';
-      pagesLink.classList.add('drop-down');
-      pagesLink.textContent = 'Pages';
+        const pagesLink = document.createElement('a');
+        pagesLink.href = '#';
+        pagesLink.classList.add('drop-down');
+        pagesLink.textContent = 'Pages';
 
-      const icon = document.createElement('i');
-      icon.classList.add('bi', 'bi-plus', 'dropdown-icon');
+        const icon = document.createElement('i');
+        icon.classList.add('bi', 'bi-plus', 'dropdown-icon');
 
-      const subMenu = document.createElement('ul');
-      subMenu.classList.add('sub-menu');
+        const subMenu = document.createElement('ul');
+        subMenu.classList.add('sub-menu');
 
-      // Create sub-menu items
-      const subItems = [
-        { href: 'about-us.html', text: 'About Us' },
-        { href: 'contact.html', text: 'Contact Us' },
-        { href: 'faq.html', text: 'FAQ' }
-      ];
+        // Create sub-menu items
+        const subItems = [
+          { href: 'about-us.html', text: 'About Us' },
+          { href: 'contact.html', text: 'Contact Us' },
+          { href: 'faq.html', text: 'FAQ' }
+        ];
 
-      subItems.forEach(item => {
-        const subLi = document.createElement('li');
-        const subA = document.createElement('a');
-        subA.href = item.href;
-        subA.textContent = item.text;
-        subLi.appendChild(subA);
-        subMenu.appendChild(subLi);
-      });
+        subItems.forEach(item => {
+          const subLi = document.createElement('li');
+          const subA = document.createElement('a');
+          subA.href = item.href;
+          subA.textContent = item.text;
+          subLi.appendChild(subA);
+          subMenu.appendChild(subLi);
+        });
 
-      // Append everything together
-      pagesLi.appendChild(pagesLink);
-      pagesLi.appendChild(icon);
-      pagesLi.appendChild(subMenu);
-      categoryList.appendChild(pagesLi);
+        // Append everything together
+        pagesLi.appendChild(pagesLink);
+        pagesLi.appendChild(icon);
+        pagesLi.appendChild(subMenu);
+        categoryList.appendChild(pagesLi);
       });
 
       // Create the new list item for "Pages"
-      
+
     })
 
     .catch(error => console.error('There was a problem with the fetch operation:', error));
@@ -738,7 +743,9 @@ async function initializeProducts() {
 
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', initializeProducts);
+// end suggest
 
+// shop product 
 
 document.addEventListener("DOMContentLoaded", async function () {
   const productsPerPage = 12; // Number of products to display per page
@@ -761,79 +768,88 @@ document.addEventListener("DOMContentLoaded", async function () {
       const container = document.getElementById("productContainer");
       container.innerHTML = ""; // Clear previous content
 
-      products.forEach(product => {
+      const selectedSubcategoryId = localStorage.getItem("selectedSubcategoryId");
+
+      // Filter products based on selectedSubcategoryId
+      const filteredProducts = selectedSubcategoryId
+        ? products.filter(product => product.sub_cat_id == selectedSubcategoryId)
+        : products;
+
+      // Display products
+      filteredProducts.forEach(product => {
         const productCard = `
-          <div class="col-lg-3 col-md-4 col-sm-6 item">
-            <div class="product-card style-3 hover-btn">
-              <div class="product-card-img">
-                <a href="shop-list.html">
-                  <img src="${product.images[0]}" alt="${product.name}">
-                  <div class="batch">
-                    <span>${product.discount ? '-' + product.discount + '%' : '0%'}</span>
+            <div class="col-lg-3 col-md-4 col-sm-6 item">
+              <div class="product-card style-3 hover-btn">
+                <div class="product-card-img">
+                  <a href="shop-list.html">
+                    <img src="${product.images[0]}" alt="${product.name}">
+                    <div class="batch">
+                      <span>${product.discount ? '-' + product.discount + '%' : '0%'}</span>
+                    </div>
+                  </a>
+                  <div class="overlay">
+                    <div class="cart-area">
+                      <a href="cart.html" class="hover-btn3 add-cart-btn"><i class="bi bi-bag-check"></i> Drop in Basket</a>
+                    </div>
                   </div>
-                </a>
-                <div class="overlay">
-                  <div class="cart-area">
-                    <a href="cart.html" class="hover-btn3 add-cart-btn"><i class="bi bi-bag-check"></i> Drop in Basket</a>
+                  <div class="view-and-favorite-area">
+                    <ul>
+                      <li>
+                        <a href="whistlist.html">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+                            <g clip-path="url(#clip0_168_378)">
+                              <path d="M16.528 2.20919C16.0674 1.71411 15.5099 1.31906 14.8902 1.04859C14.2704 0.778112 13.6017 0.637996 12.9255 0.636946C12.2487 0.637725 11.5794 0.777639 10.959 1.048C10.3386 1.31835 9.78042 1.71338 9.31911 2.20854L9.00132 2.54436L8.68352 2.20854C6.83326 0.217151 3.71893 0.102789 1.72758 1.95306C1.63932 2.03507 1.5541 2.12029 1.47209 2.20854C-0.490696 4.32565 -0.490696 7.59753 1.47209 9.71463L8.5343 17.1622C8.77862 17.4201 9.18579 17.4312 9.44373 17.1868C9.45217 17.1788 9.46039 17.1706 9.46838 17.1622L16.528 9.71463C18.4907 7.59776 18.4907 4.32606 16.528 2.20919ZM15.5971 8.82879H15.5965L9.00132 15.7849L2.40553 8.82879C0.90608 7.21113 0.90608 4.7114 2.40553 3.09374C3.76722 1.61789 6.06755 1.52535 7.5434 2.88703C7.61505 2.95314 7.68401 3.0221 7.75012 3.09374L8.5343 3.92104C8.79272 4.17781 9.20995 4.17781 9.46838 3.92104L10.2526 3.09438C11.6142 1.61853 13.9146 1.52599 15.3904 2.88767C15.4621 2.95378 15.531 3.02274 15.5971 3.09438C17.1096 4.71461 17.1207 7.2189 15.5971 8.82879Z" />
+                            </g>
+                          </svg>
+                        </a>
+                      </li>
+                      <li>
+                        <a data-bs-toggle="modal" data-bs-target="#product-view">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+                            <path d="M21.8601 10.5721C21.6636 10.3032 16.9807 3.98901 10.9999 3.98901C5.019 3.98901 0.335925 10.3032 0.139601 10.5718C0.0488852 10.6961 0 10.846 0 10.9999C0 11.1537 0.0488852 11.3036 0.139601 11.4279C0.335925 11.6967 5.019 18.011 10.9999 18.011C16.9807 18.011 21.6636 11.6967 21.8601 11.4281C21.951 11.3039 21.9999 11.154 21.9999 11.0001C21.9999 10.8462 21.951 10.6963 21.8601 10.5721ZM10.9999 16.5604C6.59432 16.5604 2.77866 12.3696 1.64914 10.9995C2.77719 9.62823 6.58487 5.43955 10.9999 5.43955C15.4052 5.43955 19.2206 9.62969 20.3506 11.0005C19.2225 12.3717 15.4149 16.5604 10.9999 16.5604Z" />
+                            <path d="M10.9999 6.64832C8.60039 6.64832 6.64819 8.60051 6.64819 11C6.64819 13.3994 8.60039 15.3516 10.9999 15.3516C13.3993 15.3516 15.3515 13.3994 15.3515 11C15.3515 8.60051 13.3993 6.64832 10.9999 6.64832ZM10.9999 13.9011C9.40013 13.9011 8.09878 12.5997 8.09878 11C8.09878 9.40029 9.40017 8.0989 10.9999 8.0989C12.5995 8.0989 13.9009 9.40029 13.9009 11C13.9009 12.5997 12.5996 13.9011 10.9999 13.9011Z" />
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
                   </div>
                 </div>
-                <div class="view-and-favorite-area">
-                  <ul>
-                    <li>
-                      <a href="whistlist.html">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
-                          <g clip-path="url(#clip0_168_378)">
-                            <path d="M16.528 2.20919C16.0674 1.71411 15.5099 1.31906 14.8902 1.04859C14.2704 0.778112 13.6017 0.637996 12.9255 0.636946C12.2487 0.637725 11.5794 0.777639 10.959 1.048C10.3386 1.31835 9.78042 1.71338 9.31911 2.20854L9.00132 2.54436L8.68352 2.20854C6.83326 0.217151 3.71893 0.102789 1.72758 1.95306C1.63932 2.03507 1.5541 2.12029 1.47209 2.20854C-0.490696 4.32565 -0.490696 7.59753 1.47209 9.71463L8.5343 17.1622C8.77862 17.4201 9.18579 17.4312 9.44373 17.1868C9.45217 17.1788 9.46039 17.1706 9.46838 17.1622L16.528 9.71463C18.4907 7.59776 18.4907 4.32606 16.528 2.20919ZM15.5971 8.82879H15.5965L9.00132 15.7849L2.40553 8.82879C0.90608 7.21113 0.90608 4.7114 2.40553 3.09374C3.76722 1.61789 6.06755 1.52535 7.5434 2.88703C7.61505 2.95314 7.68401 3.0221 7.75012 3.09374L8.5343 3.92104C8.79272 4.17781 9.20995 4.17781 9.46838 3.92104L10.2526 3.09438C11.6142 1.61853 13.9146 1.52599 15.3904 2.88767C15.4621 2.95378 15.531 3.02274 15.5971 3.09438C17.1096 4.71461 17.1207 7.2189 15.5971 8.82879Z" />
-                          </g>
-                        </svg>
-                      </a>
-                    </li>
-                    <li>
-                      <a data-bs-toggle="modal" data-bs-target="#product-view">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
-                          <path d="M21.8601 10.5721C21.6636 10.3032 16.9807 3.98901 10.9999 3.98901C5.019 3.98901 0.335925 10.3032 0.139601 10.5718C0.0488852 10.6961 0 10.846 0 10.9999C0 11.1537 0.0488852 11.3036 0.139601 11.4279C0.335925 11.6967 5.019 18.011 10.9999 18.011C16.9807 18.011 21.6636 11.6967 21.8601 11.4281C21.951 11.3039 21.9999 11.154 21.9999 11.0001C21.9999 10.8462 21.951 10.6963 21.8601 10.5721ZM10.9999 16.5604C6.59432 16.5604 2.77866 12.3696 1.64914 10.9995C2.77719 9.62823 6.58487 5.43955 10.9999 5.43955C15.4052 5.43955 19.2206 9.62969 20.3506 11.0005C19.2225 12.3717 15.4149 16.5604 10.9999 16.5604Z" />
-                          <path d="M10.9999 6.64832C8.60039 6.64832 6.64819 8.60051 6.64819 11C6.64819 13.3994 8.60039 15.3516 10.9999 15.3516C13.3993 15.3516 15.3515 13.3994 15.3515 11C15.3515 8.60051 13.3993 6.64832 10.9999 6.64832ZM10.9999 13.9011C9.40013 13.9011 8.09878 12.5997 8.09878 11C8.09878 9.40029 9.40017 8.0989 10.9999 8.0989C12.5995 8.0989 13.9009 9.40029 13.9009 11C13.9009 12.5997 12.5996 13.9011 10.9999 13.9011Z" />
-                        </svg>
-                      </a>
-                    </li>
-                  </ul>
+                <div class="product-card-content">
+                  <h6><a href="product-default.html" class="hover-underline" onclick="localStorage.setItem('selectedProductId', '${product.id}')">${product.name}</a></h6>
+                  <p><a href="shop-list.html">${product.brand}</a></p>
+                  <p class="price">$${product.price} <del>${product.originalPrice}</del></p>
+                  <span class="for-border"></span>
                 </div>
               </div>
-              <div class="product-card-content">
-                <h6><a href="product-default.html" class="hover-underline" onclick="localStorage.setItem('selectedProductId', '${product.id}')">${product.name}</a></h6>
-                <p><a href="shop-list.html">${product.brand}</a></p>
-                <p class="price">$${product.price} <del>${product.originalPrice}</del></p>
-                <div class="rating">
-                  <ul>
-                    ${'<li><i class="bi bi-star-fill"></i></li>'.repeat(product.rating)}
-                  </ul>
-                  <span>(${product.reviewCount})</span>
-                </div>
-              </div>
-              <span class="for-border"></span>
             </div>
-          </div>
-        `;
+          `;
         container.innerHTML += productCard; // Append product card to container
       });
     }
 
+
     // Function to handle pagination
     function handlePagination(page) {
+      const selectedSubcategoryId = localStorage.getItem("selectedSubcategoryId");
+      const filteredProducts = selectedSubcategoryId
+        ? data.filter(product => product.sub_cat_id == selectedSubcategoryId)
+        : data;
+
       const start = (page - 1) * productsPerPage;
       const end = start + productsPerPage;
-      const paginatedProducts = data.slice(start, end);
+      const paginatedProducts = filteredProducts.slice(start, end);
       renderProducts(paginatedProducts);
-      renderPaginationControls(page);
+      renderPaginationControls(page, filteredProducts.length); // Pass filtered length
     }
 
+
     // Function to render pagination controls
-    function renderPaginationControls(currentPage) {
+    function renderPaginationControls(currentPage, filteredLength) {
       const paginationContainer = document.querySelector('.pagination-list');
       paginationContainer.innerHTML = ""; // Clear previous pagination
-    
-      const totalPages = Math.ceil(totalProducts / productsPerPage);
-    
+
+      const totalPages = Math.ceil(filteredLength / productsPerPage);
+
       // 1) PREVIOUS BUTTON
       if (currentPage > 1) {
         const prevPageItem = document.createElement('li');
@@ -848,7 +864,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         prevPageItem.appendChild(prevPageLink);
         paginationContainer.appendChild(prevPageItem);
       }
-    
+
       // 2) PAGE 1
       {
         const pageItem = document.createElement('li');
@@ -866,14 +882,14 @@ document.addEventListener("DOMContentLoaded", async function () {
         pageItem.appendChild(pageLink);
         paginationContainer.appendChild(pageItem);
       }
-    
+
       // 3) Left Ellipsis (જો currentPage 4 કરતા મોટું હોય, તો “...” બતાવો)
       if (currentPage - 1 > 2) {
         const ellipsisItem = document.createElement('li');
         ellipsisItem.textContent = "...";
         paginationContainer.appendChild(ellipsisItem);
       }
-    
+
       // 4) Middle Pages => (currentPage - 1), currentPage, (currentPage + 1)
       for (let i = currentPage - 1; i <= currentPage + 1; i++) {
         if (i > 1 && i < totalPages) {
@@ -893,14 +909,14 @@ document.addEventListener("DOMContentLoaded", async function () {
           paginationContainer.appendChild(pageItem);
         }
       }
-    
+
       // 5) Right Ellipsis (જો currentPage + 1 < totalPages - 1, તો “...” બતાવો)
       if (currentPage + 1 < totalPages - 1) {
         const ellipsisItem = document.createElement('li');
         ellipsisItem.textContent = "...";
         paginationContainer.appendChild(ellipsisItem);
       }
-    
+
       // 6) Last Page (totalPages)
       if (totalPages > 1) {
         const pageItem = document.createElement('li');
@@ -918,7 +934,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         pageItem.appendChild(pageLink);
         paginationContainer.appendChild(pageItem);
       }
-    
+
       // 7) NEXT BUTTON
       if (currentPage < totalPages) {
         const nextPageItem = document.createElement('li');
@@ -934,39 +950,41 @@ document.addEventListener("DOMContentLoaded", async function () {
         paginationContainer.appendChild(nextPageItem);
       }
     }
-    
+
 
     handlePagination(currentPage); // Initial call to render products and pagination
   } catch (error) {
     console.error("Error fetching data:", error);
   }
 });
-// end suggest
+
+// end shop product 
+
 
 
 // start review
 document.addEventListener("DOMContentLoaded", async function fetchReviews() {
   try {
-      const response = await fetch('http://localhost:3000/review'); // Ensure this is the correct API endpoint
-      const data = await response.json();
+    const response = await fetch('http://localhost:3000/review'); // Ensure this is the correct API endpoint
+    const data = await response.json();
 
-      console.log("API Response:", data); // Debugging: Check the structure of the response
+    console.log("API Response:", data); // Debugging: Check the structure of the response
 
-      const reviewsContainer = document.getElementById('x_testimonial');
-      reviewsContainer.innerHTML = ''; // Clear previous content
+    const reviewsContainer = document.getElementById('x_testimonial');
+    reviewsContainer.innerHTML = ''; // Clear previous content
 
-      // Check if `data` is an array
-      if (!data || !Array.isArray(data) || data.length === 0) {
-          console.error("Invalid response format or no reviews found:", data);
-          reviewsContainer.innerHTML = '<p>No reviews available.</p>';
-          return;
-      }
+    // Check if `data` is an array
+    if (!data || !Array.isArray(data) || data.length === 0) {
+      console.error("Invalid response format or no reviews found:", data);
+      reviewsContainer.innerHTML = '<p>No reviews available.</p>';
+      return;
+    }
 
-      data.forEach((review) => {  // Use `data` directly since it's an array
-          const reviewElement = document.createElement('div');
-          reviewElement.classList.add('swiper-slide');
+    data.forEach((review) => {  // Use `data` directly since it's an array
+      const reviewElement = document.createElement('div');
+      reviewElement.classList.add('swiper-slide');
 
-          reviewElement.innerHTML = `
+      reviewElement.innerHTML = `
               <div class="say-about-card">
                   <div class="say-about-card-top">
                       <ul>
@@ -989,14 +1007,129 @@ document.addEventListener("DOMContentLoaded", async function fetchReviews() {
               </div>
           `;
 
-          reviewsContainer.appendChild(reviewElement);
-      });
+      reviewsContainer.appendChild(reviewElement);
+    });
 
   } catch (error) {
-      console.error('Error fetching reviews:', error);
-      document.getElementById('x_testimonial').innerHTML = '<p>Error loading reviews. Please try again later.</p>';
+    console.error('Error fetching reviews:', error);
+    document.getElementById('x_testimonial').innerHTML = '<p>Error loading reviews. Please try again later.</p>';
   }
 });
 
 
 // end review
+
+
+
+// productmodal 
+// Function to open the product modal and fetch product details
+function openProductModal(productId) {
+
+  fetch(`http://localhost:3000/product/${productId}`)
+      .then(response => {
+          if (!response.ok) {
+              throw new Error('Network response was not ok');
+          }
+          return response.json();
+      })
+      .then(data => {
+          const modalContentContainer = document.getElementById('modal-content-container');
+          modalContentContainer.innerHTML = ''; // Clear existing content
+
+          // Create the modal content dynamically
+          const modalContent = `
+              <div class="shop-details-top-section">
+                  <div class="row gy-4">
+                      <div class="col-lg-6">
+                          <div class="shop-details-img">
+                              <div class="tab-content" id="view-tabContent">
+                        ${data.images.slice(0, 4).map((image, index) => `
+                            <div class="tab-pane fade ${index === 0 ? 'show active' : ''}" id="view-pills-img${index + 1}" role="tabpanel">
+                                <img src="${image}" alt="">
+                            </div>
+                        `).join('')}
+                    </div>
+                    <div class="nav nav-pills" id="view-tab" role="tablist" aria-orientation="vertical">
+                        ${data.images.slice(0, 4).map((image, index) => `
+                            <button class="nav-link ${index === 0 ? 'active' : ''}" id="view-pills-img${index + 1}-tab" data-bs-toggle="pill" data-bs-target="#view-pills-img${index + 1}" type="button" role="tab" aria-controls="view-pills-img${index + 1}" aria-selected="${index === 0}">
+                                <img src="${image}" alt="">
+                            </button>
+                        `).join('')}
+                    </div>
+                          </div>
+                      </div>
+                      <div class="col-lg-6">
+                          <div class="shop-details-content">
+                              <h1>${data.name}</h1>
+                              <div class="rating-review">
+                                  <div class="rating">
+                                      <div class="star">${'<i class="bi bi-star-fill"></i>'.repeat(data.rating)}</div>
+                                      <p>(${data.reviews} customer review)</p>
+                                  </div>
+                              </div>
+                              <p>${data.description}</p>
+                              <div class="price-area">
+                                  <p class="price">$${data.price} <del>$${data.originalPrice}</del></p>
+                              </div>
+                              <div class="quantity-color-area">
+                                  <div class="quantity-color">
+                                      <h6 class="widget-title">Quantity</h6>
+                                      <div class="quantity-counter">
+                                          <a href="#" class="quantity__minus"><i class='bx bx-minus'></i></a>
+                                          <input name="quantity" type="text" class="quantity__input" value="01">
+                                          <a href="#" class="quantity__plus"><i class='bx bx-plus'></i></a>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="shop-details-btn">
+                                  <a href="#" class="primary-btn1 hover-btn3">*Drop in Basket*</a>
+                                  <a href="checkout.html" class="primary-btn1 style-3 hover-btn4">*Shop Now*</a>
+                              </div>
+                              <div class="product-info">
+                                  <ul class="product-info-list">
+                                      <li><span>SKU:</span> ${data.sku}</li>
+                                      <li><span>Brand:</span> <a href="shop-4-columns.html">${data.brand}</a></li>
+                                      <li><span>Category:</span> <a href="shop-slider.html">${data.category}</a></li>
+                                  </ul>
+                              </div>
+                              <div class="compare-wishlist-area">
+                                  <ul>
+                                      <li>
+                                          <a href="whistlist.html">
+                                              <span>
+                                                  <svg width="11" height="11" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+                                                      <g clip-path="url(#clip0_168_378)">
+                                                          <path d="M16.528 2.20919C16.0674 1.71411 15.5099 1.31906 14.8902 1.04859C14.2704 0.778112 13.6017 0.637996 12.9255 0.636946C12.2487 0.637725 11.5794 0.777639 10.959 1.048C10.3386 1.31835 9.78042 1.71338 9.31911 2.20854L9.00132 2.54436L8.68352 2.20854C6.83326 0.217151 3.71893 0.102789 1.72758 1.95306C1.63932 2.03507 1.5541 2.12029 1.47209 2.20854C-0.490696 4.32565 -0.490696 7.59753 1.47209 9.71463L8.5343 17.1622C8.77862 17.4201 9.18579 17.4312 9.44373 17.1868C9.45217 17.1788 9.46039 17.1706 9.46838 17.1622L16.528 9.71463C18.4907 7.59776 18.4907 4.32606 16.528 2.20919ZM15.5971 8.82879H15.5965L9.00132 15.7849L2.40553 8.82879C0.90608 7.21113 0.90608 4.7114 2.40553 3.09374C3.76722 1.61789 6.06755 1.52535 7.5434 2.88703C7.61505 2.95314 7.68401 3.0221 7.75012 3.09374L8.5343 3.92104C8.79272 4.17781 9.20995 4.17781 9.46838 3.92104L10.2526 3.09438C11.6142 1.61853 13.9146 1.52599 15.3904 2.88767C15.4621 2.95378 15.531 3.02274 15.5971 3.09438C17.1096 4.71461 17.1207 7.2189 15.5971 8.82879Z" />
+                                                      </g>
+                                                  </svg>
+                                              </span>
+                                              Add to wishlist
+                                          </a>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          `;
+
+          // Insert the modal content into the container
+          modalContentContainer.innerHTML = modalContent;
+
+          // Show the modal
+          const modal = new bootstrap.Modal(document.getElementById('product-view'));
+          modal.show();
+      })
+      .catch(error => console.error('Error fetching product data:', error));
+}
+
+// Event listener to open the modal
+document.addEventListener('DOMContentLoaded', () => {
+  const productId = localStorage.getItem('selectedProductId');
+  if (productId) {
+      openProductModal(productId);
+  }
+});
+
+// end productmodal 

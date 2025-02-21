@@ -4891,7 +4891,7 @@ header.style-2 .nav-right::after {
 }
 
 .product-view-modal .modal-dialog .modal-content .modal-body .shop-details-top-section .shop-details-content {
-  height: 650px;
+  height: auto;
   overflow-y: auto;
   margin-top: 50px;
   padding-bottom: 20px;
