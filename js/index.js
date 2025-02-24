@@ -377,6 +377,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 });
 
 
+
 // suggested for you
 document.addEventListener("DOMContentLoaded", function () {
   // API URL
