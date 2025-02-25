@@ -292,101 +292,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // new releas  
-// document.addEventListener("DOMContentLoaded", async function () {
-//   try {
-//     const response = await fetch("http://localhost:3000/product");
-//     const data = await response.json();
-
-//     if (!Array.isArray(data)) {
-//       console.error("Invalid data format");
-//       return;
-//     }
-
-//     // Get last 10 products and reverse them
-//     const latestProducts = data.slice(-10).reverse();
-
-//     const container = document.getElementById("x_new_slidecard");
-//     container.innerHTML = ""; // Clear previous content
-
-//     latestProducts.forEach((product) => {
-//       const card = document.createElement("div");
-//       card.classList.add("swiper-slide");
-
-//       // Ensure images exist
-//       const image1 = product.images?.[0] || "/img/default1.jpg"; // Fallback image
-//       const image2 = product.images?.[1] || "/img/default2.jpg"; // Fallback image
-
-//       // Create the content for the product card
-//       card.innerHTML = `
-//                 <div class="product-card hover-btn">
-//                     <div class="product-card-img double-img">
-//                         <a href="product-default.html">
-//                             <img src="${image1}" alt="" class="img1"/>
-//                             <img src="${image2}" alt="" class="img2"/>
-//                         </a>
-//                         <div class="overlay">
-//                             <div class="cart-area">
-//                                 <a href="cart.html" class="hover-btn3 add-cart-btn">
-//                                     <i class="bi bi-bag-check"></i> Drop in Basket
-//                                 </a>
-//                             </div>
-//                         </div>
-//                         <div class="view-and-favorite-area">
-//                             <ul>
-//                                 <li>
-//                                     <a href="whistlist.html">
-//                                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
-//                                             <path d="M16.528 2.20919C16.0674 1.71411 15.5099 1.31906 14.8902 1.04859C14.2704 0.778112 13.6017 0.637996 12.9255 0.636946C12.2487 0.637725 11.5794 0.777639 10.959 1.048C10.3386 1.31835 9.78042 1.71338 9.31911 2.20854L9.00132 2.54436L8.68352 2.20854C6.83326 0.217151 3.71893 0.102789 1.72758 1.95306C1.63932 2.03507 1.5541 2.12029 1.47209 2.20854C-0.490696 4.32565 -0.490696 7.59753 1.47209 9.71463L8.5343 17.1622C8.77862 17.4201 9.18579 17.4312 9.44373 17.1868C9.45217 17.1788 9.46039 17.1706 9.46838 17.1622L16.528 9.71463C18.4907 7.59776 18.4907 4.32606 16.528 2.20919ZM15.5971 8.82879H15.5965L9.00132 15.7849L2.40553 8.82879C0.90608 7.21113 0.90608 4.7114 2.40553 3.09374C3.76722 1.61789 6.06755 1.52535 7.5434 2.88703C7.61505 2.95314 7.68401 3.0221 7.75012 3.09374L8.5343 3.92104C8.79272 4.17781 9.20995 4.17781 9.46838 3.92104L10.2526 3.09438C11.6142 1.61853 13.9146 1.52599 15.3904 2.88767C15.4621 2.95378 15.531 3.02274 15.5971 3.09438C17.1096 4.71461 17.1207 7.2189 15.5971 8.82879Z" />
-//                                         </svg>
-//                                     </a>
-//                                 </li>
-//                                 <li>
-//                                     <a data-bs-toggle="modal" data-bs-target="#product-view" class="product-view-btn">
-//                                         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
-//                                             <path d="M21.8601 10.5721C21.6636 10.3032 16.9807 3.98901 10.9999 3.98901C5.019 3.98901 0.335925 10.3032 0.139601 10.5718C0.0488852 10.6961 0 10.846 0 10.9999C0 11.1537 0.0488852 11.3036 0.139601 11.4279C0.335925 11.6967 5.019 18.011 10.9999 18.011C16.9807 18.011 21.6636 11.6967 21.8601 11.4281C21.951 11.3039 21.9999 11.154 21.9999 11.0001C21.9999 10.8462 21.951 10.6963 21.8601 10.5721ZM10.9999 16.5604C6.59432 16.5604 2.77866 12.3696 1.64914 10.9995C2.77719 9.62823 6.58487 5.43955 10.9999 5.43955C15.4052 5.43955 19.2206 9.62969 20.3506 11.0005C19.2225 12.3717 15.4149 16.5604 10.9999 16.5604Z" />
-//                                             <path d="M10.9999 6.64832C8.60039 6.64832 6.64819 8.60051 6.64819 11C6.64819 13.3994 8.60039 15.3516 10.9999 15.3516C13.3993 15.3516 15.3515 13.3994 15.3515 11C15.3515 8.60051 13.3993 6.64832 10.9999 6.64832ZM10.9999 13.9011C9.40013 13.9011 8.09878 12.5997 8.09878 11C8.09878 9.40029 9.40017 8.0989 10.9999 8.0989C12.5995 8.0989 13.9009 9.40029 13.9009 11C13.9009 12.5997 12.5996 13.9011 10.9999 13.9011Z" />
-//                                         </svg>
-//                                     </a>
-//                                 </li>
-//                             </ul>
-//                         </div>
-//                     </div>
-//                     <div class="product-card-content">
-//                         <h6><a href="product-default.html" class="hover-underline">${product.name}</a></h6>
-//                         <p><a href="shop-list.html">${product.brand}</a></p>
-//                         <p class="price">$${product.price.toFixed(2)} <del>$${(product.price * 1.2).toFixed(2)}</del></p>
-//                         <div class="rating">
-//                             <ul>
-//                                 <li><i class="bi bi-star-fill"></i></li>
-//                                 <li><i class="bi bi-star-fill"></i></li>
-//                                 <li><i class="bi bi-star-fill"></i></li>
-//                                 <li><i class="bi bi-star-fill"></i></li>
-//                                 <li><i class="bi bi-star-fill"></i></li>
-//                             </ul>
-//                             <span>(50)</span>
-//                         </div>
-//                     </div>
-//                     <span class="for-border"></span>
-//                 </div>`;
-
-//       container.appendChild(card);
-//     });
-
-//     const productViewButtons = document.querySelectorAll('.product-view-btn');
-//     productViewButtons.forEach(button => {
-//       button.addEventListener('click', function(e) {
-//         e.preventDefault();
-//         const productId = this.getAttribute('data-product-id');
-//         // console.log(productId,"productId");
-//         // Store the product ID in localStorage
-//         localStorage.setItem('selecteyeid', product.id);
-//         // You can also fetch and display the product details in the modal here if needed
-//       });
-//     });
-//   } catch (error) {
-//     console.error("Error fetching data:", error);
-//   }
-// });
 
 document.addEventListener("DOMContentLoaded", async function () {
   try {
@@ -438,11 +343,11 @@ document.addEventListener("DOMContentLoaded", async function () {
                                 </li>
                                 <li>
                                     <a href="#" class="product-view-btn" data-bs-toggle="modal" data-bs-target="#product-view" data-product-id="${product.id}">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
-                                            <path d="M21.8601 10.5721C21.6636 10.3032 16.9807 3.98901 10.9999 3.98901C5.019 3.98901 0.335925 10.3032 0.139601 10.5718C0.0488852 10.6961 0 10.846 0 10.9999C0 11.1537 0.0488852 11.3036 0.139601 11.4279C0.335925 11.6967 5.019 18.011 10.9999 18.011C16.9807 18.011 21.6636 11.6967 21.8601 11.4281C21.951 11.3039 21.9999 11.154 21.9999 11.0001C21.9999 10.8462 21.951 10.6963 21.8601 10.5721ZM10.9999 16.5604C6.59432 16.5604 2.77866 12.3696 1.64914 10.9995C2.77719 9.62823 6.58487 5.43955 10.9999 5.43955C15.4052 5.43955 19.2206 9.62969 20.3506 11.0005C19.2225 12.3717 15.4149 16.5604 10.9999 16.5604Z" />
-                                            <path d="M10.9999 6.64832C8.60039 6.64832 6.64819 8.60051 6.64819 11C6.64819 13.3994 8.60039 15.3516 10.9999 15.3516C13.3993 15.3516 15.3515 13.3994 15.3515 11C15.3515 8.60051 13.3993 6.64832 10.9999 6.64832ZM10.9999 13.9011C9.40013 13.9011 8.09878 12.5997 8.09878 11C8.09878 9.40029 9.40017 8.0989 10.9999 8.0989C12.5995 8.0989 13.9009 9.40029 13.9009 11C13.9009 12.5997 12.5996 13.9011 10.9999 13.9011Z" />
-                                        </svg>
-                                    </a>
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+        <path d="M21.8601 10.5721C21.6636 10.3032 16.9807 3.98901 10.9999 3.98901C5.019 3.98901 0.335925 10.3032 0.139601 10.5718C0.0488852 10.6961 0 10.846 0 10.9999C0 11.1537 0.0488852 11.3036 0.139601 11.4279C0.335925 11.6967 5.019 18.011 10.9999 18.011C16.9807 18.011 21.6636 11.6967 21.8601 11.4281C21.951 11.3039 21.9999 11.154 21.9999 11.0001C21.9999 10.8462 21.951 10.6963 21.8601 10.5721ZM10.9999 16.5604C6.59432 16.5604 2.77866 12.3696 1.64914 10.9995C2.77719 9.62823 6.58487 5.43955 10.9999 5.43955C15.4052 5.43955 19.2206 9.62969 20.3506 11.0005C19.2225 12.3717 15.4149 16.5604 10.9999 16.5604Z" />
+        <path d="M10.9999 6.64832C8.60039 6.64832 6.64819 8.60051 6.64819 11C6.64819 13.3994 8.60039 15.3516 10.9999 15.3516C13.3993 15.3516 15.3515 13.3994 15.3515 11C15.3515 8.60051 13.3993 6.64832 10.9999 6.64832ZM10.9999 13.9011C9.40013 13.9011 8.09878 12.5997 8.09878 11C8.09878 9.40029 9.40017 8.0989 10.9999 8.0989C12.5995 8.0989 13.9009 9.40029 13.9009 11C13.9009 12.5997 12.5996 13.9011 10.9999 13.9011Z" />
+    </svg>
+</a>
                                 </li>
                             </ul>
                         </div>
@@ -469,18 +374,29 @@ document.addEventListener("DOMContentLoaded", async function () {
     });
 
     // Add click event listeners for product view buttons
-    const productViewButtons = document.querySelectorAll('.product-view-btn');
-    productViewButtons.forEach(button => {
-      button.addEventListener('click', function(e) {
-        // e.preventDefault();
+    // const productViewButtons = document.querySelectorAll('.product-view-btn');
+    // productViewButtons.forEach(button => {
+    //   button.addEventListener('click', function(e) {
+    //     // e.preventDefault();
+    //     const productId = this.getAttribute('data-product-id');
+    //     console.log(productId,"productId");
+    //     // Store the product ID in localStorage
+    //     localStorage.setItem('selectedeyeId', productId);
+    //     console.log("ljkj",localStorage.getItem('selectedeyeId'))
+    //     // You can also fetch and display the product details in the modal here if needed
+    //   });
+    // });
+    document.querySelectorAll('.product-view-btn').forEach(button => {
+    button.addEventListener('click', function() {
         const productId = this.getAttribute('data-product-id');
-        console.log(productId,"productId");
-        // Store the product ID in localStorage
-        localStorage.setItem('selectedeyeId', productId);
-        console.log("ljkj",localStorage.getItem('selectedeyeId'))
-        // You can also fetch and display the product details in the modal here if needed
-      });
+        localStorage.setItem('selectedeyeId', productId); // Store the product ID in localStorage
+        console.log("Product ID stored:", productId);
+        
+        // Open the modal after storing the ID
+        const productModal = new bootstrap.Modal(document.getElementById('product-view'));
+        productModal.show();
     });
+});
 
   } catch (error) {
     console.error("Error fetching data:", error);
@@ -491,263 +407,6 @@ document.addEventListener("DOMContentLoaded", async function () {
 
 // start model
 
-// function createProductModal() {
-//   // Create the main modal container
-//   const modal = document.createElement('div');
-//   modal.className = 'modal product-view-modal';
-//   modal.id = 'product-view';
-
-//   // Create modal inner structure
-  // modal.innerHTML = `
-  //   <div class="modal-dialog modal-xl modal-dialog-centered">
-  //     <div class="modal-content">
-  //       <div class="modal-body">
-  //         <div class="close-btn" data-bs-dismiss="modal"></div>
-  //         <div class="shop-details-top-section">
-  //           <div class="row gy-4">
-  //             <!-- Left Column - Image Section -->
-  //             <div class="col-lg-6">
-  //               <div class="shop-details-img">
-  //                 <div class="tab-content" id="view-tabContent">
-  //                   <div class="tab-pane fade show active" id="view-pills-img1" role="tabpanel">
-  //                     <div class="shop-details-tab-img">
-  //                       <img src="" alt="" class="main-product-img"/>
-  //                     </div>
-  //                   </div>
-  //                 </div>
-  //                 <div class="nav nav-pills" id="view-tab" role="tablist" aria-orientation="vertical">
-  //                   <!-- Thumbnail buttons will be dynamically added here -->
-  //                 </div>
-  //               </div>
-  //             </div>
-
-  //             <!-- Right Column - Content Section -->
-  //             <div class="col-lg-6">
-  //               <div class="shop-details-content">
-  //                 <h1 class="product-title"></h1>
-  //                 <div class="rating-review">
-  //                   <div class="rating">
-  //                     <div class="star">
-  //                       <i class="bi bi-star-fill"></i>
-  //                       <i class="bi bi-star-fill"></i>
-  //                       <i class="bi bi-star-fill"></i>
-  //                       <i class="bi bi-star-fill"></i>
-  //                       <i class="bi bi-star-fill"></i>
-  //                     </div>
-  //                     <p>(50 customer review)</p>
-  //                   </div>
-  //                 </div>
-  //                 <p class="product-description"></p>
-  //                 <div class="price-area">
-  //                   <p class="price">$<span class="current-price"></span> <del>$<span class="original-price"></span></del></p>
-  //                 </div>
-  //                 <div class="quantity-color-area">
-  //                   <div class="quantity-color">
-  //                     <h6 class="widget-title">Quantity</h6>
-  //                     <div class="quantity-counter">
-  //                       <a href="#" class="quantity__minus"><i class="bx bx-minus"></i></a>
-  //                       <input name="quantity" type="text" class="quantity__input" value="01">
-  //                       <a href="#" class="quantity__plus"><i class="bx bx-plus"></i></a>
-  //                     </div>
-  //                   </div>
-  //                 </div>
-  //                 <div class="shop-details-btn">
-  //                   <a href="shop-list.html" class="primary-btn1 hover-btn3">*Shop Now*</a>
-  //                   <a href="#" class="primary-btn1 style-3 hover-btn4">*Drop in Basket*</a>
-  //                 </div>
-  //                 <div class="product-info">
-  //                   <ul class="product-info-list">
-  //                     <li><span>SKU:</span> <span class="sku-value"></span></li>
-  //                     <li>
-  //                       <span>Brand:</span>
-  //                       <a href="shop-4-columns.html" class="brand-value"></a>
-  //                     </li>
-  //                     <li>
-  //                       <span>Category:</span>
-  //                       <a href="shop-slider.html" class="category-value"></a>
-  //                     </li>
-  //                   </ul>
-  //                 </div>
-  //                 <div class="compare-wishlist-area">
-  //                   <ul>
-  //                     <li>
-  //                       <a href="whistlist.html">
-  //                         <span>
-  //                           <svg width="11" height="11" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-  //                             <g clip-path="url(#clip0_168_378)">
-  //                               <path d="M16.528 2.20919C16.0674 1.71411 15.5099 1.31906 14.8902 1.04859C14.2704 0.778112 13.6017 0.637996 12.9255 0.636946C12.2487 0.637725 11.5794 0.777639 10.959 1.048C10.3386 1.31835 9.78042 1.71338 9.31911 2.20854L9.00132 2.54436L8.68352 2.20854C6.83326 0.217151 3.71893 0.102789 1.72758 1.95306C1.63932 2.03507 1.5541 2.12029 1.47209 2.20854C-0.490696 4.32565 -0.490696 7.59753 1.47209 9.71463L8.5343 17.1622C8.77862 17.4201 9.18579 17.4312 9.44373 17.1868C9.45217 17.1788 9.46039 17.1706 9.46838 17.1622L16.528 9.71463C18.4907 7.59776 18.4907 4.32606 16.528 2.20919ZM15.5971 8.82879H15.5965L9.00132 15.7849L2.40553 8.82879C0.90608 7.21113 0.90608 4.7114 2.40553 3.09374C3.76722 1.61789 6.06755 1.52535 7.5434 2.88703C7.61505 2.95314 7.68401 3.0221 7.75012 3.09374L8.5343 3.92104C8.79272 4.17781 9.20995 4.17781 9.46838 3.92104L10.2526 3.09438C11.6142 1.61853 13.9146 1.52599 15.3904 2.88767C15.4621 2.95378 15.531 3.02274 15.5971 3.09438C17.1096 4.71461 17.1207 7.2189 15.5971 8.82879Z"/>
-  //                             </g>
-  //                           </svg>
-  //                         </span>
-  //                         Add to wishlist
-  //                       </a>
-  //                     </li>
-  //                   </ul>
-  //                 </div>
-  //               </div>
-  //             </div>
-  //           </div>
-  //         </div>
-  //       </div>
-  //     </div>
-  //   </div>
-  // `;
-
-//   // Append modal to body
-//   document.body.appendChild(modal);
-
-//   // Initialize event listeners and functionality
-//   initializeModal();
-// }
-
-// function initializeModal() {
-//   // Function to create thumbnail buttons
-//   function createThumbnails(images) {
-//     const viewTab = document.getElementById('view-tab');
-//     viewTab.innerHTML = ''; // Clear existing thumbnails
-
-//     images.forEach((imgSrc, index) => {
-//       const button = document.createElement('button');
-//       button.className = `nav-link ${index === 0 ? 'active' : ''}`;
-//       button.id = `view-pills-img${index + 1}-tab`;
-//       button.setAttribute('data-bs-toggle', 'pill');
-//       button.setAttribute('data-bs-target', `#view-pills-img${index + 1}`);
-//       button.setAttribute('type', 'button');
-//       button.setAttribute('role', 'tab');
-//       button.setAttribute('aria-controls', `view-pills-img${index + 1}`);
-//       button.setAttribute('aria-selected', index === 0 ? 'true' : 'false');
-
-//       const img = document.createElement('img');
-//       img.src = imgSrc;
-//       img.alt = `Product thumbnail ${index + 1}`;
-
-//       button.appendChild(img);
-//       viewTab.appendChild(button);
-//     });
-//   }
-
-//   // Initialize quantity counter
-//   const quantityMinus = document.querySelector('.quantity__minus');
-//   const quantityPlus = document.querySelector('.quantity__plus');
-//   const quantityInput = document.querySelector('.quantity__input');
-
-//   quantityMinus.addEventListener('click', (e) => {
-//     // e.preventDefault();
-//     let value = parseInt(quantityInput.value);
-//     if (value > 1) {
-//       value--;
-//       quantityInput.value = value.toString().padStart(2, '0');
-//     }
-//   });
-
-//   quantityPlus.addEventListener('click', (e) => {
-//     // e.preventDefault();
-//     let value = parseInt(quantityInput.value);
-//     value++;
-//     quantityInput.value = value.toString().padStart(2, '0');
-//   });
-
-//   // Function to update modal with product data
-//   async function updateModalContent() {
-//     try {
-//       const selectedeyeId = localStorage.getItem('selectedeyeId');
-//       console.log("selectedeyeId",selectedeyeId);
-//       const response = await fetch('http://localhost:3000/product');
-//       const products = await response.json();
-//       const product = products.find(p => p.id === selectedeyeId);
-
-//       if (product) {
-//         // Update title
-//         document.querySelector('.product-title').textContent = product.name;
-        
-//         // Update description
-//         document.querySelector('.product-description').textContent = product.description;
-        
-//         // Update price
-//         document.querySelector('.current-price').textContent = product.price.toFixed(2);
-//         document.querySelector('.original-price').textContent = (product.price * 1.2).toFixed(2);
-        
-//         // Update product info
-//         document.querySelector('.sku-value').textContent = product.sku;
-//         document.querySelector('.brand-value').textContent = product.brand;
-//         document.querySelector('.category-value').textContent = product.category;
-        
-//         // Update images
-//         document.querySelector('.main-product-img').src = product.images[0];
-//         createThumbnails(product.images);
-//       }
-//     } catch (error) {
-//       console.error('Error updating modal content:', error);
-//     }
-//   }
-
-//   // Add modal show event listener
-//   const productModal = document.getElementById('product-view');
-//   productModal.addEventListener('show.bs.modal', updateModalContent);
-// }
-
-// // Create and initialize modal when DOM is loaded
-// document.addEventListener('DOMContentLoaded', createProductModal);
-
-// // Function to fetch product data and update modal
-// async function fetchAndDisplayProduct() {
-//   try {
-//     const selectedeyeId = localStorage.getItem('selectedeyeId');
-//     console.log("selectedeyeId",selectedeyeId);
-//     if (!selectedeyeId) {
-//       console.error('No product ID found in localStorage');
-//       return;
-//     }
-
-//     const response = await fetch(`http://localhost:3000/product`);
-//     const products = await response.json();
-    
-//     // Find the matching product
-//     const selectedProduct = products.find(product => product.id === selectedeyeId);
-    
-//     if (!selectedProduct) {
-//       console.error('Product not found');
-//       return;
-//     }
-
-//     // Update modal with product data
-//     updateModalContent(selectedProduct);
-
-//   } catch (error) {
-//     console.error('Error fetching product data:', error);
-//   }
-// }
-
-// // Add event listener for modal opening
-// document.getElementById('product-view').addEventListener('show.bs.modal', function (e) {
-//   fetchAndDisplayProduct();
-// });
-
-// // Initialize quantity counter functionality
-// function initQuantityCounter() {
-//   const minusBtn = document.querySelector('.quantity__minus');
-//   const plusBtn = document.querySelector('.quantity__plus');
-//   const input = document.querySelector('.quantity__input');
-  
-//   minusBtn.addEventListener('click', (e) => {
-//     e.preventDefault();
-//     const currentValue = parseInt(input.value);
-//     if (currentValue > 1) {
-//       input.value = (currentValue - 1).toString().padStart(2, '0');
-//     }
-//   });
-  
-//   plusBtn.addEventListener('click', (e) => {
-//     e.preventDefault();
-//     const currentValue = parseInt(input.value);
-//     input.value = (currentValue + 1).toString().padStart(2, '0');
-//   });
-// }
-
-// // Initialize everything when DOM is loaded
-// document.addEventListener('DOMContentLoaded', function() {
-//   initQuantityCounter();
-// });
 document.addEventListener('DOMContentLoaded', () => {
   // Check if 'selectedeyeId' is available in localStorage
   const selectedeyeId = localStorage.getItem('selectedeyeId');   
@@ -1266,8 +925,7 @@ async function initializeProducts() {
 }
 
 // Initialize when DOM is loaded
-document.addEventListener('DOMContentLoaded', initializeProducts);
-// end suggest
+document.addEventListener('DOMContentLoaded', initializeProducts);// end suggest
 
 // shop product 
 
@@ -1407,7 +1065,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         paginationContainer.appendChild(pageItem);
       }
 
-      // 3) Left Ellipsis (જો currentPage 4 કરતા મોટું હોય, તો “...” બતાવો)
+      // 3) Left Ellipsis (જો currentPage 4 કરતા મોટું હોય, તો "..." બતાવો)
       if (currentPage - 1 > 2) {
         const ellipsisItem = document.createElement('li');
         ellipsisItem.textContent = "...";
@@ -1434,7 +1092,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         }
       }
 
-      // 5) Right Ellipsis (જો currentPage + 1 < totalPages - 1, તો “...” બતાવો)
+      // 5) Right Ellipsis (જો currentPage + 1 < totalPages - 1, તો "..." બતાવો)
       if (currentPage + 1 < totalPages - 1) {
         const ellipsisItem = document.createElement('li');
         ellipsisItem.textContent = "...";
@@ -1515,7 +1173,7 @@ document.addEventListener("DOMContentLoaded", async function fetchReviews() {
                           ${'<li><i class="bi bi-star-fill"></i></li>'.repeat(review.rating || 0)}
                       </ul>
                   </div>
-                  <p>“${review.review || "No review text available"}”</p>
+                  <p>"${review.review || "No review text available"}"</p>
                   <div class="say-about-card-bottom">
                       <div class="author-area">
                           <div class="author-img">
@@ -1656,3 +1314,53 @@ document.addEventListener("DOMContentLoaded", async function fetchReviews() {
 // });
 
 // end productmodal 
+
+// Add event listener for product view button
+document.querySelectorAll('.product-view-btn').forEach(button => {
+    button.addEventListener('click', function() {
+        const productId = this.getAttribute('data-product-id');
+        localStorage.setItem('selectedeyeId', productId); // Store the product ID in local storage
+        console.log("Product ID stored:", productId);
+    });
+});
+
+// Add event listener for modal show event
+document.addEventListener('DOMContentLoaded', () => {
+    const productModal = document.getElementById('product-view');
+    productModal.addEventListener('show.bs.modal', async () => {
+        const selectedeyeId = localStorage.getItem('selectedeyeId');
+        if (selectedeyeId) {
+            await fetchAndDisplayProduct(selectedeyeId); // Fetch and display the product on modal open
+        } else {
+            console.error('No product ID found in localStorage');
+        }
+    });
+});
+
+// Function to fetch product data and update modal
+async function fetchAndDisplayProduct(selectedeyeId) {
+    try {
+        const response = await fetch('http://localhost:3000/product');
+        const products = await response.json();
+        const product = products.find(p => p.id == selectedeyeId); // Match the product ID
+
+        if (product) {
+            // Update modal content with the fetched product data
+            document.querySelector('.product-title').textContent = product.name;
+            document.querySelector('.product-description').textContent = product.description;
+            document.querySelector('.current-price').textContent = product.price.toFixed(2);
+            document.querySelector('.original-price').textContent = (product.price * 1.2).toFixed(2);
+            document.querySelector('.sku-value').textContent = product.sku;
+            document.querySelector('.brand-value').textContent = product.brand;
+            document.querySelector('.category-value').textContent = product.category;
+            document.querySelector('.main-product-img').src = product.images[0];
+            
+            // Call to create thumbnails if there are multiple images
+            createThumbnails(product.images);
+        } else {
+            console.error('Product not found');
+        }
+    } catch (error) {
+        console.error('Error fetching product data:', error);
+    }
+}
