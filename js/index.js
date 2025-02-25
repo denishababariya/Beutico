@@ -797,7 +797,7 @@ function createSliderProduct(product) {
           <div class="product-card-content product_text">
             <p><a href="shop-list.html">${product.brand}</a></p>
             <h6>
-              <a href="product-default.html" class="hover-underline" >${product.name}</a>
+              <a href="product-default.html" class="hover-underline">${product.name}</a>
             </h6>
             <span>$${product.price.toFixed(2)} <del>$${(product.price * 1.1).toFixed(2)}</del></span>
             <div class="rating">
@@ -877,7 +877,7 @@ function createProductCard(product) {
           <div class="product-card-content">
             <p><a href="shop-list.html">${product.brand}</a></p>
             <h6>
-              <a href="product-default.html" class="hover-underline" >${product.name}</a>
+              <a href="product-default.html" class="hover-underline">${product.name}</a>
             </h6>
             <span>$${product.price.toFixed(2)}</span>
             <div class="rating">
@@ -991,7 +991,8 @@ async function initializeProducts() {
 }
 
 // Initialize when DOM is loaded
-document.addEventListener('DOMContentLoaded', initializeProducts);// end suggest
+document.addEventListener('DOMContentLoaded', initializeProducts);
+// end suggest
 
 // shop product 
 
