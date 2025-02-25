@@ -1467,6 +1467,203 @@
               aria-orientation="vertical"
             >
               <!-- category wise product just for you section -->
+              <script>
+                // Fetch categories and products from the API
+                Promise.all([
+                  fetch("http://localhost:3000/category").then((response) =>
+                    response.json()
+                  ),
+                  fetch("http://localhost:3000/product").then((response) =>
+                    response.json()
+                  ),
+                ])
+                  .then(([categories, products]) => {
+                    const tabList = document.getElementById("v-pills-tab");
+                    const productList = document.getElementById("product-list");
+
+                    console.log("All Products:", products);
+
+                    // Function to update products dynamically
+                    function updateProducts(selectedCategory) {
+                      let filteredProducts = [];
+
+                      if (selectedCategory) {
+                        const selectedCategoryData = categories.find(
+                          (category) => category.cat_name === selectedCategory
+                        );
+                        const selectedCategoryId = selectedCategoryData
+                          ? selectedCategoryData.id
+                          : null;
+
+                        if (selectedCategoryId) {
+                          filteredProducts = products.filter(
+                            (product) => product.cat_id == selectedCategoryId
+                          );
+                        }
+                      } else {
+                        filteredProducts = products; // Show all products if no category is selected
+                      }
+
+                      // Shuffle and select the first 6 products
+                      const randomProducts = filteredProducts
+                        .sort(() => 0.5 - Math.random())
+                        .slice(0, 6);
+
+                      productList.innerHTML = ""; // Clear previous products
+
+                      if (randomProducts.length === 0) {
+                        productList.innerHTML = `<p>No products found for this category.</p>`;
+                        return;
+                      }
+
+                      // Render product list
+                      randomProducts.forEach((product) => {
+                        const productCard = `
+          <div class="col-xl-4 col-md-6">
+            <div class="product-card style-2 hover-btn">
+              <div class="product-card-img double-img">
+                <a href="product-default.html">
+                  <img src="${product.images[0]}" alt="" class="img1" />
+                  <img src="${product.images[1]}" alt="" class="img2" />
+                  <div class="batch">
+                    <span>-15%</span>
+                  </div>
+                </a>
+                <div class="overlay">
+                  <div class="cart-area">
+                    <a href="cart.html" class="hover-btn3 add-cart-btn" >
+                      <i class="bi bi-bag-check"></i> Drop in Basket
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="product-card-content">
+                <h6>
+                  <a href="product-default.html" class="hover-underline" onclick="localStorage.setItem('selectedProductId', '${product.id}')">${product.name}</a>
+                </h6>
+                <p><a href="shop-list.html">${product.brand}</a></p>
+                <p class="price">$${product.price} <del>$200.00</del></p>
+                <div class="rating">
+                  <ul>
+                    <li><i class="bi bi-star-fill"></i></li>
+                    <li><i class="bi bi-star-fill"></i></li>
+                    <li><i class="bi bi-star-fill"></i></li>
+                    <li><i class="bi bi-star-fill"></i></li>
+                    <li><i class="bi bi-star-fill"></i></li>
+                  </ul>
+                  <span>(50)</span>
+                </div>
+              </div>
+              <span class="for-border"></span>
+            </div>
+          </div>
+        `;
+                        productList.innerHTML += productCard;
+                      });
+                    }
+
+                    // Create the "All" button
+                    const allButton = document.createElement("button");
+                    allButton.className = "nav-link active"; // Default active
+                    allButton.id = "v-all-tab";
+                    allButton.setAttribute("data-bs-toggle", "pill");
+                    allButton.setAttribute("data-bs-target", "#v-all");
+                    allButton.setAttribute("type", "button");
+                    allButton.setAttribute("role", "tab");
+                    allButton.setAttribute("aria-controls", "v-all");
+                    allButton.setAttribute("aria-selected", "true");
+                    allButton.innerHTML = `All <span>(${products.length})</span>`;
+
+                    // Click event for "All" button
+                    allButton.addEventListener("click", () => {
+                      localStorage.removeItem("JUSTFORYOUCategory"); // Remove stored category
+                      document
+                        .querySelectorAll(".nav-link")
+                        .forEach((btn) => btn.classList.remove("active"));
+                      allButton.classList.add("active"); // Activate "All"
+                      updateProducts(null); // Show all products
+                    });
+
+                    tabList.appendChild(allButton);
+
+                    // Create buttons for each category
+                    categories.forEach((category) => {
+                      const categoryId = Number(category.id); // Convert to number
+                      const productCount = products.filter(
+                        (product) => product.cat_id === categoryId
+                      ).length;
+
+                      console.log(
+                        `Category: ${category.cat_name}, Product Count: ${productCount}`
+                      );
+
+                      const button = document.createElement("button");
+                      button.className = "nav-link";
+                      button.id = `v-${category.cat_name
+                        .toLowerCase()
+                        .replace(/ & /g, "-")
+                        .replace(/ /g, "-")}-tab`;
+                      button.setAttribute("data-bs-toggle", "pill");
+                      button.setAttribute(
+                        "data-bs-target",
+                        `#v-${category.cat_name
+                          .toLowerCase()
+                          .replace(/ & /g, "-")
+                          .replace(/ /g, "-")}`
+                      );
+                      button.setAttribute("type", "button");
+                      button.setAttribute("role", "tab");
+                      button.setAttribute(
+                        "aria-controls",
+                        `v-${category.cat_name
+                          .toLowerCase()
+                          .replace(/ & /g, "-")
+                          .replace(/ /g, "-")}`
+                      );
+                      button.setAttribute("aria-selected", "false");
+                      button.innerHTML = `${category.cat_name} <span>(${productCount})</span>`;
+
+                      // Click event for category buttons
+                      button.addEventListener("click", () => {
+                        localStorage.setItem(
+                          "JUSTFORYOUCategory",
+                          category.cat_name
+                        );
+                        document
+                          .querySelectorAll(".nav-link")
+                          .forEach((btn) => btn.classList.remove("active"));
+                        button.classList.add("active");
+                        updateProducts(category.cat_name); // Update products instantly
+                      });
+
+                      tabList.appendChild(button);
+                    });
+
+                    // Check for selected category on page load and update products accordingly
+                    const storedCategory =
+                      localStorage.getItem("JUSTFORYOUCategory");
+                    if (storedCategory) {
+                      document
+                        .querySelectorAll(".nav-link")
+                        .forEach((btn) => btn.classList.remove("active")); // Remove active from all
+                      const selectedButton = [
+                        ...document.querySelectorAll(".nav-link"),
+                      ].find((btn) => btn.innerText.includes(storedCategory));
+                      if (selectedButton) {
+                        selectedButton.classList.add("active"); // Activate the saved category
+                      }
+                    }
+
+                    // Load products based on stored category (if any)
+                    updateProducts(storedCategory);
+                  })
+                  .catch((error) =>
+                    console.error(
+                      "Error fetching categories or products:",
+                      error
+                    )
+                  );
+              </script>
             
             </div>
             <div class="offer-img hover-img">
