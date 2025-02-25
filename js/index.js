@@ -357,7 +357,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// new releas  
 
 document.addEventListener("DOMContentLoaded", async function () {
   try {
