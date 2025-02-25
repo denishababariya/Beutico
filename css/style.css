@@ -3839,6 +3839,7 @@ header.style-2 .nav-right::after {
   align-items: center;
   justify-content: center;
   position: relative;
+  height: 234px;
   overflow: hidden;
 }
 
