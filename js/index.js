@@ -492,7 +492,6 @@ function createProductModal() {
   modal.id = 'product-view';
 
   // Modal structure here (same as before)
-  // modal.innerHTML = `...`; // Keep the same modal HTML structure you already have
   modal.innerHTML = `
     <div class="modal-dialog modal-xl modal-dialog-centered">
       <div class="modal-content">
@@ -593,6 +592,15 @@ function createProductModal() {
 
   // Initialize event listeners and functionality
   initializeModal();
+
+  // Add event listener to close button
+  const closeButton = modal.querySelector('.close-btn');
+  closeButton.addEventListener('click', () => {
+    const backdrops = document.querySelectorAll('.modal-backdrop.show'); // Select all visible backdrops
+    backdrops.forEach(backdrop => {
+      backdrop.style.display = 'none'; // Hide each backdrop
+    });
+  });
 }
 
 function initializeModal() {
