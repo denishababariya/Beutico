@@ -463,6 +463,7 @@
           </div>
           <div class="dropdown">
             <button type="button" class="modal-btn header-cart-btn">
+              <a href="cart.html">
               <svg
                 width="18"
                 height="18"
@@ -476,111 +477,10 @@
                   d="M8.99951 7.71427C6.49237 7.71427 4.49951 5.72141 4.49951 3.21427C4.49951 2.82855 4.75665 2.57141 5.14237 2.57141C5.52808 2.57141 5.78523 2.82855 5.78523 3.21427C5.78523 5.01427 7.19951 6.42855 8.99951 6.42855C10.7995 6.42855 12.2138 5.01427 12.2138 3.21427C12.2138 2.82855 12.4709 2.57141 12.8567 2.57141C13.2424 2.57141 13.4995 2.82855 13.4995 3.21427C13.4995 5.72141 11.5067 7.71427 8.99951 7.71427Z"
                 />
               </svg>
-              <span>01</span>
+              </a>
+              <span class="cart-count">01</span>
             </button>
-            <div class="cart-menu">
-              <div class="cart-body">
-                <ul>
-                  <li class="single-item">
-                    <div class="item-area">
-                      <div class="item-img">
-                        <img src="/img/home1/cart-img-1.png" alt="" />
-                      </div>
-                      <div class="content-and-quantity">
-                        <div class="content">
-                          <div
-                            class="price-and-btn d-flex align-items-center justify-content-between"
-                          >
-                            <span>$150 <del>$200</del></span>
-                            <button class="close-btn">
-                              <i class="bi bi-x"></i>
-                            </button>
-                          </div>
-                          <p><a href="#">Estee Lauder new Nail Polish</a></p>
-                        </div>
-                        <div class="quantity-area">
-                          <div class="quantity">
-                            <a class="quantity__minus"
-                              ><span><i class="bi bi-dash"></i></span
-                            ></a>
-                            <input
-                              name="quantity"
-                              type="text"
-                              class="quantity__input"
-                              value="01"
-                            />
-                            <a class="quantity__plus"
-                              ><span><i class="bi bi-plus"></i></span
-                            ></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="single-item">
-                    <div class="item-area">
-                      <div class="item-img">
-                        <img src="/img/home1/cart-img-2.png" alt="" />
-                      </div>
-                      <div class="content-and-quantity">
-                        <div class="content">
-                          <div
-                            class="price-and-btn d-flex align-items-center justify-content-between"
-                          >
-                            <span>$150 <del>$200</del></span>
-                            <button class="close-btn">
-                              <i class="bi bi-x"></i>
-                            </button>
-                          </div>
-                          <p><a href="#">Argan & Olive Nature organ Oil</a></p>
-                        </div>
-                        <div class="quantity-area">
-                          <div class="quantity">
-                            <a class="quantity__minus"
-                              ><span><i class="bi bi-dash"></i></span
-                            ></a>
-                            <input
-                              name="quantity"
-                              type="text"
-                              class="quantity__input"
-                              value="01"
-                            />
-                            <a class="quantity__plus"
-                              ><span><i class="bi bi-plus"></i></span
-                            ></a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <div class="cart-footer">
-                <div class="pricing-area">
-                  <ul>
-                    <li><span>Sub Total</span><span>$468</span></li>
-                    <li><span>Offer (20%)</span><span>$56</span></li>
-                  </ul>
-                  <ul class="total">
-                    <li><span>Total</span><span>$425</span></li>
-                  </ul>
-                </div>
-                <div class="footer-button">
-                  <ul>
-                    <li>
-                      <a class="primary-btn1 hover-btn4" href="shop-list.html"
-                        >Continue Shopping</a
-                      >
-                    </li>
-                    <li>
-                      <a class="primary-btn1 hover-btn3" href="checkout.html"
-                        >Product Checkout</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+            
           </div>
           <div class="save-btn">
             <a href="whistlist.html">
@@ -4829,7 +4729,7 @@
             <div class="col-lg-6">
               <div class="makeup-content">
                 <span>BROW BESTSELLERS</span>
-                <h2>They’re kinda our Best thing!</h2>
+                <h2>They're kinda our Best thing!</h2>
                 <p>
                   Whatever your summer looks like, bring your own heat with up
                   to 25% off Lumin Brand.Pellentesque ipsum dui, laoreet vitae
@@ -5030,6 +4930,73 @@
     <script src="/js/main.js"></script>
     <script src="/js/index.js"></script>
     <script src="/js/footer.js"></script>
+    <script>
+      // Function to update the cart display
+      async function updateCartDisplay() {
+        const cartIds = JSON.parse(sessionStorage.getItem('cartProducts')) || []; // Retrieve cart IDs from session storage
+        const cartContainer = document.querySelector('.cart-body ul'); // Adjust selector as needed
+    
+        // Clear existing cart items
+        cartContainer.innerHTML = '';
+    
+        for (const cartId of cartIds) {
+          try {
+            const response = await fetch(`http://localhost:3000/cart/${cartId}`); // Fetch cart item by ID
+            if (!response.ok) {
+              console.error(`Error fetching cart item with ID ${cartId}: ${response.statusText}`);
+              continue; // Skip to the next cart ID if the fetch fails
+            }
+            const cartItem = await response.json();
+    
+            if (cartItem) {
+              // Fetch product details using product_id from cart item
+              const productResponse = await fetch(`http://localhost:3000/product/${cartItem.product_id}`);
+              if (!productResponse.ok) {
+                console.error(`Error fetching product with ID ${cartItem.product_id}: ${productResponse.statusText}`);
+                continue; // Skip to the next cart item if the fetch fails
+              }
+              const product = await productResponse.json();
+    
+              if (product) {
+                const productCard = `
+                  <li class="single-item">
+                    <div class="item-area">
+                      <div class="item-img">
+                        <img src="${product.images[0]}" alt="${product.name}" />
+                      </div>
+                      <div class="content-and-quantity">
+                        <div class="content">
+                          <div class="price-and-btn d-flex align-items-center justify-content-between">
+                            <span>$${product.price} <del>$${product.originalPrice}</del></span>
+                            <button class="close-btn" data-cart-id="${cartId}">
+                              <i class="bi bi-x"></i>
+                            </button>
+                          </div>
+                          <p><a href="#">${product.name}</a></p>
+                        </div>
+                        <div class="quantity-area">
+                          <div class="quantity">
+                            <a class="quantity__minus"><span><i class="bi bi-dash"></i></span></a>
+                            <input name="quantity" type="text" class="quantity__input" value="${cartItem.quantity}" />
+                            <a class="quantity__plus"><span><i class="bi bi-plus"></i></span></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                `;
+                cartContainer.innerHTML += productCard; // Append product card to cart
+              }
+            }
+          } catch (error) {
+            console.error('Error fetching product for cart:', error);
+          }
+        }
+      }
+    
+      // Call this function to update the cart display when the page loads
+      document.addEventListener('DOMContentLoaded', updateCartDisplay);
+    </script>
   </body>
   <!-- Mirrored from demo-egenslab.b-cdn.net/html/OrnaCare/preview/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Feb 2025 04:31:40 GMT -->
 </html>
