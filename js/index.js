@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
           'Content-Type': 'application/json',
         }
       }).then(response => response.json()).then(subcategories => {
-        
+
         categories.forEach(category => {
           const li = document.createElement('li');
           li.classList.add('menu-item-has-children', 'position-inherit');
@@ -232,7 +232,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
           const cartAreaDiv = document.createElement('div');
           cartAreaDiv.className = 'cart-area';
-          cartAreaDiv.innerHTML = '<a href="cart.html" class="hover-btn3 add-cart-btn"><i class="bi bi-bag-check"></i> Drop in Basket</a>';
+          cartAreaDiv.innerHTML = '<a href="#" class="hover-btn3 add-cart-btn" data-product-id="' + product.id + '"><i class="bi bi-bag-check"></i> Drop in Basket</a>';
 
           overlayDiv.appendChild(cartAreaDiv);
           productCardImg.appendChild(overlayDiv);
@@ -282,17 +282,17 @@ document.addEventListener("DOMContentLoaded", function () {
           productCard.appendChild(borderSpan);
         });
         document.querySelectorAll('.product-view-btn').forEach(button => {
-          button.addEventListener('click', function() {
-              const productId = this.getAttribute('data-product-id');
-              localStorage.setItem('selectedeyeId', productId); // Store the product ID in localStorage
-              console.log("Product ID stored:", productId);
-              
-              // Open the modal after storing the ID
-              const productModal = new bootstrap.Modal(document.getElementById('product-view'));
-              productModal.show();
+          button.addEventListener('click', function () {
+            const productId = this.getAttribute('data-product-id');
+            localStorage.setItem('selectedeyeId', productId); // Store the product ID in localStorage
+            console.log("Product ID stored:", productId);
+
+            // Open the modal after storing the ID
+            const productModal = new bootstrap.Modal(document.getElementById('product-view'));
+            productModal.show();
           });
-      });
-      
+        });
+
       }
 
       // Render products for category 5 and 6
@@ -401,16 +401,16 @@ document.addEventListener("DOMContentLoaded", async function () {
     //   });
     // });
     document.querySelectorAll('.product-view-btn').forEach(button => {
-    button.addEventListener('click', function() {
+      button.addEventListener('click', function () {
         const productId = this.getAttribute('data-product-id');
         localStorage.setItem('selectedeyeId', productId); // Store the product ID in localStorage
         console.log("Product ID stored:", productId);
-        
+
         // Open the modal after storing the ID
         const productModal = new bootstrap.Modal(document.getElementById('product-view'));
         productModal.show();
+      });
     });
-});
 
   } catch (error) {
     console.error("Error fetching data:", error);
@@ -423,34 +423,34 @@ const selectedProductId3 = localStorage.getItem("selectedProductId");
 
 // Fetch product details
 fetch(`http://localhost:3000/product/${selectedProductId3}`)
-    .then(response => response.json())
-    .then(data => {
-        console.log(data, "product1");
+  .then(response => response.json())
+  .then(data => {
+    console.log(data, "product1");
 
-        // Fetch category name using cat_id
-        fetch(`http://localhost:3000/category/${data.cat_id}`)
-            .then(response => response.json())
-            .then(categoryData => {
-                console.log(categoryData, "categoryData");
-                // Fetch products in the same category
-                fetch(`http://localhost:3000/product?cat_id=${data.cat_id}`)
-                    .then(response => response.json())
-                    .then(categoryProducts => {
-                        console.log(categoryProducts, "categoryProducts");
+    // Fetch category name using cat_id
+    fetch(`http://localhost:3000/category/${data.cat_id}`)
+      .then(response => response.json())
+      .then(categoryData => {
+        console.log(categoryData, "categoryData");
+        // Fetch products in the same category
+        fetch(`http://localhost:3000/product?cat_id=${data.cat_id}`)
+          .then(response => response.json())
+          .then(categoryProducts => {
+            console.log(categoryProducts, "categoryProducts");
 
-                        // Create and append related products section
-                        const relatedProductsContainer = document.getElementById('x_pd_card'); // Updated ID
-                        // Clear existing products
-                        relatedProductsContainer.innerHTML = '';
+            // Create and append related products section
+            const relatedProductsContainer = document.getElementById('x_pd_card'); // Updated ID
+            // Clear existing products
+            relatedProductsContainer.innerHTML = '';
 
-                        // Shuffle the categoryProducts array
-                        categoryProducts.sort(() => 0.5 - Math.random());
-                        // Select the first 8 products
-                        const randomProducts = categoryProducts.slice(0, 8);
-                        randomProducts.forEach(product => {
-                            const productItem = document.createElement('div');
-                            productItem.className = 'swiper-slide';
-                            productItem.innerHTML = `
+            // Shuffle the categoryProducts array
+            categoryProducts.sort(() => 0.5 - Math.random());
+            // Select the first 8 products
+            const randomProducts = categoryProducts.slice(0, 8);
+            randomProducts.forEach(product => {
+              const productItem = document.createElement('div');
+              productItem.className = 'swiper-slide';
+              productItem.innerHTML = `
                                 <div class="product-card hover-btn">
                                     <div class="product-card-img">
                                         <a href="product-default.html?id=${product.id}">
@@ -505,28 +505,21 @@ fetch(`http://localhost:3000/product/${selectedProductId3}`)
                                 </div>
                             </div>
                             `;
-                            relatedProductsContainer.appendChild(productItem);
-                        });
-                        document.querySelectorAll('.product-view-btn').forEach(button => {
-                          button.addEventListener('click', function() {
-                              const productId = this.getAttribute('data-product-id');
-                              localStorage.setItem('selectedeyeId', productId); // Store the product ID in localStorage
-                              console.log("Product ID stored:", productId);
-                              
-                              // Open the modal after storing the ID
-                              const productModal = new bootstrap.Modal(document.getElementById('product-view'));
-                              productModal.show();
-                          });
-                      })
-                    })
+              relatedProductsContainer.appendChild(productItem);
 
-                  
-                    .catch(error => {
-                        console.error('Error fetching category products:', error);
-                    });
-            })
-            .catch(error => console.error('Error fetching product details:', error));
+
+            });
+
           })
+
+
+
+          .catch(error => {
+            console.error('Error fetching category products:', error);
+          });
+      })
+      .catch(error => console.error('Error fetching product details:', error));
+  })
 
 // end releted
 
@@ -534,8 +527,8 @@ fetch(`http://localhost:3000/product/${selectedProductId3}`)
 
 document.addEventListener('DOMContentLoaded', () => {
   // Check if 'selectedeyeId' is available in localStorage
-  const selectedeyeId = localStorage.getItem('selectedeyeId');   
-  
+  const selectedeyeId = localStorage.getItem('selectedeyeId');
+
   if (selectedeyeId) {
     // If valid ID is found, proceed with modal creation and data fetching
     createProductModal();
@@ -645,7 +638,7 @@ function createProductModal() {
         </div>
       </div>
     </div>
-  `;    
+  `;
 
   // Append modal to body
   document.body.appendChild(modal);
@@ -702,7 +695,7 @@ async function fetchAndDisplayProduct(selectedeyeId) {
       document.querySelector('.brand-value').textContent = product.brand;
       document.querySelector('.category-value').textContent = product.category;
       document.querySelector('.main-product-img').src = product.images[0];
-      
+
       // Call to create thumbnails if there are multiple images
       createThumbnails(product.images);
     } else {
@@ -1134,17 +1127,17 @@ document.addEventListener("DOMContentLoaded", async function () {
       });
 
       document.querySelectorAll('.product-view-btn').forEach(button => {
-        button.addEventListener('click', function() {
-            const productId = this.getAttribute('data-product-id');
-            localStorage.setItem('selectedeyeId', productId); // Store the product ID in localStorage
-            console.log("Product ID stored:", productId);
-            
-            // Open the modal after storing the ID
-            const productModal = new bootstrap.Modal(document.getElementById('product-view'));
-            productModal.show();
+        button.addEventListener('click', function () {
+          const productId = this.getAttribute('data-product-id');
+          localStorage.setItem('selectedeyeId', productId); // Store the product ID in localStorage
+          console.log("Product ID stored:", productId);
+
+          // Open the modal after storing the ID
+          const productModal = new bootstrap.Modal(document.getElementById('product-view'));
+          productModal.show();
         });
-    });
-    
+      });
+
     }
 
 
@@ -1457,52 +1450,120 @@ document.addEventListener("DOMContentLoaded", async function fetchReviews() {
 
 // Add event listener for product view button
 document.querySelectorAll('.product-view-btn').forEach(button => {
-    button.addEventListener('click', function() {
-        const productId = this.getAttribute('data-product-id');
-        localStorage.setItem('selectedeyeId', productId); // Store the product ID in local storage
-        console.log("Product ID stored:", productId);
-    });
+  button.addEventListener('click', function () {
+    const productId = this.getAttribute('data-product-id');
+    localStorage.setItem('selectedeyeId', productId); // Store the product ID in local storage
+    console.log("Product ID stored:", productId);
+  });
 });
 
 // Add event listener for modal show event
 document.addEventListener('DOMContentLoaded', () => {
-    const productModal = document.getElementById('product-view');
-    productModal.addEventListener('show.bs.modal', async () => {
-        const selectedeyeId = localStorage.getItem('selectedeyeId');
-        if (selectedeyeId) {
-            await fetchAndDisplayProduct(selectedeyeId); // Fetch and display the product on modal open
-        } else {
-            console.error('No product ID found in localStorage');
-        }
-    });
+  const productModal = document.getElementById('product-view');
+  productModal.addEventListener('show.bs.modal', async () => {
+    const selectedeyeId = localStorage.getItem('selectedeyeId');
+    if (selectedeyeId) {
+      await fetchAndDisplayProduct(selectedeyeId); // Fetch and display the product on modal open
+    } else {
+      console.error('No product ID found in localStorage');
+    }
+  });
 });
 
 // Function to fetch product data and update modal
 async function fetchAndDisplayProduct(selectedeyeId) {
-    try {
-        const response = await fetch('http://localhost:3000/product');
-        const products = await response.json();
-        const product = products.find(p => p.id == selectedeyeId); // Match the product ID
+  try {
+    const response = await fetch('http://localhost:3000/product');
+    const products = await response.json();
+    const product = products.find(p => p.id == selectedeyeId); // Match the product ID
 
-        if (product) {
-            // Update modal content with the fetched product data
-            document.querySelector('.product-title').textContent = product.name;
-            document.querySelector('.product-description').textContent = product.description;
-            document.querySelector('.current-price').textContent = product.price.toFixed(2);
-            document.querySelector('.original-price').textContent = (product.price * 1.2).toFixed(2);
-            document.querySelector('.sku-value').textContent = product.sku;
-            document.querySelector('.brand-value').textContent = product.brand;
-            document.querySelector('.category-value').textContent = product.category;
-            document.querySelector('.main-product-img').src = product.images[0];
-            
-            // Call to create thumbnails if there are multiple images
-            createThumbnails(product.images);
-        } else {
-            console.error('Product not found');
-        }
-    } catch (error) {
-        console.error('Error fetching product data:', error);
+    if (product) {
+      // Update modal content with the fetched product data
+      document.querySelector('.product-title').textContent = product.name;
+      document.querySelector('.product-description').textContent = product.description;
+      document.querySelector('.current-price').textContent = product.price.toFixed(2);
+      document.querySelector('.original-price').textContent = (product.price * 1.2).toFixed(2);
+      document.querySelector('.sku-value').textContent = product.sku;
+      document.querySelector('.brand-value').textContent = product.brand;
+      document.querySelector('.category-value').textContent = product.category;
+      document.querySelector('.main-product-img').src = product.images[0];
+
+      // Call to create thumbnails if there are multiple images
+      createThumbnails(product.images);
+    } else {
+      console.error('Product not found');
     }
+  } catch (error) {
+    console.error('Error fetching product data:', error);
+  }
 }
+
+// Function to update cart count display
+function updateCartCount() {
+  const cartProducts = JSON.parse(sessionStorage.getItem('cartProducts')) || [];
+  const cartCount = cartProducts.length; // Get the count of products in the cart
+  document.querySelector('.cart-count').textContent = cartCount.toString().padStart(2, '0'); // Update the span with the count
+}
+
+// Call this function after adding a product to the cart
+document.addEventListener('click', function (event) {
+  if (event.target.classList.contains('add-cart-btn')) {
+      event.preventDefault(); // Prevent default anchor behavior
+      const productId = event.target.getAttribute('data-product-id');
+
+      // Fetch product details from localStorage or API
+      fetch(`http://localhost:3000/product/${productId}`)
+          .then(response => response.json())
+          .then(product => {
+              // Create a unique cart ID
+              const cartId = generateUniqueId(); // Generate a unique ID
+
+              // Create a cart item object
+              const cartItem = {
+                  id: cartId, // Add the unique cart ID
+                  product_id: product.id,
+                  time: new Date().toISOString(), // Current time in ISO format
+                  quantity: 1 // Default quantity, can be modified as needed
+              };
+
+              // Add product to cart API
+              fetch('http://localhost:3000/cart', {
+                  method: 'POST',
+                  headers: {
+                      'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify(cartItem) // Send the cart item data
+              })
+              .then(cartResponse => {
+                  console.log(cartResponse, "cartResponse");
+
+                  if (!cartResponse.ok) {
+                      throw new Error('Failed to add to cart');
+                  }
+                  console.log('Product added to cart:', product);
+                  // Store cart ID in session storage
+                  let cartProducts = JSON.parse(sessionStorage.getItem('cartProducts')) || []; // Retrieve existing IDs or initialize an empty array
+                  if (!cartProducts.includes(cartId)) { // Check if the cart ID is already in the array
+                      cartProducts.push(cartId); // Add the cart ID to the array
+                  }
+                  sessionStorage.setItem('cartProducts', JSON.stringify(cartProducts)); // Store updated array in session storage
+
+                  // Update the cart count display
+                  updateCartCount(); // Call the function to update the cart count
+              })
+              .catch(error => console.error('Error adding to cart:', error));
+          })
+          .catch(error => console.error('Error fetching product:', error));
+  }
+});
+
+// Initial call to set the cart count on page load
+updateCartCount(); 
+// Function to generate a unique ID
+function generateUniqueId() {
+  return 'cart-' + Math.random().toString(36).substr(2, 9); // Generates a random ID
+}
+
+// Function to generate a unique cart ID (example implementation)
 
 

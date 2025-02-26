@@ -20,505 +20,512 @@
       "email": "kkk@gmail.com",
       "password": "kkk123",
       "confirmPassword": "kkk123"
+    },
+    {
+      "id": "d019",
+      "username": "fff",
+      "email": "fff@gmail.com",
+      "password": "123",
+      "confirmPassword": "123"
     }
   ],
   "category": [
     {
-      "id": 1,
+      "id": "1",
       "cat_name": "Skin",
       "cat_img": "/img/home2/home2-category-img2.png"
     },
     {
-      "id": 3,
+      "id": "3",
       "cat_name": "Hair",
       "cat_img": "/img/home2/home2-category-img3.png"
     },
     {
-      "id": 4,
+      "id": "4",
       "cat_name": "Baby & Kids",
       "cat_img": "/img/home2/home2-category-img4.png"
     },
     {
-      "id": 2,
+      "id": "2",
       "cat_name": "Makeup",
       "cat_img": "/img/home2/home2-category-img5.png"
     },
     {
-      "id": 5,
+      "id": "5",
       "cat_name": "Jewelry",
       "cat_img": "/img/home1/HC1.png"
     },
     {
-      "id": 6,
+      "id": "6",
       "cat_name": "Accessories",
       "cat_img": "/img/home2/home2-category-img6.png"
     }
   ],
   "subcategory": [
     {
-      "id": 1,
+      "id": "1",
       "cat_id": 1,
       "sub_name": "Cleanser"
     },
     {
-      "id": 2,
+      "id": "2",
       "cat_id": 1,
       "sub_name": "Exfoliator"
     },
     {
-      "id": 3,
+      "id": "3",
       "cat_id": 1,
       "sub_name": "Serum"
     },
     {
-      "id": 4,
+      "id": "4",
       "cat_id": 1,
       "sub_name": "Face Oil"
     },
     {
-      "id": 5,
+      "id": "5",
       "cat_id": 1,
       "sub_name": "Sunscreen"
     },
     {
-      "id": 6,
+      "id": "6",
       "cat_id": 1,
       "sub_name": "Moisturizer"
     },
     {
-      "id": 7,
+      "id": "7",
       "cat_id": 1,
       "sub_name": "Chemical Peel"
     },
     {
-      "id": 8,
+      "id": "8",
       "cat_id": 1,
       "sub_name": "Toner"
     },
     {
-      "id": 9,
+      "id": "9",
       "cat_id": 1,
       "sub_name": "Face Mask"
     },
     {
-      "id": 10,
+      "id": "10",
       "cat_id": 1,
       "sub_name": "Eye Cream"
     },
     {
-      "id": 11,
+      "id": "11",
       "cat_id": 1,
       "sub_name": "Face Wash"
     },
     {
-      "id": 12,
+      "id": "12",
       "cat_id": 1,
       "sub_name": "Setting Spray"
     },
     {
-      "id": 13,
+      "id": "13",
       "cat_id": 1,
       "sub_name": "Concealer"
     },
     {
-      "id": 14,
+      "id": "14",
       "cat_id": 1,
       "sub_name": "Exfoliant"
     },
     {
-      "id": 15,
+      "id": "15",
       "cat_id": 1,
       "sub_name": "Primer"
     },
     {
-      "id": 16,
+      "id": "16",
       "cat_id": 1,
       "sub_name": "Body Cleanser"
     },
     {
-      "id": 17,
+      "id": "17",
       "cat_id": 1,
       "sub_name": "Body Gel"
     },
     {
-      "id": 18,
+      "id": "18",
       "cat_id": 1,
       "sub_name": "Body Balm"
     },
     {
-      "id": 19,
+      "id": "19",
       "cat_id": 1,
       "sub_name": "Body Wash"
     },
     {
-      "id": 20,
+      "id": "20",
       "cat_id": 1,
       "sub_name": "Body Scrub"
     },
     {
-      "id": 21,
+      "id": "21",
       "cat_id": 2,
       "sub_name": "Primer"
     },
     {
-      "id": 22,
+      "id": "22",
       "cat_id": 2,
       "sub_name": "Foundation"
     },
     {
-      "id": 23,
+      "id": "23",
       "cat_id": 2,
       "sub_name": "Concealer"
     },
     {
-      "id": 24,
+      "id": "24",
       "cat_id": 2,
       "sub_name": "Powder"
     },
     {
-      "id": 25,
+      "id": "25",
       "cat_id": 2,
       "sub_name": "Blush"
     },
     {
-      "id": 26,
+      "id": "26",
       "cat_id": 2,
       "sub_name": "Bronzer"
     },
     {
-      "id": 27,
+      "id": "27",
       "cat_id": 2,
       "sub_name": "Highlighter"
     },
     {
-      "id": 28,
+      "id": "28",
       "cat_id": 2,
       "sub_name": "Contour"
     },
     {
-      "id": 29,
+      "id": "29",
       "cat_id": 2,
       "sub_name": "Eyeshadow"
     },
     {
-      "id": 30,
+      "id": "30",
       "cat_id": 2,
       "sub_name": "Eyeliner"
     },
     {
-      "id": 31,
+      "id": "31",
       "cat_id": 2,
       "sub_name": "Mascara"
     },
     {
-      "id": 32,
+      "id": "32",
       "cat_id": 2,
       "sub_name": "Lip Balm"
     },
     {
-      "id": 33,
+      "id": "33",
       "cat_id": 2,
       "sub_name": "Lipstick"
     },
     {
-      "id": 34,
+      "id": "34",
       "cat_id": 2,
       "sub_name": "Lip Gloss"
     },
     {
-      "id": 35,
+      "id": "35",
       "cat_id": 2,
       "sub_name": "Setting Spray"
     },
     {
-      "id": 36,
+      "id": "36",
       "cat_id": 3,
       "sub_name": "Shampoo"
     },
     {
-      "id": 37,
+      "id": "37",
       "cat_id": 3,
       "sub_name": "Conditioner"
     },
     {
-      "id": 38,
+      "id": "38",
       "cat_id": 3,
       "sub_name": "Hair Mask"
     },
     {
-      "id": 39,
+      "id": "39",
       "cat_id": 3,
       "sub_name": "Hair Color"
     },
     {
-      "id": 40,
+      "id": "40",
       "cat_id": 3,
       "sub_name": "Hair Oil"
     },
     {
-      "id": 41,
+      "id": "41",
       "cat_id": 3,
       "sub_name": "Hair Rollers"
     },
     {
-      "id": 42,
+      "id": "42",
       "cat_id": 3,
       "sub_name": "Hair Spray"
     },
     {
-      "id": 43,
+      "id": "43",
       "cat_id": 3,
       "sub_name": "Hair Mousse"
     },
     {
-      "id": 44,
+      "id": "44",
       "cat_id": 3,
       "sub_name": "Curling Iron"
     },
     {
-      "id": 45,
+      "id": "45",
       "cat_id": 3,
       "sub_name": "Dry Shampoo"
     },
     {
-      "id": 46,
+      "id": "46",
       "cat_id": 3,
       "sub_name": "Hair Detangler"
     },
     {
-      "id": 47,
+      "id": "47",
       "cat_id": 3,
       "sub_name": "Hair Cream"
     },
     {
-      "id": 48,
+      "id": "48",
       "cat_id": 3,
       "sub_name": "Hair Wax"
     },
     {
-      "id": 49,
+      "id": "49",
       "cat_id": 3,
       "sub_name": "Hair Pomade"
     },
     {
-      "id": 50,
+      "id": "50",
       "cat_id": 3,
       "sub_name": "Hair Texturizer"
     },
     {
-      "id": 51,
+      "id": "51",
       "cat_id": 4,
       "sub_name": "Baby Lotion & Cream"
     },
     {
-      "id": 52,
+      "id": "52",
       "cat_id": 4,
       "sub_name": "Baby Powder"
     },
     {
-      "id": 53,
+      "id": "53",
       "cat_id": 4,
       "sub_name": "Baby Shampoo"
     },
     {
-      "id": 54,
+      "id": "54",
       "cat_id": 4,
       "sub_name": "Baby Wipes"
     },
     {
-      "id": 55,
+      "id": "55",
       "cat_id": 4,
       "sub_name": "Baby Soap"
     },
     {
-      "id": 56,
+      "id": "56",
       "cat_id": 4,
       "sub_name": "Baby Sunscreen"
     },
     {
-      "id": 57,
+      "id": "57",
       "cat_id": 4,
       "sub_name": "Baby Insect Repellent"
     },
     {
-      "id": 58,
+      "id": "58",
       "cat_id": 4,
       "sub_name": "Baby Rash Cream"
     },
     {
-      "id": 59,
+      "id": "59",
       "cat_id": 4,
       "sub_name": "Baby Hair Oil"
     },
     {
-      "id": 60,
+      "id": "60",
       "cat_id": 4,
       "sub_name": "Kids Shampoo & Conditioner"
     },
     {
-      "id": 61,
+      "id": "61",
       "cat_id": 4,
       "sub_name": "Kids Body Wash & Soap"
     },
     {
-      "id": 62,
+      "id": "62",
       "cat_id": 4,
       "sub_name": "Kids Moisturizer"
     },
     {
-      "id": 63,
+      "id": "63",
       "cat_id": 5,
       "sub_name": "Necklace"
     },
     {
-      "id": 64,
+      "id": "64",
       "cat_id": 5,
       "sub_name": "Earrings"
     },
     {
-      "id": 65,
+      "id": "65",
       "cat_id": 5,
       "sub_name": "Rings"
     },
     {
-      "id": 66,
+      "id": "66",
       "cat_id": 5,
       "sub_name": "Bracelet"
     },
     {
-      "id": 67,
+      "id": "67",
       "cat_id": 5,
       "sub_name": "Bangles"
     },
     {
-      "id": 68,
+      "id": "68",
       "cat_id": 5,
       "sub_name": "Maang Tikka"
     },
     {
-      "id": 69,
+      "id": "69",
       "cat_id": 5,
       "sub_name": "Nose Ring (Nath)"
     },
     {
-      "id": 70,
+      "id": "70",
       "cat_id": 5,
       "sub_name": "Anklet"
     },
     {
-      "id": 71,
+      "id": "71",
       "cat_id": 5,
       "sub_name": "Toe Ring"
     },
     {
-      "id": 72,
+      "id": "72",
       "cat_id": 5,
       "sub_name": "Waist Belt (Kamarbandh)"
     },
     {
-      "id": 73,
+      "id": "73",
       "cat_id": 5,
       "sub_name": "Brooch"
     },
     {
-      "id": 74,
+      "id": "74",
       "cat_id": 5,
       "sub_name": "Armlet (Bajubandh)"
     },
     {
-      "id": 75,
+      "id": "75",
       "cat_id": 5,
       "sub_name": "Haath Phool (Hand Harness)"
     },
     {
-      "id": 76,
+      "id": "76",
       "cat_id": 5,
       "sub_name": "Chooda (Traditional Bangles)"
     },
     {
-      "id": 77,
+      "id": "77",
       "cat_id": 5,
       "sub_name": "Pendant"
     },
     {
-      "id": 78,
+      "id": "78",
       "cat_id": 6,
       "sub_name": "Hair Clips"
     },
     {
-      "id": 79,
+      "id": "79",
       "cat_id": 6,
       "sub_name": "Hair Bands"
     },
     {
-      "id": 80,
+      "id": "80",
       "cat_id": 6,
       "sub_name": "Hair Ties"
     },
     {
-      "id": 81,
+      "id": "81",
       "cat_id": 6,
       "sub_name": "Headbands"
     },
     {
-      "id": 82,
+      "id": "82",
       "cat_id": 6,
       "sub_name": "Hair Pins"
     },
     {
-      "id": 83,
+      "id": "83",
       "cat_id": 6,
       "sub_name": "Scrunchies"
     },
     {
-      "id": 84,
+      "id": "84",
       "cat_id": 6,
       "sub_name": "Hair Combs"
     },
     {
-      "id": 85,
+      "id": "85",
       "cat_id": 6,
       "sub_name": "Hair Sticks"
     },
     {
-      "id": 86,
+      "id": "86",
       "cat_id": 6,
       "sub_name": "Hair Claws"
     },
     {
-      "id": 87,
+      "id": "87",
       "cat_id": 6,
       "sub_name": "Barrettes"
     },
     {
-      "id": 88,
+      "id": "88",
       "cat_id": 6,
       "sub_name": "Hair Wraps"
     },
     {
-      "id": 89,
+      "id": "89",
       "cat_id": 6,
       "sub_name": "Hair Bows"
     },
     {
-      "id": 90,
+      "id": "90",
       "cat_id": 6,
       "sub_name": "Hair Chains"
     },
     {
-      "id": 91,
+      "id": "91",
       "cat_id": 6,
       "sub_name": "Tiara & Crowns"
     },
     {
-      "id": 92,
+      "id": "92",
       "cat_id": 6,
       "sub_name": "Hair Extensions"
     }
   ],
   "product": [
     {
-      "id": 1,
+      "id": "1",
       "sku": "GC-001",
       "name": "Gentle Hydrating Cleanser",
       "cat_id": 1,
@@ -542,7 +549,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "sku": "GC-002",
       "name": "Foaming Cleanser",
       "cat_id": 1,
@@ -565,7 +572,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": "3",
       "sku": "GC-003",
       "name": "Exfoliating Cleanser",
       "cat_id": 1,
@@ -588,7 +595,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": "4",
       "sku": "GC-004",
       "name": "Brightening Cleanser",
       "cat_id": 1,
@@ -611,7 +618,7 @@
       ]
     },
     {
-      "id": 5,
+      "id": "5",
       "sku": "GC-005",
       "name": "Hydrating Gel Cleanser",
       "cat_id": 1,
@@ -634,7 +641,7 @@
       ]
     },
     {
-      "id": 6,
+      "id": "6",
       "sku": "EX-001",
       "name": "Gentle Exfoliator",
       "cat_id": 1,
@@ -657,7 +664,7 @@
       ]
     },
     {
-      "id": 7,
+      "id": "7",
       "sku": "EX-002",
       "name": "Brightening Exfoliator",
       "cat_id": 1,
@@ -680,7 +687,7 @@
       ]
     },
     {
-      "id": 8,
+      "id": "8",
       "sku": "EX-003",
       "name": "Scrub Exfoliator",
       "cat_id": 1,
@@ -703,7 +710,7 @@
       ]
     },
     {
-      "id": 9,
+      "id": "9",
       "sku": "EX-004",
       "name": "Hydrating Exfoliator",
       "cat_id": 1,
@@ -726,7 +733,7 @@
       ]
     },
     {
-      "id": 10,
+      "id": "10",
       "sku": "EX-005",
       "name": "Deep Cleansing Exfoliator",
       "cat_id": 1,
@@ -749,7 +756,7 @@
       ]
     },
     {
-      "id": 11,
+      "id": "11",
       "sku": "SE-001",
       "name": "Vitamin C Serum",
       "cat_id": 1,
@@ -772,7 +779,7 @@
       ]
     },
     {
-      "id": 12,
+      "id": "12",
       "sku": "SE-002",
       "name": "Hyaluronic Acid Serum",
       "cat_id": 1,
@@ -795,7 +802,7 @@
       ]
     },
     {
-      "id": 13,
+      "id": "13",
       "sku": "SE-003",
       "name": "Retinol Serum",
       "cat_id": 1,
@@ -818,7 +825,7 @@
       ]
     },
     {
-      "id": 14,
+      "id": "14",
       "sku": "SE-004",
       "name": "Niacinamide Serum",
       "cat_id": 1,
@@ -841,7 +848,7 @@
       ]
     },
     {
-      "id": 15,
+      "id": "15",
       "sku": "SE-005",
       "name": "Brightening Serum",
       "cat_id": 1,
@@ -864,7 +871,7 @@
       ]
     },
     {
-      "id": 16,
+      "id": "16",
       "sku": "FO-001",
       "name": "Rosehip Face Oil",
       "cat_id": 1,
@@ -887,7 +894,7 @@
       ]
     },
     {
-      "id": 17,
+      "id": "17",
       "sku": "FO-002",
       "name": "Argan Face Oil",
       "cat_id": 1,
@@ -910,7 +917,7 @@
       ]
     },
     {
-      "id": 18,
+      "id": "18",
       "sku": "FO-003",
       "name": "Jojoba Face Oil",
       "cat_id": 1,
@@ -933,7 +940,7 @@
       ]
     },
     {
-      "id": 19,
+      "id": "19",
       "sku": "FO-004",
       "name": "Squalane Face Oil",
       "cat_id": 1,
@@ -956,7 +963,7 @@
       ]
     },
     {
-      "id": 20,
+      "id": "20",
       "sku": "FO-005",
       "name": "Marula Face Oil",
       "cat_id": 1,
@@ -979,7 +986,7 @@
       ]
     },
     {
-      "id": 21,
+      "id": "21",
       "sku": "SC-001",
       "name": "SPF 50 Sunscreen",
       "cat_id": 1,
@@ -1002,7 +1009,7 @@
       ]
     },
     {
-      "id": 22,
+      "id": "22",
       "sku": "SC-002",
       "name": "Matte Finish Sunscreen",
       "cat_id": 1,
@@ -1025,7 +1032,7 @@
       ]
     },
     {
-      "id": 23,
+      "id": "23",
       "sku": "SC-003",
       "name": "Tinted Sunscreen",
       "cat_id": 1,
@@ -1048,7 +1055,7 @@
       ]
     },
     {
-      "id": 24,
+      "id": "24",
       "sku": "SC-004",
       "name": "Hydrating Sunscreen",
       "cat_id": 1,
@@ -1071,7 +1078,7 @@
       ]
     },
     {
-      "id": 25,
+      "id": "25",
       "sku": "SC-005",
       "name": "Water-Resistant Sunscreen",
       "cat_id": 1,
@@ -1094,7 +1101,7 @@
       ]
     },
     {
-      "id": 26,
+      "id": "26",
       "sku": "MO-001",
       "name": "Hydrating Moisturizer",
       "cat_id": 1,
@@ -1117,7 +1124,7 @@
       ]
     },
     {
-      "id": 27,
+      "id": "27",
       "sku": "MO-002",
       "name": "Lightweight Moisturizer",
       "cat_id": 1,
@@ -1140,7 +1147,7 @@
       ]
     },
     {
-      "id": 28,
+      "id": "28",
       "sku": "MO-003",
       "name": "Rich Moisturizer",
       "cat_id": 1,
@@ -1163,7 +1170,7 @@
       ]
     },
     {
-      "id": 29,
+      "id": "29",
       "sku": "MO-004",
       "name": "Night Cream",
       "cat_id": 1,
@@ -1186,7 +1193,7 @@
       ]
     },
     {
-      "id": 30,
+      "id": "30",
       "sku": "MO-005",
       "name": "Gel Moisturizer",
       "cat_id": 1,
@@ -1209,7 +1216,7 @@
       ]
     },
     {
-      "id": 31,
+      "id": "31",
       "sku": "CP-001",
       "name": "AHA BHA Peel",
       "cat_id": 1,
@@ -1233,7 +1240,7 @@
       ]
     },
     {
-      "id": 32,
+      "id": "32",
       "sku": "CP-002",
       "name": "Glycolic Acid Peel",
       "cat_id": 1,
@@ -1256,7 +1263,7 @@
       ]
     },
     {
-      "id": 33,
+      "id": "33",
       "sku": "CP-003",
       "name": "Lactic Acid Peel",
       "cat_id": 1,
@@ -1279,7 +1286,7 @@
       ]
     },
     {
-      "id": 34,
+      "id": "34",
       "sku": "CP-004",
       "name": "Enzyme Peel",
       "cat_id": 1,
@@ -1302,7 +1309,7 @@
       ]
     },
     {
-      "id": 35,
+      "id": "35",
       "sku": "CP-005",
       "name": "Charcoal Peel",
       "cat_id": 1,
@@ -1325,7 +1332,7 @@
       ]
     },
     {
-      "id": 36,
+      "id": "36",
       "sku": "TO-001",
       "name": "Balancing Toner",
       "cat_id": 1,
@@ -1348,7 +1355,7 @@
       ]
     },
     {
-      "id": 37,
+      "id": "37",
       "sku": "TO-002",
       "name": "Hydrating Toner",
       "cat_id": 1,
@@ -1371,7 +1378,7 @@
       ]
     },
     {
-      "id": 38,
+      "id": "38",
       "sku": "TO-003",
       "name": "Exfoliating Toner",
       "cat_id": 1,
@@ -1394,7 +1401,7 @@
       ]
     },
     {
-      "id": 39,
+      "id": "39",
       "sku": "TO-004",
       "name": "Clarifying Toner",
       "cat_id": 1,
@@ -1417,7 +1424,7 @@
       ]
     },
     {
-      "id": 40,
+      "id": "40",
       "sku": "TO-005",
       "name": "Soothing Toner",
       "cat_id": 1,
@@ -1440,7 +1447,7 @@
       ]
     },
     {
-      "id": 41,
+      "id": "41",
       "sku": "FM-001",
       "name": "Clay Face Mask",
       "cat_id": 1,
@@ -1463,7 +1470,7 @@
       ]
     },
     {
-      "id": 42,
+      "id": "42",
       "sku": "FM-002",
       "name": "Hydrating Face Mask",
       "cat_id": 1,
@@ -1486,7 +1493,7 @@
       ]
     },
     {
-      "id": 43,
+      "id": "43",
       "sku": "FM-003",
       "name": "Brightening Face Mask",
       "cat_id": 1,
@@ -1509,7 +1516,7 @@
       ]
     },
     {
-      "id": 44,
+      "id": "44",
       "sku": "FM-004",
       "name": "Charcoal Face Mask",
       "cat_id": 1,
@@ -1532,7 +1539,7 @@
       ]
     },
     {
-      "id": 45,
+      "id": "45",
       "sku": "FM-005",
       "name": "Sheet Face Mask",
       "cat_id": 1,
@@ -1555,7 +1562,7 @@
       ]
     },
     {
-      "id": 46,
+      "id": "46",
       "sku": "EC-001",
       "name": "Hydrating Eye Cream",
       "cat_id": 1,
@@ -1578,7 +1585,7 @@
       ]
     },
     {
-      "id": 47,
+      "id": "47",
       "sku": "EC-002",
       "name": "Brightening Eye Cream",
       "cat_id": 1,
@@ -1601,7 +1608,7 @@
       ]
     },
     {
-      "id": 48,
+      "id": "48",
       "sku": "EC-003",
       "name": "Anti-Aging Eye Cream",
       "cat_id": 1,
@@ -1624,7 +1631,7 @@
       ]
     },
     {
-      "id": 49,
+      "id": "49",
       "sku": "EC-004",
       "name": "Cooling Eye Gel",
       "cat_id": 1,
@@ -1647,7 +1654,7 @@
       ]
     },
     {
-      "id": 50,
+      "id": "50",
       "sku": "EC-005",
       "name": "Firming Eye Cream",
       "cat_id": 1,
@@ -1670,7 +1677,7 @@
       ]
     },
     {
-      "id": 51,
+      "id": "51",
       "sku": "FW-001",
       "name": "Tea Tree Face Wash",
       "cat_id": 1,
@@ -1693,7 +1700,7 @@
       ]
     },
     {
-      "id": 52,
+      "id": "52",
       "sku": "FW-002",
       "name": "Foaming Face Wash",
       "cat_id": 1,
@@ -1716,7 +1723,7 @@
       ]
     },
     {
-      "id": 53,
+      "id": "53",
       "sku": "FW-003",
       "name": "Gel Face Wash",
       "cat_id": 1,
@@ -1739,7 +1746,7 @@
       ]
     },
     {
-      "id": 54,
+      "id": "54",
       "sku": "FW-004",
       "name": "Cleansing Milk",
       "cat_id": 1,
@@ -1762,7 +1769,7 @@
       ]
     },
     {
-      "id": 55,
+      "id": "55",
       "sku": "FW-005",
       "name": "Micellar Water",
       "cat_id": 1,
@@ -1785,7 +1792,7 @@
       ]
     },
     {
-      "id": 56,
+      "id": "56",
       "sku": "SS-001",
       "name": "Long-Lasting Setting Spray",
       "cat_id": 1,
@@ -1808,7 +1815,7 @@
       ]
     },
     {
-      "id": 57,
+      "id": "57",
       "sku": "SS-002",
       "name": "Matte Setting Spray",
       "cat_id": 1,
@@ -1831,7 +1838,7 @@
       ]
     },
     {
-      "id": 58,
+      "id": "58",
       "sku": "SS-003",
       "name": "Hydrating Setting Spray",
       "cat_id": 1,
@@ -1854,7 +1861,7 @@
       ]
     },
     {
-      "id": 59,
+      "id": "59",
       "sku": "SS-004",
       "name": "Cooling Setting Spray",
       "cat_id": 1,
@@ -1877,7 +1884,7 @@
       ]
     },
     {
-      "id": 60,
+      "id": "60",
       "sku": "SS-005",
       "name": "Setting Spray with SPF",
       "cat_id": 1,
@@ -1900,7 +1907,7 @@
       ]
     },
     {
-      "id": 61,
+      "id": "61",
       "sku": "CC-001",
       "name": "Full Coverage Concealer",
       "cat_id": 1,
@@ -1923,7 +1930,7 @@
       ]
     },
     {
-      "id": 62,
+      "id": "62",
       "sku": "CC-002",
       "name": "Lightweight Concealer",
       "cat_id": 1,
@@ -1946,7 +1953,7 @@
       ]
     },
     {
-      "id": 63,
+      "id": "63",
       "sku": "CC-003",
       "name": "Creamy Concealer",
       "cat_id": 1,
@@ -1969,7 +1976,7 @@
       ]
     },
     {
-      "id": 64,
+      "id": "64",
       "sku": "CC-004",
       "name": "Waterproof Concealer",
       "cat_id": 1,
@@ -1992,7 +1999,7 @@
       ]
     },
     {
-      "id": 65,
+      "id": "65",
       "sku": "CC-005",
       "name": "Brightening Concealer",
       "cat_id": 1,
@@ -2015,7 +2022,7 @@
       ]
     },
     {
-      "id": 66,
+      "id": "66",
       "sku": "EX-001",
       "name": "Gentle Face Exfoliant",
       "cat_id": 1,
@@ -2038,7 +2045,7 @@
       ]
     },
     {
-      "id": 67,
+      "id": "67",
       "sku": "EX-002",
       "name": "Deep Cleansing Exfoliant",
       "cat_id": 1,
@@ -2061,7 +2068,7 @@
       ]
     },
     {
-      "id": 68,
+      "id": "68",
       "sku": "EX-003",
       "name": "Brightening Exfoliant",
       "cat_id": 1,
@@ -2084,7 +2091,7 @@
       ]
     },
     {
-      "id": 69,
+      "id": "69",
       "sku": "EX-004",
       "name": "Hydrating Exfoliant",
       "cat_id": 1,
@@ -2107,7 +2114,7 @@
       ]
     },
     {
-      "id": 70,
+      "id": "70",
       "sku": "EX-005",
       "name": "Charcoal Exfoliant",
       "cat_id": 1,
@@ -2130,7 +2137,7 @@
       ]
     },
     {
-      "id": 71,
+      "id": "71",
       "sku": "PR-001",
       "name": "Silk Finish Primer",
       "cat_id": 1,
@@ -2153,7 +2160,7 @@
       ]
     },
     {
-      "id": 72,
+      "id": "72",
       "sku": "PR-002",
       "name": "Hydrating Primer",
       "cat_id": 1,
@@ -2176,7 +2183,7 @@
       ]
     },
     {
-      "id": 73,
+      "id": "73",
       "sku": "PR-003",
       "name": "Mattifying Primer",
       "cat_id": 1,
@@ -2199,7 +2206,7 @@
       ]
     },
     {
-      "id": 74,
+      "id": "74",
       "sku": "PR-004",
       "name": "Illuminating Primer",
       "cat_id": 1,
@@ -2222,7 +2229,7 @@
       ]
     },
     {
-      "id": 75,
+      "id": "75",
       "sku": "PR-005",
       "name": "Pore Minimizing Primer",
       "cat_id": 1,
@@ -2245,7 +2252,7 @@
       ]
     },
     {
-      "id": 76,
+      "id": "76",
       "sku": "BC-001",
       "name": "Moisturizing Body Cleanser",
       "cat_id": 1,
@@ -2268,7 +2275,7 @@
       ]
     },
     {
-      "id": 77,
+      "id": "77",
       "sku": "BC-002",
       "name": "Exfoliating Body Cleanser",
       "cat_id": 1,
@@ -2291,7 +2298,7 @@
       ]
     },
     {
-      "id": 78,
+      "id": "78",
       "sku": "BC-003",
       "name": "Refreshing Body Cleanser",
       "cat_id": 1,
@@ -2314,7 +2321,7 @@
       ]
     },
     {
-      "id": 79,
+      "id": "79",
       "sku": "BC-004",
       "name": "Cleansing Body Wash",
       "cat_id": 1,
@@ -2337,7 +2344,7 @@
       ]
     },
     {
-      "id": 80,
+      "id": "80",
       "sku": "BC-005",
       "name": "Nourishing Body Cleanser",
       "cat_id": 1,
@@ -2360,7 +2367,7 @@
       ]
     },
     {
-      "id": 81,
+      "id": "81",
       "sku": "BG-001",
       "name": "Aloe Vera Body Gel",
       "cat_id": 1,
@@ -2383,7 +2390,7 @@
       ]
     },
     {
-      "id": 82,
+      "id": "82",
       "sku": "BG-002",
       "name": "Cooling Body Gel",
       "cat_id": 1,
@@ -2406,7 +2413,7 @@
       ]
     },
     {
-      "id": 83,
+      "id": "83",
       "sku": "BG-003",
       "name": "Hydrating Body Gel",
       "cat_id": 1,
@@ -2429,7 +2436,7 @@
       ]
     },
     {
-      "id": 84,
+      "id": "84",
       "sku": "BG-004",
       "name": "Nourishing Body Gel",
       "cat_id": 1,
@@ -2452,7 +2459,7 @@
       ]
     },
     {
-      "id": 85,
+      "id": "85",
       "sku": "BG-005",
       "name": "Refreshing Body Gel",
       "cat_id": 1,
@@ -2475,7 +2482,7 @@
       ]
     },
     {
-      "id": 86,
+      "id": "86",
       "sku": "BB-001",
       "name": "Nourishing Body Balm",
       "cat_id": 1,
@@ -2498,7 +2505,7 @@
       ]
     },
     {
-      "id": 87,
+      "id": "87",
       "sku": "BB-002",
       "name": "Soothing Body Balm",
       "cat_id": 1,
@@ -2521,7 +2528,7 @@
       ]
     },
     {
-      "id": 88,
+      "id": "88",
       "sku": "BB-003",
       "name": "Repairing Body Balm",
       "cat_id": 1,
@@ -2544,7 +2551,7 @@
       ]
     },
     {
-      "id": 89,
+      "id": "89",
       "sku": "BB-004",
       "name": "Hydrating Body Balm",
       "cat_id": 1,
@@ -2567,7 +2574,7 @@
       ]
     },
     {
-      "id": 90,
+      "id": "90",
       "sku": "BB-005",
       "name": "Cooling Body Balm",
       "cat_id": 1,
@@ -2590,7 +2597,7 @@
       ]
     },
     {
-      "id": 91,
+      "id": "91",
       "sku": "BW-001",
       "name": "Coconut Milk Body Wash",
       "cat_id": 1,
@@ -2613,7 +2620,7 @@
       ]
     },
     {
-      "id": 92,
+      "id": "92",
       "sku": "BW-002",
       "name": "Refreshing Body Wash",
       "cat_id": 1,
@@ -2636,7 +2643,7 @@
       ]
     },
     {
-      "id": 93,
+      "id": "93",
       "sku": "BW-003",
       "name": "Moisturizing Body Wash",
       "cat_id": 1,
@@ -2659,7 +2666,7 @@
       ]
     },
     {
-      "id": 94,
+      "id": "94",
       "sku": "BW-004",
       "name": "Exfoliating Body Wash",
       "cat_id": 1,
@@ -2682,7 +2689,7 @@
       ]
     },
     {
-      "id": 95,
+      "id": "95",
       "sku": "BW-005",
       "name": "Gel Body Wash",
       "cat_id": 1,
@@ -2705,7 +2712,7 @@
       ]
     },
     {
-      "id": 96,
+      "id": "96",
       "sku": "BS-001",
       "name": "Coffee Body Scrub",
       "cat_id": 1,
@@ -2728,7 +2735,7 @@
       ]
     },
     {
-      "id": 97,
+      "id": "97",
       "sku": "BS-002",
       "name": "Sugar Body Scrub",
       "cat_id": 1,
@@ -2751,7 +2758,7 @@
       ]
     },
     {
-      "id": 98,
+      "id": "98",
       "sku": "BS-003",
       "name": "Salt Body Scrub",
       "cat_id": 1,
@@ -2774,7 +2781,7 @@
       ]
     },
     {
-      "id": 99,
+      "id": "99",
       "sku": "BS-004",
       "name": "Herbal Body Scrub",
       "cat_id": 1,
@@ -2797,7 +2804,7 @@
       ]
     },
     {
-      "id": 100,
+      "id": "100",
       "sku": "BS-005",
       "name": "Exfoliating Body Polish",
       "cat_id": 1,
@@ -2820,7 +2827,7 @@
       ]
     },
     {
-      "id": 101,
+      "id": "101",
       "sku": "PR-001",
       "name": "Hydrating Primer",
       "cat_id": 2,
@@ -2843,7 +2850,7 @@
       ]
     },
     {
-      "id": 102,
+      "id": "102",
       "sku": "PR-002",
       "name": "Mattifying Primer",
       "cat_id": 2,
@@ -2866,7 +2873,7 @@
       ]
     },
     {
-      "id": 103,
+      "id": "103",
       "sku": "PR-003",
       "name": "Illuminating Primer",
       "cat_id": 2,
@@ -2889,7 +2896,7 @@
       ]
     },
     {
-      "id": 104,
+      "id": "104",
       "sku": "PR-004",
       "name": "Pore Minimizing Primer",
       "cat_id": 2,
@@ -2912,7 +2919,7 @@
       ]
     },
     {
-      "id": 105,
+      "id": "105",
       "sku": "PR-005",
       "name": "Color Correcting Primer",
       "cat_id": 2,
@@ -2935,7 +2942,7 @@
       ]
     },
     {
-      "id": 106,
+      "id": "106",
       "sku": "FD-001",
       "name": "Liquid Foundation",
       "cat_id": 2,
@@ -2958,7 +2965,7 @@
       ]
     },
     {
-      "id": 107,
+      "id": "107",
       "sku": "FD-002",
       "name": "Matte Foundation",
       "cat_id": 2,
@@ -2981,7 +2988,7 @@
       ]
     },
     {
-      "id": 108,
+      "id": "108",
       "sku": "FD-003",
       "name": "Hydrating Foundation",
       "cat_id": 2,
@@ -3004,7 +3011,7 @@
       ]
     },
     {
-      "id": 109,
+      "id": "109",
       "sku": "FD-004",
       "name": "Full Coverage Foundation",
       "cat_id": 2,
@@ -3027,7 +3034,7 @@
       ]
     },
     {
-      "id": 110,
+      "id": "110",
       "sku": "FD-005",
       "name": "BB Cream",
       "cat_id": 2,
@@ -3050,7 +3057,7 @@
       ]
     },
     {
-      "id": 111,
+      "id": "111",
       "sku": "CN-001",
       "name": "Liquid Concealer",
       "cat_id": 2,
@@ -3073,7 +3080,7 @@
       ]
     },
     {
-      "id": 112,
+      "id": "112",
       "sku": "CN-002",
       "name": "Cream Concealer",
       "cat_id": 2,
@@ -3096,7 +3103,7 @@
       ]
     },
     {
-      "id": 113,
+      "id": "113",
       "sku": "CN-003",
       "name": "Stick Concealer",
       "cat_id": 2,
@@ -3119,7 +3126,7 @@
       ]
     },
     {
-      "id": 114,
+      "id": "114",
       "sku": "CN-004",
       "name": "Color Correcting Concealer",
       "cat_id": 2,
@@ -3142,7 +3149,7 @@
       ]
     },
     {
-      "id": 115,
+      "id": "115",
       "sku": "CN-005",
       "name": "Waterproof Concealer",
       "cat_id": 2,
@@ -3165,7 +3172,7 @@
       ]
     },
     {
-      "id": 116,
+      "id": "116",
       "sku": "PW-001",
       "name": "Translucent Setting Powder",
       "cat_id": 2,
@@ -3188,7 +3195,7 @@
       ]
     },
     {
-      "id": 117,
+      "id": "117",
       "sku": "PW-002",
       "name": "Matte Setting Powder",
       "cat_id": 2,
@@ -3211,7 +3218,7 @@
       ]
     },
     {
-      "id": 118,
+      "id": "118",
       "sku": "PW-003",
       "name": "Banana Powder",
       "cat_id": 2,
@@ -3234,7 +3241,7 @@
       ]
     },
     {
-      "id": 119,
+      "id": "119",
       "sku": "PW-004",
       "name": "Finishing Powder",
       "cat_id": 2,
@@ -3257,7 +3264,7 @@
       ]
     },
     {
-      "id": 120,
+      "id": "120",
       "sku": "PW-005",
       "name": "Setting Spray Powder",
       "cat_id": 2,
@@ -3280,7 +3287,7 @@
       ]
     },
     {
-      "id": 121,
+      "id": "121",
       "sku": "BL-001",
       "name": "Powder Blush",
       "cat_id": 2,
@@ -3303,7 +3310,7 @@
       ]
     },
     {
-      "id": 122,
+      "id": "122",
       "sku": "BL-002",
       "name": "Cream Blush",
       "cat_id": 2,
@@ -3326,7 +3333,7 @@
       ]
     },
     {
-      "id": 123,
+      "id": "123",
       "sku": "BL-003",
       "name": "Liquid Blush",
       "cat_id": 2,
@@ -3349,7 +3356,7 @@
       ]
     },
     {
-      "id": 124,
+      "id": "124",
       "sku": "BL-004",
       "name": "Gel Blush",
       "cat_id": 2,
@@ -3372,7 +3379,7 @@
       ]
     },
     {
-      "id": 125,
+      "id": "125",
       "sku": "BL-005",
       "name": "Tinted Blush",
       "cat_id": 2,
@@ -3395,7 +3402,7 @@
       ]
     },
     {
-      "id": 126,
+      "id": "126",
       "sku": "BR-001",
       "name": "Matte Bronzer",
       "cat_id": 2,
@@ -3418,7 +3425,7 @@
       ]
     },
     {
-      "id": 127,
+      "id": "127",
       "sku": "BR-002",
       "name": "Shimmer Bronzer",
       "cat_id": 2,
@@ -3441,7 +3448,7 @@
       ]
     },
     {
-      "id": 128,
+      "id": "128",
       "sku": "BR-003",
       "name": "Cream Bronzer",
       "cat_id": 2,
@@ -3464,7 +3471,7 @@
       ]
     },
     {
-      "id": 129,
+      "id": "129",
       "sku": "BR-004",
       "name": "Liquid Bronzer",
       "cat_id": 2,
@@ -3487,7 +3494,7 @@
       ]
     },
     {
-      "id": 130,
+      "id": "130",
       "sku": "BR-005",
       "name": "Bronzer Palette",
       "cat_id": 2,
@@ -3510,7 +3517,7 @@
       ]
     },
     {
-      "id": 131,
+      "id": "131",
       "sku": "HL-001",
       "name": "Powder Highlighter",
       "cat_id": 2,
@@ -3533,7 +3540,7 @@
       ]
     },
     {
-      "id": 132,
+      "id": "132",
       "sku": "HL-002",
       "name": "Liquid Highlighter",
       "cat_id": 2,
@@ -3556,7 +3563,7 @@
       ]
     },
     {
-      "id": 133,
+      "id": "133",
       "sku": "HL-003",
       "name": "Cream Highlighter",
       "cat_id": 2,
@@ -3579,7 +3586,7 @@
       ]
     },
     {
-      "id": 134,
+      "id": "134",
       "sku": "HL-004",
       "name": "Highlighter Stick",
       "cat_id": 2,
@@ -3602,7 +3609,7 @@
       ]
     },
     {
-      "id": 135,
+      "id": "135",
       "sku": "HL-005",
       "name": "Highlighter Palette",
       "cat_id": 2,
@@ -3625,7 +3632,7 @@
       ]
     },
     {
-      "id": 136,
+      "id": "136",
       "sku": "CT-001",
       "name": "Contour Stick",
       "cat_id": 2,
@@ -3648,7 +3655,7 @@
       ]
     },
     {
-      "id": 137,
+      "id": "137",
       "sku": "CT-002",
       "name": "Cream Contour",
       "cat_id": 2,
@@ -3671,7 +3678,7 @@
       ]
     },
     {
-      "id": 138,
+      "id": "138",
       "sku": "CT-003",
       "name": "Powder Contour",
       "cat_id": 2,
@@ -3694,7 +3701,7 @@
       ]
     },
     {
-      "id": 139,
+      "id": "139",
       "sku": "CT-004",
       "name": "Contour Palette",
       "cat_id": 2,
@@ -3717,7 +3724,7 @@
       ]
     },
     {
-      "id": 140,
+      "id": "140",
       "sku": "CT-005",
       "name": "Liquid Contour",
       "cat_id": 2,
@@ -3740,7 +3747,7 @@
       ]
     },
     {
-      "id": 141,
+      "id": "141",
       "sku": "ES-001",
       "name": "Eyeshadow Palette",
       "cat_id": 2,
@@ -3763,7 +3770,7 @@
       ]
     },
     {
-      "id": 142,
+      "id": "142",
       "sku": "ES-002",
       "name": "Single Eyeshadow",
       "cat_id": 2,
@@ -3786,7 +3793,7 @@
       ]
     },
     {
-      "id": 143,
+      "id": "143",
       "sku": "ES-003",
       "name": "Cream Eyeshadow",
       "cat_id": 2,
@@ -3809,7 +3816,7 @@
       ]
     },
     {
-      "id": 144,
+      "id": "144",
       "sku": "ES-004",
       "name": "Liquid Eyeshadow",
       "cat_id": 2,
@@ -3832,7 +3839,7 @@
       ]
     },
     {
-      "id": 145,
+      "id": "145",
       "sku": "ES-005",
       "name": "Eyeshadow Stick",
       "cat_id": 2,
@@ -3855,7 +3862,7 @@
       ]
     },
     {
-      "id": 146,
+      "id": "146",
       "sku": "EL-001",
       "name": "Liquid Eyeliner",
       "cat_id": 2,
@@ -3878,7 +3885,7 @@
       ]
     },
     {
-      "id": 147,
+      "id": "147",
       "sku": "EL-002",
       "name": "Gel Eyeliner",
       "cat_id": 2,
@@ -3901,7 +3908,7 @@
       ]
     },
     {
-      "id": 148,
+      "id": "148",
       "sku": "EL-003",
       "name": "Pencil Eyeliner",
       "cat_id": 2,
@@ -3924,7 +3931,7 @@
       ]
     },
     {
-      "id": 149,
+      "id": "149",
       "sku": "EL-004",
       "name": "Retractable Eyeliner",
       "cat_id": 2,
@@ -3947,7 +3954,7 @@
       ]
     },
     {
-      "id": 150,
+      "id": "150",
       "sku": "EL-005",
       "name": "Waterproof Eyeliner",
       "cat_id": 2,
@@ -3970,7 +3977,7 @@
       ]
     },
     {
-      "id": 151,
+      "id": "151",
       "sku": "MS-001",
       "name": "Lengthening Mascara",
       "cat_id": 2,
@@ -3993,7 +4000,7 @@
       ]
     },
     {
-      "id": 152,
+      "id": "152",
       "sku": "MS-002",
       "name": "Volumizing Mascara",
       "cat_id": 2,
@@ -4016,7 +4023,7 @@
       ]
     },
     {
-      "id": 153,
+      "id": "153",
       "sku": "MS-003",
       "name": "Waterproof Mascara",
       "cat_id": 2,
@@ -4039,7 +4046,7 @@
       ]
     },
     {
-      "id": 154,
+      "id": "154",
       "sku": "MS-004",
       "name": "Curling Mascara",
       "cat_id": 2,
@@ -4062,7 +4069,7 @@
       ]
     },
     {
-      "id": 155,
+      "id": "155",
       "sku": "MS-005",
       "name": "Lengthening & Volumizing Mascara",
       "cat_id": 2,
@@ -4086,7 +4093,7 @@
       ]
     },
     {
-      "id": 156,
+      "id": "156",
       "sku": "LB-001",
       "name": "Hydrating Lip Balm",
       "cat_id": 2,
@@ -4109,7 +4116,7 @@
       ]
     },
     {
-      "id": 157,
+      "id": "157",
       "sku": "LB-002",
       "name": "Tinted Lip Balm",
       "cat_id": 2,
@@ -4132,7 +4139,7 @@
       ]
     },
     {
-      "id": 158,
+      "id": "158",
       "sku": "LB-003",
       "name": "Scented Lip Balm",
       "cat_id": 2,
@@ -4155,7 +4162,7 @@
       ]
     },
     {
-      "id": 159,
+      "id": "159",
       "sku": "LB-004",
       "name": "Organic Lip Balm",
       "cat_id": 2,
@@ -4178,7 +4185,7 @@
       ]
     },
     {
-      "id": 160,
+      "id": "160",
       "sku": "LB-005",
       "name": "Lip Balm with SPF",
       "cat_id": 2,
@@ -4201,7 +4208,7 @@
       ]
     },
     {
-      "id": 161,
+      "id": "161",
       "sku": "LS-001",
       "name": "Matte Lipstick",
       "cat_id": 2,
@@ -4224,7 +4231,7 @@
       ]
     },
     {
-      "id": 162,
+      "id": "162",
       "sku": "LS-002",
       "name": "Cream Lipstick",
       "cat_id": 2,
@@ -4247,7 +4254,7 @@
       ]
     },
     {
-      "id": 163,
+      "id": "163",
       "sku": "LS-003",
       "name": "Liquid Lipstick",
       "cat_id": 2,
@@ -4270,7 +4277,7 @@
       ]
     },
     {
-      "id": 164,
+      "id": "164",
       "sku": "LS-004",
       "name": "Glossy Lipstick",
       "cat_id": 2,
@@ -4293,7 +4300,7 @@
       ]
     },
     {
-      "id": 165,
+      "id": "165",
       "sku": "LS-005",
       "name": "Hydrating Lipstick",
       "cat_id": 2,
@@ -4316,7 +4323,7 @@
       ]
     },
     {
-      "id": 166,
+      "id": "166",
       "sku": "LG-001",
       "name": "Clear Lip Gloss",
       "cat_id": 2,
@@ -4339,7 +4346,7 @@
       ]
     },
     {
-      "id": 167,
+      "id": "167",
       "sku": "LG-002",
       "name": "Tinted Lip Gloss",
       "cat_id": 2,
@@ -4362,7 +4369,7 @@
       ]
     },
     {
-      "id": 168,
+      "id": "168",
       "sku": "LG-003",
       "name": "Shimmer Lip Gloss",
       "cat_id": 2,
@@ -4385,7 +4392,7 @@
       ]
     },
     {
-      "id": 169,
+      "id": "169",
       "sku": "LG-004",
       "name": "Hydrating Lip Gloss",
       "cat_id": 2,
@@ -4408,7 +4415,7 @@
       ]
     },
     {
-      "id": 170,
+      "id": "170",
       "sku": "LG-005",
       "name": "Long-lasting Lip Gloss",
       "cat_id": 2,
@@ -4431,7 +4438,7 @@
       ]
     },
     {
-      "id": 171,
+      "id": "171",
       "sku": "SS-001",
       "name": "Matte Setting Spray",
       "cat_id": 2,
@@ -4454,7 +4461,7 @@
       ]
     },
     {
-      "id": 172,
+      "id": "172",
       "sku": "SS-002",
       "name": "Dewy Setting Spray",
       "cat_id": 2,
@@ -4477,7 +4484,7 @@
       ]
     },
     {
-      "id": 173,
+      "id": "173",
       "sku": "SS-003",
       "name": "Long-lasting Setting Spray",
       "cat_id": 2,
@@ -4500,7 +4507,7 @@
       ]
     },
     {
-      "id": 174,
+      "id": "174",
       "sku": "SS-004",
       "name": "Hydrating Setting Spray",
       "cat_id": 2,
@@ -4523,7 +4530,7 @@
       ]
     },
     {
-      "id": 175,
+      "id": "175",
       "sku": "SS-005",
       "name": "Cooling Setting Spray",
       "cat_id": 2,
@@ -4546,7 +4553,7 @@
       ]
     },
     {
-      "id": 176,
+      "id": "176",
       "sku": "SH-001",
       "name": "Gentle Shampoo",
       "cat_id": 3,
@@ -4569,7 +4576,7 @@
       ]
     },
     {
-      "id": 177,
+      "id": "177",
       "sku": "SH-002",
       "name": "Moisturizing Shampoo",
       "cat_id": 3,
@@ -4592,7 +4599,7 @@
       ]
     },
     {
-      "id": 178,
+      "id": "178",
       "sku": "SH-003",
       "name": "Clarifying Shampoo",
       "cat_id": 3,
@@ -4615,7 +4622,7 @@
       ]
     },
     {
-      "id": 179,
+      "id": "179",
       "sku": "SH-004",
       "name": "Color Protecting Shampoo",
       "cat_id": 3,
@@ -4638,7 +4645,7 @@
       ]
     },
     {
-      "id": 180,
+      "id": "180",
       "sku": "SH-005",
       "name": "Anti-Dandruff Shampoo",
       "cat_id": 3,
@@ -4661,7 +4668,7 @@
       ]
     },
     {
-      "id": 181,
+      "id": "181",
       "sku": "CO-001",
       "name": "Hydrating Conditioner",
       "cat_id": 3,
@@ -4684,7 +4691,7 @@
       ]
     },
     {
-      "id": 182,
+      "id": "182",
       "sku": "CO-002",
       "name": "Repairing Conditioner",
       "cat_id": 3,
@@ -4707,7 +4714,7 @@
       ]
     },
     {
-      "id": 183,
+      "id": "183",
       "sku": "CO-003",
       "name": "Color Protecting Conditioner",
       "cat_id": 3,
@@ -4730,7 +4737,7 @@
       ]
     },
     {
-      "id": 184,
+      "id": "184",
       "sku": "CO-004",
       "name": "Leave-In Conditioner",
       "cat_id": 3,
@@ -4753,7 +4760,7 @@
       ]
     },
     {
-      "id": 185,
+      "id": "185",
       "sku": "CO-005",
       "name": "Deep Conditioning Treatment",
       "cat_id": 3,
@@ -4776,7 +4783,7 @@
       ]
     },
     {
-      "id": 186,
+      "id": "186",
       "sku": "HM-001",
       "name": "Nourishing Hair Mask",
       "cat_id": 3,
@@ -4799,7 +4806,7 @@
       ]
     },
     {
-      "id": 187,
+      "id": "187",
       "sku": "HM-002",
       "name": "Repairing Hair Mask",
       "cat_id": 3,
@@ -4822,7 +4829,7 @@
       ]
     },
     {
-      "id": 188,
+      "id": "188",
       "sku": "HM-003",
       "name": "Color Protecting Hair Mask",
       "cat_id": 3,
@@ -4845,7 +4852,7 @@
       ]
     },
     {
-      "id": 189,
+      "id": "189",
       "sku": "HM-004",
       "name": "Hydrating Hair Mask",
       "cat_id": 3,
@@ -4868,7 +4875,7 @@
       ]
     },
     {
-      "id": 190,
+      "id": "190",
       "sku": "HM-005",
       "name": "Intense Repair Hair Mask",
       "cat_id": 3,
@@ -4891,7 +4898,7 @@
       ]
     },
     {
-      "id": 191,
+      "id": "191",
       "sku": "HC-001",
       "name": "Permanent Hair Color",
       "cat_id": 3,
@@ -4914,7 +4921,7 @@
       ]
     },
     {
-      "id": 192,
+      "id": "192",
       "sku": "HC-002",
       "name": "Semi-Permanent Hair Color",
       "cat_id": 3,
@@ -4937,7 +4944,7 @@
       ]
     },
     {
-      "id": 193,
+      "id": "193",
       "sku": "HC-003",
       "name": "Hair Color Cream",
       "cat_id": 3,
@@ -4960,7 +4967,7 @@
       ]
     },
     {
-      "id": 194,
+      "id": "194",
       "sku": "HC-004",
       "name": "Hair Color Kit",
       "cat_id": 3,
@@ -4983,7 +4990,7 @@
       ]
     },
     {
-      "id": 195,
+      "id": "195",
       "sku": "HC-005",
       "name": "Hair Color Remover",
       "cat_id": 3,
@@ -5006,7 +5013,7 @@
       ]
     },
     {
-      "id": 196,
+      "id": "196",
       "sku": "HO-001",
       "name": "Argan Hair Oil",
       "cat_id": 3,
@@ -5029,7 +5036,7 @@
       ]
     },
     {
-      "id": 197,
+      "id": "197",
       "sku": "HO-002",
       "name": "Coconut Hair Oil",
       "cat_id": 3,
@@ -5052,7 +5059,7 @@
       ]
     },
     {
-      "id": 198,
+      "id": "198",
       "sku": "HO-003",
       "name": "Jojoba Hair Oil",
       "cat_id": 3,
@@ -5075,7 +5082,7 @@
       ]
     },
     {
-      "id": 199,
+      "id": "199",
       "sku": "HO-004",
       "name": "Olive Hair Oil",
       "cat_id": 3,
@@ -5098,7 +5105,7 @@
       ]
     },
     {
-      "id": 200,
+      "id": "200",
       "sku": "HO-005",
       "name": "Hair Growth Oil",
       "cat_id": 3,
@@ -5121,7 +5128,7 @@
       ]
     },
     {
-      "id": 201,
+      "id": "201",
       "sku": "HR-001",
       "name": "Velcro Hair Rollers",
       "cat_id": 3,
@@ -5144,7 +5151,7 @@
       ]
     },
     {
-      "id": 202,
+      "id": "202",
       "sku": "HR-002",
       "name": "Thermal Hair Rollers",
       "cat_id": 3,
@@ -5167,7 +5174,7 @@
       ]
     },
     {
-      "id": 203,
+      "id": "203",
       "sku": "HR-003",
       "name": "Flexible Hair Rollers",
       "cat_id": 3,
@@ -5190,7 +5197,7 @@
       ]
     },
     {
-      "id": 204,
+      "id": "204",
       "sku": "HR-004",
       "name": "Magnetic Hair Rollers",
       "cat_id": 3,
@@ -5213,7 +5220,7 @@
       ]
     },
     {
-      "id": 205,
+      "id": "205",
       "sku": "HR-005",
       "name": "Sponge Hair Rollers",
       "cat_id": 3,
@@ -5236,7 +5243,7 @@
       ]
     },
     {
-      "id": 206,
+      "id": "206",
       "sku": "HS-001",
       "name": "Strong Hold Hair Spray",
       "cat_id": 3,
@@ -5259,7 +5266,7 @@
       ]
     },
     {
-      "id": 207,
+      "id": "207",
       "sku": "HS-002",
       "name": "Flexible Hold Hair Spray",
       "cat_id": 3,
@@ -5282,7 +5289,7 @@
       ]
     },
     {
-      "id": 208,
+      "id": "208",
       "sku": "HS-003",
       "name": "Shine Hair Spray",
       "cat_id": 3,
@@ -5305,7 +5312,7 @@
       ]
     },
     {
-      "id": 209,
+      "id": "209",
       "sku": "HS-004",
       "name": "Humidity Resistant Hair Spray",
       "cat_id": 3,
@@ -5328,7 +5335,7 @@
       ]
     },
     {
-      "id": 210,
+      "id": "210",
       "sku": "HS-005",
       "name": "Volumizing Hair Spray",
       "cat_id": 3,
@@ -5351,7 +5358,7 @@
       ]
     },
     {
-      "id": 211,
+      "id": "211",
       "sku": "HM-001",
       "name": "Volumizing Hair Mousse",
       "cat_id": 3,
@@ -5374,7 +5381,7 @@
       ]
     },
     {
-      "id": 212,
+      "id": "212",
       "sku": "HM-002",
       "name": "Curl Defining Mousse",
       "cat_id": 3,
@@ -5397,7 +5404,7 @@
       ]
     },
     {
-      "id": 213,
+      "id": "213",
       "sku": "HM-003",
       "name": "Smoothing Hair Mousse",
       "cat_id": 3,
@@ -5420,7 +5427,7 @@
       ]
     },
     {
-      "id": 214,
+      "id": "214",
       "sku": "HM-004",
       "name": "Heat Protecting Mousse",
       "cat_id": 3,
@@ -5443,7 +5450,7 @@
       ]
     },
     {
-      "id": 215,
+      "id": "215",
       "sku": "HM-005",
       "name": "Lightweight Hair Mousse",
       "cat_id": 3,
@@ -5466,7 +5473,7 @@
       ]
     },
     {
-      "id": 216,
+      "id": "216",
       "sku": "CI-001",
       "name": "Ceramic Curling Iron",
       "cat_id": 3,
@@ -5489,7 +5496,7 @@
       ]
     },
     {
-      "id": 217,
+      "id": "217",
       "sku": "CI-002",
       "name": "Tourmaline Curling Iron",
       "cat_id": 3,
@@ -5512,7 +5519,7 @@
       ]
     },
     {
-      "id": 218,
+      "id": "218",
       "sku": "CI-003",
       "name": "Adjustable Curling Iron",
       "cat_id": 3,
@@ -5535,7 +5542,7 @@
       ]
     },
     {
-      "id": 219,
+      "id": "219",
       "sku": "CI-004",
       "name": "Mini Curling Iron",
       "cat_id": 3,
@@ -5558,7 +5565,7 @@
       ]
     },
     {
-      "id": 220,
+      "id": "220",
       "sku": "CI-005",
       "name": "Professional Curling Iron",
       "cat_id": 3,
@@ -5581,7 +5588,7 @@
       ]
     },
     {
-      "id": 221,
+      "id": "221",
       "sku": "DS-001",
       "name": "Volumizing Dry Shampoo",
       "cat_id": 3,
@@ -5604,7 +5611,7 @@
       ]
     },
     {
-      "id": 222,
+      "id": "222",
       "sku": "DS-002",
       "name": "Cleansing Dry Shampoo",
       "cat_id": 3,
@@ -5627,7 +5634,7 @@
       ]
     },
     {
-      "id": 223,
+      "id": "223",
       "sku": "DS-003",
       "name": "Refreshing Dry Shampoo",
       "cat_id": 3,
@@ -5650,7 +5657,7 @@
       ]
     },
     {
-      "id": 224,
+      "id": "224",
       "sku": "DS-004",
       "name": "Fragrance Dry Shampoo",
       "cat_id": 3,
@@ -5673,7 +5680,7 @@
       ]
     },
     {
-      "id": 225,
+      "id": "225",
       "sku": "DS-005",
       "name": "Natural Dry Shampoo",
       "cat_id": 3,
@@ -5696,7 +5703,7 @@
       ]
     },
     {
-      "id": 226,
+      "id": "226",
       "sku": "HD-001",
       "name": "Leave-In Hair Detangler",
       "cat_id": 3,
@@ -5719,7 +5726,7 @@
       ]
     },
     {
-      "id": 227,
+      "id": "227",
       "sku": "HD-002",
       "name": "Spray Hair Detangler",
       "cat_id": 3,
@@ -5742,7 +5749,7 @@
       ]
     },
     {
-      "id": 228,
+      "id": "228",
       "sku": "HD-003",
       "name": "Cream Hair Detangler",
       "cat_id": 3,
@@ -5765,7 +5772,7 @@
       ]
     },
     {
-      "id": 229,
+      "id": "229",
       "sku": "HD-004",
       "name": "Natural Hair Detangler",
       "cat_id": 3,
@@ -5788,7 +5795,7 @@
       ]
     },
     {
-      "id": 230,
+      "id": "230",
       "sku": "HD-005",
       "name": "Detangling Brush",
       "cat_id": 3,
@@ -5811,7 +5818,7 @@
       ]
     },
     {
-      "id": 231,
+      "id": "231",
       "sku": "HC-001",
       "name": "Moisturizing Hair Cream",
       "cat_id": 3,
@@ -5834,7 +5841,7 @@
       ]
     },
     {
-      "id": 232,
+      "id": "232",
       "sku": "HC-002",
       "name": "Styling Hair Cream",
       "cat_id": 3,
@@ -5857,7 +5864,7 @@
       ]
     },
     {
-      "id": 233,
+      "id": "233",
       "sku": "HC-003",
       "name": "Curl Defining Hair Cream",
       "cat_id": 3,
@@ -5880,7 +5887,7 @@
       ]
     },
     {
-      "id": 234,
+      "id": "234",
       "sku": "HC-004",
       "name": "Frizz Control Hair Cream",
       "cat_id": 3,
@@ -5903,7 +5910,7 @@
       ]
     },
     {
-      "id": 235,
+      "id": "235",
       "sku": "HC-005",
       "name": "Repairing Hair Cream",
       "cat_id": 3,
@@ -5926,7 +5933,7 @@
       ]
     },
     {
-      "id": 236,
+      "id": "236",
       "sku": "HW-001",
       "name": "Matte Hair Wax",
       "cat_id": 3,
@@ -5949,7 +5956,7 @@
       ]
     },
     {
-      "id": 237,
+      "id": "237",
       "sku": "HW-002",
       "name": "Shine Hair Wax",
       "cat_id": 3,
@@ -5972,7 +5979,7 @@
       ]
     },
     {
-      "id": 238,
+      "id": "238",
       "sku": "HW-003",
       "name": "Flexible Hair Wax",
       "cat_id": 3,
@@ -5995,7 +6002,7 @@
       ]
     },
     {
-      "id": 239,
+      "id": "239",
       "sku": "HW-004",
       "name": "Strong Hold Hair Wax",
       "cat_id": 3,
@@ -6018,7 +6025,7 @@
       ]
     },
     {
-      "id": 240,
+      "id": "240",
       "sku": "HW-005",
       "name": "Natural Hair Wax",
       "cat_id": 3,
@@ -6041,7 +6048,7 @@
       ]
     },
     {
-      "id": 241,
+      "id": "241",
       "sku": "HP-001",
       "name": "Shine Hair Pomade",
       "cat_id": 3,
@@ -6064,7 +6071,7 @@
       ]
     },
     {
-      "id": 242,
+      "id": "242",
       "sku": "HP-002",
       "name": "Matte Hair Pomade",
       "cat_id": 3,
@@ -6087,7 +6094,7 @@
       ]
     },
     {
-      "id": 243,
+      "id": "243",
       "sku": "HP-003",
       "name": "Flexible Hair Pomade",
       "cat_id": 3,
@@ -6110,7 +6117,7 @@
       ]
     },
     {
-      "id": 244,
+      "id": "244",
       "sku": "HP-004",
       "name": "Strong Hold Hair Pomade",
       "cat_id": 3,
@@ -6133,7 +6140,7 @@
       ]
     },
     {
-      "id": 245,
+      "id": "245",
       "sku": "HP-005",
       "name": "Natural Hair Pomade",
       "cat_id": 3,
@@ -6156,7 +6163,7 @@
       ]
     },
     {
-      "id": 246,
+      "id": "246",
       "sku": "HT-001",
       "name": "Texturizing Hair Spray",
       "cat_id": 3,
@@ -6179,7 +6186,7 @@
       ]
     },
     {
-      "id": 247,
+      "id": "247",
       "sku": "HT-002",
       "name": "Texturizing Cream",
       "cat_id": 3,
@@ -6202,7 +6209,7 @@
       ]
     },
     {
-      "id": 248,
+      "id": "248",
       "sku": "HT-003",
       "name": "Texturizing Gel",
       "cat_id": 3,
@@ -6225,7 +6232,7 @@
       ]
     },
     {
-      "id": 249,
+      "id": "249",
       "sku": "HT-004",
       "name": "Texturizing Paste",
       "cat_id": 3,
@@ -6248,7 +6255,7 @@
       ]
     },
     {
-      "id": 250,
+      "id": "250",
       "sku": "HT-005",
       "name": "Texturizing Powder",
       "cat_id": 3,
@@ -6271,7 +6278,7 @@
       ]
     },
     {
-      "id": 251,
+      "id": "251",
       "sku": "BL-001",
       "name": "Gentle Baby Lotion",
       "cat_id": 4,
@@ -6294,7 +6301,7 @@
       ]
     },
     {
-      "id": 252,
+      "id": "252",
       "sku": "BL-002",
       "name": "Moisturizing Baby Cream",
       "cat_id": 4,
@@ -6317,7 +6324,7 @@
       ]
     },
     {
-      "id": 253,
+      "id": "253",
       "sku": "BL-003",
       "name": "Soothing Baby Lotion",
       "cat_id": 4,
@@ -6340,7 +6347,7 @@
       ]
     },
     {
-      "id": 254,
+      "id": "254",
       "sku": "BL-004",
       "name": "Baby Massage Cream",
       "cat_id": 4,
@@ -6363,7 +6370,7 @@
       ]
     },
     {
-      "id": 255,
+      "id": "255",
       "sku": "BL-005",
       "name": "Organic Baby Lotion",
       "cat_id": 4,
@@ -6386,7 +6393,7 @@
       ]
     },
     {
-      "id": 256,
+      "id": "256",
       "sku": "BP-001",
       "name": "Talc-Free Baby Powder",
       "cat_id": 4,
@@ -6409,7 +6416,7 @@
       ]
     },
     {
-      "id": 257,
+      "id": "257",
       "sku": "BP-002",
       "name": "Natural Baby Powder",
       "cat_id": 4,
@@ -6432,7 +6439,7 @@
       ]
     },
     {
-      "id": 258,
+      "id": "258",
       "sku": "BP-003",
       "name": "Baby Cornstarch Powder",
       "cat_id": 4,
@@ -6455,7 +6462,7 @@
       ]
     },
     {
-      "id": 259,
+      "id": "259",
       "sku": "BP-004",
       "name": "Baby Herbal Powder",
       "cat_id": 4,
@@ -6478,7 +6485,7 @@
       ]
     },
     {
-      "id": 260,
+      "id": "260",
       "sku": "BP-005",
       "name": "Baby Dusting Powder",
       "cat_id": 4,
@@ -6501,7 +6508,7 @@
       ]
     },
     {
-      "id": 261,
+      "id": "261",
       "sku": "BS-001",
       "name": "Gentle Baby Shampoo",
       "cat_id": 4,
@@ -6524,7 +6531,7 @@
       ]
     },
     {
-      "id": 262,
+      "id": "262",
       "sku": "BS-002",
       "name": "Baby Body Wash",
       "cat_id": 4,
@@ -6547,7 +6554,7 @@
       ]
     },
     {
-      "id": 263,
+      "id": "263",
       "sku": "BS-003",
       "name": "2-in-1 Baby Shampoo & Body Wash",
       "cat_id": 4,
@@ -6570,7 +6577,7 @@
       ]
     },
     {
-      "id": 264,
+      "id": "264",
       "sku": "BS-004",
       "name": "Organic Baby Shampoo",
       "cat_id": 4,
@@ -6593,7 +6600,7 @@
       ]
     },
     {
-      "id": 265,
+      "id": "265",
       "sku": "BS-005",
       "name": "Baby Foaming Wash",
       "cat_id": 4,
@@ -6616,7 +6623,7 @@
       ]
     },
     {
-      "id": 266,
+      "id": "266",
       "sku": "BW-001",
       "name": "Sensitive Baby Wipes",
       "cat_id": 4,
@@ -6639,7 +6646,7 @@
       ]
     },
     {
-      "id": 267,
+      "id": "267",
       "sku": "BW-002",
       "name": "Moisturizing Baby Wipes",
       "cat_id": 4,
@@ -6662,7 +6669,7 @@
       ]
     },
     {
-      "id": 268,
+      "id": "268",
       "sku": "BW-003",
       "name": "Organic Baby Wipes",
       "cat_id": 4,
@@ -6685,7 +6692,7 @@
       ]
     },
     {
-      "id": 269,
+      "id": "269",
       "sku": "BW-004",
       "name": "Baby Travel Wipes",
       "cat_id": 4,
@@ -6708,7 +6715,7 @@
       ]
     },
     {
-      "id": 270,
+      "id": "270",
       "sku": "BW-005",
       "name": "Baby Cleansing Wipes",
       "cat_id": 4,
@@ -6731,7 +6738,7 @@
       ]
     },
     {
-      "id": 271,
+      "id": "271",
       "sku": "BSO-001",
       "name": "Gentle Baby Soap",
       "cat_id": 4,
@@ -6754,7 +6761,7 @@
       ]
     },
     {
-      "id": 272,
+      "id": "272",
       "sku": "BSO-002",
       "name": "Organic Baby Soap",
       "cat_id": 4,
@@ -6777,7 +6784,7 @@
       ]
     },
     {
-      "id": 273,
+      "id": "273",
       "sku": "BSO-003",
       "name": "Baby Glycerin Soap",
       "cat_id": 4,
@@ -6800,7 +6807,7 @@
       ]
     },
     {
-      "id": 274,
+      "id": "274",
       "sku": "BSO-004",
       "name": "Baby Castile Soap",
       "cat_id": 4,
@@ -6823,7 +6830,7 @@
       ]
     },
     {
-      "id": 275,
+      "id": "275",
       "sku": "BSO-005",
       "name": "Baby Herbal Soap",
       "cat_id": 4,
@@ -6846,7 +6853,7 @@
       ]
     },
     {
-      "id": 276,
+      "id": "276",
       "sku": "BS-001",
       "name": "Gentle Baby Sunscreen",
       "cat_id": 4,
@@ -6869,7 +6876,7 @@
       ]
     },
     {
-      "id": 277,
+      "id": "277",
       "sku": "BS-002",
       "name": "Organic Baby Sunscreen",
       "cat_id": 4,
@@ -6892,7 +6899,7 @@
       ]
     },
     {
-      "id": 278,
+      "id": "278",
       "sku": "BS-003",
       "name": "Baby Mineral Sunscreen",
       "cat_id": 4,
@@ -6915,7 +6922,7 @@
       ]
     },
     {
-      "id": 279,
+      "id": "279",
       "sku": "BS-004",
       "name": "Baby Sunscreen Stick",
       "cat_id": 4,
@@ -6938,7 +6945,7 @@
       ]
     },
     {
-      "id": 280,
+      "id": "280",
       "sku": "BS-005",
       "name": "Baby Sunscreen Lotion",
       "cat_id": 4,
@@ -6961,7 +6968,7 @@
       ]
     },
     {
-      "id": 281,
+      "id": "281",
       "sku": "BIR-001",
       "name": "Natural Baby Insect Repellent",
       "cat_id": 4,
@@ -6984,7 +6991,7 @@
       ]
     },
     {
-      "id": 282,
+      "id": "282",
       "sku": "BIR-002",
       "name": "Baby Herbal Insect Repellent",
       "cat_id": 4,
@@ -7007,7 +7014,7 @@
       ]
     },
     {
-      "id": 283,
+      "id": "283",
       "sku": "BIR-003",
       "name": "Baby Spray Insect Repellent",
       "cat_id": 4,
@@ -7030,7 +7037,7 @@
       ]
     },
     {
-      "id": 284,
+      "id": "284",
       "sku": "BIR-004",
       "name": "Baby Roll-On Insect Repellent",
       "cat_id": 4,
@@ -7053,7 +7060,7 @@
       ]
     },
     {
-      "id": 285,
+      "id": "285",
       "sku": "BIR-005",
       "name": "Baby Insect Repellent Wipes",
       "cat_id": 4,
@@ -7076,7 +7083,7 @@
       ]
     },
     {
-      "id": 286,
+      "id": "286",
       "sku": "BRC-001",
       "name": "Baby Diaper Rash Cream",
       "cat_id": 4,
@@ -7099,7 +7106,7 @@
       ]
     },
     {
-      "id": 287,
+      "id": "287",
       "sku": "BRC-002",
       "name": "Organic Baby Rash Cream",
       "cat_id": 4,
@@ -7122,7 +7129,7 @@
       ]
     },
     {
-      "id": 288,
+      "id": "288",
       "sku": "BRC-003",
       "name": "Baby Zinc Oxide Cream",
       "cat_id": 4,
@@ -7145,7 +7152,7 @@
       ]
     },
     {
-      "id": 289,
+      "id": "289",
       "sku": "BRC-004",
       "name": "Baby Herbal Rash Cream",
       "cat_id": 4,
@@ -7168,7 +7175,7 @@
       ]
     },
     {
-      "id": 290,
+      "id": "290",
       "sku": "BRC-005",
       "name": "Baby Moisturizing Rash Cream",
       "cat_id": 4,
@@ -7191,7 +7198,7 @@
       ]
     },
     {
-      "id": 291,
+      "id": "291",
       "sku": "BHO-001",
       "name": "Gentle Baby Hair Oil",
       "cat_id": 4,
@@ -7214,7 +7221,7 @@
       ]
     },
     {
-      "id": 292,
+      "id": "292",
       "sku": "BHO-002",
       "name": "Organic Baby Hair Oil",
       "cat_id": 4,
@@ -7237,7 +7244,7 @@
       ]
     },
     {
-      "id": 293,
+      "id": "293",
       "sku": "BHO-003",
       "name": "Baby Coconut Hair Oil",
       "cat_id": 4,
@@ -7260,7 +7267,7 @@
       ]
     },
     {
-      "id": 294,
+      "id": "294",
       "sku": "BHO-004",
       "name": "Baby Almond Hair Oil",
       "cat_id": 4,
@@ -7283,7 +7290,7 @@
       ]
     },
     {
-      "id": 295,
+      "id": "295",
       "sku": "BHO-005",
       "name": "Baby Herbal Hair Oil",
       "cat_id": 4,
@@ -7306,7 +7313,7 @@
       ]
     },
     {
-      "id": 296,
+      "id": "296",
       "sku": "KSC-001",
       "name": "Kids 2-in-1 Shampoo & Conditioner",
       "cat_id": 4,
@@ -7329,7 +7336,7 @@
       ]
     },
     {
-      "id": 297,
+      "id": "297",
       "sku": "KSC-002",
       "name": "Kids Strawberry Shampoo",
       "cat_id": 4,
@@ -7352,7 +7359,7 @@
       ]
     },
     {
-      "id": 298,
+      "id": "298",
       "sku": "KSC-003",
       "name": "Kids Coconut Conditioner",
       "cat_id": 4,
@@ -7375,7 +7382,7 @@
       ]
     },
     {
-      "id": 299,
+      "id": "299",
       "sku": "KSC-004",
       "name": "Kids Apple Shampoo",
       "cat_id": 4,
@@ -7398,7 +7405,7 @@
       ]
     },
     {
-      "id": 300,
+      "id": "300",
       "sku": "KSC-005",
       "name": "Kids Berry Conditioner",
       "cat_id": 4,
@@ -7421,7 +7428,7 @@
       ]
     },
     {
-      "id": 301,
+      "id": "301",
       "sku": "KBS-001",
       "name": "Kids Body Wash",
       "cat_id": 4,
@@ -7444,7 +7451,7 @@
       ]
     },
     {
-      "id": 302,
+      "id": "302",
       "sku": "KBS-002",
       "name": "Kids Bubble Bath",
       "cat_id": 4,
@@ -7467,7 +7474,7 @@
       ]
     },
     {
-      "id": 303,
+      "id": "303",
       "sku": "KBS-003",
       "name": "Kids Foaming Body Wash",
       "cat_id": 4,
@@ -7490,7 +7497,7 @@
       ]
     },
     {
-      "id": 304,
+      "id": "304",
       "sku": "KBS-004",
       "name": "Kids Natural Soap",
       "cat_id": 4,
@@ -7513,7 +7520,7 @@
       ]
     },
     {
-      "id": 305,
+      "id": "305",
       "sku": "KBS-005",
       "name": "Kids Fun Soap",
       "cat_id": 4,
@@ -7536,7 +7543,7 @@
       ]
     },
     {
-      "id": 306,
+      "id": "306",
       "sku": "KM-001",
       "name": "Kids Moisturizing Lotion",
       "cat_id": 4,
@@ -7559,7 +7566,7 @@
       ]
     },
     {
-      "id": 307,
+      "id": "307",
       "sku": "KM-002",
       "name": "Kids Hydrating Cream",
       "cat_id": 4,
@@ -7582,7 +7589,7 @@
       ]
     },
     {
-      "id": 308,
+      "id": "308",
       "sku": "KM-003",
       "name": "Kids Organic Moisturizer",
       "cat_id": 4,
@@ -7605,7 +7612,7 @@
       ]
     },
     {
-      "id": 309,
+      "id": "309",
       "sku": "KM-004",
       "name": "Kids Nourishing Cream",
       "cat_id": 4,
@@ -7628,7 +7635,7 @@
       ]
     },
     {
-      "id": 310,
+      "id": "310",
       "sku": "KM-005",
       "name": "Kids Fun Moisturizer",
       "cat_id": 4,
@@ -7651,7 +7658,7 @@
       ]
     },
     {
-      "id": 311,
+      "id": "311",
       "sku": "N-001",
       "name": "Gold Plated Necklace",
       "cat_id": 5,
@@ -7667,15 +7674,14 @@
       ],
       "images": [
         "../img/rent-product/necklace/necklace (1).png",
-        "../img/rent-product/necklace/necklace (1).png",
+        "../img/rent-product/necklace/necklace (2).png",
         "../img/rent-product/necklace/necklace (1).png",
         "../img/rent-product/necklace/necklace (1).png",
         "../img/rent-product/necklace/necklace (1).png"
-        
       ]
     },
     {
-      "id": 312,
+      "id": "312",
       "sku": "N-002",
       "name": "Silver Pendant Necklace",
       "cat_id": 5,
@@ -7691,15 +7697,14 @@
       ],
       "images": [
         "../img/rent-product/necklace/necklace (2).png",
-        "../img/rent-product/necklace/necklace (2).png",
-        "../img/rent-product/necklace/necklace (2).png",
-        "../img/rent-product/necklace/necklace (2).png",
-        "../img/rent-product/necklace/necklace (2).png"
-        
+        "../img/rent-product/necklace/necklace (3).png",
+        "../img/rent-product/necklace/necklace (4).png",
+        "../img/rent-product/necklace/necklace (5).png",
+        "../img/rent-product/necklace/necklace (6).png"
       ]
     },
     {
-      "id": 313,
+      "id": "313",
       "sku": "N-003",
       "name": "Beaded Necklace",
       "cat_id": 5,
@@ -7716,14 +7721,13 @@
       "images": [
         "../img/rent-product/necklace/necklace (3).png",
         "../img/rent-product/necklace/necklace (3).png",
-        "../img/rent-product/necklace/necklace (3).png",
-        "../img/rent-product/necklace/necklace (3).png",
-        "../img/rent-product/necklace/necklace (3).png"
-        
+        "../img/rent-product/necklace/necklace (4).png",
+        "../img/rent-product/necklace/necklace (5).png",
+        "../img/rent-product/necklace/necklace (6).png"
       ]
     },
     {
-      "id": 314,
+      "id": "314",
       "sku": "N-004",
       "name": "Choker Necklace",
       "cat_id": 5,
@@ -7740,14 +7744,13 @@
       "images": [
         "../img/rent-product/necklace/necklace (4).png",
         "../img/rent-product/necklace/necklace (4).png",
-        "../img/rent-product/necklace/necklace (4).png",
+        "../img/rent-product/necklace/necklace (5).png",
         "../img/rent-product/necklace/necklace (4).png",
         "../img/rent-product/necklace/necklace (4).png"
-        
       ]
     },
     {
-      "id": 315,
+      "id": "315",
       "sku": "N-005",
       "name": "Statement Necklace",
       "cat_id": 5,
@@ -7762,16 +7765,15 @@
         "statement"
       ],
       "images": [
-        "../img/rent-product/necklace/necklace (8).png",
-        "../img/rent-product/necklace/necklace (8).png",
-        "../img/rent-product/necklace/necklace (8).png",
-        "../img/rent-product/necklace/necklace (8).png",
-        "../img/rent-product/necklace/necklace (8).png"
-        
+        "../img/rent-product/necklace/necklace (4).png",
+        "../img/rent-product/necklace/necklace (4).png",
+        "../img/rent-product/necklace/necklace (5).png",
+        "../img/rent-product/necklace/necklace (4).png",
+        "../img/rent-product/necklace/necklace (4).png"
       ]
     },
     {
-      "id": 316,
+      "id": "316",
       "sku": "E-001",
       "name": "Gold Hoop Earrings",
       "cat_id": 5,
@@ -7791,11 +7793,10 @@
         "../img/rent-product/earrings/earrings (1).png",
         "../img/rent-product/earrings/earrings (1).png",
         "../img/rent-product/earrings/earrings (1).png"
-        
       ]
     },
     {
-      "id": 317,
+      "id": "317",
       "sku": "E-002",
       "name": "Silver Stud Earrings",
       "cat_id": 5,
@@ -7815,11 +7816,10 @@
         "../img/rent-product/earrings/earrings (2).png",
         "../img/rent-product/earrings/earrings (2).png",
         "../img/rent-product/earrings/earrings (2).png"
-        
       ]
     },
     {
-      "id": 318,
+      "id": "318",
       "sku": "E-003",
       "name": "Dangle Earrings",
       "cat_id": 5,
@@ -7839,11 +7839,10 @@
         "../img/rent-product/earrings/earrings (3).png",
         "../img/rent-product/earrings/earrings (3).png",
         "../img/rent-product/earrings/earrings (3).png"
-        
       ]
     },
     {
-      "id": 319,
+      "id": "319",
       "sku": "E-004",
       "name": "Pearl Earrings",
       "cat_id": 5,
@@ -7863,11 +7862,10 @@
         "../img/rent-product/earrings/earrings (4).png",
         "../img/rent-product/earrings/earrings (4).png",
         "../img/rent-product/earrings/earrings (4).png"
-        
       ]
     },
     {
-      "id": 320,
+      "id": "320",
       "sku": "E-005",
       "name": "Colorful Beaded Earrings",
       "cat_id": 5,
@@ -7887,11 +7885,10 @@
         "../img/rent-product/earrings/earrings (5).png",
         "../img/rent-product/earrings/earrings (5).png",
         "../img/rent-product/earrings/earrings (5).png"
-        
       ]
     },
     {
-      "id": 321,
+      "id": "321",
       "sku": "R-001",
       "name": "Gold Ring",
       "cat_id": 5,
@@ -7911,11 +7908,10 @@
         "../img/rent-product/ring/ring (2).png",
         "../img/rent-product/ring/ring (2).png",
         "../img/rent-product/ring/ring (2).png"
-        
       ]
     },
     {
-      "id": 322,
+      "id": "322",
       "sku": "R-002",
       "name": "Silver Ring",
       "cat_id": 5,
@@ -7935,11 +7931,10 @@
         "../img/rent-product/ring/ring (1).png",
         "../img/rent-product/ring/ring (1).png",
         "../img/rent-product/ring/ring (1).png"
-        
       ]
     },
     {
-      "id": 323,
+      "id": "323",
       "sku": "R-003",
       "name": "Gemstone Ring",
       "cat_id": 5,
@@ -7959,11 +7954,10 @@
         "../img/rent-product/ring/ring (3).png",
         "../img/rent-product/ring/ring (3).png",
         "../img/rent-product/ring/ring (3).png"
-        
       ]
     },
     {
-      "id": 324,
+      "id": "324",
       "sku": "R-004",
       "name": "Stackable Ring Set",
       "cat_id": 5,
@@ -7983,11 +7977,10 @@
         "../img/rent-product/ring/ring (4).png",
         "../img/rent-product/ring/ring (4).png",
         "../img/rent-product/ring/ring (4).png"
-        
       ]
     },
     {
-      "id": 325,
+      "id": "325",
       "sku": "R-005",
       "name": "Vintage Ring",
       "cat_id": 5,
@@ -8007,11 +8000,10 @@
         "../img/rent-product/ring/ring (5).png",
         "../img/rent-product/ring/ring (5).png",
         "../img/rent-product/ring/ring (5).png"
-        
       ]
     },
     {
-      "id": 326,
+      "id": "326",
       "sku": "B-001",
       "name": "Charm Bracelet",
       "cat_id": 5,
@@ -8031,11 +8023,10 @@
         "../img/rent-product/bracelate/bracelate (2).png",
         "../img/rent-product/bracelate/bracelate (2).png",
         "../img/rent-product/bracelate/bracelate (2).png"
-        
       ]
     },
     {
-      "id": 327,
+      "id": "327",
       "sku": "B-002",
       "name": "Leather Bracelet",
       "cat_id": 5,
@@ -8055,11 +8046,10 @@
         "../img/rent-product/bracelate/bracelate (1).png",
         "../img/rent-product/bracelate/bracelate (1).png",
         "../img/rent-product/bracelate/bracelate (1).png"
-        
       ]
     },
     {
-      "id": 328,
+      "id": "328",
       "sku": "B-003",
       "name": "Beaded Bracelet",
       "cat_id": 5,
@@ -8079,11 +8069,10 @@
         "../img/rent-product/bracelate/bracelate (3).png",
         "../img/rent-product/bracelate/bracelate (3).png",
         "../img/rent-product/bracelate/bracelate (3).png"
-        
       ]
     },
     {
-      "id": 329,
+      "id": "329",
       "sku": "B-004",
       "name": "Gold Bracelet",
       "cat_id": 5,
@@ -8103,11 +8092,10 @@
         "../img/rent-product/bracelate/bracelate (4).png",
         "../img/rent-product/bracelate/bracelate (4).png",
         "../img/rent-product/bracelate/bracelate (4).png"
-        
       ]
     },
     {
-      "id": 330,
+      "id": "330",
       "sku": "B-005",
       "name": "Silver Cuff Bracelet",
       "cat_id": 5,
@@ -8127,11 +8115,10 @@
         "../img/rent-product/bracelate/bracelate (5).png",
         "../img/rent-product/bracelate/bracelate (5).png",
         "../img/rent-product/bracelate/bracelate (5).png"
-        
       ]
     },
     {
-      "id": 331,
+      "id": "331",
       "sku": "BG-001",
       "name": "Traditional Bangles",
       "cat_id": 5,
@@ -8151,11 +8138,10 @@
         "../img/rent-product/bangles/bangles (2).png",
         "../img/rent-product/bangles/bangles (2).png",
         "../img/rent-product/bangles/bangles (2).png"
-        
       ]
     },
     {
-      "id": 332,
+      "id": "332",
       "sku": "BG-002",
       "name": "Colorful Bangles",
       "cat_id": 5,
@@ -8175,11 +8161,10 @@
         "../img/rent-product/bangles/bangles (1).png",
         "../img/rent-product/bangles/bangles (1).png",
         "../img/rent-product/bangles/bangles (1).png"
-        
       ]
     },
     {
-      "id": 333,
+      "id": "333",
       "sku": "BG-003",
       "name": "Gold Bangles",
       "cat_id": 5,
@@ -8199,11 +8184,10 @@
         "../img/rent-product/bangles/bangles (3).png",
         "../img/rent-product/bangles/bangles (3).png",
         "../img/rent-product/bangles/bangles (3).png"
-        
       ]
     },
     {
-      "id": 334,
+      "id": "334",
       "sku": "BG-004",
       "name": "Silver Bangles",
       "cat_id": 5,
@@ -8217,17 +8201,16 @@
         "bangles",
         "silver"
       ],
-     "images": [
+      "images": [
         "../img/rent-product/bangles/bangles (4).png",
         "../img/rent-product/bangles/bangles (4).png",
         "../img/rent-product/bangles/bangles (4).png",
         "../img/rent-product/bangles/bangles (4).png",
         "../img/rent-product/bangles/bangles (4).png"
-        
       ]
     },
     {
-      "id": 335,
+      "id": "335",
       "sku": "BG-005",
       "name": "Beaded Bangles",
       "cat_id": 5,
@@ -8247,11 +8230,10 @@
         "../img/rent-product/bangles/bangles (5).png",
         "../img/rent-product/bangles/bangles (5).png",
         "../img/rent-product/bangles/bangles (5).png"
-        
       ]
     },
     {
-      "id": 336,
+      "id": "336",
       "sku": "MT-001",
       "name": "Traditional Maang Tikka",
       "cat_id": 5,
@@ -8271,11 +8253,10 @@
         "../img/rent-product/mang-tika/mang-tika (1).png",
         "../img/rent-product/mang-tika/mang-tika (1).png",
         "../img/rent-product/mang-tika/mang-tika (1).png"
-        
       ]
     },
     {
-      "id": 337,
+      "id": "337",
       "sku": "MT-002",
       "name": "Gold Plated Maang Tikka",
       "cat_id": 5,
@@ -8295,11 +8276,10 @@
         "../img/rent-product/mang-tika/mang-tika (2).png",
         "../img/rent-product/mang-tika/mang-tika (2).png",
         "../img/rent-product/mang-tika/mang-tika (2).png"
-        
       ]
     },
     {
-      "id": 338,
+      "id": "338",
       "sku": "MT-003",
       "name": "Kundan Maang Tikka",
       "cat_id": 5,
@@ -8319,11 +8299,10 @@
         "../img/rent-product/mang-tika/mang-tika (3).png",
         "../img/rent-product/mang-tika/mang-tika (3).png",
         "../img/rent-product/mang-tika/mang-tika (3).png"
-        
       ]
     },
     {
-      "id": 339,
+      "id": "339",
       "sku": "MT-004",
       "name": "Crystal Maang Tikka",
       "cat_id": 5,
@@ -8343,11 +8322,10 @@
         "../img/rent-product/mang-tika/mang-tika (4).png",
         "../img/rent-product/mang-tika/mang-tika (4).png",
         "../img/rent-product/mang-tika/mang-tika (4).png"
-        
       ]
     },
     {
-      "id": 340,
+      "id": "340",
       "sku": "MT-005",
       "name": "Floral Maang Tikka",
       "cat_id": 5,
@@ -8367,11 +8345,10 @@
         "../img/rent-product/mang-tika/mang-tika (5).png",
         "../img/rent-product/mang-tika/mang-tika (5).png",
         "../img/rent-product/mang-tika/mang-tika (5).png"
-        
       ]
     },
     {
-      "id": 341,
+      "id": "341",
       "sku": "NR-001",
       "name": "Traditional Nose Ring",
       "cat_id": 5,
@@ -8391,11 +8368,10 @@
         "../img/rent-product/Nose Ring (Nath)/nath (1).png",
         "../img/rent-product/Nose Ring (Nath)/nath (1).png",
         "../img/rent-product/Nose Ring (Nath)/nath (1).png"
-        
       ]
     },
     {
-      "id": 342,
+      "id": "342",
       "sku": "NR-002",
       "name": "Gold Nose Ring",
       "cat_id": 5,
@@ -8415,11 +8391,10 @@
         "../img/rent-product/Nose Ring (Nath)/nath (2).png",
         "../img/rent-product/Nose Ring (Nath)/nath (2).png",
         "../img/rent-product/Nose Ring (Nath)/nath (2).png"
-        
       ]
     },
     {
-      "id": 343,
+      "id": "343",
       "sku": "NR-003",
       "name": "Kundan Nose Ring",
       "cat_id": 5,
@@ -8439,11 +8414,10 @@
         "../img/rent-product/Nose Ring (Nath)/nath (3).png",
         "../img/rent-product/Nose Ring (Nath)/nath (3).png",
         "../img/rent-product/Nose Ring (Nath)/nath (3).png"
-        
       ]
     },
     {
-      "id": 344,
+      "id": "344",
       "sku": "NR-004",
       "name": "Crystal Nose Ring",
       "cat_id": 5,
@@ -8463,11 +8437,10 @@
         "../img/rent-product/Nose Ring (Nath)/nath (4).png",
         "../img/rent-product/Nose Ring (Nath)/nath (4).png",
         "../img/rent-product/Nose Ring (Nath)/nath (4).png"
-        
       ]
     },
     {
-      "id": 345,
+      "id": "345",
       "sku": "NR-005",
       "name": "Floral Nose Ring",
       "cat_id": 5,
@@ -8487,11 +8460,10 @@
         "../img/rent-product/Nose Ring (Nath)/nath (5).png",
         "../img/rent-product/Nose Ring (Nath)/nath (5).png",
         "../img/rent-product/Nose Ring (Nath)/nath (5).png"
-        
       ]
     },
     {
-      "id": 346,
+      "id": "346",
       "sku": "A-001",
       "name": "Traditional Anklet",
       "cat_id": 5,
@@ -8506,16 +8478,15 @@
         "traditional"
       ],
       "images": [
-        "../img/rent-product/anklet/anklet (1).png",
-        "../img/rent-product/anklet/anklet (1).png",
-        "../img/rent-product/anklet/anklet (1).png",
-        "../img/rent-product/anklet/anklet (1).png",
-        "../img/rent-product/anklet/anklet (1).png"
-        
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 347,
+      "id": "347",
       "sku": "A-002",
       "name": "Gold Anklet",
       "cat_id": 5,
@@ -8530,16 +8501,15 @@
         "gold"
       ],
       "images": [
-        "../img/rent-product/anklet/anklet.png",
-        "../img/rent-product/anklet/anklet.png",
-        "../img/rent-product/anklet/anklet.png",
-        "../img/rent-product/anklet/anklet.png",
-        "../img/rent-product/anklet/anklet.png"
-        
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 348,
+      "id": "348",
       "sku": "A-003",
       "name": "Beaded Anklet",
       "cat_id": 5,
@@ -8554,16 +8524,15 @@
         "beaded"
       ],
       "images": [
-        "../img/rent-product/anklet/anklet (2).png",
-        "../img/rent-product/anklet/anklet (2).png",
-        "../img/rent-product/anklet/anklet (2).png",
-        "../img/rent-product/anklet/anklet (2).png",
-        "../img/rent-product/anklet/anklet (2).png"
-        
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 349,
+      "id": "349",
       "sku": "A-004",
       "name": "Silver Anklet",
       "cat_id": 5,
@@ -8578,16 +8547,15 @@
         "silver"
       ],
       "images": [
-        "../img/rent-product/anklet/anklet (3).png",
-        "../img/rent-product/anklet/anklet (3).png",
-        "../img/rent-product/anklet/anklet (3).png",
-        "../img/rent-product/anklet/anklet (3).png",
-        "../img/rent-product/anklet/anklet (3).png"
-        
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 350,
+      "id": "350",
       "sku": "A-005",
       "name": "Charm Anklet",
       "cat_id": 5,
@@ -8602,16 +8570,15 @@
         "charm"
       ],
       "images": [
-        "../img/rent-product/anklet/anklet (4).png",
-        "../img/rent-product/anklet/anklet (4).png",
-        "../img/rent-product/anklet/anklet (4).png",
-        "../img/rent-product/anklet/anklet (4).png",
-        "../img/rent-product/anklet/anklet (4).png"
-        
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 351,
+      "id": "351",
       "sku": "TR-001",
       "name": "Traditional Toe Ring",
       "cat_id": 5,
@@ -8626,15 +8593,15 @@
         "traditional"
       ],
       "images": [
-        "../img/rent-product/Toe Ring/Toe Ring-1.png",
-        "../img/rent-product/Toe Ring/Toe Ring-1.png",
-        "../img/rent-product/Toe Ring/Toe Ring-1.png",
-        "../img/rent-product/Toe Ring/Toe Ring-1.png",
-        "../img/rent-product/Toe Ring/Toe Ring-1.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 352,
+      "id": "352",
       "sku": "TR-002",
       "name": "Gold Toe Ring",
       "cat_id": 5,
@@ -8649,15 +8616,15 @@
         "gold"
       ],
       "images": [
-        "../img/rent-product/Toe Ring/Toe Ring-2.png",
-        "../img/rent-product/Toe Ring/Toe Ring-2.png",
-        "../img/rent-product/Toe Ring/Toe Ring-2.png",
-        "../img/rent-product/Toe Ring/Toe Ring-2.png",
-        "../img/rent-product/Toe Ring/Toe Ring-2.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 353,
+      "id": "353",
       "sku": "TR-003",
       "name": "Silver Toe Ring",
       "cat_id": 5,
@@ -8672,15 +8639,15 @@
         "silver"
       ],
       "images": [
-        "../img/rent-product/Toe Ring/Toe Ring-3.png",
-        "../img/rent-product/Toe Ring/Toe Ring-3.png",
-        "../img/rent-product/Toe Ring/Toe Ring-3.png",
-        "../img/rent-product/Toe Ring/Toe Ring-3.png",
-        "../img/rent-product/Toe Ring/Toe Ring-3.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 354,
+      "id": "354",
       "sku": "TR-004",
       "name": "Beaded Toe Ring",
       "cat_id": 5,
@@ -8695,15 +8662,15 @@
         "beaded"
       ],
       "images": [
-        "../img/rent-product/Toe Ring/Toe Ring-4.png",
-        "../img/rent-product/Toe Ring/Toe Ring-4.png",
-        "../img/rent-product/Toe Ring/Toe Ring-4.png",
-        "../img/rent-product/Toe Ring/Toe Ring-4.png",
-        "../img/rent-product/Toe Ring/Toe Ring-4.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 355,
+      "id": "355",
       "sku": "TR-005",
       "name": "Charm Toe Ring",
       "cat_id": 5,
@@ -8718,15 +8685,15 @@
         "charm"
       ],
       "images": [
-        "../img/rent-product/Toe Ring/Toe Ring-5.png",
-        "../img/rent-product/Toe Ring/Toe Ring-5.png",
-        "../img/rent-product/Toe Ring/Toe Ring-5.png",
-        "../img/rent-product/Toe Ring/Toe Ring-5.png",
-        "../img/rent-product/Toe Ring/Toe Ring-5.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 356,
+      "id": "356",
       "sku": "WB-001",
       "name": "Traditional Waist Belt",
       "cat_id": 5,
@@ -8741,15 +8708,15 @@
         "traditional"
       ],
       "images": [
-        "../img/rent-product/Kamarbandh/Kamarbandh-1.png",
-        "../img/rent-product/Kamarbandh/Kamarbandh-1.png",
-        "../img/rent-product/Kamarbandh/Kamarbandh-1.png",
-        "../img/rent-product/Kamarbandh/Kamarbandh-1.png",
-        "../img/rent-product/Kamarbandh/Kamarbandh-1.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 357,
+      "id": "357",
       "sku": "WB-002",
       "name": "Gold Waist Belt",
       "cat_id": 5,
@@ -8764,15 +8731,15 @@
         "gold"
       ],
       "images": [
-        "../img/rent-product/Kamarbandh/Kamarbandh-2.png",
-        "../img/rent-product/Kamarbandh/Kamarbandh-2.png",
-        "../img/rent-product/Kamarbandh/Kamarbandh-2.png",
-        "../img/rent-product/Kamarbandh/Kamarbandh-2.png",
-        "../img/rent-product/Kamarbandh/Kamarbandh-2.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 358,
+      "id": "358",
       "sku": "WB-003",
       "name": "Beaded Waist Belt",
       "cat_id": 5,
@@ -8787,15 +8754,15 @@
         "beaded"
       ],
       "images": [
-        "../img/rent-product/Kamarbandh/Kamarbandh-3.png",
-        "../img/rent-product/Kamarbandh/Kamarbandh-3.png",
-        "../img/rent-product/Kamarbandh/Kamarbandh-3.png",
-        "../img/rent-product/Kamarbandh/Kamarbandh-3.png",
-        "../img/rent-product/Kamarbandh/Kamarbandh-3.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 359,
+      "id": "359",
       "sku": "WB-004",
       "name": "Silver Waist Belt",
       "cat_id": 5,
@@ -8810,15 +8777,15 @@
         "silver"
       ],
       "images": [
-        "../img/rent-product/Kamarbandh/Kamarbandh-4.png",
-        "../img/rent-product/Kamarbandh/Kamarbandh-4.png",
-        "../img/rent-product/Kamarbandh/Kamarbandh-4.png",
-        "../img/rent-product/Kamarbandh/Kamarbandh-4.png",
-        "../img/rent-product/Kamarbandh/Kamarbandh-4.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 360,
+      "id": "360",
       "sku": "WB-005",
       "name": "Charm Waist Belt",
       "cat_id": 5,
@@ -8833,15 +8800,15 @@
         "charm"
       ],
       "images": [
-        "../img/rent-product/Kamarbandh/Kamarbandh-5.png",
-        "../img/rent-product/Kamarbandh/Kamarbandh-5.png",
-        "../img/rent-product/Kamarbandh/Kamarbandh-5.png",
-        "../img/rent-product/Kamarbandh/Kamarbandh-5.png",
-        "../img/rent-product/Kamarbandh/Kamarbandh-5.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 361,
+      "id": "361",
       "sku": "B-001",
       "name": "Floral Brooch",
       "cat_id": 5,
@@ -8856,15 +8823,15 @@
         "floral"
       ],
       "images": [
-        "../img/rent-product/Brooch/Brooch-1.png",
-        "../img/rent-product/Brooch/Brooch-1.png",
-        "../img/rent-product/Brooch/Brooch-1.png",
-        "../img/rent-product/Brooch/Brooch-1.png",
-        "../img/rent-product/Brooch/Brooch-1.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 362,
+      "id": "362",
       "sku": "B-002",
       "name": "Gold Brooch",
       "cat_id": 5,
@@ -8879,15 +8846,15 @@
         "gold"
       ],
       "images": [
-        "../img/rent-product/Brooch/Brooch-2.png",
-        "../img/rent-product/Brooch/Brooch-2.png",
-        "../img/rent-product/Brooch/Brooch-2.png",
-        "../img/rent-product/Brooch/Brooch-2.png",
-        "../img/rent-product/Brooch/Brooch-2.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 363,
+      "id": "363",
       "sku": "B-003",
       "name": "Kundan Brooch",
       "cat_id": 5,
@@ -8902,15 +8869,15 @@
         "kundan"
       ],
       "images": [
-        "../img/rent-product/Brooch/Brooch-3.png",
-        "../img/rent-product/Brooch/Brooch-3.png",
-        "../img/rent-product/Brooch/Brooch-3.png",
-        "../img/rent-product/Brooch/Brooch-3.png",
-        "../img/rent-product/Brooch/Brooch-3.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 364,
+      "id": "364",
       "sku": "B-004",
       "name": "Crystal Brooch",
       "cat_id": 5,
@@ -8925,15 +8892,15 @@
         "crystal"
       ],
       "images": [
-        "../img/rent-product/Brooch/Brooch-4.png",
-        "../img/rent-product/Brooch/Brooch-4.png",
-        "../img/rent-product/Brooch/Brooch-4.png",
-        "../img/rent-product/Brooch/Brooch-4.png",
-        "../img/rent-product/Brooch/Brooch-4.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 365,
+      "id": "365",
       "sku": "B-005",
       "name": "Vintage Brooch",
       "cat_id": 5,
@@ -8948,15 +8915,15 @@
         "vintage"
       ],
       "images": [
-        "../img/rent-product/Brooch/Brooch-5.png",
-        "../img/rent-product/Brooch/Brooch-5.png",
-        "../img/rent-product/Brooch/Brooch-5.png",
-        "../img/rent-product/Brooch/Brooch-5.png",
-        "../img/rent-product/Brooch/Brooch-5.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 366,
+      "id": "366",
       "sku": "AB-001",
       "name": "Traditional Armlet",
       "cat_id": 5,
@@ -8971,15 +8938,15 @@
         "traditional"
       ],
       "images": [
-        "../img/rent-product/Bajubandh/Bajubandh-1.png",
-        "../img/rent-product/Bajubandh/Bajubandh-1.png",
-        "../img/rent-product/Bajubandh/Bajubandh-1.png",
-        "../img/rent-product/Bajubandh/Bajubandh-1.png",
-        "../img/rent-product/Bajubandh/Bajubandh-1.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 367,
+      "id": "367",
       "sku": "AB-002",
       "name": "Gold Armlet",
       "cat_id": 5,
@@ -8994,15 +8961,15 @@
         "gold"
       ],
       "images": [
-        "../img/rent-product/Bajubandh/Bajubandh.png",
-        "../img/rent-product/Bajubandh/Bajubandh.png",
-        "../img/rent-product/Bajubandh/Bajubandh.png",
-        "../img/rent-product/Bajubandh/Bajubandh.png",
-        "../img/rent-product/Bajubandh/Bajubandh.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 368,
+      "id": "368",
       "sku": "AB-003",
       "name": "Kundan Armlet",
       "cat_id": 5,
@@ -9017,15 +8984,15 @@
         "kundan"
       ],
       "images": [
-        "../img/rent-product/Bajubandh/Bajubandh-2.png",
-        "../img/rent-product/Bajubandh/Bajubandh-2.png",
-        "../img/rent-product/Bajubandh/Bajubandh-2.png",
-        "../img/rent-product/Bajubandh/Bajubandh-2.png",
-        "../img/rent-product/Bajubandh/Bajubandh-2.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 369,
+      "id": "369",
       "sku": "AB-004",
       "name": "Crystal Armlet",
       "cat_id": 5,
@@ -9040,15 +9007,15 @@
         "crystal"
       ],
       "images": [
-        "../img/rent-product/Bajubandh/Bajubandh-3.png",
-        "../img/rent-product/Bajubandh/Bajubandh-3.png",
-        "../img/rent-product/Bajubandh/Bajubandh-3.png",
-        "../img/rent-product/Bajubandh/Bajubandh-3.png",
-        "../img/rent-product/Bajubandh/Bajubandh-3.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 370,
+      "id": "370",
       "sku": "AB-005",
       "name": "Floral Armlet",
       "cat_id": 5,
@@ -9063,15 +9030,15 @@
         "floral"
       ],
       "images": [
-        "../img/rent-product/Bajubandh/Bajubandh-4.png",
-        "../img/rent-product/Bajubandh/Bajubandh-4.png",
-        "../img/rent-product/Bajubandh/Bajubandh-4.png",
-        "../img/rent-product/Bajubandh/Bajubandh-4.png",
-        "../img/rent-product/Bajubandh/Bajubandh-4.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 371,
+      "id": "371",
       "sku": "HP-001",
       "name": "Traditional Haath Phool",
       "cat_id": 5,
@@ -9086,15 +9053,15 @@
         "traditional"
       ],
       "images": [
-        "../img/rent-product/Haath Phool/Haath Phool-1.png",
-        "../img/rent-product/Haath Phool/Haath Phool-1.png",
-        "../img/rent-product/Haath Phool/Haath Phool-1.png",
-        "../img/rent-product/Haath Phool/Haath Phool-1.png",
-        "../img/rent-product/Haath Phool/Haath Phool-1.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 372,
+      "id": "372",
       "sku": "HP-002",
       "name": "Gold Haath Phool",
       "cat_id": 5,
@@ -9109,15 +9076,15 @@
         "gold"
       ],
       "images": [
-        "../img/rent-product/Haath Phool/Haath Phool-2.png",
-        "../img/rent-product/Haath Phool/Haath Phool-2.png",
-        "../img/rent-product/Haath Phool/Haath Phool-2.png",
-        "../img/rent-product/Haath Phool/Haath Phool-2.png",
-        "../img/rent-product/Haath Phool/Haath Phool-2.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 373,
+      "id": "373",
       "sku": "HP-003",
       "name": "Kundan Haath Phool",
       "cat_id": 5,
@@ -9132,15 +9099,15 @@
         "kundan"
       ],
       "images": [
-        "../img/rent-product/Haath Phool/Haath Phool-3.png",
-        "../img/rent-product/Haath Phool/Haath Phool-3.png",
-        "../img/rent-product/Haath Phool/Haath Phool-3.png",
-        "../img/rent-product/Haath Phool/Haath Phool-3.png",
-        "../img/rent-product/Haath Phool/Haath Phool-3.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 374,
+      "id": "374",
       "sku": "HP-004",
       "name": "Crystal Haath Phool",
       "cat_id": 5,
@@ -9155,15 +9122,15 @@
         "crystal"
       ],
       "images": [
-        "../img/rent-product/Haath Phool/Haath Phool-4.png",
-        "../img/rent-product/Haath Phool/Haath Phool-4.png",
-        "../img/rent-product/Haath Phool/Haath Phool-4.png",
-        "../img/rent-product/Haath Phool/Haath Phool-4.png",
-        "../img/rent-product/Haath Phool/Haath Phool-4.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 375,
+      "id": "375",
       "sku": "HP-005",
       "name": "Floral Haath Phool",
       "cat_id": 5,
@@ -9178,15 +9145,15 @@
         "floral"
       ],
       "images": [
-        "../img/rent-product/Haath Phool/Haath Phool-5.png",
-        "../img/rent-product/Haath Phool/Haath Phool-5.png",
-        "../img/rent-product/Haath Phool/Haath Phool-5.png",
-        "../img/rent-product/Haath Phool/Haath Phool-5.png",
-        "../img/rent-product/Haath Phool/Haath Phool-5.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 376,
+      "id": "376",
       "sku": "C-001",
       "name": "Traditional Chooda",
       "cat_id": 5,
@@ -9201,15 +9168,15 @@
         "traditional"
       ],
       "images": [
-        "../img/rent-product/Chooda/Chooda-1.png",
-        "../img/rent-product/Chooda/Chooda-1.png",
-        "../img/rent-product/Chooda/Chooda-1.png",
-        "../img/rent-product/Chooda/Chooda-1.png",
-        "../img/rent-product/Chooda/Chooda-1.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 377,
+      "id": "377",
       "sku": "C-002",
       "name": "Gold Chooda",
       "cat_id": 5,
@@ -9224,15 +9191,15 @@
         "gold"
       ],
       "images": [
-        "../img/rent-product/Chooda/Chooda-2.png",
-        "../img/rent-product/Chooda/Chooda-2.png",
-        "../img/rent-product/Chooda/Chooda-2.png",
-        "../img/rent-product/Chooda/Chooda-2.png",
-        "../img/rent-product/Chooda/Chooda-2.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 378,
+      "id": "378",
       "sku": "C-003",
       "name": "Kundan Chooda",
       "cat_id": 5,
@@ -9247,15 +9214,15 @@
         "kundan"
       ],
       "images": [
-        "../img/rent-product/Chooda/Chooda-3.png",
-        "../img/rent-product/Chooda/Chooda-3.png",
-        "../img/rent-product/Chooda/Chooda-3.png",
-        "../img/rent-product/Chooda/Chooda-3.png",
-        "../img/rent-product/Chooda/Chooda-3.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 379,
+      "id": "379",
       "sku": "C-004",
       "name": "Crystal Chooda",
       "cat_id": 5,
@@ -9270,15 +9237,15 @@
         "crystal"
       ],
       "images": [
-        "../img/rent-product/Chooda/Chooda-4.png",
-        "../img/rent-product/Chooda/Chooda-4.png",
-        "../img/rent-product/Chooda/Chooda-4.png",
-        "../img/rent-product/Chooda/Chooda-4.png",
-        "../img/rent-product/Chooda/Chooda-4.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 380,
+      "id": "380",
       "sku": "C-005",
       "name": "Floral Chooda",
       "cat_id": 5,
@@ -9293,15 +9260,15 @@
         "floral"
       ],
       "images": [
-        "../img/rent-product/Chooda/Chooda-5.png",
-        "../img/rent-product/Chooda/Chooda-5.png",
-        "../img/rent-product/Chooda/Chooda-5.png",
-        "../img/rent-product/Chooda/Chooda-5.png",
-        "../img/rent-product/Chooda/Chooda-5.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 381,
+      "id": "381",
       "sku": "P-001",
       "name": "Gold Pendant",
       "cat_id": 5,
@@ -9316,15 +9283,15 @@
         "gold"
       ],
       "images": [
-        "../img/rent-product/Pendant/Pendant-5.png",
-        "../img/rent-product/Pendant/Pendant-5.png",
-        "../img/rent-product/Pendant/Pendant-5.png",
-        "../img/rent-product/Pendant/Pendant-5.png",
-        "../img/rent-product/Pendant/Pendant-5.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 382,
+      "id": "382",
       "sku": "P-002",
       "name": "Silver Pendant",
       "cat_id": 5,
@@ -9339,15 +9306,15 @@
         "silver"
       ],
       "images": [
-        "../img/rent-product/Pendant/Pendant-4.png",
-        "../img/rent-product/Pendant/Pendant-4.png",
-        "../img/rent-product/Pendant/Pendant-4.png",
-        "../img/rent-product/Pendant/Pendant-4.png",
-        "../img/rent-product/Pendant/Pendant-4.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 383,
+      "id": "383",
       "sku": "P-003",
       "name": "Kundan Pendant",
       "cat_id": 5,
@@ -9362,15 +9329,15 @@
         "kundan"
       ],
       "images": [
-        "../img/rent-product/Pendant/Pendant-3.png",
-        "../img/rent-product/Pendant/Pendant-3.png",
-        "../img/rent-product/Pendant/Pendant-3.png",
-        "../img/rent-product/Pendant/Pendant-3.png",
-        "../img/rent-product/Pendant/Pendant-3.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 384,
+      "id": "384",
       "sku": "P-004",
       "name": "Crystal Pendant",
       "cat_id": 5,
@@ -9385,15 +9352,15 @@
         "crystal"
       ],
       "images": [
-        "../img/rent-product/Pendant/Pendant-2.png",
-        "../img/rent-product/Pendant/Pendant-2.png",
-        "../img/rent-product/Pendant/Pendant-2.png",
-        "../img/rent-product/Pendant/Pendant-2.png",
-        "../img/rent-product/Pendant/Pendant-2.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 385,
+      "id": "385",
       "sku": "P-005",
       "name": "Floral Pendant",
       "cat_id": 5,
@@ -9408,15 +9375,15 @@
         "floral"
       ],
       "images": [
-        "../img/rent-product/Pendant/Pendant-1.png",
-        "../img/rent-product/Pendant/Pendant-1.png",
-        "../img/rent-product/Pendant/Pendant-1.png",
-        "../img/rent-product/Pendant/Pendant-1.png",
-        "../img/rent-product/Pendant/Pendant-1.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 386,
+      "id": "386",
       "sku": "HC-001",
       "name": "Decorative Hair Clip",
       "cat_id": 6,
@@ -9431,15 +9398,15 @@
         "decorative"
       ],
       "images": [
-        "../img/rent-product/Hair Clips/Hair Clips-1.png",
-        "../img/rent-product/Hair Clips/Hair Clips-1.png",
-        "../img/rent-product/Hair Clips/Hair Clips-1.png",
-        "../img/rent-product/Hair Clips/Hair Clips-1.png",
-        "../img/rent-product/Hair Clips/Hair Clips-1.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 387,
+      "id": "387",
       "sku": "HC-002",
       "name": "Flower Hair Clip",
       "cat_id": 6,
@@ -9454,15 +9421,15 @@
         "flower"
       ],
       "images": [
-        "../img/rent-product/Hair Clips/Hair Clips-3.png",
-        "../img/rent-product/Hair Clips/Hair Clips-3.png",
-        "../img/rent-product/Hair Clips/Hair Clips-3.png",
-        "../img/rent-product/Hair Clips/Hair Clips-3.png",
-        "../img/rent-product/Hair Clips/Hair Clips-3.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 388,
+      "id": "388",
       "sku": "HC-003",
       "name": "Bling Hair Clip",
       "cat_id": 6,
@@ -9477,15 +9444,15 @@
         "bling"
       ],
       "images": [
-        "../img/rent-product/Hair Clips/Hair Clips-2.png",
-        "../img/rent-product/Hair Clips/Hair Clips-2.png",
-        "../img/rent-product/Hair Clips/Hair Clips-2.png",
-        "../img/rent-product/Hair Clips/Hair Clips-2.png",
-        "../img/rent-product/Hair Clips/Hair Clips-2.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 389,
+      "id": "389",
       "sku": "HC-004",
       "name": "Classic Hair Clip",
       "cat_id": 6,
@@ -9500,15 +9467,15 @@
         "classic"
       ],
       "images": [
-        "../img/rent-product/Hair Clips/Hair Clips-1.png",
-        "../img/rent-product/Hair Clips/Hair Clips-1.png",
-        "../img/rent-product/Hair Clips/Hair Clips-1.png",
-        "../img/rent-product/Hair Clips/Hair Clips-1.png",
-        "../img/rent-product/Hair Clips/Hair Clips-1.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 390,
+      "id": "390",
       "sku": "HC-005",
       "name": "Vintage Hair Clip",
       "cat_id": 6,
@@ -9523,15 +9490,15 @@
         "vintage"
       ],
       "images": [
-        "../img/rent-product/Hair Clips/Hair Clips.png",
-        "../img/rent-product/Hair Clips/Hair Clips.png",
-        "../img/rent-product/Hair Clips/Hair Clips.png",
-        "../img/rent-product/Hair Clips/Hair Clips.png",
-        "../img/rent-product/Hair Clips/Hair Clips.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 391,
+      "id": "391",
       "sku": "HB-001",
       "name": "Cotton Hair Band",
       "cat_id": 6,
@@ -9546,15 +9513,15 @@
         "cotton"
       ],
       "images": [
-        "../img/rent-product/Hair Bands/Hair Bands-5.png",
-        "../img/rent-product/Hair Bands/Hair Bands-5.png",
-        "../img/rent-product/Hair Bands/Hair Bands-5.png",
-        "../img/rent-product/Hair Bands/Hair Bands-5.png",
-        "../img/rent-product/Hair Bands/Hair Bands-5.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 392,
+      "id": "392",
       "sku": "HB-002",
       "name": "Silk Hair Band",
       "cat_id": 6,
@@ -9569,15 +9536,15 @@
         "silk"
       ],
       "images": [
-        "../img/rent-product/Hair Bands/Hair Bands-4.png",
-        "../img/rent-product/Hair Bands/Hair Bands-4.png",
-        "../img/rent-product/Hair Bands/Hair Bands-4.png",
-        "../img/rent-product/Hair Bands/Hair Bands-4.png",
-        "../img/rent-product/Hair Bands/Hair Bands-4.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 393,
+      "id": "393",
       "sku": "HB-003",
       "name": "Elastic Hair Band",
       "cat_id": 6,
@@ -9592,15 +9559,15 @@
         "elastic"
       ],
       "images": [
-        "../img/rent-product/Hair Bands/Hair Bands-3.png",
-        "../img/rent-product/Hair Bands/Hair Bands-3.png",
-        "../img/rent-product/Hair Bands/Hair Bands-3.png",
-        "../img/rent-product/Hair Bands/Hair Bands-3.png",
-        "../img/rent-product/Hair Bands/Hair Bands-3.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 394,
+      "id": "394",
       "sku": "HB-004",
       "name": "Printed Hair Band",
       "cat_id": 6,
@@ -9615,15 +9582,15 @@
         "printed"
       ],
       "images": [
-        "../img/rent-product/Hair Bands/Hair Bands-2.png",
-        "../img/rent-product/Hair Bands/Hair Bands-2.png",
-        "../img/rent-product/Hair Bands/Hair Bands-2.png",
-        "../img/rent-product/Hair Bands/Hair Bands-2.png",
-        "../img/rent-product/Hair Bands/Hair Bands-2.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 395,
+      "id": "395",
       "sku": "HB-005",
       "name": "Braided Hair Band",
       "cat_id": 6,
@@ -9638,15 +9605,15 @@
         "braided"
       ],
       "images": [
-        "../img/rent-product/Hair Bands/Hair Bands-1.png",
-        "../img/rent-product/Hair Bands/Hair Bands-1.png",
-        "../img/rent-product/Hair Bands/Hair Bands-1.png",
-        "../img/rent-product/Hair Bands/Hair Bands-1.png",
-        "../img/rent-product/Hair Bands/Hair Bands-1.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 396,
+      "id": "396",
       "sku": "HT-001",
       "name": "Basic Hair Tie",
       "cat_id": 6,
@@ -9661,15 +9628,15 @@
         "basic"
       ],
       "images": [
-        "../img/rent-product/Hair Ties/Hair Ties-5.png",
-        "../img/rent-product/Hair Ties/Hair Ties-5.png",
-        "../img/rent-product/Hair Ties/Hair Ties-5.png",
-        "../img/rent-product/Hair Ties/Hair Ties-5.png",
-        "../img/rent-product/Hair Ties/Hair Ties-5.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 397,
+      "id": "397",
       "sku": "HT-002",
       "name": "Colorful Hair Ties",
       "cat_id": 6,
@@ -9684,15 +9651,15 @@
         "colorful"
       ],
       "images": [
-        "../img/rent-product/Hair Ties/Hair Ties-4.png",
-        "../img/rent-product/Hair Ties/Hair Ties-4.png",
-        "../img/rent-product/Hair Ties/Hair Ties-4.png",
-        "../img/rent-product/Hair Ties/Hair Ties-4.png",
-        "../img/rent-product/Hair Ties/Hair Ties-4.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 398,
+      "id": "398",
       "sku": "HT-003",
       "name": "No-Snag Hair Tie",
       "cat_id": 6,
@@ -9707,15 +9674,15 @@
         "no-snag"
       ],
       "images": [
-        "../img/rent-product/Hair Ties/Hair Ties-3.png",
-        "../img/rent-product/Hair Ties/Hair Ties-3.png",
-        "../img/rent-product/Hair Ties/Hair Ties-3.png",
-        "../img/rent-product/Hair Ties/Hair Ties-3.png",
-        "../img/rent-product/Hair Ties/Hair Ties-3.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 399,
+      "id": "399",
       "sku": "HT-004",
       "name": "Spiral Hair Tie",
       "cat_id": 6,
@@ -9730,15 +9697,15 @@
         "spiral"
       ],
       "images": [
-        "../img/rent-product/Hair Ties/Hair Ties-2.png",
-        "../img/rent-product/Hair Ties/Hair Ties-2.png",
-        "../img/rent-product/Hair Ties/Hair Ties-2.png",
-        "../img/rent-product/Hair Ties/Hair Ties-2.png",
-        "../img/rent-product/Hair Ties/Hair Ties-2.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 400,
+      "id": "400",
       "sku": "HT-005",
       "name": "Fabric Hair Tie",
       "cat_id": 6,
@@ -9753,15 +9720,15 @@
         "fabric"
       ],
       "images": [
-        "../img/rent-product/Hair Ties/Hair Ties-1.png",
-        "../img/rent-product/Hair Ties/Hair Ties-1.png",
-        "../img/rent-product/Hair Ties/Hair Ties-1.png",
-        "../img/rent-product/Hair Ties/Hair Ties-1.png",
-        "../img/rent-product/Hair Ties/Hair Ties-1.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 401,
+      "id": "401",
       "sku": "HB-006",
       "name": "Floral Headband",
       "cat_id": 6,
@@ -9776,15 +9743,15 @@
         "floral"
       ],
       "images": [
-        "../img/rent-product/Headbands/Headbands-5.png",
-        "../img/rent-product/Headbands/Headbands-5.png",
-        "../img/rent-product/Headbands/Headbands-5.png",
-        "../img/rent-product/Headbands/Headbands-5.png",
-        "../img/rent-product/Headbands/Headbands-5.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 402,
+      "id": "402",
       "sku": "HB-007",
       "name": "Sparkly Headband",
       "cat_id": 6,
@@ -9799,15 +9766,15 @@
         "sparkly"
       ],
       "images": [
-        "../img/rent-product/Headbands/Headbands-4.png",
-        "../img/rent-product/Headbands/Headbands-4.png",
-        "../img/rent-product/Headbands/Headbands-4.png",
-        "../img/rent-product/Headbands/Headbands-4.png",
-        "../img/rent-product/Headbands/Headbands-4.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 403,
+      "id": "403",
       "sku": "HB-008",
       "name": "Knitted Headband",
       "cat_id": 6,
@@ -9822,15 +9789,15 @@
         "knitted"
       ],
       "images": [
-        "../img/rent-product/Headbands/Headbands-3.png",
-        "../img/rent-product/Headbands/Headbands-3.png",
-        "../img/rent-product/Headbands/Headbands-3.png",
-        "../img/rent-product/Headbands/Headbands-3.png",
-        "../img/rent-product/Headbands/Headbands-3.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 404,
+      "id": "404",
       "sku": "HB-009",
       "name": "Leather Headband",
       "cat_id": 6,
@@ -9845,15 +9812,15 @@
         "leather"
       ],
       "images": [
-        "../img/rent-product/Headbands/Headbands-2.png",
-        "../img/rent-product/Headbands/Headbands-2.png",
-        "../img/rent-product/Headbands/Headbands-2.png",
-        "../img/rent-product/Headbands/Headbands-2.png",
-        "../img/rent-product/Headbands/Headbands-2.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 405,
+      "id": "405",
       "sku": "HB-010",
       "name": "Classic Velvet Headband",
       "cat_id": 6,
@@ -9868,15 +9835,15 @@
         "velvet"
       ],
       "images": [
-        "../img/rent-product/Headbands/Headbands-1.png",
-        "../img/rent-product/Headbands/Headbands-1.png",
-        "../img/rent-product/Headbands/Headbands-1.png",
-        "../img/rent-product/Headbands/Headbands-1.png",
-        "../img/rent-product/Headbands/Headbands-1.png"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 406,
+      "id": "406",
       "sku": "HP-001",
       "name": "Decorative Hair Pins",
       "cat_id": 6,
@@ -9891,15 +9858,15 @@
         "decorative"
       ],
       "images": [
-        "../img/rent-product/Hair Pins/Hair Pins (5).jpg",
-        "../img/rent-product/Hair Pins/Hair Pins (5).jpg",
-        "../img/rent-product/Hair Pins/Hair Pins (5).jpg",
-        "../img/rent-product/Hair Pins/Hair Pins (5).jpg",
-        "../img/rent-product/Hair Pins/Hair Pins (5).jpg"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 407,
+      "id": "407",
       "sku": "HP-002",
       "name": "Bobby Hair Pins",
       "cat_id": 6,
@@ -9914,15 +9881,15 @@
         "bobby"
       ],
       "images": [
-        "../img/rent-product/Hair Pins/Hair Pins (4).jpg",
-        "../img/rent-product/Hair Pins/Hair Pins (4).jpg",
-        "../img/rent-product/Hair Pins/Hair Pins (4).jpg",
-        "../img/rent-product/Hair Pins/Hair Pins (4).jpg",
-        "../img/rent-product/Hair Pins/Hair Pins (4).jpg"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 408,
+      "id": "408",
       "sku": "HP-003",
       "name": "Crystal Hair Pins",
       "cat_id": 6,
@@ -9937,15 +9904,15 @@
         "crystal"
       ],
       "images": [
-        "../img/rent-product/Hair Pins/Hair Pins (3).jpg",
-        "../img/rent-product/Hair Pins/Hair Pins (3).jpg",
-        "../img/rent-product/Hair Pins/Hair Pins (3).jpg",
-        "../img/rent-product/Hair Pins/Hair Pins (3).jpg",
-        "../img/rent-product/Hair Pins/Hair Pins (3).jpg"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 409,
+      "id": "409",
       "sku": "HP-004",
       "name": "Flower Hair Pins",
       "cat_id": 6,
@@ -9960,15 +9927,15 @@
         "flower"
       ],
       "images": [
-        "../img/rent-product/Hair Pins/Hair Pins (2).jpg",
-        "../img/rent-product/Hair Pins/Hair Pins (2).jpg",
-        "../img/rent-product/Hair Pins/Hair Pins (2).jpg",
-        "../img/rent-product/Hair Pins/Hair Pins (2).jpg",
-        "../img/rent-product/Hair Pins/Hair Pins (2).jpg"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 410,
+      "id": "410",
       "sku": "HP-005",
       "name": "Vintage Hair Pins",
       "cat_id": 6,
@@ -9983,15 +9950,15 @@
         "vintage"
       ],
       "images": [
-        "../img/rent-product/Hair Pins/Hair Pins (1).jpg",
-        "../img/rent-product/Hair Pins/Hair Pins (1).jpg",
-        "../img/rent-product/Hair Pins/Hair Pins (1).jpg",
-        "../img/rent-product/Hair Pins/Hair Pins (1).jpg",
-        "../img/rent-product/Hair Pins/Hair Pins (1).jpg"
+        "../img/skin/SUBCAT1 (1).png",
+        "../img/skin/SUBCAT1 (3).png",
+        "../img/skin/SUBCAT1 (4).png",
+        "../img/skin/SUBCAT1 (5).png",
+        "../img/skin/landscape.png"
       ]
     },
     {
-      "id": 411,
+      "id": "411",
       "sku": "S-001",
       "name": "Silk Scrunchie",
       "cat_id": 6,
@@ -10011,10 +9978,10 @@
         "../img/skin/SUBCAT1 (4).png",
         "../img/skin/SUBCAT1 (5).png",
         "../img/skin/landscape.png"
-      ]   
+      ]
     },
     {
-      "id": 412,
+      "id": "412",
       "sku": "S-002",
       "name": "Cotton Scrunchie",
       "cat_id": 6,
@@ -10037,7 +10004,7 @@
       ]
     },
     {
-      "id": 413,
+      "id": "413",
       "sku": "S-003",
       "name": "Printed Scrunchie",
       "cat_id": 6,
@@ -10060,7 +10027,7 @@
       ]
     },
     {
-      "id": 414,
+      "id": "414",
       "sku": "S-004",
       "name": "Velvet Scrunchie",
       "cat_id": 6,
@@ -10083,7 +10050,7 @@
       ]
     },
     {
-      "id": 415,
+      "id": "415",
       "sku": "S-005",
       "name": "Bling Scrunchie",
       "cat_id": 6,
@@ -10106,7 +10073,7 @@
       ]
     },
     {
-      "id": 416,
+      "id": "416",
       "sku": "HC-006",
       "name": "Decorative Hair Comb",
       "cat_id": 6,
@@ -10129,7 +10096,7 @@
       ]
     },
     {
-      "id": 417,
+      "id": "417",
       "sku": "HC-007",
       "name": "Wooden Hair Comb",
       "cat_id": 6,
@@ -10152,7 +10119,7 @@
       ]
     },
     {
-      "id": 418,
+      "id": "418",
       "sku": "HC-008",
       "name": "Plastic Hair Comb",
       "cat_id": 6,
@@ -10175,7 +10142,7 @@
       ]
     },
     {
-      "id": 419,
+      "id": "419",
       "sku": "HC-009",
       "name": "Wide-Tooth Hair Comb",
       "cat_id": 6,
@@ -10198,7 +10165,7 @@
       ]
     },
     {
-      "id": 420,
+      "id": "420",
       "sku": "HC-010",
       "name": "Fine-Tooth Hair Comb",
       "cat_id": 6,
@@ -10221,7 +10188,7 @@
       ]
     },
     {
-      "id": 421,
+      "id": "421",
       "sku": "HS-001",
       "name": "Bamboo Hair Stick",
       "cat_id": 6,
@@ -10244,7 +10211,7 @@
       ]
     },
     {
-      "id": 422,
+      "id": "422",
       "sku": "HS-002",
       "name": "Decorative Hair Stick",
       "cat_id": 6,
@@ -10267,7 +10234,7 @@
       ]
     },
     {
-      "id": 423,
+      "id": "423",
       "sku": "HS-003",
       "name": "Metal Hair Stick",
       "cat_id": 6,
@@ -10290,7 +10257,7 @@
       ]
     },
     {
-      "id": 424,
+      "id": "424",
       "sku": "HS-004",
       "name": "Wooden Hair Stick",
       "cat_id": 6,
@@ -10313,7 +10280,7 @@
       ]
     },
     {
-      "id": 425,
+      "id": "425",
       "sku": "HS-005",
       "name": "Colorful Hair Stick",
       "cat_id": 6,
@@ -10336,7 +10303,7 @@
       ]
     },
     {
-      "id": 426,
+      "id": "426",
       "sku": "HC-011",
       "name": "Large Hair Claw",
       "cat_id": 6,
@@ -10359,7 +10326,7 @@
       ]
     },
     {
-      "id": 427,
+      "id": "427",
       "sku": "HC-012",
       "name": "Decorative Hair Claw",
       "cat_id": 6,
@@ -10382,7 +10349,7 @@
       ]
     },
     {
-      "id": 428,
+      "id": "428",
       "sku": "HC-013",
       "name": "Mini Hair Claw",
       "cat_id": 6,
@@ -10405,7 +10372,7 @@
       ]
     },
     {
-      "id": 429,
+      "id": "429",
       "sku": "HC-014",
       "name": "Colorful Hair Claw",
       "cat_id": 6,
@@ -10428,7 +10395,7 @@
       ]
     },
     {
-      "id": 430,
+      "id": "430",
       "sku": "HC-015",
       "name": "Classic Hair Claw",
       "cat_id": 6,
@@ -10451,7 +10418,7 @@
       ]
     },
     {
-      "id": 431,
+      "id": "431",
       "sku": "B-001",
       "name": "Decorative Barrette",
       "cat_id": 6,
@@ -10474,7 +10441,7 @@
       ]
     },
     {
-      "id": 432,
+      "id": "432",
       "sku": "B-002",
       "name": "Floral Barrette",
       "cat_id": 6,
@@ -10497,7 +10464,7 @@
       ]
     },
     {
-      "id": 433,
+      "id": "433",
       "sku": "B-003",
       "name": "Sparkly Barrette",
       "cat_id": 6,
@@ -10520,7 +10487,7 @@
       ]
     },
     {
-      "id": 434,
+      "id": "434",
       "sku": "B-004",
       "name": "Classic Barrette",
       "cat_id": 6,
@@ -10543,7 +10510,7 @@
       ]
     },
     {
-      "id": 435,
+      "id": "435",
       "sku": "B-005",
       "name": "Vintage Barrette",
       "cat_id": 6,
@@ -10566,7 +10533,7 @@
       ]
     },
     {
-      "id": 436,
+      "id": "436",
       "sku": "HW-001",
       "name": "Silk Hair Wrap",
       "cat_id": 6,
@@ -10589,7 +10556,7 @@
       ]
     },
     {
-      "id": 437,
+      "id": "437",
       "sku": "HW-002",
       "name": "Cotton Hair Wrap",
       "cat_id": 6,
@@ -10612,7 +10579,7 @@
       ]
     },
     {
-      "id": 438,
+      "id": "438",
       "sku": "HW-003",
       "name": "Printed Hair Wrap",
       "cat_id": 6,
@@ -10635,7 +10602,7 @@
       ]
     },
     {
-      "id": 439,
+      "id": "439",
       "sku": "HW-004",
       "name": "Velvet Hair Wrap",
       "cat_id": 6,
@@ -10658,7 +10625,7 @@
       ]
     },
     {
-      "id": 440,
+      "id": "440",
       "sku": "HW-005",
       "name": "Bling Hair Wrap",
       "cat_id": 6,
@@ -10681,7 +10648,7 @@
       ]
     },
     {
-      "id": 441,
+      "id": "441",
       "sku": "HB-006",
       "name": "Classic Hair Bow",
       "cat_id": 6,
@@ -10704,7 +10671,7 @@
       ]
     },
     {
-      "id": 442,
+      "id": "442",
       "sku": "HB-007",
       "name": "Floral Hair Bow",
       "cat_id": 6,
@@ -10727,7 +10694,7 @@
       ]
     },
     {
-      "id": 443,
+      "id": "443",
       "sku": "HB-008",
       "name": "Sparkly Hair Bow",
       "cat_id": 6,
@@ -10750,7 +10717,7 @@
       ]
     },
     {
-      "id": 444,
+      "id": "444",
       "sku": "HB-009",
       "name": "Vintage Hair Bow",
       "cat_id": 6,
@@ -10773,7 +10740,7 @@
       ]
     },
     {
-      "id": 445,
+      "id": "445",
       "sku": "HB-010",
       "name": "Colorful Hair Bow",
       "cat_id": 6,
@@ -10796,7 +10763,7 @@
       ]
     },
     {
-      "id": 446,
+      "id": "446",
       "sku": "HC-016",
       "name": "Gold Hair Chain",
       "cat_id": 6,
@@ -10819,7 +10786,7 @@
       ]
     },
     {
-      "id": 447,
+      "id": "447",
       "sku": "HC-017",
       "name": "Silver Hair Chain",
       "cat_id": 6,
@@ -10842,7 +10809,7 @@
       ]
     },
     {
-      "id": 448,
+      "id": "448",
       "sku": "HC-018",
       "name": "Beaded Hair Chain",
       "cat_id": 6,
@@ -10865,7 +10832,7 @@
       ]
     },
     {
-      "id": 449,
+      "id": "449",
       "sku": "HC-019",
       "name": "Crystal Hair Chain",
       "cat_id": 6,
@@ -10888,7 +10855,7 @@
       ]
     },
     {
-      "id": 450,
+      "id": "450",
       "sku": "HC-020",
       "name": "Charm Hair Chain",
       "cat_id": 6,
@@ -10911,7 +10878,7 @@
       ]
     },
     {
-      "id": 451,
+      "id": "451",
       "sku": "TC-001",
       "name": "Gold Tiara",
       "cat_id": 6,
@@ -10934,7 +10901,7 @@
       ]
     },
     {
-      "id": 452,
+      "id": "452",
       "sku": "TC-002",
       "name": "Silver Crown",
       "cat_id": 6,
@@ -10957,7 +10924,7 @@
       ]
     },
     {
-      "id": 453,
+      "id": "453",
       "sku": "TC-003",
       "name": "Floral Tiara",
       "cat_id": 6,
@@ -10980,7 +10947,7 @@
       ]
     },
     {
-      "id": 454,
+      "id": "454",
       "sku": "TC-004",
       "name": "Crystal Tiara",
       "cat_id": 6,
@@ -11003,7 +10970,7 @@
       ]
     },
     {
-      "id": 455,
+      "id": "455",
       "sku": "TC-005",
       "name": "Vintage Crown",
       "cat_id": 6,
@@ -11026,7 +10993,7 @@
       ]
     },
     {
-      "id": 456,
+      "id": "456",
       "sku": "HE-001",
       "name": "Clip-In Hair Extensions",
       "cat_id": 6,
@@ -11049,7 +11016,7 @@
       ]
     },
     {
-      "id": 457,
+      "id": "457",
       "sku": "HE-002",
       "name": "Tape-In Hair Extensions",
       "cat_id": 6,
@@ -11072,7 +11039,7 @@
       ]
     },
     {
-      "id": 458,
+      "id": "458",
       "sku": "HE-003",
       "name": "Micro-Link Hair Extensions",
       "cat_id": 6,
@@ -11095,7 +11062,7 @@
       ]
     },
     {
-      "id": 459,
+      "id": "459",
       "sku": "HE-004",
       "name": "Synthetic Hair Extensions",
       "cat_id": 6,
@@ -11118,7 +11085,7 @@
       ]
     },
     {
-      "id": 460,
+      "id": "460",
       "sku": "HE-005",
       "name": "Human Hair Extensions",
       "cat_id": 6,
@@ -11139,8 +11106,9 @@
         "../img/skin/SUBCAT1 (5).png",
         "../img/skin/landscape.png"
       ]
-    },    {
-      "id": 461,
+    },
+    {
+      "id": "461",
       "sku": "HE-002",
       "name": "Tape-In Hair Extensions",
       "cat_id": 6,
@@ -11150,7 +11118,10 @@
       "price": 59.99,
       "weight": "100g",
       "brand": "Orna Accessories",
-      "tags": ["hair extension", "tape-in"],
+      "tags": [
+        "hair extension",
+        "tape-in"
+      ],
       "images": [
         "../img/skin/SUBCAT1 (1).png",
         "../img/skin/SUBCAT1 (3).png",
@@ -11160,7 +11131,7 @@
       ]
     },
     {
-      "id": 462,
+      "id": "462",
       "sku": "HE-003",
       "name": "Micro-Link Hair Extensions",
       "cat_id": 6,
@@ -11170,7 +11141,10 @@
       "price": 69.99,
       "weight": "100g",
       "brand": "Orna Accessories",
-      "tags": ["hair extension", "micro-link"],
+      "tags": [
+        "hair extension",
+        "micro-link"
+      ],
       "images": [
         "../img/skin/SUBCAT1 (1).png",
         "../img/skin/SUBCAT1 (3).png",
@@ -11180,7 +11154,7 @@
       ]
     },
     {
-      "id": 463,
+      "id": "463",
       "sku": "HE-004",
       "name": "Synthetic Hair Extensions",
       "cat_id": 6,
@@ -11190,7 +11164,10 @@
       "price": 29.99,
       "weight": "100g",
       "brand": "Orna Accessories",
-      "tags": ["hair extension", "synthetic"],
+      "tags": [
+        "hair extension",
+        "synthetic"
+      ],
       "images": [
         "../img/skin/SUBCAT1 (1).png",
         "../img/skin/SUBCAT1 (3).png",
@@ -11200,7 +11177,7 @@
       ]
     },
     {
-      "id": 464,
+      "id": "464",
       "sku": "HE-005",
       "name": "Human Hair Extensions",
       "cat_id": 6,
@@ -11210,7 +11187,10 @@
       "price": 89.99,
       "weight": "100g",
       "brand": "Orna Accessories",
-      "tags": ["hair extension", "human hair"],
+      "tags": [
+        "hair extension",
+        "human hair"
+      ],
       "images": [
         "../img/skin/SUBCAT1 (1).png",
         "../img/skin/SUBCAT1 (3).png",
@@ -11218,8 +11198,9 @@
         "../img/skin/SUBCAT1 (5).png",
         "../img/skin/landscape.png"
       ]
-    },    {
-      "id": 465,
+    },
+    {
+      "id": "465",
       "sku": "HE-002",
       "name": "Tape-In Hair Extensions",
       "cat_id": 6,
@@ -11229,7 +11210,10 @@
       "price": 59.99,
       "weight": "100g",
       "brand": "Orna Accessories",
-      "tags": ["hair extension", "tape-in"],
+      "tags": [
+        "hair extension",
+        "tape-in"
+      ],
       "images": [
         "../img/skin/SUBCAT1 (1).png",
         "../img/skin/SUBCAT1 (3).png",
@@ -11239,7 +11223,7 @@
       ]
     },
     {
-      "id": 466,
+      "id": "466",
       "sku": "HE-003",
       "name": "Micro-Link Hair Extensions",
       "cat_id": 6,
@@ -11249,7 +11233,10 @@
       "price": 69.99,
       "weight": "100g",
       "brand": "Orna Accessories",
-      "tags": ["hair extension", "micro-link"],
+      "tags": [
+        "hair extension",
+        "micro-link"
+      ],
       "images": [
         "../img/skin/SUBCAT1 (1).png",
         "../img/skin/SUBCAT1 (3).png",
@@ -11259,7 +11246,7 @@
       ]
     },
     {
-      "id": 467,
+      "id": "467",
       "sku": "HE-004",
       "name": "Synthetic Hair Extensions",
       "cat_id": 6,
@@ -11269,7 +11256,10 @@
       "price": 29.99,
       "weight": "100g",
       "brand": "Orna Accessories",
-      "tags": ["hair extension", "synthetic"],
+      "tags": [
+        "hair extension",
+        "synthetic"
+      ],
       "images": [
         "../img/skin/SUBCAT1 (1).png",
         "../img/skin/SUBCAT1 (3).png",
@@ -11279,7 +11269,7 @@
       ]
     },
     {
-      "id": 468,
+      "id": "468",
       "sku": "HE-005",
       "name": "Human Hair Extensions",
       "cat_id": 6,
@@ -11289,88 +11279,22 @@
       "price": 89.99,
       "weight": "100g",
       "brand": "Orna Accessories",
-      "tags": ["hair extension", "human hair"],
+      "tags": [
+        "hair extension",
+        "human hair"
+      ],
       "images": [
         "../img/skin/SUBCAT1 (1).png",
         "../img/skin/SUBCAT1 (3).png",
         "../img/skin/SUBCAT1 (4).png",
         "../img/skin/SUBCAT1 (5).png",
         "../img/skin/landscape.png"
-      ]
-    },{
-      "id": 469,
-      "sku": "N-005",
-      "name": "Statement Necklace",
-      "cat_id": 5,
-      "sub_cat_id": 63,
-      "description": "A bold statement necklace.",
-      "additional_description": "Adds flair to any outfit.",
-      "price": 34.99,
-      "weight": "60g",
-      "brand": "Orna Jewelry",
-      "tags": [
-        "necklace",
-        "statement"
-      ],
-      "images": [
-        "../img/rent-product/necklace/necklace (5).png",
-        "../img/rent-product/necklace/necklace (5).png",
-        "../img/rent-product/necklace/necklace (5).png",
-        "../img/rent-product/necklace/necklace (5).png",
-        "../img/rent-product/necklace/necklace (5).png"
-        
-      ]
-    },{
-      "id": 470,
-      "sku": "N-005",
-      "name": "Statement Necklace",
-      "cat_id": 5,
-      "sub_cat_id": 63,
-      "description": "A bold statement necklace.",
-      "additional_description": "Adds flair to any outfit.",
-      "price": 34.99,
-      "weight": "60g",
-      "brand": "Orna Jewelry",
-      "tags": [
-        "necklace",
-        "statement"
-      ],
-      "images": [
-        "../img/rent-product/necklace/necklace (6).png",
-        "../img/rent-product/necklace/necklace (6).png",
-        "../img/rent-product/necklace/necklace (6).png",
-        "../img/rent-product/necklace/necklace (6).png",
-        "../img/rent-product/necklace/necklace (6).png"
-        
-      ]
-    },{
-      "id": 471,
-      "sku": "N-005",
-      "name": "Statement Necklace",
-      "cat_id": 5,
-      "sub_cat_id": 63,
-      "description": "A bold statement necklace.",
-      "additional_description": "Adds flair to any outfit.",
-      "price": 34.99,
-      "weight": "60g",
-      "brand": "Orna Jewelry",
-      "tags": [
-        "necklace",
-        "statement"
-      ],
-      "images": [
-        "../img/rent-product/necklace/necklace (7).png",
-        "../img/rent-product/necklace/necklace (7).png",
-        "../img/rent-product/necklace/necklace (7).png",
-        "../img/rent-product/necklace/necklace (7).png",
-        "../img/rent-product/necklace/necklace (7).png"
-        
       ]
     }
   ],
   "offer": [
     {
-      "id": 1,
+      "id": "1",
       "product_id": [
         1,
         2,
@@ -11385,7 +11309,7 @@
       "offer_end_date": "2022-01-31"
     },
     {
-      "id": 2,
+      "id": "2",
       "product_id": [
         7,
         8,
@@ -11402,7 +11326,7 @@
   ],
   "review": [
     {
-      "id": 1,
+      "id": "1",
       "product_id": 1,
       "rating": 4,
       "review": "I was recommended snaga from a dear friend. Gives energy, strength & motivation! WOW!!!",
@@ -11413,7 +11337,7 @@
       }
     },
     {
-      "id": 2,
+      "id": "2",
       "product_id": 2,
       "rating": 5,
       "review": "Absolutely love this product! It has completely changed my daily routine for the better.",
@@ -11424,7 +11348,7 @@
       }
     },
     {
-      "id": 3,
+      "id": "3",
       "product_id": 1,
       "rating": 3,
       "review": "It’s decent but not as effective as I had hoped. Still worth trying!",
@@ -11435,7 +11359,7 @@
       }
     },
     {
-      "id": 4,
+      "id": "4",
       "product_id": 3,
       "rating": 5,
       "review": "Best purchase I’ve made this year. Highly recommend!",
@@ -11446,7 +11370,7 @@
       }
     },
     {
-      "id": 5,
+      "id": "5",
       "product_id": 4,
       "rating": 4,
       "review": "Works as advertised. I feel a noticeable improvement in my energy levels.",
@@ -11457,7 +11381,7 @@
       }
     },
     {
-      "id": 6,
+      "id": "6",
       "product_id": 2,
       "rating": 2,
       "review": "Not satisfied. The results were underwhelming compared to my expectations.",
@@ -11468,7 +11392,7 @@
       }
     },
     {
-      "id": 7,
+      "id": "7",
       "product_id": 5,
       "rating": 5,
       "review": "Fantastic product! My whole family uses it now.",
@@ -11479,7 +11403,7 @@
       }
     },
     {
-      "id": 8,
+      "id": "8",
       "product_id": 3,
       "rating": 4,
       "review": "Good quality and effective. Will buy again for sure.",
@@ -11490,7 +11414,7 @@
       }
     },
     {
-      "id": 9,
+      "id": "9",
       "product_id": 6,
       "rating": 3,
       "review": "Average experience. Might work better for others, but it’s not for me.",
@@ -11501,7 +11425,7 @@
       }
     },
     {
-      "id": 10,
+      "id": "10",
       "product_id": 4,
       "rating": 5,
       "review": "Exceeded my expectations! Will definitely repurchase.",
@@ -11510,6 +11434,44 @@
         "date": "7 May 2024",
         "image": "img/home2/testimonial-author-img10.png"
       }
+    }
+  ],
+  "cart": [
+    {
+      "id": "cart-3q98ye9mj",
+      "product_id": "324",
+      "time": "2025-02-25T11:25:50.328Z",
+      "quantity": 1
+    },
+    {
+      "id": "cart-qnamwmxsn",
+      "product_id": "334",
+      "time": "2025-02-25T11:26:11.444Z",
+      "quantity": 1
+    },
+    {
+      "id": "cart-iv1bpy8gw",
+      "product_id": "397",
+      "time": "2025-02-25T11:26:22.602Z",
+      "quantity": 1
+    },
+    {
+      "id": "cart-dfno8ih96",
+      "product_id": "387",
+      "time": "2025-02-25T11:27:02.133Z",
+      "quantity": 1
+    },
+    {
+      "id": "cart-dssds43s",
+      "product_id": "387",
+      "time": "2025-02-25T11:27:02.133Z",
+      "quantity": 1
+    },
+    {
+      "id": "cart-t4w1txbla",
+      "product_id": "314",
+      "time": "2025-02-25T11:47:13.988Z",
+      "quantity": 1
     }
   ]
 }
