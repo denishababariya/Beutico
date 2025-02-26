@@ -1,3 +1,113 @@
+// start auth
+const apiUrl = "http://localhost:3000/users"; 
+        
+// Function to register user
+async function registerUser() {
+  const username = document.querySelector("#profile input[placeholder='User Name *']").value.trim();
+  const email = document.querySelector("#profile input[placeholder='Email Here *']").value.trim();
+  const password = document.querySelector("#password2").value.trim();
+  const confirmPassword = document.querySelector("#password3").value.trim();
+
+  if (!username || !email || !password || !confirmPassword) {
+    alert("All fields are required.");
+    return;
+  }
+
+  if (password !== confirmPassword) {
+    alert("Passwords do not match.");
+    return;
+  }
+
+  try {
+    // Check if the email already exists
+    const response = await fetch(apiUrl);
+    const users = await response.json();
+
+    if (users.some(user => user.email === email)) {
+      alert("Email already registered.");
+      return;
+    }
+
+    // New user object
+    const newUser = {
+      username,
+      email,
+      password,
+      confirmPassword
+    };
+
+    // Send data to API
+    const registerResponse = await fetch(apiUrl, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(newUser)
+    });
+
+    if (registerResponse.ok) {
+      // localStorage.setItem("loggedInUser", JSON.stringify(newUser));
+      window.location.href = "my-account.html"; // Redirect to my-account page
+      alert("Registration successful.......!");
+    } else {
+      alert("Registration failed. Try again.");
+    }
+  } catch (error) {
+    console.error("Error registering user:", error);
+  }
+}
+
+// Function to log in user
+async function loginUser() {
+  const usernameOrEmail = document.querySelector("#home input[placeholder='User name or Email *']").value.trim();
+  const password = document.querySelector("#password").value.trim();
+
+  if (!usernameOrEmail || !password) {
+    alert("Please enter username/email and password.");
+    return;
+  }
+
+  try {
+    const response = await fetch(apiUrl);
+    const users = await response.json();
+
+    const user = users.find(user => 
+      (user.username === usernameOrEmail || user.email === usernameOrEmail) && user.password === password
+    );
+
+    if (user) {
+      localStorage.setItem("loggedInUser", JSON.stringify(user));
+      alert("Login successful!");
+      window.location.href = "my-account.html"; // Redirect after login
+    } else {
+      alert("Invalid username/email or password.");
+    }
+  } catch (error) {
+    console.error("Error logging in:", error);
+  }
+}
+
+// Event Listeners
+document.querySelector("#profile .primary-btn1").addEventListener("click", (e) => {
+  e.preventDefault();
+  registerUser();
+});
+
+document.querySelector("#home .primary-btn1").addEventListener("click", (e) => {
+  e.preventDefault();
+  loginUser();
+});
+0
+// Toggle Password Visibility
+document.querySelectorAll(".bi-eye-slash").forEach(icon => {
+  icon.addEventListener("click", () => {
+    const input = icon.previousElementSibling;
+    input.type = input.type === "password" ? "text" : "password";
+    icon.classList.toggle("bi-eye");
+    icon.classList.toggle("bi-eye-slash");
+  });
+});
+// end auth
+
+// header start
 document.addEventListener("DOMContentLoaded", function () {
   fetch('http://localhost:3000/category', {
     method: 'GET',
@@ -91,7 +201,7 @@ document.addEventListener("DOMContentLoaded", function () {
           categoryList.appendChild(li);
 
           // Only hover events
-          li.addEventListener('mouseenter', function() {
+          li.addEventListener('mouseenter', function () {
             closeAllMegaMenus();
             li.classList.add('active');
             megaMenuDiv.style.display = 'block';
@@ -99,7 +209,7 @@ document.addEventListener("DOMContentLoaded", function () {
             icon.classList.add('bi-dash');
           });
 
-          li.addEventListener('mouseleave', function() {
+          li.addEventListener('mouseleave', function () {
             li.classList.remove('active');
             megaMenuDiv.style.display = 'none';
             icon.classList.remove('bi-dash');
@@ -114,7 +224,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const pagesLink = document.createElement('a');
         pagesLink.href = '#';
         pagesLink.classList.add('drop-down');
-        pagesLink.textContent = 'Pages';
+        pagesLink.textContent = 'Info';
 
         const pagesIcon = document.createElement('i');
         pagesIcon.classList.add('bi', 'bi-plus', 'dropdown-icon');
@@ -143,7 +253,7 @@ document.addEventListener("DOMContentLoaded", function () {
         categoryList.appendChild(pagesLi);
 
         // Hover events for Pages menu
-        pagesLi.addEventListener('mouseenter', function() {
+        pagesLi.addEventListener('mouseenter', function () {
           closeAllMegaMenus();
           pagesLi.classList.add('active');
           subMenu.style.display = 'block';
@@ -151,7 +261,7 @@ document.addEventListener("DOMContentLoaded", function () {
           pagesIcon.classList.add('bi-dash');
         });
 
-        pagesLi.addEventListener('mouseleave', function() {
+        pagesLi.addEventListener('mouseleave', function () {
           pagesLi.classList.remove('active');
           subMenu.style.display = 'none';
           pagesIcon.classList.remove('bi-dash');
@@ -161,7 +271,7 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     .catch(error => console.error('There was a problem with the fetch operation:', error));
 });
-
+// header end
 
 // popular categories
 document.addEventListener("DOMContentLoaded", function () {
@@ -392,9 +502,9 @@ document.addEventListener("DOMContentLoaded", async function () {
                         </a>
                         <div class="overlay">
                             <div class="cart-area">
-                                <a href="cart.html" class="hover-btn3 add-cart-btn">
-                                    <i class="bi bi-bag-check"></i> Drop in Basket
-                                </a>
+                                 <a href="cart.html" class="hover-btn3 add-cart-btn" data-product-id="${product.id}">
+       <i class="bi bi-bag-check"></i> Drop in Basket
+   </a>
                             </div>
                         </div>
                         <div class="view-and-favorite-area">
@@ -452,16 +562,36 @@ document.addEventListener("DOMContentLoaded", async function () {
     //   });
     // });
     document.querySelectorAll('.product-view-btn').forEach(button => {
-    button.addEventListener('click', function() {
+      button.addEventListener('click', function () {
         const productId = this.getAttribute('data-product-id');
         localStorage.setItem('selectedeyeId', productId); // Store the product ID in localStorage
         console.log("Product ID stored:", productId);
-        
+
         // Open the modal after storing the ID
         const productModal = new bootstrap.Modal(document.getElementById('product-view'));
         productModal.show();
+      });
     });
-});
+    document.querySelectorAll('.add-cart-btn').forEach(button => {
+      button.addEventListener('click', async function () {
+        const productId = this.getAttribute('data-product-id'); // Get the product ID from the button
+        localStorage.setItem('selectedeyeId', productId); // Store the product ID in local storage
+        console.log("Product ID stored:", productId);
+    
+        // Fetch product details from the server
+        const response = await fetch(`http://localhost:3000/product/${productId}`);
+        const product = await response.json();
+    
+        // Add product to cart
+        await fetch('http://localhost:3000/cart', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(product) // Send the product data to the cart
+        });
+      });
+    });
 
   } catch (error) {
     console.error("Error fetching data:", error);
@@ -469,13 +599,17 @@ document.addEventListener("DOMContentLoaded", async function () {
 });
 // end new releas
 
+// ... existing code ...
+// ... existing code ...
 
+// ... existing code ...
+// ... existing code ...
 // start model
 
 document.addEventListener('DOMContentLoaded', () => {
   // Check if 'selectedeyeId' is available in localStorage
-  const selectedeyeId = localStorage.getItem('selectedeyeId');   
-  
+  const selectedeyeId = localStorage.getItem('selectedeyeId');
+
   if (selectedeyeId) {
     // If valid ID is found, proceed with modal creation and data fetching
     createProductModal();
@@ -585,7 +719,7 @@ function createProductModal() {
         </div>
       </div>
     </div>
-  `;    
+  `;
 
   // Append modal to body
   document.body.appendChild(modal);
@@ -650,7 +784,7 @@ async function fetchAndDisplayProduct(selectedeyeId) {
       document.querySelector('.brand-value').textContent = product.brand;
       document.querySelector('.category-value').textContent = product.category;
       document.querySelector('.main-product-img').src = product.images[0];
-      
+
       // Call to create thumbnails if there are multiple images
       createThumbnails(product.images);
     } else {
@@ -1032,14 +1166,14 @@ document.addEventListener("DOMContentLoaded", async function () {
 
       // If category ID exists, filter by it
       if (selectedCategoryId) {
-        filteredProducts = filteredProducts.filter(product => 
+        filteredProducts = filteredProducts.filter(product =>
           product.cat_id == selectedCategoryId
         );
       }
 
       // If subcategory ID exists, further filter the results
       if (selectedSubcategoryId) {
-        filteredProducts = filteredProducts.filter(product => 
+        filteredProducts = filteredProducts.filter(product =>
           product.sub_cat_id == selectedSubcategoryId
         );
       }
@@ -1099,19 +1233,19 @@ document.addEventListener("DOMContentLoaded", async function () {
     function handlePagination(page) {
       const selectedCategoryId = localStorage.getItem("selectedCategoryId");
       const selectedSubcategoryId = localStorage.getItem("selectedSubcategoryId");
-      
+
       let filteredProducts = data;
 
       // Filter by category if exists
       if (selectedCategoryId) {
-        filteredProducts = filteredProducts.filter(product => 
+        filteredProducts = filteredProducts.filter(product =>
           product.category_id == selectedCategoryId
         );
       }
 
       // Filter by subcategory if exists
       if (selectedSubcategoryId) {
-        filteredProducts = filteredProducts.filter(product => 
+        filteredProducts = filteredProducts.filter(product =>
           product.sub_cat_id == selectedSubcategoryId
         );
       }
@@ -1414,50 +1548,50 @@ document.addEventListener("DOMContentLoaded", async function fetchReviews() {
 
 // Add event listener for product view button
 document.querySelectorAll('.product-view-btn').forEach(button => {
-    button.addEventListener('click', function() {
-        const productId = this.getAttribute('data-product-id');
-        localStorage.setItem('selectedeyeId', productId); // Store the product ID in local storage
-        console.log("Product ID stored:", productId);
-    });
+  button.addEventListener('click', function () {
+    const productId = this.getAttribute('data-product-id');
+    localStorage.setItem('selectedeyeId', productId); // Store the product ID in local storage
+    console.log("Product ID stored:", productId);
+  });
 });
 
 // Add event listener for modal show event
 document.addEventListener('DOMContentLoaded', () => {
-    const productModal = document.getElementById('product-view');
-    productModal.addEventListener('show.bs.modal', async () => {
-        const selectedeyeId = localStorage.getItem('selectedeyeId');
-        if (selectedeyeId) {
-            await fetchAndDisplayProduct(selectedeyeId); // Fetch and display the product on modal open
-        } else {
-            console.error('No product ID found in localStorage');
-        }
-    });
+  const productModal = document.getElementById('product-view');
+  productModal.addEventListener('show.bs.modal', async () => {
+    const selectedeyeId = localStorage.getItem('selectedeyeId');
+    if (selectedeyeId) {
+      await fetchAndDisplayProduct(selectedeyeId); // Fetch and display the product on modal open
+    } else {
+      console.error('No product ID found in localStorage');
+    }
+  });
 });
 
 // Function to fetch product data and update modal
 async function fetchAndDisplayProduct(selectedeyeId) {
-    try {
-        const response = await fetch('http://localhost:3000/product');
-        const products = await response.json();
-        const product = products.find(p => p.id == selectedeyeId); // Match the product ID
+  try {
+    const response = await fetch('http://localhost:3000/product');
+    const products = await response.json();
+    const product = products.find(p => p.id == selectedeyeId); // Match the product ID
 
-        if (product) {
-            // Update modal content with the fetched product data
-            document.querySelector('.product-title').textContent = product.name;
-            document.querySelector('.product-description').textContent = product.description;
-            document.querySelector('.current-price').textContent = product.price.toFixed(2);
-            document.querySelector('.original-price').textContent = (product.price * 1.2).toFixed(2);
-            document.querySelector('.sku-value').textContent = product.sku;
-            document.querySelector('.brand-value').textContent = product.brand;
-            document.querySelector('.category-value').textContent = product.category;
-            document.querySelector('.main-product-img').src = product.images[0];
-            
-            // Call to create thumbnails if there are multiple images
-            createThumbnails(product.images);
-        } else {
-            console.error('Product not found');
-        }
-    } catch (error) {
-        console.error('Error fetching product data:', error);
+    if (product) {
+      // Update modal content with the fetched product data
+      document.querySelector('.product-title').textContent = product.name;
+      document.querySelector('.product-description').textContent = product.description;
+      document.querySelector('.current-price').textContent = product.price.toFixed(2);
+      document.querySelector('.original-price').textContent = (product.price * 1.2).toFixed(2);
+      document.querySelector('.sku-value').textContent = product.sku;
+      document.querySelector('.brand-value').textContent = product.brand;
+      document.querySelector('.category-value').textContent = product.category;
+      document.querySelector('.main-product-img').src = product.images[0];
+
+      // Call to create thumbnails if there are multiple images
+      createThumbnails(product.images);
+    } else {
+      console.error('Product not found');
     }
+  } catch (error) {
+    console.error('Error fetching product data:', error);
+  }
 }

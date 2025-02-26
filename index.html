@@ -213,114 +213,9 @@
             </div>
           </div>
         </div>
-        <script>
-          const apiUrl = "http://localhost:3000/users"; 
-        
-          // Function to register user
-          async function registerUser() {
-            const username = document.querySelector("#profile input[placeholder='User Name *']").value.trim();
-            const email = document.querySelector("#profile input[placeholder='Email Here *']").value.trim();
-            const password = document.querySelector("#password2").value.trim();
-            const confirmPassword = document.querySelector("#password3").value.trim();
-        
-            if (!username || !email || !password || !confirmPassword) {
-              alert("All fields are required.");
-              return;
-            }
-        
-            if (password !== confirmPassword) {
-              alert("Passwords do not match.");
-              return;
-            }
-        
-            try {
-              // Check if the email already exists
-              const response = await fetch(apiUrl);
-              const users = await response.json();
-        
-              if (users.some(user => user.email === email)) {
-                alert("Email already registered.");
-                return;
-              }
-        
-              // New user object
-              const newUser = {
-                username,
-                email,
-                password,
-                confirmPassword
-              };
-        
-              // Send data to API
-              const registerResponse = await fetch(apiUrl, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(newUser)
-              });
-        
-              if (registerResponse.ok) {
-                // localStorage.setItem("loggedInUser", JSON.stringify(newUser));
-                window.location.href = "my-account.html"; // Redirect to my-account page
-                alert("Registration successful.......!");
-              } else {
-                alert("Registration failed. Try again.");
-              }
-            } catch (error) {
-              console.error("Error registering user:", error);
-            }
-          }
-        
-          // Function to log in user
-          async function loginUser() {
-            const usernameOrEmail = document.querySelector("#home input[placeholder='User name or Email *']").value.trim();
-            const password = document.querySelector("#password").value.trim();
-        
-            if (!usernameOrEmail || !password) {
-              alert("Please enter username/email and password.");
-              return;
-            }
-        
-            try {
-              const response = await fetch(apiUrl);
-              const users = await response.json();
-        
-              const user = users.find(user => 
-                (user.username === usernameOrEmail || user.email === usernameOrEmail) && user.password === password
-              );
-        
-              if (user) {
-                localStorage.setItem("loggedInUser", JSON.stringify(user));
-                alert("Login successful!");
-                window.location.href = "my-account.html"; // Redirect after login
-              } else {
-                alert("Invalid username/email or password.");
-              }
-            } catch (error) {
-              console.error("Error logging in:", error);
-            }
-          }
-        
-          // Event Listeners
-          document.querySelector("#profile .primary-btn1").addEventListener("click", (e) => {
-            e.preventDefault();
-            registerUser();
-          });
-        
-          document.querySelector("#home .primary-btn1").addEventListener("click", (e) => {
-            e.preventDefault();
-            loginUser();
-          });
-        
-          // Toggle Password Visibility
-          document.querySelectorAll(".bi-eye-slash").forEach(icon => {
-            icon.addEventListener("click", () => {
-              const input = icon.previousElementSibling;
-              input.type = input.type === "password" ? "text" : "password";
-              icon.classList.toggle("bi-eye");
-              icon.classList.toggle("bi-eye-slash");
-            });
-          });
-        </script>
+        <!-- <script>
+         
+        </script> -->
         
       </div>
     </div>
@@ -4924,7 +4819,7 @@
     <!-- Start Makeup section section -->
     <div class="makeup-section mb-110">
       <div class="container">
-        <d class="makeup-top-item">
+        <div class="makeup-top-item">
           <div class="row align-items-center justify-content-center g-0 gy-4">
             <div class="col-lg-6">
               <div class="makeup-img hover-img">
@@ -4949,7 +4844,7 @@
               </div>
             </div>
           </div>
-        </d iv>
+        </div>
         <div class="row align-items-center justify-content-center g-0 gy-4">
           <div class="col-lg-6 order-lg-1 order-2">
             <div class="makeup-content">
