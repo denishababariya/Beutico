@@ -109,26 +109,48 @@ document.querySelectorAll(".bi-eye-slash").forEach(icon => {
 
 // header start
 document.addEventListener("DOMContentLoaded", function () {
-  let activeCategory = null; // Track currently active category
-
-  // Fetch categories
   fetch('http://localhost:3000/category', {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
     }
   })
-    .then(response => response.json())
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok ' + response.statusText);
+      }
+      return response.json();
+    })
     .then(categories => {
       const categoryList = document.getElementById('categoryList');
+
+      // Function to close all mega menus
+      function closeAllMegaMenus() {
+        document.querySelectorAll('.menu-item-has-children').forEach(item => {
+          item.classList.remove('active');
+          const megaMenu = item.querySelector('.mega-menu2');
+          const icon = item.querySelector('.dropdown-icon');
+          if (megaMenu) {
+            megaMenu.style.display = 'none';
+          }
+          if (icon) {
+            icon.classList.remove('bi-dash');
+            icon.classList.add('bi-plus');
+          }
+        });
+      }
 
       return fetch('http://localhost:3000/subcategory', {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
         }
-      }).then(response => response.json()).then(subcategories => {
-
+      }).then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok ' + response.statusText);
+        }
+        return response.json();
+      }).then(subcategories => {
         categories.forEach(category => {
           const li = document.createElement('li');
           li.classList.add('menu-item-has-children', 'position-inherit');
@@ -161,11 +183,12 @@ document.addEventListener("DOMContentLoaded", function () {
             subLi.classList.add('menu-single-item');
 
             const subA = document.createElement('a');
-            subA.href = `shop-list.html`;
+            subA.href = 'shop-list.html';
             subA.textContent = sub.sub_name;
 
             subA.addEventListener('click', function () {
               localStorage.setItem('selectedSubcategoryId', sub.id);
+              localStorage.setItem('selectedcategoryId', "");
             });
 
             subLi.appendChild(subA);
@@ -245,7 +268,6 @@ document.addEventListener("DOMContentLoaded", function () {
           pagesIcon.classList.add('bi-plus');
         });
       });
-
     })
     .catch(error => console.error('There was a problem with the fetch operation:', error));
 });
@@ -696,7 +718,6 @@ fetch(`http://localhost:3000/product/${selectedProductId3}`)
 // ... existing code ...
 // ... existing code ...
 // start model
-
 document.addEventListener('DOMContentLoaded', () => {
   // Check if 'selectedeyeId' is available in localStorage
   const selectedeyeId = localStorage.getItem('selectedeyeId');
@@ -818,6 +839,14 @@ function createProductModal() {
   // Initialize event listeners and functionality
   initializeModal();
 
+  // Add event listener to close button
+  const closeButton = modal.querySelector('.close-btn');
+  closeButton.addEventListener('click', () => {
+    const backdrops = document.querySelectorAll('.modal-backdrop.show'); // Select all visible backdrops
+    backdrops.forEach(backdrop => {
+      backdrop.style.display = 'none'; // Hide each backdrop
+    });
+  });
 }
 
 function initializeModal() {
@@ -1247,21 +1276,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         ? products.filter(product => product.sub_cat_id == selectedSubcategoryId)
         : products;
 
-      // If category ID exists, filter by it
-      if (selectedCategoryId) {
-        filteredProducts = filteredProducts.filter(product =>
-          product.cat_id == selectedCategoryId
-        );
-      }
-
-      // If subcategory ID exists, further filter the results
-      if (selectedSubcategoryId) {
-        filteredProducts = filteredProducts.filter(product =>
-          product.sub_cat_id == selectedSubcategoryId
-        );
-      }
-
-      // Display filtered products
+      // Display products
       filteredProducts.forEach(product => {
         const productCard = `
             <div class="col-lg-3 col-md-4 col-sm-6 item">
@@ -1332,22 +1347,9 @@ document.addEventListener("DOMContentLoaded", async function () {
     // Function to handle pagination
     function handlePagination(page) {
       const selectedSubcategoryId = localStorage.getItem("selectedSubcategoryId");
-
-      let filteredProducts = data;
-
-      // Filter by category if exists
-      if (selectedCategoryId) {
-        filteredProducts = filteredProducts.filter(product =>
-          product.category_id == selectedCategoryId
-        );
-      }
-
-      // Filter by subcategory if exists
-      if (selectedSubcategoryId) {
-        filteredProducts = filteredProducts.filter(product =>
-          product.sub_cat_id == selectedSubcategoryId
-        );
-      }
+      const filteredProducts = selectedSubcategoryId
+        ? data.filter(product => product.sub_cat_id == selectedSubcategoryId)
+        : data;
 
       const start = (page - 1) * productsPerPage;
       const end = start + productsPerPage;
