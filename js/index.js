@@ -590,7 +590,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
           productCard.appendChild(productCardContent);
           colDiv.appendChild(productCard);
-          categoryContainer.appendChild(colDiv);
+          categoryContainer.appendChild(colDiv); // Append the new category card to the container
 
           // denisha
           const borderSpan = document.createElement("span");
@@ -788,6 +788,7 @@ document.addEventListener("DOMContentLoaded", async function () {
           `http://localhost:3000/product/${productId}`
         );
         const product = await response.json();
+console.log(product,"product");
 
         // Add product to cart
         await fetch("http://localhost:3000/cart", {
@@ -795,7 +796,7 @@ document.addEventListener("DOMContentLoaded", async function () {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(product), // Send the product data to the cart
+          body: JSON.stringify({ id: product.id }) // Send the product data to the cart
         });
       });
     });
@@ -849,7 +850,7 @@ fetch(`http://localhost:3000/product/${selectedProductId3}`)
                                         </a>
                                         <div class="overlay">
                                             <div class="cart-area">
-                                                <a href="cart.html" class="hover-btn3 add-cart-btn"><i class="bi bi-bag-check"></i> Add To Cart</a>
+                                                <a href="cart.html" class="hover-btn3 add-cart-btn" data-product-id="${product.id}><i class="bi bi-bag-check"></i> Add To Cart</a>
                                             </div>
                                         </div>
                                         <div class="view-and-favorite-area">
@@ -897,8 +898,9 @@ fetch(`http://localhost:3000/product/${selectedProductId3}`)
             });
           })
 
-          .catch((error) => {
-            console.error("Error fetching category products:", error);
+
+          .catch(error => {
+            console.error('Error fetching category products:', error);
           });
       })
       .catch((error) =>
@@ -986,7 +988,7 @@ function createProductModal() {
                   </div>
                   <div class="shop-details-btn">
                     <a href="shop-list.html" class="primary-btn1 hover-btn3">*Shop Now*</a>
-                    <a href="#" class="primary-btn1 style-3 hover-btn4">*Drop in Basket*</a>
+                    <a href="#" class="primary-btn1 style-3 hover-btn4" data-product-id="${product.id}">*Drop in Basket*</a>
                   </div>
                   <div class="product-info">
                     <ul class="product-info-list">
@@ -1312,7 +1314,7 @@ function createProductCard(product) {
             </a>
             <div class="cart-btn-area">
               <div class="cart-btn">
-                <a href="cart.html" class="add-cart-btn2 round hover-btn5">
+                <a href="cart.html" class="add-cart-btn2 add-cart-btn round hover-btn5" data-product-id="${product.id}>
                   <i class="bi bi-bag-check"></i> Drop in Basket
                 </a>
               </div>
@@ -1530,7 +1532,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                   </a>
                   <div class="overlay">
                     <div class="cart-area">
-                      <a href="cart.html" class="hover-btn3 add-cart-btn"><i class="bi bi-bag-check"></i> Drop in Basket</a>
+                      <a href="cart.html" class="hover-btn3 add-cart-btn" data-product-id="${product.id}"><i class="bi bi-bag-check"></i> Drop in Basket</a>
                     </div>
                   </div>
                   <div class="view-and-favorite-area">
@@ -1956,7 +1958,7 @@ async function fetchAndDisplayProduct(selectedeyeId) {
 
 // Function to update cart count display
 function updateCartCount() {
-  const cartProducts = JSON.parse(sessionStorage.getItem("cartProducts")) || [];
+  const cartProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
   const cartCount = cartProducts.length; // Get the count of products in the cart
   document.querySelector(".cart-count").textContent = cartCount
     .toString()
@@ -1964,15 +1966,15 @@ function updateCartCount() {
 }
 
 // Call this function after adding a product to the cart
-document.addEventListener("click", function (event) {
-  if (event.target.classList.contains("add-cart-btn")) {
+document.addEventListener('click', function (event) {
+  if (event.target.classList.contains('add-cart-btn')) {
     event.preventDefault(); // Prevent default anchor behavior
-    const productId = event.target.getAttribute("data-product-id");
+    const productId = event.target.getAttribute('data-product-id');
 
     // Fetch product details from localStorage or API
     fetch(`http://localhost:3000/product/${productId}`)
-      .then((response) => response.json())
-      .then((product) => {
+      .then(response => response.json())
+      .then(product => {
         // Create a unique cart ID
         const cartId = generateUniqueId(); // Generate a unique ID
 
@@ -1981,42 +1983,39 @@ document.addEventListener("click", function (event) {
           id: cartId, // Add the unique cart ID
           product_id: product.id,
           time: new Date().toISOString(), // Current time in ISO format
-          quantity: 1, // Default quantity, can be modified as needed
+          quantity: 1 // Default quantity, can be modified as needed
         };
 
         // Add product to cart API
-        fetch("http://localhost:3000/cart", {
-          method: "POST",
+        fetch('http://localhost:3000/cart', {
+          method: 'POST',
           headers: {
-            "Content-Type": "application/json",
+            'Content-Type': 'application/json',
           },
-          body: JSON.stringify(cartItem), // Send the cart item data
+          body: JSON.stringify(cartItem) // Send the cart item data
         })
-          .then((cartResponse) => {
+          .then(cartResponse => {
             console.log(cartResponse, "cartResponse");
 
             if (!cartResponse.ok) {
-              throw new Error("Failed to add to cart");
+              throw new Error('Failed to add to cart');
             }
-            console.log("Product added to cart:", product);
+            console.log('Product added to cart:', product);
             // Store cart ID in session storage
-            let cartProducts =
-              JSON.parse(sessionStorage.getItem("cartProducts")) || []; // Retrieve existing IDs or initialize an empty array
-            if (!cartProducts.includes(cartId)) {
-              // Check if the cart ID is already in the array
+            let cartProducts = JSON.parse(localStorage.getItem('cartProducts')) || []; // Retrieve existing IDs or initialize an empty array
+            if (!cartProducts.includes(cartId)) { // Check if the cart ID is already in the array
               cartProducts.push(cartId); // Add the cart ID to the array
+            } else {
+                console.log('Product is already in the cart.'); // Optional: log a message if the product is already in the cart
             }
-            sessionStorage.setItem(
-              "cartProducts",
-              JSON.stringify(cartProducts)
-            ); // Store updated array in session storage
+            localStorage.setItem('cartProducts', JSON.stringify(cartProducts)); // Store updated array in session storage
 
             // Update the cart count display
             updateCartCount(); // Call the function to update the cart count
-          })
-          .catch((error) => console.error("Error adding to cart:", error));
+          }) 
+          .catch(error => console.error('Error adding to cart:', error));
       })
-      .catch((error) => console.error("Error fetching product:", error));
+      .catch(error => console.error('Error fetching product:', error));
   }
 });
 
