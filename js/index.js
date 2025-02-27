@@ -1,6 +1,6 @@
 // start auth
-const apiUrl = "http://localhost:3000/users"; 
-        
+const apiUrl = "http://localhost:3000/users";
+
 // Function to register user
 async function registerUser() {
   const username = document.querySelector("#profile input[placeholder='User Name *']").value.trim();
@@ -69,7 +69,7 @@ async function loginUser() {
     const response = await fetch(apiUrl);
     const users = await response.json();
 
-    const user = users.find(user => 
+    const user = users.find(user =>
       (user.username === usernameOrEmail || user.email === usernameOrEmail) && user.password === password
     );
 
@@ -445,7 +445,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
           productCard.appendChild(productCardContent);
           colDiv.appendChild(productCard);
-          categoryContainer.appendChild(colDiv);
+          categoryContainer.appendChild(colDiv); // Append the new category card to the container
 
 
           // denisha
@@ -588,18 +588,19 @@ document.addEventListener("DOMContentLoaded", async function () {
         const productId = this.getAttribute('data-product-id'); // Get the product ID from the button
         localStorage.setItem('selectedeyeId', productId); // Store the product ID in local storage
         console.log("Product ID stored:", productId);
-    
+
         // Fetch product details from the server
         const response = await fetch(`http://localhost:3000/product/${productId}`);
         const product = await response.json();
-    
+console.log(product,"product");
+
         // Add product to cart
         await fetch('http://localhost:3000/cart', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify(product) // Send the product data to the cart
+          body: JSON.stringify({ id: product.id }) // Send the product data to the cart
         });
       });
     });
@@ -653,7 +654,7 @@ fetch(`http://localhost:3000/product/${selectedProductId3}`)
                                         </a>
                                         <div class="overlay">
                                             <div class="cart-area">
-                                                <a href="cart.html" class="hover-btn3 add-cart-btn"><i class="bi bi-bag-check"></i> Add To Cart</a>
+                                                <a href="cart.html" class="hover-btn3 add-cart-btn" data-product-id="${product.id}><i class="bi bi-bag-check"></i> Add To Cart</a>
                                             </div>
                                         </div>
                                         <div class="view-and-favorite-area">
@@ -704,7 +705,7 @@ fetch(`http://localhost:3000/product/${selectedProductId3}`)
 
           })
 
-
+cart.html
 
           .catch(error => {
             console.error('Error fetching category products:', error);
@@ -793,7 +794,7 @@ function createProductModal() {
                   </div>
                   <div class="shop-details-btn">
                     <a href="shop-list.html" class="primary-btn1 hover-btn3">*Shop Now*</a>
-                    <a href="#" class="primary-btn1 style-3 hover-btn4">*Drop in Basket*</a>
+                    <a href="#" class="primary-btn1 style-3 hover-btn4" data-product-id="${product.id}">*Drop in Basket*</a>
                   </div>
                   <div class="product-info">
                     <ul class="product-info-list">
@@ -1039,7 +1040,7 @@ function createSliderProduct(product) {
                 <li>
                     <a data-bs-toggle="modal" data-bs-target="#product-view">
                       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 22 22">
-                            <path d="M21.8601 10.5721C21.6636 10.3032 16.9807 3.98901 10.9999 3.98901C5.019 3.98901 0.335925 10.3032 0.139601 10.5718C0.0488852 10.6961 0 10.846 0 10.9999C0 11.1537 0.0488852 11.3036 0.139601 11.4279C0.335925 11.6967 5.019 18.011 10.9999 18.011C16.9807 18.011 21.6636 11.6967 21.8601 11.4281C21.951 11.3039 21.9999 11.154 21.9999 11.0001C21.9999 10.8462 21.951 10.6963 21.8601 10.5721ZM10.9999 16.5604C6.59432 16.5604 2.77866 12.3696 1.64914 10.9995C2.77719 9.62823 6.58487 5.43955 10.9999 5.43955C15.4052 5.43955 19.2206 9.62969 20.3506 11.0005C19.2225 12.3717 15.4149 16.5604 10.9999 16.5604Z"></path>
+                            <path d="M21.8601 10.5721C21.6636 10.3032 16.9807 3.98901 10.9999 3.98901C5.019 3.98901 0.335925 10.3032 0.139601 10.5718C0.0488852 10.6961 0 10.846 0 10.9999C0 11.1537 0.0488852 11.3036 0.139601 11.4279C0.335925 11.6967 5.019 18.011 10.9999 18.011C16.9807 18.011 21.6636 11.6967 21.8601 11.4281C21.951 11.3039 21.9999 11.154 21.9999 11.0001C21.9999 10.8462 21.951 10.6963 21.8601 10.5721ZM10.9999 16.5604C6.59432 16.5604 2.77866 12.3696 1.64914 10.9995C2.77719 9.62823 6.58487 5.43955 10.9999 5.43955C15.4052 5.43955 19.2206 9.62969 20.3506 11.0005C19.2225 12.3717 15.4149 16.5604 10.9999 16.5604Z" />
                             <path d="M10.9999 6.64832C8.60039 6.64832 6.64819 8.60051 6.64819 11C6.64819 13.3994 8.60039 15.3516 10.9999 15.3516C13.3993 15.3516 15.3515 13.3994 15.3515 11C15.3515 8.60051 13.3993 6.64832 10.9999 6.64832ZM10.9999 13.9011C9.40013 13.9011 8.09878 12.5997 8.09878 11C8.09878 9.40029 9.40017 8.0989 10.9999 8.0989C12.5995 8.0989 13.9009 9.40029 13.9009 11C13.9009 12.5997 12.5996 13.9011 10.9999 13.9011Z"></path>
                           </svg>
                     </a>
@@ -1099,7 +1100,7 @@ function createProductCard(product) {
             </a>
             <div class="cart-btn-area">
               <div class="cart-btn">
-                <a href="cart.html" class="add-cart-btn2 round hover-btn5">
+                <a href="cart.html" class="add-cart-btn2 add-cart-btn round hover-btn5" data-product-id="${product.id}>
                   <i class="bi bi-bag-check"></i> Drop in Basket
                 </a>
               </div>
@@ -1290,7 +1291,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                   </a>
                   <div class="overlay">
                     <div class="cart-area">
-                      <a href="cart.html" class="hover-btn3 add-cart-btn"><i class="bi bi-bag-check"></i> Drop in Basket</a>
+                      <a href="cart.html" class="hover-btn3 add-cart-btn" data-product-id="${product.id}"><i class="bi bi-bag-check"></i> Drop in Basket</a>
                     </div>
                   </div>
                   <div class="view-and-favorite-area">
@@ -1701,7 +1702,7 @@ async function fetchAndDisplayProduct(selectedeyeId) {
 
 // Function to update cart count display
 function updateCartCount() {
-  const cartProducts = JSON.parse(sessionStorage.getItem('cartProducts')) || [];
+  const cartProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
   const cartCount = cartProducts.length; // Get the count of products in the cart
   document.querySelector('.cart-count').textContent = cartCount.toString().padStart(2, '0'); // Update the span with the count
 }
@@ -1709,57 +1710,59 @@ function updateCartCount() {
 // Call this function after adding a product to the cart
 document.addEventListener('click', function (event) {
   if (event.target.classList.contains('add-cart-btn')) {
-      event.preventDefault(); // Prevent default anchor behavior
-      const productId = event.target.getAttribute('data-product-id');
+    event.preventDefault(); // Prevent default anchor behavior
+    const productId = event.target.getAttribute('data-product-id');
 
-      // Fetch product details from localStorage or API
-      fetch(`http://localhost:3000/product/${productId}`)
-          .then(response => response.json())
-          .then(product => {
-              // Create a unique cart ID
-              const cartId = generateUniqueId(); // Generate a unique ID
+    // Fetch product details from localStorage or API
+    fetch(`http://localhost:3000/product/${productId}`)
+      .then(response => response.json())
+      .then(product => {
+        // Create a unique cart ID
+        const cartId = generateUniqueId(); // Generate a unique ID
 
-              // Create a cart item object
-              const cartItem = {
-                  id: cartId, // Add the unique cart ID
-                  product_id: product.id,
-                  time: new Date().toISOString(), // Current time in ISO format
-                  quantity: 1 // Default quantity, can be modified as needed
-              };
+        // Create a cart item object
+        const cartItem = {
+          id: cartId, // Add the unique cart ID
+          product_id: product.id,
+          time: new Date().toISOString(), // Current time in ISO format
+          quantity: 1 // Default quantity, can be modified as needed
+        };
 
-              // Add product to cart API
-              fetch('http://localhost:3000/cart', {
-                  method: 'POST',
-                  headers: {
-                      'Content-Type': 'application/json',
-                  },
-                  body: JSON.stringify(cartItem) // Send the cart item data
-              })
-              .then(cartResponse => {
-                  console.log(cartResponse, "cartResponse");
+        // Add product to cart API
+        fetch('http://localhost:3000/cart', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(cartItem) // Send the cart item data
+        })
+          .then(cartResponse => {
+            console.log(cartResponse, "cartResponse");
 
-                  if (!cartResponse.ok) {
-                      throw new Error('Failed to add to cart');
-                  }
-                  console.log('Product added to cart:', product);
-                  // Store cart ID in session storage
-                  let cartProducts = JSON.parse(sessionStorage.getItem('cartProducts')) || []; // Retrieve existing IDs or initialize an empty array
-                  if (!cartProducts.includes(cartId)) { // Check if the cart ID is already in the array
-                      cartProducts.push(cartId); // Add the cart ID to the array
-                  }
-                  sessionStorage.setItem('cartProducts', JSON.stringify(cartProducts)); // Store updated array in session storage
+            if (!cartResponse.ok) {
+              throw new Error('Failed to add to cart');
+            }
+            console.log('Product added to cart:', product);
+            // Store cart ID in session storage
+            let cartProducts = JSON.parse(localStorage.getItem('cartProducts')) || []; // Retrieve existing IDs or initialize an empty array
+            if (!cartProducts.includes(cartId)) { // Check if the cart ID is already in the array
+              cartProducts.push(cartId); // Add the cart ID to the array
+            } else {
+                console.log('Product is already in the cart.'); // Optional: log a message if the product is already in the cart
+            }
+            localStorage.setItem('cartProducts', JSON.stringify(cartProducts)); // Store updated array in session storage
 
-                  // Update the cart count display
-                  updateCartCount(); // Call the function to update the cart count
-              })
-              .catch(error => console.error('Error adding to cart:', error));
-          })
-          .catch(error => console.error('Error fetching product:', error));
+            // Update the cart count display
+            updateCartCount(); // Call the function to update the cart count
+          }) 
+          .catch(error => console.error('Error adding to cart:', error));
+      })
+      .catch(error => console.error('Error fetching product:', error));
   }
 });
 
 // Initial call to set the cart count on page load
-updateCartCount(); 
+updateCartCount();
 // Function to generate a unique ID
 function generateUniqueId() {
   return 'cart-' + Math.random().toString(36).substr(2, 9); // Generates a random ID
