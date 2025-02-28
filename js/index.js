@@ -581,8 +581,9 @@ document.addEventListener("DOMContentLoaded", function () {
           const productCardContent = document.createElement("div");
           productCardContent.className = "product-card-content";
           productCardContent.innerHTML = `
-                    <h6><a href="product-default.html" class="hover-underline">${product.name
-            }</a></h6>
+                    <h6><a href="product-default.html" class="hover-underline">${
+                      product.name
+                    }</a></h6>
                     <p class="price">$${product.price.toFixed(2)}</p>
                 `;
 
@@ -665,18 +666,15 @@ document.addEventListener("DOMContentLoaded", function () {
 //         const productIdsInWishlist = wishlist.map(item => item.productId); // Assuming wishlist contains productId
 //         console.log(productIdsInWishlist,"productIdsInWishlist");
 
-
 //         // Check if the current productId is in the wishlist
 //         const isInWishlist = productIdsInWishlist.includes(String(currentProductId));
-//         console.log(isInWishlist,"isInWishlist");  
+//         console.log(isInWishlist,"isInWishlist");
 
-
-
-//         const heartSVG = isInWishlist ? 
+//         const heartSVG = isInWishlist ?
 // `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
 //   <rect width="100%" height="100%" fill="black"/>
 //   <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="red" stroke="red" stroke-width="2"/>
-// </svg>` : 
+// </svg>` :
 //           `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
 //             <path d="M16.528 2.20919C16.0674 1.71411 15.5099 1.31906 14.8902 1.04859C14.2704 0.778112 13.6017 0.637996 12.9255 0.636946C12.2487 0.637725 11.5794 0.777639 10.959 1.048C10.3386 1.31835 9.78042 1.71338 9.31911 2.20854L9.00132 2.54436L8.68352 2.20854C6.83326 0.217151 3.71893 0.102789 1.72758 1.95306C1.63932 2.03507 1.5541 2.12029 1.47209 2.20854C-0.490696 4.32565 -0.490696 7.59753 1.47209 9.71463L8.5343 17.1622C8.77862 17.4201 9.18579 17.4312 9.44373 17.1868C9.45217 17.1788 9.46039 17.1706 9.46838 17.1622L16.528 9.71463C18.4907 7.59776 18.4907 4.32606 16.528 2.20919ZM15.5971 8.82879H15.5965L9.00132 15.7849L2.40553 8.82879C0.90608 7.21113 0.90608 4.7114 2.40553 3.09374C3.76722 1.61789 6.06755 1.52535 7.5434 2.88703C7.61505 2.95314 7.68401 3.0221 7.75012 3.09374L8.5343 3.92104C8.79272 4.17781 9.20995 4.17781 9.46838 3.92104L10.2526 3.09438C11.6142 1.61853 13.9146 1.52599 15.3904 2.88767C15.4621 2.95378 15.531 3.02274 15.5971 3.09438C17.1096 4.71461 17.1207 7.2189 15.5971 8.82879Z" />
 //           </svg>`;
@@ -827,15 +825,20 @@ document.addEventListener("DOMContentLoaded", async function () {
     let wishlistProductIds = [];
     if (userId) {
       try {
-        const wishlistResponse = await fetch(`http://localhost:3000/wishlist?userId=${userId}`);
+        const wishlistResponse = await fetch(
+          `http://localhost:3000/wishlist?userId=${userId}`
+        );
         const wishlistData = await wishlistResponse.json();
+        console.log("wishlistData", wishlistData);
 
         // Ensure wishlistData is an object and extract productId array properly
-        wishlistProductIds = Array.isArray(wishlistData.productId) ? wishlistData.productId.map(String) : [];
+        wishlistProductIds = wishlistData.map((v) => v.productId);
+        console.log("wishlistProductIds", wishlistProductIds);
       } catch (wishlistError) {
         console.error("Error fetching wishlist:", wishlistError);
       }
     }
+    console.log("wishlistProductIds", wishlistProductIds);
 
     latestProducts.forEach((product) => {
       const card = document.createElement("div");
@@ -846,17 +849,26 @@ document.addEventListener("DOMContentLoaded", async function () {
       const image2 = product.images?.[1] || "/img/default2.jpg";
 
       // Check if product is in the wishlist
-      const isInWishlist = wishlistProductIds.includes(String(product.id));
+      // const isInWishlist = wishlistProductIds.includes(product.id);
+      // const InWishlist = wishlistProductIds.some(id => id === product.id);
+      // console.log("InWishlist",InWishlist);
+
+      const flatWishlistIds = wishlistProductIds.flat(); // Debug log
+      
+      const isInWishlist = flatWishlistIds.includes(product.id);
+      
+      console.log( isInWishlist, "isInWishlist");
+            
+
       const heartSVG = isInWishlist
         ? `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
-            <rect width="100%" height="100%" fill="black"/>
-            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="red" stroke="red" stroke-width="2"/>
-          </svg>`
+      <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="red" stroke="red" stroke-width="2"/>
+    </svg>`
         : `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
-                <g clip-path="url(#clip0_168_378)">
-                    <path d="M16.528 2.20919C16.0674 1.71411 15.5099 1.31906 14.8902 1.04859C14.2704 0.778112 13.6017 0.637996 12.9255 0.636946C12.2487 0.637725 11.5794 0.777639 10.959 1.048C10.3386 1.31835 9.78042 1.71338 9.31911 2.20854L9.00132 2.54436L8.68352 2.20854C6.83326 0.217151 3.71893 0.102789 1.72758 1.95306C1.63932 2.03507 1.5541 2.12029 1.47209 2.20854C-0.490696 4.32565 -0.490696 7.59753 1.47209 9.71463L8.5343 17.1622C8.77862 17.4201 9.18579 17.4312 9.44373 17.1868C9.45217 17.1788 9.46039 17.1706 9.46838 17.1622L16.528 9.71463C18.4907 7.59776 18.4907 4.32606 16.528 2.20919ZM15.5971 8.82879H15.5965L9.00132 15.7849L2.40553 8.82879C0.90608 7.21113 0.90608 4.7114 2.40553 3.09374C3.76722 1.61789 6.06755 1.52535 7.5434 2.88703C7.61505 2.95314 7.68401 3.0221 7.75012 3.09374L8.5343 3.92104C8.79272 4.17781 9.20995 4.17781 9.46838 3.92104L10.2526 3.09438C11.6142 1.61853 13.9146 1.52599 15.3904 2.88767C15.4621 2.95378 15.531 3.02274 15.5971 3.09438C17.1096 4.71461 17.1207 7.2189 15.5971 8.82879Z" />
-                </g>
-            </svg>`;
+            <g clip-path="url(#clip0_168_378)">
+                <path d="M16.528 2.20919C16.0674 1.71411 15.5099 1.31906 14.8902 1.04859C14.2704 0.778112 13.6017 0.637996 12.9255 0.636946C12.2487 0.637725 11.5794 0.777639 10.959 1.048C10.3386 1.31835 9.78042 1.71338 9.31911 2.20854L9.00132 2.54436L8.68352 2.20854C6.83326 0.217151 3.71893 0.102789 1.72758 1.95306C1.63932 2.03507 1.5541 2.12029 1.47209 2.20854C-0.490696 4.32565 -0.490696 7.59753 1.47209 9.71463L8.5343 17.1622C8.77862 17.4201 9.18579 17.4312 9.44373 17.1868C9.45217 17.1788 9.46039 17.1706 9.46838 17.1622L16.528 9.71463C18.4907 7.59776 18.4907 4.32606 16.528 2.20919ZM15.5971 8.82879H15.5965L9.00132 15.7849L2.40553 8.82879C0.90608 7.21113 0.90608 4.7114 2.40553 3.09374C3.76722 1.61789 6.06755 1.52535 7.5434 2.88703C7.61505 2.95314 7.68401 3.0221 7.75012 3.09374L8.5343 3.92104C8.79272 4.17781 9.20995 4.17781 9.46838 3.92104L10.2526 3.09438C11.6142 1.61853 13.9146 1.52599 15.3904 2.88767C15.4621 2.95378 15.531 3.02274 15.5971 3.09438C17.1096 4.71461 17.1207 7.2189 15.5971 8.82879Z"></path>
+            </g>
+        </svg>`;
 
       // Create product card
       card.innerHTML = `
@@ -902,7 +914,6 @@ document.addEventListener("DOMContentLoaded", async function () {
     console.error("Error fetching products:", error);
   }
 });
-
 
 // end new releas
 // start releted
@@ -998,9 +1009,8 @@ fetch(`http://localhost:3000/product/${selectedProductId3}`)
             });
           })
 
-
-          .catch(error => {
-            console.error('Error fetching category products:', error);
+          .catch((error) => {
+            console.error("Error fetching category products:", error);
           });
       })
       .catch((error) =>
@@ -1324,12 +1334,15 @@ function createSliderProduct(product) {
           </div>
           <div class="product-card-img">
             <a href="shop-list.html">
-              <img src="${product.images[3]}" class="d_suggest_img" alt="${product.name}" />
+              <img src="${product.images[3]}" class="d_suggest_img" alt="${
+    product.name
+  }" />
             </a>
             <div class="view-and-favorite-area">
               <ul>
                 <li>
-    <a href="#" class="wishlist-btn" data-product-id="${product.id
+    <a href="#" class="wishlist-btn" data-product-id="${
+      product.id
     }"> <!-- Updated to include the class for wishlist functionality -->
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
             <g clip-path="url(#clip0_168_378)">
@@ -1352,12 +1365,13 @@ function createSliderProduct(product) {
           <div class="product-card-content product_text">
             <p><a href="shop-list.html">${product.brand}</a></p>
             <h6>
-              <a href="product-default.html" class="hover-underline" >${product.name
-    }</a>
+              <a href="product-default.html" class="hover-underline" >${
+                product.name
+              }</a>
             </h6>
             <span>$${product.price.toFixed(2)} <del>$${(
-      product.price * 1.1
-    ).toFixed(2)}</del></span>
+    product.price * 1.1
+  ).toFixed(2)}</del></span>
             <div class="rating">
               <ul>
                 <li><i class="bi bi-star-fill"></i></li>
@@ -1397,19 +1411,24 @@ function createProductCard(product) {
           <div class="batch">
             <span>NEW</span>
           </div>
-          <div class="product-card-img ${product.images.length > 1 ? "double-img" : ""
-    }">
+          <div class="product-card-img ${
+            product.images.length > 1 ? "double-img" : ""
+          }">
             <a href="shop-list.html">
-              <img src="${product.images[0]}" alt="${product.name}" ${product.images.length > 1 ? 'class="img1"' : ""
-    } />
-              ${product.images.length > 1
-      ? `<img src="${product.images[1]}" alt="${product.name}" class="img2" />`
-      : ""
-    }
+              <img src="${product.images[0]}" alt="${product.name}" ${
+    product.images.length > 1 ? 'class="img1"' : ""
+  } />
+              ${
+                product.images.length > 1
+                  ? `<img src="${product.images[1]}" alt="${product.name}" class="img2" />`
+                  : ""
+              }
             </a>
             <div class="cart-btn-area">
               <div class="cart-btn">
-                <a href="cart.html" class="add-cart-btn2 add-cart-btn round hover-btn5" data-product-id="${product.id}>
+                <a href="cart.html" class="add-cart-btn2 add-cart-btn round hover-btn5" data-product-id="${
+                  product.id
+                }>
                   <i class="bi bi-bag-check"></i> Drop in Basket
                 </a>
               </div>
@@ -1440,8 +1459,9 @@ function createProductCard(product) {
           <div class="product-card-content">
             <p><a href="shop-list.html">${product.brand}</a></p>
             <h6>
-              <a href="product-default.html" class="hover-underline" >${product.name
-    }</a>
+              <a href="product-default.html" class="hover-underline" >${
+                product.name
+              }</a>
             </h6>
             <span>$${product.price.toFixed(2)}</span>
             <div class="rating">
@@ -1471,9 +1491,9 @@ function createProductGrid(products) {
         <div class="col-lg-3">
           <div class="row g-4">
             ${regularProducts
-      .slice(0, 2)
-      .map((product) => createProductCard(product))
-      .join("")}
+              .slice(0, 2)
+              .map((product) => createProductCard(product))
+              .join("")}
           </div>
         </div>
         <div class="col-lg-6 position-relative">
@@ -1481,8 +1501,8 @@ function createProductGrid(products) {
             <div class="swiper sg-slider">
               <div class="swiper-wrapper">
                 ${featuredProducts
-      .map((product) => createSliderProduct(product))
-      .join("")}
+                  .map((product) => createSliderProduct(product))
+                  .join("")}
               </div>
             </div>
             <div class="sg-slider-btn">
@@ -1498,9 +1518,9 @@ function createProductGrid(products) {
         <div class="col-lg-3">
           <div class="row g-4">
             ${regularProducts
-      .slice(2, 4)
-      .map((product) => createProductCard(product))
-      .join("")}
+              .slice(2, 4)
+              .map((product) => createProductCard(product))
+              .join("")}
           </div>
         </div>
       </div>
@@ -1606,8 +1626,8 @@ document.addEventListener("DOMContentLoaded", async function () {
       // Filter products based on selectedSubcategoryId
       const filteredProducts = selectedSubcategoryId
         ? products.filter(
-          (product) => product.sub_cat_id == selectedSubcategoryId
-        )
+            (product) => product.sub_cat_id == selectedSubcategoryId
+          )
         : products;
 
       // Display products
@@ -1619,20 +1639,24 @@ document.addEventListener("DOMContentLoaded", async function () {
                   <a href="shop-list.html">
                     <img src="${product.images[0]}" alt="${product.name}">
                     <div class="batch">
-                      <span>${product.discount ? "-" + product.discount + "%" : "0%"
-          }</span>
+                      <span>${
+                        product.discount ? "-" + product.discount + "%" : "0%"
+                      }</span>
                     </div>
                   </a>
                   <div class="overlay">
                     <div class="cart-area">
-                      <a href="cart.html" class="hover-btn3 add-cart-btn" data-product-id="${product.id}"><i class="bi bi-bag-check"></i> Drop in Basket</a>
+                      <a href="cart.html" class="hover-btn3 add-cart-btn" data-product-id="${
+                        product.id
+                      }"><i class="bi bi-bag-check"></i> Drop in Basket</a>
                     </div>
                   </div>
                   <div class="view-and-favorite-area">
                     <ul>
                       <li>
-                        <a href="whistlist.html" class="wishlist-btn" data-product-id="${product.id
-          }">
+                        <a href="whistlist.html" class="wishlist-btn" data-product-id="${
+                          product.id
+                        }">
                           <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
                             <g clip-path="url(#clip0_168_378)">
                               <path d="M16.528 2.20919C16.0674 1.71411 15.5099 1.31906 14.8902 1.04859C14.2704 0.778112 13.6017 0.637996 12.9255 0.636946C12.2487 0.637725 11.5794 0.777639 10.959 1.048C10.3386 1.31835 9.78042 1.71338 9.31911 2.20854L9.00132 2.54436L8.68352 2.20854C6.83326 0.217151 3.71893 0.102789 1.72758 1.95306C1.63932 2.03507 1.5541 2.12029 1.47209 2.20854C-0.490696 4.32565 -0.490696 7.59753 1.47209 9.71463L8.5343 17.1622C8.77862 17.4201 9.18579 17.4312 9.44373 17.1868C9.45217 17.1788 9.46039 17.1706 9.46838 17.1622L16.528 9.71463C18.4907 7.59776 18.4907 4.32606 16.528 2.20919ZM15.5971 8.82879H15.5965L9.00132 15.7849L2.40553 8.82879C0.90608 7.21113 0.90608 4.7114 2.40553 3.09374C3.76722 1.61789 6.06755 1.52535 7.5434 2.88703C7.61505 2.95314 7.68401 3.0221 7.75012 3.09374L8.5343 3.92104C8.79272 4.17781 9.20995 4.17781 9.46838 3.92104L10.2526 3.09438C11.6142 1.61853 13.9146 1.52599 15.3904 2.88767C15.4621 2.95378 15.531 3.02274 15.5971 3.09438C17.1096 4.71461 17.1207 7.2189 15.5971 8.82879Z" />
@@ -1641,8 +1665,9 @@ document.addEventListener("DOMContentLoaded", async function () {
                         </a>
                       </li>
                       <li>
-                         <a href="#" class="product-view-btn" data-bs-toggle="modal" data-bs-target="#product-view" data-product-id="${product.id
-          }">
+                         <a href="#" class="product-view-btn" data-bs-toggle="modal" data-bs-target="#product-view" data-product-id="${
+                           product.id
+                         }">
     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
         <path d="M21.8601 10.5721C21.6636 10.3032 16.9807 3.98901 10.9999 3.98901C5.019 3.98901 0.335925 10.3032 0.139601 10.5718C0.0488852 10.6961 0 10.846 0 10.9999C0 11.1537 0.0488852 11.3036 0.139601 11.4279C0.335925 11.6967 5.019 18.011 10.9999 18.011C16.9807 18.011 21.6636 11.6967 21.8601 11.4281C21.951 11.3039 21.9999 11.154 21.9999 11.0001C21.9999 10.8462 21.951 10.6963 21.8601 10.5721ZM10.9999 16.5604C6.59432 16.5604 2.77866 12.3696 1.64914 10.9995C2.77719 9.62823 6.58487 5.43955 10.9999 5.43955C15.4052 5.43955 19.2206 9.62969 20.3506 11.0005C19.2225 12.3717 15.4149 16.5604 10.9999 16.5604Z" />
         <path d="M10.9999 6.64832C8.60039 6.64832 6.64819 8.60051 6.64819 11C6.64819 13.3994 8.60039 15.3516 10.9999 15.3516C13.3993 15.3516 15.3515 13.3994 15.3515 11C15.3515 8.60051 13.3993 6.64832 10.9999 6.64832ZM10.9999 13.9011C9.40013 13.9011 8.09878 12.5997 8.09878 11C8.09878 9.40029 9.40017 8.0989 10.9999 8.0989C12.5995 8.0989 13.9009 9.40029 13.9009 11C13.9009 12.5997 12.5996 13.9011 10.9999 13.9011Z" />
@@ -1653,11 +1678,13 @@ document.addEventListener("DOMContentLoaded", async function () {
                   </div>
                 </div>
                 <div class="product-card-content">
-                  <h6><a href="product-default.html" class="hover-underline" onclick="localStorage.setItem('selectedeyeId', '${product.id
-          }')">${product.name}</a></h6>
+                  <h6><a href="product-default.html" class="hover-underline" onclick="localStorage.setItem('selectedeyeId', '${
+                    product.id
+                  }')">${product.name}</a></h6>
                   <p><a href="shop-list.html">${product.brand}</a></p>
-                  <p class="price">$${product.price} <del>${product.originalPrice
-          }</del></p>
+                  <p class="price">$${product.price} <del>${
+          product.originalPrice
+        }</del></p>
                   <span class="for-border"></span>
                 </div>
               </div>
@@ -1841,23 +1868,26 @@ document.addEventListener("DOMContentLoaded", async function fetchReviews() {
                   <div class="say-about-card-top">
                       <ul>
                           ${'<li><i class="bi bi-star-fill"></i></li>'.repeat(
-        review.rating || 0
-      )}
+                            review.rating || 0
+                          )}
                       </ul>
                   </div>
                   <p>"${review.review || "No review text available"}"</p>
                   <div class="say-about-card-bottom">
                       <div class="author-area">
                           <div class="author-img">
-                              <img src="${review.author?.image || "default-avatar.png"
-        }" 
-                                   alt="${review.author?.name || "Anonymous"
-        }" />
+                              <img src="${
+                                review.author?.image || "default-avatar.png"
+                              }" 
+                                   alt="${
+                                     review.author?.name || "Anonymous"
+                                   }" />
                           </div>
                           <div class="author">
                               <h5>${review.author?.name || "Anonymous"}</h5>
-                              <p>${review.author?.date || "No date available"
-        }</p>
+                              <p>${
+                                review.author?.date || "No date available"
+                              }</p>
                           </div>
                       </div>
                   </div>
@@ -1873,7 +1903,6 @@ document.addEventListener("DOMContentLoaded", async function fetchReviews() {
   }
 });
 // end review
-
 
 // Add event listener for product view button
 document.querySelectorAll(".product-view-btn").forEach((button) => {
@@ -1931,7 +1960,7 @@ async function fetchAndDisplayProduct(selectedeyeId) {
 
 // Function to update cart count display
 function updateCartCount() {
-  const cartProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
+  const cartProducts = JSON.parse(localStorage.getItem("cartProducts")) || [];
   const cartCount = cartProducts.length; // Get the count of products in the cart
   document.querySelector(".cart-count").textContent = cartCount
     .toString()
@@ -1939,15 +1968,15 @@ function updateCartCount() {
 }
 
 // Call this function after adding a product to the cart
-document.addEventListener('click', function (event) {
-  if (event.target.classList.contains('add-cart-btn')) {
+document.addEventListener("click", function (event) {
+  if (event.target.classList.contains("add-cart-btn")) {
     event.preventDefault(); // Prevent default anchor behavior
-    const productId = event.target.getAttribute('data-product-id');
+    const productId = event.target.getAttribute("data-product-id");
 
     // Fetch product details from localStorage or API
     fetch(`http://localhost:3000/product/${productId}`)
-      .then(response => response.json())
-      .then(product => {
+      .then((response) => response.json())
+      .then((product) => {
         // Create a unique cart ID
         const cartId = generateUniqueId(); // Generate a unique ID
 
@@ -1956,39 +1985,41 @@ document.addEventListener('click', function (event) {
           id: cartId, // Add the unique cart ID
           product_id: product.id,
           time: new Date().toISOString(), // Current time in ISO format
-          quantity: 1 // Default quantity, can be modified as needed
+          quantity: 1, // Default quantity, can be modified as needed
         };
 
         // Add product to cart API
-        fetch('http://localhost:3000/cart', {
-          method: 'POST',
+        fetch("http://localhost:3000/cart", {
+          method: "POST",
           headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
           },
-          body: JSON.stringify(cartItem) // Send the cart item data
+          body: JSON.stringify(cartItem), // Send the cart item data
         })
-          .then(cartResponse => {
+          .then((cartResponse) => {
             console.log(cartResponse, "cartResponse");
 
             if (!cartResponse.ok) {
-              throw new Error('Failed to add to cart');
+              throw new Error("Failed to add to cart");
             }
-            console.log('Product added to cart:', product);
+            console.log("Product added to cart:", product);
             // Store cart ID in session storage
-            let cartProducts = JSON.parse(localStorage.getItem('cartProducts')) || []; // Retrieve existing IDs or initialize an empty array
-            if (!cartProducts.includes(cartId)) { // Check if the cart ID is already in the array
+            let cartProducts =
+              JSON.parse(localStorage.getItem("cartProducts")) || []; // Retrieve existing IDs or initialize an empty array
+            if (!cartProducts.includes(cartId)) {
+              // Check if the cart ID is already in the array
               cartProducts.push(cartId); // Add the cart ID to the array
             } else {
-              console.log('Product is already in the cart.'); // Optional: log a message if the product is already in the cart
+              console.log("Product is already in the cart."); // Optional: log a message if the product is already in the cart
             }
-            localStorage.setItem('cartProducts', JSON.stringify(cartProducts)); // Store updated array in session storage
+            localStorage.setItem("cartProducts", JSON.stringify(cartProducts)); // Store updated array in session storage
 
             // Update the cart count display
             updateCartCount(); // Call the function to update the cart count
           })
-          .catch(error => console.error('Error adding to cart:', error));
+          .catch((error) => console.error("Error adding to cart:", error));
       })
-      .catch(error => console.error('Error fetching product:', error));
+      .catch((error) => console.error("Error fetching product:", error));
   }
 });
 
@@ -2000,8 +2031,6 @@ function generateUniqueId() {
 }
 
 // Function to generate a unique cart ID (example implementation)
-
-
 
 // ... existing code ...
 // wish list
@@ -2043,8 +2072,11 @@ document.addEventListener("click", async (e) => {
         const allWishlists = await wishlistResponse.json(); // Fetch all wishlists
 
         // Filter the wishlists to find the one that matches the userId
-        const userWishlist = allWishlists.find(wishlist => wishlist.userId === userId);
-        if (userWishlist) { // Check if the user's wishlist exists
+        const userWishlist = allWishlists.find(
+          (wishlist) => wishlist.userId === userId
+        );
+        if (userWishlist) {
+          // Check if the user's wishlist exists
           const existingWishlist = userWishlist.productId; // Get the product IDs from the user's wishlist
 
           // Check if the productId already exists in the wishlist
@@ -2052,18 +2084,20 @@ document.addEventListener("click", async (e) => {
             existingWishlist.push(productId); // Add the new productId to the existingWishlist
           }
 
-          const response = await fetch(`http://localhost:3000/wishlist/${userWishlist.id}`, {
-            method: "PUT",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ userId, productId: existingWishlist }), // Send user ID and updated wishlist
-          });
+          const response = await fetch(
+            `http://localhost:3000/wishlist/${userWishlist.id}`,
+            {
+              method: "PUT",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ userId, productId: existingWishlist }), // Send user ID and updated wishlist
+            }
+          );
           // Print or display the user's wishlist items
           console.log("User's Wishlist Items:", existingWishlist); // Log the items to the console
           // You can also update the UI to display these items as needed
-        }
-        else {
+        } else {
           const response = await fetch("http://localhost:3000/wishlist", {
             method: "POST",
             headers: {
@@ -2111,11 +2145,15 @@ async function transferWishlistToUser(userId) {
     // Check if the user's wishlist exists
     const wishlistResponse = await fetch("http://localhost:3000/wishlist");
     const allWishlists = await wishlistResponse.json();
-    const userWishlist = allWishlists.find(wishlist => wishlist.userId === userId);
+    const userWishlist = allWishlists.find(
+      (wishlist) => wishlist.userId === userId
+    );
 
     if (userWishlist) {
       // Update existing wishlist
-      const updatedProductIds = [...new Set([...userWishlist.productId, ...wishlist])]; // Merge and remove duplicates
+      const updatedProductIds = [
+        ...new Set([...userWishlist.productId, ...wishlist]),
+      ]; // Merge and remove duplicates
       await fetch(`http://localhost:3000/wishlist/${userWishlist.id}`, {
         method: "PUT",
         headers: {
