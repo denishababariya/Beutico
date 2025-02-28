@@ -1324,7 +1324,7 @@ function createSliderProduct(product) {
           </div>
           <div class="product-card-img">
             <a href="shop-list.html">
-              <img src="${product.images[4]}"  alt="${product.name}" />
+              <img src="${product.images[3]}" class="d_suggest_img" alt="${product.name}" />
             </a>
             <div class="view-and-favorite-area">
               <ul>

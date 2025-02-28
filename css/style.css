@@ -4835,6 +4835,10 @@ header.style-2 .nav-right::after {
   padding: 13px 46px;
   font-size: 18px;
 }
+.d_suggest_img{
+  object-fit: cover;
+  height: 410px !important;
+}
 
 @media (max-width: 576px) {
   .product-card2.style-2 .offer-timer .primary-btn3 {
