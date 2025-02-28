@@ -11540,6 +11540,23 @@
     }
   ],
   "cart": [
-    
+    {
+      "id": "cart-clgzbnsi3",
+      "product_id": "451",
+      "time": "2025-02-27T10:19:00.580Z",
+      "quantity": 1
+    },
+    {
+      "id": "cart-cswmhu770",
+      "product_id": "346",
+      "time": "2025-02-27T10:19:04.567Z",
+      "quantity": 1
+    },
+    {
+      "id": "cart-xyoa26nyj",
+      "product_id": "407",
+      "time": "2025-02-27T10:19:07.008Z",
+      "quantity": 1
+    }
   ]
 }
