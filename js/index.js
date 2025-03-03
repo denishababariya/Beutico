@@ -676,7 +676,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //   <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="red" stroke="red" stroke-width="2"/>
 // </svg>` :
 //           `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
-//             <path d="M16.528 2.20919C16.0674 1.71411 15.5099 1.31906 14.8902 1.04859C14.2704 0.778112 13.6017 0.637996 12.9255 0.636946C12.2487 0.637725 11.5794 0.777639 10.959 1.048C10.3386 1.31835 9.78042 1.71338 9.31911 2.20854L9.00132 2.54436L8.68352 2.20854C6.83326 0.217151 3.71893 0.102789 1.72758 1.95306C1.63932 2.03507 1.5541 2.12029 1.47209 2.20854C-0.490696 4.32565 -0.490696 7.59753 1.47209 9.71463L8.5343 17.1622C8.77862 17.4201 9.18579 17.4312 9.44373 17.1868C9.45217 17.1788 9.46039 17.1706 9.46838 17.1622L16.528 9.71463C18.4907 7.59776 18.4907 4.32606 16.528 2.20919ZM15.5971 8.82879H15.5965L9.00132 15.7849L2.40553 8.82879C0.90608 7.21113 0.90608 4.7114 2.40553 3.09374C3.76722 1.61789 6.06755 1.52535 7.5434 2.88703C7.61505 2.95314 7.68401 3.0221 7.75012 3.09374L8.5343 3.92104C8.79272 4.17781 9.20995 4.17781 9.46838 3.92104L10.2526 3.09438C11.6142 1.61853 13.9146 1.52599 15.3904 2.88767C15.4621 2.95378 15.531 3.02274 15.5971 3.09438C17.1096 4.71461 17.1207 7.2189 15.5971 8.82879Z" />
+//             <path d="M16.528 2.20919C16.0674 1.71411 15.5099 1.31906 14.8902 1.04859C14.2704 0.778112 13.6017 0.637996 12.9255 0.636946C12.2487 0.637725 11.5794 0.777639 10.959 1.048C10.3386 1.31835 9.78042 1.71338 9.31911 2.20854L9.00132 2.54436L8.68352 2.20854C6.83326 0.217151 3.71893 0.102789 1.72758 1.95306C1.63932 2.03507 1.5541 2.12029 1.47209 2.20854C-0.490696 4.32565 -0.490696 7.59753 1.47209 9.71463L8.5343 17.1622C8.77862 17.4201 9.18579 17.4312 9.44373 17.1868C9.45217 17.1788 9.46039 17.1706 9.46838 17.1622L16.528 9.71463C18.4907 7.59776 18.4907 4.32606 16.528 2.20919ZM15.5971 8.82879H15.5965L9.00132 15.7849L2.40553 8.82879C0.90608 7.21113 0.90608 4.7114 2.40553 3.09374C3.76722 1.61789 6.06755 1.52535 7.5434 2.88703C7.61505 2.95314 7.68401 3.0221 7.75012 3.09374L8.5343 3.92104C8.79272 4.17781 9.20995 4.17781 9.46838 3.92104L10.2526 3.09438C11.6142 1.61853 13.9146 1.52599 15.3904 2.88767C15.4621 2.95378 15.531 3.02274 15.5971 3.09438C17.1096 4.71461 17.1207 7.2189 15.5971 8.82879Z"></path>
 //           </svg>`;
 
 //         // Use heartSVG in your product display logic
@@ -1980,44 +1980,64 @@ document.addEventListener("click", function (event) {
         // Create a unique cart ID
         const cartId = generateUniqueId(); // Generate a unique ID
 
-        // Create a cart item object
-        const cartItem = {
-          id: cartId, // Add the unique cart ID
-          product_id: product.id,
-          time: new Date().toISOString(), // Current time in ISO format
-          quantity: 1, // Default quantity, can be modified as needed
-        };
+        // Retrieve existing cart items from localStorage
+        let cartProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
 
-        // Add product to cart API
-        fetch("http://localhost:3000/cart", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(cartItem), // Send the cart item data
-        })
-          .then((cartResponse) => {
-            console.log(cartResponse, "cartResponse");
+        // Check if the product already exists in the cart
+        const existingCartItem = cartProducts.find(item => item.product_id === product.id);
 
+        if (existingCartItem) {
+          // Increase the quantity of the existing product in the cart
+          existingCartItem.quantity += 1; // Increase quantity
+          console.log('Product quantity increased in the cart.'); // Log message for quantity increase
+
+          // Update the cart in the API
+          fetch(`http://localhost:3000/cart/${existingCartItem.id}`, {
+            method: 'PUT',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(existingCartItem) // Send the updated cart item
+          })
+          .then(cartResponse => {
+            if (!cartResponse.ok) {
+              throw new Error('Failed to update cart');
+            }
+            console.log('Cart updated successfully.');
+          })
+          .catch(error => console.error('Error updating cart:', error));
+        } else {
+          // Create a new cart item
+          const cartItem = {
+            id: cartId, // Add the unique cart ID
+            product_id: product.id,
+            time: new Date().toISOString(), // Current time in ISO format
+            quantity: 1 // Default quantity, can be modified as needed
+          };
+
+          // Add product to cart API
+          fetch('http://localhost:3000/cart', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(cartItem) // Send the cart item data
+          })
+          .then(cartResponse => {
             if (!cartResponse.ok) {
               throw new Error("Failed to add to cart");
             }
-            console.log("Product added to cart:", product);
-            // Store cart ID in session storage
-            let cartProducts =
-              JSON.parse(localStorage.getItem("cartProducts")) || []; // Retrieve existing IDs or initialize an empty array
-            if (!cartProducts.includes(cartId)) {
-              // Check if the cart ID is already in the array
-              cartProducts.push(cartId); // Add the cart ID to the array
-            } else {
-              console.log("Product is already in the cart."); // Optional: log a message if the product is already in the cart
-            }
-            localStorage.setItem("cartProducts", JSON.stringify(cartProducts)); // Store updated array in session storage
-
-            // Update the cart count display
-            updateCartCount(); // Call the function to update the cart count
+            console.log('Product added to cart:', product);
           })
-          .catch((error) => console.error("Error adding to cart:", error));
+          .catch(error => console.error('Error adding to cart:', error));
+          
+          // Add the new cart item to localStorage
+          cartProducts.push(cartItem);
+          localStorage.setItem('cartProducts', JSON.stringify(cartProducts)); // Store updated array in local storage
+        }
+
+        // Update the cart count display
+        updateCartCount(); // Call the function to update the cart count
       })
       .catch((error) => console.error("Error fetching product:", error));
   }
