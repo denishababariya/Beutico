@@ -11442,48 +11442,6 @@
       "product_id": "324",
       "time": "2025-02-25T11:25:50.328Z",
       "quantity": 1
-    },
-    {
-      "id": "cart-qnamwmxsn",
-      "product_id": "334",
-      "time": "2025-02-25T11:26:11.444Z",
-      "quantity": 1
-    },
-    {
-      "id": "cart-iv1bpy8gw",
-      "product_id": "397",
-      "time": "2025-02-25T11:26:22.602Z",
-      "quantity": 1
-    },
-    {
-      "id": "cart-dfno8ih96",
-      "product_id": "387",
-      "time": "2025-02-25T11:27:02.133Z",
-      "quantity": 1
-    },
-    {
-      "id": "cart-dssds43s",
-      "product_id": "387",
-      "time": "2025-02-25T11:27:02.133Z",
-      "quantity": 1
-    },
-    {
-      "id": "cart-t4w1txbla",
-      "product_id": "314",
-      "time": "2025-02-25T11:47:13.988Z",
-      "quantity": 1
-    },
-    {
-      "id": "cart-rft03ji2f",
-      "product_id": "364",
-      "time": "2025-03-03T11:29:44.262Z",
-      "quantity": 1
-    },
-    {
-      "id": "cart-88ttxouhp",
-      "product_id": "468",
-      "time": "2025-03-03T11:29:55.011Z",
-      "quantity": 1
     }
   ]
 }
