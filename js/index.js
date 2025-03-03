@@ -906,9 +906,23 @@ document.addEventListener("DOMContentLoaded", async function () {
           <div class="product-card-content">
             <h6><a href="product-default.html" class="hover-underline" onclick="localStorage.setItem('selectedProductId', '${product.id}')">${product.name}</a></h6>
           </div>
+          <span class="for-border"></span>
         </div>`;
 
       container.appendChild(card);
+    });
+    document.querySelectorAll(".product-view-btn").forEach((button) => {
+      button.addEventListener("click", function () {
+        const productId = this.getAttribute("data-product-id");
+        localStorage.setItem("selectedeyeId", productId); // Store the product ID in localStorage
+        console.log("Product ID stored:", productId);
+
+        // Open the modal after storing the ID
+        const productModal = new bootstrap.Modal(
+          document.getElementById("product-view")
+        );
+        productModal.show();
+      });
     });
   } catch (error) {
     console.error("Error fetching products:", error);
@@ -1007,6 +1021,19 @@ fetch(`http://localhost:3000/product/${selectedProductId3}`)
                             `;
               relatedProductsContainer.appendChild(productItem);
             });
+            document.querySelectorAll(".product-view-btn").forEach((button) => {
+              button.addEventListener("click", function () {
+                const productId = this.getAttribute("data-product-id");
+                localStorage.setItem("selectedeyeId", productId); 
+                console.log("Product ID stored:", productId);
+    
+                // Open the modal after storing the ID
+                const productModal = new bootstrap.Modal(
+                  document.getElementById("product-view")
+                );
+                productModal.show();
+              });
+            });
           })
 
           .catch((error) => {
@@ -1020,9 +1047,10 @@ fetch(`http://localhost:3000/product/${selectedProductId3}`)
 
 // end releted
 
-// ... existing code ...
-// ... existing code ...
+
+
 // start model
+
 document.addEventListener("DOMContentLoaded", () => {
   // Check if 'selectedeyeId' is available in localStorage
   const selectedeyeId = localStorage.getItem("selectedeyeId");
@@ -1098,7 +1126,7 @@ function createProductModal() {
                   </div>
                   <div class="shop-details-btn">
                     <a href="shop-list.html" class="primary-btn1 hover-btn3">*Shop Now*</a>
-                    <a href="#" class="primary-btn1 style-3 hover-btn4" data-product-id="${product.id}">*Drop in Basket*</a>
+                    <a href="#" class="primary-btn1 style-3 hover-btn4">*Drop in Basket*</a>
                   </div>
                   <div class="product-info">
                     <ul class="product-info-list">
