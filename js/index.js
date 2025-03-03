@@ -1981,11 +1981,13 @@ document.addEventListener("click", function (event) {
         // Create a unique cart ID
         const cartId = generateUniqueId(); // Generate a unique ID
 
-        // Retrieve existing cart items from localStorage
-        let cartProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
+          // Retrieve existing cart items from localStorage
+          let cartProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
 
-        // Check if the product already exists in the cart
-        const existingCartItem = cartProducts.find(item => item.product_id === product.id);
+          // Check if the product already exists in the cart
+          const existingCartItem = cartProducts.find(item => item.product_id === product.id);
+          console.log("existingCartItem",existingCartItem);
+          
 
         if (existingCartItem) {
           // Increase the quantity of the existing product in the cart
@@ -2031,10 +2033,12 @@ document.addEventListener("click", function (event) {
             console.log('Product added to cart:', product);
           })
           .catch(error => console.error('Error adding to cart:', error));
+          console.log("cartItem",cartItem);
           
           // Add the new cart item to localStorage
-          cartProducts.push(cartItem);
+          cartProducts.push(cartItem.id);
           localStorage.setItem('cartProducts', JSON.stringify(cartProducts)); // Store updated array in local storage
+          
         }
 
         // Update the cart count display
