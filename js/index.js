@@ -906,6 +906,7 @@ document.addEventListener("DOMContentLoaded", async function () {
           <div class="product-card-content">
             <h6><a href="product-default.html" class="hover-underline">${product.name}</a></h6>
           </div>
+          <span class="for-border"></span>
         </div>`;
 
       container.appendChild(card);
