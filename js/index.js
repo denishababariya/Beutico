@@ -581,7 +581,7 @@ document.addEventListener("DOMContentLoaded", function () {
           const productCardContent = document.createElement("div");
           productCardContent.className = "product-card-content";
           productCardContent.innerHTML = `
-                    <h6><a href="product-default.html" class="hover-underline">${
+                    <h6><a href="product-default.html" class="hover-underline" onclick="localStorage.setItem('selectedProductId', '${product.id}')">${
                       product.name
                     }</a></h6>
                     <p class="price">$${product.price.toFixed(2)}</p>
@@ -904,9 +904,8 @@ document.addEventListener("DOMContentLoaded", async function () {
             </div>
           </div>
           <div class="product-card-content">
-            <h6><a href="product-default.html" class="hover-underline">${product.name}</a></h6>
+            <h6><a href="product-default.html" class="hover-underline" onclick="localStorage.setItem('selectedProductId', '${product.id}')">${product.name}</a></h6>
           </div>
-          <span class="for-border"></span>
         </div>`;
 
       container.appendChild(card);
@@ -962,7 +961,7 @@ fetch(`http://localhost:3000/product/${selectedProductId3}`)
                                         </a>
                                         <div class="overlay">
                                             <div class="cart-area">
-                                                <a href="cart.html" class="hover-btn3 add-cart-btn" data-product-id="${product.id}><i class="bi bi-bag-check"></i> Add To Cart</a>
+                                                <a href="cart.html" class="hover-btn3 add-cart-btn" data-product-id="${product.id}><i class="bi bi-bag-check"></i> Drop In Basket</a>
                                             </div>
                                         </div>
                                         <div class="view-and-favorite-area">
@@ -1366,7 +1365,7 @@ function createSliderProduct(product) {
           <div class="product-card-content product_text">
             <p><a href="shop-list.html">${product.brand}</a></p>
             <h6>
-              <a href="product-default.html" class="hover-underline" >${
+              <a href="product-default.html" class="hover-underline" onclick="localStorage.setItem('selectedProductId', '${product.id}')">${
                 product.name
               }</a>
             </h6>
@@ -1458,7 +1457,7 @@ function createProductCard(product) {
             </div>
           </div>
           <div class="product-card-content">
-            <p><a href="shop-list.html">${product.brand}</a></p>
+            <p><a href="shop-list.html" onclick="localStorage.setItem('selectedProductId', '${product.id}')">${product.brand}</a></p>
             <h6>
               <a href="product-default.html" class="hover-underline" >${
                 product.name
@@ -1679,7 +1678,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                   </div>
                 </div>
                 <div class="product-card-content">
-                  <h6><a href="product-default.html" class="hover-underline" onclick="localStorage.setItem('selectedeyeId', '${
+                  <h6><a href="product-default.html" class="hover-underline" onclick="localStorage.setItem('selectedProductId', '${
                     product.id
                   }')">${product.name}</a></h6>
                   <p><a href="shop-list.html">${product.brand}</a></p>
@@ -1689,6 +1688,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                   <span class="for-border"></span>
                 </div>
               </div>
+              
             </div>
           `;
         container.innerHTML += productCard; // Append product card to container
@@ -2026,7 +2026,7 @@ document.addEventListener("click", function (event) {
           })
           .then(cartResponse => {
             if (!cartResponse.ok) {
-              throw new Error("Failed to add to cart");
+              throw new Error("Failed to Drop In Basket");
             }
             console.log('Product added to cart:', product);
           })
