@@ -7729,8 +7729,6 @@
     {
       "id": "314",
       "sku": "N-004",
-      "name": "choker",
-      "cat_id": 5,
       "sub_cat_id": 63,
       "description": "A trendy choker necklace.",
       "additional_description": "Perfect for layering.",
@@ -11290,6 +11288,75 @@
         "../img/skin/SUBCAT1 (5).png",
         "../img/skin/landscape.png"
       ]
+    },
+    {
+      "id": "469",
+      "sku": "N-005",
+      "name": "Statement Necklace",
+      "cat_id": 5,
+      "sub_cat_id": 63,
+      "description": "A bold statement necklace.",
+      "additional_description": "Adds flair to any outfit.",
+      "price": 34.99,
+      "weight": "60g",
+      "brand": "Orna Care",
+      "tags": [
+        "necklace",
+        "statement"
+      ],
+      "images": [
+        "../img/rent-product/necklace/necklace (5).png",
+        "../img/rent-product/necklace/necklace (5).png",
+        "../img/rent-product/necklace/necklace (5).png",
+        "../img/rent-product/necklace/necklace (5).png",
+        "../img/rent-product/necklace/necklace (5).png"
+      ]
+    },
+    {
+      "id": "470",
+      "sku": "N-005",
+      "name": "Statement Necklace",
+      "cat_id": 5,
+      "sub_cat_id": 63,
+      "description": "A bold statement necklace.",
+      "additional_description": "Adds flair to any outfit.",
+      "price": 34.99,
+      "weight": "60g",
+      "brand": "Orna Care",
+      "tags": [
+        "necklace",
+        "statement"
+      ],
+      "images": [
+        "../img/rent-product/necklace/necklace (6).png",
+        "../img/rent-product/necklace/necklace (6).png",
+        "../img/rent-product/necklace/necklace (6).png",
+        "../img/rent-product/necklace/necklace (6).png",
+        "../img/rent-product/necklace/necklace (6).png"
+      ]
+    },
+    {
+      "id": "471",
+      "sku": "N-005",
+      "name": "Statement Necklace",
+      "cat_id": 5,
+      "sub_cat_id": 63,
+      "description": "A bold statement necklace.",
+      "additional_description": "Adds flair to any outfit.",
+      "price": 34.99,
+      "weight": "60g",
+      "brand": "Orna Care",
+      "tags": [
+        "necklace",
+        "statement"
+      ],
+      "images": [
+        "../img/rent-product/necklace/necklace (7).png",
+        "../img/rent-product/necklace/necklace (7).png",
+        "../img/rent-product/necklace/necklace (7).png",
+        "../img/rent-product/necklace/necklace (7).png",
+        "../img/rent-product/necklace/necklace (7).png"
+      ]
     }
   ],
   "offer": [
@@ -11436,53 +11503,40 @@
       }
     }
   ],
+  "wishlist": [
+    {
+      "userId": "d6b4",
+      "productId": [
+        "469",
+        "468",
+        "464"
+      ],
+      "id": "2424"
+    }
+  ],
   "cart": [
     {
-      "id": "cart-3q98ye9mj",
-      "product_id": "324",
-      "time": "2025-02-25T11:25:50.328Z",
+      "id": "cart-j27yvzdev",
+      "product_id": "406",
+      "time": "2025-02-28T06:43:57.035Z",
+      "quantity": 2
+    },
+    {
+      "id": "cart-p938lr4mp",
+      "product_id": "406",
+      "time": "2025-02-28T06:45:51.295Z",
+      "quantity": 2
+    },
+    {
+      "id": "cart-jwn1xl4m7",
+      "product_id": "407",
+      "time": "2025-02-28T06:46:00.846Z",
       "quantity": 1
     },
     {
-      "id": "cart-qnamwmxsn",
-      "product_id": "334",
-      "time": "2025-02-25T11:26:11.444Z",
-      "quantity": 1
-    },
-    {
-      "id": "cart-iv1bpy8gw",
-      "product_id": "397",
-      "time": "2025-02-25T11:26:22.602Z",
-      "quantity": 1
-    },
-    {
-      "id": "cart-dfno8ih96",
-      "product_id": "387",
-      "time": "2025-02-25T11:27:02.133Z",
-      "quantity": 1
-    },
-    {
-      "id": "cart-dssds43s",
-      "product_id": "387",
-      "time": "2025-02-25T11:27:02.133Z",
-      "quantity": 1
-    },
-    {
-      "id": "cart-t4w1txbla",
-      "product_id": "314",
-      "time": "2025-02-25T11:47:13.988Z",
-      "quantity": 1
-    },
-    {
-      "id": "cart-rft03ji2f",
-      "product_id": "364",
-      "time": "2025-03-03T11:29:44.262Z",
-      "quantity": 1
-    },
-    {
-      "id": "cart-88ttxouhp",
-      "product_id": "468",
-      "time": "2025-03-03T11:29:55.011Z",
+      "id": "cart-o2aycxdky",
+      "product_id": "470",
+      "time": "2025-03-03T12:30:12.917Z",
       "quantity": 1
     }
   ]
