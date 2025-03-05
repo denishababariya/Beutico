@@ -11442,6 +11442,257 @@
       "product_id": "324",
       "time": "2025-02-25T11:25:50.328Z",
       "quantity": 1
+    },
+    {
+      "id": "cart-odak55vyc",
+      "product_id": "468",
+      "time": "2025-03-04T04:26:51.351Z",
+      "quantity": 1
+    },
+    {
+      "id": "cart-99uoxwkix",
+      "product_id": "467",
+      "time": "2025-03-04T04:26:54.952Z",
+      "quantity": 1
+    },
+    {
+      "id": "cart-yt00cwyqe",
+      "product_id": "466",
+      "time": "2025-03-04T04:26:58.527Z",
+      "quantity": 1
+    },
+    {
+      "id": "cart-s3kon713x",
+      "product_id": "468",
+      "time": "2025-03-04T04:35:32.312Z",
+      "quantity": 1
+    },
+    {
+      "id": "cart-wti7r08du",
+      "product_id": "339",
+      "time": "2025-03-04T04:35:36.150Z",
+      "quantity": 1
+    },
+    {
+      "id": "cart-ycd21e72w",
+      "product_id": "465",
+      "time": "2025-03-04T04:35:48.069Z",
+      "quantity": 1
+    },
+    {
+      "id": "cart-jrhsblxaw",
+      "product_id": "42",
+      "time": "2025-03-04T09:35:10.069Z",
+      "quantity": 1
+    },
+    {
+      "id": "cart-y8hu2zoxm",
+      "product_id": "271",
+      "time": "2025-03-04T09:54:13.714Z",
+      "quantity": 3
+    }
+  ],
+  "bill": [
+    {
+      "id": "70a3",
+      "f_name": "fgj",
+      "l_name": "fgj",
+      "address": "ftgjh",
+      "city": "Saidpur",
+      "post_code": "fgj",
+      "phone_num": "+918200986329",
+      "email": "yatri@gmail.com",
+      "note": "fghnj gj jfgh",
+      "regular_product": [
+        {
+          "product_id": "42",
+          "quantity": 1
+        },
+        {
+          "product_id": "271",
+          "quantity": 3
+        }
+      ],
+      "rental_product": [
+        {
+          "product_id": "468",
+          "quantity": 1
+        },
+        {
+          "product_id": "339",
+          "quantity": 1
+        },
+        {
+          "product_id": "465",
+          "quantity": 1
+        }
+      ],
+      "total": "236.96",
+      "payment_method": []
+    },
+    {
+      "id": "c6a5",
+      "f_name": "fgjh",
+      "l_name": "ghj",
+      "address": "fgj",
+      "city": "Saidpur",
+      "post_code": "fgjh",
+      "phone_num": "+918200986329",
+      "email": "yatri@gmail.com",
+      "note": "dth dyth dcjh",
+      "regular_product": [
+        {
+          "product_id": "42",
+          "quantity": 1
+        },
+        {
+          "product_id": "271",
+          "quantity": 3
+        }
+      ],
+      "rental_product": [
+        {
+          "product_id": "468",
+          "quantity": 1
+        },
+        {
+          "product_id": "339",
+          "quantity": 1
+        },
+        {
+          "product_id": "465",
+          "quantity": 1
+        }
+      ],
+      "total": "236.96",
+      "payment_method": [
+        "Cash",
+        "Check",
+        "PayPal"
+      ]
+    },
+    {
+      "id": "a745",
+      "f_name": "cdc",
+      "l_name": "dd",
+      "address": "sdes",
+      "city": "Dhaka",
+      "post_code": "cdc",
+      "phone_num": "1234567890",
+      "email": "ss@gmail.com",
+      "note": "vcdvv fgbg  fg",
+      "regular_product": [
+        {
+          "product_id": "42",
+          "quantity": 1
+        },
+        {
+          "product_id": "271",
+          "quantity": 3
+        }
+      ],
+      "rental_product": [
+        {
+          "product_id": "468",
+          "quantity": 1
+        },
+        {
+          "product_id": "339",
+          "quantity": 1
+        },
+        {
+          "product_id": "465",
+          "quantity": 1
+        }
+      ],
+      "total": "236.96",
+      "payment_method": [
+        "Cash",
+        "Check",
+        "PayPal"
+      ]
+    },
+    {
+      "id": "033c",
+      "f_name": "sddd",
+      "l_name": "sdds",
+      "address": "cdsd",
+      "city": "Saidpur",
+      "post_code": "sddd",
+      "phone_num": "1234567890",
+      "email": "ss@gmail.com",
+      "note": "vdfv edfew",
+      "regular_product": [
+        {
+          "product_id": "42",
+          "quantity": 1
+        },
+        {
+          "product_id": "271",
+          "quantity": 3
+        }
+      ],
+      "rental_product": [
+        {
+          "product_id": "468",
+          "quantity": 1
+        },
+        {
+          "product_id": "339",
+          "quantity": 1
+        },
+        {
+          "product_id": "465",
+          "quantity": 1
+        }
+      ],
+      "total": "236.96",
+      "payment_method": [
+        "Cash",
+        "Check"
+      ]
+    },
+    {
+      "id": "a9f8",
+      "f_name": "dasdsad",
+      "l_name": "sdaasdsd",
+      "address": "sdasd",
+      "city": "Saidpur",
+      "post_code": "dasdsad",
+      "phone_num": "+919106722109",
+      "email": "kk@gmail.com",
+      "note": "c eda wswdaq  w",
+      "regular_product": [
+        {
+          "product_id": "42",
+          "quantity": 1
+        },
+        {
+          "product_id": "271",
+          "quantity": 3
+        }
+      ],
+      "rental_product": [
+        {
+          "product_id": "468",
+          "quantity": 1
+        },
+        {
+          "product_id": "339",
+          "quantity": 1
+        },
+        {
+          "product_id": "465",
+          "quantity": 1
+        }
+      ],
+      "total": "236.96",
+      "payment_method": [
+        "Cash",
+        "Check",
+        "PayPal",
+        "Card"
+      ]
     }
   ]
 }

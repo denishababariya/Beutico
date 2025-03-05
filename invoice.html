@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from demo-egenslab.b-cdn.net/html/OrnaCare/preview/cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Feb 2025 04:32:07 GMT -->
+
+<!-- Mirrored from demo-egenslab.b-cdn.net/html/OrnaCare/preview/checkout.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Feb 2025 04:32:08 GMT -->
 
 <head>
     <meta charset="UTF-8">
@@ -15,7 +16,6 @@
     <link href="/css/nice-select.css" rel="stylesheet">
     <!--  FancyBox CSS  -->
     <link rel="stylesheet" href="/css/jquery.fancybox.min.css">
-
     <!-- Fontawesome CSS -->
     <link href="/css/fontawesome.min.css" rel="stylesheet">
     <!-- box icon css -->
@@ -24,15 +24,64 @@
     <link rel="stylesheet" href="/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="/css/slick-theme.css">
     <link rel="stylesheet" href="/css/slick.css">
-    <!--  FancyBox CSS  -->
-    <link rel="stylesheet" href="/css/jquery.fancybox.min.css">
+
     <!--  Style CSS  -->
     <link rel="stylesheet" href="/css/style.css">
     <title>OrnaCare - Beauty & jewelery</title>
     <link rel="icon" href="/img/logo1.png" type="image/gif">
+    <style>
+        .form-check-input:checked+label {
+            font-weight: bold;
+            /* Make the label bold when checked */
+            color: green;
+            /* Change the label color when checked */
+        }
+        .invoice-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            font-family: Arial, sans-serif;
+        }
+        .brand-logo img {
+            max-width: 150px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        .product-details {
+            margin: 20px 0;
+        }
+        .product-details ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .product-details li {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .bill-details {
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        #downloadInvoice {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #downloadInvoice:hover {
+            background-color: #218838;
+        }
+    </style>
 </head>
 
 <body>
+
     <div class="top-bar">
         <div class="container">
             <div class="row">
@@ -220,9 +269,9 @@
                             <div class="email-info">
                                 <span>Email Now</span>
                                 <h6><a
-                                        href="https://demo-egenslab.b-cdn.net/cdn-cgi/l/email-protection#b7d2cfd6dac7dbd2f7d0dad6dedb99d4d8da"><span
+                                        href="https://demo-egenslab.b-cdn.net/cdn-cgi/l/email-protection#610419000c110d0421060c00080d4f020e0c"><span
                                             class="__cf_email__"
-                                            data-cfemail="54312c3539243831143339353d387a373b39">[email&#160;protected]</span></a>
+                                            data-cfemail="e3869b828e938f86a3848e828a8fcd808c8e">[email&#160;protected]</span></a>
                                 </h6>
                             </div>
                         </div>
@@ -281,223 +330,55 @@
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Shop</li>
-                    <li class="breadcrumb-item active" aria-current="page">Cart</li>
+                    <li class="breadcrumb-item" aria-current="page"><a href="shop-list.html">shop</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Checkout</li>
+                    <li class="breadcrumb-item active" aria-current="page">invoice</li>
                 </ol>
             </nav>
         </div>
     </div>
     <!-- End Breadcrumb Section section -->
 
-    <!-- Star Whistlist section -->
-    <div class="whistlist-section cart mt-110 mb-110">
+    <!-- ========== Checkout Section Start============= -->
+    <div class="checkout-section pt-110 mb-110">
         <div class="container">
-            <div class="row mb-50">
-                <div class="col-12">
-                    <div class="whistlist-table">
-                        <table class="eg-table2" id="cartTable">
-                            <thead>
-                                <tr>
-                                    <th></th>
-                                    <th>Product</th>
-                                    <th>Price</th>
-                                    <th>Quantity</th>
-                                    <th>Total</th>
-                                </tr>
-                            </thead>
-                            <tbody id="cartBody">
-                                <!-- Dynamic content will be injected here -->
-                            </tbody>
-                        </table>
+            <div class="invoice-container">
+                <div class="brand-logo">
+                    <img src="/img/logo1.png" alt="Brand Logo">
+                </div>
+                <h1>Invoice</h1>
+                <div class="product-details">
+                    <h2>Product Details</h2>
+                    <div class="regular-products">
+                        <h3>Regular Products</h3>
+                        <ul id="regularProductList">
+                            <!-- Regular products will be populated here -->
+                        </ul>
+                    </div>
+                    <div class="rental-products">
+                        <h3>Rental Products</h3>
+                        <ul id="rentalProductList">
+                            <!-- Rental products will be populated here -->
+                        </ul>
                     </div>
                 </div>
-            </div>
-            <div class="row g-4">
-
-                <div class="col-lg-12">
-                    <h5 class="mb-4">Cart Total</h5>
-                    <table class="cart-table">
-                        <thead>
-                            <tr>
-                                <th>Cart Totals</th>
-                                <!-- <th></th> -->
-                                <th id="cartTotal">$0.00</th>
-                            </tr>
-                        </thead>
-
-                    </table>
-                    <!-- <button type="submit" onclick="window.location.href = 'checkout.html';" class="primary-btn1 hover-btn3">Product Checkout</button> -->
-                    <button type="submit" onclick="handleCheckout();" class="primary-btn1 hover-btn3">Product
-                        Checkout</button>
+                <div class="bill-details">
+                    <h2>Bill Summary</h2>
+                    <p>Total: <span id="totalAmount"></span></p>
                 </div>
+                <button id="downloadInvoice" class="primary-btn1">Download Invoice</button>
             </div>
-            <script>
-                // Retrieve cart IDs from session storage
-                const cartProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
-                let subtotal = 0; // Initialize subtotal
-
-                // Fetch cart data for each cart ID
-                async function fetchCartData() {
-                    const cartBody = document.getElementById('cartBody');
-                    cartBody.innerHTML = ''; // Clear existing content
-
-                    for (const cartId of cartProducts) {
-                        try {
-                            // Fetch cart item details
-                            const cartResponse = await fetch(`http://localhost:3000/cart/${cartId}`);
-                            if (!cartResponse.ok) {
-                                throw new Error('Network response was not ok');
-                            }
-                            const cartData = await cartResponse.json();
-
-                            // Fetch product details using product_id from cartData
-                            const productResponse = await fetch(`http://localhost:3000/product/${cartData.product_id}`);
-                            if (!productResponse.ok) {
-                                throw new Error('Network response was not ok');
-                            }
-                            const productData = await productResponse.json();
-
-                            // Calculate total for this product
-                            const total = productData.price * cartData.quantity;
-                            subtotal += total; // Add to subtotal
-
-                            // Create a new row for the cart table
-                            const row = `
-                                <tr>
-                                    <td>
-                                        <div class="delete-icon" onclick="deleteCartItem('${cartId}')">
-                                            <i class="bi bi-x-lg"></i>
-                                        </div>
-                                    </td>
-                                    <td data-label="Product" class="table-product">
-                                        <div class="product-img">
-                                            <img src="${productData.images[0]}" alt="">
-                                        </div>
-                                        <div class="product-content">
-                                            <h6><a href="#">${productData.name}</a></h6>
-                                        </div>
-                                    </td>
-                                    <td data-label="Price">
-                                        <p class="price">
-                                            <del>$${productData.price + 10}</del> <!-- Assuming original price is $10 more -->
-                                            $${productData.price}
-                                        </p>
-                                    </td>
-                                    <td data-label="Quantity">
-                                        <div class="quantity-counter">
-                                            <a href="#" class="quantity__minus" onclick="changeQuantity('${cartId}', -1)"><i class='bx bx-minus'></i></a>
-                                            <input name="quantity" type="text" class="quantity__input" value="${cartData.quantity}" id="quantity-${cartId}">
-                                            <a href="#" class="quantity__plus" onclick="changeQuantity('${cartId}', 1)"><i class='bx bx-plus'></i></a>
-                                        </div>
-                                    </td>
-                                    <td data-label="Total" id="total-${cartId}" data-price="${productData.price}">
-                                        $${total.toFixed(2)}
-                                    </td>
-                                </tr>
-                            `;
-                            cartBody.innerHTML += row; // Append new row to the table body
-                        } catch (error) {
-                            console.error('Error fetching data:', error);
-                        }
-                    }
-
-                    // Update subtotal and total in the cart totals section
-                    document.getElementById('cartTotal').innerText = `$${subtotal.toFixed(2)}`;
-                    // document.getElementById('cartTotal').innerText = `$${(subtotal + 15).toFixed(2)}`; // Assuming $15 shipping fee
-                }
-
-                // Call the function to fetch cart data on page load
-                window.onload = fetchCartData;
-
-                async function deleteCartItem(cartId) {
-                    try {
-                        // Make API call to delete the item from the cart
-                        const response = await fetch(`http://localhost:3000/cart/${cartId}`, {
-                            method: 'DELETE',
-                        });
-
-                        if (!response.ok) {
-                            throw new Error('Failed to delete item from cart');
-                        }
-
-                        // Remove the item from the local storage
-                        const cartProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
-                        const updatedCartProducts = cartProducts.filter(id => id !== cartId);
-                        localStorage.setItem('cartProducts', JSON.stringify(updatedCartProducts));
-
-                        // Refresh the cart data
-                        fetchCartData();
-                    } catch (error) {
-                        console.error('Error deleting item:', error);
-                    }
-                }
-
-                function changeQuantity(cartId, change) {
-                    const quantityInput = document.getElementById(`quantity-${cartId}`);
-                    const totalCell = document.getElementById(`total-${cartId}`);
-                    let currentQuantity = parseInt(quantityInput.value);
-
-                    // Update quantity
-                    currentQuantity += change;
-                    if (currentQuantity < 1) currentQuantity = 1; // Prevent quantity from going below 1
-                    quantityInput.value = currentQuantity;
-
-                    // Fetch the price from the product data (you may need to adjust this based on your data structure)
-                    const productPrice = parseFloat(totalCell.dataset.price); // Assuming you store the price in a data attribute
-
-                    // Update total price
-                    const newTotal = productPrice * currentQuantity;
-                    totalCell.innerText = `$${newTotal.toFixed(2)}`;
-
-                    // Optionally, you can also update the cart data here if needed
-                    // For example, you might want to update the local storage or make an API call
-                }
-            </script>
-            <script>
-                function handleCheckout() {
-                    const userId = localStorage.getItem('user_id'); // Check for user_id in local storage
-                    if (!userId) {
-                        openLoginModal(); // Show login/register modal if user_id does not exist
-                    } else {
-                        // Check if user_id exists in the API
-                        fetch(`http://localhost:3000/users/${userId}`)
-                            .then(response => {
-                                if (response.ok) {
-                                    window.location.href = 'checkout.html'; // Redirect to checkout if user exists
-                                } else {
-                                    openLoginModal(); // Show login/register modal if user does not exist
-                                }
-                            })
-                            .catch(error => {
-                                console.error('Error checking user ID:', error);
-                                openLoginModal(); // Show modal on error
-                            });
-                    }
-                }
-
-                function openLoginModal() {
-                    const loginModal = new bootstrap.Modal(document.getElementById("user-login"));
-                    loginModal.show(); // Show the login/register modal
-                }
-            </script>
         </div>
     </div>
-    <!-- End Whistlist section -->
+    <!-- ========== Checkout Section end============= -->
 
-    <!-- Star Gift section section -->
-    <div class="gift-section" id="rentalgift-section">
-
-    </div>
-    <!-- End Gift section section -->
-
-    <!-- Start Footer section section -->
+    <!-- Start Footer section -->
     <footer class="footer-section" id="footer-section">
         <!-- Dynamic content will be added here -->
     </footer>
-    <!-- End Footer section section -->
+    <!-- End Footer section -->
 
-
-
+   
     <!--  Main jQuery  -->
     <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="/js/jquery-3.6.0.min.js"></script>
@@ -510,14 +391,16 @@
     <script src="/js/slick.js"></script>
     <!-- Swiper slider JS -->
     <script src="/js/swiper-bundle.min.js"></script>
-    <!-- Fancybox JS -->
-    <script src="/js/jquery.fancybox.min.js"></script>
+
+
+    <script src="/js/waypoints.min.js"></script>
     <!-- main js  -->
     <script src="/js/main.js"></script>
     <script src="/js/index.js"></script>
     <script src="/js/footer.js"></script>
 </body>
 
-<!-- Mirrored from demo-egenslab.b-cdn.net/html/OrnaCare/preview/cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Feb 2025 04:32:08 GMT -->
+
+<!-- Mirrored from demo-egenslab.b-cdn.net/html/OrnaCare/preview/checkout.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Feb 2025 04:32:09 GMT -->
 
 </html>

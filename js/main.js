@@ -821,30 +821,34 @@ $(".swiper-slide .nav-item .nav-link ").on("click",function(){
 
   $(function() {
     $('.payment-methods .payment-list li').on('click', function() {
-      $('.payment-methods .payment-list li').removeClass('active'); // Remove active class from all list items
-      if ($(this).hasClass('check-payment')) {
-        $('#strip-payment').hide();
-        $(this).addClass('active'); // Add active class to the clicked list item
-      }
-      else if ($(this).hasClass('cash-delivary')) {
-        $('#strip-payment').hide();
-        $(this).addClass('active'); // Add active class to the clicked list item
-      }
-      else if ($(this).hasClass('paypal')) {
-        $('#strip-payment').hide();
-        $(this).addClass('active'); // Add active class to the clicked list item
-      }
-      else if ($(this).hasClass('stripe')) {
-        $('#strip-payment').show();
-        $(this).addClass('active'); // Add active class to the clicked list item
-      }
-      else {
-        $('#strip-payment').hide();
-      }
+        // Toggle active class for the clicked list item
+        $(this).toggleClass('active'); 
+
+        // Check if the stripe payment method is active
+        if ($('.payment-methods .payment-list li.stripe').hasClass('active')) {
+            $('#strip-payment').show(); 
+        } else {
+            $('#strip-payment').hide(); 
+        }
     });
   });
   
+  // check multiple active 
+  // $(function() {
+  //   $('.payment-methods .payment-list li').on('click', function() {
+  //       // Toggle active class for the clicked list item
+  //       $(this).toggleClass('active'); 
+
+  //       // Check if the stripe payment method is active
+  //       if ($('.payment-methods .payment-list li.stripe').hasClass('active')) {
+  //           $('#strip-payment').show(); 
+  //       } else {
+  //           $('#strip-payment').hide(); 
+  //       }
+  //   });
+  // });
   //Select wrap
+
   $(".select-wrap").on("click", function () {
     $(this).addClass("selected").siblings().removeClass("selected");
   });

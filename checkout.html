@@ -29,6 +29,14 @@
     <link rel="stylesheet" href="/css/style.css">
     <title>OrnaCare - Beauty & jewelery</title>
     <link rel="icon" href="/img/logo1.png" type="image/gif">
+    <style>
+        .form-check-input:checked+label {
+            font-weight: bold;
+            /* Make the label bold when checked */
+            color: green;
+            /* Change the label color when checked */
+        }
+    </style>
 </head>
 
 <body>
@@ -307,7 +315,7 @@
                                 <div class="col-lg-6">
                                     <div class="form-inner">
                                         <label>Last Name</label>
-                                        <input type="text" name="fname" placeholder="Your last name">
+                                        <input type="text" name="lname" placeholder="Your last name" required>
                                     </div>
                                 </div>
                                 <!-- <div class="col-12">
@@ -319,18 +327,18 @@
                                 <div class="col-12">
                                     <div class="form-inner">
                                         <label>Street Address</label>
-                                        <input type="text" name="fname" placeholder="House and street name">
+                                        <input type="text" name="address" placeholder="Your address" required>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-inner">
-                                        <select>
-                                            <option>Town / City</option>
-                                            <option>Dhaka</option>
-                                            <option>Saidpur</option>
-                                            <option>Newyork</option>
+                                        <label>City</label>
+                                        <select name="city" required>
+                                            <option value="">Select your city</option>
+                                            <option value="Dhaka">Dhaka</option>
+                                            <option value="Saidpur">Saidpur</option>
+                                            <option value="Newyork">Newyork</option>
                                         </select>
-
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -340,8 +348,8 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="form-inner">
-                                        <label>Additional Information</label>
-                                        <input type="text" name="fname" placeholder="Your Phone Number">
+                                        <label>Phone Number</label>
+                                        <input type="text" name="phone" placeholder="Your phone number" required>
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -362,31 +370,121 @@
                                 </div>
                             </div>
                         </form>
-                    </div>
-                    <!-- <div class="form-wrap box--shadow">
-                        <h4>Ship to a Different Address?</h4>
-                        <form>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-inner">
-                                        <label>First Name</label>
-                                        <input type="text" name="fname" placeholder="Your first name">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-inner">
-                                        <label>Last Name</label>
-                                        <input type="text" name="fname" placeholder="Your last name">
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-inner">
-                                        <textarea name="message" placeholder="Order Notes (Optional)" rows="3"></textarea>
+                        <div class="cost-summary total-cost mb-30">
+                            <table class="table cost-summary-table total-cost">
+                                <thead>
+                                    <tr>
+                                        <th style="color: rgb(226, 43, 150);">Total</th>
+                                        <th id="final-total-both">$0.00</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <form class="payment-form">
+                            <div class="payment-methods mb-30">
+                                <ul class="payment-list">
+                                    <li class="check-payment">
+                                        <div class="form-check payment-check">
+                                            <h6>Cash</h6>
+                                            
+                                        </div>
+                                        <div class="checked">
+                                            <input type="checkbox" name="payment-method" value="Cash" class="payment-option opacity-0">
+                                        </div>
+                                    </li>
+                                    <li class="check-payment">
+                                        <div class="form-check payment-check">
+                                            <h6>Check payments</h6>
+                                            
+                                        </div>
+                                        <div class="checked">
+                                            <input type="checkbox" name="payment-method" value="Check" class="payment-option opacity-0">  
+                                        </div>
+                                    </li>
+                                    <li class="paypal">
+                                        <div class="form-check payment-check paypal">
+                                            <h6>Paypal</h6>
+                                            <img src="/img/inner-page/payment.png" alt="">
+                                            <a href="#" class="about-paypal">What is PayPal?</a>
+                                            
+                                        </div>
+                                        <div class="checked">
+                                            <input type="checkbox" name="payment-method" value="PayPal" class="payment-option opacity-0">
+                                        </div>
+                                    </li>
+                                    <li class="stripe">
+                                        <h6>Card</h6>
+                                      
+                                        <div class="checked">
+                                            <input type="checkbox" name="payment-method" value="Card" class="payment-option opacity-0">
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="choose-payment-method pt-25 pb-25" id="strip-payment"
+                                    style="display: none;">
+                                    <h5>Select Your Payment Method</h5>
+                                    <div class="row gy-4 g-4">
+                                        <div class="col-md-12">
+                                            <div class="input-area">
+                                                <label>Card Number</label>
+                                                <div class="input-field">
+                                                    <input type="text" placeholder="1234 1234 1234 1234">
+                                                    <img src="/img/inner-page/payment.png" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-7">
+                                            <div class="input-area">
+                                                <label>Expiration Date</label>
+                                                <div class="row gy-4">
+                                                    <div class="col-sm-6">
+                                                        <select>
+                                                            <option>Month</option>
+                                                            <option>January</option>
+                                                            <option>February</option>
+                                                            <option>March</option>
+                                                            <option>April</option>
+                                                            <option>May</option>
+                                                            <option>June</option>
+                                                            <option>July</option>
+                                                            <option>August</option>
+                                                            <option>September</option>
+                                                            <option>October</option>
+                                                            <option>November</option>
+                                                            <option>December</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <select>
+                                                            <option>Day</option>
+                                                            <option>01</option>
+                                                            <option>02</option>
+                                                            <option>03</option>
+                                                            <option>04</option>
+                                                            <option>05</option>
+                                                            <option>06</option>
+                                                            <option>07</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-5">
+                                            <div class="input-area">
+                                                <label>CVC</label>
+                                                <input type="text" placeholder="123">
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="place-order-btn">
+                                <button type="submit" class="primary-btn1 hover-btn3" id="finalize-payment">Finalize Payment</button>
+                            </div>
                         </form>
-                    </div> -->
+                    </div>
+
+
                 </div>
                 <div class="col-lg-5">
                     <div class="added-product-summary mb-30">
@@ -394,128 +492,62 @@
                         <ul class="added-products" id="added-products">
 
                         </ul>
-                    </div>
-                    <div class="cost-summary mb-30">
-                        <table class="table cost-summary-table">
-                            <thead>
-                                <tr>
-                                    <th>Subtotal</th>
-                                    <th id="subtotal">$0.00</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="tax">Tax</td>
-                                    <td id="tax">$0.00</td>
-                                </tr>
-                                <tr>
-                                    <td>Total ( tax excl.)</td>
-                                    <td id="total-excl">$0.00</td>
-                                </tr>
-                                <tr>
-                                    <td>Total ( tax incl.)</td>
-                                    <td id="total-incl">$0.00</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="cost-summary total-cost mb-30">
-                        <table class="table cost-summary-table total-cost">
-                            <thead>
-                                <tr>
-                                    <th>Total</th>
-                                    <th id="final-total">$0.00</th>
-                                </tr>
-                            </thead>
-                        </table>
-                    </div>
-                    <form class="payment-form">
-                        <div class="payment-methods mb-30">
-                            <ul class="payment-list">
-                                <li class="check-payment">
-                                    <div class="form-check payment-check">
-                                        <h6>Check payments</h6>
-                                    </div>
-                                    <div class="checked">
-                                    </div>
-                                </li>
-                                <li class="paypal">
-                                    <div class="form-check payment-check paypal">
-                                        <h6>Paypal</h6>
-                                        <img src="/img/inner-page/payment.png" alt="">
-                                        <a href="#" class="about-paypal">What is PayPal?</a>
-                                    </div>
-                                    <div class="checked">
-                                    </div>
-                                </li>
-                                <li class="stripe">
-                                    <h6>Card</h6>
-                                    <div class="checked">
-                                    </div>
-                                </li>
-                            </ul>
-                            <div class="choose-payment-method pt-25 pb-25" id="strip-payment" style="display: none;">
-                                <h5>Select Your Payment Method</h5>
-                                <div class="row gy-4 g-4">
-                                    <div class="col-md-12">
-                                        <div class="input-area">
-                                            <label>Card Number</label>
-                                            <div class="input-field">
-                                                <input type="text" placeholder="1234 1234 1234 1234">
-                                                <img src="/img/inner-page/payment.png" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-7">
-                                        <div class="input-area">
-                                            <label>Expiration Date</label>
-                                            <div class="row gy-4">
-                                                <div class="col-sm-6">
-                                                    <select>
-                                                        <option>Month</option>
-                                                        <option>January</option>
-                                                        <option>February</option>
-                                                        <option>March</option>
-                                                        <option>April</option>
-                                                        <option>May</option>
-                                                        <option>June</option>
-                                                        <option>July</option>
-                                                        <option>August</option>
-                                                        <option>September</option>
-                                                        <option>October</option>
-                                                        <option>November</option>
-                                                        <option>December</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    <select>
-                                                        <option>Day</option>
-                                                        <option>01</option>
-                                                        <option>02</option>
-                                                        <option>03</option>
-                                                        <option>04</option>
-                                                        <option>05</option>
-                                                        <option>06</option>
-                                                        <option>07</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-5">
-                                        <div class="input-area">
-                                            <label>CVC</label>
-                                            <input type="text" placeholder="123">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+
+                        <div class="cost-summary mb-30">
+                            <table class="table cost-summary-table">
+                                <thead>
+                                    <tr>
+                                        <th>Subtotal</th>
+                                        <th id="subtotal">$0.00</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="tax">Tax</td>
+                                        <td id="tax">$0.00</td> <!-- This will display the calculated tax amount -->
+                                    </tr>
+                                    <tr>
+                                        <td>Tax HST</td>
+                                        <td id="total-excl">14%</td> <!-- Updated tax percentage -->
+                                    </tr>
+                                    <tr>
+                                        <td>Tax IGST</td>
+                                        <td id="total-incl">18%</td> <!-- Updated tax percentage -->
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-                        <div class="place-order-btn">
-                            <button type="submit" class="primary-btn1 hover-btn3">Place Order</button>
+                        <div class="cost-summary total-cost mb-30">
+                            <table class="table cost-summary-table total-cost">
+                                <thead>
+                                    <tr>
+                                        <th>Total</th>
+                                        <th id="final-total">$0.00</th>
+                                    </tr>
+                                </thead>
+                            </table>
                         </div>
-                    </form>
+                    </div>
+
+                    <div class="added-product-summary mb-30">
+                        <h5>Rental Product</h5>
+                        <ul class="added-products" id="rental-products">
+
+                        </ul>
+
+                        <div class="cost-summary total-cost mb-30">
+                            <table class="table cost-summary-table total-cost">
+                                <thead>
+                                    <tr>
+                                        <th>Total</th>
+                                        <th id="final-total1">$0.00</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
     </div>
@@ -526,148 +558,6 @@
         <!-- Dynamic content will be added here -->
     </footer>
     <!-- End Footer section -->
-    <ul class="added-products" id="added-products"></ul>
-
-    <!-- <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const cartProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
-            console.log("Cart products from localStorage:", cartProducts);
-
-            if (cartProducts.length === 0) {
-                console.log("No products in cart");
-                document.getElementById('added-products').innerHTML = '<li>Your cart is empty</li>';
-                return;
-            }
-
-            fetch('http://localhost:3000/cart')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! status: ${response.status}`);
-                    }
-                    return response.json();
-                })
-                .then(cartData => {
-                    console.log("Data received from server:", cartData);
-
-                    // Find products in cart that match the IDs from localStorage
-                    const matchedProducts = cartData.filter(item => cartProducts.includes(item.id));
-                    console.log("Matched products:", matchedProducts);
-
-                    if (matchedProducts.length === 0) {
-                        console.log("No matched products found");
-                        document.getElementById('added-products').innerHTML = '<li>No matching products found</li>';
-                        return Promise.reject("No matched products");
-                    }
-
-                    // Create a map of product_id to quantity from cart data
-                    const quantityMap = {};
-                    matchedProducts.forEach(item => {
-                        quantityMap[item.product_id] = item.quantity || 1; // Default to 1 if quantity is missing
-                    });
-
-                    // Collect product IDs for detail fetching
-                    const productIds = matchedProducts.map(product => product.product_id);
-                    console.log("Matched Product IDs:", productIds);
-
-                    // Array to store full product details
-                    const productsWithDetails = [];
-
-                    // Fetch product details for each product ID
-                    return Promise.all(
-                        productIds.map(id =>
-                            fetch(`http://localhost:3000/product?id=${id}`)
-                                .then(response => {
-                                    if (!response.ok) {
-                                        throw new Error(`HTTP error! Status: ${response.status}`);
-                                    }
-                                    return response.json();
-                                })
-                                .then(productDetails => {
-                                    console.log(`Product details for ID ${id}:`, productDetails);
-
-                                    // For each product returned, add the quantity from our map
-                                    productDetails.forEach(product => {
-                                        productsWithDetails.push({
-                                            ...product,
-                                            quantity: quantityMap[id] || 1 // Use the quantity from cart or default to 1
-                                        });
-                                    });
-                                })
-                                .catch(error => console.error(`Error fetching product ID ${id}:`, error))
-                        )
-                    ).then(() => {
-                        console.log("Final products with details:", productsWithDetails);
-
-                        // Insert product details into the UL with correct quantity
-                        const productList = document.getElementById('added-products');
-                        productList.innerHTML = productsWithDetails.map(product =>
-                            `<li class="single-product">
-                        <div class="product-area">
-                            <div class="product-img">
-                                <img src="${product.image || '/img/inner-page/checkout-product-img1.png'}" alt="">
-                            </div>
-                            <div class="product-info">
-                                <h5><a href="#">${product.name}</a></h5>
-                                <div class="product-total">
-                                    <div class="quantity-counter">
-                                        <a href="#" class="quantity__minus"><i class='bx bx-minus'></i></a>
-                                        <input name="quantity" type="text" class="quantity__input" value="${product.quantity}">
-                                        <a href="#" class="quantity__plus"><i class='bx bx-plus'></i></a>
-                                    </div>
-                                    <strong> <i class="bi bi-x-lg px-2"></i>
-                                        <span class="product-price">${product.price}</span>
-                                    </strong>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="delete-btn">
-                            <i class='bx bx-x'></i>
-                        </div>
-                    </li>`
-                        ).join('');
-
-                        // Initialize quantity controls if needed
-                        initializeQuantityControls();
-                    });
-                })
-                .catch(error => {
-                    console.error('Error in cart operation:', error);
-                    const errorMessageElement = document.getElementById('error-message');
-                    if (errorMessageElement) {
-                        errorMessageElement.textContent = 'Could not load cart details. Please try again.';
-                    } else {
-                        console.warn("Error message element not found.");
-                        document.getElementById('added-products').innerHTML = '<li>Error loading cart</li>';
-                    }
-                });
-
-            // Function to initialize quantity controls
-            function initializeQuantityControls() {
-                // Add event listeners for the plus and minus buttons
-                document.querySelectorAll('.quantity__plus').forEach(button => {
-                    button.addEventListener('click', function (e) {
-                        e.preventDefault();
-                        const input = this.parentNode.querySelector('.quantity__input');
-                        let value = parseInt(input.value, 10);
-                        input.value = isNaN(value) ? 1 : value + 1;
-                        // You can add code here to update the cart
-                    });
-                });
-
-                document.querySelectorAll('.quantity__minus').forEach(button => {
-                    button.addEventListener('click', function (e) {
-                        e.preventDefault();
-                        const input = this.parentNode.querySelector('.quantity__input');
-                        let value = parseInt(input.value, 10);
-                        if (value > 1) {
-                            input.value = value - 1;
-                            // You can add code here to update the cart
-                        }
-                    });
-                });
-            }
-        });
-    </script> -->
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -677,8 +567,20 @@
             if (cartProducts.length === 0) {
                 console.log("No products in cart");
                 document.getElementById('added-products').innerHTML = '<li>Your cart is empty</li>';
+                document.getElementById('rental-products').innerHTML = '<li>Your cart is empty</li>';
                 return;
             }
+
+            // Initialize totals for both categories
+            let regularSubtotal = 0;
+            let rentalSubtotal = 0;
+            let totalTax = 0;
+
+            // Get tax rates once
+            let igsttax = parseFloat(document.getElementById("total-incl").innerText.replace('%', '')) / 100;
+            let hsttax = parseFloat(document.getElementById("total-excl").innerText.replace('%', '')) / 100;
+            let taxsum = igsttax + hsttax;
+            console.log(taxsum, "taxsum");
 
             fetch('http://localhost:3000/cart')
                 .then(response => {
@@ -688,91 +590,137 @@
                     return response.json();
                 })
                 .then(cartData => {
-                    console.log("Data received from server:", cartData);
+                    console.log("Cart Data:", cartData);
 
-                    // Find products in cart that match the IDs from localStorage
-                    // Make sure we're using the right property to match
                     const matchedProducts = cartData.filter(item => cartProducts.includes(item.id));
                     console.log("Matched products:", matchedProducts);
 
                     if (matchedProducts.length === 0) {
                         console.log("No matched products found");
                         document.getElementById('added-products').innerHTML = '<li>No matching products found</li>';
+                        document.getElementById('rental-products').innerHTML = '<li>No matching products found</li>';
                         return Promise.reject("No matched products");
                     }
 
-                    // Create a map of product_id to quantity from cart data
                     const quantityMap = {};
-                    matchedProducts.forEach(item => {
-                        // Make sure we're using the right property here
-                        quantityMap[item.product_id] = item.quantity || 1;
-                    });
 
-                    // Display products as they are fetched instead of waiting for all
-                    const productList = document.getElementById('added-products');
-                    productList.innerHTML = ''; // Clear the list
+                    // Fetch product details and calculate subtotal
+                    return Promise.all(matchedProducts.map(item => {
+                        return fetch(`http://localhost:3000/product?id=${item.product_id}`)
+                            .then(response => {
+                                if (!response.ok) {
+                                    throw new Error(`HTTP error! Status: ${response.status}`);
+                                }
+                                return response.json();
+                            })
+                            .then(productDetails => {
+                                const product = productDetails[0]; // Assuming the product details are returned as an array
+                                let price = product.price;
+                                let quantity = item.quantity || 1;
+                                quantityMap[item.product_id] = quantity;
 
-                    // Fetch product details for each product ID and render immediately
-                    return Promise.all(
-                        matchedProducts.map(cartItem => {
-                            const productId = cartItem.product_id;
-                            return fetch(`http://localhost:3000/product?id=${productId}`)
-                                .then(response => {
-                                    if (!response.ok) {
-                                        throw new Error(`HTTP error! Status: ${response.status}`);
-                                    }
-                                    return response.json();
-                                })
-                                .then(productDetails => {
-                                    console.log(`Product details for ID ${productId}:`, productDetails);
+                                // Check if the product's cat_id is 5 or 6
+                                if (product.cat_id !== 5 && product.cat_id !== 6) {
+                                    // Regular product
+                                    console.log(`Product with id ${item.product_id} is a regular product`);
+                                    let itemSubtotal = price * quantity;
+                                    regularSubtotal += itemSubtotal;
 
-                                    if (productDetails && productDetails.length > 0) {
-                                        // Get the first product (assuming one product per ID)
-                                        const product = productDetails[0];
-
-                                        // Create product element with the quantity from cart
-                                        const productElement = document.createElement('li');
-                                        productElement.className = 'single-product';
-                                        productElement.innerHTML = `
-                                    <div class="product-area">
-                                        <div class="product-img">
-                                            <img src="${product.image || '/img/inner-page/checkout-product-img1.png'}" alt="">
+                                    // Create product list item
+                                    let productElement = document.createElement('li');
+                                    productElement.className = 'single-product';
+                                    productElement.innerHTML = `
+                            <div class="product-area" data-id="${product.id}">
+                                <div class="product-img">
+                                    <img src="${product.images[0] || '/img/inner-page/checkout-product-img1.png'}" alt="">
+                                </div>
+                                <div class="product-info">
+                                    <h5><a href="#">${product.name}</a></h5>
+                                    <div class="product-total">
+                                        <div class="quantity-counter">
+                                            <a href="#" class="quantity__minus"><i class='bx bx-minus'></i></a>
+                                            <input name="quantity" type="text" class="quantity__input" value="${quantity}">
+                                            <a href="#" class="quantity__plus"><i class='bx bx-plus'></i></a>
                                         </div>
-                                        <div class="product-info">
-                                            <h5><a href="#">${product.name}</a></h5>
-                                            <div class="product-total">
-                                                <div class="quantity-counter">
-                                                    <a href="#" class="quantity__minus"><i class='bx bx-minus'></i></a>
-                                                    <input name="quantity" type="text" class="quantity__input" value="${quantityMap[productId] || 1}">
-                                                    <a href="#" class="quantity__plus"><i class='bx bx-plus'></i></a>
-                                                </div>
-                                                <strong> <i class="bi bi-x-lg px-2"></i>
-                                                    <span class="product-price">${product.price}</span>
-                                                </strong>
-                                            </div>
+                                        <strong> <i class="bi bi-x-lg px-2"></i>
+                                            <span class="product-price">${price}</span>
+                                        </strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="delete-btn">
+                                <i class='bx bx-x'></i>
+                            </div>
+                            `;
+
+                                    document.getElementById('added-products').appendChild(productElement);
+                                    initializeQuantityControlsForElement(productElement);
+                                }
+                                else {
+                                    // Rental product (cat_id 5 or 6)
+                                    console.log(`Product with id ${product.id} is a rental product`);
+                                    let itemSubtotal = price * quantity;
+                                    rentalSubtotal += itemSubtotal;
+
+                                    // Create product list item
+                                    let productElement = document.createElement('li');
+                                    productElement.className = 'single-product';
+                                    productElement.innerHTML = `
+                            <div class="product-area" data-id="${product.id}">
+                                <div class="product-img">
+                                    <img src="${product.images[0] || '/img/inner-page/checkout-product-img1.png'}" alt="">
+                                </div>
+                                <div class="product-info">
+                                    <h5><a href="#">${product.name}</a></h5>
+                                    <div class="product-total">
+                                        <div class="quantity-counter">
+                                            <a href="#" class="quantity__minus"><i class='bx bx-minus'></i></a>
+                                            <input name="quantity" type="text" class="quantity__input" value="${quantity}">
+                                            <a href="#" class="quantity__plus"><i class='bx bx-plus'></i></a>
                                         </div>
+                                        <strong> <i class="bi bi-x-lg px-2"></i>
+                                            <span class="product-price">${price}</span>
+                                        </strong>
                                     </div>
-                                    <div class="delete-btn">
-                                        <i class='bx bx-x'></i>
-                                    </div>
-                                `;
+                                </div>
+                            </div>
+                            <div class="delete-btn">
+                                <i class='bx bx-x'></i>
+                            </div>
+                            `;
 
-                                        // Add the product to the list
-                                        productList.appendChild(productElement);
-
-                                        // Initialize quantity controls for this product
-                                        initializeQuantityControlsForElement(productElement);
-                                    }
-                                })
-                                .catch(error => {
-                                    console.error(`Error fetching product ID ${productId}:`, error);
-                                    return null; // Continue with other products
-                                });
-                        })
-                    );
+                                    document.getElementById('rental-products').appendChild(productElement);
+                                    initializeQuantityControlsForElement(productElement);
+                                }
+                            });
+                    }));
                 })
                 .then(() => {
                     console.log("All products loaded");
+
+                    // Calculate tax for regular products
+                    totalTax = regularSubtotal * taxsum;
+
+                    // Update all totals in the UI
+                    if (document.getElementById('subtotal')) {
+                        document.getElementById('subtotal').textContent = `$${regularSubtotal.toFixed(2)}`;
+                    }
+
+                    if (document.getElementById('tax')) {
+                        document.getElementById('tax').textContent = `$${totalTax.toFixed(2)}`;
+                    }
+
+                    if (document.getElementById('final-total')) {
+                        document.getElementById('final-total').textContent = `$${(regularSubtotal + totalTax).toFixed(2)}`;
+                    }
+
+                    // Update rental total
+                    if (document.getElementById('final-total1')) {
+                        document.getElementById('final-total1').textContent = `$${rentalSubtotal.toFixed(2)}`;
+                    }
+
+                    let totalBoth = regularSubtotal + rentalSubtotal + totalTax ; // Calculate total for both categories
+                    document.getElementById('final-total-both').textContent = `$${totalBoth.toFixed(2)}`; // Update the total in the UI
                 })
                 .catch(error => {
                     console.error('Error in cart operation:', error);
@@ -790,98 +738,193 @@
                 const plusButton = element.querySelector('.quantity__plus');
                 const minusButton = element.querySelector('.quantity__minus');
                 const input = element.querySelector('.quantity__input');
+                const priceElement = element.querySelector('.product-price');
 
-                if (plusButton) {
+                if (plusButton && input && priceElement) {
                     plusButton.addEventListener('click', function (e) {
                         e.preventDefault();
                         let value = parseInt(input.value, 10);
                         input.value = isNaN(value) ? 1 : value + 1;
-                        // You can add code here to update the cart
+                        updateTotals();
                     });
                 }
 
-                if (minusButton) {
+                if (minusButton && input && priceElement) {
                     minusButton.addEventListener('click', function (e) {
                         e.preventDefault();
                         let value = parseInt(input.value, 10);
                         if (value > 1) {
                             input.value = value - 1;
-                            // You can add code here to update the cart
+                            updateTotals();
                         }
                     });
                 }
             }
 
-            // Function to initialize quantity controls for all elements
-            function initializeQuantityControls() {
-                document.querySelectorAll('.quantity__plus').forEach(button => {
-                    button.addEventListener('click', function (e) {
-                        e.preventDefault();
-                        const input = this.parentNode.querySelector('.quantity__input');
-                        let value = parseInt(input.value, 10);
-                        input.value = isNaN(value) ? 1 : value + 1;
-                        // You can add code here to update the cart
-                    });
+            // Function to recalculate totals when quantities change
+            function updateTotals() {
+                let newRegularSubtotal = 0;
+                let newRentalSubtotal = 0;
+
+                // Calculate regular products subtotal
+                document.querySelectorAll('#added-products .single-product').forEach(item => {
+                    const quantityInput = item.querySelector('.quantity__input');
+                    const priceElement = item.querySelector('.product-price');
+
+                    if (quantityInput && priceElement) {
+                        const quantity = parseInt(quantityInput.value, 10);
+                        const price = parseFloat(priceElement.textContent);
+                        if (!isNaN(quantity) && !isNaN(price)) {
+                            newRegularSubtotal += price * quantity;
+                        }
+                    }
                 });
 
-                document.querySelectorAll('.quantity__minus').forEach(button => {
-                    button.addEventListener('click', function (e) {
-                        e.preventDefault();
-                        const input = this.parentNode.querySelector('.quantity__input');
-                        let value = parseInt(input.value, 10);
-                        if (value > 1) {
-                            input.value = value - 1;
-                            // You can add code here to update the cart
+                // Calculate rental products subtotal
+                document.querySelectorAll('#rental-products .single-product').forEach(item => {
+                    const quantityInput = item.querySelector('.quantity__input');
+                    const priceElement = item.querySelector('.product-price');
+
+                    if (quantityInput && priceElement) {
+                        const quantity = parseInt(quantityInput.value, 10);
+                        const price = parseFloat(priceElement.textContent);
+                        if (!isNaN(quantity) && !isNaN(price)) {
+                            newRentalSubtotal += price * quantity;
                         }
-                    });
+                    }
                 });
+
+                // Calculate tax
+                const newTotalTax = newRegularSubtotal * taxsum;
+
+
+                // Update UI
+                if (document.getElementById('subtotal')) {
+                    document.getElementById('subtotal').textContent = `$${newRegularSubtotal.toFixed(2)}`;
+                }
+
+                if (document.getElementById('tax')) {
+                    document.getElementById('tax').textContent = `$${newTotalTax.toFixed(2)}`;
+                }
+
+                if (document.getElementById('final-total')) {
+                    document.getElementById('final-total').textContent = `$${(newRegularSubtotal + newTotalTax).toFixed(2)}`;
+                }
+
+                if (document.getElementById('final-total1')) {
+                    document.getElementById('final-total1').textContent = `$${newRentalSubtotal.toFixed(2)}`;
+                }
+
             }
         });
     </script>
-    <script>
+       <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const cartProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
-            const subtotalElement = document.getElementById('subtotal');
-            const taxElement = document.getElementById('tax');
-            const totalExclElement = document.getElementById('total-excl');
-            const totalInclElement = document.getElementById('total-incl');
-            const finalTotalElement = document.getElementById('final-total');
+            // ... existing code ...
 
-            let subtotal = 0;
-            let tax = 0; // Assuming a fixed tax rate for simplicity
-            const taxRate = 0.05; // 5% tax rate
+            // Add event listener for the finalize payment button
+            document.getElementById('finalize-payment').addEventListener('click', function (e) {
+                e.preventDefault(); // Prevent default form submission
 
-            // Fetch cart data from the server
-            fetch('http://localhost:3000/cart')
+                // Collect form data
+                const fName = document.querySelector('input[name="fname"]').value.trim();
+                const lName = document.querySelector('input[name="lname"]').value.trim();
+                const address = document.querySelector('input[name="address"]').value.trim();
+                const city = document.querySelector('select[name="city"]').value;
+                const postCode = document.querySelector('input[name="fname"]').value.trim();
+                const phoneNum = document.querySelector('input[name="phone"]').value.trim();
+                const email = document.querySelector('input[name="email"]').value.trim();
+                const note = document.querySelector('textarea[name="message"]').value.trim();
+
+                // Form validation
+                if (!fName || !lName || !address || !city || !postCode || !phoneNum || !email) {
+                    alert("Please fill in all required fields.");
+                    return;
+                }
+
+                // Validate email format
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailPattern.test(email)) {
+                    alert("Please enter a valid email address.");
+                    return;
+                }
+
+                // Collect regular products
+                const regularProducts = [];
+                document.querySelectorAll('#added-products .single-product').forEach(item => {
+                    const productId = item.querySelector('.product-area').dataset.id; // Ensure productId is collected from the correct element
+                    const quantity = parseInt(item.querySelector('.quantity__input').value, 10);
+                    regularProducts.push({ product_id: productId, quantity: quantity }); // Include product_id here
+                });
+
+                // Collect rental products
+                const rentalProducts = [];
+                document.querySelectorAll('#rental-products .single-product').forEach(item => {
+                    const productId = item.querySelector('.product-area').dataset.id; // Ensure productId is collected from the correct element
+                    const quantity = parseInt(item.querySelector('.quantity__input').value, 10);
+                    rentalProducts.push({ product_id: productId, quantity: quantity });
+                });
+
+                // Collect payment methods
+                const paymentOptions = document.querySelectorAll('input[name="payment-method"]:checked');
+                const selectedPaymentMethods = Array.from(paymentOptions).map(option => option.value); // Store selected payment methods
+
+                // Prepare the data object
+                const data = {
+                    f_name: fName,
+                    l_name: lName,
+                    address: address,
+                    city: city,
+                    post_code: postCode,
+                    phone_num: phoneNum,
+                    email: email,
+                    note: note,
+                    regular_product: regularProducts,
+                    rental_product: rentalProducts,
+                    total: document.getElementById('final-total-both').textContent.replace('$', ''),
+                    payment_method: selectedPaymentMethods
+                };
+
+                // Send data to the API
+                fetch('http://localhost:3000/bill', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data),
+                })
                 .then(response => {
                     if (!response.ok) {
                         throw new Error(`HTTP error! status: ${response.status}`);
                     }
                     return response.json();
                 })
-                .then(cartData => {
-                    // Calculate subtotal based on cart data
-                    cartData.forEach(item => {
-                        if (cartProducts.includes(item.id)) {
-                            subtotal += item.price * item.quantity; // Assuming item has price and quantity
-                        }
+                .then(result => {
+                    console.log('Success:', result);
+                    // Handle success (e.g., show a success message, redirect, etc.)
+
+                    // Delete items from the cart API and localStorage
+                    const cartProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
+                    const productIds = regularProducts.map(product => product.product_id);
+
+                    // Delete each product from the API
+                    const deletePromises = productIds.map(productId => {
+                        return fetch(`http://localhost:3000/cart/${productId}`, {
+                            method: 'DELETE',
+                        });
                     });
 
-                    // Calculate tax and totals
-                    tax = subtotal * taxRate;
-                    const totalExcl = subtotal;
-                    const totalIncl = subtotal + tax;
-
-                    // Update the HTML elements with calculated values
-                    subtotalElement.textContent = `$${subtotal.toFixed(2)}`;
-                    taxElement.textContent = `$${tax.toFixed(2)}`;
-                    totalExclElement.textContent = `$${totalExcl.toFixed(2)}`;
-                    totalInclElement.textContent = `$${totalIncl.toFixed(2)}`;
-                    finalTotalElement.textContent = `$${totalIncl.toFixed(2)}`;
+                    return Promise.all(deletePromises);
+                })
+                .then(() => {
+                    // Remove cartProducts from localStorage
+                    localStorage.removeItem('cartProducts');
                 })
                 .catch(error => {
-                    console.error('Error fetching cart data:', error);
+                    console.error('Error:', error);
+                    // Handle error (e.g., show an error message)
                 });
+            });
         });
     </script>
     <!--  Main jQuery  -->
