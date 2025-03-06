@@ -544,9 +544,7 @@ document.addEventListener("DOMContentLoaded", function () {
           const cartAreaDiv = document.createElement("div");
           cartAreaDiv.className = "cart-area";
           cartAreaDiv.innerHTML =
-            '<a href="#" class="hover-btn3 add-cart-btn" data-product-id="' +
-            product.id +
-            '"><i class="bi bi-bag-check"></i> Drop in Basket</a>';
+            '<a href="#" class="hover-btn3 add-cart-btn" data-product-id="${product.id}"><i class="bi bi-bag-check"></i> Drop in Basket</a>';
 
           overlayDiv.appendChild(cartAreaDiv);
           productCardImg.appendChild(overlayDiv);
@@ -1000,7 +998,7 @@ fetch(`http://localhost:3000/product/${selectedProductId3}`)
                                         </a>
                                         <div class="overlay">
                                             <div class="cart-area">
-                                                <a href="cart.html" class="hover-btn3 add-cart-btn" data-product-id="${product.id}><i class="bi bi-bag-check"></i> Drop In Basket</a>
+                                                <a href="cart.html" class="hover-btn3 add-cart-btn" data-product-id="${product.id}"><i class="bi bi-bag-check"></i> Drop In Basket</a>
                                             </div>
                                         </div>
                                         <div class="view-and-favorite-area">
@@ -1151,7 +1149,7 @@ function createProductModal() {
                   </div>
                   <div class="shop-details-btn">
                     <a href="shop-list.html" class="primary-btn1 hover-btn3">*Shop Now*</a>
-                    <a href="#" class="primary-btn1 style-3 hover-btn4">*Drop in Basket*</a>
+                    <a href="#" class="primary-btn1 style-3 hover-btn4 add-cart-btn" data-product-id="${product.id}">*Drop in Basket*</a>
                   </div>
                   <div class="product-info">
                     <ul class="product-info-list">
@@ -1474,7 +1472,7 @@ function createProductCard(product) {
             <div class="cart-btn-area">
               <div class="cart-btn">
                 <a href="cart.html" class="add-cart-btn2 add-cart-btn round hover-btn5" data-product-id="${product.id
-    }>
+    }">
                   <i class="bi bi-bag-check"></i> Drop in Basket
                 </a>
               </div>
@@ -2237,3 +2235,164 @@ async function transferWishlistToUser(userId) {
     localStorage.removeItem("wishlist");
   }
 }
+
+
+// wishlist 
+
+async function checkUser() {
+  const userId = localStorage.getItem('user_id');
+  if (!userId) {
+    // Open login modal if user_id does not exist
+    openLoginModal();
+  } else {
+    // Check user existence via API
+    try {
+      const response = await fetch(`http://localhost:3000/users/${userId}`);
+      const data = await response.json();
+      console.log(data.exists, "data");
+
+      if (data) {
+        // Redirect if user exists
+        window.location.href = 'whistlist.html'; // Replace with your actual redirect URL
+      } else {
+        // Open login modal if user does not exist
+        openLoginModal();
+      }
+    } catch (error) {
+      console.error('Error checking user:', error);
+      // Open login modal on error
+      openLoginModal();
+    }
+  }
+}
+
+// Add event listener for wishlist button click
+document.querySelectorAll(".save-btn a").forEach((button) => {
+  button.addEventListener("click", (e) => {
+    e.preventDefault(); // Prevent default anchor behavior
+    checkUser(); // Call checkUser function
+  });
+});
+
+
+// wishlist page data 
+// ... existing code ...
+
+// ... existing code ...
+
+async function displayWishlistProducts() {
+  const userId = localStorage.getItem("user_id"); // Get user ID from local storage
+  if (!userId) {
+    console.error("User ID not found in local storage.");
+    return;
+  }
+
+  try {
+    // Fetch wishlist data for the user
+    const wishlistResponse = await fetch(`http://localhost:3000/wishlist?userId=${userId}`);
+    const wishlistData = await wishlistResponse.json();
+
+    if (!Array.isArray(wishlistData) || wishlistData.length === 0) {
+      console.log("No wishlist data found for this user.");
+      return;
+    }
+
+    const productIds = wishlistData[0].productId; // Get product IDs from the wishlist
+    const productsResponse = await fetch(`http://localhost:3000/product`);
+    const allProducts = await productsResponse.json();
+
+    // Filter products based on the IDs in the wishlist
+    const wishlistProducts = allProducts.filter(product => productIds.includes(product.id));
+
+    // Display the products in the desired format
+    const container = document.getElementById("wishlist-container"); // Ensure you have a container in your HTML
+    container.innerHTML = ""; // Clear existing content
+
+    wishlistProducts.forEach(product => {
+      const productRow = `
+              <tr>
+                  <td>
+                      <div class="delete-icon" data-id="${product.id}">
+                          <i class="bi bi-x-lg"></i>
+                      </div>
+                  </td>
+                  <td data-label="Product" class="table-product">
+                      <div class="product-img">
+                          <img src="${product.images[0]}" alt="${product.name}">
+                      </div>
+                      <div class="product-content">
+                          <h6><a href="product-default.html?id=${product.id}" onclick="localStorage.setItem('selectedProductId', '${product.id
+        }')">${product.name}</a></h6>
+                      </div>
+                  </td>
+                  <td data-label="Price">
+                      <p class="price">
+                          <del>$${(product.price * 1.2).toFixed(2)}</del>
+                          $${product.price.toFixed(2)}
+                      </p>
+                  </td>
+              
+                  <td>
+                      <a href="cart.html" class="add-cart-btn hover-btn2" data-product-id="${product.id}"><i class="bi bi-bag-check"></i>Drop in Basket</a>
+                  </td>
+              </tr>
+          `;
+      container.insertAdjacentHTML('beforeend', productRow); // Insert the new row into the table
+    });
+  } catch (error) {
+    console.error("Error fetching wishlist products:", error);
+  }
+}
+
+// Call the function to display wishlist products
+document.addEventListener("DOMContentLoaded", displayWishlistProducts);
+document.addEventListener("click", async (event) => {
+  if (event.target.closest(".delete-icon")) {
+    const productRow = event.target.closest("tr"); // Get the closest row
+    const productId = event.target.closest(".delete-icon").getAttribute("data-id"); // Get product ID directly from data-id attribute
+    // Log the product ID
+
+    const userId = localStorage.getItem("user_id"); // Get user ID from local storage
+
+    if (userId) {
+      try {
+        // Fetch the user's wishlist
+        const wishlistResponse = await fetch(`http://localhost:3000/wishlist?userId=${userId}`);
+        const wishlistData = await wishlistResponse.json();
+
+        if (wishlistData.length > 0) {
+          const userWishlist = wishlistData[0];
+
+          const updatedProductIds = userWishlist.productId.filter(id => id !== productId); // Remove the product ID
+
+          // Update the wishlist in the API
+          if (updatedProductIds.length > 0) {
+            await fetch(`http://localhost:3000/wishlist/${userWishlist.id}`, {
+              method: "PUT",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ userId, productId: updatedProductIds }), // Send updated wishlist
+            });
+          } else {
+            // If the array is empty, delete the wishlist
+            await fetch(`http://localhost:3000/wishlist/${userWishlist.id}`, {
+              method: "DELETE",
+            });
+          }
+
+          // Remove the product row from the DOM
+          productRow.remove();
+        }
+      } catch (error) {
+        console.error("Error updating wishlist:", error);
+      }
+    } else {
+      alert("You need to be logged in to remove items from your wishlist.");
+    }
+  }
+});
+
+// ... existing code ...
+
+// ... existing code ...
