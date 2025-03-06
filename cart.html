@@ -265,7 +265,6 @@
                             </g>
                         </svg>
                     </button>
-
                 </div>
                 <div class="sidebar-button mobile-menu-btn ">
                     <span></span>
@@ -340,6 +339,7 @@
                 async function fetchCartData() {
                     const cartBody = document.getElementById('cartBody');
                     cartBody.innerHTML = ''; // Clear existing content
+                    let existingProducts = {}; // Object to track existing products
 
                     for (const cartId of cartProducts) {
                         try {
@@ -357,48 +357,64 @@
                             }
                             const productData = await productResponse.json();
 
-                            // Calculate total for this product
-                            const total = productData.price * cartData.quantity;
-                            subtotal += total; // Add to subtotal
-
-                            // Create a new row for the cart table
-                            const row = `
-                                <tr>
-                                    <td>
-                                        <div class="delete-icon" onclick="deleteCartItem('${cartId}')">
-                                            <i class="bi bi-x-lg"></i>
-                                        </div>
-                                    </td>
-                                    <td data-label="Product" class="table-product">
-                                        <div class="product-img">
-                                            <img src="${productData.images[0]}" alt="">
-                                        </div>
-                                        <div class="product-content">
-                                            <h6><a href="#">${productData.name}</a></h6>
-                                        </div>
-                                    </td>
-                                    <td data-label="Price">
-                                        <p class="price">
-                                            <del>$${productData.price + 10}</del> <!-- Assuming original price is $10 more -->
-                                            $${productData.price}
-                                        </p>
-                                    </td>
-                                    <td data-label="Quantity">
-                                        <div class="quantity-counter">
-                                            <a href="#" class="quantity__minus" onclick="changeQuantity('${cartId}', -1)"><i class='bx bx-minus'></i></a>
-                                            <input name="quantity" type="text" class="quantity__input" value="${cartData.quantity}" id="quantity-${cartId}">
-                                            <a href="#" class="quantity__plus" onclick="changeQuantity('${cartId}', 1)"><i class='bx bx-plus'></i></a>
-                                        </div>
-                                    </td>
-                                    <td data-label="Total" id="total-${cartId}" data-price="${productData.price}">
-                                        $${total.toFixed(2)}
-                                    </td>
-                                </tr>
-                            `;
-                            cartBody.innerHTML += row; // Append new row to the table body
+                            // Check if product already exists in the cart
+                            if (existingProducts[cartData.product_id]) {
+                                existingProducts[cartData.product_id].quantity += cartData.quantity; // Increment quantity
+                            } else {
+                                existingProducts[cartData.product_id] = {
+                                    ...productData,
+                                    quantity: cartData.quantity,
+                                };
+                            }
                         } catch (error) {
                             console.error('Error fetching data:', error);
                         }
+                    }
+
+                    // Render the cart items
+                    for (const productId in existingProducts) {
+                        const product = existingProducts[productId];
+                        const total = product.price * product.quantity;
+
+                        // Create a new row for the cart table
+                        const row = `
+                            <tr>
+                                <td>
+                                    <div class="delete-icon" onclick="deleteCartItem('${productId}')">
+                                        <i class="bi bi-x-lg"></i>
+                                    </div>
+                                </td>
+                                <td data-label="Product" class="table-product">
+                                    <div class="product-img">
+                                        <img src="${product.images[0]}" alt="">
+                                    </div>
+                                    <div class="product-content">
+                                        <h6><a href="#">${product.name}</a></h6>
+                                    </div>
+                                </td>
+                                <td data-label="Price">
+                                    <p class="price">
+                                        <del>$${product.price + 10}</del> <!-- Assuming original price is $10 more -->
+                                        $${product.price}
+                                    </p>
+                                </td>
+                                <td data-label="Quantity">
+                                    <div class="quantity-counter"> 
+                                        <a href="#" class="quantity__minus" onclick="changeQuantity(event, '${productId}', -1)">
+                                            <i class='bx bx-minus'></i>
+                                        </a>
+                                        <input name="quantity" type="text" class="quantity__input" value="${product.quantity}" id="quantity-${productId}" readonly>
+                                        <a href="#" class="quantity__plus" onclick="changeQuantity(event, '${productId}', 1)">
+                                            <i class='bx bx-plus'></i>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td data-label="Total" id="total-${productId}" data-price="${product.price}">
+                                    $${total.toFixed(2)}
+                                </td>
+                            </tr>
+                        `;
+                        cartBody.innerHTML += row; // Append new row to the table body
                     }
 
                     // Update subtotal and total in the cart totals section
@@ -409,30 +425,39 @@
                 // Call the function to fetch cart data on page load
                 window.onload = fetchCartData;
 
-                async function deleteCartItem(cartId) {
+                async function deleteCartItem(productId) {
                     try {
-                        // Make API call to delete the item from the cart
-                        const response = await fetch(`http://localhost:3000/cart/${cartId}`, {
-                            method: 'DELETE',
-                        });
-
+                        // Find all cart items with this product_id
+                        const response = await fetch(`http://localhost:3000/cart?product_id=${productId}`);
                         if (!response.ok) {
-                            throw new Error('Failed to delete item from cart');
+                            throw new Error('Failed to fetch cart items');
                         }
-
-                        // Remove the item from the local storage
-                        const cartProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
-                        const updatedCartProducts = cartProducts.filter(id => id !== cartId);
-                        localStorage.setItem('cartProducts', JSON.stringify(updatedCartProducts));
-
+                        const cartItems = await response.json();
+                
+                        // Delete each cart item with matching product_id
+                        for (const item of cartItems) {
+                            const deleteResponse = await fetch(`http://localhost:3000/cart/${item.id}`, {
+                                method: 'DELETE',
+                            });
+                            if (!deleteResponse.ok) {
+                                throw new Error('Failed to delete item from cart');
+                            }
+                
+                            // Remove the specific cart ID from local storage
+                            const cartProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
+                            const updatedCartProducts = cartProducts.filter(id => id !== item.id.toString());
+                            localStorage.setItem('cartProducts', JSON.stringify(updatedCartProducts));
+                        }
+                
                         // Refresh the cart data
-                        fetchCartData();
+                        await fetchCartData();
                     } catch (error) {
                         console.error('Error deleting item:', error);
                     }
                 }
 
-                function changeQuantity(cartId, change) {
+                async function changeQuantity(event, cartId, change) {
+                    event.preventDefault(); // Prevent unintended behavior
                     const quantityInput = document.getElementById(`quantity-${cartId}`);
                     const totalCell = document.getElementById(`total-${cartId}`);
                     let currentQuantity = parseInt(quantityInput.value);
@@ -442,16 +467,38 @@
                     if (currentQuantity < 1) currentQuantity = 1; // Prevent quantity from going below 1
                     quantityInput.value = currentQuantity;
 
-                    // Fetch the price from the product data (you may need to adjust this based on your data structure)
-                    const productPrice = parseFloat(totalCell.dataset.price); // Assuming you store the price in a data attribute
+                    // Fetch the price from the product data (assuming it's stored in a data attribute)
+                    const productPrice = parseFloat(totalCell.dataset.price);
 
                     // Update total price
                     const newTotal = productPrice * currentQuantity;
                     totalCell.innerText = `$${newTotal.toFixed(2)}`;
 
-                    // Optionally, you can also update the cart data here if needed
-                    // For example, you might want to update the local storage or make an API call
+                    // Update quantity in JSON server
+                    await updateCartItemQuantity(cartId, currentQuantity);
                 }
+
+                async function updateCartItemQuantity(cartId, quantity) {
+                    try {
+                        const response = await fetch(`http://localhost:3000/cart/${cartId}`, {
+                            method: 'PATCH', // Updates only the quantity field
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify({ quantity }), // Send only the updated quantity
+                        });
+
+                        if (!response.ok) {
+                            throw new Error('Failed to update quantity in cart');
+                        }
+
+                        console.log('Cart updated successfully!');
+                    } catch (error) {
+                        console.error('Error updating quantity:', error);
+                    }
+                }
+
+                
             </script>
             <script>
                 function handleCheckout() {
