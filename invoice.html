@@ -30,52 +30,203 @@
     <title>OrnaCare - Beauty & jewelery</title>
     <link rel="icon" href="/img/logo1.png" type="image/gif">
     <style>
-        .form-check-input:checked+label {
-            font-weight: bold;
-            /* Make the label bold when checked */
-            color: green;
-            /* Change the label color when checked */
+        :root {
+            --primary-color: #d69fa9;  /* Hot Pink */
+            --secondary-color: #FFB6C1;  /* Light Pink */
+            --text-color: #333;
+            --background-color: #FFF0F5;  /* Lavender Blush */
         }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            /* background-color: var(--background-color); */
+            line-height: 1.6;
+            /* color: var(--text-color); */
+        }
+
         .invoice-container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 20px auto;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            font-family: Arial, sans-serif;
+            background-color: white;
+            box-shadow: 0 10px 25px rgba(255,105,180,0.2);
+            border-radius: 12px;
+            /* overflow: scroll; */
+            border-top: 6px solid var(--primary-color);
+            padding-bottom:20px ;
         }
-        .brand-logo img {
-            max-width: 150px;
+
+        .invoice-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 40px;
+            background-color: #FFF4F8;
         }
-        h1, h2, h3 {
-            color: #333;
+
+        .logo img {
+            max-height: 80px;
         }
-        .product-details {
+
+        .invoice-details {
+            text-align: right;
+        }
+
+        .invoice-details h1 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 2rem;
+        }
+
+        .address-section {
+            display: flex;
+            justify-content: space-between;
+            padding: 25px 40px;
+            background-color: #ffffff;
+            box-shadow: 0 3px 2px -2px rgba(0, 0, 0, 0.1); 
+        }
+
+        .bill-to, .ship-to {
+            width: 45%;
+        }
+
+        .bill-to h2, .ship-to h2 {
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 5px;
+        }
+
+        .invoice-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
             margin: 20px 0;
         }
+
+        .invoice-table thead {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .invoice-table th, .invoice-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #FFB6C1;
+        }
+
+        .invoice-table tbody tr:nth-child(even) {
+            background-color: #FFF3F6;
+        }
+
+        .invoice-table tbody tr:hover {
+            background-color: #faeaef;
+        }
+
+        .summary {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 40px;
+            background-color: #FFF0F5;
+        }
+
+        .tax-info, .balance {
+            text-align: right;
+        }
+
+        .download-btn,.share-btn {
+            display: block;
+            width: 200px;
+            /* margin: 20px auto; */
+           
+            padding: 12px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+           
+        }
+
+        .download-btn:hover ,.share-btn:hover{
+            background-color:#c77381;
+            cursor: pointer;
+            color:white;
+
+        }
+
+        .product-details {
+            padding: 20px 40px;
+        }
+
+        .product-details h2 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
         .product-details ul {
             list-style-type: none;
-            padding: 0;
         }
+
         .product-details li {
-            padding: 10px;
-            border-bottom: 1px solid #eee;
+            padding: 10px 0;
+            border-bottom: 1px solid #FFB6C1;
         }
-        .bill-details {
-            margin: 20px 0;
-            font-weight: bold;
+        .button-group{
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        #downloadInvoice {
-            background-color: #28a745;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
+        @media (max-width: 768px) {
+            .invoice-container {
+                padding: 10px;
+            }
+            .product-details {
+            padding: 20px 10px;
         }
-        #downloadInvoice:hover {
-            background-color: #218838;
+            .invoice-header, .address-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .bill-to, .ship-to {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .invoice-details {
+                text-align: center;
+            }
+            
+            .invoice-table th, .invoice-table td {
+                padding: 10px;
+                font-size: 0.9rem;
+            }
+
+            .summary {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .tax-info, .balance {
+                text-align: center;
+            }
+
+            .download-btn {
+                width: 100%;
+                margin: 20px 0;
+            }
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
         }
     </style>
 </head>
@@ -146,7 +297,7 @@
                                         <a href="#" class="forget-pass hover-underline">Forget Password</a>
                                     </div>
                                     <a href="#" class="primary-btn1 hover-btn3">Log In</a>
-                                    <a href="#" class="member">Not a member yet?</a>
+                                    
                                 </form>
                             </div>
                         </div>
@@ -343,31 +494,96 @@
     <div class="checkout-section pt-110 mb-110">
         <div class="container">
             <div class="invoice-container">
-                <div class="brand-logo">
-                    <img src="/img/logo1.png" alt="Brand Logo">
+                <div class="invoice-header">
+                    <div class="logo">
+                        <img src="/img/logo1.png" alt="Company Logo">
+                    </div>
+                    <div class="invoice-details">
+                        <h1>INVOICE</h1>
+                        <p>Date: 2025-03-04</p>
+                        <p>Invoice No: 1741078958548</p>
+                    </div>
                 </div>
-                <h1>Invoice</h1>
+        
+                <div class="address-section">
+                    <div class="bill-to">
+                        <h2>BILL TO</h2>
+                        <p>Denisha</p>
+                        <p>+1 (234) 567-8900</p>
+                        <p>denisha@gmail.com</p>
+                    </div>
+                    <div class="ship-to">
+                        <h2>SHIP TO</h2>
+                        <p>Krupali Kumbhani</p>
+                        <p>+1 (816) 050-3291</p>
+                        <p>krupali.kalathiyainfotech@gmail.com</p>
+                    </div>
+                </div>
+        
                 <div class="product-details">
                     <h2>Product Details</h2>
                     <div class="regular-products">
-                        <h3>Regular Products</h3>
-                        <ul id="regularProductList">
-                            <!-- Regular products will be populated here -->
-                        </ul>
+                        <h3>Cosmetic Products</h3>
+                        <div class="table-responsive">
+                            <table id="regularProductList" class="invoice-table">
+                                <thead>
+                                    <tr>
+                                        <th>ITEM DESCRIPTION</th>
+                                        <th>QUANTITY</th>
+                                        <th>PRICE</th>
+                                        <th>SUBTOTAL</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Existing product rows will be populated here -->
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                     <div class="rental-products">
-                        <h3>Rental Products</h3>
-                        <ul id="rentalProductList">
-                            <!-- Rental products will be populated here -->
-                        </ul>
+                        <h3>Rental Jewelry</h3>
+                        <div class="table-responsive">
+                            <table id="rentalProductTable" class="invoice-table">
+                                <thead>
+                                    <tr>
+                                        <th>ITEM DESCRIPTION</th>
+                                        <th>QUANTITY</th>
+                                        <th>PRICE</th>
+                                        <th>SUBTOTAL</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="rentalProductList">
+                                    <!-- Rental products will be populated here -->
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
-                <div class="bill-details">
-                    <h2>Bill Summary</h2>
-                    <p>Total: <span id="totalAmount"></span></p>
+        
+              
+        
+                <div class="summary">
+                    <div class="tax-info">
+                        <p>HST RATE: 22%</p>
+                        <p>IST TAX: 22%</p>
+                        <p><strong>TOTAL: $2,049.60</strong></p>
+                    </div>
+                    <div class="balance">
+                        <h3>Balance Due: $2,049.60</h3>
+                    </div>
                 </div>
-                <button id="downloadInvoice" class="primary-btn1">Download Invoice</button>
+        
+                <div class="button-group">
+                    <a href="#" class="download-btn" id="downloadInvoice">
+                        <i class="fas fa-download"></i> Download Invoice
+                    </a>
+                    <a href="#" class="share-btn" id="shareInvoice">
+                        <i class="fas fa-share"></i> Share Invoice
+                    </a>
+                </div>
+                
             </div>
+        
         </div>
     </div>
     <!-- ========== Checkout Section end============= -->
@@ -398,6 +614,119 @@
     <script src="/js/main.js"></script>
     <script src="/js/index.js"></script>
     <script src="/js/footer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+    <script>
+        // Same JavaScript as in the previous design to populate products
+        const invoiceData = {
+            regular_product: [
+                { product_id: "42", quantity: 1 },
+                { product_id: "271", quantity: 3 }
+            ],
+            rental_product: [
+                { product_id: "468", quantity: 1 },
+                { product_id: "339", quantity: 1 },
+                { product_id: "465", quantity: 1 }
+            ]
+        };
+
+        const products = {
+            "42": { name: "Product A", price: 10.00 },
+            "271": { name: "Product B", price: 15.00 },
+            "468": { name: "Rental Product A", price: 5.00 },
+            "339": { name: "Rental Product B", price: 7.00 },
+            "465": { name: "Rental Product C", price: 8.00 }
+        };
+
+        function populateProducts() {
+            const regularProductList = document.getElementById('regularProductList');
+            const rentalProductList = document.getElementById('rentalProductList');
+
+            // Populate regular products
+            invoiceData.regular_product.forEach(item => {
+                const product = products[item.product_id];
+                if (product) {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td>${product.name}</td>
+                        <td>${item.quantity}</td>
+                        <td>$${product.price.toFixed(2)}</td>
+                        <td>$${(product.price * item.quantity).toFixed(2)}</td>
+                    `;
+                    regularProductList.querySelector('tbody').appendChild(tr);
+                }
+            });
+
+            // Populate rental products
+            invoiceData.rental_product.forEach(item => {
+                const product = products[item.product_id];
+                if (product) {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td>${product.name}</td>
+                        <td>${item.quantity}</td>
+                        <td>$${product.price.toFixed(2)}</td>
+                        <td>$${(product.price * item.quantity).toFixed(2)}</td>
+                    `;
+                    rentalProductList.appendChild(tr);
+                }
+            });
+        }
+
+        // Call the function to populate products
+        populateProducts();
+    </script>
+        <script>
+            document.getElementById('downloadInvoice').addEventListener('click', function() {
+                // Functionality to generate and download PDF
+                generatePDF();
+            });
+    
+            document.getElementById('shareInvoice').addEventListener('click', function() {
+                // Functionality to share PDF via WhatsApp
+                sharePDF();
+            });
+    
+            function generatePDF() {
+                return new Promise((resolve) => { // Return a promise
+                    const invoiceContainer = document.querySelector('.invoice-container');
+                    html2canvas(invoiceContainer).then(canvas => {
+                        const imgData = canvas.toDataURL('image/png');
+                        const pdf = new jsPDF();
+                        const imgWidth = 190; // Adjust width as needed
+                        const pageHeight = pdf.internal.pageSize.height;
+                        const imgHeight = (canvas.height * imgWidth) / canvas.width;
+                        let heightLeft = imgHeight;
+    
+                        let position = 0;
+    
+                        pdf.addImage(imgData, 'PNG', 10, position, imgWidth, imgHeight);
+                        heightLeft -= pageHeight;
+    
+                        while (heightLeft >= 0) {
+                            position = heightLeft - imgHeight;
+                            pdf.addPage();
+                            pdf.addImage(imgData, 'PNG', 10, position, imgWidth, imgHeight);
+                            heightLeft -= pageHeight;
+                        }
+    
+                        // Save the PDF to a Blob
+                        const pdfBlob = pdf.output('blob');
+                        const pdfUrl = URL.createObjectURL(pdfBlob);
+                        resolve(pdfUrl); // Resolve the promise with the URL
+                    });
+                });
+            }
+    
+            function sharePDF() {
+                generatePDF().then(pdfUrl => {
+                    const phoneNumber = "8200986329"; // Replace with the desired phone number
+                    const message = "Here is the invoice PDF: " + pdfUrl;
+                    const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+                    window.open(whatsappUrl, '_blank');
+                });
+            }
+        </script>
 </body>
 
 

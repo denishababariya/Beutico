@@ -11436,6 +11436,15 @@
       }
     }
   ],
+  "wishlist": [
+    {
+      "userId": "d6b4",
+      "productId": [
+        "468"
+      ],
+      "id": "8f4c"
+    }
+  ],
   "cart": [
     {
       "id": "cart-3q98ye9mj",
@@ -11490,6 +11499,24 @@
       "product_id": "271",
       "time": "2025-03-04T09:54:13.714Z",
       "quantity": 3
+    },
+    {
+      "id": "cart-ektnxp6ho",
+      "product_id": "467",
+      "time": "2025-03-05T11:50:26.699Z",
+      "quantity": 1
+    },
+    {
+      "id": "cart-nw2ebbzaz",
+      "product_id": "467",
+      "time": "2025-03-05T11:51:16.290Z",
+      "quantity": 1
+    },
+    {
+      "id": "cart-05cy8ll62",
+      "product_id": "466",
+      "time": "2025-03-05T11:51:35.953Z",
+      "quantity": 1
     }
   ],
   "bill": [
