@@ -417,9 +417,9 @@
                         cartBody.innerHTML += row; // Append new row to the table body
                     }
 
-                    // Update subtotal and total in the cart totals section
+                    // Calculate subtotal
+                    subtotal = Object.values(existingProducts).reduce((acc, product) => acc + (product.price * product.quantity), 0);
                     document.getElementById('cartTotal').innerText = `$${subtotal.toFixed(2)}`;
-                    // document.getElementById('cartTotal').innerText = `$${(subtotal + 15).toFixed(2)}`; // Assuming $15 shipping fee
                 }
 
                 // Call the function to fetch cart data on page load
