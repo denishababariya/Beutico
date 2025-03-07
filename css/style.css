@@ -15381,3 +15381,141 @@ Testimonial-Section Css
   border-radius: 50%; /* Make checkmark round */
   background: #917878; /* Checkmark color */
 }
+
+.otp-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.otp-popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.otp-header {
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+  position: relative;
+}
+
+.otp-header h3 {
+  margin: 0;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.close-btn {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #666;
+}
+
+.otp-body {
+  padding: 30px;
+  text-align: center;
+}
+
+.icon-box {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: #f0f8ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-box i {
+  font-size: 30px;
+  color: #917878;
+}
+
+.otp-input-group {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 25px 0;
+}
+
+.otp-input {
+  width: 45px;
+  height: 45px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.otp-input:focus {
+  border-color: #917878;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.timer {
+  margin: 15px 0;
+  color: #666;
+}
+
+.resend-code {
+  margin: 15px 0;
+  color: #666;
+}
+
+.resend-code a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.password-field {
+  position: relative;
+}
+
+.password-field input {
+  width: 100%;
+}
+
+.password-field i {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+/* .verify-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 20px;
+  transition: background 0.3s;
+}
+
+.verify-btn:hover {
+  background: #0056b3;
+} */
