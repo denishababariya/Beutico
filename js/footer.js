@@ -144,6 +144,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 let link = document.createElement("a");
                 link.href = "shop-list.html?category=" + encodeURIComponent(category.cat_name);
                 link.textContent = category.cat_name;
+
+                // Store the selected category ID in local storage on click
+                link.addEventListener("click", function() {
+                    localStorage.setItem("selectedcategoryId", category.id);
+                });
+
                 listItem.appendChild(link);
                 categoryList.appendChild(listItem);
             });

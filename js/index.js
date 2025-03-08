@@ -581,7 +581,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //           productCardContent.innerHTML = `
 //                     <h6><a href="product-default.html" class="hover-underline" onclick="localStorage.setItem('selectedProductId', '${product.id}')">${product.name
 //             }</a></h6>
-                   
+
 //                     <p><a href="shop-list.html">${product.brand}</a></p>
 //                 <p class="price">$${product.price.toFixed(2)}</p>
 //                 <div class="rating">
@@ -760,7 +760,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //           productCardContent.innerHTML = `
 //                     <h6><a href="product-default.html" class="hover-underline" onclick="localStorage.setItem('selectedProductId', '${product.id}')">${product.name
 //             }</a></h6>
-                   
+
 //                     <p><a href="shop-list.html">${product.brand}</a></p>
 //                 <p class="price">$${product.price.toFixed(2)}</p>
 //                 <div class="rating">
@@ -811,7 +811,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", async function () {
   // Fetch user ID from local storage
   const userId = localStorage.getItem("user_id");
-  
+
   // Initialize wishlistProductIds
   let wishlistProductIds = [];
   if (userId) {
@@ -1769,14 +1769,14 @@ function createSliderProduct(product) {
             <div class="view-and-favorite-area">
               <ul>
                 <li>
-    <a href="#" class="wishlist-btn" data-product-id="${product.id
-    }"> <!-- Updated to include the class for wishlist functionality -->
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
-            <g clip-path="url(#clip0_168_378)">
-                <path d="M16.528 2.20919C16.0674 1.71411 15.5099 1.31906 14.8902 1.04859C14.2704 0.778112 13.6017 0.637996 12.9255 0.636946C12.2487 0.637725 11.5794 0.777639 10.959 1.048C10.3386 1.31835 9.78042 1.71338 9.31911 2.20854L9.00132 2.54436L8.68352 2.20854C6.83326 0.217151 3.71893 0.102789 1.72758 1.95306C1.63932 2.03507 1.5541 2.12029 1.47209 2.20854C-0.490696 4.32565 -0.490696 7.59753 1.47209 9.71463L8.5343 17.1622C8.77862 17.4201 9.18579 17.4312 9.44373 17.1868C9.45217 17.1788 9.46039 17.1706 9.46838 17.1622L16.528 9.71463C18.4907 7.59776 18.4907 4.32606 16.528 2.20919ZM15.5971 8.82879H15.5965L9.00132 15.7849L2.40553 8.82879C0.90608 7.21113 0.90608 4.7114 2.40553 3.09374C3.76722 1.61789 6.06755 1.52535 7.5434 2.88703C7.61505 2.95314 7.68401 3.0221 7.75012 3.09374L8.5343 3.92104C8.79272 4.17781 9.20995 4.17781 9.46838 3.92104L10.2526 3.09438C11.6142 1.61853 13.9146 1.52599 15.3904 2.88767C15.4621 2.95378 15.531 3.02274 15.5971 3.09438C17.1096 4.71461 17.1207 7.2189 15.5971 8.82879Z"></path>
-            </g>
-        </svg>
-    </a>
+  
+     <a href="#" class="wishlist-btn" data-product-id="${product.id}">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13">
+                      <g clip-path="url(#clip0_1106_270)">
+                        <path d="M11.1281 2.35735C10.8248 2.03132 10.4577 1.77117 10.0496 1.59305C9.64144 1.41493 9.20104 1.32266 8.75574 1.32197C8.31008 1.32248 7.86929 1.41462 7.46073 1.59266C7.05218 1.7707 6.6846 2.03084 6.38081 2.35692L6.17153 2.57807L5.96225 2.35692C4.74378 1.04552 2.69289 0.970207 1.38151 2.18868C1.32339 2.24269 1.26727 2.29881 1.21326 2.35692C-0.0793057 3.75111 -0.0793057 5.90577 1.21326 7.29996L5.86398 12.2044C6.02488 12.3743 6.29301 12.3816 6.46288 12.2207C6.46844 12.2154 6.47385 12.21 6.47911 12.2044L11.1281 7.29996C12.4206 5.90592 12.4206 3.75139 11.1281 2.35735Z"/>
+                      </g>
+                    </svg>
+                  </a>
 </li>
                 <li>
                     <a data-bs-toggle="modal" data-bs-target="#product-view">

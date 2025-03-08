@@ -285,31 +285,8 @@
             <div class="shop-widget mb-30">
                 <div class="check-box-item">
                     <h5 class="shop-widget-title">Categories</h5>
-                    <ul class="shop-item">
-                        <li>
-                            <a href="shop-list.html">All Product</a>
-                        </li>
-                        <li>
-                            <a href="shop-list.html">Healthy & Natural</a>
-                        </li>
-                        <li>
-                            <a href="shop-list.html">Beauty & Cosmetics</a>
-                        </li>
-                        <li>
-                            <a href="shop-list.html">Selfcare Veggies</a>
-                        </li>
-                        <li>
-                            <a href="shop-list.html">Personal Care</a>
-                        </li>
-                        <li>
-                            <a href="shop-list.html">Men's Collections</a>
-                        </li>
-                        <li>
-                            <a href="shop-list.html">kids & Baby Set</a>
-                        </li>
-                        <li>
-                            <a href="shop-list.html">Summer product</a>
-                        </li>
+                    <ul class="shop-item" id="category-list">
+                        <!-- Categories will be dynamically inserted here -->
                     </ul>
                 </div>
             </div>
@@ -350,36 +327,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="shop-widget">
-                <h5 class="shop-widget-title">Top Rated Product</h5>
-                <div class="top-product-widget mb-20">
-                    <div class="top-product-img">
-                        <a href="product-default.html"><img src="/img/inner-page/top-product1.png" alt=""></a>
-                    </div>
-                    <div class="top-product-content">
-                        <h6><a href="product-default.html">Estee Lauder new Body Lotion</a></h6>
-                        <span>$150.00 <del>$200.00</del></span>
-                    </div>
-                </div>
-                <div class="top-product-widget mb-20">
-                    <div class="top-product-img">
-                        <a href="product-default.html"><img src="/img/inner-page/top-product2.png" alt=""></a>
-                    </div>
-                    <div class="top-product-content">
-                        <h6><a href="product-default.html">Argan & Olive Nature organ Oil</a></h6>
-                        <span>$130.00 <del>$200.00</del></span>
-                    </div>
-                </div>
-                <div class="top-product-widget">
-                    <div class="top-product-img">
-                        <a href="product-default.html"><img src="/img/inner-page/top-product3.png" alt=""></a>
-                    </div>
-                    <div class="top-product-content">
-                        <h6><a href="product-default.html">Char Pull black & gray Face Mask</a></h6>
-                        <span>$110.00 <del>$200.00</del></span>
-                    </div>
-                </div>
-            </div>
+           
         </div>
     </div>
     <div class="shop-list-section mt-110 mb-110">
@@ -503,6 +451,31 @@
     <script src="/js/main.js"></script>
     <script src="/js/index.js"></script>
     <script src="/js/footer.js"></script>
+
+    <script>
+        // Fetch categories from the API
+        fetch('http://localhost:3000/category')
+            .then(response => response.json())
+            .then(data => {
+                const categoryList = document.getElementById('category-list');
+                data.forEach(category => {
+                    const listItem = document.createElement('li');
+                    listItem.innerHTML = `<a href="shop-list.html">${category.cat_name}</a>`;
+                    
+                    // Add click event to set active class
+                    listItem.addEventListener('click', function() {
+                        // Remove active class from all items
+                        const items = document.querySelectorAll('#category-list li');
+                        items.forEach(item => item.classList.remove('active'));
+                        // Add active class to the clicked item
+                        listItem.classList.add('active');
+                    });
+
+                    categoryList.appendChild(listItem);
+                });
+            })
+            .catch(error => console.error('Error fetching categories:', error));
+    </script>
 </body>
 
 <!-- Mirrored from demo-egenslab.b-cdn.net/html/OrnaCare/preview/shop-list.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Feb 2025 04:31:12 GMT -->

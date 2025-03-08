@@ -452,11 +452,11 @@
                                     </tr>
                                     <tr>
                                         <td>Tax HST</td>
-                                        <td id="total-excl">14%</td> <!-- Updated tax percentage -->
+                                        <td id="total-excl">2.5%</td> <!-- Updated tax percentage -->
                                     </tr>
                                     <tr>
                                         <td>Tax IGST</td>
-                                        <td id="total-incl">18%</td> <!-- Updated tax percentage -->
+                                        <td id="total-incl">2.5%</td> <!-- Updated tax percentage -->
                                     </tr>
                                 </tbody>
                             </table>
@@ -762,115 +762,120 @@
             }
         });
     </script>
-       <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // ... existing code ...
-
-            // Add event listener for the finalize payment button
-            document.getElementById('finalize-payment').addEventListener('click', function (e) {
-                e.preventDefault(); // Prevent default form submission
-
-                // Collect form data
-                const fName = document.querySelector('input[name="fname"]').value.trim();
-                const lName = document.querySelector('input[name="lname"]').value.trim();
-                const address = document.querySelector('input[name="address"]').value.trim();
-                const city = document.querySelector('select[name="city"]').value;
-                const postCode = document.querySelector('input[name="fname"]').value.trim();
-                const phoneNum = document.querySelector('input[name="phone"]').value.trim();
-                const email = document.querySelector('input[name="email"]').value.trim();
-                const note = document.querySelector('textarea[name="message"]').value.trim();
-
-                // Form validation
-                if (!fName || !lName || !address || !city || !postCode || !phoneNum || !email) {
-                    alert("Please fill in all required fields.");
-                    return;
-                }
-
-                // Validate email format
-                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if (!emailPattern.test(email)) {
-                    alert("Please enter a valid email address.");
-                    return;
-                }
-
-                // Collect regular products
-                const regularProducts = [];
-                document.querySelectorAll('#added-products .single-product').forEach(item => {
-                    const productId = item.querySelector('.product-area').dataset.id; // Ensure productId is collected from the correct element
-                    const quantity = parseInt(item.querySelector('.quantity__input').value, 10);
-                    regularProducts.push({ product_id: productId, quantity: quantity }); // Include product_id here
-                });
-
-                // Collect rental products
-                const rentalProducts = [];
-                document.querySelectorAll('#rental-products .single-product').forEach(item => {
-                    const productId = item.querySelector('.product-area').dataset.id; // Ensure productId is collected from the correct element
-                    const quantity = parseInt(item.querySelector('.quantity__input').value, 10);
-                    rentalProducts.push({ product_id: productId, quantity: quantity });
-                });
-
-                // Collect payment methods
-                const paymentOptions = document.querySelectorAll('input[name="payment-method"]:checked');
-                const selectedPaymentMethods = Array.from(paymentOptions).map(option => option.value); // Store selected payment methods
-
-                // Prepare the data object
-                const data = {
-                    f_name: fName,
-                    l_name: lName,
-                    address: address,
-                    city: city,
-                    post_code: postCode,
-                    phone_num: phoneNum,
-                    email: email,
-                    note: note,
-                    regular_product: regularProducts,
-                    rental_product: rentalProducts,
-                    total: document.getElementById('final-total-both').textContent.replace('$', ''),
-                    payment_method: selectedPaymentMethods
-                };
-
-                // Send data to the API
-                fetch('http://localhost:3000/bill', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(data),
-                })
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! status: ${response.status}`);
-                    }
-                    return response.json();
-                })
-                .then(result => {
-                    console.log('Success:', result);
-                    // Handle success (e.g., show a success message, redirect, etc.)
-
-                    // Delete items from the cart API and localStorage
-                    const cartProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
-                    const productIds = regularProducts.map(product => product.product_id);
-
-                    // Delete each product from the API
-                    const deletePromises = productIds.map(productId => {
-                        return fetch(`http://localhost:3000/cart/${productId}`, {
-                            method: 'DELETE',
+              <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    // ... existing code ...
+        
+                    // Add event listener for the finalize payment button
+                    document.getElementById('finalize-payment').addEventListener('click', function (e) {
+                        e.preventDefault(); // Prevent default form submission
+        
+                        // Collect form data
+                        const fName = document.querySelector('input[name="fname"]').value.trim();
+                        const lName = document.querySelector('input[name="lname"]').value.trim();
+                        const address = document.querySelector('input[name="address"]').value.trim();
+                        const city = document.querySelector('select[name="city"]').value;
+                        const postCode = document.querySelector('input[name="fname"]').value.trim();
+                        const phoneNum = document.querySelector('input[name="phone"]').value.trim();
+                        const email = document.querySelector('input[name="email"]').value.trim();
+                        const note = document.querySelector('textarea[name="message"]').value.trim();
+        
+                        // Form validation
+                        if (!fName || !lName || !address || !city || !postCode || !phoneNum || !email) {
+                            alert("Please fill in all required fields.");
+                            return;
+                        }
+        
+                        // Validate email format
+                        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                        if (!emailPattern.test(email)) {
+                            alert("Please enter a valid email address.");
+                            return;
+                        }
+        
+                        // Collect regular products
+                        const regularProducts = [];
+                        document.querySelectorAll('#added-products .single-product').forEach(item => {
+                            const productId = item.querySelector('.product-area').dataset.id; // Ensure productId is collected from the correct element
+                            const quantity = parseInt(item.querySelector('.quantity__input').value, 10);
+                            regularProducts.push({ product_id: productId, quantity: quantity }); // Include product_id here
+                        });
+        
+                        // Collect rental products
+                        const rentalProducts = [];
+                        document.querySelectorAll('#rental-products .single-product').forEach(item => {
+                            const productId = item.querySelector('.product-area').dataset.id; // Ensure productId is collected from the correct element
+                            const quantity = parseInt(item.querySelector('.quantity__input').value, 10);
+                            rentalProducts.push({ product_id: productId, quantity: quantity });
+                        });
+        
+                        // Collect payment methods
+                        const paymentOptions = document.querySelectorAll('input[name="payment-method"]:checked');
+                        const selectedPaymentMethods = Array.from(paymentOptions).map(option => option.value); // Store selected payment methods
+        
+                        // Prepare the data object
+                        const data = {
+                            f_name: fName,
+                            l_name: lName,
+                            address: address,
+                            city: city,
+                            post_code: postCode,
+                            phone_num: phoneNum,
+                            email: email,
+                            note: note,
+                            regular_product: regularProducts,
+                            rental_product: rentalProducts,
+                            total: document.getElementById('final-total-both').textContent.replace('$', ''),
+                            payment_method: selectedPaymentMethods
+                        };
+        
+                        // Send data to the API
+                        fetch('http://localhost:3000/bill', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify(data),
+                        })
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error(`HTTP error! status: ${response.status}`);
+                            }
+                            return response.json();
+                        })
+                        .then(result => {
+                            console.log('Success:', result);
+                            // Handle success (e.g., show a success message, redirect to invoice.html)
+                            // debugger
+                            localStorage.setItem("setbillid",result.id)
+                            // Redirect to invoice.html
+                            window.location.href = 'invoice.html';
+        
+                            // Delete items from the cart API and localStorage
+                            const cartProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
+                            const productIds = regularProducts.map(product => product.product_id);
+        
+                            // Delete each product from the API
+                            const deletePromises = productIds.map(productId => {
+                                return fetch(`http://localhost:3000/cart/${productId}`, {
+                                    method: 'DELETE',
+                                });
+                            });
+        
+                            return Promise.all(deletePromises);
+                        })
+                        .then(() => {
+                            // Remove cartProducts from localStorage
+                            localStorage.removeItem('cartProducts');
+                           
+                        })
+                        .catch(error => {
+                            console.error('Error:', error);
+                            // Handle error (e.g., show an error message)
                         });
                     });
-
-                    return Promise.all(deletePromises);
-                })
-                .then(() => {
-                    // Remove cartProducts from localStorage
-                    localStorage.removeItem('cartProducts');
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    // Handle error (e.g., show an error message)
                 });
-            });
-        });
-    </script>
+            </script>
     <!--  Main jQuery  -->
     <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="/js/jquery-3.6.0.min.js"></script>
