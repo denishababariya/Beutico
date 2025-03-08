@@ -31,10 +31,13 @@
     <link rel="icon" href="/img/logo1.png" type="image/gif">
     <style>
         :root {
-            --primary-color: #d69fa9;  /* Hot Pink */
-            --secondary-color: #FFB6C1;  /* Light Pink */
+            --primary-color: #d69fa9;
+            /* Hot Pink */
+            --secondary-color: #FFB6C1;
+            /* Light Pink */
             --text-color: #333;
-            --background-color: #FFF0F5;  /* Lavender Blush */
+            --background-color: #FFF0F5;
+            /* Lavender Blush */
         }
 
         * {
@@ -54,11 +57,11 @@
             max-width: 900px;
             margin: 20px auto;
             background-color: white;
-            box-shadow: 0 10px 25px rgba(255,105,180,0.2);
+            box-shadow: 0 10px 25px rgba(255, 105, 180, 0.2);
             border-radius: 12px;
             /* overflow: scroll; */
             border-top: 6px solid var(--primary-color);
-            padding-bottom:20px ;
+            padding-bottom: 20px;
         }
 
         .invoice-header {
@@ -88,14 +91,16 @@
             justify-content: space-between;
             padding: 25px 40px;
             background-color: #ffffff;
-            box-shadow: 0 3px 2px -2px rgba(0, 0, 0, 0.1); 
+            box-shadow: 0 3px 2px -2px rgba(0, 0, 0, 0.1);
         }
 
-        .bill-to, .ship-to {
+        .bill-to,
+        .ship-to {
             width: 45%;
         }
 
-        .bill-to h2, .ship-to h2 {
+        .bill-to h2,
+        .ship-to h2 {
             color: var(--primary-color);
             margin-bottom: 10px;
             border-bottom: 2px solid var(--secondary-color);
@@ -114,7 +119,8 @@
             color: white;
         }
 
-        .invoice-table th, .invoice-table td {
+        .invoice-table th,
+        .invoice-table td {
             padding: 12px 15px;
             text-align: left;
             border-bottom: 1px solid #FFB6C1;
@@ -135,15 +141,17 @@
             background-color: #FFF0F5;
         }
 
-        .tax-info, .balance {
+        .tax-info,
+        .balance {
             text-align: right;
         }
 
-        .download-btn,.share-btn {
+        .download-btn,
+        .share-btn {
             display: block;
             width: 200px;
             /* margin: 20px auto; */
-           
+
             padding: 12px 20px;
             background-color: var(--primary-color);
             color: white;
@@ -151,13 +159,14 @@
             text-decoration: none;
             border-radius: 5px;
             transition: background-color 0.3s ease;
-           
+
         }
 
-        .download-btn:hover ,.share-btn:hover{
-            background-color:#c77381;
+        .download-btn:hover,
+        .share-btn:hover {
+            background-color: #c77381;
             cursor: pointer;
-            color:white;
+            color: white;
 
         }
 
@@ -178,24 +187,30 @@
             padding: 10px 0;
             border-bottom: 1px solid #FFB6C1;
         }
-        .button-group{
+
+        .button-group {
             display: flex;
             align-items: center;
             justify-content: center;
         }
+
         @media (max-width: 768px) {
             .invoice-container {
                 padding: 10px;
             }
+
             .product-details {
-            padding: 20px 10px;
-        }
-            .invoice-header, .address-section {
+                padding: 20px 10px;
+            }
+
+            .invoice-header,
+            .address-section {
                 flex-direction: column;
                 text-align: center;
             }
 
-            .bill-to, .ship-to {
+            .bill-to,
+            .ship-to {
                 width: 100%;
                 margin-bottom: 20px;
             }
@@ -203,8 +218,9 @@
             .invoice-details {
                 text-align: center;
             }
-            
-            .invoice-table th, .invoice-table td {
+
+            .invoice-table th,
+            .invoice-table td {
                 padding: 10px;
                 font-size: 0.9rem;
             }
@@ -214,7 +230,8 @@
                 align-items: center;
             }
 
-            .tax-info, .balance {
+            .tax-info,
+            .balance {
                 text-align: center;
             }
 
@@ -226,7 +243,8 @@
 
         .table-responsive {
             overflow-x: auto;
-            -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+            -webkit-overflow-scrolling: touch;
+            /* For smooth scrolling on iOS */
         }
     </style>
 </head>
@@ -297,7 +315,7 @@
                                         <a href="#" class="forget-pass hover-underline">Forget Password</a>
                                     </div>
                                     <a href="#" class="primary-btn1 hover-btn3">Log In</a>
-                                    
+
                                 </form>
                             </div>
                         </div>
@@ -500,11 +518,11 @@
                     </div>
                     <div class="invoice-details">
                         <h1>INVOICE</h1>
-                        <p>Date: 2025-03-04</p>
-                        <p>Invoice No: 1741078958548</p>
+                        <p>Date: <span id="invoiceDate"></span></p>
+                        <p>Invoice No: <span id="invoiceno"></span></p>
                     </div>
                 </div>
-        
+
                 <div class="address-section">
                     <div class="bill-to">
                         <h2>BILL TO</h2>
@@ -514,12 +532,13 @@
                     </div>
                     <div class="ship-to">
                         <h2>SHIP TO</h2>
-                        <p>Krupali Kumbhani</p>
-                        <p>+1 (816) 050-3291</p>
-                        <p>krupali.kalathiyainfotech@gmail.com</p>
+                        <p id="shipToName">Krupali Kumbhani</p> <!-- Placeholder for Ship To Name -->
+                        <p id="shipToPhone">+1 (816) 050-3291</p> <!-- Placeholder for Ship To Phone -->
+                        <p id="shipToEmail">krupali.kalathiyainfotech@gmail.com</p>
+                        <!-- Placeholder for Ship To Email -->
                     </div>
                 </div>
-        
+
                 <div class="product-details">
                     <h2>Product Details</h2>
                     <div class="regular-products">
@@ -559,20 +578,24 @@
                         </div>
                     </div>
                 </div>
-        
-              
-        
+
+
+
                 <div class="summary">
                     <div class="tax-info">
-                        <p>HST RATE: 22%</p>
-                        <p>IST TAX: 22%</p>
+                        <p>HST RATE: 14%</p>
+                        <p>IST TAX: 18%</p>
                         <p><strong>TOTAL: $2,049.60</strong></p>
                     </div>
                     <div class="balance">
                         <h3>Balance Due: $2,049.60</h3>
+                        <div class="d-flex align-items-center justify-content-center">Payment-method :<p
+                                class="pb-0 mb-0 ms-1" id="paymentMethod"></p>
+                        </div>
+
                     </div>
                 </div>
-        
+
                 <div class="button-group">
                     <a href="#" class="download-btn" id="downloadInvoice">
                         <i class="fas fa-download"></i> Download Invoice
@@ -581,9 +604,9 @@
                         <i class="fas fa-share"></i> Share Invoice
                     </a>
                 </div>
-                
+
             </div>
-        
+
         </div>
     </div>
     <!-- ========== Checkout Section end============= -->
@@ -594,7 +617,7 @@
     </footer>
     <!-- End Footer section -->
 
-   
+
     <!--  Main jQuery  -->
     <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="/js/jquery-3.6.0.min.js"></script>
@@ -616,117 +639,313 @@
     <script src="/js/footer.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+    <script src="https://unpkg.com/docx@5.0.2/build/index.js"></script>
+
     <script>
-        // Same JavaScript as in the previous design to populate products
-        const invoiceData = {
-            regular_product: [
-                { product_id: "42", quantity: 1 },
-                { product_id: "271", quantity: 3 }
-            ],
-            rental_product: [
-                { product_id: "468", quantity: 1 },
-                { product_id: "339", quantity: 1 },
-                { product_id: "465", quantity: 1 }
-            ]
-        };
+        // Function to fetch invoice data from API using billId
+        async function fetchInvoiceData() {
+            const billId = localStorage.getItem('setbillid'); // Get billId from local storage
+            if (!billId) {
+                console.error('No billId found in local storage');
+                return;
+            }
 
-        const products = {
-            "42": { name: "Product A", price: 10.00 },
-            "271": { name: "Product B", price: 15.00 },
-            "468": { name: "Rental Product A", price: 5.00 },
-            "339": { name: "Rental Product B", price: 7.00 },
-            "465": { name: "Rental Product C", price: 8.00 }
-        };
+            try {
+                const response = await fetch(`http://localhost:3000/bill/${billId}`); // Replace with your API URL
 
-        function populateProducts() {
-            const regularProductList = document.getElementById('regularProductList');
-            const rentalProductList = document.getElementById('rentalProductList');
-
-            // Populate regular products
-            invoiceData.regular_product.forEach(item => {
-                const product = products[item.product_id];
-                if (product) {
-                    const tr = document.createElement('tr');
-                    tr.innerHTML = `
-                        <td>${product.name}</td>
-                        <td>${item.quantity}</td>
-                        <td>$${product.price.toFixed(2)}</td>
-                        <td>$${(product.price * item.quantity).toFixed(2)}</td>
-                    `;
-                    regularProductList.querySelector('tbody').appendChild(tr);
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
                 }
-            });
+                const invoiceData = await response.json();
+                console.log(invoiceData, "invoiceData");
 
-            // Populate rental products
-            invoiceData.rental_product.forEach(item => {
-                const product = products[item.product_id];
-                if (product) {
-                    const tr = document.createElement('tr');
-                    tr.innerHTML = `
-                        <td>${product.name}</td>
-                        <td>${item.quantity}</td>
-                        <td>$${product.price.toFixed(2)}</td>
-                        <td>$${(product.price * item.quantity).toFixed(2)}</td>
-                    `;
-                    rentalProductList.appendChild(tr);
-                }
-            });
+                populateInvoice(invoiceData); // Call function to populate the invoice
+            } catch (error) {
+                console.error('Error fetching invoice data:', error);
+            }
         }
 
-        // Call the function to populate products
-        populateProducts();
+        // Function to populate the invoice with fetched data
+        async function populateInvoice(data) {
+            const regularProductList = document.getElementById('regularProductList');
+            const rentalProductList = document.getElementById('rentalProductList');
+            let total = 0;
+            document.getElementById('invoiceDate').innerText = new Date().toLocaleDateString();
+            document.getElementById('invoiceno').innerText = data.id;
+
+            document.getElementById('shipToName').innerText = data.f_name + " " + data.l_name; // Assuming the API returns this structure
+            document.getElementById('shipToPhone').innerText = data.phone_num;
+            document.getElementById('shipToEmail').innerText = data.email;
+            // Check if regular_products exists and is an array
+            if (Array.isArray(data.regular_product)) {
+                const regularProductPromises = data.regular_product.map(async item => {
+                    const response = await fetch(`http://localhost:3000/product/${item.product_id}`);
+                    const productData = await response.json();
+                    const tr = document.createElement('tr');
+                    total += item.price * item.quantity;
+                    tr.innerHTML = `
+                        <td>${productData.name}</td>
+                        <td>${item.quantity}</td>
+                        <td>$${productData.price.toFixed(2)}</td>
+                        <td>$${(productData.price * item.quantity).toFixed(2)}</td>
+                    `;
+                    regularProductList.querySelector('tbody').appendChild(tr);
+                });
+                await Promise.all(regularProductPromises);
+            } else {
+                console.warn('No regular products found or data is not an array.');
+            }
+
+            // Check if rental_products exists and is an array
+            if (Array.isArray(data.rental_product)) {
+                const rentalProductPromises = data.rental_product.map(async item => {
+                    const response = await fetch(`http://localhost:3000/product/${item.product_id}`);
+                    const productData = await response.json();
+                    const tr = document.createElement('tr');
+                    total += item.price * item.quantity;
+                    tr.innerHTML = `
+                        <td>${productData.name}</td>
+                        <td>${item.quantity}</td>
+                        <td>$${productData.price.toFixed(2)}</td>
+                        <td>$${(productData.price * item.quantity).toFixed(2)}</td>
+                    `;
+                    rentalProductList.appendChild(tr);
+                });
+                await Promise.all(rentalProductPromises);
+            } else {
+                console.warn('No rental products found or data is not an array.');
+            }
+            console.log(total, 'total');
+
+            // Update summary information
+            document.querySelector('.tax-info').innerHTML = `
+                <p>HST RATE: 2.5%</p>
+                <p>IST TAX: 2.5%</p>
+                <p><strong>TOTAL: $${total}</strong></p>
+            `;
+            document.querySelector('.balance h3').innerText = `Balance Due: $${data.total}`;
+            document.getElementById('paymentMethod').innerText = data.payment_method.join(', ');
+        }
+
+        // Call the function to fetch invoice data on page load
+        fetchInvoiceData();
     </script>
-        <script>
-            document.getElementById('downloadInvoice').addEventListener('click', function() {
-                // Functionality to generate and download PDF
-                generatePDF();
+    <script>
+        document.getElementById('downloadInvoice').addEventListener('click', function () {
+            // Functionality to generate and download PDF
+            generatePDF();
+        });
+
+        document.getElementById('shareInvoice').addEventListener('click', function () {
+            // Functionality to share PDF via WhatsApp
+            sharePDF();
+        });
+
+        // function generatePDF() {
+        //     return new Promise((resolve) => { // Return a promise
+        //         const invoiceContainer = document.querySelector('.invoice-container');
+        //         html2canvas(invoiceContainer).then(canvas => {
+        //             const imgData = canvas.toDataURL('image/png');
+        //             const pdf = new jsPDF();
+        //             const imgWidth = 190; // Adjust width as needed
+        //             const pageHeight = pdf.internal.pageSize.height;
+        //             const imgHeight = (canvas.height * imgWidth) / canvas.width;
+        //             let heightLeft = imgHeight;
+
+        //             let position = 0;
+
+        //             pdf.addImage(imgData, 'PNG', 10, position, imgWidth, imgHeight);
+        //             heightLeft -= pageHeight;
+
+        //             while (heightLeft >= 0) {
+        //                 position = heightLeft - imgHeight;
+        //                 pdf.addPage();
+        //                 pdf.addImage(imgData, 'PNG', 10, position, imgWidth, imgHeight);
+        //                 heightLeft -= pageHeight;
+        //             }
+
+        //             // Save the PDF to a Blob
+        //             const pdfBlob = pdf.output('blob');
+        //             const pdfUrl = URL.createObjectURL(pdfBlob);
+        //             resolve(pdfUrl); // Resolve the promise with the URL
+
+        //             // Trigger the download
+        //             const link = document.createElement('a');
+        //             link.href = pdfUrl;
+        //             link.download = 'invoice.pdf'; // Specify the file name
+        //             document.body.appendChild(link);
+        //             link.click();
+        //             document.body.removeChild(link);
+        //         });
+        //     });
+        // }
+        function generatePDF() {
+    return new Promise((resolve, reject) => {
+        try {
+            const pdf = new jsPDF();
+            const pageWidth = pdf.internal.pageSize.width;
+            const pageHeight = pdf.internal.pageSize.height;
+            const margin = 10;
+
+            // Set light pink background
+            pdf.setFillColor(255, 240, 245);
+            pdf.rect(0, 0, pageWidth, pageHeight, 'F');
+
+            // Add INVOICE title
+            pdf.setTextColor(219, 138, 162);
+            pdf.setFontSize(28);
+            pdf.setFont('helvetica', 'bold');
+            pdf.text('INVOICE', margin, 20);
+
+            // Add Date and Invoice number
+            pdf.setTextColor(100, 100, 100);
+            pdf.setFontSize(10);
+            pdf.text(`Date: ${new Date().toLocaleDateString()}`, margin, 30);
+            pdf.text(`Invoice No: ${document.getElementById('invoiceno').innerText}`, margin, 40);
+
+            // BILL TO section
+            let yPosition = 60;
+            pdf.setTextColor(219, 138, 162);
+            pdf.setFontSize(18);
+            pdf.text('BILL TO', margin, yPosition);
+            yPosition += 10;
+            pdf.setTextColor(70, 70, 70);
+            pdf.setFontSize(11);
+            pdf.text('Denisha', margin, yPosition);
+            yPosition += 10;
+            pdf.text('+1 (234) 567-8900', margin, yPosition);
+            yPosition += 10;
+            pdf.text('denisha@gmail.com', margin, yPosition);
+
+            // SHIP TO section
+            yPosition = 60; // Reset Y position for SHIP TO details
+            pdf.text('SHIP TO', pageWidth / 2 + 10, yPosition);
+            yPosition += 10;
+            pdf.text('Krupali Kumbhani', pageWidth / 2 + 10, yPosition);
+            yPosition += 10;
+            pdf.text('+1 (816) 050-3291', pageWidth / 2 + 10, yPosition);
+            yPosition += 10;
+            pdf.text('krupali.kalathiyainfotech@gmail.com', pageWidth / 2 + 10, yPosition);
+
+            // Product Details section
+            yPosition += 20;
+            pdf.setTextColor(219, 138, 162);
+            pdf.setFontSize(20);
+            pdf.text('Product Details', margin, yPosition);
+
+            // Cosmetic Products section
+            yPosition += 10;
+            pdf.setTextColor(0, 0, 0);
+            pdf.setFontSize(16);
+            pdf.text('Cosmetic Products', margin, yPosition);
+
+            // Table header
+            yPosition += 10;
+            pdf.setFillColor(219, 138, 162);
+            pdf.rect(margin, yPosition, pageWidth - margin * 2, 10, 'F');
+            pdf.setTextColor(255, 255, 255);
+            pdf.setFontSize(10);
+            pdf.text('ITEM DESCRIPTION', margin + 5, yPosition + 7);
+            pdf.text('QUANTITY', margin + 100, yPosition + 7);
+            pdf.text('PRICE', margin + 140, yPosition + 7);
+            pdf.text('SUBTOTAL', margin + 175, yPosition + 7);
+
+            // Cosmetic Products rows
+            const cosmeticProducts = [
+                { description: 'Product A', quantity: 1, price: 10.00, subtotal: 10.00 },
+                { description: 'Product B', quantity: 3, price: 15.00, subtotal: 45.00 }
+            ];
+            yPosition += 10;
+            cosmeticProducts.forEach(product => {
+                pdf.setFillColor(255, 240, 245);
+                pdf.rect(margin, yPosition, pageWidth - margin * 2, 10, 'F');
+                pdf.setTextColor(70, 70, 70);
+                pdf.setFontSize(10);
+                pdf.text(product.description, margin + 5, yPosition + 7);
+                pdf.text(product.quantity.toString(), margin + 100, yPosition + 7);
+                pdf.text(`$${product.price.toFixed(2)}`, margin + 140, yPosition + 7);
+                pdf.text(`$${product.subtotal.toFixed(2)}`, margin + 175, yPosition + 7);
+                yPosition += 10;
             });
-    
-            document.getElementById('shareInvoice').addEventListener('click', function() {
-                // Functionality to share PDF via WhatsApp
-                sharePDF();
+
+            // Rental Jewelry section
+            yPosition += 10;
+            pdf.setTextColor(0, 0, 0);
+            pdf.setFontSize(16);
+            pdf.text('Rental Jewelry', margin, yPosition);
+
+            // Table header
+            yPosition += 10;
+            pdf.setFillColor(219, 138, 162);
+            pdf.rect(margin, yPosition, pageWidth - margin * 2, 10, 'F');
+            pdf.setTextColor(255, 255, 255);
+            pdf.setFontSize(10);
+            pdf.text('ITEM DESCRIPTION', margin + 5, yPosition + 7);
+            pdf.text('QUANTITY', margin + 100, yPosition + 7);
+            pdf.text('PRICE', margin + 140, yPosition + 7);
+            pdf.text('SUBTOTAL', margin + 175, yPosition + 7);
+
+            // Rental Jewelry rows
+            yPosition += 10;
+            const rentalProducts = [
+                { description: 'Rental Product A', quantity: 1, price: 5.00, subtotal: 5.00 },
+                { description: 'Rental Product B', quantity: 1, price: 7.00, subtotal: 7.00 },
+                { description: 'Rental Product C', quantity: 1, price: 8.00, subtotal: 8.00 }
+            ];
+            rentalProducts.forEach(product => {
+                pdf.setFillColor(255, 240, 245);
+                pdf.rect(margin, yPosition, pageWidth - margin * 2, 10, 'F');
+                pdf.setTextColor(70, 70, 70);
+                pdf.setFontSize(10);
+                pdf.text(product.description, margin + 5, yPosition + 7);
+                pdf.text(product.quantity.toString(), margin + 100, yPosition + 7);
+                pdf.text(`$${product.price.toFixed(2)}`, margin + 140, yPosition + 7);
+                pdf.text(`$${product.subtotal.toFixed(2)}`, margin + 175, yPosition + 7);
+                yPosition += 10;
             });
-    
-            function generatePDF() {
-                return new Promise((resolve) => { // Return a promise
-                    const invoiceContainer = document.querySelector('.invoice-container');
-                    html2canvas(invoiceContainer).then(canvas => {
-                        const imgData = canvas.toDataURL('image/png');
-                        const pdf = new jsPDF();
-                        const imgWidth = 190; // Adjust width as needed
-                        const pageHeight = pdf.internal.pageSize.height;
-                        const imgHeight = (canvas.height * imgWidth) / canvas.width;
-                        let heightLeft = imgHeight;
-    
-                        let position = 0;
-    
-                        pdf.addImage(imgData, 'PNG', 10, position, imgWidth, imgHeight);
-                        heightLeft -= pageHeight;
-    
-                        while (heightLeft >= 0) {
-                            position = heightLeft - imgHeight;
-                            pdf.addPage();
-                            pdf.addImage(imgData, 'PNG', 10, position, imgWidth, imgHeight);
-                            heightLeft -= pageHeight;
-                        }
-    
-                        // Save the PDF to a Blob
-                        const pdfBlob = pdf.output('blob');
-                        const pdfUrl = URL.createObjectURL(pdfBlob);
-                        resolve(pdfUrl); // Resolve the promise with the URL
-                    });
-                });
-            }
-    
-            function sharePDF() {
-                generatePDF().then(pdfUrl => {
-                    const phoneNumber = "8200986329"; // Replace with the desired phone number
-                    const message = "Here is the invoice PDF: " + pdfUrl;
-                    const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
-                    window.open(whatsappUrl, '_blank');
-                });
-            }
-        </script>
+
+            // Summary section
+            yPosition += 20;
+            pdf.setFillColor(255, 235, 240);
+            pdf.rect(0, yPosition, pageWidth, pageHeight - yPosition, 'F');
+            pdf.setTextColor(70, 70, 70);
+            pdf.setFontSize(11);
+            pdf.setFont('helvetica', 'bold');
+            pdf.text('HST RATE: 22%', margin + 20, yPosition + 20);
+            pdf.text('IST TAX: 22%', margin + 20, yPosition + 35);
+            pdf.text('TOTAL: $2,049.60', margin + 20, yPosition + 50);
+            pdf.setTextColor(0, 0, 0);
+            pdf.setFontSize(18);
+            pdf.text('Balance Due: $2,049.60', pageWidth - margin - 140, yPosition + 35);
+
+            // Save the PDF
+            const pdfBlob = pdf.output('blob');
+            const pdfUrl = URL.createObjectURL(pdfBlob);
+            resolve(pdfUrl);
+
+            // Trigger download
+            const link = document.createElement('a');
+            link.href = pdfUrl;
+            link.download = 'invoice.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        } catch (error) {
+            console.error('Error generating PDF:', error);
+            reject(error);
+        }
+    });
+}
+        function sharePDF() {
+            generatePDF().then(pdfUrl => {
+                const phoneNumber = "8200986329"; // Replace with the desired phone number
+                const message = "Here is the invoice PDF: " + pdfUrl;
+                const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+                window.open(whatsappUrl, '_blank');
+            });
+        }
+    </script>
+
 </body>
 
 

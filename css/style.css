@@ -8499,7 +8499,8 @@ header.style-2 .nav-right::after {
  Filter Sidebar Css
 ........................*/
 .filter-sidebar {
-  max-width: 410px;
+  /* max-width: 410px; */
+  width: 20%;
   background-color: var(--white-color);
   padding: 30px 20px;
   position: fixed;
