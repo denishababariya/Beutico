@@ -8500,7 +8500,7 @@ header.style-2 .nav-right::after {
 ........................*/
 .filter-sidebar {
   /* max-width: 410px; */
-  width: 20%;
+  width: 25%;
   background-color: var(--white-color);
   padding: 30px 20px;
   position: fixed;
@@ -10393,6 +10393,10 @@ header.style-2 .nav-right::after {
   .shop-details-top-section .shop-details-img .nav-pills {
     left: 10px;
   }
+  .filter-sidebar {
+    /* max-width: 410px; */
+    width: 45%;
+  }
 }
 
 @media (max-width: 576px) {
@@ -10402,6 +10406,10 @@ header.style-2 .nav-right::after {
     gap: 10px;
     left: unset;
     top: unset;
+  }
+  .filter-sidebar {
+    /* max-width: 410px; */
+    width: 60%;
   }
 }
 
