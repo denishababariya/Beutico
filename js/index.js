@@ -1904,7 +1904,7 @@ function createProductCard(product) {
 // Function to create the main product grid with slider
 function createProductGrid(products) {
   // Separate featured products for slider
-  const featuredProducts = products.filter((product) => product);
+  const featuredProducts = products.filter((product) => product.featured);
   const regularProducts = products.filter((product) => !product.featured);
 
   return `
@@ -1924,6 +1924,10 @@ function createProductGrid(products) {
                 ${featuredProducts
       .map((product) => createSliderProduct(product))
       .join("")}
+                ${regularProducts
+      .slice(2) // Add remaining regular products to the Swiper
+      .map((product) => createSliderProduct(product))
+      .join("")}
               </div>
             </div>
             <div class="sg-slider-btn">
@@ -1939,7 +1943,7 @@ function createProductGrid(products) {
         <div class="col-lg-3">
           <div class="row g-4">
             ${regularProducts
-      .slice(2, 4)
+      .slice(0, 2)
       .map((product) => createProductCard(product))
       .join("")}
           </div>
@@ -1949,8 +1953,9 @@ function createProductGrid(products) {
 }
 
 // Function to initialize swiper
+// Function to initialize swiper
 function initializeSwiper() {
-  return new Swiper(".sg-slider", {
+  const swiper = new Swiper(".sg-slider", {
     slidesPerView: 1,
     spaceBetween: 30,
     loop: true,
@@ -1963,8 +1968,37 @@ function initializeSwiper() {
       disableOnInteraction: false,
     },
   });
+  
+  // Add active class handling for slides
+  swiper.on('slideChange', function () {
+    // Remove active class from all slides
+    document.querySelectorAll('.swiper-slide').forEach(slide => {
+      slide.classList.remove('active');
+    });
+    
+    // Add active class to active slide
+    const activeSlide = document.querySelector('.swiper-slide-active');
+    if (activeSlide) {
+      activeSlide.classList.add('active');
+    }
+  });
+  
+  return swiper;
 }
 
+// Make sure to call this function after your DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+  const swiper = initializeSwiper();
+  
+  // You can also manually add event listeners if needed
+  document.querySelector('.sg-next-btn').addEventListener('click', function() {
+    swiper.slideNext();
+  });
+  
+  document.querySelector('.sg-prev-btn').addEventListener('click', function() {
+    swiper.slidePrev();
+  });
+});
 // Function to update countdown timer
 function updateCountdown() {
   const countdownElements = document.querySelectorAll("[data-countdown]");
@@ -2861,4 +2895,4 @@ document.addEventListener("click", async (event) => {
 
 // ... existing code ...
 
-// ... existing code ...
+// ... existing code ...console.log(productId, "productId");`
