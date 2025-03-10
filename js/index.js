@@ -623,16 +623,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             }</a></h6>
                     <p><a href="shop-list.html">${product.brand}</a></p>
                 <p class="price">$${product.price.toFixed(2)}</p>
-                <div class="rating">
-                  <ul>
-                    <li><i class="bi bi-star-fill"></i></li>
-                    <li><i class="bi bi-star-fill"></i></li>
-                    <li><i class="bi bi-star-fill"></i></li>
-                    <li><i class="bi bi-star-fill"></i></li>
-                    <li><i class="bi bi-star-fill"></i></li>
-                  </ul>
-                  <span>(50)</span>
-                </div>
+                
                 `;
 
           productCard.appendChild(productCardContent);
@@ -778,16 +769,7 @@ document.addEventListener("DOMContentLoaded", async function () {
              <p class="price">${product.price}<del>$${(
           product.price * 1.1
         ).toFixed(2)}</del></p>
-        <div class="rating">
-                  <ul>
-                    <li><i class="bi bi-star-fill"></i></li>
-                    <li><i class="bi bi-star-fill"></i></li>
-                    <li><i class="bi bi-star-fill"></i></li>
-                    <li><i class="bi bi-star-fill"></i></li>
-                    <li><i class="bi bi-star-fill"></i></li>
-                  </ul>
-                  <span>(50)</span>
-                </div>
+        
           </div>
           <span class="for-border"></span>
         </div>`;
@@ -887,16 +869,7 @@ fetch(`http://localhost:3000/product/${selectedProductId3}`)
                                         <h6><a href="product-default.html?id=${product.id}" class="hover-underline" onclick="localStorage.setItem('selectedProductId', '${product.id}')">${product.name}</a></h6>
                                         <p><a href="shop-list.html">${product.brand}</a></p>
                                         <p class="price">$${product.price} <del>$200.00</del></p>
-                                        <div class="rating">
-                                            <ul>
-                                                <li><i class="bi bi-star-fill"></i></li>
-                                                <li><i class="bi bi-star-fill"></i></li>
-                                                <li><i class="bi bi-star-fill"></i></li>
-                                                <li><i class="bi bi-star-fill"></i></li>
-                                                <li><i class="bi bi-star-fill"></i></li>
-                                            </ul>
-                                            <span>(50)</span>
-                                        </div>
+                                        
                                     </div>
                                     <span class="for-border"></span>
                                 </div>
@@ -1280,16 +1253,7 @@ function createSliderProduct(product) {
             <span>$${product.price.toFixed(2)} <del>$${(
       product.price * 1.1
     ).toFixed(2)}</del></span>
-            <div class="rating">
-              <ul>
-                <li><i class="bi bi-star-fill"></i></li>
-                <li><i class="bi bi-star-fill"></i></li>
-                <li><i class="bi bi-star-fill"></i></li>
-                <li><i class="bi bi-star-fill"></i></li>
-                <li><i class="bi bi-star-fill"></i></li>
-              </ul>
-              <span>(50)</span>
-            </div>
+            
           </div>
           <div class="offer-timer">
             <p>Offer Will Be End:</p>
@@ -1367,16 +1331,7 @@ function createProductCard(product) {
     }</a>
             </h6>
             <span>$${product.price.toFixed(2)}</span>
-            <div class="rating">
-              <ul>
-                <li><i class="bi bi-star-fill"></i></li>
-                <li><i class="bi bi-star-fill"></i></li>
-                <li><i class="bi bi-star-fill"></i></li>
-                <li><i class="bi bi-star-fill"></i></li>
-                <li><i class="bi bi-star-fill"></i></li>
-              </ul>
-              <span>(50)</span>
-            </div>
+            
           </div>
         </div>
       </div>
