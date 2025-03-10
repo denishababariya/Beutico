@@ -11,13 +11,19 @@ document.addEventListener("DOMContentLoaded", function () {
                         Luxury, Affordability, and Grace with Our Exclusive Collection.
                     </p>
                 </div>
-                <a href="gift-card.html" class="primary-btn1 hover-btn3">*Book Your Jewelry*</a>
+                <a href="shop-list.html" class="primary-btn1 hover-btn3" id="book-jewelry-link">*Book Your Jewelry*</a>
             </div>
         </div>
     `
+
+    document.getElementById("book-jewelry-link").addEventListener("click", function() {
+            localStorage.setItem("selectedcategoryId", "7");
+    });
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+   
+
     document.getElementById("footer-section").innerHTML = `
         <img src="/img/home1/icon/vector-2.svg" alt="" class="vector1">
         <img src="/img/home1/icon/banner-vector1.svg" alt="" class="vector2">
@@ -28,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div class="col-lg-3 col-md-4 col-sm-6">
                         <div class="footer-widget">
                             <h3>Want <span>to Take <br></span> Beauty Product <span>off our Shop</span>?</h3>
-                            <a href="shop-list.html" class="primary-btn1 hover-btn3">*Shop Now*</a>
+                            <a href="shop-list.html" class="primary-btn1 hover-btn3" id="shop-now-link">*Shop Now*</a>
                         </div>
                     </div>
                     <div class="col-lg-2 col-md-4 col-sm-6 d-flex justify-content-lg-start justify-content-sm-end">
@@ -39,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             <ul class="widget-list">
                                 <li><a href="contact.html">Help & Contact Us</a></li>
                                 <li><a href="#">Return & Refunds</a></li>
-                                <li><a href="shop-list.html">Online Stores</a></li>
+                                <li><a href="shop-list.html" id="online-stores-link">Online Stores</a></li> <!-- Updated line -->
                                 <li><a href="#">Privacy Policy</a></li>
                                 <li><a href="my-account.html">Profile</a></li>
                             </ul>
@@ -52,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             </div>
                             <ul class="widget-list">
                                 <li><a href="about-us.html">What we do</a></li>
-                                <li><a href="shop-list.html">SHOP</a></li>
+                                <li><a href="shop-list.html" id="shop-link">SHOP</a></li>
                                 <li><a href="faq.html">F.A.Q</a></li>
                             </ul>
                         </div>
@@ -69,18 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     </div>
                     <div class="col-lg-3 col-md-4 col-sm-6 d-flex justify-content-lg-end justify-content-md-center">
                         <div class="footer-widget">
-                            <div class="widget-title style-2">
-                                <h5>Install app</h5>
-                            </div>
-                            <p>Form App Store or Google Play</p>
-                            <div class="app-store">
-                                <a href="#">
-                                    <img src="/img/home1/google-play.png" alt="">
-                                </a>
-                                <a href="#">
-                                    <img src="/img/home1/app-store.png" alt="">
-                                </a>
-                            </div>
+                           
                             <div class="payment-gateway">
                                 <p>Secured Payment Gateways</p>
                                 <div class="icons">
@@ -126,7 +121,10 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
         </div>
     `;
+ 
 });
+
+
 document.addEventListener("DOMContentLoaded", function () {
     // API Call to fetch categories
     fetch('http://localhost:3000/category')
@@ -148,11 +146,27 @@ document.addEventListener("DOMContentLoaded", function () {
                 // Store the selected category ID in local storage on click
                 link.addEventListener("click", function() {
                     localStorage.setItem("selectedcategoryId", category.id);
+                    localStorage.setItem("selectedSubcategoryId", "");
                 });
+                
 
                 listItem.appendChild(link);
                 categoryList.appendChild(listItem);
             });
         })
         .catch(error => console.error('Error fetching categories:', error));
+
+        document.getElementById("online-stores-link").addEventListener("click", function() {
+            clearLocalStorage(); // Call the function here
+        });
+        document.getElementById("shop-link").addEventListener("click", function() {
+            clearLocalStorage(); // Call the function here
+        });
+        document.getElementById("shop-now-link").addEventListener("click", function() {
+            clearLocalStorage(); // Call the function here
+        });
+        function clearLocalStorage() {
+            localStorage.removeItem('selectedcategoryId');
+            localStorage.removeItem('selectedSubcategoryId');
+        }
 });

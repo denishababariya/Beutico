@@ -455,6 +455,11 @@ document.addEventListener("DOMContentLoaded", function () {
         categoryCard.appendChild(categoryCardContent);
         colDiv.appendChild(categoryCard);
         categoryContainer.appendChild(colDiv); // Append the new category card to the container
+
+        categoryCard.addEventListener("click", () => {
+          localStorage.setItem("selectedSubcategoryId", ""); // Set to blank
+          localStorage.setItem("selectedcategoryId", category.id); // Store category ID
+      });
       });
     })
     .catch((error) =>
@@ -2078,12 +2083,33 @@ document.addEventListener("DOMContentLoaded", async function () {
         "selectedSubcategoryId"
       );
 
-      // Filter products based on selectedSubcategoryId
-      const filteredProducts = selectedSubcategoryId
-        ? products.filter(
+      const selectedcategoryId = localStorage.getItem(
+        "selectedcategoryId"
+      );
+
+      // Updated filtering logic:
+      // 1. First check if subcategory is selected
+      // 2. If no subcategory, then check for category
+      // 3. If neither, show all products
+      let filteredProducts = products;
+      
+
+      if (selectedcategoryId === "7") {
+        // If selected category ID is 7, filter for categories 5 and 6
+        filteredProducts = products.filter(
+          (product) => product.cat_id === 5 || product.cat_id === 6
+        );
+      } else if (selectedSubcategoryId) {
+        // Filter by subcategory if available
+        filteredProducts = products.filter(
           (product) => product.sub_cat_id == selectedSubcategoryId
-        )
-        : products;
+        );
+      } else if (selectedcategoryId) {
+        // If no subcategory selected, filter by category
+        filteredProducts = products.filter(
+          (product) => product.cat_id == selectedcategoryId
+        );
+      }
 
       // Display products
       filteredProducts.forEach((product) => {
@@ -2163,9 +2189,29 @@ document.addEventListener("DOMContentLoaded", async function () {
       const selectedSubcategoryId = localStorage.getItem(
         "selectedSubcategoryId"
       );
-      const filteredProducts = selectedSubcategoryId
-        ? data.filter((product) => product.sub_cat_id == selectedSubcategoryId)
-        : data;
+      const selectedcategoryId = localStorage.getItem(
+        "selectedcategoryId"
+      );
+      
+      // Updated filtering logic for pagination
+      let filteredProducts = data;
+      
+      if (selectedcategoryId === "7") {
+        // If selected category ID is 7, filter for categories 5 and 6
+        filteredProducts = data.filter(
+          (product) => product.cat_id === 5 || product.cat_id === 6
+        );
+      } else  if(selectedSubcategoryId) {
+        // Filter by subcategory if available
+        filteredProducts = data.filter(
+          (product) => product.sub_cat_id == selectedSubcategoryId
+        );
+      } else if (selectedcategoryId) {
+        // If no subcategory selected, filter by category
+        filteredProducts = data.filter(
+          (product) => product.cat_id == selectedcategoryId
+        );
+      }
 
       const start = (page - 1) * productsPerPage;
       const end = start + productsPerPage;
@@ -2214,7 +2260,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         paginationContainer.appendChild(pageItem);
       }
 
-      // 3) Left Ellipsis (જો currentPage 4 કરતા મોટું હોય, તો "..." બતાવો)
+      // 3) Left Ellipsis
       if (currentPage - 1 > 2) {
         const ellipsisItem = document.createElement("li");
         ellipsisItem.textContent = "...";
@@ -2241,7 +2287,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         }
       }
 
-      // 5) Right Ellipsis (જો currentPage + 1 < totalPages - 1, તો "..." બતાવો)
+      // 5) Right Ellipsis
       if (currentPage + 1 < totalPages - 1) {
         const ellipsisItem = document.createElement("li");
         ellipsisItem.textContent = "...";

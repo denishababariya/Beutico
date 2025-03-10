@@ -6721,7 +6721,7 @@ header.style-2 .nav-right::after {
   -o-object-fit: cover;
   object-fit: cover;
   background-repeat: no-repeat;
-  padding: 110px 10px 110px 10px;
+  padding: 96px 10px 110px 10px;
 }
 
 .newsletter-section .newsletter-banner .newsletter-content {
