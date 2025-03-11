@@ -107,6 +107,8 @@
 // });
 
 const apiUrl = "http://localhost:3000/users";
+const currentOTP = "123456"; // Default OTP
+const resetEmail = ""; // To store the email for password reset
 
 // Function to register user
 async function registerUser() {
@@ -151,13 +153,25 @@ async function registerUser() {
 
     if (registerResponse.ok) {
       const registeredUser = await registerResponse.json();
-      localStorage.setItem("user_id", registeredUser.id); // Store user ID in session storage
+      
+      // Store user ID in localStorage
+      localStorage.setItem("user_id", registeredUser.id);
+      
+      // Store email in localStorage for auto-fill on next login
+      localStorage.setItem("user_email", email);
+      
+      // Log the email registration
+      console.log("User registered with email:", email);
+      
+      // You can also send this log to your server
+      logUserActivity(email, "registration");
+      
       alert("Registration successful!");
 
       // Transfer wishlist from localStorage to the user's wishlist in the database
       await transferWishlistToUser(registeredUser.id);
 
-      window.location.href = "index.html"; // Redirect to my-account page
+      window.location.href = "index.html"; // Redirect to index page
     } else {
       alert("Registration failed. Try again.");
     }
@@ -168,9 +182,14 @@ async function registerUser() {
 
 // Function to log in user
 async function loginUser() {
-  const usernameOrEmail = document
-    .querySelector("#home input[placeholder='User name or Email *']")
-    .value.trim();
+  const emailField = document.querySelector("#home input[placeholder='User name or Email *']");
+  
+  // Auto-fill the email field if available in localStorage
+  if (localStorage.getItem("user_email") && emailField.value === "") {
+    emailField.value = localStorage.getItem("user_email");
+  }
+  
+  const usernameOrEmail = emailField.value.trim();
   const password = document.querySelector("#password").value.trim();
 
   if (!usernameOrEmail || !password) {
@@ -189,7 +208,17 @@ async function loginUser() {
     );
 
     if (user) {
-      localStorage.setItem("user_id", user.id); // Store user ID in session storage
+      localStorage.setItem("user_id", user.id);
+      
+      // Update the stored email in case they logged in with username
+      localStorage.setItem("user_email", user.email);
+      
+      // Log the login activity with email
+      console.log("User logged in with email:", user.email);
+      
+      // You can also send this log to your server
+      logUserActivity(user.email, "login");
+      
       alert("Login successful!");
 
       // Transfer wishlist from localStorage to the user's wishlist in the database
@@ -198,11 +227,47 @@ async function loginUser() {
       window.location.href = "index.html"; // Redirect after login
     } else {
       alert("Invalid username/email or password.");
+      
+      // Log failed login attempt
+      console.log("Failed login attempt with:", usernameOrEmail);
+      logUserActivity(usernameOrEmail, "failed_login");
     }
   } catch (error) {
     console.error("Error logging in:", error);
   }
 }
+
+// Function to log user activity
+async function logUserActivity(email, action) {
+  try {
+    const logEntry = {
+      email: email,
+      action: action,
+      timestamp: new Date().toISOString()
+    };
+    
+    // Send log to server
+    await fetch("/api/log-activity", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(logEntry)
+    });
+  } catch (error) {
+    console.error("Error logging activity:", error);
+  }
+} 
+
+
+// Add this function to auto-fill email when the login form loads
+function initLoginForm() {
+  const emailField = document.querySelector("#home input[placeholder='User name or Email *']");
+  if (emailField && localStorage.getItem("user_email")) {
+    emailField.value = localStorage.getItem("user_email");
+  }
+}
+
+// Call this function when the page loads
+document.addEventListener("DOMContentLoaded", initLoginForm);
 
 // Event Listeners
 document
@@ -721,6 +786,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
 
       const heartSVG = isInWishlist
+      
         ? `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
       <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="red" stroke="red" stroke-width="2"/>
     </svg>`
