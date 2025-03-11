@@ -540,19 +540,7 @@
                 productDetailsContainer.appendChild(productName);
 
                 // Create and append rating review section
-                const ratingReviewDiv = document.createElement('div');
-                ratingReviewDiv.className = 'rating-review';
-                const ratingDiv = document.createElement('div');
-                ratingDiv.className = 'rating';
-                const starDiv = document.createElement('div');
-                starDiv.className = 'star';
-                starDiv.innerHTML = '<i class="bi bi-star-fill"></i>'.repeat(data.rating); // Update rating dynamically
-                ratingDiv.appendChild(starDiv);
-                const reviewLink = document.createElement('p');
-                reviewLink.innerHTML = `<a href="#reviews">(${data.reviews} customer review)</a>`;
-                ratingDiv.appendChild(reviewLink);
-                ratingReviewDiv.appendChild(ratingDiv);
-                productDetailsContainer.appendChild(ratingReviewDiv);
+             
 
                 // Create and append product description
                 const productDescription = document.createElement('p');
