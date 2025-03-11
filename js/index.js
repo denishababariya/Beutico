@@ -1,289 +1,3 @@
-// start auth
-
-async function populateCategories() {
-  try {
-    const response = await fetch("http://localhost:3000/category");
-    const categories = await response.json();
-    console.log(categories, "header-search-cat");
-
-    const categorySelect = document.getElementById("categorySelect");
-    // Clear existing options
-    categorySelect.innerHTML = '';
-    
-    // Add a default option
-    const defaultOption = document.createElement("option");
-    defaultOption.textContent = "All Category";
-    defaultOption.value = ""; // Set value for the default option
-    categorySelect.appendChild(defaultOption);
-
-    // Populate the select with categories
-    categories.forEach(category => {
-      const option = document.createElement("option");
-      option.value = category.id; // Assuming category has an id
-      option.textContent = category.cat_name; // Assuming category has a cat_name
-      categorySelect.appendChild(option);
-    });
-
-    // Update the nice-select display
-    const niceSelect = document.querySelector('.nice-select');
-    niceSelect.querySelector('.current').textContent = defaultOption.textContent; // Set the current display text
-    const list = niceSelect.querySelector('.list');
-    list.innerHTML = ''; // Clear existing list items
-    categories.forEach(category => {
-      const listItem = document.createElement('li');
-      listItem.className = 'option';
-      listItem.setAttribute('data-value', category.cat_name);
-      listItem.textContent = category.cat_name;
-      list.appendChild(listItem);
-    });
-  } catch (error) {
-    console.error("Error fetching categories:", error);
-  }
-}
-
-// Call the function to populate categories when the DOM is fully loaded
-document.addEventListener("DOMContentLoaded", populateCategories);
-// ... existing code ...
-// Function to populate quick search options dynamically
-async function populateQuickSearch() {
-  try {
-      const response = await fetch("http://localhost:3000/category"); // Fetch categories
-      const categories = await response.json();
-
-      const quickSearchList = document.querySelector('.quick-search ul');
-      quickSearchList.innerHTML = ''; // Clear existing items
-
-      categories.forEach(category => {
-        const listItem = document.createElement('li');
-        listItem.innerHTML = `<a href="shop-list.html?category=${category.cat_name}" onclick="setCategory('${category.id}')">${category.cat_name}</a>`;
-        quickSearchList.appendChild(listItem);
-    });
-  } catch (error) {
-      console.error("Error fetching categories for quick search:", error);
-  }
-}
-function setCategory(categoryId) {
-  localStorage.setItem("selectedcategoryId", categoryId); // Store the selected category ID
-  localStorage.setItem("selectedSubcategoryId", ""); // Clear the selected subcategory ID
-}
-
-// Call the function to populate quick search on DOMContentLoaded
-document.addEventListener("DOMContentLoaded", () => {
-  populateQuickSearch(); // Populate quick search options
-  // ... existing code ...
-});
-
-
-// async function searchProductByName(productName) {
-//     try {
-//         const response = await fetch("http://localhost:3000/product");
-//         const products = await response.json();
-        
-//         // Filter products based on the name
-//         const relatedProducts = products.filter(product => 
-//             product.name.toLowerCase().includes(productName.toLowerCase())
-//         );
-
-//         console.log("Related Products:", relatedProducts);
-//         // You can now use relatedProducts array as needed
-//     } catch (error) {
-//         console.error("Error fetching products:", error);
-//     }
-// }
-
-// // Add event listener to the submit button
-// document.querySelector(".form-inner2 button[type='submit']").addEventListener("click", function(event) {
-//     event.preventDefault(); // Prevent the default form submission
-//     const productName = document.querySelector(".form-inner2 input[type='text']").value; // Get the input value
-//     searchProductByName(productName); // Call the search function
-// });
-
-const apiUrl = "http://localhost:3000/users";
-const currentOTP = "123456"; // Default OTP
-const resetEmail = ""; // To store the email for password reset
-
-// Function to register user
-async function registerUser() {
-  const username = document
-    .querySelector("#profile input[placeholder='User Name *']")
-    .value.trim();
-  const email = document
-    .querySelector("#profile input[placeholder='Email Here *']")
-    .value.trim();
-  const password = document.querySelector("#password2").value.trim();
-  const confirmPassword = document.querySelector("#password3").value.trim();
-
-  if (!username || !email || !password || !confirmPassword) {
-    alert("All fields are required.");
-    return;
-  }
-
-  if (password !== confirmPassword) {
-    alert("Passwords do not match.");
-    return;
-  }
-
-  try {
-    // Check if the email already exists
-    const response = await fetch(apiUrl);
-    const users = await response.json();
-
-    if (users.some((user) => user.email === email)) {
-      alert("Email already registered.");
-      return;
-    }
-
-    // New user object
-    const newUser = { username, email, password };
-
-    // Send data to API
-    const registerResponse = await fetch(apiUrl, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(newUser),
-    });
-
-    if (registerResponse.ok) {
-      const registeredUser = await registerResponse.json();
-      
-      // Store user ID in localStorage
-      localStorage.setItem("user_id", registeredUser.id);
-      
-      // Store email in localStorage for auto-fill on next login
-      localStorage.setItem("user_email", email);
-      
-      // Log the email registration
-      console.log("User registered with email:", email);
-      
-      // You can also send this log to your server
-      logUserActivity(email, "registration");
-      
-      alert("Registration successful!");
-
-      // Transfer wishlist from localStorage to the user's wishlist in the database
-      await transferWishlistToUser(registeredUser.id);
-
-      window.location.href = "index.html"; // Redirect to index page
-    } else {
-      alert("Registration failed. Try again.");
-    }
-  } catch (error) {
-    console.error("Error registering user:", error);
-  }
-}
-
-// Function to log in user
-async function loginUser() {
-  const emailField = document.querySelector("#home input[placeholder='User name or Email *']");
-  
-  // Auto-fill the email field if available in localStorage
-  if (localStorage.getItem("user_email") && emailField.value === "") {
-    emailField.value = localStorage.getItem("user_email");
-  }
-  
-  const usernameOrEmail = emailField.value.trim();
-  const password = document.querySelector("#password").value.trim();
-
-  if (!usernameOrEmail || !password) {
-    alert("Please enter username/email and password.");
-    return;
-  }
-
-  try {
-    const response = await fetch(apiUrl);
-    const users = await response.json();
-
-    const user = users.find(
-      (user) =>
-        (user.username === usernameOrEmail || user.email === usernameOrEmail) &&
-        user.password === password
-    );
-
-    if (user) {
-      localStorage.setItem("user_id", user.id);
-      
-      // Update the stored email in case they logged in with username
-      localStorage.setItem("user_email", user.email);
-      
-      // Log the login activity with email
-      console.log("User logged in with email:", user.email);
-      
-      // You can also send this log to your server
-      logUserActivity(user.email, "login");
-      
-      alert("Login successful!");
-
-      // Transfer wishlist from localStorage to the user's wishlist in the database
-      await transferWishlistToUser(user.id);
-
-      window.location.href = "index.html"; // Redirect after login
-    } else {
-      alert("Invalid username/email or password.");
-      
-      // Log failed login attempt
-      console.log("Failed login attempt with:", usernameOrEmail);
-      logUserActivity(usernameOrEmail, "failed_login");
-    }
-  } catch (error) {
-    console.error("Error logging in:", error);
-  }
-}
-
-// Function to log user activity
-async function logUserActivity(email, action) {
-  try {
-    const logEntry = {
-      email: email,
-      action: action,
-      timestamp: new Date().toISOString()
-    };
-    
-    // Send log to server
-    await fetch("/api/log-activity", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(logEntry)
-    });
-  } catch (error) {
-    console.error("Error logging activity:", error);
-  }
-} 
-
-
-// Add this function to auto-fill email when the login form loads
-function initLoginForm() {
-  const emailField = document.querySelector("#home input[placeholder='User name or Email *']");
-  if (emailField && localStorage.getItem("user_email")) {
-    emailField.value = localStorage.getItem("user_email");
-  }
-}
-
-// Call this function when the page loads
-document.addEventListener("DOMContentLoaded", initLoginForm);
-
-// Event Listeners
-document
-  .querySelector("#profile .primary-btn1")
-  .addEventListener("click", (e) => {
-    e.preventDefault();
-    registerUser();
-  });
-
-document.querySelector("#home .primary-btn1").addEventListener("click", (e) => {
-  e.preventDefault();
-  loginUser();
-});
-
-// Toggle Password Visibility
-document.querySelectorAll(".bi-eye-slash").forEach((icon) => {
-  icon.addEventListener("click", () => {
-    const input = icon.previousElementSibling;
-    input.type = input.type === "password" ? "text" : "password";
-    icon.classList.toggle("bi-eye");
-    icon.classList.toggle("bi-eye-slash");
-  });
-});
-// end auth
 
 // header start
 document.addEventListener("DOMContentLoaded", function () {
@@ -373,6 +87,8 @@ document.addEventListener("DOMContentLoaded", function () {
               subA.addEventListener("click", function () {
                 localStorage.setItem("selectedSubcategoryId", sub.id);
                 localStorage.setItem("selectedcategoryId", "");
+                localStorage.removeItem('searchResultIds');
+localStorage.removeItem('searchTerm');
               });
 
               subLi.appendChild(subA);
@@ -516,6 +232,8 @@ document.addEventListener("DOMContentLoaded", function () {
         categoryCard.addEventListener("click", () => {
           localStorage.setItem("selectedSubcategoryId", ""); // Set to blank
           localStorage.setItem("selectedcategoryId", category.id); // Store category ID
+          localStorage.removeItem('searchResultIds');
+localStorage.removeItem('searchTerm');
       });
       });
     })
@@ -648,7 +366,7 @@ document.addEventListener("DOMContentLoaded", async function () {
               </svg>`
             : `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
                 <g clip-path="url(#clip0_168_378)">
-                    <path d="M16.528 2.20919C16.0674 1.71411 15.5099 1.31906 14.8902 1.04859C14.2704 0.778112 13.6017 0.637996 12.9255 0.636946C12.2487 0.637725 11.5794 0.777639 10.959 1.048C10.3386 1.31835 9.78042 1.71338 9.31911 2.20854L9.00132 2.54436L8.68352 2.20854C6.83326 0.217151 3.71893 0.102789 1.72758 1.95306C1.63932 2.03507 1.5541 2.12029 1.47209 2.20854C-0.490696 4.32565 -0.490696 7.59753 1.47209 9.71463L8.5343 17.1622C8.77862 17.4201 9.18579 17.4312 9.44373 17.1868C9.45217 17.1788 9.46039 17.1706 9.46838 17.1622L16.528 9.71463C18.4907 7.59776 18.4907 4.32606 16.528 2.20919ZM15.5971 8.82879H15.5965L9.00132 15.7849L2.40553 8.82879C0.90608 7.21113 0.90608 4.7114 2.40553 3.09374C3.76722 1.61789 6.06755 1.52535 7.5434 2.88703C7.61505 2.95314 7.68401 3.0221 7.75012 3.09374L8.5343 3.92104C8.79272 4.17781 9.20995 4.17781 9.46838 3.92104L10.2526 3.09438C11.6142 1.61853 13.9146 1.52599 15.3904 2.88767C15.4621 2.95378 15.531 3.02274 15.5971 3.09438C17.1096 4.71461 17.1207 7.2189 15.5971 8.82879Z"></path>
+                    <path d="M16.528 2.20919C16.0674 1.71411 15.5099 1.31906 14.8902 1.04859C14.2704 0.778112 13.6017 0.637996 12.9255 0.636946C12.2487 0.637725 11.5794 0.777639 10.959 1.048C10.3386 1.31835 9.78042 1.71338 9.31911 2.20854L9.00132 2.54436L8.68352 2.20854C6.83326 0.217151 3.71893 0.102789 1.72758 1.95306C1.63932 2.03507 1.5541 2.12029 1.47209 2.20854C-0.490696 4.32565 -0.490696 7.59753 1.47209 9.71463L8.5343 17.1622C8.77862 17.4201 9.18579 17.4312 9.44373 17.1868C9.45217 17.1788 9.46039 17.1706 9.46838 17.1622L16.528 9.71463C18.4907 7.59776 18.4907 4.32606 16.528 2.20919ZM15.5971 8.82879H15.5965L9.00132 15.7849L2.40553 8.82879C0.90608 7.21113 0.90608 4.7114 2.40553 3.09374C3.76722 1.61789 6.06755 1.52535 7.5434 2.88703C7.61505 2.95314 7.68401 3.0221 7.75012 3.09374L8.5343 3.92104C8.79272 4.17781 9.20995 4.17781 9.46838 3.92104L10.2526 3.09438C11.6142 1.61853 13.9146 1.52599 15.3904 2.88767C15.4621 2.95378 15.531 3.02274 15.5971 3.09438C17.1096 4.71461 17.1207 7.2189 15.5971 8.82879Z" />
                 </g>
               </svg>`;
 
@@ -698,10 +416,16 @@ document.addEventListener("DOMContentLoaded", async function () {
             localStorage.setItem("selectedeyeId", productId); // Store the product ID in localStorage
             console.log("Product ID stored:", productId);
 
-            // Open the modal after storing the ID
-            const productModal = new bootstrap.Modal(
-              document.getElementById("product-view")
-            );
+            // First create the modal if it doesn't exist
+            if (!document.getElementById("product-view")) {
+              createProductModal();
+            }
+            
+            // Then fetch and display product data
+            fetchAndDisplayProduct(productId);
+            
+            // Finally show the modal
+            const productModal = new bootstrap.Modal(document.getElementById("product-view"));
             productModal.show();
           });
         });
@@ -784,7 +508,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     </svg>`
         : `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
             <g clip-path="url(#clip0_168_378)">
-                <path d="M16.528 2.20919C16.0674 1.71411 15.5099 1.31906 14.8902 1.04859C14.2704 0.778112 13.6017 0.637996 12.9255 0.636946C12.2487 0.637725 11.5794 0.777639 10.959 1.048C10.3386 1.31835 9.78042 1.71338 9.31911 2.20854L9.00132 2.54436L8.68352 2.20854C6.83326 0.217151 3.71893 0.102789 1.72758 1.95306C1.63932 2.03507 1.5541 2.12029 1.47209 2.20854C-0.490696 4.32565 -0.490696 7.59753 1.47209 9.71463L8.5343 17.1622C8.77862 17.4201 9.18579 17.4312 9.44373 17.1868C9.45217 17.1788 9.46039 17.1706 9.46838 17.1622L16.528 9.71463C18.4907 7.59776 18.4907 4.32606 16.528 2.20919ZM15.5971 8.82879H15.5965L9.00132 15.7849L2.40553 8.82879C0.90608 7.21113 0.90608 4.7114 2.40553 3.09374C3.76722 1.61789 6.06755 1.52535 7.5434 2.88703C7.61505 2.95314 7.68401 3.0221 7.75012 3.09374L8.5343 3.92104C8.79272 4.17781 9.20995 4.17781 9.46838 3.92104L10.2526 3.09438C11.6142 1.61853 13.9146 1.52599 15.3904 2.88767C15.4621 2.95378 15.531 3.02274 15.5971 3.09438C17.1096 4.71461 17.1207 7.2189 15.5971 8.82879Z"></path>
+                <path d="M16.528 2.20919C16.0674 1.71411 15.5099 1.31906 14.8902 1.04859C14.2704 0.778112 13.6017 0.637996 12.9255 0.636946C12.2487 0.637725 11.5794 0.777639 10.959 1.048C10.3386 1.31835 9.78042 1.71338 9.31911 2.20854L9.00132 2.54436L8.68352 2.20854C6.83326 0.217151 3.71893 0.102789 1.72758 1.95306C1.63932 2.03507 1.5541 2.12029 1.47209 2.20854C-0.490696 4.32565 -0.490696 7.59753 1.47209 9.71463L8.5343 17.1622C8.77862 17.4201 9.18579 17.4312 9.44373 17.1868C9.45217 17.1788 9.46039 17.1706 9.46838 17.1622L16.528 9.71463C18.4907 7.59776 18.4907 4.32606 16.528 2.20919ZM15.5971 8.82879H15.5965L9.00132 15.7849L2.40553 8.82879C0.90608 7.21113 0.90608 4.7114 2.40553 3.09374C3.76722 1.61789 6.06755 1.52535 7.5434 2.88703C7.61505 2.95314 7.68401 3.0221 7.75012 3.09374L8.5343 3.92104C8.79272 4.17781 9.20995 4.17781 9.46838 3.92104L10.2526 3.09438C11.6142 1.61853 13.9146 1.52599 15.3904 2.88767C15.4621 2.95378 15.531 3.02274 15.5971 3.09438C17.1096 4.71461 17.1207 7.2189 15.5971 8.82879Z" />
             </g>
         </svg>`;
 
@@ -840,10 +564,16 @@ document.addEventListener("DOMContentLoaded", async function () {
         localStorage.setItem("selectedeyeId", productId); // Store the product ID in localStorage
         console.log("Product ID stored:", productId);
 
-        // Open the modal after storing the ID
-        const productModal = new bootstrap.Modal(
-          document.getElementById("product-view")
-        );
+        // First create the modal if it doesn't exist
+        if (!document.getElementById("product-view")) {
+          createProductModal();
+        }
+        
+        // Then fetch and display product data
+        fetchAndDisplayProduct(productId);
+        
+        // Finally show the modal
+        const productModal = new bootstrap.Modal(document.getElementById("product-view"));
         productModal.show();
       });
     });
@@ -853,8 +583,8 @@ document.addEventListener("DOMContentLoaded", async function () {
 });
 
 // end new releas
+
 // start releted
-// start related products
 const selectedProductId3 = localStorage.getItem("selectedProductId");
 
 // Fetch product details
@@ -941,10 +671,16 @@ fetch(`http://localhost:3000/product/${selectedProductId3}`)
                 localStorage.setItem("selectedeyeId", productId);
                 console.log("Product ID stored:", productId);
 
-                // Open the modal after storing the ID
-                const productModal = new bootstrap.Modal(
-                  document.getElementById("product-view")
-                );
+                // First create the modal if it doesn't exist
+                if (!document.getElementById("product-view")) {
+                  createProductModal();
+                }
+                
+                // Then fetch and display product data
+                fetchAndDisplayProduct(productId);
+                
+                // Finally show the modal
+                const productModal = new bootstrap.Modal(document.getElementById("product-view"));
                 productModal.show();
               });
             });
@@ -983,17 +719,24 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function createProductModal() {
+  // First remove any existing modal and backdrop
+  const existingModal = document.getElementById("product-view");
+  if (existingModal) {
+    existingModal.remove();
+  }
+  removeBackdrops(); // Remove any existing backdrops
+
   // Create the main modal container
   const modal = document.createElement("div");
   modal.className = "modal product-view-modal";
   modal.id = "product-view";
 
-  // Modal structure here (same as before)
+  // Your existing modal HTML structure
   modal.innerHTML = `
     <div class="modal-dialog modal-xl modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-body">
-          <div class="close-btn" data-bs-dismiss="modal"></div>
+          <button type="button" class="close-btn" onclick="handleModalClose()">×</button>
           <div class="shop-details-top-section">
             <div class="row gy-4">
               <!-- Left Column - Image Section -->
@@ -1042,10 +785,10 @@ function createProductModal() {
                       </div>
                     </div>
                   </div>
-                  <div class="shop-details-btn">
-                    <a href="shop-list.html" class="primary-btn1 hover-btn3">*Shop Now*</a>
-                    <a href="#" class="primary-btn1 style-3 hover-btn4 add-cart-btn" data-product-id="${product.id}">*Drop in Basket*</a>
-                  </div>
+                 <div class="shop-details-btn">
+      <a href="shop-list.html" class="primary-btn1 hover-btn3">*Shop Now*</a>
+      <a href="#" class="primary-btn1 style-3 hover-btn4 add-cart-btn">*Drop in Basket*</a>
+    </div>
                   <div class="product-info">
                     <ul class="product-info-list">
                       <li><span>SKU:</span> <span class="sku-value"></span></li>
@@ -1066,7 +809,7 @@ function createProductModal() {
                           <span>
                             <svg width="11" height="11" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
                               <g clip-path="url(#clip0_168_378)">
-                                <path d="M16.528 2.20919C16.0674 1.71411 15.5099 1.31906 14.8902 1.04859C14.2704 0.778112 13.6017 0.637996 12.9255 0.636946C12.2487 0.637725 11.5794 0.777639 10.959 1.048C10.3386 1.31835 9.78042 1.71338 9.31911 2.20854L9.00132 2.54436L8.68352 2.20854C6.83326 0.217151 3.71893 0.102789 1.72758 1.95306C1.63932 2.03507 1.5541 2.12029 1.47209 2.20854C-0.490696 4.32565 -0.490696 7.59753 1.47209 9.71463L8.5343 17.1622C8.77862 17.4201 9.18579 17.4312 9.44373 17.1868C9.45217 17.1788 9.46039 17.1706 9.46838 17.1622L16.528 9.71463C18.4907 7.59776 18.4907 4.32606 16.528 2.20919ZM15.5971 8.82879H15.5965L9.00132 15.7849L2.40553 8.82879C0.90608 7.21113 0.90608 4.7114 2.40553 3.09374C3.76722 1.61789 6.06755 1.52535 7.5434 2.88703C7.61505 2.95314 7.68401 3.0221 7.75012 3.09374L8.5343 3.92104C8.79272 4.17781 9.20995 4.17781 9.46838 3.92104L10.2526 3.09438C11.6142 1.61853 13.9146 1.52599 15.3904 2.88767C15.4621 2.95378 15.531 3.02274 15.5971 3.09438C17.1096 4.71461 17.1207 7.2189 15.5971 8.82879Z"/>
+                                <path d="M16.528 2.20919C16.0674 1.71411 15.5099 1.31906 14.8902 1.04859C14.2704 0.778112 13.6017 0.637996 12.9255 0.636946C12.2487 0.637725 11.5794 0.777639 10.959 1.048C10.3386 1.31835 9.78042 1.71338 9.31911 2.20854L9.00132 2.54436L8.68352 2.20854C6.83326 0.217151 3.71893 0.102789 1.72758 1.95306C1.63932 2.03507 1.5541 2.12029 1.47209 2.20854C-0.490696 4.32565 -0.490696 7.59753 1.47209 9.71463L8.5343 17.1622C8.77862 17.4201 9.18579 17.4312 9.44373 17.1868C9.45217 17.1788 9.46039 17.1706 9.46838 17.1622L16.528 9.71463C18.4907 7.59776 18.4907 4.32606 16.528 2.20919ZM15.5971 8.82879H15.5965L9.00132 15.7849L2.40553 8.82879C0.90608 7.21113 0.90608 4.7114 2.40553 3.09374C3.76722 1.61789 6.06755 1.52535 7.5434 2.88703C7.61505 2.95314 7.68401 3.0221 7.75012 3.09374L8.5343 3.92104C8.79272 4.17781 9.20995 4.17781 9.46838 3.92104L10.2526 3.09438C11.6142 1.61853 13.9146 1.52599 15.3904 2.88767C15.4621 2.95378 15.531 3.02274 15.5971 3.09438C17.1096 4.71461 17.1207 7.2189 15.5971 8.82879Z"></path>
                               </g>
                             </svg>
                           </span>
@@ -1087,19 +830,34 @@ function createProductModal() {
   // Append modal to body
   document.body.appendChild(modal);
 
-  // Initialize event listeners and functionality
+  // Initialize event listeners
   initializeModal();
 
-  // Add event listener to close button
-  const closeButton = modal.querySelector(".close-btn");
-  closeButton.addEventListener("click", () => {
-    const backdrops = document.querySelectorAll(".modal-backdrop.show"); // Select all visible backdrops
-    backdrops.forEach((backdrop) => {
-      backdrop.style.display = "none"; // Hide each backdrop
-    });
+  // Add event listeners for modal events
+  modal.addEventListener('hidden.bs.modal', function () {
+    removeBackdrops();
   });
 }
 
+// Add these new functions
+function removeBackdrops() {
+  document.querySelectorAll('.modal-backdrop').forEach(backdrop => {
+    backdrop.remove();
+  });
+}
+
+function handleModalClose() {
+  const modal = document.getElementById("product-view");
+  if (modal) {
+    const modalInstance = bootstrap.Modal.getInstance(modal);
+    if (modalInstance) {
+      modalInstance.hide();
+    }
+    removeBackdrops();
+  }
+}
+
+// Update initializeModal function
 function initializeModal() {
   // Initialize quantity counter
   const quantityMinus = document.querySelector(".quantity__minus");
@@ -1128,6 +886,30 @@ function initializeModal() {
       await fetchAndDisplayProduct(selectedeyeId); // Fetch and display the product on modal open
     }
   });
+
+  // Add click event listener for close button
+  const closeButton = document.querySelector(".close-btn");
+  if (closeButton) {
+    closeButton.addEventListener("click", (e) => {
+      e.preventDefault();
+      handleModalClose();
+    });
+  }
+
+  // Add click event listener for backdrop
+  document.addEventListener('click', function(e) {
+    const modal = document.getElementById("product-view");
+    if (modal && !modal.contains(e.target) && e.target.classList.contains('modal')) {
+      handleModalClose();
+    }
+  });
+
+  // Add escape key listener
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      handleModalClose();
+    }
+  });
 }
 
 // Function to fetch product data and update modal
@@ -1135,24 +917,23 @@ async function fetchAndDisplayProduct(selectedeyeId) {
   try {
     const response = await fetch("http://localhost:3000/product");
     const products = await response.json();
-    const product = products.find((p) => p.id === selectedeyeId);
+    const product = products.find(p => p.id.toString() === selectedeyeId.toString());
 
     if (product) {
-      // Update modal content with the fetched product data
+      // Update modal content
       document.querySelector(".product-title").textContent = product.name;
-      document.querySelector(".product-description").textContent =
-        product.description;
-      document.querySelector(".current-price").textContent =
-        product.price.toFixed(2);
-      document.querySelector(".original-price").textContent = (
-        product.price * 1.2
-      ).toFixed(2);
+      document.querySelector(".product-description").textContent = product.description;
+      document.querySelector(".current-price").textContent = product.price.toFixed(2);
+      document.querySelector(".original-price").textContent = (product.price * 1.2).toFixed(2);
       document.querySelector(".sku-value").textContent = product.sku;
       document.querySelector(".brand-value").textContent = product.brand;
       document.querySelector(".category-value").textContent = product.category;
       document.querySelector(".main-product-img").src = product.images[0];
+      
+      // Set product ID on add-cart-btn
+      document.querySelector(".add-cart-btn").setAttribute("data-product-id", product.id);
 
-      // Call to create thumbnails if there are multiple images
+      // Create thumbnails if there are multiple images
       createThumbnails(product.images);
     } else {
       console.error("Product not found");
@@ -1551,7 +1332,6 @@ async function initializeProducts() {
 document.addEventListener("DOMContentLoaded", initializeProducts); // end suggest
 
 // shop product
-
 document.addEventListener("DOMContentLoaded", async function () {
   const productsPerPage = 12; // Number of products to display per page
   let currentPage = 1; // Current page number
@@ -1580,15 +1360,17 @@ document.addEventListener("DOMContentLoaded", async function () {
       const selectedcategoryId = localStorage.getItem(
         "selectedcategoryId"
       );
-
-      // Updated filtering logic:
-      // 1. First check if subcategory is selected
-      // 2. If no subcategory, then check for category
-      // 3. If neither, show all products
-      let filteredProducts = products;
       
-
-      if (selectedcategoryId === "7") {
+      // Get search result IDs from localStorage if available
+      const searchResultIds = JSON.parse(localStorage.getItem("searchResultIds") || "[]");
+            let filteredProducts = products;
+      
+      if (searchResultIds && searchResultIds.length > 0) {
+        // Filter products by the IDs in searchResultIds array
+        filteredProducts = products.filter(product => 
+          searchResultIds.includes(product.id.toString())
+        );
+      } else if (selectedcategoryId === "7") {
         // If selected category ID is 7, filter for categories 5 and 6
         filteredProducts = products.filter(
           (product) => product.cat_id === 5 || product.cat_id === 6
@@ -1607,6 +1389,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
       // Display products
       filteredProducts.forEach((product) => {
+        
         const productCard = `
             <div class="col-lg-3 col-md-4 col-sm-6 item">
               <div class="product-card style-3 hover-btn">
@@ -1666,10 +1449,16 @@ document.addEventListener("DOMContentLoaded", async function () {
           localStorage.setItem("selectedeyeId", productId); // Store the product ID in localStorage
           console.log("Product ID stored:", productId);
 
-          // Open the modal after storing the ID
-          const productModal = new bootstrap.Modal(
-            document.getElementById("product-view")
-          );
+          // First create the modal if it doesn't exist
+          if (!document.getElementById("product-view")) {
+            createProductModal();
+          }
+          
+          // Then fetch and display product data
+          fetchAndDisplayProduct(productId);
+          
+          // Finally show the modal
+          const productModal = new bootstrap.Modal(document.getElementById("product-view"));
           productModal.show();
         });
       });
@@ -1684,15 +1473,23 @@ document.addEventListener("DOMContentLoaded", async function () {
         "selectedcategoryId"
       );
       
+      // Get search result IDs from localStorage if available
+      const searchResultIds = JSON.parse(localStorage.getItem("searchResultIds") || "[]");
+      
       // Updated filtering logic for pagination
       let filteredProducts = data;
       
-      if (selectedcategoryId === "7") {
+      if (searchResultIds && searchResultIds.length > 0) {
+        // Filter products by the IDs in searchResultIds array
+        filteredProducts = data.filter(product => 
+          searchResultIds.includes(product.id.toString())
+        );
+      } else if (selectedcategoryId === "7") {
         // If selected category ID is 7, filter for categories 5 and 6
         filteredProducts = data.filter(
           (product) => product.cat_id === 5 || product.cat_id === 6
         );
-      } else  if(selectedSubcategoryId) {
+      } else if(selectedSubcategoryId) {
         // Filter by subcategory if available
         filteredProducts = data.filter(
           (product) => product.sub_cat_id == selectedSubcategoryId
@@ -1894,6 +1691,18 @@ document.querySelectorAll(".product-view-btn").forEach((button) => {
     const productId = this.getAttribute("data-product-id");
     localStorage.setItem("selectedeyeId", productId); // Store the product ID in local storage
     console.log("Product ID stored:", productId);
+
+    // First create the modal if it doesn't exist
+    if (!document.getElementById("product-view")) {
+      createProductModal();
+    }
+    
+    // Then fetch and display product data
+    fetchAndDisplayProduct(productId);
+    
+    // Finally show the modal
+    const productModal = new bootstrap.Modal(document.getElementById("product-view"));
+    productModal.show();
   });
 });
 
@@ -2447,4 +2256,9 @@ document.querySelector(".form-inner2 button[type='submit']").addEventListener("c
     }
 });
 
+// Top-bar 
+// ... existing code ...
+// ... existing code ...
+// ... existing code ...
 
+// ... existing code ...
