@@ -8,10 +8,25 @@
       "confirmPassword": "aaa123"
     },
     {
-      "id": "81a8",
-      "username": "Krupali",
-      "email": "krupali.kalathiyainfotech@gmail.com",
-      "password": "Krupali@123"
+      "id": "40e2",
+      "username": "deni",
+      "email": "deni@gmail.com",
+      "password": "den123",
+      "confirmPassword": "den123"
+    },
+    {
+      "id": "09e0",
+      "username": "kkk",
+      "email": "kkk@gmail.com",
+      "password": "kkk123",
+      "confirmPassword": "kkk123"
+    },
+    {
+      "id": "d019",
+      "username": "fff",
+      "email": "fff@gmail.com",
+      "password": "123",
+      "confirmPassword": "123"
     }
   ],
   "category": [
@@ -11436,12 +11451,22 @@
         "341",
         "348",
         "349",
-        "325"
+        "325",
+        "468",
+        "202",
+        "1",
+        "41"
       ],
       "id": "303b"
     }
   ],
   "cart": [
+    {
+      "id": "cart-hoihi03ia",
+      "product_id": "468",
+      "time": "2025-03-06T07:30:13.738Z",
+      "quantity": 5
+    },
     {
       "id": "cart-u5zywmnw3",
       "product_id": "467",
@@ -11458,6 +11483,12 @@
       "id": "cart-1745shqqi",
       "product_id": "467",
       "time": "2025-03-06T08:45:15.285Z",
+      "quantity": 1
+    },
+    {
+      "id": "cart-4aql63na2",
+      "product_id": "468",
+      "time": "2025-03-06T04:18:19.337Z",
       "quantity": 1
     },
     {
@@ -11500,6 +11531,12 @@
       "id": "cart-8gp1ehtye",
       "product_id": "422",
       "time": "2025-03-06T09:25:01.745Z",
+      "quantity": 1
+    },
+    {
+      "id": "cart-ocepsyw5t",
+      "product_id": "468",
+      "time": "2025-03-06T09:25:33.341Z",
       "quantity": 1
     },
     {
@@ -11591,6 +11628,18 @@
       "product_id": "317",
       "time": "2025-03-10T10:32:05.500Z",
       "quantity": 1
+    },
+    {
+      "id": "cart-po5mj9z3u",
+      "product_id": "296",
+      "time": "2025-03-11T05:53:44.965Z",
+      "quantity": 1
+    },
+    {
+      "id": "cart-upl2f8849",
+      "product_id": "337",
+      "time": "2025-03-11T06:44:24.432Z",
+      "quantity": 5
     }
   ],
   "bill": [

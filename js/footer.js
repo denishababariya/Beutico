@@ -147,6 +147,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 link.addEventListener("click", function() {
                     localStorage.setItem("selectedcategoryId", category.id);
                     localStorage.setItem("selectedSubcategoryId", "");
+                    localStorage.removeItem('searchResultIds');
+localStorage.removeItem('searchTerm');
                 });
                 
 
@@ -168,5 +170,7 @@ document.addEventListener("DOMContentLoaded", function () {
         function clearLocalStorage() {
             localStorage.removeItem('selectedcategoryId');
             localStorage.removeItem('selectedSubcategoryId');
+            localStorage.removeItem('searchResultIds');
+localStorage.removeItem('searchTerm');
         }
 });

@@ -15513,6 +15513,11 @@ Testimonial-Section Css
   transform: translateY(-50%);
   cursor: pointer;
 }
+
+.modal-backdrop.show {
+  opacity: .2;
+}
+
 /* .verify-btn {
   background: #007bff;
   color: white;
