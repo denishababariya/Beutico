@@ -8598,7 +8598,6 @@
         "../img/rent-product/ToeRing/ToeRing1.png",
         "../img/rent-product/ToeRing/ToeRing1.png",
         "../img/rent-product/ToeRing/ToeRing1.png"
-
       ]
     },
     {
@@ -10227,7 +10226,7 @@
         "decorative"
       ],
       "images": [
-       "../img/Accessories/Stick/Stick2.png",
+        "../img/Accessories/Stick/Stick2.png",
         "../img/Accessories/Stick/Stick2.png",
         "../img/Accessories/Stick/Stick2.png",
         "../img/Accessories/Stick/Stick2.png",
@@ -11444,15 +11443,12 @@
         "372",
         "316",
         "327",
-        "387",
         "330",
         "340",
-        "423",
         "8",
         "37",
         "151",
         "341",
-        "468",
         "348",
         "349",
         "325"
@@ -11573,6 +11569,60 @@
       "id": "cart-w6kh6g1ps",
       "product_id": "373",
       "time": "2025-03-10T06:35:09.094Z",
+      "quantity": 1
+    },
+    {
+      "id": "cart-j63v2syxy",
+      "product_id": "468",
+      "time": "2025-03-10T09:26:56.807Z",
+      "quantity": 1
+    },
+    {
+      "id": "cart-5vqth8lrq",
+      "product_id": "316",
+      "time": "2025-03-10T09:27:00.091Z",
+      "quantity": 1
+    },
+    {
+      "id": "cart-lttlu6xd4",
+      "product_id": "271",
+      "time": "2025-03-10T09:31:00.554Z",
+      "quantity": 1
+    },
+    {
+      "id": "cart-ahreuuard",
+      "product_id": "128",
+      "time": "2025-03-10T10:09:11.633Z",
+      "quantity": 1
+    },
+    {
+      "id": "cart-deiuzap42",
+      "product_id": "129",
+      "time": "2025-03-10T10:09:13.653Z",
+      "quantity": 1
+    },
+    {
+      "id": "cart-14r7fe0h2",
+      "product_id": "467",
+      "time": "2025-03-10T10:14:48.265Z",
+      "quantity": 1
+    },
+    {
+      "id": "cart-a0fydb4u5",
+      "product_id": "432",
+      "time": "2025-03-10T10:14:55.538Z",
+      "quantity": 1
+    },
+    {
+      "id": "cart-ma6pjfnl5",
+      "product_id": "442",
+      "time": "2025-03-10T10:16:12.288Z",
+      "quantity": 1
+    },
+    {
+      "id": "cart-rv4bfrvx7",
+      "product_id": "317",
+      "time": "2025-03-10T10:32:05.500Z",
       "quantity": 1
     }
   ],
@@ -11776,6 +11826,82 @@
         "Check",
         "PayPal",
         "Card"
+      ]
+    },
+    {
+      "id": "fe4b",
+      "f_name": "m,mnn",
+      "l_name": "mmn",
+      "address": "112,street,surat",
+      "city": "Dhaka",
+      "post_code": "m,mnn",
+      "phone_num": "+918200986329",
+      "email": "denisha.kalthiyainfotech@gmail.com",
+      "note": "gfvg dge re r",
+      "regular_product": [
+        {
+          "product_id": "128",
+          "quantity": 1
+        },
+        {
+          "product_id": "129",
+          "quantity": 1
+        }
+      ],
+      "rental_product": [],
+      "total": "52.48",
+      "payment_method": [
+        "Cash",
+        "Check"
+      ]
+    },
+    {
+      "id": "afa5",
+      "f_name": "denisha",
+      "l_name": "dg",
+      "address": "112,street,surat",
+      "city": "Saidpur",
+      "post_code": "denisha",
+      "phone_num": "+919106722109",
+      "email": "denisha.kalthiyainfotech@gmail.com",
+      "note": "gh t rfd f",
+      "regular_product": [],
+      "rental_product": [
+        {
+          "product_id": "467",
+          "quantity": 1
+        },
+        {
+          "product_id": "432",
+          "quantity": 1
+        }
+      ],
+      "total": "37.48",
+      "payment_method": [
+        "Cash",
+        "Check"
+      ]
+    },
+    {
+      "id": "d189",
+      "f_name": "n ,n,",
+      "l_name": "babariya",
+      "address": "112,street,surat",
+      "city": "Dhaka",
+      "post_code": "n ,n,",
+      "phone_num": "+919106722109",
+      "email": "yatri@gmail.com",
+      "note": "bnbn ffg  ff",
+      "regular_product": [],
+      "rental_product": [
+        {
+          "product_id": "442",
+          "quantity": 1
+        }
+      ],
+      "total": "5.49",
+      "payment_method": [
+        "Cash"
       ]
     }
   ],

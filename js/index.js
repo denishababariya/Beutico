@@ -1,109 +1,101 @@
 // start auth
-// const apiUrl = "http://localhost:3000/users";
 
-// // Function to register user
-// async function registerUser() {
-//   const username = document.querySelector("#profile input[placeholder='User Name *']").value.trim();
-//   const email = document.querySelector("#profile input[placeholder='Email Here *']").value.trim();
-//   const password = document.querySelector("#password2").value.trim();
-//   const confirmPassword = document.querySelector("#password3").value.trim();
+async function populateCategories() {
+  try {
+    const response = await fetch("http://localhost:3000/category");
+    const categories = await response.json();
+    console.log(categories, "header-search-cat");
 
-//   if (!username || !email || !password || !confirmPassword) {
-//     alert("All fields are required.");
-//     return;
-//   }
+    const categorySelect = document.getElementById("categorySelect");
+    // Clear existing options
+    categorySelect.innerHTML = '';
+    
+    // Add a default option
+    const defaultOption = document.createElement("option");
+    defaultOption.textContent = "All Category";
+    defaultOption.value = ""; // Set value for the default option
+    categorySelect.appendChild(defaultOption);
 
-//   if (password !== confirmPassword) {
-//     alert("Passwords do not match.");
-//     return;
-//   }
+    // Populate the select with categories
+    categories.forEach(category => {
+      const option = document.createElement("option");
+      option.value = category.id; // Assuming category has an id
+      option.textContent = category.cat_name; // Assuming category has a cat_name
+      categorySelect.appendChild(option);
+    });
 
-//   try {
-//     // Check if the email already exists
-//     const response = await fetch(apiUrl);
-//     const users = await response.json();
+    // Update the nice-select display
+    const niceSelect = document.querySelector('.nice-select');
+    niceSelect.querySelector('.current').textContent = defaultOption.textContent; // Set the current display text
+    const list = niceSelect.querySelector('.list');
+    list.innerHTML = ''; // Clear existing list items
+    categories.forEach(category => {
+      const listItem = document.createElement('li');
+      listItem.className = 'option';
+      listItem.setAttribute('data-value', category.cat_name);
+      listItem.textContent = category.cat_name;
+      list.appendChild(listItem);
+    });
+  } catch (error) {
+    console.error("Error fetching categories:", error);
+  }
+}
 
-//     if (users.some(user => user.email === email)) {
-//       alert("Email already registered.");
-//       return;
+// Call the function to populate categories when the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", populateCategories);
+// ... existing code ...
+// Function to populate quick search options dynamically
+async function populateQuickSearch() {
+  try {
+      const response = await fetch("http://localhost:3000/category"); // Fetch categories
+      const categories = await response.json();
+
+      const quickSearchList = document.querySelector('.quick-search ul');
+      quickSearchList.innerHTML = ''; // Clear existing items
+
+      categories.forEach(category => {
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `<a href="shop-list.html?category=${category.cat_name}" onclick="setCategory('${category.id}')">${category.cat_name}</a>`;
+        quickSearchList.appendChild(listItem);
+    });
+  } catch (error) {
+      console.error("Error fetching categories for quick search:", error);
+  }
+}
+function setCategory(categoryId) {
+  localStorage.setItem("selectedcategoryId", categoryId); // Store the selected category ID
+  localStorage.setItem("selectedSubcategoryId", ""); // Clear the selected subcategory ID
+}
+
+// Call the function to populate quick search on DOMContentLoaded
+document.addEventListener("DOMContentLoaded", () => {
+  populateQuickSearch(); // Populate quick search options
+  // ... existing code ...
+});
+
+
+// async function searchProductByName(productName) {
+//     try {
+//         const response = await fetch("http://localhost:3000/product");
+//         const products = await response.json();
+        
+//         // Filter products based on the name
+//         const relatedProducts = products.filter(product => 
+//             product.name.toLowerCase().includes(productName.toLowerCase())
+//         );
+
+//         console.log("Related Products:", relatedProducts);
+//         // You can now use relatedProducts array as needed
+//     } catch (error) {
+//         console.error("Error fetching products:", error);
 //     }
-
-//     // New user object
-//     const newUser = {
-//       username,
-//       email,
-//       password,
-//       confirmPassword
-//     };
-
-//     // Send data to API
-//     const registerResponse = await fetch(apiUrl, {
-//       method: "POST",
-//       headers: { "Content-Type": "application/json" },
-//       body: JSON.stringify(newUser)
-//     });
-
-//     if (registerResponse.ok) {
-//       // localStorage.setItem("loggedInUser", JSON.stringify(newUser));
-//       window.location.href = "my-account.html"; // Redirect to my-account page
-//       alert("Registration successful.......!");
-//     } else {
-//       alert("Registration failed. Try again.");
-//     }
-//   } catch (error) {
-//     console.error("Error registering user:", error);
-//   }
 // }
 
-// // Function to log in user
-// async function loginUser() {
-//   const usernameOrEmail = document.querySelector("#home input[placeholder='User name or Email *']").value.trim();
-//   const password = document.querySelector("#password").value.trim();
-
-//   if (!usernameOrEmail || !password) {
-//     alert("Please enter username/email and password.");
-//     return;
-//   }
-
-//   try {
-//     const response = await fetch(apiUrl);
-//     const users = await response.json();
-
-//     const user = users.find(user =>
-//       (user.username === usernameOrEmail || user.email === usernameOrEmail) && user.password === password
-//     );
-
-//     if (user) {
-//       localStorage.setItem("loggedInUser", JSON.stringify(user));
-//       alert("Login successful!");
-//       window.location.href = "my-account.html"; // Redirect after login
-//     } else {
-//       alert("Invalid username/email or password.");
-//     }
-//   } catch (error) {
-//     console.error("Error logging in:", error);
-//   }
-// }
-
-// // Event Listeners
-// document.querySelector("#profile .primary-btn1").addEventListener("click", (e) => {
-//   e.preventDefault();
-//   registerUser();
-// });
-
-// document.querySelector("#home .primary-btn1").addEventListener("click", (e) => {
-//   e.preventDefault();
-//   loginUser();
-// });
-// 0
-// // Toggle Password Visibility
-// document.querySelectorAll(".bi-eye-slash").forEach(icon => {
-//   icon.addEventListener("click", () => {
-//     const input = icon.previousElementSibling;
-//     input.type = input.type === "password" ? "text" : "password";
-//     icon.classList.toggle("bi-eye");
-//     icon.classList.toggle("bi-eye-slash");
-//   });
+// // Add event listener to the submit button
+// document.querySelector(".form-inner2 button[type='submit']").addEventListener("click", function(event) {
+//     event.preventDefault(); // Prevent the default form submission
+//     const productName = document.querySelector(".form-inner2 input[type='text']").value; // Get the input value
+//     searchProductByName(productName); // Call the search function
 // });
 
 const apiUrl = "http://localhost:3000/users";
@@ -910,8 +902,12 @@ fetch(`http://localhost:3000/product/${selectedProductId3}`)
 document.addEventListener("DOMContentLoaded", () => {
   // Check if 'selectedeyeId' is available in localStorage
   const selectedeyeId = localStorage.getItem("selectedeyeId");
+  console.log(selectedeyeId);
+  
 
   if (selectedeyeId) {
+  console.log(selectedeyeId,"selectedeyeId");
+
     // If valid ID is found, proceed with modal creation and data fetching
     createProductModal();
     fetchAndDisplayProduct(selectedeyeId); // Pass the ID when fetching the product
@@ -1575,8 +1571,7 @@ document.addEventListener("DOMContentLoaded", async function () {
                         </a>
                       </li>
                       <li>
-                         <a href="#" class="product-view-btn" data-bs-toggle="modal" data-bs-target="#product-view" data-product-id="${product.id
-          }">
+                         <a href="#" class="product-view-btn" data-bs-toggle="modal" data-bs-target="#product-view" data-product-id="${product.id}">
     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
         <path d="M21.8601 10.5721C21.6636 10.3032 16.9807 3.98901 10.9999 3.98901C5.019 3.98901 0.335925 10.3032 0.139601 10.5718C0.0488852 10.6961 0 10.846 0 10.9999C0 11.1537 0.0488852 11.3036 0.139601 11.4279C0.335925 11.6967 5.019 18.011 10.9999 18.011C16.9807 18.011 21.6636 11.6967 21.8601 11.4281C21.951 11.3039 21.9999 11.154 21.9999 11.0001C21.9999 10.8462 21.951 10.6963 21.8601 10.5721ZM10.9999 16.5604C6.59432 16.5604 2.77866 12.3696 1.64914 10.9995C2.77719 9.62823 6.58487 5.43955 10.9999 5.43955C15.4052 5.43955 19.2206 9.62969 20.3506 11.0005C19.2225 12.3717 15.4149 16.5604 10.9999 16.5604Z" />
         <path d="M10.9999 6.64832C8.60039 6.64832 6.64819 8.60051 6.64819 11C6.64819 13.3994 8.60039 15.3516 10.9999 15.3516C13.3993 15.3516 15.3515 13.3994 15.3515 11C15.3515 8.60051 13.3993 6.64832 10.9999 6.64832ZM10.9999 13.9011C9.40013 13.9011 8.09878 12.5997 8.09878 11C8.09878 9.40029 9.40017 8.0989 10.9999 8.0989C12.5995 8.0989 13.9009 9.40029 13.9009 11C13.9009 12.5997 12.5996 13.9011 10.9999 13.9011Z" />
@@ -1587,11 +1582,9 @@ document.addEventListener("DOMContentLoaded", async function () {
                   </div>
                 </div>
                 <div class="product-card-content">
-                  <h6><a href="product-default.html" class="hover-underline" onclick="localStorage.setItem('selectedProductId', '${product.id
-          }')">${product.name}</a></h6>
+                  <h6><a href="product-default.html" class="hover-underline" onclick="localStorage.setItem('selectedProductId', '${product.id}')">${product.name}</a></h6>
                   <p><a href="shop-list.html">${product.brand}</a></p>
-                  <p class="price">$${product.price} <del>${product.originalPrice
-          }</del></p>
+                  <p class="price">$${product.price} <del>${product.originalPrice}</del></p>
                   <span class="for-border"></span>
                 </div>
               </div>
@@ -2277,3 +2270,115 @@ document.addEventListener("click", async (event) => {
 // ... existing code ...
 
 // ... existing code ...console.log(productId, "productId");`
+// redirect shop-list search
+
+async function searchProductByName(productName) {
+    try {
+        const response = await fetch("http://localhost:3000/product");
+        const products = await response.json();
+        
+        // If search input is empty, return all products
+        if (!productName.trim()) {
+            console.log("No search term - showing all products:", products);
+            return products;
+        }
+        
+        // Filter products based on the name if search term exists
+        const relatedProducts = products.filter(product => 
+            product.name.toLowerCase().includes(productName.toLowerCase())
+        );
+
+        console.log("Related Products:", relatedProducts);
+        return relatedProducts;
+    } catch (error) {
+        console.error("Error fetching products:", error);
+        return []; // Return empty array in case of error
+    }
+}
+
+// Add event listener to the submit button
+document.querySelector(".form-inner2 button[type='submit']").addEventListener("click", async function(event) {
+    event.preventDefault(); // Prevent the default form submission
+    
+    // Get the input value
+    const productName = document.querySelector(".form-inner2 input[type='text']").value;
+    
+    // Get filtered or all products based on search term
+    const products = await searchProductByName(productName);
+
+     // Redirect to shop-list.html
+     window.location.href = 'shop-list.html';
+    
+    // Get the container where products will be displayed
+    const container = document.getElementById("productContainer");
+    
+    // Clear existing products
+    container.innerHTML = "";
+    
+    // Display products or "no results" message
+    if (products.length > 0) {
+        products.forEach(product => {
+            // Create product card HTML
+            const productCard = `
+                <div class="col-lg-3 col-md-4 col-sm-6 item">
+                    <div class="product-card style-3 hover-btn">
+                        <div class="product-card-img">
+                            <a href="shop-list.html">
+                                <img src="${product.images[0]}" alt="${product.name}">
+                                <div class="batch">
+                                    <span>${product.discount ? "-" + product.discount + "%" : "0%"}</span>
+                                </div>
+                            </a>
+                            <div class="overlay">
+                                <div class="cart-area">
+                                    <a href="cart.html" class="hover-btn3 add-cart-btn" data-product-id="${product.id}">
+                                        <i class="bi bi-bag-check"></i> Drop in Basket
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="view-and-favorite-area">
+                                <ul>
+                                    <li>
+                                        <a href="whistlist.html" class="wishlist-btn" data-product-id="${product.id}">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13">
+                                                <g clip-path="url(#clip0_1106_270)">
+                                                    <path d="M11.1281 2.35735C10.8248 2.03132 10.4577 1.77117 10.0496 1.59305C9.64144 1.41493 9.20104 1.32266 8.75574 1.32197C8.31008 1.32248 7.86929 1.41462 7.46073 1.59266C7.05218 1.7707 6.6846 2.03084 6.38081 2.35692L6.17153 2.57807L5.96225 2.35692C4.74378 1.04552 2.69289 0.970207 1.38151 2.18868C1.32339 2.24269 1.26727 2.29881 1.21326 2.35692C-0.0793057 3.75111 -0.0793057 5.90577 1.21326 7.29996L5.86398 12.2044C6.02488 12.3743 6.29301 12.3816 6.46288 12.2207C6.46844 12.2154 6.47385 12.21 6.47911 12.2044L11.1281 7.29996C12.4206 5.90592 12.4206 3.75139 11.1281 2.35735Z"/>
+                                                </g>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="product-view-btn" data-bs-toggle="modal" data-bs-target="#product-view" data-product-id="${product.id}">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+                                                <path d="M21.8601 10.5721C21.6636 10.3032 16.9807 3.98901 10.9999 3.98901C5.019 3.98901 0.335925 10.3032 0.139601 10.5718C0.0488852 10.6961 0 10.846 0 10.9999C0 11.1537 0.0488852 11.3036 0.139601 11.4279C0.335925 11.6967 5.019 18.011 10.9999 18.011C16.9807 18.011 21.6636 11.6967 21.8601 11.4281C21.951 11.3039 21.9999 11.154 21.9999 11.0001C21.9999 10.8462 21.951 10.6963 21.8601 10.5721ZM10.9999 16.5604C6.59432 16.5604 2.77866 12.3696 1.64914 10.9995C2.77719 9.62823 6.58487 5.43955 10.9999 5.43955C15.4052 5.43955 19.2206 9.62969 20.3506 11.0005C19.2225 12.3717 15.4149 16.5604 10.9999 16.5604Z"/>
+                                                <path d="M10.9999 6.64832C8.60039 6.64832 6.64819 8.60051 6.64819 11C6.64819 13.3994 8.60039 15.3516 10.9999 15.3516C13.3993 15.3516 15.3515 13.3994 15.3515 11C15.3515 8.60051 13.3993 6.64832 10.9999 6.64832ZM10.9999 13.9011C9.40013 13.9011 8.09878 12.5997 8.09878 11C8.09878 9.40029 9.40017 8.0989 10.9999 8.0989C12.5995 8.0989 13.9009 9.40029 13.9009 11C13.9009 12.5997 12.5996 13.9011 10.9999 13.9011Z"/>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="product-card-content">
+                            <h6>
+                                <a href="product-default.html" class="hover-underline" onclick="localStorage.setItem('selectedProductId', '${product.id}')">${product.name}</a>
+                            </h6>
+                            <p><a href="shop-list.html">${product.brand}</a></p>
+                            <p class="price">$${product.price.toFixed(2)}</p>
+                        </div>
+                        <span class="for-border"></span>
+                    </div>
+                </div>
+            `;
+            container.innerHTML += productCard;
+        });
+    } else {
+        // Display "no results found" message
+        container.innerHTML = `
+            <div class="col-12 text-center">
+                <h3>No products found matching your search.</h3>
+            </div>
+        `;
+    }
+});
+
+
