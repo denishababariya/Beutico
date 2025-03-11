@@ -584,6 +584,35 @@
                 <input name="quantity" type="text" class="quantity__input" value="01">
                 <a href="#" class="quantity__plus"><i class='bx bx-plus'></i></a>
             `;
+
+                // Add event listeners for quantity controls
+                quantityCounter.querySelector('.quantity__minus').addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const input = this.parentElement.querySelector('.quantity__input');
+                    let value = parseInt(input.value);
+                    if (value > 1) {
+                        value--;
+                        input.value = value < 10 ? "0" + value : value;
+                    }
+                });
+
+                quantityCounter.querySelector('.quantity__plus').addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const input = this.parentElement.querySelector('.quantity__input');
+                    let value = parseInt(input.value);
+                    value++;
+                    input.value = value < 10 ? "0" + value : value;
+                });
+
+                // Prevent manual input of invalid values
+                quantityCounter.querySelector('.quantity__input').addEventListener('change', function() {
+                    let value = parseInt(this.value);
+                    if (isNaN(value) || value < 1) {
+                        value = 1;
+                    }
+                    this.value = value < 10 ? "0" + value : value;
+                });
+
                 quantityColorDiv.appendChild(quantityCounter);
                 quantityColorArea.appendChild(quantityColorDiv);
                 productDetailsContainer.appendChild(quantityColorArea);

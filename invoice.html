@@ -698,211 +698,46 @@
             sharePDF();
         });
 
-        // function generatePDF() {
-        //     return new Promise((resolve) => { // Return a promise
-        //         const invoiceContainer = document.querySelector('.invoice-container');
-        //         html2canvas(invoiceContainer).then(canvas => {
-        //             const imgData = canvas.toDataURL('image/png');
-        //             const pdf = new jsPDF();
-        //             const imgWidth = 190; // Adjust width as needed
-        //             const pageHeight = pdf.internal.pageSize.height;
-        //             const imgHeight = (canvas.height * imgWidth) / canvas.width;
-        //             let heightLeft = imgHeight;
-
-        //             let position = 0;
-
-        //             pdf.addImage(imgData, 'PNG', 10, position, imgWidth, imgHeight);
-        //             heightLeft -= pageHeight;
-
-        //             while (heightLeft >= 0) {
-        //                 position = heightLeft - imgHeight;
-        //                 pdf.addPage();
-        //                 pdf.addImage(imgData, 'PNG', 10, position, imgWidth, imgHeight);
-        //                 heightLeft -= pageHeight;
-        //             }
-
-        //             // Save the PDF to a Blob
-        //             const pdfBlob = pdf.output('blob');
-        //             const pdfUrl = URL.createObjectURL(pdfBlob);
-        //             resolve(pdfUrl); // Resolve the promise with the URL
-
-        //             // Trigger the download
-        //             const link = document.createElement('a');
-        //             link.href = pdfUrl;
-        //             link.download = 'invoice.pdf'; // Specify the file name
-        //             document.body.appendChild(link);
-        //             link.click();
-        //             document.body.removeChild(link);
-        //         });
-        //     });
-        // }
         function generatePDF() {
-    return new Promise((resolve, reject) => {
-        try {
-            const pdf = new jsPDF();
-            const pageWidth = pdf.internal.pageSize.width;
-            const pageHeight = pdf.internal.pageSize.height;
-            const margin = 10;
+            return new Promise((resolve) => { // Return a promise
+                const invoiceContainer = document.querySelector('.invoice-container');
+                html2canvas(invoiceContainer).then(canvas => {
+                    const imgData = canvas.toDataURL('image/png');
+                    const pdf = new jsPDF();
+                    const imgWidth = 190; // Adjust width as needed
+                    const pageHeight = pdf.internal.pageSize.height;
+                    const imgHeight = (canvas.height * imgWidth) / canvas.width;
+                    let heightLeft = imgHeight;
 
-            // Set light pink background
-            pdf.setFillColor(255, 240, 245);
-            pdf.rect(0, 0, pageWidth, pageHeight, 'F');
+                    let position = 0;
 
-            // Add INVOICE title
-            pdf.setTextColor(219, 138, 162);
-            pdf.setFontSize(28);
-            pdf.setFont('helvetica', 'bold');
-            pdf.text('INVOICE', margin, 20);
+                    pdf.addImage(imgData, 'PNG', 10, position, imgWidth, imgHeight);
+                    heightLeft -= pageHeight;
 
-            // Add Date and Invoice number
-            pdf.setTextColor(100, 100, 100);
-            pdf.setFontSize(10);
-            pdf.text(`Date: ${new Date().toLocaleDateString()}`, margin, 30);
-            pdf.text(`Invoice No: ${document.getElementById('invoiceno').innerText}`, margin, 40);
+                    while (heightLeft >= 0) {
+                        position = heightLeft - imgHeight;
+                        pdf.addPage();
+                        pdf.addImage(imgData, 'PNG', 10, position, imgWidth, imgHeight);
+                        heightLeft -= pageHeight;
+                    }
 
-            // BILL TO section
-            let yPosition = 60;
-            pdf.setTextColor(219, 138, 162);
-            pdf.setFontSize(18);
-            pdf.text('BILL TO', margin, yPosition);
-            yPosition += 10;
-            pdf.setTextColor(70, 70, 70);
-            pdf.setFontSize(11);
-            pdf.text('Denisha', margin, yPosition);
-            yPosition += 10;
-            pdf.text('+1 (234) 567-8900', margin, yPosition);
-            yPosition += 10;
-            pdf.text('denisha@gmail.com', margin, yPosition);
+                    // Save the PDF to a Blob
+                    const pdfBlob = pdf.output('blob');
+                    const pdfUrl = URL.createObjectURL(pdfBlob);
+                    resolve(pdfUrl); // Resolve the promise with the URL
 
-            // SHIP TO section
-            yPosition = 60; // Reset Y position for SHIP TO details
-            pdf.text('SHIP TO', pageWidth / 2 + 10, yPosition);
-            yPosition += 10;
-            pdf.text('Krupali Kumbhani', pageWidth / 2 + 10, yPosition);
-            yPosition += 10;
-            pdf.text('+1 (816) 050-3291', pageWidth / 2 + 10, yPosition);
-            yPosition += 10;
-            pdf.text('krupali.kalathiyainfotech@gmail.com', pageWidth / 2 + 10, yPosition);
-
-            // Product Details section
-            yPosition += 20;
-            pdf.setTextColor(219, 138, 162);
-            pdf.setFontSize(20);
-            pdf.text('Product Details', margin, yPosition);
-
-            // Cosmetic Products section
-            yPosition += 10;
-            pdf.setTextColor(0, 0, 0);
-            pdf.setFontSize(16);
-            pdf.text('Cosmetic Products', margin, yPosition);
-
-            // Table header
-            yPosition += 10;
-            pdf.setFillColor(219, 138, 162);
-            pdf.rect(margin, yPosition, pageWidth - margin * 2, 10, 'F');
-            pdf.setTextColor(255, 255, 255);
-            pdf.setFontSize(10);
-            pdf.text('ITEM DESCRIPTION', margin + 5, yPosition + 7);
-            pdf.text('QUANTITY', margin + 100, yPosition + 7);
-            pdf.text('PRICE', margin + 140, yPosition + 7);
-            pdf.text('SUBTOTAL', margin + 175, yPosition + 7);
-
-            // Cosmetic Products rows
-            const cosmeticProducts = [
-                { description: 'Product A', quantity: 1, price: 10.00, subtotal: 10.00 },
-                { description: 'Product B', quantity: 3, price: 15.00, subtotal: 45.00 }
-            ];
-            yPosition += 10;
-            cosmeticProducts.forEach(product => {
-                pdf.setFillColor(255, 240, 245);
-                pdf.rect(margin, yPosition, pageWidth - margin * 2, 10, 'F');
-                pdf.setTextColor(70, 70, 70);
-                pdf.setFontSize(10);
-                pdf.text(product.description, margin + 5, yPosition + 7);
-                pdf.text(product.quantity.toString(), margin + 100, yPosition + 7);
-                pdf.text(`$${product.price.toFixed(2)}`, margin + 140, yPosition + 7);
-                pdf.text(`$${product.subtotal.toFixed(2)}`, margin + 175, yPosition + 7);
-                yPosition += 10;
-            });
-
-            // Rental Jewelry section
-            yPosition += 10;
-            pdf.setTextColor(0, 0, 0);
-            pdf.setFontSize(16);
-            pdf.text('Rental Jewelry', margin, yPosition);
-
-            // Table header
-            yPosition += 10;
-            pdf.setFillColor(219, 138, 162);
-            pdf.rect(margin, yPosition, pageWidth - margin * 2, 10, 'F');
-            pdf.setTextColor(255, 255, 255);
-            pdf.setFontSize(10);
-            pdf.text('ITEM DESCRIPTION', margin + 5, yPosition + 7);
-            pdf.text('QUANTITY', margin + 100, yPosition + 7);
-            pdf.text('PRICE', margin + 140, yPosition + 7);
-            pdf.text('SUBTOTAL', margin + 175, yPosition + 7);
-
-            // Rental Jewelry rows
-            yPosition += 10;
-            const rentalProducts = [
-                { description: 'Rental Product A', quantity: 1, price: 5.00, subtotal: 5.00 },
-                { description: 'Rental Product B', quantity: 1, price: 7.00, subtotal: 7.00 },
-                { description: 'Rental Product C', quantity: 1, price: 8.00, subtotal: 8.00 }
-            ];
-            rentalProducts.forEach(product => {
-                pdf.setFillColor(255, 240, 245);
-                pdf.rect(margin, yPosition, pageWidth - margin * 2, 10, 'F');
-                pdf.setTextColor(70, 70, 70);
-                pdf.setFontSize(10);
-                pdf.text(product.description, margin + 5, yPosition + 7);
-                pdf.text(product.quantity.toString(), margin + 100, yPosition + 7);
-                pdf.text(`$${product.price.toFixed(2)}`, margin + 140, yPosition + 7);
-                pdf.text(`$${product.subtotal.toFixed(2)}`, margin + 175, yPosition + 7);
-                yPosition += 10;
-            });
-
-            // Summary section
-            yPosition += 20;
-            pdf.setFillColor(255, 235, 240);
-            pdf.rect(0, yPosition, pageWidth, pageHeight - yPosition, 'F');
-            pdf.setTextColor(70, 70, 70);
-            pdf.setFontSize(11);
-            pdf.setFont('helvetica', 'bold');
-            pdf.text('HST RATE: 22%', margin + 20, yPosition + 20);
-            pdf.text('IST TAX: 22%', margin + 20, yPosition + 35);
-            pdf.text('TOTAL: $2,049.60', margin + 20, yPosition + 50);
-            pdf.setTextColor(0, 0, 0);
-            pdf.setFontSize(18);
-            pdf.text('Balance Due: $2,049.60', pageWidth - margin - 140, yPosition + 35);
-
-            // Save the PDF
-            const pdfBlob = pdf.output('blob');
-            const pdfUrl = URL.createObjectURL(pdfBlob);
-            resolve(pdfUrl);
-
-            // Trigger download
-            const link = document.createElement('a');
-            link.href = pdfUrl;
-            link.download = 'invoice.pdf';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-        } catch (error) {
-            console.error('Error generating PDF:', error);
-            reject(error);
-        }
-    });
-}
-        function sharePDF() {
-            generatePDF().then(pdfUrl => {
-                const phoneNumber = "8200986329"; // Replace with the desired phone number
-                const message = "Here is the invoice PDF: " + pdfUrl;
-                const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
-                window.open(whatsappUrl, '_blank');
+                    // Trigger the download
+                    const link = document.createElement('a');
+                    link.href = pdfUrl;
+                    link.download = 'invoice.pdf'; // Specify the file name
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                });
             });
         }
+       
     </script>
-
 </body>
 
 

@@ -111,8 +111,10 @@
                     <input type="text" placeholder="User name or Email *" />
                   </div>
                   <div class="form-inner">
-                    <input id="password" type="password" placeholder="Password *" />
-                    <i class="bi bi-eye-slash" id="togglePassword"></i>
+                    <div class="password-field">
+                      <input id="password" type="password" placeholder="Password *" />
+                      <i class="bi bi-eye-slash" id="togglePassword"></i>
+                    </div>
                   </div>
                   <div class="form-remember-forget">
                     <div class="remember">
@@ -124,7 +126,7 @@
                   <a href="#" class="primary-btn1 hover-btn3">Log In</a>
                 </form>
                 <!-- OTP model -->
-                
+
               </div>
             </div>
             <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
@@ -140,12 +142,16 @@
                     <input type="email" placeholder="Email Here *" />
                   </div>
                   <div class="form-inner mb-25">
-                    <input id="password2" type="password" placeholder="Password *" />
-                    <i class="bi bi-eye-slash" id="togglePassword2"></i>
+                    <div class="password-field">
+                      <input id="password2" type="password" placeholder="Password *" />
+                      <i class="bi bi-eye-slash" id="togglePassword2"></i>
+                    </div>
                   </div>
                   <div class="form-inner mb-35">
-                    <input id="password3" type="password" placeholder="Confirm Password *" />
-                    <i class="bi bi-eye-slash" id="togglePassword3"></i>
+                    <div class="password-field">
+                      <input id="password3" type="password" placeholder="Confirm Password *" />
+                      <i class="bi bi-eye-slash" id="togglePassword3"></i>
+                    </div>
                   </div>
                   <a href="#" class="primary-btn1 hover-btn3">Registration</a>
                 </form>
@@ -212,7 +218,8 @@
                 </div>
               </div>
               <div class="text-center">
-              <button type="button" class="primary-btn1 hover-btn3" onclick="updatePassword()">Update Password</button>
+                <button type="button" class="primary-btn1 hover-btn3" onclick="updatePassword()">Update
+                  Password</button>
               </div>
             </form>
           </div>
@@ -253,8 +260,10 @@
                     <input type="text" placeholder="User name or Email *" />
                   </div>
                   <div class="form-inner">
-                    <input id="password" type="password" placeholder="Password *" />
-                    <i class="bi bi-eye-slash" id="togglePassword"></i>
+                    <div class="password-field">
+                      <input id="password" type="password" placeholder="Password *" />
+                      <i class="bi bi-eye-slash" id="togglePassword"></i>
+                    </div>
                   </div>
                   <div class="form-remember-forget">
                     <div class="remember">
@@ -281,12 +290,16 @@
                     <input type="email" placeholder="Email Here *" />
                   </div>
                   <div class="form-inner mb-25">
-                    <input id="password2" type="password" placeholder="Password *" />
-                    <i class="bi bi-eye-slash" id="togglePassword2"></i>
+                    <div class="password-field">
+                      <input id="password2" type="password" placeholder="Password *" />
+                      <i class="bi bi-eye-slash" id="togglePassword2"></i>
+                    </div>
                   </div>
                   <div class="form-inner mb-35">
-                    <input id="password3" type="password" placeholder="Confirm Password *" />
-                    <i class="bi bi-eye-slash" id="togglePassword3"></i>
+                    <div class="password-field">
+                      <input id="password3" type="password" placeholder="Confirm Password *" />
+                      <i class="bi bi-eye-slash" id="togglePassword3"></i>
+                    </div>
                   </div>
                   <a href="#" class="primary-btn1 hover-btn3">Registration</a>
                 </form>
@@ -3309,6 +3322,7 @@
     function openOTPPopup(event) {
       event.preventDefault();
       $('#user-login').modal('hide');
+
       document.getElementById('otpPopup').style.display = 'block';
       // Here you can add API call to send OTP to user's email
     }
@@ -3322,66 +3336,77 @@
       const otpInputs = document.querySelectorAll('.otp-input');
       let otpValue = '';
       otpInputs.forEach(input => {
-          otpValue += input.value;
+        otpValue += input.value;
       });
 
       if (otpValue.length === 6) {
-          // Close OTP popup
-          document.getElementById('otpPopup').style.display = 'none';
-          
-          // Open create password modal
-          $('#createPasswordModal').modal('show');
+        // Close OTP popup
+        document.getElementById('otpPopup').style.display = 'none';
+
+        // Open create password modal
+        $('#createPasswordModal').modal('show');
       } else {
-          alert('Please enter valid 6-digit OTP');
+        alert('Please enter valid 6-digit OTP');
       }
     }
 
     function updatePassword() {
-        const newPassword = document.getElementById('newPassword').value;
-        const confirmPassword = document.getElementById('confirmNewPassword').value;
+      const newPassword = document.getElementById('newPassword').value;
+      const confirmPassword = document.getElementById('confirmNewPassword').value;
 
-        if (newPassword === '' || confirmPassword === '') {
-            alert('Please fill in all fields');
-            return;
-        }
+      if (newPassword === '' || confirmPassword === '') {
+        alert('Please fill in all fields');
+        return;
+      }
 
-        if (newPassword !== confirmPassword) {
-            alert('Passwords do not match');
-            return;
-        }
+      if (newPassword !== confirmPassword) {
+        alert('Passwords do not match');
+        return;
+      }
 
-        // Here you can add API call to update password
-        $('#createPasswordModal').modal('hide');
-        alert('Password updated successfully');
+      // Here you can add API call to update password
+      $('#createPasswordModal').modal('hide');
+      alert('Password updated successfully');
     }
 
-    // Add this for password visibility toggle
-    document.addEventListener('DOMContentLoaded', function() {
-        const toggleNewPassword = document.getElementById('toggleNewPassword');
-        const toggleConfirmPassword = document.getElementById('toggleConfirmPassword');
-        
-        toggleNewPassword.addEventListener('click', function() {
-            const newPassword = document.getElementById('newPassword');
-            togglePasswordVisibility(newPassword, this);
-        });
 
-        toggleConfirmPassword.addEventListener('click', function() {
-            const confirmPassword = document.getElementById('confirmNewPassword');
-            togglePasswordVisibility(confirmPassword, this);
-        });
+
+    //password hide and show js LogIn forgot password
+    document.addEventListener('DOMContentLoaded', function () {
+      // Get all toggle password icons
+      const togglePassword = document.getElementById('togglePassword');
+      const togglePassword2 = document.getElementById('togglePassword2');
+      const togglePassword3 = document.getElementById('togglePassword3');
+
+      // Add click event listeners to all password toggle icons
+      togglePassword.addEventListener('click', function () {
+        const password = document.getElementById('password');
+        togglePasswordVisibility(password, this);
+      });
+
+      togglePassword2.addEventListener('click', function () {
+        const password = document.getElementById('password2');
+        togglePasswordVisibility(password, this);
+      });
+
+      togglePassword3.addEventListener('click', function () {
+        const password = document.getElementById('password3');
+        togglePasswordVisibility(password, this);
+      });
     });
 
     function togglePasswordVisibility(inputField, icon) {
-        if (inputField.type === 'password') {
-            inputField.type = 'text';
-            icon.classList.remove('bi-eye-slash');
-            icon.classList.add('bi-eye');
-        } else {
-            inputField.type = 'password';
-            icon.classList.remove('bi-eye');
-            icon.classList.add('bi-eye-slash');
-        }
+      if (inputField.type === 'password') {
+        inputField.type = 'text';
+        icon.classList.remove('bi-eye-slash');
+        icon.classList.add('bi-eye');
+      } else {
+        inputField.type = 'password';
+        icon.classList.remove('bi-eye');
+        icon.classList.add('bi-eye-slash');
+      }
     }
+
   </script>
 </body>
 <!-- Mirrored from demo-egenslab.b-cdn.net/html/OrnaCare/preview/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Feb 2025 04:31:40 GMT -->

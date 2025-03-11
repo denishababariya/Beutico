@@ -8,25 +8,10 @@
       "confirmPassword": "aaa123"
     },
     {
-      "id": "40e2",
-      "username": "deni",
-      "email": "deni@gmail.com",
-      "password": "den123",
-      "confirmPassword": "den123"
-    },
-    {
-      "id": "09e0",
-      "username": "kkk",
-      "email": "kkk@gmail.com",
-      "password": "kkk123",
-      "confirmPassword": "kkk123"
-    },
-    {
-      "id": "d019",
-      "username": "fff",
-      "email": "fff@gmail.com",
-      "password": "123",
-      "confirmPassword": "123"
+      "id": "81a8",
+      "username": "Krupali",
+      "email": "krupali.kalathiyainfotech@gmail.com",
+      "password": "Krupali@123"
     }
   ],
   "category": [
@@ -8598,7 +8583,6 @@
         "../img/rent-product/ToeRing/ToeRing1.png",
         "../img/rent-product/ToeRing/ToeRing1.png",
         "../img/rent-product/ToeRing/ToeRing1.png"
-
       ]
     },
     {
@@ -10227,7 +10211,7 @@
         "decorative"
       ],
       "images": [
-       "../img/Accessories/Stick/Stick2.png",
+        "../img/Accessories/Stick/Stick2.png",
         "../img/Accessories/Stick/Stick2.png",
         "../img/Accessories/Stick/Stick2.png",
         "../img/Accessories/Stick/Stick2.png",
@@ -11462,12 +11446,6 @@
   ],
   "cart": [
     {
-      "id": "cart-hoihi03ia",
-      "product_id": "468",
-      "time": "2025-03-06T07:30:13.738Z",
-      "quantity": 5
-    },
-    {
       "id": "cart-u5zywmnw3",
       "product_id": "467",
       "time": "2025-03-06T07:31:24.697Z",
@@ -11483,12 +11461,6 @@
       "id": "cart-1745shqqi",
       "product_id": "467",
       "time": "2025-03-06T08:45:15.285Z",
-      "quantity": 1
-    },
-    {
-      "id": "cart-4aql63na2",
-      "product_id": "468",
-      "time": "2025-03-06T04:18:19.337Z",
       "quantity": 1
     },
     {
@@ -11534,12 +11506,6 @@
       "quantity": 1
     },
     {
-      "id": "cart-ocepsyw5t",
-      "product_id": "468",
-      "time": "2025-03-06T09:25:33.341Z",
-      "quantity": 1
-    },
-    {
       "id": "cart-51pdrh1rc",
       "product_id": "365",
       "time": "2025-03-06T09:25:36.910Z",
@@ -11573,6 +11539,42 @@
       "id": "cart-w6kh6g1ps",
       "product_id": "373",
       "time": "2025-03-10T06:35:09.094Z",
+      "quantity": 1
+    },
+    {
+      "id": "cart-4f7qi9cqt",
+      "product_id": "396",
+      "time": "2025-03-10T09:51:46.325Z",
+      "quantity": 1
+    },
+    {
+      "id": "cart-isz0ttj59",
+      "product_id": "1",
+      "time": "2025-03-10T11:32:37.881Z",
+      "quantity": 6
+    },
+    {
+      "id": "cart-on2tpwyrl",
+      "product_id": "1",
+      "time": "2025-03-10T11:36:05.827Z",
+      "quantity": 1
+    },
+    {
+      "id": "cart-mzo85ysj6",
+      "product_id": "1",
+      "time": "2025-03-10T11:36:12.960Z",
+      "quantity": 1
+    },
+    {
+      "id": "cart-vjdkc4ujd",
+      "product_id": "2",
+      "time": "2025-03-10T11:36:28.394Z",
+      "quantity": 2
+    },
+    {
+      "id": "cart-39onpiant",
+      "product_id": "2",
+      "time": "2025-03-10T11:36:42.360Z",
       "quantity": 1
     }
   ],
@@ -11776,6 +11778,28 @@
         "Check",
         "PayPal",
         "Card"
+      ]
+    },
+    {
+      "id": "24fd",
+      "f_name": "krupali",
+      "l_name": "kumbhani",
+      "address": "hjsdgfgas",
+      "city": "Saidpur",
+      "post_code": "krupali",
+      "phone_num": "08160503291",
+      "email": "krupali.kalathiyainfotech@gmail.com",
+      "note": "sfeee",
+      "regular_product": [],
+      "rental_product": [
+        {
+          "product_id": "396",
+          "quantity": 1
+        }
+      ],
+      "total": "2.99",
+      "payment_method": [
+        "Cash"
       ]
     }
   ],
