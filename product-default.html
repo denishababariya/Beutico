@@ -34,8 +34,8 @@
 <body>
 
     <div class="top-bar" id="topBarSection">
-  <!-- Content will be dynamically inserted here -->
-</div>
+        <!-- Content will be dynamically inserted here -->
+    </div>
     <!-- Start header section -->
     <div class="modal login-modal fade" id="user-login" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -78,7 +78,7 @@
                                         <a href="#" class="forget-pass hover-underline">Forget Password</a>
                                     </div>
                                     <a href="#" class="primary-btn1 hover-btn3">Log In</a>
-                                    
+
                                 </form>
                             </div>
                         </div>
@@ -309,7 +309,7 @@
                                 <button class="nav-link" id="nav-add-info-tab" data-bs-toggle="tab"
                                     data-bs-target="#nav-add-info" type="button" role="tab" aria-controls="nav-add-info"
                                     aria-selected="false">Additional Information</button>
-                                
+
                             </div>
                         </nav>
                     </div>
@@ -421,7 +421,8 @@
                                             </tr>
                                             <tr>
                                                 <td>Category</td>
-                                                <td id="product-category">Loading...</td> <!-- Placeholder for category name -->
+                                                <td id="product-category">Loading...</td>
+                                                <!-- Placeholder for category name -->
                                             </tr>
                                             <tr>
                                                 <td>Tags</td>
@@ -443,7 +444,7 @@
                                     </table>
                                 </div>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -506,12 +507,13 @@
 
 
     <script src="/js/waypoints.min.js"></script>
+
     <script>
         // Fetch product details from API
         const selectedProductId = localStorage.getItem('selectedProductId');
         fetch(`http://localhost:3000/product/${selectedProductId}`)
             .then(response => response.json())
-            .then(data => {
+            .then(async data => {
                 // Create product details dynamically
                 const productDetailsContainer = document.getElementById('product-details-container');
 
@@ -521,7 +523,7 @@
                 productDetailsContainer.appendChild(productName);
 
                 // Create and append rating review section
-             
+
 
                 // Create and append product description
                 const productDescription = document.createElement('p');
@@ -555,7 +557,7 @@
             `;
 
                 // Add event listeners for quantity controls
-                quantityCounter.querySelector('.quantity__minus').addEventListener('click', function(e) {
+                quantityCounter.querySelector('.quantity__minus').addEventListener('click', function (e) {
                     e.preventDefault();
                     const input = this.parentElement.querySelector('.quantity__input');
                     let value = parseInt(input.value);
@@ -565,7 +567,7 @@
                     }
                 });
 
-                quantityCounter.querySelector('.quantity__plus').addEventListener('click', function(e) {
+                quantityCounter.querySelector('.quantity__plus').addEventListener('click', function (e) {
                     e.preventDefault();
                     const input = this.parentElement.querySelector('.quantity__input');
                     let value = parseInt(input.value);
@@ -574,7 +576,7 @@
                 });
 
                 // Prevent manual input of invalid values
-                quantityCounter.querySelector('.quantity__input').addEventListener('change', function() {
+                quantityCounter.querySelector('.quantity__input').addEventListener('change', function () {
                     let value = parseInt(this.value);
                     if (isNaN(value) || value < 1) {
                         value = 1;
@@ -596,27 +598,51 @@
                 productDetailsContainer.appendChild(shopDetailsBtn);
 
                 // Fetch category name using cat_id
-            
-
-                // Create and append compare and wishlist area
                 const compareWishlistArea = document.createElement('div');
                 compareWishlistArea.className = 'compare-wishlist-area';
                 const compareWishlistList = document.createElement('ul');
+                let userId = localStorage.getItem("user_id");
+                let wishlistProductIds = [];
+                // Get userId and wishlist data
+
+                if (userId) {
+                    try {
+                        const wishlistResponse = await fetch(`http://localhost:3000/wishlist?userId=${userId}`);
+                        const wishlistData = await wishlistResponse.json();
+
+                        // Get productIds from wishlist where userId matches
+                        const userWishlist = wishlistData.find(item => item.userId === userId);
+                        if (userWishlist && userWishlist.productId) {
+                            wishlistProductIds = userWishlist.productId;
+                        }
+                    } catch (error) {
+                        console.error("Error fetching wishlist:", error);
+                    }
+                }
+                console.log("wishlistProductIds", wishlistProductIds);
+
+
+                const isInWishlist = wishlistProductIds.includes(data.id.toString());
+                const heartSVG = isInWishlist
+        ? `<svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="red" stroke="red" stroke-width="2"/>
+          </svg>`
+        : `<svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 18 18">
+            <g clip-path="url(#clip0_168_378)">
+              <path d="M16.528 2.20919C16.0674 1.71411 15.5099 1.31906 14.8902 1.04859C14.2704 0.778112 13.6017 0.637996 12.9255 0.636946C12.2487 0.637725 11.5794 0.777639 10.959 1.048C10.3386 1.31835 9.78042 1.71338 9.31911 2.20854L9.00132 2.54436L8.68352 2.20854C6.83326 0.217151 3.71893 0.102789 1.72758 1.95306C1.63932 2.03507 1.5541 2.12029 1.47209 2.20854C-0.490696 4.32565 -0.490696 7.59753 1.47209 9.71463L8.5343 17.1622C8.77862 17.4201 9.18579 17.4312 9.44373 17.1868C9.45217 17.1788 9.46039 17.1706 9.46838 17.1622L16.528 9.71463C18.4907 7.59776 18.4907 4.32606 16.528 2.20919ZM15.5971 8.82879H15.5965L9.00132 15.7849L2.40553 8.82879C0.90608 7.21113 0.90608 4.7114 2.40553 3.09374C3.76722 1.61789 6.06755 1.52535 7.5434 2.88703C7.61505 2.95314 7.68401 3.0221 7.75012 3.09374L8.5343 3.92104C8.79272 4.17781 9.20995 4.17781 9.46838 3.92104L10.2526 3.09438C11.6142 1.61853 13.9146 1.52599 15.3904 2.88767C15.4621 2.95378 15.531 3.02274 15.5971 3.09438C17.1096 4.71461 17.1207 7.2189 15.5971 8.82879Z" />
+            </g>
+          </svg>`;
+
                 compareWishlistList.innerHTML = `
-             
-                <li>
-                    <a href="#" class="wishlist-btn" data-product-id="${data.id}">
-                        <span>
-                            <svg width="11" height="11" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_168_378)">
-                                    <path d="M16.528 2.20919C16.0674 1.71411 15.5099 1.31906 14.8902 1.04859C14.2704 0.778112 13.6017 0.637996 12.9255 0.636946C12.2487 0.637725 11.5794 0.777639 10.959 1.048C10.3386 1.31835 9.78042 1.71338 9.31911 2.20854L9.00132 2.54436L8.68352 2.20854C6.83326 0.217151 3.71893 0.102789 1.72758 1.95306C1.63932 2.03507 1.5541 2.12029 1.47209 2.20854C-0.490696 4.32565 -0.490696 7.59753 1.47209 9.71463L8.5343 17.1622C8.77862 17.4201 9.18579 17.4312 9.44373 17.1868C9.45217 17.1788 9.46039 17.1706 9.46838 17.1622L16.528 9.71463C18.4907 7.59776 18.4907 4.32606 16.528 2.20919ZM15.5971 8.82879H15.5965L9.00132 15.7849L2.40553 8.82879C0.90608 7.21113 0.90608 4.7114 2.40553 3.09374C3.76722 1.61789 6.06755 1.52535 7.5434 2.88703C7.61505 2.95314 7.68401 3.0221 7.75012 3.09374L8.5343 3.92104C8.79272 4.17781 9.20995 4.17781 9.46838 3.92104L10.2526 3.09438C11.6142 1.61853 13.9146 1.52602 15.3904 2.88767C15.4621 2.95378 15.531 3.02274 15.5971 3.09438C17.1096 4.71461 17.1207 7.2189 15.5971 8.82879Z" />
-                                </g>
-                            </svg>
-                        </span>
-                        Add to wishlist
-                    </a>
-                </li>
-            `;
+    <li>
+        <a href="#" class="wishlist-btn" data-product-id="${data.id}">
+            <span>
+                                             ${heartSVG}
+            </span>
+            Add to wishlist
+        </a>
+    </li>
+`;
                 compareWishlistArea.appendChild(compareWishlistList);
                 productDetailsContainer.appendChild(compareWishlistArea);
             })
@@ -893,21 +919,21 @@
       </table>
     </div>
   `;
-  fetch('http://localhost:3000/category')
-                    .then(response => response.json())
-                    .then(categories => {
-                        const category = categories.find(cat => cat.id == product.cat_id); // Find the category by ID
-                        const categoryName = category ? category.cat_name : 'N/A'; // Get the category name or 'N/A'
-                        document.getElementById('product-category').innerText = categoryName; // Update the HTML
-                    })
-                    .catch(error => console.error('Error fetching category data:', error));
+            fetch('http://localhost:3000/category')
+                .then(response => response.json())
+                .then(categories => {
+                    const category = categories.find(cat => cat.id == product.cat_id); // Find the category by ID
+                    const categoryName = category ? category.cat_name : 'N/A'; // Get the category name or 'N/A'
+                    document.getElementById('product-category').innerText = categoryName; // Update the HTML
+                })
+                .catch(error => console.error('Error fetching category data:', error));
 
             tabContent.appendChild(tabPane);
         }
 
         function createReviewsTab(tabNav, tabContent, product) {
             // Create reviews tab nav item
-      
+
         }
 
         function initializeBootstrapTabs() {
@@ -925,7 +951,7 @@
     <script src="/js/main.js"></script>
     <script src="/js/index.js"></script>
     <script src="/js/footer.js"></script>
-<script src="/js/shop-list.js"></script>
+    <script src="/js/shop-list.js"></script>
 </body>
 
 <!-- Mirrored from demo-egenslab.b-cdn.net/html/OrnaCare/preview/product-default.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Feb 2025 04:32:13 GMT -->
