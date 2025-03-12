@@ -11452,184 +11452,46 @@
   ],
   "cart": [
     {
-      "id": "cart-hoihi03ia",
-      "product_id": "468",
-      "time": "2025-03-06T07:30:13.738Z",
-      "quantity": 5
-    },
-    {
-      "id": "cart-u5zywmnw3",
-      "product_id": "467",
-      "time": "2025-03-06T07:31:24.697Z",
+      "id": "cart-wjkom2clc",
+      "product_id": "2",
+      "time": "2025-03-12T05:36:54.394Z",
       "quantity": 2
     },
     {
-      "id": "cart-592lluti3",
-      "product_id": "466",
-      "time": "2025-03-06T07:31:44.977Z",
+      "id": "cart-m7cv1lrc9",
+      "product_id": "441",
+      "time": "2025-03-12T06:19:59.013Z",
+      "quantity": 1
+    },
+    {
+      "id": "cart-guzgkevvb",
+      "product_id": "352",
+      "time": "2025-03-12T06:23:25.871Z",
       "quantity": 3
     },
     {
-      "id": "cart-1745shqqi",
-      "product_id": "467",
-      "time": "2025-03-06T08:45:15.285Z",
+      "id": "cart-iu9r2cjjx",
+      "product_id": "102",
+      "time": "2025-03-12T06:28:20.849Z",
       "quantity": 1
     },
     {
-      "id": "cart-4aql63na2",
-      "product_id": "468",
-      "time": "2025-03-06T04:18:19.337Z",
+      "id": "cart-xicv1whwf",
+      "product_id": "326",
+      "time": "2025-03-12T06:35:23.152Z",
       "quantity": 1
     },
     {
-      "id": "cart-wti7r08du",
-      "product_id": "339",
-      "time": "2025-03-04T04:35:36.150Z",
-      "quantity": 1
-    },
-    {
-      "id": "cart-ycd21e72w",
-      "product_id": "465",
-      "time": "2025-03-04T04:35:48.069Z",
-      "quantity": 1
-    },
-    {
-      "id": "cart-jrhsblxaw",
-      "product_id": "42",
-      "time": "2025-03-04T09:35:10.069Z",
-      "quantity": 1
-    },
-    {
-      "id": "cart-y8hu2zoxm",
-      "product_id": "271",
-      "time": "2025-03-04T09:54:13.714Z",
+      "id": "cart-exnq5quqi",
+      "product_id": "410",
+      "time": "2025-03-12T06:40:51.085Z",
       "quantity": 3
     },
     {
-      "id": "cart-05cy8ll62",
-      "product_id": "466",
-      "time": "2025-03-06T08:45:22.592Z",
-      "quantity": 1
-    },
-    {
-      "id": "cart-hkmm36q4t",
-      "product_id": "362",
-      "time": "2025-03-06T09:22:59.360Z",
-      "quantity": 1
-    },
-    {
-      "id": "cart-8gp1ehtye",
-      "product_id": "422",
-      "time": "2025-03-06T09:25:01.745Z",
-      "quantity": 1
-    },
-    {
-      "id": "cart-ocepsyw5t",
-      "product_id": "468",
-      "time": "2025-03-06T09:25:33.341Z",
-      "quantity": 1
-    },
-    {
-      "id": "cart-51pdrh1rc",
-      "product_id": "365",
-      "time": "2025-03-06T09:25:36.910Z",
-      "quantity": 1
-    },
-    {
-      "id": "cart-xnw8ffjhj",
-      "product_id": "422",
-      "time": "2025-03-06T09:25:43.024Z",
-      "quantity": 1
-    },
-    {
-      "id": "cart-e4dogjr35",
-      "product_id": "177",
-      "time": "2025-03-07T05:54:57.637Z",
-      "quantity": 1
-    },
-    {
-      "id": "cart-mh04kp7zm",
-      "product_id": "327",
-      "time": "2025-03-10T06:34:59.234Z",
-      "quantity": 1
-    },
-    {
-      "id": "cart-tbkvj34xq",
-      "product_id": "372",
-      "time": "2025-03-10T06:35:07.286Z",
-      "quantity": 1
-    },
-    {
-      "id": "cart-w6kh6g1ps",
-      "product_id": "373",
-      "time": "2025-03-10T06:35:09.094Z",
-      "quantity": 1
-    },
-    {
-      "id": "cart-j63v2syxy",
-      "product_id": "468",
-      "time": "2025-03-10T09:26:56.807Z",
-      "quantity": 1
-    },
-    {
-      "id": "cart-5vqth8lrq",
-      "product_id": "316",
-      "time": "2025-03-10T09:27:00.091Z",
-      "quantity": 1
-    },
-    {
-      "id": "cart-lttlu6xd4",
-      "product_id": "271",
-      "time": "2025-03-10T09:31:00.554Z",
-      "quantity": 1
-    },
-    {
-      "id": "cart-ahreuuard",
-      "product_id": "128",
-      "time": "2025-03-10T10:09:11.633Z",
-      "quantity": 1
-    },
-    {
-      "id": "cart-deiuzap42",
-      "product_id": "129",
-      "time": "2025-03-10T10:09:13.653Z",
-      "quantity": 1
-    },
-    {
-      "id": "cart-14r7fe0h2",
-      "product_id": "467",
-      "time": "2025-03-10T10:14:48.265Z",
-      "quantity": 1
-    },
-    {
-      "id": "cart-a0fydb4u5",
-      "product_id": "432",
-      "time": "2025-03-10T10:14:55.538Z",
-      "quantity": 1
-    },
-    {
-      "id": "cart-ma6pjfnl5",
-      "product_id": "442",
-      "time": "2025-03-10T10:16:12.288Z",
-      "quantity": 1
-    },
-    {
-      "id": "cart-rv4bfrvx7",
-      "product_id": "317",
-      "time": "2025-03-10T10:32:05.500Z",
-      "quantity": 1
-    },
-    {
-      "id": "cart-po5mj9z3u",
-      "product_id": "296",
-      "time": "2025-03-11T05:53:44.965Z",
-      "quantity": 1
-    },
-    {
-      "id": "cart-upl2f8849",
-      "product_id": "337",
-      "time": "2025-03-11T06:44:24.432Z",
-      "quantity": 5
+      "id": "cart-pn2re24cx",
+      "product_id": "126",
+      "time": "2025-03-12T09:02:54.121Z",
+      "quantity": 10
     }
   ],
   "bill": [
@@ -11908,6 +11770,28 @@
       "total": "5.49",
       "payment_method": [
         "Cash"
+      ]
+    },
+    {
+      "id": "be77",
+      "f_name": "krupali",
+      "l_name": "kumbhani",
+      "address": "hjsdgfgas",
+      "city": "Dhaka",
+      "post_code": "krupali",
+      "phone_num": "08160503291",
+      "email": "krupali.kalathiyainfotech@gmail.com",
+      "note": "qwe",
+      "regular_product": [],
+      "rental_product": [
+        {
+          "product_id": "410",
+          "quantity": 3
+        }
+      ],
+      "total": "29.97",
+      "payment_method": [
+        "Card"
       ]
     }
   ],
