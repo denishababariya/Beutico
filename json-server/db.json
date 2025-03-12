@@ -1220,7 +1220,7 @@
       "sku": "CP-001",
       "name": "AHA BHA Peel",
       "cat_id": 1,
-      "sub_cat_id": 7,
+      "sub_cat_id": 7, 
       "description": "Resurfaces skin for a smooth finish.",
       "additional_description": "Ideal for dull skin.",
       "price": 30,
