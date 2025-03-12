@@ -730,7 +730,7 @@ function createProductModal() {
     <div class="modal-dialog modal-xl modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-body">
-          <button type="button" class="close-btn" onclick="handleModalClose()">×</button>
+          <button type="button" class="close-btn" onclick="handleModalClose()"></button>
           <div class="shop-details-top-section">
             <div class="row gy-4">
               <!-- Left Column - Image Section -->
