@@ -3349,83 +3349,56 @@
 
     // Call this<script src="/js/shop-list.js"></script>istener("DOMContentLoaded", updateCartDisplay);
   </script>
+
+
+
+  
   <script>
-    function openOTPPopup(event) {
-      event.preventDefault();
-      $('#user-login').modal('hide');
-
-      document.getElementById('otpPopup').style.display = 'block';
-      // Here you can add API call to send OTP to user's email
-    }
-
-    function closeOTPPopup() {
-      document.getElementById('otpPopup').style.display = 'none';
-    }
-
-    function verifyOTP() {
-      // Get all OTP input values
-      const otpInputs = document.querySelectorAll('.otp-input');
-      let otpValue = '';
-      otpInputs.forEach(input => {
-        otpValue += input.value;
-      });
-
-      if (otpValue.length === 6) {
-        // Close OTP popup
-        document.getElementById('otpPopup').style.display = 'none';
-
-        // Open create password modal
-        $('#createPasswordModal').modal('show');
-      } else {
-        alert('Please enter valid 6-digit OTP');
-      }
-    }
-
-    function updatePassword() {
-      const newPassword = document.getElementById('newPassword').value;
-      const confirmPassword = document.getElementById('confirmNewPassword').value;
-
-      if (newPassword === '' || confirmPassword === '') {
-        alert('Please fill in all fields');
-        return;
-      }
-
-      if (newPassword !== confirmPassword) {
-        alert('Passwords do not match');
-        return;
-      }
-
-      // Here you can add API call to update password
-      $('#createPasswordModal').modal('hide');
-      alert('Password updated successfully');
-    }
-
-
-
-    //password hide and show js LogIn forgot password
-    document.addEventListener('DOMContentLoaded', function () {
-      // Get all toggle password icons
+     // Combined and fixed script for OTP and password management
+     document.addEventListener('DOMContentLoaded', function () {
       const togglePassword = document.getElementById('togglePassword');
-      const togglePassword2 = document.getElementById('togglePassword2');
-      const togglePassword3 = document.getElementById('togglePassword3');
-
-      // Add click event listeners to all password toggle icons
-      togglePassword.addEventListener('click', function () {
-        const password = document.getElementById('password');
-        togglePasswordVisibility(password, this);
+      if (togglePassword) {
+        togglePassword.addEventListener('click', function() {
+          const password = document.getElementById('password');
+          togglePasswordVisibility(password, this);
+        });
+      }
+      
+      // Add event listener for when the password modal is shown
+      $('#createPasswordModal').on('shown.bs.modal', function() {
+        setupNewPasswordToggles();
       });
-
-      togglePassword2.addEventListener('click', function () {
-        const password = document.getElementById('password2');
-        togglePasswordVisibility(password, this);
-      });
-
-      togglePassword3.addEventListener('click', function () {
-        const password = document.getElementById('password3');
-        togglePasswordVisibility(password, this);
-      });
+      setupNewPasswordToggles();
     });
 
+
+    function setupNewPasswordToggles() {
+      console.log("Setting up new password toggles");
+      
+      const toggleNewPassword = document.getElementById('toggleNewPassword');
+      const toggleConfirmPassword = document.getElementById('toggleConfirmPassword');
+      
+      if (toggleNewPassword) {
+        console.log("Found toggleNewPassword element");
+        toggleNewPassword.addEventListener('click', function() {
+          const password = document.getElementById('newPassword');
+          togglePasswordVisibility(password, this);
+        });
+      } else {
+        console.log("toggleNewPassword element not found");
+      }
+      
+      if (toggleConfirmPassword) {
+        console.log("Found toggleConfirmPassword element");
+        toggleConfirmPassword.addEventListener('click', function() {
+          const password = document.getElementById('confirmNewPassword');
+          togglePasswordVisibility(password, this);
+        });
+      } else {
+        console.log("toggleConfirmPassword element not found");
+      }
+    }
+    
     function togglePasswordVisibility(inputField, icon) {
       if (inputField.type === 'password') {
         inputField.type = 'text';
@@ -3438,6 +3411,195 @@
       }
     }
 
+
+
+
+    // OTP handling functions
+    function openOTPPopup(event) {
+      event.preventDefault();
+      const email = localStorage.getItem('user_email');
+      if (email) {
+        // Hide the login modal
+        $('#user-login').modal('hide');
+
+        // Show the OTP popup
+        document.getElementById('otpPopup').style.display = 'block';
+
+        // Initialize OTP functionality
+        initializeOTP();
+      } else {
+        alert('login first');
+      }
+
+
+    }
+
+    function closeOTPPopup() {
+      document.getElementById('otpPopup').style.display = 'none';
+      resetOTPInputs();
+      clearInterval(window.countdownTimer);
+    }
+
+    function initializeOTP() {
+      const otpInputs = document.querySelectorAll(".otp-input");
+      const countdownElement = document.getElementById("countdown");
+      let staticOTP = "123456"; // Static OTP for testing
+
+      // Show OTP alert
+      alert(`Your OTP is: ${staticOTP}`);
+
+      // Start the countdown timer
+      startCountdown();
+
+      // OTP Input Navigation
+      setupOTPInputs(otpInputs);
+
+      // Store OTP for verification
+      window.currentOTP = staticOTP;
+    }
+
+    function setupOTPInputs(otpInputs) {
+      // Reset inputs first
+      resetOTPInputs();
+
+      otpInputs.forEach((input, index) => {
+        input.addEventListener("input", (e) => {
+          if (e.inputType !== "deleteContentBackward" && input.value !== "") {
+            if (index < otpInputs.length - 1) {
+              otpInputs[index + 1].focus();
+            }
+          }
+        });
+
+        input.addEventListener("keydown", (e) => {
+          if (e.key === "Backspace" && input.value === "" && index > 0) {
+            otpInputs[index - 1].focus();
+          }
+        });
+      });
+    }
+
+    function resetOTPInputs() {
+      const otpInputs = document.querySelectorAll(".otp-input");
+      otpInputs.forEach((input) => (input.value = ""));
+      // Focus on first input
+      if (otpInputs.length > 0) {
+        otpInputs[0].focus();
+      }
+    }
+
+    function startCountdown() {
+      let timeLeft = 90; // 1 minute 30 seconds
+      clearInterval(window.countdownTimer);
+      const countdownElement = document.getElementById("countdown");
+
+      window.countdownTimer = setInterval(function () {
+        let minutes = Math.floor(timeLeft / 60);
+        let seconds = timeLeft % 60;
+        countdownElement.textContent = `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+
+        if (timeLeft <= 0) {
+          clearInterval(window.countdownTimer);
+          countdownElement.textContent = "00:00";
+        } else {
+          timeLeft--;
+        }
+      }, 1000);
+    }
+
+    function resendOTP(event) {
+      event.preventDefault();
+      alert(`Your OTP is: ${window.currentOTP}`);
+      startCountdown();
+    }
+
+    function verifyOTP() {
+      // Get all OTP input values
+      const otpInputs = document.querySelectorAll('.otp-input');
+      let enteredOTP = '';
+      otpInputs.forEach(input => {
+        enteredOTP += input.value;
+      });
+
+      if (enteredOTP.length !== 6) {
+        alert('Please enter valid 6-digit OTP');
+        return;
+      }
+
+      if (enteredOTP === window.currentOTP) {
+        // Close OTP popup
+        document.getElementById('otpPopup').style.display = 'none';
+
+        // Open create password modal
+        $('#createPasswordModal').modal('show');
+      } else {
+        alert('Invalid OTP! Please try again.');
+      }
+    }
+
+    // Password update functionality
+    async function updatePassword() {
+      const newPassword = document.getElementById("newPassword").value.trim();
+      const confirmPassword = document.getElementById("confirmNewPassword").value.trim();
+
+      // Basic validation
+      if (!newPassword || !confirmPassword) {
+        alert("Both password fields are required.");
+        return;
+      }
+
+      if (newPassword !== confirmPassword) {
+        alert("Passwords do not match. Please try again.");
+        return;
+      }
+
+      // Get user ID from storage
+      const userId = localStorage.getItem("user_id");
+      if (!userId) {
+        alert("User not found. Please log in again.");
+        return;
+      }
+
+      try {
+        // Fetch user data from JSON server
+        const response = await fetch(`http://localhost:3000/users/${userId}`);
+
+        if (!response.ok) {
+          throw new Error("Failed to fetch user data.");
+        }
+
+        const userData = await response.json();
+
+        // Check if the new password is the same as the current one
+        if (userData.password === newPassword) {
+          alert("This password is already used. Enter a new one.");
+          return;
+        }
+
+        // Update password fields
+        const updateResponse = await fetch(`http://localhost:3000/users/${userId}`, {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            password: newPassword,
+            confirmPassword: confirmPassword
+          }),
+        });
+
+        if (!updateResponse.ok) {
+          throw new Error("Failed to update password.");
+        }
+
+        alert("Password updated successfully!");
+        $("#createPasswordModal").modal("hide");
+
+      } catch (error) {
+        console.error("Error updating password:", error);
+        alert("An error occurred while updating the password. Please try again.");
+      }
+    }
   </script>
 </body>
 <!-- Mirrored from demo-egenslab.b-cdn.net/html/OrnaCare/preview/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Feb 2025 04:31:40 GMT -->
