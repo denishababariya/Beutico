@@ -42,8 +42,8 @@
 <body>
 
     <div class="top-bar" id="topBarSection">
-  <!-- Content will be dynamically inserted here -->
-</div>
+        <!-- Content will be dynamically inserted here -->
+    </div>
     <!-- Start header section -->
     <div class="modal login-modal fade" id="user-login" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -86,7 +86,7 @@
                                         <a href="#" class="forget-pass hover-underline">Forget Password</a>
                                     </div>
                                     <a href="#" class="primary-btn1 hover-btn3">Log In</a>
-                                    
+
                                 </form>
                             </div>
                         </div>
@@ -126,7 +126,7 @@
             <div class="header-logo d-lg-none d-flex">
                 <a href="index.html"><img alt="image" class="img-fluid" src="/img/brand.png"></a>
             </div>
-            
+
             <div class="main-menu">
                 <div class="mobile-logo-area d-lg-none d-flex justify-content-between align-items-center">
                     <div class="mobile-logo-wrap">
@@ -324,19 +324,21 @@
                                     <li class="check-payment">
                                         <div class="form-check payment-check">
                                             <h6>Cash</h6>
-                                            
+
                                         </div>
                                         <div class="checked">
-                                            <input type="checkbox" name="payment-method" value="Cash" class="payment-option opacity-0">
+                                            <input type="checkbox" name="payment-method" value="Cash"
+                                                class="payment-option opacity-0">
                                         </div>
                                     </li>
                                     <li class="check-payment">
                                         <div class="form-check payment-check">
                                             <h6>Check payments</h6>
-                                            
+
                                         </div>
                                         <div class="checked">
-                                            <input type="checkbox" name="payment-method" value="Check" class="payment-option opacity-0">  
+                                            <input type="checkbox" name="payment-method" value="Check"
+                                                class="payment-option opacity-0">
                                         </div>
                                     </li>
                                     <li class="paypal">
@@ -344,24 +346,27 @@
                                             <h6>Paypal</h6>
                                             <img src="/img/inner-page/payment.png" alt="">
                                             <!-- <a href="#" class="about-paypal">What is PayPal?</a> -->
-                                            
+
                                         </div>
                                         <div class="checked">
-                                            <input type="checkbox" name="payment-method" value="PayPal" class="payment-option opacity-0">
+                                            <input type="checkbox" name="payment-method" value="PayPal"
+                                                class="payment-option opacity-0">
                                         </div>
                                     </li>
                                     <li class="stripe">
                                         <h6>Card</h6>
-                                      
+
                                         <div class="checked">
-                                            <input type="checkbox" name="payment-method" value="Card" class="payment-option opacity-0">
+                                            <input type="checkbox" name="payment-method" value="Card"
+                                                class="payment-option opacity-0">
                                         </div>
                                     </li>
                                 </ul>
-                                
+
                             </div>
                             <div class="place-order-btn">
-                                <button type="submit" class="primary-btn1 hover-btn3" id="finalize-payment">Finalize Payment</button>
+                                <button type="submit" class="primary-btn1 hover-btn3" id="finalize-payment">Finalize
+                                    Payment</button>
                             </div>
                         </form>
                     </div>
@@ -444,30 +449,30 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             // First check for shopnow-id
-    const shopNowId = localStorage.getItem('shopnow-id');
-    
-    if (shopNowId) {
-        // If shopnow-id exists, fetch and display only that product
-        fetch(`http://localhost:3000/product?id=${shopNowId}`)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! Status: ${response.status}`);
-                }
-                return response.json();
-            })
-            .then(productDetails => {
-                const product = productDetails[0];
-                let price = product.price;
-                let quantity = 1; // Default quantity
+            const shopNowId = localStorage.getItem('shopnow-id');
 
-                // Clear both product containers
-                document.getElementById('added-products').innerHTML = '';
-                document.getElementById('rental-products').innerHTML = '';
+            if (shopNowId) {
+                // If shopnow-id exists, fetch and display only that product
+                fetch(`http://localhost:3000/product?id=${shopNowId}`)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! Status: ${response.status}`);
+                        }
+                        return response.json();
+                    })
+                    .then(productDetails => {
+                        const product = productDetails[0];
+                        let price = product.price;
+                        let quantity = 1; // Default quantity
 
-                // Create product element
-                let productElement = document.createElement('li');
-                productElement.className = 'single-product';
-                productElement.innerHTML = `
+                        // Clear both product containers
+                        document.getElementById('added-products').innerHTML = '';
+                        document.getElementById('rental-products').innerHTML = '';
+
+                        // Create product element
+                        let productElement = document.createElement('li');
+                        productElement.className = 'single-product';
+                        productElement.innerHTML = `
                     <div class="product-area" data-id="${product.id}">
                         <div class="product-img">
                             <img src="${product.images[0] || '/img/inner-page/checkout-product-img1.png'}" alt="">
@@ -486,112 +491,112 @@
                     </div>
                 `;
 
-                // Check category and display in appropriate section
-                if (product.cat_id === 5 || product.cat_id === 6) {
-                    // Rental product
-                    document.getElementById('rental-products').appendChild(productElement);
-                    document.getElementById('added-products').innerHTML = '<li>No regular products</li>';
-                    
-                    // Update rental total
-                    document.getElementById('final-total1').textContent = `$${price.toFixed(2)}`;
-                    document.getElementById('final-total').textContent = '$0.00';
-                    document.getElementById('subtotal').textContent = '$0.00';
-                    document.getElementById('tax').textContent = '$0.00';
-                    document.getElementById('final-total-both').textContent = `$${price.toFixed(2)}`;
-                } else {
-                    // Regular product
-                    document.getElementById('added-products').appendChild(productElement);
-                    document.getElementById('rental-products').innerHTML = '<li>No rental products</li>';
-                    
-                    // Calculate tax
-                    let igsttax = parseFloat(document.getElementById("total-incl").innerText.replace('%', '')) / 100;
-                    let hsttax = parseFloat(document.getElementById("total-excl").innerText.replace('%', '')) / 100;
-                    let taxsum = igsttax + hsttax;
-                    let totalTax = price * taxsum;
+                        // Check category and display in appropriate section
+                        if (product.cat_id === 5 || product.cat_id === 6) {
+                            // Rental product
+                            document.getElementById('rental-products').appendChild(productElement);
+                            document.getElementById('added-products').innerHTML = '<li>No regular products</li>';
 
-                    // Update regular totals
-                    document.getElementById('subtotal').textContent = `$${price.toFixed(2)}`;
-                    document.getElementById('tax').textContent = `$${totalTax.toFixed(2)}`;
-                    document.getElementById('final-total').textContent = `$${(price + totalTax).toFixed(2)}`;
-                    document.getElementById('final-total1').textContent = '$0.00';
-                    document.getElementById('final-total-both').textContent = `$${(price + totalTax).toFixed(2)}`;
+                            // Update rental total
+                            document.getElementById('final-total1').textContent = `$${price.toFixed(2)}`;
+                            document.getElementById('final-total').textContent = '$0.00';
+                            document.getElementById('subtotal').textContent = '$0.00';
+                            document.getElementById('tax').textContent = '$0.00';
+                            document.getElementById('final-total-both').textContent = `$${price.toFixed(2)}`;
+                        } else {
+                            // Regular product
+                            document.getElementById('added-products').appendChild(productElement);
+                            document.getElementById('rental-products').innerHTML = '<li>No rental products</li>';
+
+                            // Calculate tax
+                            let igsttax = parseFloat(document.getElementById("total-incl").innerText.replace('%', '')) / 100;
+                            let hsttax = parseFloat(document.getElementById("total-excl").innerText.replace('%', '')) / 100;
+                            let taxsum = igsttax + hsttax;
+                            let totalTax = price * taxsum;
+
+                            // Update regular totals
+                            document.getElementById('subtotal').textContent = `$${price.toFixed(2)}`;
+                            document.getElementById('tax').textContent = `$${totalTax.toFixed(2)}`;
+                            document.getElementById('final-total').textContent = `$${(price + totalTax).toFixed(2)}`;
+                            document.getElementById('final-total1').textContent = '$0.00';
+                            document.getElementById('final-total-both').textContent = `$${(price + totalTax).toFixed(2)}`;
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        document.getElementById('added-products').innerHTML = '<li>Error loading product</li>';
+                        document.getElementById('rental-products').innerHTML = '<li>Error loading product</li>';
+                    });
+            } else {
+                const cartProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
+                console.log("Cart products from localStorage:", cartProducts);
+
+                if (cartProducts.length === 0) {
+                    console.log("No products in cart");
+                    document.getElementById('added-products').innerHTML = '<li>Your cart is empty</li>';
+                    document.getElementById('rental-products').innerHTML = '<li>Your cart is empty</li>';
+                    return;
                 }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                document.getElementById('added-products').innerHTML = '<li>Error loading product</li>';
-                document.getElementById('rental-products').innerHTML = '<li>Error loading product</li>';
-            });
-    } else {
-            const cartProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
-            console.log("Cart products from localStorage:", cartProducts);
 
-            if (cartProducts.length === 0) {
-                console.log("No products in cart");
-                document.getElementById('added-products').innerHTML = '<li>Your cart is empty</li>';
-                document.getElementById('rental-products').innerHTML = '<li>Your cart is empty</li>';
-                return;
-            }
+                // Initialize totals for both categories
+                let regularSubtotal = 0;
+                let rentalSubtotal = 0;
+                let totalTax = 0;
 
-            // Initialize totals for both categories
-            let regularSubtotal = 0;
-            let rentalSubtotal = 0;
-            let totalTax = 0;
+                // Get tax rates once
+                let igsttax = parseFloat(document.getElementById("total-incl").innerText.replace('%', '')) / 100;
+                let hsttax = parseFloat(document.getElementById("total-excl").innerText.replace('%', '')) / 100;
+                let taxsum = igsttax + hsttax;
+                console.log(taxsum, "taxsum");
 
-            // Get tax rates once
-            let igsttax = parseFloat(document.getElementById("total-incl").innerText.replace('%', '')) / 100;
-            let hsttax = parseFloat(document.getElementById("total-excl").innerText.replace('%', '')) / 100;
-            let taxsum = igsttax + hsttax;
-            console.log(taxsum, "taxsum");
+                fetch('http://localhost:3000/cart')
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+                        return response.json();
+                    })
+                    .then(cartData => {
+                        console.log("Cart Data:", cartData);
 
-            fetch('http://localhost:3000/cart')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! status: ${response.status}`);
-                    }
-                    return response.json();
-                })
-                .then(cartData => {
-                    console.log("Cart Data:", cartData);
+                        const matchedProducts = cartData.filter(item => cartProducts.includes(item.id));
+                        console.log("Matched products:", matchedProducts);
 
-                    const matchedProducts = cartData.filter(item => cartProducts.includes(item.id));
-                    console.log("Matched products:", matchedProducts);
+                        if (matchedProducts.length === 0) {
+                            console.log("No matched products found");
+                            document.getElementById('added-products').innerHTML = '<li>No matching products found</li>';
+                            document.getElementById('rental-products').innerHTML = '<li>No matching products found</li>';
+                            return Promise.reject("No matched products");
+                        }
 
-                    if (matchedProducts.length === 0) {
-                        console.log("No matched products found");
-                        document.getElementById('added-products').innerHTML = '<li>No matching products found</li>';
-                        document.getElementById('rental-products').innerHTML = '<li>No matching products found</li>';
-                        return Promise.reject("No matched products");
-                    }
+                        const quantityMap = {};
 
-                    const quantityMap = {};
+                        // Fetch product details and calculate subtotal
+                        return Promise.all(matchedProducts.map(item => {
+                            return fetch(`http://localhost:3000/product?id=${item.product_id}`)
+                                .then(response => {
+                                    if (!response.ok) {
+                                        throw new Error(`HTTP error! Status: ${response.status}`);
+                                    }
+                                    return response.json();
+                                })
+                                .then(productDetails => {
+                                    const product = productDetails[0]; // Assuming the product details are returned as an array
+                                    let price = product.price;
+                                    let quantity = item.quantity || 1;
+                                    quantityMap[item.product_id] = quantity;
 
-                    // Fetch product details and calculate subtotal
-                    return Promise.all(matchedProducts.map(item => {
-                        return fetch(`http://localhost:3000/product?id=${item.product_id}`)
-                            .then(response => {
-                                if (!response.ok) {
-                                    throw new Error(`HTTP error! Status: ${response.status}`);
-                                }
-                                return response.json();
-                            })
-                            .then(productDetails => {
-                                const product = productDetails[0]; // Assuming the product details are returned as an array
-                                let price = product.price;
-                                let quantity = item.quantity || 1;
-                                quantityMap[item.product_id] = quantity;
+                                    // Check if the product's cat_id is 5 or 6
+                                    if (product.cat_id !== 5 && product.cat_id !== 6) {
+                                        // Regular product
+                                        console.log(`Product with id ${item.product_id} is a regular product`);
+                                        let itemSubtotal = price * quantity;
+                                        regularSubtotal += itemSubtotal;
 
-                                // Check if the product's cat_id is 5 or 6
-                                if (product.cat_id !== 5 && product.cat_id !== 6) {
-                                    // Regular product
-                                    console.log(`Product with id ${item.product_id} is a regular product`);
-                                    let itemSubtotal = price * quantity;
-                                    regularSubtotal += itemSubtotal;
-
-                                    // Create product list item
-                                    let productElement = document.createElement('li');
-                                    productElement.className = 'single-product';
-                                    productElement.innerHTML = `
+                                        // Create product list item
+                                        let productElement = document.createElement('li');
+                                        productElement.className = 'single-product';
+                                        productElement.innerHTML = `
                             <div class="product-area" data-id="${product.id}">
                                 <div class="product-img">
                                     <img src="${product.images[0] || '/img/inner-page/checkout-product-img1.png'}" alt="">
@@ -600,9 +605,9 @@
                                     <h5><a href="#">${product.name}</a></h5>
                                     <div class="product-total">
                                         <div class="quantity-counter">
-                                            <!-- <a href="#" class="quantity__minus"><i class='bx bx-minus'></i></a> -->
+                                            <a href="#" class="quantity__minus"><i class='bx bx-minus'></i></a> 
                                             <input name="quantity" type="text" class="quantity__input" value="${quantity}">
-                                            <!-- <a href="#" class="quantity__plus"><i class='bx bx-plus'></i></a> -->
+                                            <a href="#" class="quantity__plus"><i class='bx bx-plus'></i></a>
                                         </div>
                                         <strong> <i class="bi bi-x-lg px-2"></i>
                                             <span class="product-price">${price}</span>
@@ -615,19 +620,19 @@
                             </div>
                             `;
 
-                                    document.getElementById('added-products').appendChild(productElement);
-                                    initializeQuantityControlsForElement(productElement);
-                                }
-                                else {
-                                    // Rental product (cat_id 5 or 6)
-                                    console.log(`Product with id ${product.id} is a rental product`);
-                                    let itemSubtotal = price * quantity;
-                                    rentalSubtotal += itemSubtotal;
+                                        document.getElementById('added-products').appendChild(productElement);
+                                        initializeQuantityControlsForElement(productElement);
+                                    }
+                                    else {
+                                        // Rental product (cat_id 5 or 6)
+                                        console.log(`Product with id ${product.id} is a rental product`);
+                                        let itemSubtotal = price * quantity;
+                                        rentalSubtotal += itemSubtotal;
 
-                                    // Create product list item
-                                    let productElement = document.createElement('li');
-                                    productElement.className = 'single-product';
-                                    productElement.innerHTML = `
+                                        // Create product list item
+                                        let productElement = document.createElement('li');
+                                        productElement.className = 'single-product';
+                                        productElement.innerHTML = `
                             <div class="product-area" data-id="${product.id}">
                                 <div class="product-img">
                                     <img src="${product.images[0] || '/img/inner-page/checkout-product-img1.png'}" alt="">
@@ -636,9 +641,9 @@
                                     <h5><a href="#">${product.name}</a></h5>
                                     <div class="product-total">
                                         <div class="quantity-counter">
-                                            <!-- <a href="#" class="quantity__minus"><i class='bx bx-minus'></i></a> -->
+                                             <a href="#" class="quantity__minus"><i class='bx bx-minus'></i></a> 
                                             <input name="quantity" type="text" class="quantity__input" value="${quantity}">
-                                            <!-- <a href="#" class="quantity__plus"><i class='bx bx-plus'></i></a> -->
+                                           <a href="#" class="quantity__plus"><i class='bx bx-plus'></i></a> 
                                         </div>
                                         <strong> <i class="bi bi-x-lg px-2"></i>
                                             <span class="product-price">${price}</span>
@@ -651,50 +656,50 @@
                             </div>
                             `;
 
-                                    document.getElementById('rental-products').appendChild(productElement);
-                                    initializeQuantityControlsForElement(productElement);
-                                }
-                            });
-                    }));
-                })
-                
-                .then(() => {
-                    console.log("All products loaded");
+                                        document.getElementById('rental-products').appendChild(productElement);
+                                        initializeQuantityControlsForElement(productElement);
+                                    }
+                                });
+                        }));
+                    })
 
-                    // Calculate tax for regular products
-                    totalTax = regularSubtotal * taxsum;
+                    .then(() => {
+                        console.log("All products loaded");
 
-                    // Update all totals in the UI
-                    if (document.getElementById('subtotal')) {
-                        document.getElementById('subtotal').textContent = `$${regularSubtotal.toFixed(2)}`;
-                    }
+                        // Calculate tax for regular products
+                        totalTax = regularSubtotal * taxsum;
 
-                    if (document.getElementById('tax')) {
-                        document.getElementById('tax').textContent = `$${totalTax.toFixed(2)}`;
-                    }
+                        // Update all totals in the UI
+                        if (document.getElementById('subtotal')) {
+                            document.getElementById('subtotal').textContent = `$${regularSubtotal.toFixed(2)}`;
+                        }
 
-                    if (document.getElementById('final-total')) {
-                        document.getElementById('final-total').textContent = `$${(regularSubtotal + totalTax).toFixed(2)}`;
-                    }
+                        if (document.getElementById('tax')) {
+                            document.getElementById('tax').textContent = `$${totalTax.toFixed(2)}`;
+                        }
 
-                    // Update rental total
-                    if (document.getElementById('final-total1')) {
-                        document.getElementById('final-total1').textContent = `$${rentalSubtotal.toFixed(2)}`;
-                    }
+                        if (document.getElementById('final-total')) {
+                            document.getElementById('final-total').textContent = `$${(regularSubtotal + totalTax).toFixed(2)}`;
+                        }
 
-                    let totalBoth = regularSubtotal + rentalSubtotal + totalTax ; // Calculate total for both categories
-                    document.getElementById('final-total-both').textContent = `$${totalBoth.toFixed(2)}`; // Update the total in the UI
-                })
-                .catch(error => {
-                    console.error('Error in cart operation:', error);
-                    const errorMessageElement = document.getElementById('error-message');
-                    if (errorMessageElement) {
-                        errorMessageElement.textContent = 'Could not load cart details. Please try again.';
-                    } else {
-                        console.warn("Error message element not found.");
-                        document.getElementById('added-products').innerHTML = '<li>Error loading cart</li>';
-                    }
-                });
+                        // Update rental total
+                        if (document.getElementById('final-total1')) {
+                            document.getElementById('final-total1').textContent = `$${rentalSubtotal.toFixed(2)}`;
+                        }
+
+                        let totalBoth = regularSubtotal + rentalSubtotal + totalTax; // Calculate total for both categories
+                        document.getElementById('final-total-both').textContent = `$${totalBoth.toFixed(2)}`; // Update the total in the UI
+                    })
+                    .catch(error => {
+                        console.error('Error in cart operation:', error);
+                        const errorMessageElement = document.getElementById('error-message');
+                        if (errorMessageElement) {
+                            errorMessageElement.textContent = 'Could not load cart details. Please try again.';
+                        } else {
+                            console.warn("Error message element not found.");
+                            document.getElementById('added-products').innerHTML = '<li>Error loading cart</li>';
+                        }
+                    });
             }
             // Function to initialize quantity controls for a specific element
             function initializeQuantityControlsForElement(element) {
@@ -781,120 +786,120 @@
             }
         });
     </script>
-              <script>
-                document.addEventListener('DOMContentLoaded', function () {
-                    // ... existing code ...
-        
-                    // Add event listener for the finalize payment button
-                    document.getElementById('finalize-payment').addEventListener('click', function (e) {
-                        e.preventDefault(); // Prevent default form submission
-        
-                        // Collect form data
-                        const fName = document.querySelector('input[name="fname"]').value.trim();
-                        const lName = document.querySelector('input[name="lname"]').value.trim();
-                        const address = document.querySelector('input[name="address"]').value.trim();
-                        const city = document.querySelector('select[name="city"]').value;
-                        const postCode = document.querySelector('input[name="fname"]').value.trim();
-                        const phoneNum = document.querySelector('input[name="phone"]').value.trim();
-                        const email = document.querySelector('input[name="email"]').value.trim();
-                        const note = document.querySelector('textarea[name="message"]').value.trim();
-        
-                        // Form validation
-                        if (!fName || !lName || !address || !city || !postCode || !phoneNum || !email) {
-                            alert("Please fill in all required fields.");
-                            return;
-                        }
-        
-                        // Validate email format
-                        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                        if (!emailPattern.test(email)) {
-                            alert("Please enter a valid email address.");
-                            return;
-                        }
-        
-                        // Collect regular products
-                        const regularProducts = [];
-                        document.querySelectorAll('#added-products .single-product').forEach(item => {
-                            const productId = item.querySelector('.product-area').dataset.id; // Ensure productId is collected from the correct element
-                            const quantity = parseInt(item.querySelector('.quantity__input').value, 10);
-                            regularProducts.push({ product_id: productId, quantity: quantity }); // Include product_id here
-                        });
-        
-                        // Collect rental products
-                        const rentalProducts = [];
-                        document.querySelectorAll('#rental-products .single-product').forEach(item => {
-                            const productId = item.querySelector('.product-area').dataset.id; // Ensure productId is collected from the correct element
-                            const quantity = parseInt(item.querySelector('.quantity__input').value, 10);
-                            rentalProducts.push({ product_id: productId, quantity: quantity });
-                        });
-        
-                        // Collect payment methods
-                        const paymentOptions = document.querySelectorAll('input[name="payment-method"]:checked');
-                        const selectedPaymentMethods = Array.from(paymentOptions).map(option => option.value); // Store selected payment methods
-        
-                        // Prepare the data object
-                        const data = {
-                            f_name: fName,
-                            l_name: lName,
-                            address: address,
-                            city: city,
-                            post_code: postCode,
-                            phone_num: phoneNum,
-                            email: email,
-                            note: note,
-                            regular_product: regularProducts,
-                            rental_product: rentalProducts,
-                            total: document.getElementById('final-total-both').textContent.replace('$', ''),
-                            payment_method: selectedPaymentMethods
-                        };
-        
-                        // Send data to the API
-                        fetch('http://localhost:3000/bill', {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json',
-                            },
-                            body: JSON.stringify(data),
-                        })
-                        .then(response => {
-                            if (!response.ok) {
-                                throw new Error(`HTTP error! status: ${response.status}`);
-                            }
-                            return response.json();
-                        })
-                        .then(result => {
-                            console.log('Success:', result);
-                            // Handle success (e.g., show a success message, redirect to invoice.html)
-                            // debugger
-                            localStorage.setItem("setbillid",result.id)
-                            // Redirect to invoice.html
-                            window.location.href = 'invoice.html';
-        
-                            // Delete items from the cart API and localStorage
-                            const cartProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
-                            const productIds = regularProducts.map(product => product.product_id);
-        
-                            // Delete each product from the API
-                            const deletePromises = productIds.map(productId => {
-                                return fetch(`http://localhost:3000/cart/${productId}`, {
-                                    method: 'DELETE',
-                                });
-                            });
-        
-                            return Promise.all(deletePromises);
-                        })
-                        .then(() => {
-                            // Remove cartProducts from localStorage
-                            localStorage.removeItem('cartProducts');
-                           
-                        })
-                        .catch(error => {
-                            console.error('Error:', error);
-                            // Handle error (e.g., show an error message)
-                        });
-                    });
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // ... existing code ...
+
+            // Add event listener for the finalize payment button
+            document.getElementById('finalize-payment').addEventListener('click', function (e) {
+                e.preventDefault(); // Prevent default form submission
+
+                // Collect form data
+                const fName = document.querySelector('input[name="fname"]').value.trim();
+                const lName = document.querySelector('input[name="lname"]').value.trim();
+                const address = document.querySelector('input[name="address"]').value.trim();
+                const city = document.querySelector('select[name="city"]').value;
+                const postCode = document.querySelector('input[name="fname"]').value.trim();
+                const phoneNum = document.querySelector('input[name="phone"]').value.trim();
+                const email = document.querySelector('input[name="email"]').value.trim();
+                const note = document.querySelector('textarea[name="message"]').value.trim();
+
+                // Form validation
+                if (!fName || !lName || !address || !city || !postCode || !phoneNum || !email) {
+                    alert("Please fill in all required fields.");
+                    return;
+                }
+
+                // Validate email format
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailPattern.test(email)) {
+                    alert("Please enter a valid email address.");
+                    return;
+                }
+
+                // Collect regular products
+                const regularProducts = [];
+                document.querySelectorAll('#added-products .single-product').forEach(item => {
+                    const productId = item.querySelector('.product-area').dataset.id; // Ensure productId is collected from the correct element
+                    const quantity = parseInt(item.querySelector('.quantity__input').value, 10);
+                    regularProducts.push({ product_id: productId, quantity: quantity }); // Include product_id here
                 });
-            </script>
+
+                // Collect rental products
+                const rentalProducts = [];
+                document.querySelectorAll('#rental-products .single-product').forEach(item => {
+                    const productId = item.querySelector('.product-area').dataset.id; // Ensure productId is collected from the correct element
+                    const quantity = parseInt(item.querySelector('.quantity__input').value, 10);
+                    rentalProducts.push({ product_id: productId, quantity: quantity });
+                });
+
+                // Collect payment methods
+                const paymentOptions = document.querySelectorAll('input[name="payment-method"]:checked');
+                const selectedPaymentMethods = Array.from(paymentOptions).map(option => option.value); // Store selected payment methods
+
+                // Prepare the data object
+                const data = {
+                    f_name: fName,
+                    l_name: lName,
+                    address: address,
+                    city: city,
+                    post_code: postCode,
+                    phone_num: phoneNum,
+                    email: email,
+                    note: note,
+                    regular_product: regularProducts,
+                    rental_product: rentalProducts,
+                    total: document.getElementById('final-total-both').textContent.replace('$', ''),
+                    payment_method: selectedPaymentMethods
+                };
+
+                // Send data to the API
+                fetch('http://localhost:3000/bill', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data),
+                })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+                        return response.json();
+                    })
+                    .then(result => {
+                        console.log('Success:', result);
+                        // Handle success (e.g., show a success message, redirect to invoice.html)
+                        // debugger
+                        localStorage.setItem("setbillid", result.id)
+                        // Redirect to invoice.html
+                        window.location.href = 'invoice.html';
+
+                        // Delete items from the cart API and localStorage
+                        const cartProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
+                        const productIds = regularProducts.map(product => product.product_id);
+
+                        // Delete each product from the API
+                        const deletePromises = productIds.map(productId => {
+                            return fetch(`http://localhost:3000/cart/${productId}`, {
+                                method: 'DELETE',
+                            });
+                        });
+
+                        return Promise.all(deletePromises);
+                    })
+                    .then(() => {
+                        // Remove cartProducts from localStorage
+                        localStorage.removeItem('cartProducts');
+
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        // Handle error (e.g., show an error message)
+                    });
+            });
+        });
+    </script>
     <!--  Main jQuery  -->
     <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="/js/jquery-3.6.0.min.js"></script>
@@ -914,7 +919,7 @@
     <script src="/js/main.js"></script>
     <script src="/js/index.js"></script>
     <script src="/js/footer.js"></script>
-<script src="/js/shop-list.js"></script>
+    <script src="/js/shop-list.js"></script>
 </body>
 
 
