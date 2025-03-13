@@ -2043,26 +2043,6 @@ function updateCartCount() {
     .padStart(2, "0"); // Update the span with the count
 }
 // Add event listener to "Drop in Basket" button
-document.querySelector('.add-cart-btn').addEventListener('click', function (e) {
-  e.preventDefault();
-
-  const productId = this.getAttribute('data-product-id');
-  const quantityInput = document.querySelector('.quantity__input');
-  const quantity = parseInt(quantityInput.value) || 1; // Ensure valid quantity
-
-  // Example: Store data in localStorage (or send to API)
-  let cart = JSON.parse(localStorage.getItem('cart')) || [];
-  const existingItem = cart.find(item => item.productId === productId);
-
-  if (existingItem) {
-      existingItem.quantity += quantity; // Update quantity if item exists
-  } else {
-      cart.push({ productId, quantity });
-  }
-
-  localStorage.setItem('cart', JSON.stringify(cart));
-  alert(`Added to cart: Product ID ${productId}, Quantity: ${quantity}`);
-});
 
 // Call this function after adding a product to the cart
 document.addEventListener("click", function (event) {
