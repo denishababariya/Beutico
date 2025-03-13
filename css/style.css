@@ -15534,3 +15534,9 @@ Testimonial-Section Css
 .verify-btn:hover {
   background: #0056b3;
 } */
+
+@media  (max-width: 991px) {
+  .checkout-section .row{
+    flex-direction: column-reverse !important;
+  }
+}
