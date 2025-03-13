@@ -388,3 +388,19 @@ document.addEventListener('DOMContentLoaded', function() {
     // Function to display search results (optional)
     
 });
+
+
+document.addEventListener('click', function(e) {
+  if (e.target.closest('.shop-now-btn')) {
+    e.preventDefault(); // Prevent default link behavior
+    
+    const shopNowBtn = e.target.closest('.shop-now-btn');
+    const productId = shopNowBtn.getAttribute('data-product-id');
+    
+    if (productId) {
+      localStorage.setItem('shopnow-id', productId);
+      // Redirect to checkout page
+      window.location.href = 'checkout.html';
+    }
+  }
+});

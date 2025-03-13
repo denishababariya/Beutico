@@ -443,6 +443,86 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
+            // First check for shopnow-id
+    const shopNowId = localStorage.getItem('shopnow-id');
+    
+    if (shopNowId) {
+        // If shopnow-id exists, fetch and display only that product
+        fetch(`http://localhost:3000/product?id=${shopNowId}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(productDetails => {
+                const product = productDetails[0];
+                let price = product.price;
+                let quantity = 1; // Default quantity
+
+                // Clear both product containers
+                document.getElementById('added-products').innerHTML = '';
+                document.getElementById('rental-products').innerHTML = '';
+
+                // Create product element
+                let productElement = document.createElement('li');
+                productElement.className = 'single-product';
+                productElement.innerHTML = `
+                    <div class="product-area" data-id="${product.id}">
+                        <div class="product-img">
+                            <img src="${product.images[0] || '/img/inner-page/checkout-product-img1.png'}" alt="">
+                        </div>
+                        <div class="product-info">
+                            <h5><a href="#">${product.name}</a></h5>
+                            <div class="product-total">
+                                <div class="quantity-counter">
+                                    <input name="quantity" type="text" class="quantity__input" value="1">
+                                </div>
+                                <strong> <i class="bi bi-x-lg px-2"></i>
+                                    <span class="product-price">${price}</span>
+                                </strong>
+                            </div>
+                        </div>
+                    </div>
+                `;
+
+                // Check category and display in appropriate section
+                if (product.cat_id === 5 || product.cat_id === 6) {
+                    // Rental product
+                    document.getElementById('rental-products').appendChild(productElement);
+                    document.getElementById('added-products').innerHTML = '<li>No regular products</li>';
+                    
+                    // Update rental total
+                    document.getElementById('final-total1').textContent = `$${price.toFixed(2)}`;
+                    document.getElementById('final-total').textContent = '$0.00';
+                    document.getElementById('subtotal').textContent = '$0.00';
+                    document.getElementById('tax').textContent = '$0.00';
+                    document.getElementById('final-total-both').textContent = `$${price.toFixed(2)}`;
+                } else {
+                    // Regular product
+                    document.getElementById('added-products').appendChild(productElement);
+                    document.getElementById('rental-products').innerHTML = '<li>No rental products</li>';
+                    
+                    // Calculate tax
+                    let igsttax = parseFloat(document.getElementById("total-incl").innerText.replace('%', '')) / 100;
+                    let hsttax = parseFloat(document.getElementById("total-excl").innerText.replace('%', '')) / 100;
+                    let taxsum = igsttax + hsttax;
+                    let totalTax = price * taxsum;
+
+                    // Update regular totals
+                    document.getElementById('subtotal').textContent = `$${price.toFixed(2)}`;
+                    document.getElementById('tax').textContent = `$${totalTax.toFixed(2)}`;
+                    document.getElementById('final-total').textContent = `$${(price + totalTax).toFixed(2)}`;
+                    document.getElementById('final-total1').textContent = '$0.00';
+                    document.getElementById('final-total-both').textContent = `$${(price + totalTax).toFixed(2)}`;
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById('added-products').innerHTML = '<li>Error loading product</li>';
+                document.getElementById('rental-products').innerHTML = '<li>Error loading product</li>';
+            });
+    } else {
             const cartProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
             console.log("Cart products from localStorage:", cartProducts);
 
@@ -577,6 +657,7 @@
                             });
                     }));
                 })
+                
                 .then(() => {
                     console.log("All products loaded");
 
@@ -614,7 +695,7 @@
                         document.getElementById('added-products').innerHTML = '<li>Error loading cart</li>';
                     }
                 });
-
+            }
             // Function to initialize quantity controls for a specific element
             function initializeQuantityControlsForElement(element) {
                 const plusButton = element.querySelector('.quantity__plus');
