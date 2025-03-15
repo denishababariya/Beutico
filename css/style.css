@@ -15540,3 +15540,12 @@ Testimonial-Section Css
     flex-direction: column-reverse !important;
   }
 }
+.shop-details-tab-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.shop-details-tab-img img {
+  width: 100%;
+  transition: transform 0.3s ease-in-out;
+}

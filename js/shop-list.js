@@ -497,4 +497,23 @@ async function handleSearch() {
     console.error('Error searching products:', error);
   }
 }
-// price filter end
+$(document).ready(function () {
+  $(".shop-details-tab-img").mousemove(function (event) {
+      let $image = $(this).find("img");
+      let offset = $(this).offset();
+      let x = ((event.pageX - offset.left) / $(this).width()) * 100;
+      let y = ((event.pageY - offset.top) / $(this).height()) * 100;
+      
+      $image.css({
+          "transform": "scale(1.4)",
+          "transform-origin": x + "% " + y + "%"
+      });
+  });
+
+  $(".shop-details-tab-img").mouseleave(function () {
+      $(this).find("img").css({
+          "transform": "scale(1)",
+          "transform-origin": "center center"
+      });
+  });
+});
