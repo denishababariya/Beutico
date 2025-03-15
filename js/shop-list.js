@@ -464,6 +464,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
           // Update localStorage
           localStorage.setItem("priceSort", selectedValue);
+          location.reload(); 
           console.log("Sorting Preference Saved:", selectedValue);
 
           // Update UI
