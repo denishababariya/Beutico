@@ -18,6 +18,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.getElementById("book-jewelry-link").addEventListener("click", function() {
             localStorage.setItem("selectedcategoryId", "7");
+            localStorage.setItem("selectedSubcategoryId", "");
+            localStorage.removeItem('searchResultIds');
     });
 });
 
