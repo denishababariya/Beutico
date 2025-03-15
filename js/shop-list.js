@@ -404,3 +404,43 @@ document.addEventListener('click', function(e) {
     }
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const niceSelect = document.querySelector(".nice-select");
+  const options = document.querySelectorAll(".nice-select .option");
+  const current = document.querySelector(".nice-select .current");
+
+  if (!niceSelect || options.length === 0 || !current) {
+      console.error("Custom select dropdown not found!");
+      return;
+  }
+
+  // Load the saved value from localStorage (if available)
+  const savedSort = localStorage.getItem("priceSort");
+  if (savedSort) {
+      // Set the selected value in UI
+      options.forEach(option => {
+          if (option.getAttribute("data-value") === savedSort) {
+              options.forEach(opt => opt.classList.remove("selected")); // Remove existing selection
+              option.classList.add("selected"); // Add selected class
+              current.textContent = option.textContent; // Update UI
+          }
+      });
+  }
+
+  // Event listener for clicking on options
+  options.forEach(option => {
+      option.addEventListener("click", function () {
+          const selectedValue = this.getAttribute("data-value");
+
+          // Update localStorage
+          localStorage.setItem("priceSort", selectedValue);
+          console.log("Sorting Preference Saved:", selectedValue);
+
+          // Update UI
+          options.forEach(opt => opt.classList.remove("selected"));
+          this.classList.add("selected");
+          current.textContent = this.textContent;
+      });
+  });
+});
