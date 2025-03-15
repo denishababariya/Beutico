@@ -33,7 +33,7 @@
       position: relative;
       overflow: hidden;
     }
-    
+
     .glass-effect::before {
       content: '';
       position: absolute;
@@ -41,25 +41,22 @@
       left: -100%;
       width: 100%;
       height: 100%;
-      background: linear-gradient(
-        120deg,
-        transparent,
-        rgba(255, 255, 255, 0.3),
-        rgba(255, 255, 255, 0.4)
-      );
+      background: linear-gradient(120deg,
+          transparent,
+          rgba(255, 255, 255, 0.3),
+          rgba(255, 255, 255, 0.4));
       backdrop-filter: blur(5px);
       z-index: 1;
     }
-    
+
     .glass-effect:hover::before {
       left: 100%;
       transition: all 0.6s ease;
     }
-    
+
     .glass-effect img {
       transition: transform 0.6s ease;
     }
-
   </style>
 </head>
 
@@ -3272,7 +3269,7 @@
   <script src="/js/main.js"></script>
   <script src="/js/index.js"></script>
   <script src="/js/footer.js"></script>
-<script src="/js/shop-list.js"></script>script src="/js/shop-list.js"></script>
+  <script src="/js/shop-list.js"></script>script src="/js/shop-list.js"></script>
   <script>
     // Function to update the cart display
     async function updateCartDisplay() {
@@ -3351,20 +3348,20 @@
 
 
 
-  
+
   <script>
-     // Combined and fixed script for OTP and password management
-     document.addEventListener('DOMContentLoaded', function () {
+    // Combined and fixed script for OTP and password management
+    document.addEventListener('DOMContentLoaded', function () {
       const togglePassword = document.getElementById('togglePassword');
       if (togglePassword) {
-        togglePassword.addEventListener('click', function() {
+        togglePassword.addEventListener('click', function () {
           const password = document.getElementById('password');
           togglePasswordVisibility(password, this);
         });
       }
-      
+
       // Add event listener for when the password modal is shown
-      $('#createPasswordModal').on('shown.bs.modal', function() {
+      $('#createPasswordModal').on('shown.bs.modal', function () {
         setupNewPasswordToggles();
       });
       setupNewPasswordToggles();
@@ -3373,23 +3370,23 @@
 
     function setupNewPasswordToggles() {
       console.log("Setting up new password toggles");
-      
+
       const toggleNewPassword = document.getElementById('toggleNewPassword');
       const toggleConfirmPassword = document.getElementById('toggleConfirmPassword');
-      
+
       if (toggleNewPassword) {
         console.log("Found toggleNewPassword element");
-        toggleNewPassword.addEventListener('click', function() {
+        toggleNewPassword.addEventListener('click', function () {
           const password = document.getElementById('newPassword');
           togglePasswordVisibility(password, this);
         });
       } else {
         console.log("toggleNewPassword element not found");
       }
-      
+
       if (toggleConfirmPassword) {
         console.log("Found toggleConfirmPassword element");
-        toggleConfirmPassword.addEventListener('click', function() {
+        toggleConfirmPassword.addEventListener('click', function () {
           const password = document.getElementById('confirmNewPassword');
           togglePasswordVisibility(password, this);
         });
@@ -3397,7 +3394,7 @@
         console.log("toggleConfirmPassword element not found");
       }
     }
-    
+
     function togglePasswordVisibility(inputField, icon) {
       if (inputField.type === 'password') {
         inputField.type = 'text';
