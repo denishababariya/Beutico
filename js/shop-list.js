@@ -392,15 +392,97 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('click', function(e) {
   if (e.target.closest('.shop-now-btn')) {
-    e.preventDefault(); // Prevent default link behavior
+    e.preventDefault();
     
-    const shopNowBtn = e.target.closest('.shop-now-btn');
-    const productId = shopNowBtn.getAttribute('data-product-id');
+    const userId = localStorage.getItem('user_id');
     
-    if (productId) {
-      localStorage.setItem('shopnow-id', productId);
-      // Redirect to checkout page
-      window.location.href = 'checkout.html';
+    if (!userId) {
+      // If no user_id, show login modal
+      openLoginModal();
+      return;
     }
+
+    // Check if user exists in API
+    fetch(`http://localhost:3000/user?id=${userId}`)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(users => {
+        if (users.length === 0) {
+          // User not found in API
+          localStorage.removeItem('user_id'); // Clear invalid user_id
+          openLoginModal();
+          return;
+        }
+
+        // User exists, proceed with shop now functionality
+        const shopNowBtn = e.target.closest('.shop-now-btn');
+        const productId = shopNowBtn.getAttribute('data-product-id');
+        
+        if (productId) {
+          localStorage.setItem('shopnow-id', productId);
+          window.location.href = 'checkout.html';
+        }
+      })
+      .catch(error => {
+        console.error('Error checking user:', error);
+        openLoginModal();
+      });
   }
 });
+
+function clearLocalStoragedata() {
+  localStorage.removeItem('selectedcategoryId');
+  localStorage.removeItem('selectedSubcategoryId');
+  localStorage.removeItem('searchResultIds');
+  localStorage.removeItem('searchTerm');
+}
+
+async function handleSearch() {
+  const searchInput = document.getElementById('searchInput');
+  const searchTerm = searchInput.value.trim().toLowerCase();
+  
+  if (searchTerm === '') {
+      console.log('Please enter a search term');
+      return;
+  }
+
+  try {
+      const response = await fetch('http://localhost:3000/product');
+      const products = await response.json();
+
+      // Filter products and get their IDs
+      const searchResults = products.filter(product => {
+          return (
+              (product.name?.toLowerCase()?.includes(searchTerm)) ||
+              (product.description?.toLowerCase()?.includes(searchTerm)) ||
+              (product.category?.toLowerCase()?.includes(searchTerm))
+          );
+      });
+
+      // Extract IDs from search results
+      const resultIds = searchResults.map(product => product.id);
+
+      // Store search term and result IDs in localStorage
+      localStorage.setItem('searchTerm', searchTerm);
+      localStorage.setItem('searchResultIds', JSON.stringify(resultIds));
+      
+      // Clear category and subcategory selections
+      localStorage.removeItem('selectedCategoryId');
+      localStorage.removeItem('selectedSubcategoryId');
+      
+      // Log for debugging
+      console.log('Search Results IDs:', resultIds);
+      console.log(`Found ${resultIds.length} products matching "${searchTerm}"`);
+      console.log('Cleared category and subcategory selections');
+
+      // Redirect to shop-list.html
+      window.location.href = 'shop-list.html';
+
+  } catch (error) {
+      console.error('Error searching products:', error);
+  }
+}
