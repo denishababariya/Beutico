@@ -30,13 +30,38 @@
     <link rel="stylesheet" href="/css/style.css">
     <title>OrnaCare - Beauty & jewelery</title>
     <link rel="icon" href="/img/logo1.png" type="image/gif">
+
+    <style>
+        .border-reveal-effect {
+          position: relative;
+          overflow: hidden;
+        }
+        .border-reveal-effect::before {
+          content: '';
+          position: absolute;
+          inset: 10px;
+          border: 2px solid transparent;
+          z-index: 1;
+          transition: all 0.3s ease;
+        }
+        .border-reveal-effect:hover::before {
+          border-color: rgba(255, 255, 255, 0.8);
+          inset: 15px;
+        }
+        .border-reveal-effect img{
+          transition: transform 0.7s ease;
+        }
+        .border-reveal-effect:hover img{
+          transform: scale(1.1) rotate(3deg);
+        }
+      </style>
 </head>
 
 <body>
 
     <div class="top-bar" id="topBarSection">
-  <!-- Content will be dynamically inserted here -->
-</div>
+        <!-- Content will be dynamically inserted here -->
+    </div>
     <!-- Start header section -->
     <div class="modal login-modal fade" id="user-login" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -119,7 +144,7 @@
             <div class="header-logo d-lg-none d-flex">
                 <a href="index.html"><img alt="image" class="img-fluid" src="/img/brand.png"></a>
             </div>
-          
+
             <div class="main-menu">
                 <div class="mobile-logo-area d-lg-none d-flex justify-content-between align-items-center">
                     <div class="mobile-logo-wrap">
@@ -267,7 +292,7 @@
 
 
 
-  
+
 
     <!-- Start Makeup section -->
     <div class="makeup-section mb-110">
@@ -393,35 +418,35 @@
                     <div class="col-12">
                         <div class="swiper instagram-slider">
                             <div class="swiper-wrapper x_shap">
-                                <div class="swiper-slide">
+                                <div class="swiper-slide border-reveal-effect">
                                     <a href="https://www.instagram.com/"><img src="/img/home1/insta-img1.png"
                                             alt="" /></a>
                                 </div>
-                                <div class="swiper-slide">
+                                <div class="swiper-slide border-reveal-effect">
                                     <a href="https://www.instagram.com/"><img src="/img/home1/insta-img2.png"
                                             alt="" /></a>
                                 </div>
-                                <div class="swiper-slide">
+                                <div class="swiper-slide border-reveal-effect">
                                     <a href="https://www.instagram.com/"><img src="/img/home1/insta-img3.png"
                                             alt="" /></a>
                                 </div>
-                                <div class="swiper-slide">
+                                <div class="swiper-slide border-reveal-effect">
                                     <a href="https://www.instagram.com/"><img src="/img/home1/insta-img4.png"
                                             alt="" /></a>
                                 </div>
-                                <div class="swiper-slide">
+                                <div class="swiper-slide border-reveal-effect">
                                     <a href="https://www.instagram.com/"><img src="/img/home1/insta-img5.png"
                                             alt="" /></a>
                                 </div>
-                                <div class="swiper-slide">
+                                <div class="swiper-slide border-reveal-effect">
                                     <a href="https://www.instagram.com/"><img src="/img/home1/insta-img6.png"
                                             alt="" /></a>
                                 </div>
-                                <div class="swiper-slide">
+                                <div class="swiper-slide border-reveal-effect">
                                     <a href="https://www.instagram.com/"><img src="/img/home1/insta-img7.png"
                                             alt="" /></a>
                                 </div>
-                                <div class="swiper-slide">
+                                <div class="swiper-slide border-reveal-effect">
                                     <a href="https://www.instagram.com/"><img src="/img/home1/insta-img8.png"
                                             alt="" /></a>
                                 </div>
@@ -466,7 +491,7 @@
     <script src="/js/main.js"></script>
     <script src="/js/index.js"></script>
     <script src="/js/footer.js"></script>
-<script src="/js/shop-list.js"></script>
+    <script src="/js/shop-list.js"></script>
 </body>
 
 <!-- Mirrored from demo-egenslab.b-cdn.net/html/OrnaCare/preview/about-us.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Feb 2025 04:32:22 GMT -->
