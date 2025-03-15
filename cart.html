@@ -34,8 +34,8 @@
 
 <body>
     <div class="top-bar" id="topBarSection">
-  <!-- Content will be dynamically inserted here -->
-</div>
+        <!-- Content will be dynamically inserted here -->
+    </div>
     <!-- Start header section -->
     <div class="modal login-modal fade" id="user-login" data-bs-keyboard="false" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -334,12 +334,17 @@
                         <img src="${product.images[0]}" alt="">
                     </div>
                     <div class="product-content">
-                        <h6><a href="#">${product.name}</a></h6>
+                      <h6>
+    <a href="product-default.html" 
+   
+       onclick="localStorage.setItem('selectedProductId', '${product.id}')">${product.name}
+    </a>
+</h6>
                     </div>
                 </td>
                 <td data-label="Price">
                     <p class="price">
-                        <del>$${product.price + 10}</del> <!-- Assuming original price is $10 more -->
+                 
                         $${product.price}
                     </p>
                 </td>
@@ -527,7 +532,7 @@
     <script src="/js/main.js"></script>
     <script src="/js/index.js"></script>
     <script src="/js/footer.js"></script>
-<script src="/js/shop-list.js"></script>
+    <script src="/js/shop-list.js"></script>
 </body>
 
 <!-- Mirrored from demo-egenslab.b-cdn.net/html/OrnaCare/preview/cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Feb 2025 04:32:08 GMT -->

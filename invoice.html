@@ -580,7 +580,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
     <script src="https://unpkg.com/docx@5.0.2/build/index.js"></script>
 
-    <script>
+    <!-- <script>
         // Function to fetch invoice data from API using billId
         async function fetchInvoiceData() {
             const billId = localStorage.getItem('setbillid'); // Get billId from local storage
@@ -668,6 +668,104 @@
 
         // Call the function to fetch invoice data on page load
         fetchInvoiceData();
+    </script> -->
+    <script>
+        async function fetchInvoiceData() {
+    const billId = localStorage.getItem('setbillid'); // Get billId from local storage
+    if (!billId) {
+        console.error('No billId found in local storage');
+        return;
+    }
+
+    try {
+        const response = await fetch(`http://localhost:3000/bill/${billId}`); // Replace with your API URL
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const invoiceData = await response.json();
+        console.log(invoiceData, "invoiceData");
+
+        populateInvoice(invoiceData); // Call function to populate the invoice
+    } catch (error) {
+        console.error('Error fetching invoice data:', error);
+    }
+}
+
+// Function to populate the invoice with fetched data
+async function populateInvoice(data) {
+    const regularProductList = document.getElementById('regularProductList');
+    const rentalProductList = document.getElementById('rentalProductList');
+    let total = 0;
+    document.getElementById('invoiceDate').innerText = new Date().toLocaleDateString();
+    document.getElementById('invoiceno').innerText = data.id;
+
+    document.getElementById('shipToName').innerText = `${data.f_name} ${data.l_name}`; 
+    document.getElementById('shipToPhone').innerText = data.phone_num;
+    document.getElementById('shipToEmail').innerText = data.email;
+
+    // Check if regular_products exists and is an array
+    if (Array.isArray(data.regular_product)) {
+        const regularProductPromises = data.regular_product.map(async item => {
+            const response = await fetch(`http://localhost:3000/product/${item.product_id}`);
+            if (!response.ok) return;
+            
+            const productData = await response.json();
+            const tr = document.createElement('tr');
+
+            const price = item.price ?? productData.price; // Ensure price is taken from the right source
+            if (!price || isNaN(price)) return; // Skip invalid price
+
+            total += price * item.quantity;
+            tr.innerHTML = `
+                <td>${productData.name}</td>
+                <td>${item.quantity}</td>
+                <td>$${price.toFixed(2)}</td>
+                <td>$${(price * item.quantity).toFixed(2)}</td>
+            `;
+            regularProductList.querySelector('tbody').appendChild(tr);
+        });
+        await Promise.all(regularProductPromises);
+    }
+
+    // Check if rental_products exists and is an array
+    if (Array.isArray(data.rental_product)) {
+        const rentalProductPromises = data.rental_product.map(async item => {
+            const response = await fetch(`http://localhost:3000/product/${item.product_id}`);
+            if (!response.ok) return;
+
+            const productData = await response.json();
+            const tr = document.createElement('tr');
+
+            const price = item.price ?? productData.price; // Ensure price is taken from the right source
+            if (!price || isNaN(price)) return; // Skip invalid price
+
+            total += price * item.quantity;
+            tr.innerHTML = `
+                <td>${productData.name}</td>
+                <td>${item.quantity}</td>
+                <td>$${price.toFixed(2)}</td>
+                <td>$${(price * item.quantity).toFixed(2)}</td>
+            `;
+            rentalProductList.appendChild(tr);
+        });
+        await Promise.all(rentalProductPromises);
+    }
+
+    console.log(total, 'total');
+
+    // Update summary information
+    document.querySelector('.tax-info').innerHTML = `
+        <p>HST RATE: 2.5%</p>
+        <p>IST TAX: 2.5%</p>
+        <p><strong>TOTAL: $${total.toFixed(2)}</strong></p>
+    `;
+    document.querySelector('.balance h3').innerText = `Balance Due: $${data.total}`;
+    document.getElementById('paymentMethod').innerText = data.payment_method.join(', ');
+}
+
+// Call the function to fetch invoice data on page load
+fetchInvoiceData();
+
     </script>
     <script>
         document.getElementById('downloadInvoice').addEventListener('click', function () {

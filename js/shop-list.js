@@ -388,51 +388,64 @@ document.addEventListener('DOMContentLoaded', function() {
     // Function to display search results (optional)
     
 });
-
-
-document.addEventListener('click', function(e) {
-  if (e.target.closest('.shop-now-btn')) {
-    e.preventDefault();
+// document.addEventListener('click', function(e) {
+//   if (e.target.closest('.shop-now-btn')) {
+//     e.preventDefault(); // Prevent default link behavior
     
-    const userId = localStorage.getItem('user_id');
+//     const shopNowBtn = e.target.closest('.shop-now-btn');
+//     const productId = shopNowBtn.getAttribute('data-product-id');
     
-    if (!userId) {
-      // If no user_id, show login modal
-      openLoginModal();
-      return;
-    }
+//     if (productId) {
+//       localStorage.setItem('shopnow-id', productId);
+//       // Redirect to checkout page
+//       window.location.href = 'checkout.html';
+//     }
+//   }
+// });
 
-    // Check if user exists in API
-    fetch(`http://localhost:3000/user?id=${userId}`)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
-      .then(users => {
-        if (users.length === 0) {
-          // User not found in API
-          localStorage.removeItem('user_id'); // Clear invalid user_id
-          openLoginModal();
-          return;
-        }
-
-        // User exists, proceed with shop now functionality
-        const shopNowBtn = e.target.closest('.shop-now-btn');
-        const productId = shopNowBtn.getAttribute('data-product-id');
-        
-        if (productId) {
-          localStorage.setItem('shopnow-id', productId);
-          window.location.href = 'checkout.html';
-        }
-      })
-      .catch(error => {
-        console.error('Error checking user:', error);
+  document.addEventListener('click', function(e) {
+    if (e.target.closest('.shop-now-btn')) {
+      e.preventDefault();
+      
+      const userId = localStorage.getItem('user_id');
+      
+      if (!userId) {
+        // If no user_id, show login modal
         openLoginModal();
-      });
-  }
-});
+        return;
+      }
+
+      // Check if user exists in API
+      fetch(`http://localhost:3000/users?id=${userId}`)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json();
+        })
+        .then(users => {
+          if (users.length === 0) {
+            // User not found in API
+            localStorage.removeItem('user_id'); // Clear invalid user_id
+            openLoginModal();
+            return;
+          }
+
+          // User exists, proceed with shop now functionality
+          const shopNowBtn = e.target.closest('.shop-now-btn');
+          const productId = shopNowBtn.getAttribute('data-product-id');
+          
+          if (productId) {
+            localStorage.setItem('shopnow-id', productId);
+            window.location.href = 'checkout.html';
+          }
+        })
+        .catch(error => {
+          console.error('Error checking user:', error);
+          openLoginModal();
+        });
+    }
+  });
 
 document.addEventListener("DOMContentLoaded", function () {
   const niceSelect = document.querySelector(".nice-select");
@@ -525,3 +538,23 @@ async function handleSearch() {
       console.error('Error searching products:', error);
   }
 }
+$(document).ready(function () {
+  $(".shop-details-tab-img").mousemove(function (event) {
+      let $image = $(this).find("img");
+      let offset = $(this).offset();
+      let x = ((event.pageX - offset.left) / $(this).width()) * 100;
+      let y = ((event.pageY - offset.top) / $(this).height()) * 100;
+      
+      $image.css({
+          "transform": "scale(1.4)",
+          "transform-origin": x + "% " + y + "%"
+      });
+  });
+
+  $(".shop-details-tab-img").mouseleave(function () {
+      $(this).find("img").css({
+          "transform": "scale(1)",
+          "transform-origin": "center center"
+      });
+  });
+});

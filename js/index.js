@@ -548,9 +548,7 @@ document.addEventListener("DOMContentLoaded", async function () {
           <div class="product-card-content">
             <h6><a href="product-default.html" class="hover-underline" onclick="localStorage.setItem('selectedProductId', '${product.id}')">${product.name}</a></h6>
             <p><a href="shop-list.html">${product.brand}</a></p>
-             <p class="price">${product.price}<del>$${(
-          product.price * 1.1
-        ).toFixed(2)}</del></p>
+             <p class="price">${product.price}</p>
         
           </div>
           <span class="for-border"></span>
@@ -817,7 +815,7 @@ async function fetchAndDisplayRelatedProducts() {
             <div class="product-card-content">
                 <h6><a href="product-default.html?id=${product.id}" class="hover-underline" onclick="localStorage.setItem('selectedProductId', '${product.id}')">${product.name}</a></h6>
                 <p><a href="shop-list.html">${product.brand}</a></p>
-                <p class="price">$${product.price} <del>$200.00</del></p>
+                <p class="price">$${product.price}</p>
             </div>
             <span class="for-border"></span>
         </div>
@@ -1231,9 +1229,7 @@ function createSliderProduct(product) {
               <a href="product-default.html" class="hover-underline" onclick="localStorage.setItem('selectedProductId', '${product.id}')">${product.name
     }</a>
             </h6>
-            <span>$${product.price.toFixed(2)} <del>$${(
-      product.price * 1.1
-    ).toFixed(2)}</del></span>
+            <span>$${product.price.toFixed(2)}</span>
             
           </div>
           <div class="offer-timer">
@@ -1587,7 +1583,7 @@ async function renderProducts(products) {
           <div class="product-card-content">
             <h6><a href="product-default.html" class="hover-underline" onclick="localStorage.setItem('selectedProductId', '${product.id}')">${product.name}</a></h6>
             <p><a href="shop-list.html">${product.brand}</a></p>
-            <p class="price">$${product.price} <del>${product.originalPrice}</del></p>
+            <p class="price">$${product.price}</p>
             <span class="for-border"></span>
           </div>
         </div>
@@ -1779,6 +1775,13 @@ async function renderProducts(products) {
         nextPageItem.appendChild(nextPageLink);
         paginationContainer.appendChild(nextPageItem);
       }
+        const startProduct = (currentPage - 1) * productsPerPage + 1;
+  const endProduct = Math.min(currentPage * productsPerPage, filteredLength);
+  
+  const productCountInfo = document.querySelector(".product-count-info");
+  if (productCountInfo) {
+    productCountInfo.innerHTML = `Showing ${startProduct}–${endProduct} of ${filteredLength} results`;
+  }
     }
 
     handlePagination(currentPage); // Initial call to render products and pagination
@@ -2245,7 +2248,7 @@ async function displayWishlistProducts() {
                   </td>
                   <td data-label="Price">
                       <p class="price">
-                          <del>$${(product.price * 1.2).toFixed(2)}</del>
+                        -+
                           $${product.price.toFixed(2)}
                       </p>
                   </td>
