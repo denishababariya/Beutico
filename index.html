@@ -15,6 +15,7 @@
   <link href="/css/animate.min.css" rel="stylesheet" />
   <!--  FancyBox CSS  -->
   <link rel="stylesheet" href="/css/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 
   <!-- Fontawesome CSS -->
   <link href="/css/fontawesome.min.css" rel="stylesheet" />
@@ -458,6 +459,9 @@
               </g>
             </svg>
           </button>
+          <button type="button" class="user-btnout" data-bs-toggle="modal" data-bs-target="#user-logout">
+            <i class="fa-solid fa-right-from-bracket"></i>
+          </button>
         </div>
         <div class="sidebar-button mobile-menu-btn">
           <span></span>
@@ -604,12 +608,7 @@
         <h3>Rental Product</h3>
         <div class="all-product hover-underline">
           <a href="shop-list.html" onclick="localStorage.setItem('selectedcategoryId', '7')">*View All Product
-            <svg width="33" height="13" viewBox="0 0 33 13" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M25.5083 7.28L0.491206 7.25429C0.36093 7.25429 0.23599 7.18821 0.143871 7.0706C0.0517519 6.95299 0 6.79347 0 6.62714C0 6.46081 0.0517519 6.3013 0.143871 6.18369C0.23599 6.06607 0.36093 6 0.491206 6L25.5088 6.02571C25.6391 6.02571 25.764 6.09179 25.8561 6.2094C25.9482 6.32701 26 6.48653 26 6.65286C26 6.81919 25.9482 6.9787 25.8561 7.09631C25.764 7.21393 25.6386 7.28 25.5083 7.28Z" />
-              <path
-                d="M33.0001 6.50854C29.2204 7.9435 24.5298 10.398 21.623 13L23.9157 6.50034L21.6317 0C24.5358 2.60547 29.2224 5.06539 33.0001 6.50854Z" />
-            </svg>
+            <i class="fa-solid fa-arrow-right-long"></i>
           </a>
         </div>
       </div>
@@ -630,12 +629,7 @@
         <h3>Just For You</h3>
         <div class="all-product hover-underline">
           <a href="shop-list.html" onclick="clearLocalStoragedata();">*View All Product
-            <svg width="33" height="13" viewBox="0 0 33 13" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M25.5083 7.28L0.491206 7.25429C0.36093 7.25429 0.23599 7.18821 0.143871 7.0706C0.0517519 6.95299 0 6.79347 0 6.62714C0 6.46081 0.0517519 6.3013 0.143871 6.18369C0.23599 6.06607 0.36093 6 0.491206 6L25.5088 6.02571C25.6391 6.02571 25.764 6.09179 25.8561 6.2094C25.9482 6.32701 26 6.48653 26 6.65286C26 6.81919 25.9482 6.9787 25.8561 7.09631C25.764 7.21393 25.6386 7.28 25.5083 7.28Z" />
-              <path
-                d="M33.0001 6.50854C29.2204 7.9435 24.5298 10.398 21.623 13L23.9157 6.50034L21.6317 0C24.5358 2.60547 29.2224 5.06539 33.0001 6.50854Z" />
-            </svg>
+            <i class="fa-solid fa-arrow-right-long"></i>
           </a>
         </div>
       </div>
@@ -3263,7 +3257,7 @@
   <script src="/js/main.js"></script>
   <script src="/js/index.js"></script>
   <script src="/js/footer.js"></script>
-  <script src="/js/shop-list.js"></script>script src="/js/shop-list.js"></script>
+  <script src="/js/shop-list.js"></script>
   <script>
     // Function to update the cart display
     async function updateCartDisplay() {

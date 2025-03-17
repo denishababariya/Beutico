@@ -223,7 +223,7 @@ async function loginUser() {
       // You can also send this log to your server
       logUserActivity(user.email, "login");
 
-      alert("Login successful!");
+      // alert("Login successful!");
 
       // Transfer wishlist from localStorage to the user's wishlist in the database
       await transferWishlistToUser(user.id);
@@ -517,3 +517,29 @@ $(document).ready(function () {
       });
   });
 });
+
+
+
+// logout start
+document.addEventListener("DOMContentLoaded", function () {
+  const userId = localStorage.getItem("user_id");
+  const log_in = document.querySelector(".user-btn");
+  const log_out = document.querySelector(".user-btnout");
+
+  if (userId) {
+    // Show the logout button and hide the login button
+    log_out.style.display = "block";
+    log_in.style.display = "none";
+  } else {
+    // Show the login button and hide the logout button
+    log_in.style.display = "block";
+    log_out.style.display = "none";
+  }
+
+  // Event listener for logout button
+  log_out.addEventListener("click", function () {
+    localStorage.removeItem("user_id"); // Remove user_id from localStorage
+    location.reload(); // Reload the page to update UI
+  });
+});
+// logout end
