@@ -281,6 +281,7 @@
                     productToCartMap = {}; // Reset the mapping
 
                     for (const cartId of cartProducts) {
+                        
                         try {
                             // Fetch cart item details
                             const cartResponse = await fetch(`http://localhost:3000/cart/${cartId}`);
@@ -304,6 +305,7 @@
 
                             // Check if product already exists in the cart
                             if (existingProducts[cartData.product_id]) {
+                                debugger
                                 existingProducts[cartData.product_id].quantity += cartData.quantity; // Increment quantity
                             } else {
                                 existingProducts[cartData.product_id] = {
@@ -315,14 +317,17 @@
                             console.error('Error fetching data:', error);
                         }
                     }
-
+                    
                     // Render the cart items
                     for (const productId in existingProducts) {
                         const product = existingProducts[productId];
                         const total = product.price * product.quantity;
+                        console.log("---",product.quantity)
+                        
 
                         // Create a new row for the cart table
                         const row = `
+                        
             <tr>
                 <td>
                     <div class="delete-icon" onclick="deleteCartItem('${productId}')">
@@ -379,7 +384,7 @@
                 async function deleteCartItem(productId) {
                     try {
                         // Find all cart items with this product_id
-                        const response = await fetch(`http://localhost:3000/cart?product_id=${productId}`);
+                        const response = await fetch(`http://localhost:3000/cart?productid=${productId}`);
                         if (!response.ok) {
                             throw new Error('Failed to fetch cart items');
                         }

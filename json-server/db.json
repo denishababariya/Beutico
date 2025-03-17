@@ -535,11 +535,7 @@
       "price": 12.99,
       "weight": "150ml",
       "brand": "Orna Care",
-      "tags": [
-        "hydrating",
-        "aloe vera",
-        "gentle"
-      ],
+      "tags": ["hydrating", "aloe vera", "gentle"],
       "images": [
         "../img/skin/Cleanser/Cleanser1.png",
         "../img/skin/Cleanser/Cleanser1.png",
@@ -559,10 +555,7 @@
       "price": 15.99,
       "weight": "150ml",
       "brand": "Orna Care",
-      "tags": [
-        "foaming",
-        "deep cleanse"
-      ],
+      "tags": ["foaming", "deep cleanse"],
       "images": [
         "../img/skin/Cleanser/Cleanser2.png",
         "../img/skin/Cleanser/Cleanser2.png",
@@ -582,10 +575,7 @@
       "price": 18.99,
       "weight": "150ml",
       "brand": "Orna Care",
-      "tags": [
-        "exfoliating",
-        "gentle"
-      ],
+      "tags": ["exfoliating", "gentle"],
       "images": [
         "../img/skin/Cleanser/Cleanser3.png",
         "../img/skin/Cleanser/Cleanser3.png",
@@ -605,10 +595,7 @@
       "price": 20.99,
       "weight": "150ml",
       "brand": "Orna Care",
-      "tags": [
-        "brightening",
-        "vitamin C"
-      ],
+      "tags": ["brightening", "vitamin C"],
       "images": [
         "../img/skin/Cleanser/Cleanser4.png",
         "../img/skin/Cleanser/Cleanser4.png",
@@ -628,10 +615,7 @@
       "price": 14.99,
       "weight": "150ml",
       "brand": "Orna Care",
-      "tags": [
-        "hydrating",
-        "gel"
-      ],
+      "tags": ["hydrating", "gel"],
       "images": [
         "../img/skin/Cleanser/Cleanser5.png",
         "../img/skin/Cleanser/Cleanser5.png",
@@ -651,10 +635,7 @@
       "price": 15.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "exfoliating",
-        "gentle"
-      ],
+      "tags": ["exfoliating", "gentle"],
       "images": [
         "../img/skin/Exfoliator/Exfoliator1.png",
         "../img/skin/Exfoliator/Exfoliator1.png",
@@ -674,10 +655,7 @@
       "price": 18.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "brightening",
-        "exfoliating"
-      ],
+      "tags": ["brightening", "exfoliating"],
       "images": [
         "../img/skin/Exfoliator/Exfoliator2.png",
         "../img/skin/Exfoliator/Exfoliator2.png",
@@ -697,10 +675,7 @@
       "price": 19.99,
       "weight": "150ml",
       "brand": "Orna Care",
-      "tags": [
-        "scrub",
-        "exfoliating"
-      ],
+      "tags": ["scrub", "exfoliating"],
       "images": [
         "../img/skin/Exfoliator/Exfoliator3.png",
         "../img/skin/Exfoliator/Exfoliator3.png",
@@ -720,10 +695,7 @@
       "price": 21.99,
       "weight": "150ml",
       "brand": "Orna Care",
-      "tags": [
-        "hydrating",
-        "exfoliating"
-      ],
+      "tags": ["hydrating", "exfoliating"],
       "images": [
         "../img/skin/Exfoliator/Exfoliator4.png",
         "../img/skin/Exfoliator/Exfoliator4.png",
@@ -743,10 +715,7 @@
       "price": 22.99,
       "weight": "150ml",
       "brand": "Orna Care",
-      "tags": [
-        "deep cleansing",
-        "exfoliating"
-      ],
+      "tags": ["deep cleansing", "exfoliating"],
       "images": [
         "../img/skin/Exfoliator/Exfoliator5.png",
         "../img/skin/Exfoliator/Exfoliator5.png",
@@ -766,10 +735,7 @@
       "price": 25,
       "weight": "30ml",
       "brand": "Orna Care",
-      "tags": [
-        "vitamin C",
-        "brightening"
-      ],
+      "tags": ["vitamin C", "brightening"],
       "images": [
         "../img/skin/Serum/Serum1.png",
         "../img/skin/Serum/Serum1.png",
@@ -789,10 +755,7 @@
       "price": 30,
       "weight": "30ml",
       "brand": "Orna Care",
-      "tags": [
-        "hydrating",
-        "hyaluronic acid"
-      ],
+      "tags": ["hydrating", "hyaluronic acid"],
       "images": [
         "../img/skin/Serum/Serum2.png",
         "../img/skin/Serum/Serum2.png",
@@ -812,10 +775,7 @@
       "price": 35,
       "weight": "30ml",
       "brand": "Orna Care",
-      "tags": [
-        "anti-aging",
-        "retinol"
-      ],
+      "tags": ["anti-aging", "retinol"],
       "images": [
         "../img/skin/Serum/Serum3.png",
         "../img/skin/Serum/Serum3.png",
@@ -835,10 +795,7 @@
       "price": 28,
       "weight": "30ml",
       "brand": "Orna Care",
-      "tags": [
-        "niacinamide",
-        "oil control"
-      ],
+      "tags": ["niacinamide", "oil control"],
       "images": [
         "../img/skin/Serum/Serum4.png",
         "../img/skin/Serum/Serum4.png",
@@ -858,10 +815,7 @@
       "price": 32,
       "weight": "30ml",
       "brand": "Orna Care",
-      "tags": [
-        "brightening",
-        "revitalizing"
-      ],
+      "tags": ["brightening", "revitalizing"],
       "images": [
         "../img/skin/Serum/Serum5.png",
         "../img/skin/Serum/Serum5.png",
@@ -881,10 +835,7 @@
       "price": 19.99,
       "weight": "50ml",
       "brand": "Orna Care",
-      "tags": [
-        "rosehip",
-        "hydrating"
-      ],
+      "tags": ["rosehip", "hydrating"],
       "images": [
         "../img/skin/FaceOil/FaceOil1.png",
         "../img/skin/FaceOil/FaceOil1.png",
@@ -904,10 +855,7 @@
       "price": 21.5,
       "weight": "50ml",
       "brand": "Orna Care",
-      "tags": [
-        "argan",
-        "nourishing"
-      ],
+      "tags": ["argan", "nourishing"],
       "images": [
         "../img/skin/FaceOil/FaceOil2.png",
         "../img/skin/FaceOil/FaceOil2.png",
@@ -927,10 +875,7 @@
       "price": 22.99,
       "weight": "50ml",
       "brand": "Orna Care",
-      "tags": [
-        "jojoba",
-        "balancing"
-      ],
+      "tags": ["jojoba", "balancing"],
       "images": [
         "../img/skin/FaceOil/FaceOil3.png",
         "../img/skin/FaceOil/FaceOil3.png",
@@ -950,10 +895,7 @@
       "price": 24.99,
       "weight": "50ml",
       "brand": "Orna Care",
-      "tags": [
-        "squalane",
-        "lightweight"
-      ],
+      "tags": ["squalane", "lightweight"],
       "images": [
         "../img/skin/FaceOil/FaceOil4.png",
         "../img/skin/FaceOil/FaceOil4.png",
@@ -973,10 +915,7 @@
       "price": 26.99,
       "weight": "50ml",
       "brand": "Orna Care",
-      "tags": [
-        "marula",
-        "antioxidants"
-      ],
+      "tags": ["marula", "antioxidants"],
       "images": [
         "../img/skin/FaceOil/FaceOil5.png",
         "../img/skin/FaceOil/FaceOil5.png",
@@ -996,10 +935,7 @@
       "price": 22.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "sunscreen",
-        "SPF 50"
-      ],
+      "tags": ["sunscreen", "SPF 50"],
       "images": [
         "../img/skin/Sunscreen/Sunscreen1.png",
         "../img/skin/Sunscreen/Sunscreen1.png",
@@ -1019,10 +955,7 @@
       "price": 24.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "matte",
-        "sunscreen"
-      ],
+      "tags": ["matte", "sunscreen"],
       "images": [
         "../img/skin/Sunscreen/Sunscreen2.png",
         "../img/skin/Sunscreen/Sunscreen2.png",
@@ -1042,10 +975,7 @@
       "price": 26.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "tinted",
-        "sunscreen"
-      ],
+      "tags": ["tinted", "sunscreen"],
       "images": [
         "../img/skin/Sunscreen/Sunscreen3.png",
         "../img/skin/Sunscreen/Sunscreen3.png",
@@ -1065,10 +995,7 @@
       "price": 28.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "hydrating",
-        "sunscreen"
-      ],
+      "tags": ["hydrating", "sunscreen"],
       "images": [
         "../img/skin/Sunscreen/Sunscreen4.png",
         "../img/skin/Sunscreen/Sunscreen4.png",
@@ -1088,10 +1015,7 @@
       "price": 20.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "water-resistant",
-        "sunscreen"
-      ],
+      "tags": ["water-resistant", "sunscreen"],
       "images": [
         "../img/skin/Sunscreen/Sunscreen5.png",
         "../img/skin/Sunscreen/Sunscreen5.png",
@@ -1111,10 +1035,7 @@
       "price": 20.5,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "hydrating",
-        "moisturizer"
-      ],
+      "tags": ["hydrating", "moisturizer"],
       "images": [
         "../img/skin/Moisturizer/Moisturizer1.png",
         "../img/skin/Moisturizer/Moisturizer1.png",
@@ -1134,10 +1055,7 @@
       "price": 22,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "lightweight",
-        "moisturizer"
-      ],
+      "tags": ["lightweight", "moisturizer"],
       "images": [
         "../img/skin/Moisturizer/Moisturizer2.png",
         "../img/skin/Moisturizer/Moisturizer2.png",
@@ -1157,10 +1075,7 @@
       "price": 24.5,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "rich",
-        "moisturizer"
-      ],
+      "tags": ["rich", "moisturizer"],
       "images": [
         "../img/skin/Moisturizer/Moisturizer3.png",
         "../img/skin/Moisturizer/Moisturizer3.png",
@@ -1180,10 +1095,7 @@
       "price": 26.99,
       "weight": "50ml",
       "brand": "Orna Care",
-      "tags": [
-        "night cream",
-        "moisturizer"
-      ],
+      "tags": ["night cream", "moisturizer"],
       "images": [
         "../img/skin/Moisturizer/Moisturizer4.png",
         "../img/skin/Moisturizer/Moisturizer4.png",
@@ -1203,10 +1115,7 @@
       "price": 18.99,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "gel",
-        "moisturizer"
-      ],
+      "tags": ["gel", "moisturizer"],
       "images": [
         "../img/skin/Moisturizer/Moisturizer5.png",
         "../img/skin/Moisturizer/Moisturizer5.png",
@@ -1226,11 +1135,7 @@
       "price": 30,
       "weight": "50ml",
       "brand": "Orna Care",
-      "tags": [
-        "AHA",
-        "BHA",
-        "peel"
-      ],
+      "tags": ["AHA", "BHA", "peel"],
       "images": [
         "../img/skin/Peel/Peel1.png",
         "../img/skin/Peel/Peel1.png",
@@ -1250,10 +1155,7 @@
       "price": 32,
       "weight": "50ml",
       "brand": "Orna Care",
-      "tags": [
-        "glycolic",
-        "peel"
-      ],
+      "tags": ["glycolic", "peel"],
       "images": [
         "../img/skin/Peel/Peel2.png",
         "../img/skin/Peel/Peel2.png",
@@ -1273,10 +1175,7 @@
       "price": 28,
       "weight": "50ml",
       "brand": "Orna Care",
-      "tags": [
-        "lactic",
-        "peel"
-      ],
+      "tags": ["lactic", "peel"],
       "images": [
         "../img/skin/Peel/Peel3.png",
         "../img/skin/Peel/Peel3.png",
@@ -1296,10 +1195,7 @@
       "price": 29.99,
       "weight": "50ml",
       "brand": "Orna Care",
-      "tags": [
-        "enzyme",
-        "peel"
-      ],
+      "tags": ["enzyme", "peel"],
       "images": [
         "../img/skin/Peel/Peel4.png",
         "../img/skin/Peel/Peel4.png",
@@ -1319,10 +1215,7 @@
       "price": 34.99,
       "weight": "50ml",
       "brand": "Orna Care",
-      "tags": [
-        "charcoal",
-        "peel"
-      ],
+      "tags": ["charcoal", "peel"],
       "images": [
         "../img/skin/Peel/Peel5.png",
         "../img/skin/Peel/Peel5.png",
@@ -1342,10 +1235,7 @@
       "price": 14.99,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "balancing",
-        "toner"
-      ],
+      "tags": ["balancing", "toner"],
       "images": [
         "../img/skin/Toner/Toner1.png",
         "../img/skin/Toner/Toner1.png",
@@ -1365,10 +1255,7 @@
       "price": 16.99,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "hydrating",
-        "toner"
-      ],
+      "tags": ["hydrating", "toner"],
       "images": [
         "../img/skin/Toner/Toner2.png",
         "../img/skin/Toner/Toner2.png",
@@ -1388,10 +1275,7 @@
       "price": 18.99,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "exfoliating",
-        "toner"
-      ],
+      "tags": ["exfoliating", "toner"],
       "images": [
         "../img/skin/Toner/Toner3.png",
         "../img/skin/Toner/Toner3.png",
@@ -1411,10 +1295,7 @@
       "price": 20.99,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "clarifying",
-        "toner"
-      ],
+      "tags": ["clarifying", "toner"],
       "images": [
         "../img/skin/Toner/Toner4.png",
         "../img/skin/Toner/Toner4.png",
@@ -1434,10 +1315,7 @@
       "price": 19.99,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "soothing",
-        "toner"
-      ],
+      "tags": ["soothing", "toner"],
       "images": [
         "../img/skin/Toner/Toner5.png",
         "../img/skin/Toner/Toner5.png",
@@ -1457,10 +1335,7 @@
       "price": 17.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "clay",
-        "mask"
-      ],
+      "tags": ["clay", "mask"],
       "images": [
         "../img/skin/FaceMask/FaceMask1.png",
         "../img/skin/FaceMask/FaceMask1.png",
@@ -1480,10 +1355,7 @@
       "price": 19.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "hydrating",
-        "mask"
-      ],
+      "tags": ["hydrating", "mask"],
       "images": [
         "../img/skin/FaceMask/FaceMask2.png",
         "../img/skin/FaceMask/FaceMask2.png",
@@ -1503,10 +1375,7 @@
       "price": 22.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "brightening",
-        "mask"
-      ],
+      "tags": ["brightening", "mask"],
       "images": [
         "../img/skin/FaceMask/FaceMask3.png",
         "../img/skin/FaceMask/FaceMask3.png",
@@ -1526,10 +1395,7 @@
       "price": 24.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "charcoal",
-        "mask"
-      ],
+      "tags": ["charcoal", "mask"],
       "images": [
         "../img/skin/FaceMask/FaceMask4.png",
         "../img/skin/FaceMask/FaceMask4.png",
@@ -1549,10 +1415,7 @@
       "price": 12.99,
       "weight": "25ml",
       "brand": "Orna Care",
-      "tags": [
-        "sheet",
-        "mask"
-      ],
+      "tags": ["sheet", "mask"],
       "images": [
         "../img/skin/FaceMask/FaceMask5.png",
         "../img/skin/FaceMask/FaceMask5.png",
@@ -1572,10 +1435,7 @@
       "price": 22.99,
       "weight": "30ml",
       "brand": "Orna Care",
-      "tags": [
-        "hydrating",
-        "eye cream"
-      ],
+      "tags": ["hydrating", "eye cream"],
       "images": [
         "../img/skin/EyeCream/EyeCream1.png",
         "../img/skin/EyeCream/EyeCream1.png",
@@ -1595,10 +1455,7 @@
       "price": 24.99,
       "weight": "30ml",
       "brand": "Orna Care",
-      "tags": [
-        "brightening",
-        "eye cream"
-      ],
+      "tags": ["brightening", "eye cream"],
       "images": [
         "../img/skin/EyeCream/EyeCream2.png",
         "../img/skin/EyeCream/EyeCream2.png",
@@ -1618,10 +1475,7 @@
       "price": 26.99,
       "weight": "30ml",
       "brand": "Orna Care",
-      "tags": [
-        "anti-aging",
-        "eye cream"
-      ],
+      "tags": ["anti-aging", "eye cream"],
       "images": [
         "../img/skin/EyeCream/EyeCream3.png",
         "../img/skin/EyeCream/EyeCream3.png",
@@ -1641,10 +1495,7 @@
       "price": 18.99,
       "weight": "30ml",
       "brand": "Orna Care",
-      "tags": [
-        "cooling",
-        "eye gel"
-      ],
+      "tags": ["cooling", "eye gel"],
       "images": [
         "../img/skin/EyeCream/EyeCream4.png",
         "../img/skin/EyeCream/EyeCream4.png",
@@ -1664,10 +1515,7 @@
       "price": 20.99,
       "weight": "30ml",
       "brand": "Orna Care",
-      "tags": [
-        "firming",
-        "eye cream"
-      ],
+      "tags": ["firming", "eye cream"],
       "images": [
         "../img/skin/EyeCream/EyeCream5.png",
         "../img/skin/EyeCream/EyeCream5.png",
@@ -1687,10 +1535,7 @@
       "price": 14.99,
       "weight": "150ml",
       "brand": "Orna Care",
-      "tags": [
-        "tea tree",
-        "face wash"
-      ],
+      "tags": ["tea tree", "face wash"],
       "images": [
         "../img/skin/FaceWash/FaceWash1.png",
         "../img/skin/FaceWash/FaceWash1.png",
@@ -1710,10 +1555,7 @@
       "price": 16.99,
       "weight": "150ml",
       "brand": "Orna Care",
-      "tags": [
-        "foaming",
-        "face wash"
-      ],
+      "tags": ["foaming", "face wash"],
       "images": [
         "../img/skin/FaceWash/FaceWash2.png",
         "../img/skin/FaceWash/FaceWash2.png",
@@ -1733,10 +1575,7 @@
       "price": 18.99,
       "weight": "150ml",
       "brand": "Orna Care",
-      "tags": [
-        "gel",
-        "face wash"
-      ],
+      "tags": ["gel", "face wash"],
       "images": [
         "../img/skin/FaceWash/FaceWash3.png",
         "../img/skin/FaceWash/FaceWash3.png",
@@ -1756,10 +1595,7 @@
       "price": 20.99,
       "weight": "150ml",
       "brand": "Orna Care",
-      "tags": [
-        "cleansing milk",
-        "face wash"
-      ],
+      "tags": ["cleansing milk", "face wash"],
       "images": [
         "../img/skin/FaceWash/FaceWash4.png",
         "../img/skin/FaceWash/FaceWash4.png",
@@ -1779,10 +1615,7 @@
       "price": 15.99,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "micellar",
-        "face wash"
-      ],
+      "tags": ["micellar", "face wash"],
       "images": [
         "../img/skin/FaceWash/FaceWash5.png",
         "../img/skin/FaceWash/FaceWash5.png",
@@ -1802,10 +1635,7 @@
       "price": 16.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "setting spray",
-        "makeup"
-      ],
+      "tags": ["setting spray", "makeup"],
       "images": [
         "../img/skin/SettingSpray/SettingSpray1.png",
         "../img/skin/SettingSpray/SettingSpray1.png",
@@ -1825,10 +1655,7 @@
       "price": 18.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "matte",
-        "setting spray"
-      ],
+      "tags": ["matte", "setting spray"],
       "images": [
         "../img/skin/SettingSpray/SettingSpray2.png",
         "../img/skin/SettingSpray/SettingSpray2.png",
@@ -1848,10 +1675,7 @@
       "price": 20.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "hydrating",
-        "setting spray"
-      ],
+      "tags": ["hydrating", "setting spray"],
       "images": [
         "../img/skin/SettingSpray/SettingSpray3.png",
         "../img/skin/SettingSpray/SettingSpray3.png",
@@ -1871,10 +1695,7 @@
       "price": 22.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "cooling",
-        "setting spray"
-      ],
+      "tags": ["cooling", "setting spray"],
       "images": [
         "../img/skin/SettingSpray/SettingSpray4.png",
         "../img/skin/SettingSpray/SettingSpray4.png",
@@ -1894,10 +1715,7 @@
       "price": 24.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "SPF",
-        "setting spray"
-      ],
+      "tags": ["SPF", "setting spray"],
       "images": [
         "../img/skin/SettingSpray/SettingSpray5.png",
         "../img/skin/SettingSpray/SettingSpray5.png",
@@ -1917,10 +1735,7 @@
       "price": 12.99,
       "weight": "10ml",
       "brand": "Orna Care",
-      "tags": [
-        "concealer",
-        "full coverage"
-      ],
+      "tags": ["concealer", "full coverage"],
       "images": [
         "../img/Makeup/counceler/counceler1.png",
         "../img/Makeup/counceler/counceler1.png",
@@ -1940,10 +1755,7 @@
       "price": 14.99,
       "weight": "10ml",
       "brand": "Orna Care",
-      "tags": [
-        "lightweight",
-        "concealer"
-      ],
+      "tags": ["lightweight", "concealer"],
       "images": [
         "../img/Makeup/counceler/counceler2.png",
         "../img/Makeup/counceler/counceler2.png",
@@ -1963,10 +1775,7 @@
       "price": 16.99,
       "weight": "10ml",
       "brand": "Orna Care",
-      "tags": [
-        "creamy",
-        "concealer"
-      ],
+      "tags": ["creamy", "concealer"],
       "images": [
         "../img/Makeup/counceler/counceler3.png",
         "../img/Makeup/counceler/counceler3.png",
@@ -1986,10 +1795,7 @@
       "price": 18.99,
       "weight": "10ml",
       "brand": "Orna Care",
-      "tags": [
-        "waterproof",
-        "concealer"
-      ],
+      "tags": ["waterproof", "concealer"],
       "images": [
         "../img/Makeup/counceler/counceler4.png",
         "../img/Makeup/counceler/counceler4.png",
@@ -2009,10 +1815,7 @@
       "price": 20.99,
       "weight": "10ml",
       "brand": "Orna Care",
-      "tags": [
-        "brightening",
-        "concealer"
-      ],
+      "tags": ["brightening", "concealer"],
       "images": [
         "../img/Makeup/counceler/counceler5.png",
         "../img/Makeup/counceler/counceler5.png",
@@ -2032,10 +1835,7 @@
       "price": 18.99,
       "weight": "120ml",
       "brand": "Orna Care",
-      "tags": [
-        "gentle",
-        "exfoliant"
-      ],
+      "tags": ["gentle", "exfoliant"],
       "images": [
         "../img/skin/Exfoliant/Exfoliant1.png",
         "../img/skin/Exfoliant/Exfoliant1.png",
@@ -2055,10 +1855,7 @@
       "price": 20.99,
       "weight": "120ml",
       "brand": "Orna Care",
-      "tags": [
-        "deep cleansing",
-        "exfoliant"
-      ],
+      "tags": ["deep cleansing", "exfoliant"],
       "images": [
         "../img/skin/Exfoliant/Exfoliant2.png",
         "../img/skin/Exfoliant/Exfoliant2.png",
@@ -2078,10 +1875,7 @@
       "price": 22.99,
       "weight": "120ml",
       "brand": "Orna Care",
-      "tags": [
-        "brightening",
-        "exfoliant"
-      ],
+      "tags": ["brightening", "exfoliant"],
       "images": [
         "../img/skin/Exfoliant/Exfoliant3.png",
         "../img/skin/Exfoliant/Exfoliant3.png",
@@ -2101,10 +1895,7 @@
       "price": 24.99,
       "weight": "120ml",
       "brand": "Orna Care",
-      "tags": [
-        "hydrating",
-        "exfoliant"
-      ],
+      "tags": ["hydrating", "exfoliant"],
       "images": [
         "../img/skin/Exfoliant/Exfoliant4.png",
         "../img/skin/Exfoliant/Exfoliant4.png",
@@ -2124,10 +1915,7 @@
       "price": 26.99,
       "weight": "120ml",
       "brand": "Orna Care",
-      "tags": [
-        "charcoal",
-        "exfoliant"
-      ],
+      "tags": ["charcoal", "exfoliant"],
       "images": [
         "../img/skin/Exfoliant/Exfoliant5.png",
         "../img/skin/Exfoliant/Exfoliant5.png",
@@ -2147,10 +1935,7 @@
       "price": 15.99,
       "weight": "50ml",
       "brand": "Orna Care",
-      "tags": [
-        "primer",
-        "silk finish"
-      ],
+      "tags": ["primer", "silk finish"],
       "images": [
         "../img/skin/Primer/Primer1.png",
         "../img/skin/Primer/Primer1.png",
@@ -2170,10 +1955,7 @@
       "price": 17.99,
       "weight": "50ml",
       "brand": "Orna Care",
-      "tags": [
-        "hydrating",
-        "primer"
-      ],
+      "tags": ["hydrating", "primer"],
       "images": [
         "../img/skin/Primer/Primer2.png",
         "../img/skin/Primer/Primer2.png",
@@ -2193,10 +1975,7 @@
       "price": 19.99,
       "weight": "50ml",
       "brand": "Orna Care",
-      "tags": [
-        "mattifying",
-        "primer"
-      ],
+      "tags": ["mattifying", "primer"],
       "images": [
         "../img/skin/Primer/Primer3.png",
         "../img/skin/Primer/Primer3.png",
@@ -2216,10 +1995,7 @@
       "price": 21.99,
       "weight": "50ml",
       "brand": "Orna Care",
-      "tags": [
-        "illuminating",
-        "primer"
-      ],
+      "tags": ["illuminating", "primer"],
       "images": [
         "../img/skin/Primer/Primer4.png",
         "../img/skin/Primer/Primer4.png",
@@ -2239,10 +2015,7 @@
       "price": 23.99,
       "weight": "50ml",
       "brand": "Orna Care",
-      "tags": [
-        "pore minimizing",
-        "primer"
-      ],
+      "tags": ["pore minimizing", "primer"],
       "images": [
         "../img/skin/Primer/Primer5.png",
         "../img/skin/Primer/Primer5.png",
@@ -2262,10 +2035,7 @@
       "price": 19.99,
       "weight": "250ml",
       "brand": "Orna Care",
-      "tags": [
-        "moisturizing",
-        "body cleanser"
-      ],
+      "tags": ["moisturizing", "body cleanser"],
       "images": [
         "../img/skin/BodyCleanser/BodyCleanser1.png",
         "../img/skin/BodyCleanser/BodyCleanser1.png",
@@ -2285,10 +2055,7 @@
       "price": 22.99,
       "weight": "250ml",
       "brand": "Orna Care",
-      "tags": [
-        "exfoliating",
-        "body cleanser"
-      ],
+      "tags": ["exfoliating", "body cleanser"],
       "images": [
         "../img/skin/BodyCleanser/BodyCleanser2.png",
         "../img/skin/BodyCleanser/BodyCleanser2.png",
@@ -2308,10 +2075,7 @@
       "price": 24.99,
       "weight": "250ml",
       "brand": "Orna Care",
-      "tags": [
-        "refreshing",
-        "body cleanser"
-      ],
+      "tags": ["refreshing", "body cleanser"],
       "images": [
         "../img/skin/BodyCleanser/BodyCleanser3.png",
         "../img/skin/BodyCleanser/BodyCleanser3.png",
@@ -2331,10 +2095,7 @@
       "price": 18.99,
       "weight": "250ml",
       "brand": "Orna Care",
-      "tags": [
-        "cleansing",
-        "body wash"
-      ],
+      "tags": ["cleansing", "body wash"],
       "images": [
         "../img/skin/BodyCleanser/BodyCleanser4.png",
         "../img/skin/BodyCleanser/BodyCleanser4.png",
@@ -2354,10 +2115,7 @@
       "price": 26.99,
       "weight": "250ml",
       "brand": "Orna Care",
-      "tags": [
-        "nourishing",
-        "body cleanser"
-      ],
+      "tags": ["nourishing", "body cleanser"],
       "images": [
         "../img/skin/BodyCleanser/BodyCleanser5.png",
         "../img/skin/BodyCleanser/BodyCleanser5.png",
@@ -2377,10 +2135,7 @@
       "price": 14.99,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "aloe vera",
-        "body gel"
-      ],
+      "tags": ["aloe vera", "body gel"],
       "images": [
         "../img/skin/BodyGel/BodyGel1.png",
         "../img/skin/BodyGel/BodyGel1.png",
@@ -2400,10 +2155,7 @@
       "price": 16.99,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "cooling",
-        "body gel"
-      ],
+      "tags": ["cooling", "body gel"],
       "images": [
         "../img/skin/BodyGel/BodyGel2.png",
         "../img/skin/BodyGel/BodyGel2.png",
@@ -2423,10 +2175,7 @@
       "price": 18.99,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "hydrating",
-        "body gel"
-      ],
+      "tags": ["hydrating", "body gel"],
       "images": [
         "../img/skin/BodyGel/BodyGel3.png",
         "../img/skin/BodyGel/BodyGel3.png",
@@ -2446,10 +2195,7 @@
       "price": 20.99,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "nourishing",
-        "body gel"
-      ],
+      "tags": ["nourishing", "body gel"],
       "images": [
         "../img/skin/BodyGel/BodyGel4.png",
         "../img/skin/BodyGel/BodyGel4.png",
@@ -2469,10 +2215,7 @@
       "price": 22.99,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "refreshing",
-        "body gel"
-      ],
+      "tags": ["refreshing", "body gel"],
       "images": [
         "../img/skin/BodyGel/BodyGel5.png",
         "../img/skin/BodyGel/BodyGel5.png",
@@ -2492,10 +2235,7 @@
       "price": 24.99,
       "weight": "150ml",
       "brand": "Orna Care",
-      "tags": [
-        "nourishing",
-        "body balm"
-      ],
+      "tags": ["nourishing", "body balm"],
       "images": [
         "../img/skin/BodyBalm/BodyBalm1.png",
         "../img/skin/BodyBalm/BodyBalm1.png",
@@ -2515,10 +2255,7 @@
       "price": 26.99,
       "weight": "150ml",
       "brand": "Orna Care",
-      "tags": [
-        "soothing",
-        "body balm"
-      ],
+      "tags": ["soothing", "body balm"],
       "images": [
         "../img/skin/BodyBalm/BodyBalm2.png",
         "../img/skin/BodyBalm/BodyBalm2.png",
@@ -2538,10 +2275,7 @@
       "price": 28.99,
       "weight": "150ml",
       "brand": "Orna Care",
-      "tags": [
-        "repairing",
-        "body balm"
-      ],
+      "tags": ["repairing", "body balm"],
       "images": [
         "../img/skin/BodyBalm/BodyBalm3.png",
         "../img/skin/BodyBalm/BodyBalm3.png",
@@ -2561,10 +2295,7 @@
       "price": 30.99,
       "weight": "150ml",
       "brand": "Orna Care",
-      "tags": [
-        "hydrating",
-        "body balm"
-      ],
+      "tags": ["hydrating", "body balm"],
       "images": [
         "../img/skin/BodyBalm/BodyBalm4.png",
         "../img/skin/BodyBalm/BodyBalm4.png",
@@ -2584,10 +2315,7 @@
       "price": 22.99,
       "weight": "150ml",
       "brand": "Orna Care",
-      "tags": [
-        "cooling",
-        "body balm"
-      ],
+      "tags": ["cooling", "body balm"],
       "images": [
         "../img/skin/BodyBalm/BodyBalm5.png",
         "../img/skin/BodyBalm/BodyBalm5.png",
@@ -2607,10 +2335,7 @@
       "price": 17.99,
       "weight": "300ml",
       "brand": "Orna Care",
-      "tags": [
-        "coconut",
-        "body wash"
-      ],
+      "tags": ["coconut", "body wash"],
       "images": [
         "../img/skin/BodyWash/BodyWash1.png",
         "../img/skin/BodyWash/BodyWash1.png",
@@ -2630,10 +2355,7 @@
       "price": 19.99,
       "weight": "300ml",
       "brand": "Orna Care",
-      "tags": [
-        "refreshing",
-        "body wash"
-      ],
+      "tags": ["refreshing", "body wash"],
       "images": [
         "../img/skin/BodyWash/BodyWash2.png",
         "../img/skin/BodyWash/BodyWash2.png",
@@ -2653,10 +2375,7 @@
       "price": 21.99,
       "weight": "300ml",
       "brand": "Orna Care",
-      "tags": [
-        "moisturizing",
-        "body wash"
-      ],
+      "tags": ["moisturizing", "body wash"],
       "images": [
         "../img/skin/BodyWash/BodyWash3.png",
         "../img/skin/BodyWash/BodyWash3.png",
@@ -2676,10 +2395,7 @@
       "price": 24.99,
       "weight": "300ml",
       "brand": "Orna Care",
-      "tags": [
-        "exfoliating",
-        "body wash"
-      ],
+      "tags": ["exfoliating", "body wash"],
       "images": [
         "../img/skin/BodyWash/BodyWash4.png",
         "../img/skin/BodyWash/BodyWash4.png",
@@ -2699,10 +2415,7 @@
       "price": 18.99,
       "weight": "300ml",
       "brand": "Orna Care",
-      "tags": [
-        "gel",
-        "body wash"
-      ],
+      "tags": ["gel", "body wash"],
       "images": [
         "../img/skin/BodyWash/BodyWash5.png",
         "../img/skin/BodyWash/BodyWash5.png",
@@ -2722,10 +2435,7 @@
       "price": 20.99,
       "weight": "200g",
       "brand": "Orna Care",
-      "tags": [
-        "coffee",
-        "body scrub"
-      ],
+      "tags": ["coffee", "body scrub"],
       "images": [
         "../img/skin/BodyScrub/BodyScrub1.png",
         "../img/skin/BodyScrub/BodyScrub1.png",
@@ -2745,10 +2455,7 @@
       "price": 22.99,
       "weight": "200g",
       "brand": "Orna Care",
-      "tags": [
-        "sugar",
-        "body scrub"
-      ],
+      "tags": ["sugar", "body scrub"],
       "images": [
         "../img/skin/BodyScrub/BodyScrub2.png",
         "../img/skin/BodyScrub/BodyScrub2.png",
@@ -2768,10 +2475,7 @@
       "price": 24.99,
       "weight": "200g",
       "brand": "Orna Care",
-      "tags": [
-        "salt",
-        "body scrub"
-      ],
+      "tags": ["salt", "body scrub"],
       "images": [
         "../img/skin/BodyScrub/BodyScrub3.png",
         "../img/skin/BodyScrub/BodyScrub3.png",
@@ -2791,10 +2495,7 @@
       "price": 26.99,
       "weight": "200g",
       "brand": "Orna Care",
-      "tags": [
-        "herbal",
-        "body scrub"
-      ],
+      "tags": ["herbal", "body scrub"],
       "images": [
         "../img/skin/BodyScrub/BodyScrub4.png",
         "../img/skin/BodyScrub/BodyScrub4.png",
@@ -2814,10 +2515,7 @@
       "price": 28.99,
       "weight": "200g",
       "brand": "Orna Care",
-      "tags": [
-        "polish",
-        "body scrub"
-      ],
+      "tags": ["polish", "body scrub"],
       "images": [
         "../img/skin/BodyScrub/BodyScrub5.png",
         "../img/skin/BodyScrub/BodyScrub5.png",
@@ -2837,10 +2535,7 @@
       "price": 18.99,
       "weight": "30ml",
       "brand": "Orna Care",
-      "tags": [
-        "hydrating",
-        "primer"
-      ],
+      "tags": ["hydrating", "primer"],
       "images": [
         "../img/Makeup/Primer/Primer1.png",
         "../img/Makeup/Primer/Primer1.png",
@@ -2860,10 +2555,7 @@
       "price": 19.99,
       "weight": "30ml",
       "brand": "Orna Care",
-      "tags": [
-        "mattifying",
-        "primer"
-      ],
+      "tags": ["mattifying", "primer"],
       "images": [
         "../img/Makeup/Primer/Primer2.png",
         "../img/Makeup/Primer/Primer2.png",
@@ -2883,10 +2575,7 @@
       "price": 20.99,
       "weight": "30ml",
       "brand": "Orna Care",
-      "tags": [
-        "illuminating",
-        "primer"
-      ],
+      "tags": ["illuminating", "primer"],
       "images": [
         "../img/Makeup/Primer/Primer3.png",
         "../img/Makeup/Primer/Primer3.png",
@@ -2906,10 +2595,7 @@
       "price": 22.99,
       "weight": "30ml",
       "brand": "Orna Care",
-      "tags": [
-        "pore minimizing",
-        "primer"
-      ],
+      "tags": ["pore minimizing", "primer"],
       "images": [
         "../img/Makeup/Primer/Primer4.png",
         "../img/Makeup/Primer/Primer4.png",
@@ -2929,10 +2615,7 @@
       "price": 21.99,
       "weight": "30ml",
       "brand": "Orna Care",
-      "tags": [
-        "color correcting",
-        "primer"
-      ],
+      "tags": ["color correcting", "primer"],
       "images": [
         "../img/Makeup/Primer/Primer5.png",
         "../img/Makeup/Primer/Primer5.png",
@@ -2952,10 +2635,7 @@
       "price": 25.99,
       "weight": "30ml",
       "brand": "Orna Care",
-      "tags": [
-        "liquid",
-        "foundation"
-      ],
+      "tags": ["liquid", "foundation"],
       "images": [
         "../img/Makeup/Foundation/Foundation1.png",
         "../img/Makeup/Foundation/Foundation1.png",
@@ -2975,10 +2655,7 @@
       "price": 27.99,
       "weight": "30ml",
       "brand": "Orna Care",
-      "tags": [
-        "matte",
-        "foundation"
-      ],
+      "tags": ["matte", "foundation"],
       "images": [
         "../img/Makeup/Foundation/Foundation2.png",
         "../img/Makeup/Foundation/Foundation2.png",
@@ -2998,10 +2675,7 @@
       "price": 26.99,
       "weight": "30ml",
       "brand": "Orna Care",
-      "tags": [
-        "hydrating",
-        "foundation"
-      ],
+      "tags": ["hydrating", "foundation"],
       "images": [
         "../img/Makeup/Foundation/Foundation3.png",
         "../img/Makeup/Foundation/Foundation3.png",
@@ -3021,10 +2695,7 @@
       "price": 29.99,
       "weight": "30ml",
       "brand": "Orna Care",
-      "tags": [
-        "full coverage",
-        "foundation"
-      ],
+      "tags": ["full coverage", "foundation"],
       "images": [
         "../img/Makeup/Foundation/Foundation4.png",
         "../img/Makeup/Foundation/Foundation4.png",
@@ -3044,10 +2715,7 @@
       "price": 22.99,
       "weight": "30ml",
       "brand": "Orna Care",
-      "tags": [
-        "BB cream",
-        "foundation"
-      ],
+      "tags": ["BB cream", "foundation"],
       "images": [
         "../img/Makeup/Foundation/Foundation5.png",
         "../img/Makeup/Foundation/Foundation5.png",
@@ -3067,10 +2735,7 @@
       "price": 15.99,
       "weight": "10ml",
       "brand": "Orna Care",
-      "tags": [
-        "liquid",
-        "concealer"
-      ],
+      "tags": ["liquid", "concealer"],
       "images": [
         "../img/Makeup/counceler/counceler1.png",
         "../img/Makeup/counceler/counceler1.png",
@@ -3090,10 +2755,7 @@
       "price": 17.99,
       "weight": "10ml",
       "brand": "Orna Care",
-      "tags": [
-        "cream",
-        "concealer"
-      ],
+      "tags": ["cream", "concealer"],
       "images": [
         "../img/Makeup/counceler/counceler2.png",
         "../img/Makeup/counceler/counceler2.png",
@@ -3113,10 +2775,7 @@
       "price": 14.99,
       "weight": "10ml",
       "brand": "Orna Care",
-      "tags": [
-        "stick",
-        "concealer"
-      ],
+      "tags": ["stick", "concealer"],
       "images": [
         "../img/Makeup/counceler/counceler3.png",
         "../img/Makeup/counceler/counceler3.png",
@@ -3136,10 +2795,7 @@
       "price": 16.99,
       "weight": "10ml",
       "brand": "Orna Care",
-      "tags": [
-        "color correcting",
-        "concealer"
-      ],
+      "tags": ["color correcting", "concealer"],
       "images": [
         "../img/Makeup/counceler/counceler4.png",
         "../img/Makeup/counceler/counceler4.png",
@@ -3159,10 +2815,7 @@
       "price": 18.99,
       "weight": "10ml",
       "brand": "Orna Care",
-      "tags": [
-        "waterproof",
-        "concealer"
-      ],
+      "tags": ["waterproof", "concealer"],
       "images": [
         "../img/Makeup/counceler/counceler5.png",
         "../img/Makeup/counceler/counceler5.png",
@@ -3182,10 +2835,7 @@
       "price": 19.99,
       "weight": "30g",
       "brand": "Orna Care",
-      "tags": [
-        "translucent",
-        "powder"
-      ],
+      "tags": ["translucent", "powder"],
       "images": [
         "../img/Makeup/powder/powder1.png",
         "../img/Makeup/powder/powder1.png",
@@ -3205,10 +2855,7 @@
       "price": 21.99,
       "weight": "30g",
       "brand": "Orna Care",
-      "tags": [
-        "matte",
-        "powder"
-      ],
+      "tags": ["matte", "powder"],
       "images": [
         "../img/Makeup/powder/powder2.png",
         "../img/Makeup/powder/powder2.png",
@@ -3228,10 +2875,7 @@
       "price": 22.99,
       "weight": "30g",
       "brand": "Orna Care",
-      "tags": [
-        "banana",
-        "powder"
-      ],
+      "tags": ["banana", "powder"],
       "images": [
         "../img/Makeup/powder/powder3.png",
         "../img/Makeup/powder/powder3.png",
@@ -3251,10 +2895,7 @@
       "price": 24.99,
       "weight": "30g",
       "brand": "Orna Care",
-      "tags": [
-        "finishing",
-        "powder"
-      ],
+      "tags": ["finishing", "powder"],
       "images": [
         "../img/Makeup/powder/powder4.png",
         "../img/Makeup/powder/powder4.png",
@@ -3274,10 +2915,7 @@
       "price": 23.99,
       "weight": "30g",
       "brand": "Orna Care",
-      "tags": [
-        "setting spray",
-        "powder"
-      ],
+      "tags": ["setting spray", "powder"],
       "images": [
         "../img/Makeup/powder/powder5.png",
         "../img/Makeup/powder/powder5.png",
@@ -3297,10 +2935,7 @@
       "price": 15.99,
       "weight": "5g",
       "brand": "Orna Care",
-      "tags": [
-        "powder",
-        "blush"
-      ],
+      "tags": ["powder", "blush"],
       "images": [
         "../img/Makeup/Blush/Blush1.png",
         "../img/Makeup/Blush/Blush1.png",
@@ -3320,10 +2955,7 @@
       "price": 17.99,
       "weight": "5g",
       "brand": "Orna Care",
-      "tags": [
-        "cream",
-        "blush"
-      ],
+      "tags": ["cream", "blush"],
       "images": [
         "../img/Makeup/Blush/Blush2.png",
         "../img/Makeup/Blush/Blush2.png",
@@ -3343,10 +2975,7 @@
       "price": 16.99,
       "weight": "5g",
       "brand": "Orna Care",
-      "tags": [
-        "liquid",
-        "blush"
-      ],
+      "tags": ["liquid", "blush"],
       "images": [
         "../img/Makeup/Blush/Blush3.png",
         "../img/Makeup/Blush/Blush3.png",
@@ -3366,10 +2995,7 @@
       "price": 18.99,
       "weight": "5g",
       "brand": "Orna Care",
-      "tags": [
-        "gel",
-        "blush"
-      ],
+      "tags": ["gel", "blush"],
       "images": [
         "../img/Makeup/Blush/Blush4.png",
         "../img/Makeup/Blush/Blush4.png",
@@ -3389,10 +3015,7 @@
       "price": 19.99,
       "weight": "5g",
       "brand": "Orna Care",
-      "tags": [
-        "tinted",
-        "blush"
-      ],
+      "tags": ["tinted", "blush"],
       "images": [
         "../img/Makeup/Blush/Blush5.png",
         "../img/Makeup/Blush/Blush5.png",
@@ -3412,10 +3035,7 @@
       "price": 22.99,
       "weight": "10g",
       "brand": "Orna Care",
-      "tags": [
-        "matte",
-        "bronzer"
-      ],
+      "tags": ["matte", "bronzer"],
       "images": [
         "../img/Makeup/Bronzer/Bronzer1.png",
         "../img/Makeup/Bronzer/Bronzer1.png",
@@ -3435,10 +3055,7 @@
       "price": 24.99,
       "weight": "10g",
       "brand": "Orna Care",
-      "tags": [
-        "shimmer",
-        "bronzer"
-      ],
+      "tags": ["shimmer", "bronzer"],
       "images": [
         "../img/Makeup/Bronzer/Bronzer2.png",
         "../img/Makeup/Bronzer/Bronzer2.png",
@@ -3458,10 +3075,7 @@
       "price": 23.99,
       "weight": "10g",
       "brand": "Orna Care",
-      "tags": [
-        "cream",
-        "bronzer"
-      ],
+      "tags": ["cream", "bronzer"],
       "images": [
         "../img/Makeup/Bronzer/Bronzer3.png",
         "../img/Makeup/Bronzer/Bronzer3.png",
@@ -3481,10 +3095,7 @@
       "price": 25.99,
       "weight": "10ml",
       "brand": "Orna Care",
-      "tags": [
-        "liquid",
-        "bronzer"
-      ],
+      "tags": ["liquid", "bronzer"],
       "images": [
         "../img/Makeup/Bronzer/Bronzer4.png",
         "../img/Makeup/Bronzer/Bronzer4.png",
@@ -3504,10 +3115,7 @@
       "price": 29.99,
       "weight": "20g",
       "brand": "Orna Care",
-      "tags": [
-        "palette",
-        "bronzer"
-      ],
+      "tags": ["palette", "bronzer"],
       "images": [
         "../img/Makeup/Bronzer/Bronzer5.png",
         "../img/Makeup/Bronzer/Bronzer5.png",
@@ -3527,10 +3135,7 @@
       "price": 19.99,
       "weight": "10g",
       "brand": "Orna Care",
-      "tags": [
-        "powder",
-        "highlighter"
-      ],
+      "tags": ["powder", "highlighter"],
       "images": [
         "../img/Makeup/Highlighter/Highlighter1.png",
         "../img/Makeup/Highlighter/Highlighter1.png",
@@ -3550,10 +3155,7 @@
       "price": 21.99,
       "weight": "15ml",
       "brand": "Orna Care",
-      "tags": [
-        "liquid",
-        "highlighter"
-      ],
+      "tags": ["liquid", "highlighter"],
       "images": [
         "../img/Makeup/Highlighter/Highlighter2.png",
         "../img/Makeup/Highlighter/Highlighter2.png",
@@ -3573,10 +3175,7 @@
       "price": 20.99,
       "weight": "10g",
       "brand": "Orna Care",
-      "tags": [
-        "cream",
-        "highlighter"
-      ],
+      "tags": ["cream", "highlighter"],
       "images": [
         "../img/Makeup/Highlighter/Highlighter3.png",
         "../img/Makeup/Highlighter/Highlighter3.png",
@@ -3596,10 +3195,7 @@
       "price": 22.99,
       "weight": "10g",
       "brand": "Orna Care",
-      "tags": [
-        "stick",
-        "highlighter"
-      ],
+      "tags": ["stick", "highlighter"],
       "images": [
         "../img/Makeup/Highlighter/Highlighter4.png",
         "../img/Makeup/Highlighter/Highlighter4.png",
@@ -3619,10 +3215,7 @@
       "price": 29.99,
       "weight": "20g",
       "brand": "Orna Care",
-      "tags": [
-        "palette",
-        "highlighter"
-      ],
+      "tags": ["palette", "highlighter"],
       "images": [
         "../img/Makeup/Highlighter/Highlighter5.png",
         "../img/Makeup/Highlighter/Highlighter5.png",
@@ -3642,10 +3235,7 @@
       "price": 22.99,
       "weight": "10g",
       "brand": "Orna Care",
-      "tags": [
-        "stick",
-        "contour"
-      ],
+      "tags": ["stick", "contour"],
       "images": [
         "../img/Makeup/Contour/Contour1.png",
         "../img/Makeup/Contour/Contour1.png",
@@ -3665,10 +3255,7 @@
       "price": 20.99,
       "weight": "10g",
       "brand": "Orna Care",
-      "tags": [
-        "cream",
-        "contour"
-      ],
+      "tags": ["cream", "contour"],
       "images": [
         "../img/Makeup/Contour/Contour2.png",
         "../img/Makeup/Contour/Contour2.png",
@@ -3688,10 +3275,7 @@
       "price": 19.99,
       "weight": "10g",
       "brand": "Orna Care",
-      "tags": [
-        "powder",
-        "contour"
-      ],
+      "tags": ["powder", "contour"],
       "images": [
         "../img/Makeup/Contour/Contour3.png",
         "../img/Makeup/Contour/Contour3.png",
@@ -3711,10 +3295,7 @@
       "price": 29.99,
       "weight": "20g",
       "brand": "Orna Care",
-      "tags": [
-        "palette",
-        "contour"
-      ],
+      "tags": ["palette", "contour"],
       "images": [
         "../img/Makeup/Contour/Contour4.png",
         "../img/Makeup/Contour/Contour4.png",
@@ -3734,10 +3315,7 @@
       "price": 24.99,
       "weight": "10ml",
       "brand": "Orna Care",
-      "tags": [
-        "liquid",
-        "contour"
-      ],
+      "tags": ["liquid", "contour"],
       "images": [
         "../img/Makeup/Contour/Contour5.png",
         "../img/Makeup/Contour/Contour5.png",
@@ -3757,10 +3335,7 @@
       "price": 34.99,
       "weight": "20g",
       "brand": "Orna Care",
-      "tags": [
-        "palette",
-        "eyeshadow"
-      ],
+      "tags": ["palette", "eyeshadow"],
       "images": [
         "../img/Makeup/Eyeshadow/Eyeshadow1.png",
         "../img/Makeup/Eyeshadow/Eyeshadow1.png",
@@ -3780,10 +3355,7 @@
       "price": 12.99,
       "weight": "2g",
       "brand": "Orna Care",
-      "tags": [
-        "single",
-        "eyeshadow"
-      ],
+      "tags": ["single", "eyeshadow"],
       "images": [
         "../img/Makeup/Eyeshadow/Eyeshadow2.png",
         "../img/Makeup/Eyeshadow/Eyeshadow2.png",
@@ -3803,10 +3375,7 @@
       "price": 14.99,
       "weight": "5g",
       "brand": "Orna Care",
-      "tags": [
-        "cream",
-        "eyeshadow"
-      ],
+      "tags": ["cream", "eyeshadow"],
       "images": [
         "../img/Makeup/Eyeshadow/Eyeshadow3.png",
         "../img/Makeup/Eyeshadow/Eyeshadow3.png",
@@ -3826,10 +3395,7 @@
       "price": 16.99,
       "weight": "5ml",
       "brand": "Orna Care",
-      "tags": [
-        "liquid",
-        "eyeshadow"
-      ],
+      "tags": ["liquid", "eyeshadow"],
       "images": [
         "../img/Makeup/Eyeshadow/Eyeshadow4.png",
         "../img/Makeup/Eyeshadow/Eyeshadow4.png",
@@ -3849,10 +3415,7 @@
       "price": 15.99,
       "weight": "2g",
       "brand": "Orna Care",
-      "tags": [
-        "stick",
-        "eyeshadow"
-      ],
+      "tags": ["stick", "eyeshadow"],
       "images": [
         "../img/Makeup/Eyeshadow/Eyeshadow5.png",
         "../img/Makeup/Eyeshadow/Eyeshadow5.png",
@@ -3872,10 +3435,7 @@
       "price": 14.99,
       "weight": "5ml",
       "brand": "Orna Care",
-      "tags": [
-        "liquid",
-        "eyeliner"
-      ],
+      "tags": ["liquid", "eyeliner"],
       "images": [
         "../img/Makeup/Eyeliner/Eyeliner1.png",
         "../img/Makeup/Eyeliner/Eyeliner1.png",
@@ -3895,10 +3455,7 @@
       "price": 16.99,
       "weight": "5g",
       "brand": "Orna Care",
-      "tags": [
-        "gel",
-        "eyeliner"
-      ],
+      "tags": ["gel", "eyeliner"],
       "images": [
         "../img/Makeup/Eyeliner/Eyeliner2.png",
         "../img/Makeup/Eyeliner/Eyeliner2.png",
@@ -3918,10 +3475,7 @@
       "price": 9.99,
       "weight": "1g",
       "brand": "Orna Care",
-      "tags": [
-        "pencil",
-        "eyeliner"
-      ],
+      "tags": ["pencil", "eyeliner"],
       "images": [
         "../img/Makeup/Eyeliner/Eyeliner3.png",
         "../img/Makeup/Eyeliner/Eyeliner3.png",
@@ -3941,10 +3495,7 @@
       "price": 11.99,
       "weight": "1g",
       "brand": "Orna Care",
-      "tags": [
-        "retractable",
-        "eyeliner"
-      ],
+      "tags": ["retractable", "eyeliner"],
       "images": [
         "../img/Makeup/Eyeliner/Eyeliner4.png",
         "../img/Makeup/Eyeliner/Eyeliner4.png",
@@ -3964,10 +3515,7 @@
       "price": 13.99,
       "weight": "5ml",
       "brand": "Orna Care",
-      "tags": [
-        "waterproof",
-        "eyeliner"
-      ],
+      "tags": ["waterproof", "eyeliner"],
       "images": [
         "../img/Makeup/Eyeliner/Eyeliner5.png",
         "../img/Makeup/Eyeliner/Eyeliner5.png",
@@ -3987,10 +3535,7 @@
       "price": 14.99,
       "weight": "10ml",
       "brand": "Orna Care",
-      "tags": [
-        "lengthening",
-        "mascara"
-      ],
+      "tags": ["lengthening", "mascara"],
       "images": [
         "../img/Makeup/Mascara/Mascara1.png",
         "../img/Makeup/Mascara/Mascara1.png",
@@ -4010,10 +3555,7 @@
       "price": 16.99,
       "weight": "10ml",
       "brand": "Orna Care",
-      "tags": [
-        "volumizing",
-        "mascara"
-      ],
+      "tags": ["volumizing", "mascara"],
       "images": [
         "../img/Makeup/Mascara/Mascara2.png",
         "../img/Makeup/Mascara/Mascara2.png",
@@ -4033,10 +3575,7 @@
       "price": 15.99,
       "weight": "10ml",
       "brand": "Orna Care",
-      "tags": [
-        "waterproof",
-        "mascara"
-      ],
+      "tags": ["waterproof", "mascara"],
       "images": [
         "../img/Makeup/Mascara/Mascara3.png",
         "../img/Makeup/Mascara/Mascara3.png",
@@ -4056,10 +3595,7 @@
       "price": 17.99,
       "weight": "10ml",
       "brand": "Orna Care",
-      "tags": [
-        "curling",
-        "mascara"
-      ],
+      "tags": ["curling", "mascara"],
       "images": [
         "../img/Makeup/Mascara/Mascara4.png",
         "../img/Makeup/Mascara/Mascara4.png",
@@ -4079,11 +3615,7 @@
       "price": 18.99,
       "weight": "10ml",
       "brand": "Orna Care",
-      "tags": [
-        "lengthening",
-        "volumizing",
-        "mascara"
-      ],
+      "tags": ["lengthening", "volumizing", "mascara"],
       "images": [
         "../img/Makeup/Mascara/Mascara5.png",
         "../img/Makeup/Mascara/Mascara5.png",
@@ -4103,10 +3635,7 @@
       "price": 5.99,
       "weight": "4g",
       "brand": "Orna Care",
-      "tags": [
-        "hydrating",
-        "lip balm"
-      ],
+      "tags": ["hydrating", "lip balm"],
       "images": [
         "../img/Makeup/LipBalm/LipBalm1.png",
         "../img/Makeup/LipBalm/LipBalm1.png",
@@ -4126,10 +3655,7 @@
       "price": 6.99,
       "weight": "4g",
       "brand": "Orna Care",
-      "tags": [
-        "tinted",
-        "lip balm"
-      ],
+      "tags": ["tinted", "lip balm"],
       "images": [
         "../img/Makeup/LipBalm/LipBalm2.png",
         "../img/Makeup/LipBalm/LipBalm2.png",
@@ -4149,10 +3675,7 @@
       "price": 5.99,
       "weight": "4g",
       "brand": "Orna Care",
-      "tags": [
-        "scented",
-        "lip balm"
-      ],
+      "tags": ["scented", "lip balm"],
       "images": [
         "../img/Makeup/LipBalm/LipBalm3.png",
         "../img/Makeup/LipBalm/LipBalm3.png",
@@ -4172,10 +3695,7 @@
       "price": 7.99,
       "weight": "4g",
       "brand": "Orna Care",
-      "tags": [
-        "organic",
-        "lip balm"
-      ],
+      "tags": ["organic", "lip balm"],
       "images": [
         "../img/Makeup/LipBalm/LipBalm4.png",
         "../img/Makeup/LipBalm/LipBalm4.png",
@@ -4195,10 +3715,7 @@
       "price": 8.99,
       "weight": "4g",
       "brand": "Orna Care",
-      "tags": [
-        "SPF",
-        "lip balm"
-      ],
+      "tags": ["SPF", "lip balm"],
       "images": [
         "../img/Makeup/LipBalm/LipBalm5.png",
         "../img/Makeup/LipBalm/LipBalm5.png",
@@ -4218,10 +3735,7 @@
       "price": 12.99,
       "weight": "4g",
       "brand": "Orna Care",
-      "tags": [
-        "matte",
-        "lipstick"
-      ],
+      "tags": ["matte", "lipstick"],
       "images": [
         "../img/Makeup/Lipstick/Lipstick1.png",
         "../img/Makeup/Lipstick/Lipstick1.png",
@@ -4241,10 +3755,7 @@
       "price": 13.99,
       "weight": "4g",
       "brand": "Orna Care",
-      "tags": [
-        "cream",
-        "lipstick"
-      ],
+      "tags": ["cream", "lipstick"],
       "images": [
         "../img/Makeup/Lipstick/Lipstick2.png",
         "../img/Makeup/Lipstick/Lipstick2.png",
@@ -4264,10 +3775,7 @@
       "price": 14.99,
       "weight": "5ml",
       "brand": "Orna Care",
-      "tags": [
-        "liquid",
-        "lipstick"
-      ],
+      "tags": ["liquid", "lipstick"],
       "images": [
         "../img/Makeup/Lipstick/Lipstick3.png",
         "../img/Makeup/Lipstick/Lipstick3.png",
@@ -4287,10 +3795,7 @@
       "price": 11.99,
       "weight": "4g",
       "brand": "Orna Care",
-      "tags": [
-        "glossy",
-        "lipstick"
-      ],
+      "tags": ["glossy", "lipstick"],
       "images": [
         "../img/Makeup/Lipstick/Lipstick4.png",
         "../img/Makeup/Lipstick/Lipstick4.png",
@@ -4310,10 +3815,7 @@
       "price": 12.99,
       "weight": "4g",
       "brand": "Orna Care",
-      "tags": [
-        "hydrating",
-        "lipstick"
-      ],
+      "tags": ["hydrating", "lipstick"],
       "images": [
         "../img/Makeup/Lipstick/Lipstick5.png",
         "../img/Makeup/Lipstick/Lipstick5.png",
@@ -4333,10 +3835,7 @@
       "price": 8.99,
       "weight": "4g",
       "brand": "Orna Care",
-      "tags": [
-        "clear",
-        "lip gloss"
-      ],
+      "tags": ["clear", "lip gloss"],
       "images": [
         "../img/Makeup/LipGloss/LipGloss1.png",
         "../img/Makeup/LipGloss/LipGloss1.png",
@@ -4356,10 +3855,7 @@
       "price": 9.99,
       "weight": "4g",
       "brand": "Orna Care",
-      "tags": [
-        "tinted",
-        "lip gloss"
-      ],
+      "tags": ["tinted", "lip gloss"],
       "images": [
         "../img/Makeup/LipGloss/LipGloss2.png",
         "../img/Makeup/LipGloss/LipGloss2.png",
@@ -4379,10 +3875,7 @@
       "price": 10.99,
       "weight": "4g",
       "brand": "Orna Care",
-      "tags": [
-        "shimmer",
-        "lip gloss"
-      ],
+      "tags": ["shimmer", "lip gloss"],
       "images": [
         "../img/Makeup/LipGloss/LipGloss3.png",
         "../img/Makeup/LipGloss/LipGloss3.png",
@@ -4402,10 +3895,7 @@
       "price": 11.99,
       "weight": "4g",
       "brand": "Orna Care",
-      "tags": [
-        "hydrating",
-        "lip gloss"
-      ],
+      "tags": ["hydrating", "lip gloss"],
       "images": [
         "../img/Makeup/LipGloss/LipGloss4.png",
         "../img/Makeup/LipGloss/LipGloss4.png",
@@ -4425,10 +3915,7 @@
       "price": 12.99,
       "weight": "4g",
       "brand": "Orna Care",
-      "tags": [
-        "long-lasting",
-        "lip gloss"
-      ],
+      "tags": ["long-lasting", "lip gloss"],
       "images": [
         "../img/Makeup/LipGloss/LipGloss5.png",
         "../img/Makeup/LipGloss/LipGloss5.png",
@@ -4448,10 +3935,7 @@
       "price": 15.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "matte",
-        "setting spray"
-      ],
+      "tags": ["matte", "setting spray"],
       "images": [
         "../img/Makeup/SettingSpray/SettingSpray1.png",
         "../img/Makeup/SettingSpray/SettingSpray1.png",
@@ -4471,10 +3955,7 @@
       "price": 16.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "dewy",
-        "setting spray"
-      ],
+      "tags": ["dewy", "setting spray"],
       "images": [
         "../img/Makeup/SettingSpray/SettingSpray2.png",
         "../img/Makeup/SettingSpray/SettingSpray2.png",
@@ -4494,10 +3975,7 @@
       "price": 17.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "long-lasting",
-        "setting spray"
-      ],
+      "tags": ["long-lasting", "setting spray"],
       "images": [
         "../img/Makeup/SettingSpray/SettingSpray3.png",
         "../img/Makeup/SettingSpray/SettingSpray3.png",
@@ -4517,10 +3995,7 @@
       "price": 18.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "hydrating",
-        "setting spray"
-      ],
+      "tags": ["hydrating", "setting spray"],
       "images": [
         "../img/Makeup/SettingSpray/SettingSpray4.png",
         "../img/Makeup/SettingSpray/SettingSpray4.png",
@@ -4540,10 +4015,7 @@
       "price": 19.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "cooling",
-        "setting spray"
-      ],
+      "tags": ["cooling", "setting spray"],
       "images": [
         "../img/Makeup/SettingSpray/SettingSpray5.png",
         "../img/Makeup/SettingSpray/SettingSpray5.png",
@@ -4563,10 +4035,7 @@
       "price": 15.99,
       "weight": "250ml",
       "brand": "Orna Care",
-      "tags": [
-        "gentle",
-        "shampoo"
-      ],
+      "tags": ["gentle", "shampoo"],
       "images": [
         "../img/Hair/Shampoo/Shampoo.png",
         "../img/Hair/Shampoo/Shampoo.png",
@@ -4586,10 +4055,7 @@
       "price": 17.99,
       "weight": "250ml",
       "brand": "Orna Care",
-      "tags": [
-        "moisturizing",
-        "shampoo"
-      ],
+      "tags": ["moisturizing", "shampoo"],
       "images": [
         "../img/Hair/Shampoo/Shampoo2.png",
         "../img/Hair/Shampoo/Shampoo2.png",
@@ -4609,10 +4075,7 @@
       "price": 16.99,
       "weight": "250ml",
       "brand": "Orna Care",
-      "tags": [
-        "clarifying",
-        "shampoo"
-      ],
+      "tags": ["clarifying", "shampoo"],
       "images": [
         "../img/Hair/Shampoo/Shampoo3.png",
         "../img/Hair/Shampoo/Shampoo3.png",
@@ -4632,10 +4095,7 @@
       "price": 18.99,
       "weight": "250ml",
       "brand": "Orna Care",
-      "tags": [
-        "color protect",
-        "shampoo"
-      ],
+      "tags": ["color protect", "shampoo"],
       "images": [
         "../img/Hair/Shampoo/Shampoo4.png",
         "../img/Hair/Shampoo/Shampoo4.png",
@@ -4655,10 +4115,7 @@
       "price": 19.99,
       "weight": "250ml",
       "brand": "Orna Care",
-      "tags": [
-        "anti-dandruff",
-        "shampoo"
-      ],
+      "tags": ["anti-dandruff", "shampoo"],
       "images": [
         "../img/Hair/Shampoo/Shampoo5.png",
         "../img/Hair/Shampoo/Shampoo5.png",
@@ -4678,10 +4135,7 @@
       "price": 16.99,
       "weight": "250ml",
       "brand": "Orna Care",
-      "tags": [
-        "hydrating",
-        "conditioner"
-      ],
+      "tags": ["hydrating", "conditioner"],
       "images": [
         "../img/Hair/Conditionar/Conditionar1.png",
         "../img/Hair/Conditionar/Conditionar1.png",
@@ -4701,10 +4155,7 @@
       "price": 18.99,
       "weight": "250ml",
       "brand": "Orna Care",
-      "tags": [
-        "repairing",
-        "conditioner"
-      ],
+      "tags": ["repairing", "conditioner"],
       "images": [
         "../img/Hair/Conditionar/Conditionar2.png",
         "../img/Hair/Conditionar/Conditionar2.png",
@@ -4724,10 +4175,7 @@
       "price": 19.99,
       "weight": "250ml",
       "brand": "Orna Care",
-      "tags": [
-        "color protect",
-        "conditioner"
-      ],
+      "tags": ["color protect", "conditioner"],
       "images": [
         "../img/Hair/Conditionar/Conditionar3.png",
         "../img/Hair/Conditionar/Conditionar3.png",
@@ -4747,10 +4195,7 @@
       "price": 20.99,
       "weight": "150ml",
       "brand": "Orna Care",
-      "tags": [
-        "leave-in",
-        "conditioner"
-      ],
+      "tags": ["leave-in", "conditioner"],
       "images": [
         "../img/Hair/Conditionar/Conditionar4.png",
         "../img/Hair/Conditionar/Conditionar4.png",
@@ -4770,10 +4215,7 @@
       "price": 22.99,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "deep conditioning",
-        "conditioner"
-      ],
+      "tags": ["deep conditioning", "conditioner"],
       "images": [
         "../img/Hair/Conditionar/Conditionar5.png",
         "../img/Hair/Conditionar/Conditionar5.png",
@@ -4793,10 +4235,7 @@
       "price": 24.99,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "nourishing",
-        "hair mask"
-      ],
+      "tags": ["nourishing", "hair mask"],
       "images": [
         "../img/Hair/Mask/hairmask1.png",
         "../img/Hair/Mask/hairmask1.png",
@@ -4816,10 +4255,7 @@
       "price": 26.99,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "repairing",
-        "hair mask"
-      ],
+      "tags": ["repairing", "hair mask"],
       "images": [
         "../img/Hair/Mask/hairmask2.png",
         "../img/Hair/Mask/hairmask2.png",
@@ -4839,10 +4275,7 @@
       "price": 25.99,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "color protect",
-        "hair mask"
-      ],
+      "tags": ["color protect", "hair mask"],
       "images": [
         "../img/Hair/Mask/hairmask3.png",
         "../img/Hair/Mask/hairmask3.png",
@@ -4862,10 +4295,7 @@
       "price": 27.99,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "hydrating",
-        "hair mask"
-      ],
+      "tags": ["hydrating", "hair mask"],
       "images": [
         "../img/Hair/Mask/hairmask4.png",
         "../img/Hair/Mask/hairmask4.png",
@@ -4885,10 +4315,7 @@
       "price": 28.99,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "intense repair",
-        "hair mask"
-      ],
+      "tags": ["intense repair", "hair mask"],
       "images": [
         "../img/Hair/Mask/hairmask5.png",
         "../img/Hair/Mask/hairmask5.png",
@@ -4908,10 +4335,7 @@
       "price": 14.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "permanent",
-        "hair color"
-      ],
+      "tags": ["permanent", "hair color"],
       "images": [
         "../img/Hair/Haircolor/Haircolor1.png",
         "../img/Hair/Haircolor/Haircolor1.png",
@@ -4931,10 +4355,7 @@
       "price": 12.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "semi-permanent",
-        "hair color"
-      ],
+      "tags": ["semi-permanent", "hair color"],
       "images": [
         "../img/Hair/Haircolor/Haircolor2.png",
         "../img/Hair/Haircolor/Haircolor2.png",
@@ -4954,10 +4375,7 @@
       "price": 15.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "cream",
-        "hair color"
-      ],
+      "tags": ["cream", "hair color"],
       "images": [
         "../img/Hair/Haircolor/Haircolor3.png",
         "../img/Hair/Haircolor/Haircolor3.png",
@@ -4977,10 +4395,7 @@
       "price": 19.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "kit",
-        "hair color"
-      ],
+      "tags": ["kit", "hair color"],
       "images": [
         "../img/Hair/Haircolor/Haircolor4.png",
         "../img/Hair/Haircolor/Haircolor4.png",
@@ -5000,10 +4415,7 @@
       "price": 16.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "remover",
-        "hair color"
-      ],
+      "tags": ["remover", "hair color"],
       "images": [
         "../img/Hair/Haircolor/Haircolor5.png",
         "../img/Hair/Haircolor/Haircolor5.png",
@@ -5023,10 +4435,7 @@
       "price": 19.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "argan",
-        "hair oil"
-      ],
+      "tags": ["argan", "hair oil"],
       "images": [
         "../img/Hair/HairOil/HairOil1.png",
         "../img/Hair/HairOil/HairOil1.png",
@@ -5046,10 +4455,7 @@
       "price": 18.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "coconut",
-        "hair oil"
-      ],
+      "tags": ["coconut", "hair oil"],
       "images": [
         "../img/Hair/HairOil/HairOil2.png",
         "../img/Hair/HairOil/HairOil2.png",
@@ -5069,10 +4475,7 @@
       "price": 20.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "jojoba",
-        "hair oil"
-      ],
+      "tags": ["jojoba", "hair oil"],
       "images": [
         "../img/Hair/HairOil/HairOil3.png",
         "../img/Hair/HairOil/HairOil3.png",
@@ -5092,10 +4495,7 @@
       "price": 21.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "olive",
-        "hair oil"
-      ],
+      "tags": ["olive", "hair oil"],
       "images": [
         "../img/Hair/HairOil/HairOil4.png",
         "../img/Hair/HairOil/HairOil4.png",
@@ -5115,10 +4515,7 @@
       "price": 22.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "growth",
-        "hair oil"
-      ],
+      "tags": ["growth", "hair oil"],
       "images": [
         "../img/Hair/HairOil/HairOil5.png",
         "../img/Hair/HairOil/HairOil5.png",
@@ -5138,10 +4535,7 @@
       "price": 12.99,
       "weight": "6 pieces",
       "brand": "Orna Care",
-      "tags": [
-        "velcro",
-        "hair rollers"
-      ],
+      "tags": ["velcro", "hair rollers"],
       "images": [
         "../img/Hair/HairRollers/HairRollers1.png",
         "../img/Hair/HairRollers/HairRollers1.png",
@@ -5161,10 +4555,7 @@
       "price": 15.99,
       "weight": "6 pieces",
       "brand": "Orna Care",
-      "tags": [
-        "thermal",
-        "hair rollers"
-      ],
+      "tags": ["thermal", "hair rollers"],
       "images": [
         "../img/Hair/HairRollers/HairRollers2.png",
         "../img/Hair/HairRollers/HairRollers2.png",
@@ -5184,10 +4575,7 @@
       "price": 10.99,
       "weight": "8 pieces",
       "brand": "Orna Care",
-      "tags": [
-        "flexible",
-        "hair rollers"
-      ],
+      "tags": ["flexible", "hair rollers"],
       "images": [
         "../img/Hair/HairRollers/HairRollers3.png",
         "../img/Hair/HairRollers/HairRollers3.png",
@@ -5207,10 +4595,7 @@
       "price": 14.99,
       "weight": "6 pieces",
       "brand": "Orna Care",
-      "tags": [
-        "magnetic",
-        "hair rollers"
-      ],
+      "tags": ["magnetic", "hair rollers"],
       "images": [
         "../img/Hair/HairRollers/HairRollers4.png",
         "../img/Hair/HairRollers/HairRollers4.png",
@@ -5230,10 +4615,7 @@
       "price": 9.99,
       "weight": "10 pieces",
       "brand": "Orna Care",
-      "tags": [
-        "sponge",
-        "hair rollers"
-      ],
+      "tags": ["sponge", "hair rollers"],
       "images": [
         "../img/Hair/HairRollers/HairRollers5.png",
         "../img/Hair/HairRollers/HairRollers5.png",
@@ -5253,10 +4635,7 @@
       "price": 14.99,
       "weight": "300ml",
       "brand": "Orna Care",
-      "tags": [
-        "strong hold",
-        "hair spray"
-      ],
+      "tags": ["strong hold", "hair spray"],
       "images": [
         "../img/Hair/HairSpray/HairSpray1.png",
         "../img/Hair/HairSpray/HairSpray1.png",
@@ -5276,10 +4655,7 @@
       "price": 13.99,
       "weight": "300ml",
       "brand": "Orna Care",
-      "tags": [
-        "flexible hold",
-        "hair spray"
-      ],
+      "tags": ["flexible hold", "hair spray"],
       "images": [
         "../img/Hair/HairSpray/HairSpray2.png",
         "../img/Hair/HairSpray/HairSpray2.png",
@@ -5299,10 +4675,7 @@
       "price": 15.99,
       "weight": "300ml",
       "brand": "Orna Care",
-      "tags": [
-        "shine",
-        "hair spray"
-      ],
+      "tags": ["shine", "hair spray"],
       "images": [
         "../img/Hair/HairSpray/HairSpray3.png",
         "../img/Hair/HairSpray/HairSpray3.png",
@@ -5322,10 +4695,7 @@
       "price": 16.99,
       "weight": "300ml",
       "brand": "Orna Care",
-      "tags": [
-        "humidity resistant",
-        "hair spray"
-      ],
+      "tags": ["humidity resistant", "hair spray"],
       "images": [
         "../img/Hair/HairSpray/HairSpray4.png",
         "../img/Hair/HairSpray/HairSpray4.png",
@@ -5345,10 +4715,7 @@
       "price": 14.49,
       "weight": "300ml",
       "brand": "Orna Care",
-      "tags": [
-        "volumizing",
-        "hair spray"
-      ],
+      "tags": ["volumizing", "hair spray"],
       "images": [
         "../img/Hair/HairSpray/HairSpray5.png",
         "../img/Hair/HairSpray/HairSpray5.png",
@@ -5368,10 +4735,7 @@
       "price": 12.99,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "volumizing",
-        "hair mousse"
-      ],
+      "tags": ["volumizing", "hair mousse"],
       "images": [
         "../img/Hair/Mousse/Mousse1.png",
         "../img/Hair/Mousse/Mousse1.png",
@@ -5391,10 +4755,7 @@
       "price": 13.99,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "curl defining",
-        "hair mousse"
-      ],
+      "tags": ["curl defining", "hair mousse"],
       "images": [
         "../img/Hair/Mousse/Mousse2.png",
         "../img/Hair/Mousse/Mousse2.png",
@@ -5414,10 +4775,7 @@
       "price": 14.99,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "smoothing",
-        "hair mousse"
-      ],
+      "tags": ["smoothing", "hair mousse"],
       "images": [
         "../img/Hair/Mousse/Mousse3.png",
         "../img/Hair/Mousse/Mousse3.png",
@@ -5437,10 +4795,7 @@
       "price": 15.49,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "heat protecting",
-        "hair mousse"
-      ],
+      "tags": ["heat protecting", "hair mousse"],
       "images": [
         "../img/Hair/Mousse/Mousse4.png",
         "../img/Hair/Mousse/Mousse4.png",
@@ -5460,10 +4815,7 @@
       "price": 12.49,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "lightweight",
-        "hair mousse"
-      ],
+      "tags": ["lightweight", "hair mousse"],
       "images": [
         "../img/Hair/Mousse/Mousse5.png",
         "../img/Hair/Mousse/Mousse5.png",
@@ -5483,10 +4835,7 @@
       "price": 29.99,
       "weight": "1 unit",
       "brand": "Orna Care",
-      "tags": [
-        "ceramic",
-        "curling iron"
-      ],
+      "tags": ["ceramic", "curling iron"],
       "images": [
         "../img/Hair/CurlingIron/CurlingIron1.png",
         "../img/Hair/CurlingIron/CurlingIron1.png",
@@ -5506,10 +4855,7 @@
       "price": 34.99,
       "weight": "1 unit",
       "brand": "Orna Care",
-      "tags": [
-        "tourmaline",
-        "curling iron"
-      ],
+      "tags": ["tourmaline", "curling iron"],
       "images": [
         "../img/Hair/CurlingIron/CurlingIron2.png",
         "../img/Hair/CurlingIron/CurlingIron2.png",
@@ -5529,10 +4875,7 @@
       "price": 32.99,
       "weight": "1 unit",
       "brand": "Orna Care",
-      "tags": [
-        "adjustable",
-        "curling iron"
-      ],
+      "tags": ["adjustable", "curling iron"],
       "images": [
         "../img/Hair/CurlingIron/CurlingIron3.png",
         "../img/Hair/CurlingIron/CurlingIron3.png",
@@ -5552,10 +4895,7 @@
       "price": 24.99,
       "weight": "1 unit",
       "brand": "Orna Care",
-      "tags": [
-        "mini",
-        "curling iron"
-      ],
+      "tags": ["mini", "curling iron"],
       "images": [
         "../img/Hair/CurlingIron/CurlingIron4.png",
         "../img/Hair/CurlingIron/CurlingIron4.png",
@@ -5575,10 +4915,7 @@
       "price": 39.99,
       "weight": "1 unit",
       "brand": "Orna Care",
-      "tags": [
-        "professional",
-        "curling iron"
-      ],
+      "tags": ["professional", "curling iron"],
       "images": [
         "../img/Hair/CurlingIron/CurlingIron5.png",
         "../img/Hair/CurlingIron/CurlingIron5.png",
@@ -5598,10 +4935,7 @@
       "price": 12.99,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "volumizing",
-        "dry shampoo"
-      ],
+      "tags": ["volumizing", "dry shampoo"],
       "images": [
         "../img/Hair/Shampoo/Shampoo.png",
         "../img/Hair/Shampoo/Shampoo.png",
@@ -5621,10 +4955,7 @@
       "price": 11.99,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "cleansing",
-        "dry shampoo"
-      ],
+      "tags": ["cleansing", "dry shampoo"],
       "images": [
         "../img/Hair/Shampoo/Shampoo2.png",
         "../img/Hair/Shampoo/Shampoo2.png",
@@ -5644,10 +4975,7 @@
       "price": 13.49,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "refreshing",
-        "dry shampoo"
-      ],
+      "tags": ["refreshing", "dry shampoo"],
       "images": [
         "../img/Hair/Shampoo/Shampoo3.png",
         "../img/Hair/Shampoo/Shampoo3.png",
@@ -5667,10 +4995,7 @@
       "price": 12.49,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "fragrance",
-        "dry shampoo"
-      ],
+      "tags": ["fragrance", "dry shampoo"],
       "images": [
         "../img/Hair/Shampoo/Shampoo4.png",
         "../img/Hair/Shampoo/Shampoo4.png",
@@ -5690,10 +5015,7 @@
       "price": 14.99,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "natural",
-        "dry shampoo"
-      ],
+      "tags": ["natural", "dry shampoo"],
       "images": [
         "../img/Hair/Shampoo/Shampoo5.png",
         "../img/Hair/Shampoo/Shampoo5.png",
@@ -5713,10 +5035,7 @@
       "price": 11.99,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "leave-in",
-        "hair detangler"
-      ],
+      "tags": ["leave-in", "hair detangler"],
       "images": [
         "../img/Hair/Detangler/Detangler1.png",
         "../img/Hair/Detangler/Detangler1.png",
@@ -5736,10 +5055,7 @@
       "price": 10.99,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "spray",
-        "hair detangler"
-      ],
+      "tags": ["spray", "hair detangler"],
       "images": [
         "../img/Hair/Detangler/Detangler2.png",
         "../img/Hair/Detangler/Detangler2.png",
@@ -5759,10 +5075,7 @@
       "price": 12.49,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "cream",
-        "hair detangler"
-      ],
+      "tags": ["cream", "hair detangler"],
       "images": [
         "../img/Hair/Detangler/Detangler3.png",
         "../img/Hair/Detangler/Detangler3.png",
@@ -5782,10 +5095,7 @@
       "price": 13.99,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "natural",
-        "hair detangler"
-      ],
+      "tags": ["natural", "hair detangler"],
       "images": [
         "../img/Hair/Detangler/Detangler4.png",
         "../img/Hair/Detangler/Detangler4.png",
@@ -5805,10 +5115,7 @@
       "price": 9.99,
       "weight": "1 unit",
       "brand": "Orna Care",
-      "tags": [
-        "brush",
-        "hair detangler"
-      ],
+      "tags": ["brush", "hair detangler"],
       "images": [
         "../img/Hair/Detangler/Detangler5.png",
         "../img/Hair/Detangler/Detangler5.png",
@@ -5828,10 +5135,7 @@
       "price": 14.99,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "moisturizing",
-        "hair cream"
-      ],
+      "tags": ["moisturizing", "hair cream"],
       "images": [
         "../img/Hair/HairCream/HairCream1.png",
         "../img/Hair/HairCream/HairCream1.png",
@@ -5851,10 +5155,7 @@
       "price": 15.49,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "styling",
-        "hair cream"
-      ],
+      "tags": ["styling", "hair cream"],
       "images": [
         "../img/Hair/HairCream/HairCream2.png",
         "../img/Hair/HairCream/HairCream2.png",
@@ -5874,10 +5175,7 @@
       "price": 16.99,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "curl defining",
-        "hair cream"
-      ],
+      "tags": ["curl defining", "hair cream"],
       "images": [
         "../img/Hair/HairCream/HairCream3.png",
         "../img/Hair/HairCream/HairCream3.png",
@@ -5897,10 +5195,7 @@
       "price": 15.99,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "frizz control",
-        "hair cream"
-      ],
+      "tags": ["frizz control", "hair cream"],
       "images": [
         "../img/Hair/HairCream/HairCream4.png",
         "../img/Hair/HairCream/HairCream4.png",
@@ -5920,10 +5215,7 @@
       "price": 17.49,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "repairing",
-        "hair cream"
-      ],
+      "tags": ["repairing", "hair cream"],
       "images": [
         "../img/Hair/HairCream/HairCream5.png",
         "../img/Hair/HairCream/HairCream5.png",
@@ -5943,10 +5235,7 @@
       "price": 12.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "matte",
-        "hair wax"
-      ],
+      "tags": ["matte", "hair wax"],
       "images": [
         "../img/Hair/HairWax/HairWax1.png",
         "../img/Hair/HairWax/HairWax1.png",
@@ -5966,10 +5255,7 @@
       "price": 13.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "shine",
-        "hair wax"
-      ],
+      "tags": ["shine", "hair wax"],
       "images": [
         "../img/Hair/HairWax/HairWax2.png",
         "../img/Hair/HairWax/HairWax2.png",
@@ -5989,10 +5275,7 @@
       "price": 14.49,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "flexible",
-        "hair wax"
-      ],
+      "tags": ["flexible", "hair wax"],
       "images": [
         "../img/Hair/HairWax/HairWax3.png",
         "../img/Hair/HairWax/HairWax3.png",
@@ -6012,10 +5295,7 @@
       "price": 15.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "strong hold",
-        "hair wax"
-      ],
+      "tags": ["strong hold", "hair wax"],
       "images": [
         "../img/Hair/HairWax/HairWax4.png",
         "../img/Hair/HairWax/HairWax4.png",
@@ -6035,10 +5315,7 @@
       "price": 16.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "natural",
-        "hair wax"
-      ],
+      "tags": ["natural", "hair wax"],
       "images": [
         "../img/Hair/HairWax/HairWax5.png",
         "../img/Hair/HairWax/HairWax5.png",
@@ -6058,10 +5335,7 @@
       "price": 12.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "shine",
-        "hair pomade"
-      ],
+      "tags": ["shine", "hair pomade"],
       "images": [
         "../img/Hair/Pomade/Pomade1.png",
         "../img/Hair/Pomade/Pomade1.png",
@@ -6081,10 +5355,7 @@
       "price": 13.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "matte",
-        "hair pomade"
-      ],
+      "tags": ["matte", "hair pomade"],
       "images": [
         "../img/Hair/Pomade/Pomade2.png",
         "../img/Hair/Pomade/Pomade2.png",
@@ -6104,10 +5375,7 @@
       "price": 14.49,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "flexible",
-        "hair pomade"
-      ],
+      "tags": ["flexible", "hair pomade"],
       "images": [
         "../img/Hair/Pomade/Pomade3.png",
         "../img/Hair/Pomade/Pomade3.png",
@@ -6127,10 +5395,7 @@
       "price": 15.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "strong hold",
-        "hair pomade"
-      ],
+      "tags": ["strong hold", "hair pomade"],
       "images": [
         "../img/Hair/Pomade/Pomade4.png",
         "../img/Hair/Pomade/Pomade4.png",
@@ -6150,10 +5415,7 @@
       "price": 16.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "natural",
-        "hair pomade"
-      ],
+      "tags": ["natural", "hair pomade"],
       "images": [
         "../img/Hair/Pomade/Pomade5.png",
         "../img/Hair/Pomade/Pomade5.png",
@@ -6173,10 +5435,7 @@
       "price": 12.99,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "texturizing",
-        "hair texturizer"
-      ],
+      "tags": ["texturizing", "hair texturizer"],
       "images": [
         "../img/Hair/HairTexturizer/HairTexturizer1.png",
         "../img/Hair/HairTexturizer/HairTexturizer1.png",
@@ -6196,10 +5455,7 @@
       "price": 13.99,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "texturizing",
-        "hair texturizer"
-      ],
+      "tags": ["texturizing", "hair texturizer"],
       "images": [
         "../img/Hair/HairTexturizer/HairTexturizer2.png",
         "../img/Hair/HairTexturizer/HairTexturizer2.png",
@@ -6219,10 +5475,7 @@
       "price": 14.49,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "texturizing",
-        "hair texturizer"
-      ],
+      "tags": ["texturizing", "hair texturizer"],
       "images": [
         "../img/Hair/HairTexturizer/HairTexturizer3.png",
         "../img/Hair/HairTexturizer/HairTexturizer3.png",
@@ -6242,10 +5495,7 @@
       "price": 15.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "texturizing",
-        "hair texturizer"
-      ],
+      "tags": ["texturizing", "hair texturizer"],
       "images": [
         "../img/Hair/HairTexturizer/HairTexturizer4.png",
         "../img/Hair/HairTexturizer/HairTexturizer4.png",
@@ -6265,10 +5515,7 @@
       "price": 16.99,
       "weight": "50g",
       "brand": "Orna Care",
-      "tags": [
-        "texturizing",
-        "hair texturizer"
-      ],
+      "tags": ["texturizing", "hair texturizer"],
       "images": [
         "../img/Hair/HairTexturizer/HairTexturizer5.png",
         "../img/Hair/HairTexturizer/HairTexturizer5.png",
@@ -6288,10 +5535,7 @@
       "price": 12.99,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "lotion",
-        "baby"
-      ],
+      "tags": ["lotion", "baby"],
       "images": [
         "../img/Baby & Kids/babyLotion/babyLotion1.png",
         "../img/Baby & Kids/babyLotion/babyLotion1.png",
@@ -6311,10 +5555,7 @@
       "price": 14.99,
       "weight": "150ml",
       "brand": "Orna Care",
-      "tags": [
-        "cream",
-        "baby"
-      ],
+      "tags": ["cream", "baby"],
       "images": [
         "../img/Baby & Kids/babyLotion/babyLotion2.png",
         "../img/Baby & Kids/babyLotion/babyLotion2.png",
@@ -6334,10 +5575,7 @@
       "price": 13.49,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "soothing",
-        "baby"
-      ],
+      "tags": ["soothing", "baby"],
       "images": [
         "../img/Baby & Kids/babyLotion/babyLotion3.png",
         "../img/Baby & Kids/babyLotion/babyLotion3.png",
@@ -6357,10 +5595,7 @@
       "price": 15.99,
       "weight": "150ml",
       "brand": "Orna Care",
-      "tags": [
-        "massage",
-        "baby"
-      ],
+      "tags": ["massage", "baby"],
       "images": [
         "../img/Baby & Kids/babyLotion/babyLotion4.png",
         "../img/Baby & Kids/babyLotion/babyLotion4.png",
@@ -6380,10 +5615,7 @@
       "price": 16.99,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "organic",
-        "baby"
-      ],
+      "tags": ["organic", "baby"],
       "images": [
         "../img/Baby & Kids/babyLotion/babyLotion5.png",
         "../img/Baby & Kids/babyLotion/babyLotion5.png",
@@ -6403,10 +5635,7 @@
       "price": 9.99,
       "weight": "100g",
       "brand": "Orna Care",
-      "tags": [
-        "powder",
-        "baby"
-      ],
+      "tags": ["powder", "baby"],
       "images": [
         "../img/Baby & Kids/BabyPowder/BabyPowder1.png",
         "../img/Baby & Kids/BabyPowder/BabyPowder1.png",
@@ -6426,10 +5655,7 @@
       "price": 10.99,
       "weight": "100g",
       "brand": "Orna Care",
-      "tags": [
-        "natural",
-        "baby"
-      ],
+      "tags": ["natural", "baby"],
       "images": [
         "../img/Baby & Kids/BabyPowder/BabyPowder2.png",
         "../img/Baby & Kids/BabyPowder/BabyPowder2.png",
@@ -6449,10 +5675,7 @@
       "price": 8.99,
       "weight": "100g",
       "brand": "Orna Care",
-      "tags": [
-        "cornstarch",
-        "baby"
-      ],
+      "tags": ["cornstarch", "baby"],
       "images": [
         "../img/Baby & Kids/BabyPowder/BabyPowder3.png",
         "../img/Baby & Kids/BabyPowder/BabyPowder3.png",
@@ -6472,10 +5695,7 @@
       "price": 11.99,
       "weight": "100g",
       "brand": "Orna Care",
-      "tags": [
-        "herbal",
-        "baby"
-      ],
+      "tags": ["herbal", "baby"],
       "images": [
         "../img/Baby & Kids/BabyPowder/BabyPowder4.png",
         "../img/Baby & Kids/BabyPowder/BabyPowder4.png",
@@ -6495,10 +5715,7 @@
       "price": 9.49,
       "weight": "100g",
       "brand": "Orna Care",
-      "tags": [
-        "dusting",
-        "baby"
-      ],
+      "tags": ["dusting", "baby"],
       "images": [
         "../img/Baby & Kids/BabyPowder/BabyPowder5.png",
         "../img/Baby & Kids/BabyPowder/BabyPowder5.png",
@@ -6518,10 +5735,7 @@
       "price": 11.99,
       "weight": "250ml",
       "brand": "Orna Care",
-      "tags": [
-        "shampoo",
-        "baby"
-      ],
+      "tags": ["shampoo", "baby"],
       "images": [
         "../img/Baby & Kids/BabyShampoo/BabyShampoo1.png",
         "../img/Baby & Kids/BabyShampoo/BabyShampoo1.png",
@@ -6541,10 +5755,7 @@
       "price": 12.99,
       "weight": "250ml",
       "brand": "Orna Care",
-      "tags": [
-        "body wash",
-        "baby"
-      ],
+      "tags": ["body wash", "baby"],
       "images": [
         "../img/Baby & Kids/BabyShampoo/BabyShampoo2.png",
         "../img/Baby & Kids/BabyShampoo/BabyShampoo2.png",
@@ -6564,10 +5775,7 @@
       "price": 13.49,
       "weight": "250ml",
       "brand": "Orna Care",
-      "tags": [
-        "2-in-1",
-        "baby"
-      ],
+      "tags": ["2-in-1", "baby"],
       "images": [
         "../img/Baby & Kids/BabyShampoo/BabyShampoo3.png",
         "../img/Baby & Kids/BabyShampoo/BabyShampoo3.png",
@@ -6587,10 +5795,7 @@
       "price": 14.99,
       "weight": "250ml",
       "brand": "Orna Care",
-      "tags": [
-        "organic",
-        "baby"
-      ],
+      "tags": ["organic", "baby"],
       "images": [
         "../img/Baby & Kids/BabyShampoo/BabyShampoo4.png",
         "../img/Baby & Kids/BabyShampoo/BabyShampoo4.png",
@@ -6610,10 +5815,7 @@
       "price": 10.99,
       "weight": "250ml",
       "brand": "Orna Care",
-      "tags": [
-        "foaming",
-        "baby"
-      ],
+      "tags": ["foaming", "baby"],
       "images": [
         "../img/Baby & Kids/BabyShampoo/BabyShampoo5.png",
         "../img/Baby & Kids/BabyShampoo/BabyShampoo5.png",
@@ -6633,10 +5835,7 @@
       "price": 5.99,
       "weight": "80 wipes",
       "brand": "Orna Care",
-      "tags": [
-        "wipes",
-        "baby"
-      ],
+      "tags": ["wipes", "baby"],
       "images": [
         "../img/Baby & Kids/BabyWipes/BabyWipes1.png",
         "../img/Baby & Kids/BabyWipes/BabyWipes1.png",
@@ -6656,10 +5855,7 @@
       "price": 6.99,
       "weight": "80 wipes",
       "brand": "Orna Care",
-      "tags": [
-        "moisturizing",
-        "baby"
-      ],
+      "tags": ["moisturizing", "baby"],
       "images": [
         "../img/Baby & Kids/BabyWipes/BabyWipes2.png",
         "../img/Baby & Kids/BabyWipes/BabyWipes2.png",
@@ -6679,10 +5875,7 @@
       "price": 7.99,
       "weight": "80 wipes",
       "brand": "Orna Care",
-      "tags": [
-        "organic",
-        "baby"
-      ],
+      "tags": ["organic", "baby"],
       "images": [
         "../img/Baby & Kids/BabyWipes/BabyWipes3.png",
         "../img/Baby & Kids/BabyWipes/BabyWipes3.png",
@@ -6702,10 +5895,7 @@
       "price": 4.99,
       "weight": "20 wipes",
       "brand": "Orna Care",
-      "tags": [
-        "travel",
-        "baby"
-      ],
+      "tags": ["travel", "baby"],
       "images": [
         "../img/Baby & Kids/BabyWipes/BabyWipes4.png",
         "../img/Baby & Kids/BabyWipes/BabyWipes4.png",
@@ -6725,10 +5915,7 @@
       "price": 5.49,
       "weight": "80 wipes",
       "brand": "Orna Care",
-      "tags": [
-        "cleansing",
-        "baby"
-      ],
+      "tags": ["cleansing", "baby"],
       "images": [
         "../img/Baby & Kids/BabyWipes/BabyWipes5.png",
         "../img/Baby & Kids/BabyWipes/BabyWipes5.png",
@@ -6748,10 +5935,7 @@
       "price": 8.99,
       "weight": "100g",
       "brand": "Orna Care",
-      "tags": [
-        "soap",
-        "baby"
-      ],
+      "tags": ["soap", "baby"],
       "images": [
         "../img/Baby & Kids/BabySoap/BabySoap1.png",
         "../img/Baby & Kids/BabySoap/BabySoap1.png",
@@ -6771,10 +5955,7 @@
       "price": 9.99,
       "weight": "100g",
       "brand": "Orna Care",
-      "tags": [
-        "organic",
-        "baby"
-      ],
+      "tags": ["organic", "baby"],
       "images": [
         "../img/Baby & Kids/BabySoap/BabySoap2.png",
         "../img/Baby & Kids/BabySoap/BabySoap2.png",
@@ -6794,10 +5975,7 @@
       "price": 8.49,
       "weight": "100g",
       "brand": "Orna Care",
-      "tags": [
-        "glycerin",
-        "baby"
-      ],
+      "tags": ["glycerin", "baby"],
       "images": [
         "../img/Baby & Kids/BabySoap/BabySoap3.png",
         "../img/Baby & Kids/BabySoap/BabySoap3.png",
@@ -6817,10 +5995,7 @@
       "price": 9.49,
       "weight": "100g",
       "brand": "Orna Care",
-      "tags": [
-        "castile",
-        "baby"
-      ],
+      "tags": ["castile", "baby"],
       "images": [
         "../img/Baby & Kids/BabySoap/BabySoap4.png",
         "../img/Baby & Kids/BabySoap/BabySoap4.png",
@@ -6840,10 +6015,7 @@
       "price": 10.99,
       "weight": "100g",
       "brand": "Orna Care",
-      "tags": [
-        "herbal",
-        "baby"
-      ],
+      "tags": ["herbal", "baby"],
       "images": [
         "../img/Baby & Kids/BabySoap/BabySoap5.png",
         "../img/Baby & Kids/BabySoap/BabySoap5.png",
@@ -6863,10 +6035,7 @@
       "price": 14.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "sunscreen",
-        "baby"
-      ],
+      "tags": ["sunscreen", "baby"],
       "images": [
         "../img/Baby & Kids/BabySunscreen/BabySunscreen1.png",
         "../img/Baby & Kids/BabySunscreen/BabySunscreen1.png",
@@ -6886,10 +6055,7 @@
       "price": 16.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "organic",
-        "sunscreen"
-      ],
+      "tags": ["organic", "sunscreen"],
       "images": [
         "../img/Baby & Kids/BabySunscreen/BabySunscreen2.png",
         "../img/Baby & Kids/BabySunscreen/BabySunscreen2.png",
@@ -6909,10 +6075,7 @@
       "price": 18.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "mineral",
-        "sunscreen"
-      ],
+      "tags": ["mineral", "sunscreen"],
       "images": [
         "../img/Baby & Kids/BabySunscreen/BabySunscreen3.png",
         "../img/Baby & Kids/BabySunscreen/BabySunscreen3.png",
@@ -6932,10 +6095,7 @@
       "price": 9.99,
       "weight": "20g",
       "brand": "Orna Care",
-      "tags": [
-        "sunscreen",
-        "stick"
-      ],
+      "tags": ["sunscreen", "stick"],
       "images": [
         "../img/Baby & Kids/BabySunscreen/BabySunscreen4.png",
         "../img/Baby & Kids/BabySunscreen/BabySunscreen4.png",
@@ -6955,10 +6115,7 @@
       "price": 12.49,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "lotion",
-        "sunscreen"
-      ],
+      "tags": ["lotion", "sunscreen"],
       "images": [
         "../img/Baby & Kids/BabySunscreen/BabySunscreen5.png",
         "../img/Baby & Kids/BabySunscreen/BabySunscreen5.png",
@@ -6978,10 +6135,7 @@
       "price": 11.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "insect repellent",
-        "natural"
-      ],
+      "tags": ["insect repellent", "natural"],
       "images": [
         "../img/Baby & Kids/BabyInsectRepellent/BabyInsectRepellent1.png",
         "../img/Baby & Kids/BabyInsectRepellent/BabyInsectRepellent1.png",
@@ -7001,10 +6155,7 @@
       "price": 12.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "herbal",
-        "insect repellent"
-      ],
+      "tags": ["herbal", "insect repellent"],
       "images": [
         "../img/Baby & Kids/BabyInsectRepellent/BabyInsectRepellent2.png",
         "../img/Baby & Kids/BabyInsectRepellent/BabyInsectRepellent2.png",
@@ -7024,10 +6175,7 @@
       "price": 10.49,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "spray",
-        "insect repellent"
-      ],
+      "tags": ["spray", "insect repellent"],
       "images": [
         "../img/Baby & Kids/BabyInsectRepellent/BabyInsectRepellent3.png",
         "../img/Baby & Kids/BabyInsectRepellent/BabyInsectRepellent3.png",
@@ -7047,10 +6195,7 @@
       "price": 9.99,
       "weight": "50ml",
       "brand": "Orna Care",
-      "tags": [
-        "roll-on",
-        "insect repellent"
-      ],
+      "tags": ["roll-on", "insect repellent"],
       "images": [
         "../img/Baby & Kids/BabyInsectRepellent/BabyInsectRepellent4.png",
         "../img/Baby & Kids/BabyInsectRepellent/BabyInsectRepellent4.png",
@@ -7070,10 +6215,7 @@
       "price": 7.99,
       "weight": "20 wipes",
       "brand": "Orna Care",
-      "tags": [
-        "wipes",
-        "insect repellent"
-      ],
+      "tags": ["wipes", "insect repellent"],
       "images": [
         "../img/Baby & Kids/BabyInsectRepellent/BabyInsectRepellent5.png",
         "../img/Baby & Kids/BabyInsectRepellent/BabyInsectRepellent5.png",
@@ -7093,10 +6235,7 @@
       "price": 9.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "rash cream",
-        "baby"
-      ],
+      "tags": ["rash cream", "baby"],
       "images": [
         "../img/Baby & Kids/RashCream/RashCream1.png",
         "../img/Baby & Kids/RashCream/RashCream1.png",
@@ -7116,10 +6255,7 @@
       "price": 11.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "organic",
-        "rash cream"
-      ],
+      "tags": ["organic", "rash cream"],
       "images": [
         "../img/Baby & Kids/RashCream/RashCream2.png",
         "../img/Baby & Kids/RashCream/RashCream2.png",
@@ -7139,10 +6275,7 @@
       "price": 10.49,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "zinc oxide",
-        "rash cream"
-      ],
+      "tags": ["zinc oxide", "rash cream"],
       "images": [
         "../img/Baby & Kids/RashCream/RashCream3.png",
         "../img/Baby & Kids/RashCream/RashCream3.png",
@@ -7162,10 +6295,7 @@
       "price": 12.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "herbal",
-        "rash cream"
-      ],
+      "tags": ["herbal", "rash cream"],
       "images": [
         "../img/Baby & Kids/RashCream/RashCream4.png",
         "../img/Baby & Kids/RashCream/RashCream4.png",
@@ -7185,10 +6315,7 @@
       "price": 10.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "moisturizing",
-        "rash cream"
-      ],
+      "tags": ["moisturizing", "rash cream"],
       "images": [
         "../img/Baby & Kids/RashCream/RashCream5.png",
         "../img/Baby & Kids/RashCream/RashCream5.png",
@@ -7208,10 +6335,7 @@
       "price": 9.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "hair oil",
-        "baby"
-      ],
+      "tags": ["hair oil", "baby"],
       "images": [
         "../img/Baby & Kids/BabyHairOil/BabyHairOil1.png",
         "../img/Baby & Kids/BabyHairOil/BabyHairOil1.png",
@@ -7231,10 +6355,7 @@
       "price": 11.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "organic",
-        "hair oil"
-      ],
+      "tags": ["organic", "hair oil"],
       "images": [
         "../img/Baby & Kids/BabyHairOil/BabyHairOil2.png",
         "../img/Baby & Kids/BabyHairOil/BabyHairOil2.png",
@@ -7254,10 +6375,7 @@
       "price": 10.49,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "coconut",
-        "hair oil"
-      ],
+      "tags": ["coconut", "hair oil"],
       "images": [
         "../img/Baby & Kids/BabyHairOil/BabyHairOil3.png",
         "../img/Baby & Kids/BabyHairOil/BabyHairOil3.png",
@@ -7277,10 +6395,7 @@
       "price": 12.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "almond",
-        "hair oil"
-      ],
+      "tags": ["almond", "hair oil"],
       "images": [
         "../img/Baby & Kids/BabyHairOil/BabyHairOil4.png",
         "../img/Baby & Kids/BabyHairOil/BabyHairOil4.png",
@@ -7300,10 +6415,7 @@
       "price": 10.99,
       "weight": "100ml",
       "brand": "Orna Care",
-      "tags": [
-        "herbal",
-        "hair oil"
-      ],
+      "tags": ["herbal", "hair oil"],
       "images": [
         "../img/Baby & Kids/BabyHairOil/BabyHairOil5.png",
         "../img/Baby & Kids/BabyHairOil/BabyHairOil5.png",
@@ -7323,10 +6435,7 @@
       "price": 12.99,
       "weight": "250ml",
       "brand": "Orna Care",
-      "tags": [
-        "2-in-1",
-        "kids"
-      ],
+      "tags": ["2-in-1", "kids"],
       "images": [
         "../img/Baby & Kids/KidsShampoo/KidsShampoo1.png",
         "../img/Baby & Kids/KidsShampoo/KidsShampoo1.png",
@@ -7346,10 +6455,7 @@
       "price": 10.99,
       "weight": "250ml",
       "brand": "Orna Care",
-      "tags": [
-        "strawberry",
-        "kids"
-      ],
+      "tags": ["strawberry", "kids"],
       "images": [
         "../img/Baby & Kids/KidsShampoo/KidsShampoo2.png",
         "../img/Baby & Kids/KidsShampoo/KidsShampoo2.png",
@@ -7369,10 +6475,7 @@
       "price": 11.49,
       "weight": "250ml",
       "brand": "Orna Care",
-      "tags": [
-        "coconut",
-        "kids"
-      ],
+      "tags": ["coconut", "kids"],
       "images": [
         "../img/Baby & Kids/KidsShampoo/KidsShampoo3.png",
         "../img/Baby & Kids/KidsShampoo/KidsShampoo3.png",
@@ -7392,10 +6495,7 @@
       "price": 10.99,
       "weight": "250ml",
       "brand": "Orna Care",
-      "tags": [
-        "apple",
-        "kids"
-      ],
+      "tags": ["apple", "kids"],
       "images": [
         "../img/Baby & Kids/KidsShampoo/KidsShampoo4.png",
         "../img/Baby & Kids/KidsShampoo/KidsShampoo4.png",
@@ -7415,10 +6515,7 @@
       "price": 11.99,
       "weight": "250ml",
       "brand": "Orna Care",
-      "tags": [
-        "berry",
-        "kids"
-      ],
+      "tags": ["berry", "kids"],
       "images": [
         "../img/Baby & Kids/KidsShampoo/KidsShampoo5.png",
         "../img/Baby & Kids/KidsShampoo/KidsShampoo5.png",
@@ -7438,10 +6535,7 @@
       "price": 9.99,
       "weight": "250ml",
       "brand": "Orna Care",
-      "tags": [
-        "body wash",
-        "kids"
-      ],
+      "tags": ["body wash", "kids"],
       "images": [
         "../img/Baby & Kids/BodyWash&soap/BodyWash&soap1.png",
         "../img/Baby & Kids/BodyWash&soap/BodyWash&soap1.png",
@@ -7461,10 +6555,7 @@
       "price": 8.99,
       "weight": "250ml",
       "brand": "Orna Care",
-      "tags": [
-        "bubble bath",
-        "kids"
-      ],
+      "tags": ["bubble bath", "kids"],
       "images": [
         "../img/Baby & Kids/BodyWash&soap/BodyWash&soap2.png",
         "../img/Baby & Kids/BodyWash&soap/BodyWash&soap2.png",
@@ -7484,10 +6575,7 @@
       "price": 10.49,
       "weight": "250ml",
       "brand": "Orna Care",
-      "tags": [
-        "foaming",
-        "body wash"
-      ],
+      "tags": ["foaming", "body wash"],
       "images": [
         "../img/Baby & Kids/BodyWash&soap/BodyWash&soap3.png",
         "../img/Baby & Kids/BodyWash&soap/BodyWash&soap3.png",
@@ -7507,10 +6595,7 @@
       "price": 7.99,
       "weight": "100g",
       "brand": "Orna Care",
-      "tags": [
-        "natural",
-        "soap"
-      ],
+      "tags": ["natural", "soap"],
       "images": [
         "../img/Baby & Kids/BodyWash&soap/BodyWash&soap4.png",
         "../img/Baby & Kids/BodyWash&soap/BodyWash&soap4.png",
@@ -7530,10 +6615,7 @@
       "price": 6.49,
       "weight": "100g",
       "brand": "Orna Care",
-      "tags": [
-        "fun",
-        "soap"
-      ],
+      "tags": ["fun", "soap"],
       "images": [
         "../img/Baby & Kids/BodyWash&soap/BodyWash&soap5.png",
         "../img/Baby & Kids/BodyWash&soap/BodyWash&soap5.png",
@@ -7553,10 +6635,7 @@
       "price": 9.99,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "moisturizer",
-        "kids"
-      ],
+      "tags": ["moisturizer", "kids"],
       "images": [
         "../img/Baby & Kids/KidsMoisturizer/KidsMoisturizer1.png",
         "../img/Baby & Kids/KidsMoisturizer/KidsMoisturizer1.png",
@@ -7576,10 +6655,7 @@
       "price": 10.49,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "hydrating",
-        "cream"
-      ],
+      "tags": ["hydrating", "cream"],
       "images": [
         "../img/Baby & Kids/KidsMoisturizer/KidsMoisturizer2.png",
         "../img/Baby & Kids/KidsMoisturizer/KidsMoisturizer2.png",
@@ -7599,10 +6675,7 @@
       "price": 11.99,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "organic",
-        "moisturizer"
-      ],
+      "tags": ["organic", "moisturizer"],
       "images": [
         "../img/Baby & Kids/KidsMoisturizer/KidsMoisturizer3.png",
         "../img/Baby & Kids/KidsMoisturizer/KidsMoisturizer3.png",
@@ -7622,10 +6695,7 @@
       "price": 10.99,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "nourishing",
-        "cream"
-      ],
+      "tags": ["nourishing", "cream"],
       "images": [
         "../img/Baby & Kids/KidsMoisturizer/KidsMoisturizer4.png",
         "../img/Baby & Kids/KidsMoisturizer/KidsMoisturizer4.png",
@@ -7645,10 +6715,7 @@
       "price": 9.49,
       "weight": "200ml",
       "brand": "Orna Care",
-      "tags": [
-        "fun",
-        "moisturizer"
-      ],
+      "tags": ["fun", "moisturizer"],
       "images": [
         "../img/Baby & Kids/KidsMoisturizer/KidsMoisturizer5.png",
         "../img/Baby & Kids/KidsMoisturizer/KidsMoisturizer5.png",
@@ -7668,10 +6735,7 @@
       "price": 29.99,
       "weight": "50g",
       "brand": "Orna Care",
-      "tags": [
-        "necklace",
-        "gold"
-      ],
+      "tags": ["necklace", "gold"],
       "images": [
         "../img/rent-product/necklace/necklace (1).png",
         "../img/rent-product/necklace/necklace (2).png",
@@ -7691,10 +6755,7 @@
       "price": 24.99,
       "weight": "40g",
       "brand": "Orna Care",
-      "tags": [
-        "necklace",
-        "silver"
-      ],
+      "tags": ["necklace", "silver"],
       "images": [
         "../img/rent-product/necklace/necklace (2).png",
         "../img/rent-product/necklace/necklace (2).png",
@@ -7714,10 +6775,7 @@
       "price": 19.99,
       "weight": "30g",
       "brand": "Orna Care",
-      "tags": [
-        "necklace",
-        "beaded"
-      ],
+      "tags": ["necklace", "beaded"],
       "images": [
         "../img/rent-product/necklace/necklace (3).png",
         "../img/rent-product/necklace/necklace (3).png",
@@ -7737,10 +6795,7 @@
       "price": 15.99,
       "weight": "20g",
       "brand": "Orna Care",
-      "tags": [
-        "necklace",
-        "choker"
-      ],
+      "tags": ["necklace", "choker"],
       "images": [
         "../img/rent-product/necklace/necklace (4).png",
         "../img/rent-product/necklace/necklace (4).png",
@@ -7760,10 +6815,7 @@
       "price": 34.99,
       "weight": "60g",
       "brand": "Orna Care",
-      "tags": [
-        "necklace",
-        "statement"
-      ],
+      "tags": ["necklace", "statement"],
       "images": [
         "../img/rent-product/necklace/necklace (8).png",
         "../img/rent-product/necklace/necklace (8).png",
@@ -7783,10 +6835,7 @@
       "price": 19.99,
       "weight": "15g",
       "brand": "Orna Care",
-      "tags": [
-        "earrings",
-        "hoop"
-      ],
+      "tags": ["earrings", "hoop"],
       "images": [
         "../img/rent-product/earrings/earrings (1).png",
         "../img/rent-product/earrings/earrings (1).png",
@@ -7806,10 +6855,7 @@
       "price": 14.99,
       "weight": "10g",
       "brand": "Orna Care",
-      "tags": [
-        "earrings",
-        "stud"
-      ],
+      "tags": ["earrings", "stud"],
       "images": [
         "../img/rent-product/earrings/earrings (2).png",
         "../img/rent-product/earrings/earrings (2).png",
@@ -7829,10 +6875,7 @@
       "price": 22.99,
       "weight": "20g",
       "brand": "Orna Care",
-      "tags": [
-        "earrings",
-        "dangle"
-      ],
+      "tags": ["earrings", "dangle"],
       "images": [
         "../img/rent-product/earrings/earrings (3).png",
         "../img/rent-product/earrings/earrings (3).png",
@@ -7852,10 +6895,7 @@
       "price": 29.99,
       "weight": "15g",
       "brand": "Orna Care",
-      "tags": [
-        "earrings",
-        "pearl"
-      ],
+      "tags": ["earrings", "pearl"],
       "images": [
         "../img/rent-product/earrings/earrings (4).png",
         "../img/rent-product/earrings/earrings (4).png",
@@ -7875,10 +6915,7 @@
       "price": 12.99,
       "weight": "10g",
       "brand": "Orna Care",
-      "tags": [
-        "earrings",
-        "beaded"
-      ],
+      "tags": ["earrings", "beaded"],
       "images": [
         "../img/rent-product/earrings/earrings (5).png",
         "../img/rent-product/earrings/earrings (5).png",
@@ -7898,10 +6935,7 @@
       "price": 24.99,
       "weight": "10g",
       "brand": "Orna Care",
-      "tags": [
-        "ring",
-        "gold"
-      ],
+      "tags": ["ring", "gold"],
       "images": [
         "../img/rent-product/ring/ring (2).png",
         "../img/rent-product/ring/ring (2).png",
@@ -7921,10 +6955,7 @@
       "price": 19.99,
       "weight": "10g",
       "brand": "Orna Care",
-      "tags": [
-        "ring",
-        "silver"
-      ],
+      "tags": ["ring", "silver"],
       "images": [
         "../img/rent-product/ring/ring (1).png",
         "../img/rent-product/ring/ring (1).png",
@@ -7944,10 +6975,7 @@
       "price": 34.99,
       "weight": "15g",
       "brand": "Orna Care",
-      "tags": [
-        "ring",
-        "gemstone"
-      ],
+      "tags": ["ring", "gemstone"],
       "images": [
         "../img/rent-product/ring/ring (3).png",
         "../img/rent-product/ring/ring (3).png",
@@ -7967,10 +6995,7 @@
       "price": 29.99,
       "weight": "20g",
       "brand": "Orna Care",
-      "tags": [
-        "ring",
-        "stackable"
-      ],
+      "tags": ["ring", "stackable"],
       "images": [
         "../img/rent-product/ring/ring (4).png",
         "../img/rent-product/ring/ring (4).png",
@@ -7990,10 +7015,7 @@
       "price": 39.99,
       "weight": "15g",
       "brand": "Orna Care",
-      "tags": [
-        "ring",
-        "vintage"
-      ],
+      "tags": ["ring", "vintage"],
       "images": [
         "../img/rent-product/ring/ring (5).png",
         "../img/rent-product/ring/ring (5).png",
@@ -8013,10 +7035,7 @@
       "price": 29.99,
       "weight": "20g",
       "brand": "Orna Care",
-      "tags": [
-        "bracelet",
-        "charm"
-      ],
+      "tags": ["bracelet", "charm"],
       "images": [
         "../img/rent-product/bracelate/bracelate (2).png",
         "../img/rent-product/bracelate/bracelate (2).png",
@@ -8036,10 +7055,7 @@
       "price": 19.99,
       "weight": "15g",
       "brand": "Orna Care",
-      "tags": [
-        "bracelet",
-        "leather"
-      ],
+      "tags": ["bracelet", "leather"],
       "images": [
         "../img/rent-product/bracelate/bracelate (1).png",
         "../img/rent-product/bracelate/bracelate (1).png",
@@ -8059,10 +7075,7 @@
       "price": 14.99,
       "weight": "10g",
       "brand": "Orna Care",
-      "tags": [
-        "bracelet",
-        "beaded"
-      ],
+      "tags": ["bracelet", "beaded"],
       "images": [
         "../img/rent-product/bracelate/bracelate (3).png",
         "../img/rent-product/bracelate/bracelate (3).png",
@@ -8082,10 +7095,7 @@
       "price": 34.99,
       "weight": "25g",
       "brand": "Orna Care",
-      "tags": [
-        "bracelet",
-        "gold"
-      ],
+      "tags": ["bracelet", "gold"],
       "images": [
         "../img/rent-product/bracelate/bracelate (4).png",
         "../img/rent-product/bracelate/bracelate (4).png",
@@ -8105,10 +7115,7 @@
       "price": 24.99,
       "weight": "20g",
       "brand": "Orna Care",
-      "tags": [
-        "bracelet",
-        "cuff"
-      ],
+      "tags": ["bracelet", "cuff"],
       "images": [
         "../img/rent-product/bracelate/bracelate (5).png",
         "../img/rent-product/bracelate/bracelate (5).png",
@@ -8128,10 +7135,7 @@
       "price": 39.99,
       "weight": "100g",
       "brand": "Orna Care",
-      "tags": [
-        "bangles",
-        "traditional"
-      ],
+      "tags": ["bangles", "traditional"],
       "images": [
         "../img/rent-product/bangles/bangles (2).png",
         "../img/rent-product/bangles/bangles (2).png",
@@ -8151,10 +7155,7 @@
       "price": 29.99,
       "weight": "80g",
       "brand": "Orna Care",
-      "tags": [
-        "bangles",
-        "colorful"
-      ],
+      "tags": ["bangles", "colorful"],
       "images": [
         "../img/rent-product/bangles/bangles (1).png",
         "../img/rent-product/bangles/bangles (1).png",
@@ -8174,10 +7175,7 @@
       "price": 49.99,
       "weight": "120g",
       "brand": "Orna Care",
-      "tags": [
-        "bangles",
-        "gold"
-      ],
+      "tags": ["bangles", "gold"],
       "images": [
         "../img/rent-product/bangles/bangles (3).png",
         "../img/rent-product/bangles/bangles (3).png",
@@ -8197,10 +7195,7 @@
       "price": 39.99,
       "weight": "100g",
       "brand": "Orna Care",
-      "tags": [
-        "bangles",
-        "silver"
-      ],
+      "tags": ["bangles", "silver"],
       "images": [
         "../img/rent-product/bangles/bangles (4).png",
         "../img/rent-product/bangles/bangles (4).png",
@@ -8220,10 +7215,7 @@
       "price": 24.99,
       "weight": "80g",
       "brand": "Orna Care",
-      "tags": [
-        "bangles",
-        "beaded"
-      ],
+      "tags": ["bangles", "beaded"],
       "images": [
         "../img/rent-product/bangles/bangles (5).png",
         "../img/rent-product/bangles/bangles (5).png",
@@ -8243,10 +7235,7 @@
       "price": 29.99,
       "weight": "30g",
       "brand": "Orna Care",
-      "tags": [
-        "maang tikka",
-        "traditional"
-      ],
+      "tags": ["maang tikka", "traditional"],
       "images": [
         "../img/rent-product/mang-tika/mang-tika (1).png",
         "../img/rent-product/mang-tika/mang-tika (1).png",
@@ -8266,10 +7255,7 @@
       "price": 34.99,
       "weight": "25g",
       "brand": "Orna Care",
-      "tags": [
-        "maang tikka",
-        "gold"
-      ],
+      "tags": ["maang tikka", "gold"],
       "images": [
         "../img/rent-product/mang-tika/mang-tika (2).png",
         "../img/rent-product/mang-tika/mang-tika (2).png",
@@ -8289,10 +7275,7 @@
       "price": 39.99,
       "weight": "35g",
       "brand": "Orna Care",
-      "tags": [
-        "maang tikka",
-        "kundan"
-      ],
+      "tags": ["maang tikka", "kundan"],
       "images": [
         "../img/rent-product/mang-tika/mang-tika (3).png",
         "../img/rent-product/mang-tika/mang-tika (3).png",
@@ -8312,10 +7295,7 @@
       "price": 24.99,
       "weight": "20g",
       "brand": "Orna Care",
-      "tags": [
-        "maang tikka",
-        "crystal"
-      ],
+      "tags": ["maang tikka", "crystal"],
       "images": [
         "../img/rent-product/mang-tika/mang-tika (4).png",
         "../img/rent-product/mang-tika/mang-tika (4).png",
@@ -8335,10 +7315,7 @@
       "price": 32.99,
       "weight": "30g",
       "brand": "Orna Care",
-      "tags": [
-        "maang tikka",
-        "floral"
-      ],
+      "tags": ["maang tikka", "floral"],
       "images": [
         "../img/rent-product/mang-tika/mang-tika (5).png",
         "../img/rent-product/mang-tika/mang-tika (5).png",
@@ -8358,10 +7335,7 @@
       "price": 19.99,
       "weight": "10g",
       "brand": "Orna Care",
-      "tags": [
-        "nose ring",
-        "traditional"
-      ],
+      "tags": ["nose ring", "traditional"],
       "images": [
         "../img/rent-product/Nose Ring (Nath)/nath (1).png",
         "../img/rent-product/Nose Ring (Nath)/nath (1).png",
@@ -8381,10 +7355,7 @@
       "price": 24.99,
       "weight": "8g",
       "brand": "Orna Care",
-      "tags": [
-        "nose ring",
-        "gold"
-      ],
+      "tags": ["nose ring", "gold"],
       "images": [
         "../img/rent-product/Nose Ring (Nath)/nath (2).png",
         "../img/rent-product/Nose Ring (Nath)/nath (2).png",
@@ -8404,10 +7375,7 @@
       "price": 29.99,
       "weight": "12g",
       "brand": "Orna Care",
-      "tags": [
-        "nose ring",
-        "kundan"
-      ],
+      "tags": ["nose ring", "kundan"],
       "images": [
         "../img/rent-product/Nose Ring (Nath)/nath (3).png",
         "../img/rent-product/Nose Ring (Nath)/nath (3).png",
@@ -8427,10 +7395,7 @@
       "price": 18.99,
       "weight": "6g",
       "brand": "Orna Care",
-      "tags": [
-        "nose ring",
-        "crystal"
-      ],
+      "tags": ["nose ring", "crystal"],
       "images": [
         "../img/rent-product/Nose Ring (Nath)/nath (4).png",
         "../img/rent-product/Nose Ring (Nath)/nath (4).png",
@@ -8450,10 +7415,7 @@
       "price": 22.99,
       "weight": "10g",
       "brand": "Orna Care",
-      "tags": [
-        "nose ring",
-        "floral"
-      ],
+      "tags": ["nose ring", "floral"],
       "images": [
         "../img/rent-product/Nose Ring (Nath)/nath (5).png",
         "../img/rent-product/Nose Ring (Nath)/nath (5).png",
@@ -8473,10 +7435,7 @@
       "price": 29.99,
       "weight": "30g",
       "brand": "Orna Care",
-      "tags": [
-        "anklet",
-        "traditional"
-      ],
+      "tags": ["anklet", "traditional"],
       "images": [
         "../img/rent-product/anklet/anklet (1).png",
         "../img/rent-product/anklet/anklet (1).png",
@@ -8496,10 +7455,7 @@
       "price": 34.99,
       "weight": "25g",
       "brand": "Orna Care",
-      "tags": [
-        "anklet",
-        "gold"
-      ],
+      "tags": ["anklet", "gold"],
       "images": [
         "../img/rent-product/anklet/anklet.png",
         "../img/rent-product/anklet/anklet.png",
@@ -8519,10 +7475,7 @@
       "price": 19.99,
       "weight": "20g",
       "brand": "Orna Care",
-      "tags": [
-        "anklet",
-        "beaded"
-      ],
+      "tags": ["anklet", "beaded"],
       "images": [
         "../img/rent-product/anklet/anklet (2).png",
         "../img/rent-product/anklet/anklet (2).png",
@@ -8542,10 +7495,7 @@
       "price": 24.99,
       "weight": "20g",
       "brand": "Orna Care",
-      "tags": [
-        "anklet",
-        "silver"
-      ],
+      "tags": ["anklet", "silver"],
       "images": [
         "../img/rent-product/anklet/anklet (3).png",
         "../img/rent-product/anklet/anklet (3).png",
@@ -8565,10 +7515,7 @@
       "price": 22.99,
       "weight": "15g",
       "brand": "Orna Care",
-      "tags": [
-        "anklet",
-        "charm"
-      ],
+      "tags": ["anklet", "charm"],
       "images": [
         "../img/rent-product/anklet/anklet (4).png",
         "../img/rent-product/anklet/anklet (4).png",
@@ -8588,10 +7535,7 @@
       "price": 12.99,
       "weight": "5g",
       "brand": "Orna Care",
-      "tags": [
-        "toe ring",
-        "traditional"
-      ],
+      "tags": ["toe ring", "traditional"],
       "images": [
         "../img/rent-product/ToeRing/ToeRing1.png",
         "../img/rent-product/ToeRing/ToeRing1.png",
@@ -8611,10 +7555,7 @@
       "price": 14.99,
       "weight": "6g",
       "brand": "Orna Care",
-      "tags": [
-        "toe ring",
-        "gold"
-      ],
+      "tags": ["toe ring", "gold"],
       "images": [
         "../img/rent-product/ToeRing/ToeRing2.png",
         "../img/rent-product/ToeRing/ToeRing2.png",
@@ -8634,10 +7575,7 @@
       "price": 10.99,
       "weight": "5g",
       "brand": "Orna Care",
-      "tags": [
-        "toe ring",
-        "silver"
-      ],
+      "tags": ["toe ring", "silver"],
       "images": [
         "../img/rent-product/ToeRing/ToeRing3.png",
         "../img/rent-product/ToeRing/ToeRing3.png",
@@ -8657,10 +7595,7 @@
       "price": 9.99,
       "weight": "4g",
       "brand": "Orna Care",
-      "tags": [
-        "toe ring",
-        "beaded"
-      ],
+      "tags": ["toe ring", "beaded"],
       "images": [
         "../img/rent-product/ToeRing/ToeRing4.png",
         "../img/rent-product/ToeRing/ToeRing4.png",
@@ -8680,10 +7615,7 @@
       "price": 11.49,
       "weight": "5g",
       "brand": "Orna Care",
-      "tags": [
-        "toe ring",
-        "charm"
-      ],
+      "tags": ["toe ring", "charm"],
       "images": [
         "../img/rent-product/ToeRing/ToeRing5.png",
         "../img/rent-product/ToeRing/ToeRing5.png",
@@ -8703,10 +7635,7 @@
       "price": 29.99,
       "weight": "150g",
       "brand": "Orna Care",
-      "tags": [
-        "waist belt",
-        "traditional"
-      ],
+      "tags": ["waist belt", "traditional"],
       "images": [
         "../img/rent-product/Kamarbandh/Kamarbandh-1.png",
         "../img/rent-product/Kamarbandh/Kamarbandh-1.png",
@@ -8726,10 +7655,7 @@
       "price": 34.99,
       "weight": "200g",
       "brand": "Orna Care",
-      "tags": [
-        "waist belt",
-        "gold"
-      ],
+      "tags": ["waist belt", "gold"],
       "images": [
         "../img/rent-product/Kamarbandh/Kamarbandh-2.png",
         "../img/rent-product/Kamarbandh/Kamarbandh-2.png",
@@ -8749,10 +7675,7 @@
       "price": 24.99,
       "weight": "180g",
       "brand": "Orna Care",
-      "tags": [
-        "waist belt",
-        "beaded"
-      ],
+      "tags": ["waist belt", "beaded"],
       "images": [
         "../img/rent-product/Kamarbandh/Kamarbandh-3.png",
         "../img/rent-product/Kamarbandh/Kamarbandh-3.png",
@@ -8772,10 +7695,7 @@
       "price": 29.99,
       "weight": "160g",
       "brand": "Orna Care",
-      "tags": [
-        "waist belt",
-        "silver"
-      ],
+      "tags": ["waist belt", "silver"],
       "images": [
         "../img/rent-product/Kamarbandh/Kamarbandh-4.png",
         "../img/rent-product/Kamarbandh/Kamarbandh-4.png",
@@ -8795,10 +7715,7 @@
       "price": 32.99,
       "weight": "170g",
       "brand": "Orna Care",
-      "tags": [
-        "waist belt",
-        "charm"
-      ],
+      "tags": ["waist belt", "charm"],
       "images": [
         "../img/rent-product/Kamarbandh/Kamarbandh-5.png",
         "../img/rent-product/Kamarbandh/Kamarbandh-5.png",
@@ -8818,10 +7735,7 @@
       "price": 19.99,
       "weight": "10g",
       "brand": "Orna Care",
-      "tags": [
-        "brooch",
-        "floral"
-      ],
+      "tags": ["brooch", "floral"],
       "images": [
         "../img/rent-product/Brooch/Brooch-1.png",
         "../img/rent-product/Brooch/Brooch-1.png",
@@ -8841,10 +7755,7 @@
       "price": 24.99,
       "weight": "15g",
       "brand": "Orna Care",
-      "tags": [
-        "brooch",
-        "gold"
-      ],
+      "tags": ["brooch", "gold"],
       "images": [
         "../img/rent-product/Brooch/Brooch-2.png",
         "../img/rent-product/Brooch/Brooch-2.png",
@@ -8864,10 +7775,7 @@
       "price": 29.99,
       "weight": "12g",
       "brand": "Orna Care",
-      "tags": [
-        "brooch",
-        "kundan"
-      ],
+      "tags": ["brooch", "kundan"],
       "images": [
         "../img/rent-product/Brooch/Brooch-3.png",
         "../img/rent-product/Brooch/Brooch-3.png",
@@ -8887,10 +7795,7 @@
       "price": 18.99,
       "weight": "8g",
       "brand": "Orna Care",
-      "tags": [
-        "brooch",
-        "crystal"
-      ],
+      "tags": ["brooch", "crystal"],
       "images": [
         "../img/rent-product/Brooch/Brooch-4.png",
         "../img/rent-product/Brooch/Brooch-4.png",
@@ -8910,10 +7815,7 @@
       "price": 22.99,
       "weight": "10g",
       "brand": "Orna Care",
-      "tags": [
-        "brooch",
-        "vintage"
-      ],
+      "tags": ["brooch", "vintage"],
       "images": [
         "../img/rent-product/Brooch/Brooch-5.png",
         "../img/rent-product/Brooch/Brooch-5.png",
@@ -8933,10 +7835,7 @@
       "price": 29.99,
       "weight": "30g",
       "brand": "Orna Care",
-      "tags": [
-        "armlet",
-        "traditional"
-      ],
+      "tags": ["armlet", "traditional"],
       "images": [
         "../img/rent-product/Bajubandh/Bajubandh-1.png",
         "../img/rent-product/Bajubandh/Bajubandh-1.png",
@@ -8956,10 +7855,7 @@
       "price": 34.99,
       "weight": "25g",
       "brand": "Orna Care",
-      "tags": [
-        "armlet",
-        "gold"
-      ],
+      "tags": ["armlet", "gold"],
       "images": [
         "../img/rent-product/Bajubandh/Bajubandh-2.png",
         "../img/rent-product/Bajubandh/Bajubandh-2.png",
@@ -8979,10 +7875,7 @@
       "price": 39.99,
       "weight": "35g",
       "brand": "Orna Care",
-      "tags": [
-        "armlet",
-        "kundan"
-      ],
+      "tags": ["armlet", "kundan"],
       "images": [
         "../img/rent-product/Bajubandh/Bajubandh-3.png",
         "../img/rent-product/Bajubandh/Bajubandh-3.png",
@@ -9002,10 +7895,7 @@
       "price": 24.99,
       "weight": "20g",
       "brand": "Orna Care",
-      "tags": [
-        "armlet",
-        "crystal"
-      ],
+      "tags": ["armlet", "crystal"],
       "images": [
         "../img/rent-product/Bajubandh/Bajubandh-4.png",
         "../img/rent-product/Bajubandh/Bajubandh-4.png",
@@ -9025,10 +7915,7 @@
       "price": 32.99,
       "weight": "30g",
       "brand": "Orna Care",
-      "tags": [
-        "armlet",
-        "floral"
-      ],
+      "tags": ["armlet", "floral"],
       "images": [
         "../img/rent-product/Bajubandh/Bajubandh.png",
         "../img/rent-product/Bajubandh/Bajubandh.png",
@@ -9048,10 +7935,7 @@
       "price": 29.99,
       "weight": "30g",
       "brand": "Orna Care",
-      "tags": [
-        "haath phool",
-        "traditional"
-      ],
+      "tags": ["haath phool", "traditional"],
       "images": [
         "../img/rent-product/Haath Phool/Haath Phool-1.png",
         "../img/rent-product/Haath Phool/Haath Phool-1.png",
@@ -9071,10 +7955,7 @@
       "price": 34.99,
       "weight": "25g",
       "brand": "Orna Care",
-      "tags": [
-        "haath phool",
-        "gold"
-      ],
+      "tags": ["haath phool", "gold"],
       "images": [
         "../img/rent-product/Haath Phool/Haath Phool-2.png",
         "../img/rent-product/Haath Phool/Haath Phool-2.png",
@@ -9094,10 +7975,7 @@
       "price": 39.99,
       "weight": "35g",
       "brand": "Orna Care",
-      "tags": [
-        "haath phool",
-        "kundan"
-      ],
+      "tags": ["haath phool", "kundan"],
       "images": [
         "../img/rent-product/Haath Phool/Haath Phool-3.png",
         "../img/rent-product/Haath Phool/Haath Phool-3.png",
@@ -9117,10 +7995,7 @@
       "price": 24.99,
       "weight": "20g",
       "brand": "Orna Care",
-      "tags": [
-        "haath phool",
-        "crystal"
-      ],
+      "tags": ["haath phool", "crystal"],
       "images": [
         "../img/rent-product/Haath Phool/Haath Phool-4.png",
         "../img/rent-product/Haath Phool/Haath Phool-4.png",
@@ -9140,10 +8015,7 @@
       "price": 32.99,
       "weight": "30g",
       "brand": "Orna Care",
-      "tags": [
-        "haath phool",
-        "floral"
-      ],
+      "tags": ["haath phool", "floral"],
       "images": [
         "../img/rent-product/Haath Phool/Haath Phool-5.png",
         "../img/rent-product/Haath Phool/Haath Phool-5.png",
@@ -9163,10 +8035,7 @@
       "price": 49.99,
       "weight": "200g",
       "brand": "Orna Care",
-      "tags": [
-        "chooda",
-        "traditional"
-      ],
+      "tags": ["chooda", "traditional"],
       "images": [
         "../img/rent-product/Chooda/Chooda-1.png",
         "../img/rent-product/Chooda/Chooda-1.png",
@@ -9186,10 +8055,7 @@
       "price": 59.99,
       "weight": "250g",
       "brand": "Orna Care",
-      "tags": [
-        "chooda",
-        "gold"
-      ],
+      "tags": ["chooda", "gold"],
       "images": [
         "../img/rent-product/Chooda/Chooda-2.png",
         "../img/rent-product/Chooda/Chooda-2.png",
@@ -9209,10 +8075,7 @@
       "price": 69.99,
       "weight": "300g",
       "brand": "Orna Care",
-      "tags": [
-        "chooda",
-        "kundan"
-      ],
+      "tags": ["chooda", "kundan"],
       "images": [
         "../img/rent-product/Chooda/Chooda-3.png",
         "../img/rent-product/Chooda/Chooda-3.png",
@@ -9232,10 +8095,7 @@
       "price": 54.99,
       "weight": "220g",
       "brand": "Orna Care",
-      "tags": [
-        "chooda",
-        "crystal"
-      ],
+      "tags": ["chooda", "crystal"],
       "images": [
         "../img/rent-product/Chooda/Chooda-4.png",
         "../img/rent-product/Chooda/Chooda-4.png",
@@ -9255,10 +8115,7 @@
       "price": 44.99,
       "weight": "200g",
       "brand": "Orna Care",
-      "tags": [
-        "chooda",
-        "floral"
-      ],
+      "tags": ["chooda", "floral"],
       "images": [
         "../img/rent-product/Chooda/Chooda-5.png",
         "../img/rent-product/Chooda/Chooda-5.png",
@@ -9278,10 +8135,7 @@
       "price": 24.99,
       "weight": "10g",
       "brand": "Orna Care",
-      "tags": [
-        "pendant",
-        "gold"
-      ],
+      "tags": ["pendant", "gold"],
       "images": [
         "../img/skin/SUBCAT1 (1).png",
         "../img/skin/SUBCAT1 (3).png",
@@ -9301,10 +8155,7 @@
       "price": 19.99,
       "weight": "8g",
       "brand": "Orna Care",
-      "tags": [
-        "pendant",
-        "silver"
-      ],
+      "tags": ["pendant", "silver"],
       "images": [
         "../img/skin/SUBCAT1 (1).png",
         "../img/skin/SUBCAT1 (3).png",
@@ -9324,10 +8175,7 @@
       "price": 29.99,
       "weight": "12g",
       "brand": "Orna Care",
-      "tags": [
-        "pendant",
-        "kundan"
-      ],
+      "tags": ["pendant", "kundan"],
       "images": [
         "../img/skin/SUBCAT1 (1).png",
         "../img/skin/SUBCAT1 (3).png",
@@ -9347,10 +8195,7 @@
       "price": 22.99,
       "weight": "10g",
       "brand": "Orna Care",
-      "tags": [
-        "pendant",
-        "crystal"
-      ],
+      "tags": ["pendant", "crystal"],
       "images": [
         "../img/skin/SUBCAT1 (1).png",
         "../img/skin/SUBCAT1 (3).png",
@@ -9370,10 +8215,7 @@
       "price": 19.49,
       "weight": "8g",
       "brand": "Orna Care",
-      "tags": [
-        "pendant",
-        "floral"
-      ],
+      "tags": ["pendant", "floral"],
       "images": [
         "../img/skin/SUBCAT1 (1).png",
         "../img/skin/SUBCAT1 (3).png",
@@ -9393,10 +8235,7 @@
       "price": 9.99,
       "weight": "15g",
       "brand": "Orna Care",
-      "tags": [
-        "hair clip",
-        "decorative"
-      ],
+      "tags": ["hair clip", "decorative"],
       "images": [
         "../img/rent-product/HairClip/HairClip1.png",
         "../img/rent-product/HairClip/HairClip1.png",
@@ -9416,10 +8255,7 @@
       "price": 7.99,
       "weight": "10g",
       "brand": "Orna Care",
-      "tags": [
-        "hair clip",
-        "flower"
-      ],
+      "tags": ["hair clip", "flower"],
       "images": [
         "../img/rent-product/HairClip/HairClip2.png",
         "../img/rent-product/HairClip/HairClip2.png",
@@ -9439,10 +8275,7 @@
       "price": 12.99,
       "weight": "20g",
       "brand": "Orna Care",
-      "tags": [
-        "hair clip",
-        "bling"
-      ],
+      "tags": ["hair clip", "bling"],
       "images": [
         "../img/rent-product/HairClip/HairClip3.png",
         "../img/rent-product/HairClip/HairClip3.png",
@@ -9462,10 +8295,7 @@
       "price": 5.99,
       "weight": "10g",
       "brand": "Orna Care",
-      "tags": [
-        "hair clip",
-        "classic"
-      ],
+      "tags": ["hair clip", "classic"],
       "images": [
         "../img/rent-product/HairClip/HairClip4.png",
         "../img/rent-product/HairClip/HairClip4.png",
@@ -9485,10 +8315,7 @@
       "price": 11.49,
       "weight": "15g",
       "brand": "Orna Care",
-      "tags": [
-        "hair clip",
-        "vintage"
-      ],
+      "tags": ["hair clip", "vintage"],
       "images": [
         "../img/rent-product/HairClip/HairClip5.png",
         "../img/rent-product/HairClip/HairClip5.png",
@@ -9508,10 +8335,7 @@
       "price": 6.99,
       "weight": "20g",
       "brand": "Orna Care",
-      "tags": [
-        "hair band",
-        "cotton"
-      ],
+      "tags": ["hair band", "cotton"],
       "images": [
         "../img/rent-product/Hair Bands/Hair Bands-1.png",
         "../img/rent-product/Hair Bands/Hair Bands-1.png",
@@ -9531,10 +8355,7 @@
       "price": 12.99,
       "weight": "15g",
       "brand": "Orna Care",
-      "tags": [
-        "hair band",
-        "silk"
-      ],
+      "tags": ["hair band", "silk"],
       "images": [
         "../img/rent-product/Hair Bands/Hair Bands-2.png",
         "../img/rent-product/Hair Bands/Hair Bands-2.png",
@@ -9554,10 +8375,7 @@
       "price": 3.99,
       "weight": "5g",
       "brand": "Orna Care",
-      "tags": [
-        "hair band",
-        "elastic"
-      ],
+      "tags": ["hair band", "elastic"],
       "images": [
         "../img/rent-product/Hair Bands/Hair Bands-3.png",
         "../img/rent-product/Hair Bands/Hair Bands-3.png",
@@ -9577,10 +8395,7 @@
       "price": 8.49,
       "weight": "10g",
       "brand": "Orna Care",
-      "tags": [
-        "hair band",
-        "printed"
-      ],
+      "tags": ["hair band", "printed"],
       "images": [
         "../img/rent-product/Hair Bands/Hair Bands-4.png",
         "../img/rent-product/Hair Bands/Hair Bands-4.png",
@@ -9600,10 +8415,7 @@
       "price": 10.99,
       "weight": "15g",
       "brand": "Orna Care",
-      "tags": [
-        "hair band",
-        "braided"
-      ],
+      "tags": ["hair band", "braided"],
       "images": [
         "../img/rent-product/Hair Bands/Hair Bands-5.png",
         "../img/rent-product/Hair Bands/Hair Bands-5.png",
@@ -9623,10 +8435,7 @@
       "price": 2.99,
       "weight": "5g",
       "brand": "Orna Care",
-      "tags": [
-        "hair tie",
-        "basic"
-      ],
+      "tags": ["hair tie", "basic"],
       "images": [
         "../img/rent-product/Hair Ties/Hair Ties-1.png",
         "../img/rent-product/Hair Ties/Hair Ties-1.png",
@@ -9646,10 +8455,7 @@
       "price": 5.99,
       "weight": "10g",
       "brand": "Orna Care",
-      "tags": [
-        "hair tie",
-        "colorful"
-      ],
+      "tags": ["hair tie", "colorful"],
       "images": [
         "../img/rent-product/Hair Ties/Hair Ties-2.png",
         "../img/rent-product/Hair Ties/Hair Ties-2.png",
@@ -9669,10 +8475,7 @@
       "price": 4.99,
       "weight": "5g",
       "brand": "Orna Care",
-      "tags": [
-        "hair tie",
-        "no-snag"
-      ],
+      "tags": ["hair tie", "no-snag"],
       "images": [
         "../img/rent-product/Hair Ties/Hair Ties-3.png",
         "../img/rent-product/Hair Ties/Hair Ties-3.png",
@@ -9692,10 +8495,7 @@
       "price": 6.49,
       "weight": "5g",
       "brand": "Orna Care",
-      "tags": [
-        "hair tie",
-        "spiral"
-      ],
+      "tags": ["hair tie", "spiral"],
       "images": [
         "../img/rent-product/Hair Ties/Hair Ties-4.png",
         "../img/rent-product/Hair Ties/Hair Ties-4.png",
@@ -9715,10 +8515,7 @@
       "price": 3.49,
       "weight": "5g",
       "brand": "Orna Care",
-      "tags": [
-        "hair tie",
-        "fabric"
-      ],
+      "tags": ["hair tie", "fabric"],
       "images": [
         "../img/rent-product/Hair Ties/Hair Ties-5.png",
         "../img/rent-product/Hair Ties/Hair Ties-5.png",
@@ -9738,10 +8535,7 @@
       "price": 12.99,
       "weight": "20g",
       "brand": "Orna Care",
-      "tags": [
-        "headband",
-        "floral"
-      ],
+      "tags": ["headband", "floral"],
       "images": [
         "../img/rent-product/Headbands/Headbands-1.png",
         "../img/rent-product/Headbands/Headbands-1.png",
@@ -9761,10 +8555,7 @@
       "price": 14.99,
       "weight": "25g",
       "brand": "Orna Care",
-      "tags": [
-        "headband",
-        "sparkly"
-      ],
+      "tags": ["headband", "sparkly"],
       "images": [
         "../img/rent-product/Headbands/Headbands-2.png",
         "../img/rent-product/Headbands/Headbands-2.png",
@@ -9784,10 +8575,7 @@
       "price": 9.99,
       "weight": "30g",
       "brand": "Orna Care",
-      "tags": [
-        "headband",
-        "knitted"
-      ],
+      "tags": ["headband", "knitted"],
       "images": [
         "../img/rent-product/Headbands/Headbands-3.png",
         "../img/rent-product/Headbands/Headbands-3.png",
@@ -9807,10 +8595,7 @@
       "price": 15.49,
       "weight": "20g",
       "brand": "Orna Care",
-      "tags": [
-        "headband",
-        "leather"
-      ],
+      "tags": ["headband", "leather"],
       "images": [
         "../img/rent-product/Headbands/Headbands-4.png",
         "../img/rent-product/Headbands/Headbands-4.png",
@@ -9830,10 +8615,7 @@
       "price": 11.99,
       "weight": "15g",
       "brand": "Orna Care",
-      "tags": [
-        "headband",
-        "velvet"
-      ],
+      "tags": ["headband", "velvet"],
       "images": [
         "../img/rent-product/Headbands/Headbands-5.png",
         "../img/rent-product/Headbands/Headbands-5.png",
@@ -9853,10 +8635,7 @@
       "price": 8.99,
       "weight": "10g",
       "brand": "Orna Care",
-      "tags": [
-        "hair pin",
-        "decorative"
-      ],
+      "tags": ["hair pin", "decorative"],
       "images": [
         "../img/rent-product/Hair Pins/Hair Pins (1).jpg",
         "../img/rent-product/Hair Pins/Hair Pins (1).jpg",
@@ -9876,10 +8655,7 @@
       "price": 3.49,
       "weight": "5g",
       "brand": "Orna Care",
-      "tags": [
-        "hair pin",
-        "bobby"
-      ],
+      "tags": ["hair pin", "bobby"],
       "images": [
         "../img/rent-product/Hair Pins/Hair Pins (2).jpg",
         "../img/rent-product/Hair Pins/Hair Pins (2).jpg",
@@ -9899,10 +8675,7 @@
       "price": 10.99,
       "weight": "15g",
       "brand": "Orna Care",
-      "tags": [
-        "hair pin",
-        "crystal"
-      ],
+      "tags": ["hair pin", "crystal"],
       "images": [
         "../img/rent-product/Hair Pins/Hair Pins (3).jpg",
         "../img/rent-product/Hair Pins/Hair Pins (3).jpg",
@@ -9922,10 +8695,7 @@
       "price": 7.49,
       "weight": "10g",
       "brand": "Orna Care",
-      "tags": [
-        "hair pin",
-        "flower"
-      ],
+      "tags": ["hair pin", "flower"],
       "images": [
         "../img/rent-product/Hair Pins/Hair Pins (4).jpg",
         "../img/rent-product/Hair Pins/Hair Pins (4).jpg",
@@ -9945,10 +8715,7 @@
       "price": 9.99,
       "weight": "10g",
       "brand": "Orna Care",
-      "tags": [
-        "hair pin",
-        "vintage"
-      ],
+      "tags": ["hair pin", "vintage"],
       "images": [
         "../img/rent-product/Hair Pins/Hair Pins (5).jpg",
         "../img/rent-product/Hair Pins/Hair Pins (5).jpg",
@@ -9968,10 +8735,7 @@
       "price": 5.99,
       "weight": "10g",
       "brand": "Orna Care",
-      "tags": [
-        "scrunchie",
-        "silk"
-      ],
+      "tags": ["scrunchie", "silk"],
       "images": [
         "../img/Accessories/Scrunchie/Scrunchie1.png",
         "../img/Accessories/Scrunchie/Scrunchie1.png",
@@ -9991,10 +8755,7 @@
       "price": 3.49,
       "weight": "10g",
       "brand": "Orna Care",
-      "tags": [
-        "scrunchie",
-        "cotton"
-      ],
+      "tags": ["scrunchie", "cotton"],
       "images": [
         "../img/Accessories/Scrunchie/Scrunchie2.png",
         "../img/Accessories/Scrunchie/Scrunchie2.png",
@@ -10014,10 +8775,7 @@
       "price": 4.99,
       "weight": "10g",
       "brand": "Orna Care",
-      "tags": [
-        "scrunchie",
-        "printed"
-      ],
+      "tags": ["scrunchie", "printed"],
       "images": [
         "../img/Accessories/Scrunchie/Scrunchie3.png",
         "../img/Accessories/Scrunchie/Scrunchie3.png",
@@ -10037,10 +8795,7 @@
       "price": 6.49,
       "weight": "10g",
       "brand": "Orna Care",
-      "tags": [
-        "scrunchie",
-        "velvet"
-      ],
+      "tags": ["scrunchie", "velvet"],
       "images": [
         "../img/Accessories/Scrunchie/Scrunchie4.png",
         "../img/Accessories/Scrunchie/Scrunchie4.png",
@@ -10060,10 +8815,7 @@
       "price": 7.99,
       "weight": "10g",
       "brand": "Orna Care",
-      "tags": [
-        "scrunchie",
-        "bling"
-      ],
+      "tags": ["scrunchie", "bling"],
       "images": [
         "../img/Accessories/Scrunchie/Scrunchie5.png",
         "../img/Accessories/Scrunchie/Scrunchie5.png",
@@ -10083,10 +8835,7 @@
       "price": 10.99,
       "weight": "20g",
       "brand": "Orna Care",
-      "tags": [
-        "hair comb",
-        "decorative"
-      ],
+      "tags": ["hair comb", "decorative"],
       "images": [
         "../img/Accessories/Combs/Combs1.png",
         "../img/Accessories/Combs/Combs1.png",
@@ -10106,10 +8855,7 @@
       "price": 8.49,
       "weight": "30g",
       "brand": "Orna Care",
-      "tags": [
-        "hair comb",
-        "wooden"
-      ],
+      "tags": ["hair comb", "wooden"],
       "images": [
         "../img/Accessories/Combs/Combs2.png",
         "../img/Accessories/Combs/Combs2.png",
@@ -10129,10 +8875,7 @@
       "price": 2.99,
       "weight": "10g",
       "brand": "Orna Care",
-      "tags": [
-        "hair comb",
-        "plastic"
-      ],
+      "tags": ["hair comb", "plastic"],
       "images": [
         "../img/Accessories/Combs/Combs3.png",
         "../img/Accessories/Combs/Combs3.png",
@@ -10152,10 +8895,7 @@
       "price": 5.49,
       "weight": "15g",
       "brand": "Orna Care",
-      "tags": [
-        "hair comb",
-        "wide-tooth"
-      ],
+      "tags": ["hair comb", "wide-tooth"],
       "images": [
         "../img/Accessories/Combs/Combs4.png",
         "../img/Accessories/Combs/Combs4.png",
@@ -10175,10 +8915,7 @@
       "price": 4.99,
       "weight": "10g",
       "brand": "Orna Care",
-      "tags": [
-        "hair comb",
-        "fine-tooth"
-      ],
+      "tags": ["hair comb", "fine-tooth"],
       "images": [
         "../img/Accessories/Combs/Combs5.png",
         "../img/Accessories/Combs/Combs5.png",
@@ -10198,10 +8935,7 @@
       "price": 3.99,
       "weight": "10g",
       "brand": "Orna Care",
-      "tags": [
-        "hair stick",
-        "bamboo"
-      ],
+      "tags": ["hair stick", "bamboo"],
       "images": [
         "../img/Accessories/Stick/Stick1.png",
         "../img/Accessories/Stick/Stick1.png",
@@ -10221,10 +8955,7 @@
       "price": 7.49,
       "weight": "15g",
       "brand": "Orna Care",
-      "tags": [
-        "hair stick",
-        "decorative"
-      ],
+      "tags": ["hair stick", "decorative"],
       "images": [
         "../img/Accessories/Stick/Stick2.png",
         "../img/Accessories/Stick/Stick2.png",
@@ -10244,10 +8975,7 @@
       "price": 5.99,
       "weight": "10g",
       "brand": "Orna Care",
-      "tags": [
-        "hair stick",
-        "metal"
-      ],
+      "tags": ["hair stick", "metal"],
       "images": [
         "../img/Accessories/Stick/Stick3.png",
         "../img/Accessories/Stick/Stick3.png",
@@ -10267,10 +8995,7 @@
       "price": 4.49,
       "weight": "10g",
       "brand": "Orna Care",
-      "tags": [
-        "hair stick",
-        "wooden"
-      ],
+      "tags": ["hair stick", "wooden"],
       "images": [
         "../img/Accessories/Stick/Stick4.png",
         "../img/Accessories/Stick/Stick4.png",
@@ -10290,10 +9015,7 @@
       "price": 2.99,
       "weight": "5g",
       "brand": "Orna Care",
-      "tags": [
-        "hair stick",
-        "colorful"
-      ],
+      "tags": ["hair stick", "colorful"],
       "images": [
         "../img/Accessories/Stick/Stick5.png",
         "../img/Accessories/Stick/Stick5.png",
@@ -10313,10 +9035,7 @@
       "price": 8.99,
       "weight": "30g",
       "brand": "Orna Care",
-      "tags": [
-        "hair claw",
-        "large"
-      ],
+      "tags": ["hair claw", "large"],
       "images": [
         "../img/Accessories/Claw/Claw1.png",
         "../img/Accessories/Claw/Claw1.png",
@@ -10336,10 +9055,7 @@
       "price": 10.49,
       "weight": "25g",
       "brand": "Orna Care",
-      "tags": [
-        "hair claw",
-        "decorative"
-      ],
+      "tags": ["hair claw", "decorative"],
       "images": [
         "../img/Accessories/Claw/Claw2.png",
         "../img/Accessories/Claw/Claw2.png",
@@ -10359,10 +9075,7 @@
       "price": 4.99,
       "weight": "10g",
       "brand": "Orna Care",
-      "tags": [
-        "hair claw",
-        "mini"
-      ],
+      "tags": ["hair claw", "mini"],
       "images": [
         "../img/Accessories/Claw/Claw3.png",
         "../img/Accessories/Claw/Claw3.png",
@@ -10382,10 +9095,7 @@
       "price": 5.49,
       "weight": "15g",
       "brand": "Orna Care",
-      "tags": [
-        "hair claw",
-        "colorful"
-      ],
+      "tags": ["hair claw", "colorful"],
       "images": [
         "../img/Accessories/Claw/Claw4.png",
         "../img/Accessories/Claw/Claw4.png",
@@ -10405,10 +9115,7 @@
       "price": 6.99,
       "weight": "20g",
       "brand": "Orna Care",
-      "tags": [
-        "hair claw",
-        "classic"
-      ],
+      "tags": ["hair claw", "classic"],
       "images": [
         "../img/Accessories/Claw/Claw5.png",
         "../img/Accessories/Claw/Claw5.png",
@@ -10428,10 +9135,7 @@
       "price": 9.99,
       "weight": "15g",
       "brand": "Orna Care",
-      "tags": [
-        "barrette",
-        "decorative"
-      ],
+      "tags": ["barrette", "decorative"],
       "images": [
         "../img/Accessories/Barrette/Barrette1.png",
         "../img/Accessories/Barrette/Barrette1.png",
@@ -10451,10 +9155,7 @@
       "price": 7.49,
       "weight": "10g",
       "brand": "Orna Care",
-      "tags": [
-        "barrette",
-        "floral"
-      ],
+      "tags": ["barrette", "floral"],
       "images": [
         "../img/Accessories/Barrette/Barrette2.png",
         "../img/Accessories/Barrette/Barrette2.png",
@@ -10474,10 +9175,7 @@
       "price": 12.99,
       "weight": "20g",
       "brand": "Orna Care",
-      "tags": [
-        "barrette",
-        "sparkly"
-      ],
+      "tags": ["barrette", "sparkly"],
       "images": [
         "../img/Accessories/Barrette/Barrette3.png",
         "../img/Accessories/Barrette/Barrette3.png",
@@ -10497,10 +9195,7 @@
       "price": 5.99,
       "weight": "10g",
       "brand": "Orna Care",
-      "tags": [
-        "barrette",
-        "classic"
-      ],
+      "tags": ["barrette", "classic"],
       "images": [
         "../img/Accessories/Barrette/Barrette4.png",
         "../img/Accessories/Barrette/Barrette4.png",
@@ -10520,10 +9215,7 @@
       "price": 8.49,
       "weight": "15g",
       "brand": "Orna Care",
-      "tags": [
-        "barrette",
-        "vintage"
-      ],
+      "tags": ["barrette", "vintage"],
       "images": [
         "../img/Accessories/Barrette/Barrette5.png",
         "../img/Accessories/Barrette/Barrette5.png",
@@ -10543,10 +9235,7 @@
       "price": 14.99,
       "weight": "20g",
       "brand": "Orna Care",
-      "tags": [
-        "hair wrap",
-        "silk"
-      ],
+      "tags": ["hair wrap", "silk"],
       "images": [
         "../img/Accessories/HairWrap/HairWrap1.png",
         "../img/Accessories/HairWrap/HairWrap1.png",
@@ -10566,10 +9255,7 @@
       "price": 9.99,
       "weight": "25g",
       "brand": "Orna Care",
-      "tags": [
-        "hair wrap",
-        "cotton"
-      ],
+      "tags": ["hair wrap", "cotton"],
       "images": [
         "../img/Accessories/HairWrap/HairWrap2.png",
         "../img/Accessories/HairWrap/HairWrap2.png",
@@ -10589,10 +9275,7 @@
       "price": 8.49,
       "weight": "20g",
       "brand": "Orna Care",
-      "tags": [
-        "hair wrap",
-        "printed"
-      ],
+      "tags": ["hair wrap", "printed"],
       "images": [
         "../img/Accessories/HairWrap/HairWrap3.png",
         "../img/Accessories/HairWrap/HairWrap3.png",
@@ -10612,10 +9295,7 @@
       "price": 11.49,
       "weight": "20g",
       "brand": "Orna Care",
-      "tags": [
-        "hair wrap",
-        "velvet"
-      ],
+      "tags": ["hair wrap", "velvet"],
       "images": [
         "../img/Accessories/HairWrap/HairWrap4.png",
         "../img/Accessories/HairWrap/HairWrap4.png",
@@ -10635,10 +9315,7 @@
       "price": 12.99,
       "weight": "20g",
       "brand": "Orna Care",
-      "tags": [
-        "hair wrap",
-        "bling"
-      ],
+      "tags": ["hair wrap", "bling"],
       "images": [
         "../img/Accessories/HairWrap/HairWrap5.png",
         "../img/Accessories/HairWrap/HairWrap5.png",
@@ -10658,10 +9335,7 @@
       "price": 4.99,
       "weight": "5g",
       "brand": "Orna Care",
-      "tags": [
-        "hair bow",
-        "classic"
-      ],
+      "tags": ["hair bow", "classic"],
       "images": [
         "../img/Accessories/HairBow/HairBow1.png",
         "../img/Accessories/HairBow/HairBow1.png",
@@ -10681,10 +9355,7 @@
       "price": 5.49,
       "weight": "5g",
       "brand": "Orna Care",
-      "tags": [
-        "hair bow",
-        "floral"
-      ],
+      "tags": ["hair bow", "floral"],
       "images": [
         "../img/Accessories/HairBow/HairBow2.png",
         "../img/Accessories/HairBow/HairBow2.png",
@@ -10704,10 +9375,7 @@
       "price": 6.99,
       "weight": "5g",
       "brand": "Orna Care",
-      "tags": [
-        "hair bow",
-        "sparkly"
-      ],
+      "tags": ["hair bow", "sparkly"],
       "images": [
         "../img/Accessories/HairBow/HairBow3.png",
         "../img/Accessories/HairBow/HairBow3.png",
@@ -10727,10 +9395,7 @@
       "price": 5.99,
       "weight": "5g",
       "brand": "Orna Care",
-      "tags": [
-        "hair bow",
-        "vintage"
-      ],
+      "tags": ["hair bow", "vintage"],
       "images": [
         "../img/Accessories/HairBow/HairBow4.png",
         "../img/Accessories/HairBow/HairBow4.png",
@@ -10750,10 +9415,7 @@
       "price": 3.99,
       "weight": "5g",
       "brand": "Orna Care",
-      "tags": [
-        "hair bow",
-        "colorful"
-      ],
+      "tags": ["hair bow", "colorful"],
       "images": [
         "../img/Accessories/HairBow/HairBow5.png",
         "../img/Accessories/HairBow/HairBow5.png",
@@ -10773,10 +9435,7 @@
       "price": 19.99,
       "weight": "30g",
       "brand": "Orna Care",
-      "tags": [
-        "hair chain",
-        "gold"
-      ],
+      "tags": ["hair chain", "gold"],
       "images": [
         "../img/Accessories/HairChain/HairChain1.png",
         "../img/Accessories/HairChain/HairChain1.png",
@@ -10796,10 +9455,7 @@
       "price": 17.99,
       "weight": "25g",
       "brand": "Orna Care",
-      "tags": [
-        "hair chain",
-        "silver"
-      ],
+      "tags": ["hair chain", "silver"],
       "images": [
         "../img/Accessories/HairChain/HairChain2.png",
         "../img/Accessories/HairChain/HairChain2.png",
@@ -10819,10 +9475,7 @@
       "price": 14.99,
       "weight": "20g",
       "brand": "Orna Care",
-      "tags": [
-        "hair chain",
-        "beaded"
-      ],
+      "tags": ["hair chain", "beaded"],
       "images": [
         "../img/Accessories/HairChain/HairChain3.png",
         "../img/Accessories/HairChain/HairChain3.png",
@@ -10842,10 +9495,7 @@
       "price": 22.99,
       "weight": "30g",
       "brand": "Orna Care",
-      "tags": [
-        "hair chain",
-        "crystal"
-      ],
+      "tags": ["hair chain", "crystal"],
       "images": [
         "../img/Accessories/HairChain/HairChain4.png",
         "../img/Accessories/HairChain/HairChain4.png",
@@ -10865,10 +9515,7 @@
       "price": 18.49,
       "weight": "25g",
       "brand": "Orna Care",
-      "tags": [
-        "hair chain",
-        "charm"
-      ],
+      "tags": ["hair chain", "charm"],
       "images": [
         "../img/Accessories/HairChain/HairChain5.png",
         "../img/Accessories/HairChain/HairChain5.png",
@@ -10888,10 +9535,7 @@
       "price": 29.99,
       "weight": "50g",
       "brand": "Orna Care",
-      "tags": [
-        "tiara",
-        "gold"
-      ],
+      "tags": ["tiara", "gold"],
       "images": [
         "../img/Accessories/Tiara/Tiara1.png",
         "../img/Accessories/Tiara/Tiara1.png",
@@ -10911,10 +9555,7 @@
       "price": 24.99,
       "weight": "45g",
       "brand": "Orna Care",
-      "tags": [
-        "crown",
-        "silver"
-      ],
+      "tags": ["crown", "silver"],
       "images": [
         "../img/Accessories/Tiara/Tiara2.png",
         "../img/Accessories/Tiara/Tiara2.png",
@@ -10934,10 +9575,7 @@
       "price": 32.99,
       "weight": "40g",
       "brand": "Orna Care",
-      "tags": [
-        "tiara",
-        "floral"
-      ],
+      "tags": ["tiara", "floral"],
       "images": [
         "../img/Accessories/Tiara/Tiara3.png",
         "../img/Accessories/Tiara/Tiara3.png",
@@ -10957,10 +9595,7 @@
       "price": 35.99,
       "weight": "50g",
       "brand": "Orna Care",
-      "tags": [
-        "tiara",
-        "crystal"
-      ],
+      "tags": ["tiara", "crystal"],
       "images": [
         "../img/Accessories/Tiara/Tiara4.png",
         "../img/Accessories/Tiara/Tiara4.png",
@@ -10980,10 +9615,7 @@
       "price": 28.49,
       "weight": "50g",
       "brand": "Orna Care",
-      "tags": [
-        "crown",
-        "vintage"
-      ],
+      "tags": ["crown", "vintage"],
       "images": [
         "../img/Accessories/Tiara/Tiara5.png",
         "../img/Accessories/Tiara/Tiara5.png",
@@ -11003,10 +9635,7 @@
       "price": 49.99,
       "weight": "100g",
       "brand": "Orna Care",
-      "tags": [
-        "hair extension",
-        "clip-in"
-      ],
+      "tags": ["hair extension", "clip-in"],
       "images": [
         "../img/Hair/HairExtensions/HairExtensions1.png",
         "../img/Hair/HairExtensions/HairExtensions1.png",
@@ -11026,10 +9655,7 @@
       "price": 59.99,
       "weight": "100g",
       "brand": "Orna Care",
-      "tags": [
-        "hair extension",
-        "tape-in"
-      ],
+      "tags": ["hair extension", "tape-in"],
       "images": [
         "../img/Hair/HairExtensions/HairExtensions2.png",
         "../img/Hair/HairExtensions/HairExtensions2.png",
@@ -11049,10 +9675,7 @@
       "price": 69.99,
       "weight": "100g",
       "brand": "Orna Care",
-      "tags": [
-        "hair extension",
-        "micro-link"
-      ],
+      "tags": ["hair extension", "micro-link"],
       "images": [
         "../img/Hair/HairExtensions/HairExtensions3.png",
         "../img/Hair/HairExtensions/HairExtensions3.png",
@@ -11072,10 +9695,7 @@
       "price": 29.99,
       "weight": "100g",
       "brand": "Orna Care",
-      "tags": [
-        "hair extension",
-        "synthetic"
-      ],
+      "tags": ["hair extension", "synthetic"],
       "images": [
         "../img/Hair/HairExtensions/HairExtensions4.png",
         "../img/Hair/HairExtensions/HairExtensions4.png",
@@ -11095,10 +9715,7 @@
       "price": 89.99,
       "weight": "100g",
       "brand": "Orna Care",
-      "tags": [
-        "hair extension",
-        "human hair"
-      ],
+      "tags": ["hair extension", "human hair"],
       "images": [
         "../img/Hair/HairExtensions/HairExtensions5.png",
         "../img/Hair/HairExtensions/HairExtensions5.png",
@@ -11111,14 +9728,7 @@
   "offer": [
     {
       "id": "1",
-      "product_id": [
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ],
+      "product_id": [1, 2, 3, 4, 5, 6],
       "offer_type": "Discount",
       "offer_value": 10,
       "offer_start_date": "2022-01-01",
@@ -11126,14 +9736,7 @@
     },
     {
       "id": "2",
-      "product_id": [
-        7,
-        8,
-        9,
-        10,
-        11,
-        12
-      ],
+      "product_id": [7, 8, 9, 10, 11, 12],
       "offer_type": "Buy One Get One Free",
       "offer_value": 0,
       "offer_start_date": "2022-02-01",
@@ -11255,62 +9858,26 @@
   "wishlist": [
     {
       "userId": "d6b4",
-      "productId": [
-        "177",
-        "38",
-        "40",
-        "37",
-        "36",
-        "126",
-        "341",
-        "173"
-      ],
+      "productId": ["177", "38", "40", "37", "36", "126", "341", "173"],
       "id": "cdb6"
     },
     {
       "userId": "09e0",
-      "productId": [
-        "353",
-        "356"
-      ],
+      "productId": ["353", "356"],
       "id": "aaff"
     }
   ],
   "cart": [
     {
-      "id": "cart-wjkom2clc",
-      "product_id": "2",
-      "time": "2025-03-12T05:36:54.394Z",
-      "quantity": 2
-    },
-    {
-      "id": "cart-m7cv1lrc9",
-      "product_id": "441",
-      "time": "2025-03-12T06:19:59.013Z",
-      "quantity": 1
-    },
-    {
-      "id": "cart-guzgkevvb",
-      "product_id": "352",
-      "time": "2025-03-12T06:23:25.871Z",
+      "id": "cart-zxk4hgivh",
+      "product_id": "467",
+      "time": "2025-03-15T04:25:16.926Z",
       "quantity": 3
     },
     {
-      "id": "cart-iu9r2cjjx",
-      "product_id": "102",
-      "time": "2025-03-12T06:28:20.849Z",
-      "quantity": 1
-    },
-    {
-      "id": "cart-xicv1whwf",
-      "product_id": "326",
-      "time": "2025-03-12T06:35:23.152Z",
-      "quantity": 1
-    },
-    {
-      "id": "cart-exnq5quqi",
-      "product_id": "410",
-      "time": "2025-03-12T06:40:51.085Z",
+      "id": "cart-p7d8t3i9l",
+      "product_id": "460",
+      "time": "2025-03-15T06:28:41.268Z",
       "quantity": 3
     },
     {
@@ -11408,6 +9975,12 @@
       "product_id": "367",
       "time": "2025-03-15T06:41:28.019Z",
       "quantity": 1
+    },
+    {
+      "id": "cart-3s20qy1ay",
+      "product_id": "466",
+      "time": "2025-03-15T06:49:50.384Z",
+      "quantity": 5
     }
   ],
   "bill": [
@@ -11483,11 +10056,7 @@
         }
       ],
       "total": "236.96",
-      "payment_method": [
-        "Cash",
-        "Check",
-        "PayPal"
-      ]
+      "payment_method": ["Cash", "Check", "PayPal"]
     },
     {
       "id": "a745",
@@ -11524,11 +10093,7 @@
         }
       ],
       "total": "236.96",
-      "payment_method": [
-        "Cash",
-        "Check",
-        "PayPal"
-      ]
+      "payment_method": ["Cash", "Check", "PayPal"]
     },
     {
       "id": "033c",
@@ -11565,10 +10130,7 @@
         }
       ],
       "total": "236.96",
-      "payment_method": [
-        "Cash",
-        "Check"
-      ]
+      "payment_method": ["Cash", "Check"]
     },
     {
       "id": "a9f8",
@@ -11605,12 +10167,7 @@
         }
       ],
       "total": "236.96",
-      "payment_method": [
-        "Cash",
-        "Check",
-        "PayPal",
-        "Card"
-      ]
+      "payment_method": ["Cash", "Check", "PayPal", "Card"]
     },
     {
       "id": "fe4b",
@@ -11634,10 +10191,7 @@
       ],
       "rental_product": [],
       "total": "52.48",
-      "payment_method": [
-        "Cash",
-        "Check"
-      ]
+      "payment_method": ["Cash", "Check"]
     },
     {
       "id": "afa5",
@@ -11661,10 +10215,7 @@
         }
       ],
       "total": "37.48",
-      "payment_method": [
-        "Cash",
-        "Check"
-      ]
+      "payment_method": ["Cash", "Check"]
     },
     {
       "id": "d189",
@@ -11684,9 +10235,7 @@
         }
       ],
       "total": "5.49",
-      "payment_method": [
-        "Cash"
-      ]
+      "payment_method": ["Cash"]
     },
     {
       "id": "be77",
@@ -11706,9 +10255,7 @@
         }
       ],
       "total": "29.97",
-      "payment_method": [
-        "Card"
-      ]
+      "payment_method": ["Card"]
     },
     {
       "id": "28f9",
@@ -11728,9 +10275,7 @@
         }
       ],
       "total": "29.99",
-      "payment_method": [
-        "Cash"
-      ]
+      "payment_method": ["Cash"]
     },
     {
       "id": "0fa9",
@@ -11786,9 +10331,7 @@
         }
       ],
       "total": "147.95",
-      "payment_method": [
-        "Card"
-      ]
+      "payment_method": ["Card"]
     }
   ],
   "contactus": [

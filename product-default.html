@@ -507,7 +507,6 @@
 
 
     <script src="/js/waypoints.min.js"></script>
-<!-- 
     <script>
         // Fetch product details from API
         const selectedProductId = localStorage.getItem('selectedProductId');
@@ -522,9 +521,6 @@
                 productName.innerText = data.name;
                 productDetailsContainer.appendChild(productName);
 
-                // Create and append rating review section
-
-
                 // Create and append product description
                 const productDescription = document.createElement('p');
                 productDescription.innerText = data.description;
@@ -535,9 +531,28 @@
                 priceArea.className = 'price-area';
                 const price = document.createElement('p');
                 price.className = 'price';
-                price.innerHTML = `$${data.price}`;
+                price.innerHTML = `$${data.price} <del>$${data.originalPrice}</del>`;
                 priceArea.appendChild(price);
                 productDetailsContainer.appendChild(priceArea);
+
+                // Set default quantity
+                let cartQuantity = 1; // Default quantity if product is not in cart
+
+                // Check if product exists in cart to get the quantity
+                try {
+                    // Fetch cart items that match the product ID
+                    const cartResponse = await fetch(`http://localhost:3000/cart?product_id=${data.id}`);
+                    const cartItems = await cartResponse.json();
+                    console.log("qqqq", cartItems)
+
+                    if (cartItems && cartItems.length > 0) {
+                        // Use the quantity from the cart if product exists in cart
+                        cartQuantity = cartItems[0].quantity;
+                    }
+                } catch (error) {
+                    console.error("Error fetching cart data:", error);
+                    // If there's an error, fallback to default quantity of 1
+                }
 
                 // Create and append quantity area
                 const quantityColorArea = document.createElement('div');
@@ -550,20 +565,27 @@
                 quantityColorDiv.appendChild(quantityTitle);
                 const quantityCounter = document.createElement('div');
                 quantityCounter.className = 'quantity-counter';
+
+                const formattedQuantity = cartQuantity < 10 ? "0" + cartQuantity : cartQuantity;
+                console.log("----", cartQuantity)
+
                 quantityCounter.innerHTML = `
-                <a href="#" class="quantity__minus"><i class='bx bx-minus'></i></a>
-                <input name="quantity" type="text" class="quantity__input" value="01">
-                <a href="#" class="quantity__plus"><i class='bx bx-plus'></i></a>
-            `;
+            <a href="#" class="quantity__minus"><i class='bx bx-minus'></i></a>
+            <input name="quantity" type="text" class="quantity__input" value="${formattedQuantity}">
+            <a href="#" class="quantity__plus"><i class='bx bx-plus'></i></a>
+        `;
 
                 // Add event listeners for quantity controls
                 quantityCounter.querySelector('.quantity__minus').addEventListener('click', function (e) {
+                    
                     e.preventDefault();
                     const input = this.parentElement.querySelector('.quantity__input');
                     let value = parseInt(input.value);
                     if (value > 1) {
+                        debugger
                         value--;
                         input.value = value < 10 ? "0" + value : value;
+                        localStorage.setItem(`product_${data.id}_quantity`, value);
                     }
                 });
 
@@ -573,6 +595,7 @@
                     let value = parseInt(input.value);
                     value++;
                     input.value = value < 10 ? "0" + value : value;
+                    localStorage.setItem(`product_${data.id}_quantity`, value);
                 });
 
                 // Prevent manual input of invalid values
@@ -582,6 +605,7 @@
                         value = 1;
                     }
                     this.value = value < 10 ? "0" + value : value;
+                    localStorage.setItem(`product_${data.id}_quantity`, value);
                 });
 
                 quantityColorDiv.appendChild(quantityCounter);
@@ -592,150 +616,12 @@
                 const shopDetailsBtn = document.createElement('div');
                 shopDetailsBtn.className = 'shop-details-btn';
                 shopDetailsBtn.innerHTML = `
-                <a href="#" class="primary-btn1 hover-btn3 add-cart-btn" data-product-id="${data.id}">*Drop in Basket*</a>
-                <a href="#" class="primary-btn1 style-3 hover-btn4 shop-now-btn" data-product-id="${data.id}">*Shop Now*</a>
-            `;
+            <a href="#" class="primary-btn1 hover-btn3 add-cart-btn" data-product-id="${data.id}">*Drop in Basket*</a>
+            <a href="#" class="primary-btn1 style-3 hover-btn4 shop-now-btn" data-product-id="${data.id}">*Shop Now*</a>
+        `;
                 productDetailsContainer.appendChild(shopDetailsBtn);
 
-                // Fetch category name using cat_id
-                const compareWishlistArea = document.createElement('div');
-                compareWishlistArea.className = 'compare-wishlist-area';
-                const compareWishlistList = document.createElement('ul');
-                let userId = localStorage.getItem("user_id");
-                let wishlistProductIds = [];
-                // Get userId and wishlist data
-
-                if (userId) {
-                    try {
-                        const wishlistResponse = await fetch(`http://localhost:3000/wishlist?userId=${userId}`);
-                        const wishlistData = await wishlistResponse.json();
-
-                        // Get productIds from wishlist where userId matches
-                        const userWishlist = wishlistData.find(item => item.userId === userId);
-                        if (userWishlist && userWishlist.productId) {
-                            wishlistProductIds = userWishlist.productId;
-                        }
-                    } catch (error) {
-                        console.error("Error fetching wishlist:", error);
-                    }
-                }
-                console.log("wishlistProductIds", wishlistProductIds);
-
-
-                const isInWishlist = wishlistProductIds.includes(data.id.toString());
-                const heartSVG = isInWishlist
-        ? `<svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24">
-            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="red" stroke="red" stroke-width="2"/>
-          </svg>`
-        : `<svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 18 18">
-            <g clip-path="url(#clip0_168_378)">
-              <path d="M16.528 2.20919C16.0674 1.71411 15.5099 1.31906 14.8902 1.04859C14.2704 0.778112 13.6017 0.637996 12.9255 0.636946C12.2487 0.637725 11.5794 0.777639 10.959 1.048C10.3386 1.31835 9.78042 1.71338 9.31911 2.20854L9.00132 2.54436L8.68352 2.20854C6.83326 0.217151 3.71893 0.102789 1.72758 1.95306C1.63932 2.03507 1.5541 2.12029 1.47209 2.20854C-0.490696 4.32565 -0.490696 7.59753 1.47209 9.71463L8.5343 17.1622C8.77862 17.4201 9.18579 17.4312 9.44373 17.1868C9.45217 17.1788 9.46039 17.1706 9.46838 17.1622L16.528 9.71463C18.4907 7.59776 18.4907 4.32606 16.528 2.20919ZM15.5971 8.82879H15.5965L9.00132 15.7849L2.40553 8.82879C0.90608 7.21113 0.90608 4.7114 2.40553 3.09374C3.76722 1.61789 6.06755 1.52535 7.5434 2.88703C7.61505 2.95314 7.68401 3.0221 7.75012 3.09374L8.5343 3.92104C8.79272 4.17781 9.20995 4.17781 9.46838 3.92104L10.2526 3.09438C11.6142 1.61853 13.9146 1.52599 15.3904 2.88767C15.4621 2.95378 15.531 3.02274 15.5971 3.09438C17.1096 4.71461 17.1207 7.2189 15.5971 8.82879Z" />
-            </g>
-          </svg>`;
-
-                compareWishlistList.innerHTML = `
-    <li>
-        <a href="#" class="wishlist-btn" data-product-id="${data.id}">
-            <span>
-                                             ${heartSVG}
-            </span>
-            Add to wishlist
-        </a>
-    </li>
-`;
-                compareWishlistArea.appendChild(compareWishlistList);
-                productDetailsContainer.appendChild(compareWishlistArea);
-            })
-            .catch(error => console.error('Error fetching product data:', error));
-    </script> -->
-
-    <script>
-       
-    // Fetch product details from API
-    const selectedProductId = localStorage.getItem('selectedProductId');
-    fetch(`http://localhost:3000/product/${selectedProductId}`)
-        .then(response => response.json())
-        .then(async data => {
-            // Create product details dynamically
-            const productDetailsContainer = document.getElementById('product-details-container');
-
-            // Create and append product name
-            const productName = document.createElement('h1');
-            productName.innerText = data.name;
-            productDetailsContainer.appendChild(productName);
-
-            // Create and append product description
-            const productDescription = document.createElement('p');
-            productDescription.innerText = data.description;
-            productDetailsContainer.appendChild(productDescription);
-
-            // Create and append price area
-            const priceArea = document.createElement('div');
-            priceArea.className = 'price-area';
-            const price = document.createElement('p');
-            price.className = 'price';
-            price.innerHTML = `$${data.price} `;
-            priceArea.appendChild(price);
-            productDetailsContainer.appendChild(priceArea);
-
-            // Create and append quantity area
-            const quantityColorArea = document.createElement('div');
-            quantityColorArea.className = 'quantity-color-area';
-            const quantityColorDiv = document.createElement('div');
-            quantityColorDiv.className = 'quantity-color';
-            const quantityTitle = document.createElement('h6');
-            quantityTitle.className = 'widget-title';
-            quantityTitle.innerText = 'Quantity';
-            quantityColorDiv.appendChild(quantityTitle);
-            const quantityCounter = document.createElement('div');
-            quantityCounter.className = 'quantity-counter';
-            quantityCounter.innerHTML = `
-                <a href="#" class="quantity__minus"><i class='bx bx-minus'></i></a>
-                <input name="quantity" type="text" class="quantity__input" value="01">
-                <a href="#" class="quantity__plus"><i class='bx bx-plus'></i></a>
-            `;
-
-            // Add event listeners for quantity controls
-            quantityCounter.querySelector('.quantity__minus').addEventListener('click', function(e) {
-                e.preventDefault();
-                const input = this.parentElement.querySelector('.quantity__input');
-                let value = parseInt(input.value);
-                if (value > 1) {
-                    value--;
-                    input.value = value < 10 ? "0" + value : value;
-                }
-            });
-
-            quantityCounter.querySelector('.quantity__plus').addEventListener('click', function(e) {
-                e.preventDefault();
-                const input = this.parentElement.querySelector('.quantity__input');
-                let value = parseInt(input.value);
-                value++;
-                input.value = value < 10 ? "0" + value : value;
-            });
-
-            // Prevent manual input of invalid values
-            quantityCounter.querySelector('.quantity__input').addEventListener('change', function() {
-                let value = parseInt(this.value);
-                if (isNaN(value) || value < 1) {
-                    value = 1;
-                }
-                this.value = value < 10 ? "0" + value : value;
-            });
-
-            quantityColorDiv.appendChild(quantityCounter);
-            quantityColorArea.appendChild(quantityColorDiv);
-            productDetailsContainer.appendChild(quantityColorArea);
-
-            // Create and append shop details buttons
-            const shopDetailsBtn = document.createElement('div');
-            shopDetailsBtn.className = 'shop-details-btn';
-            shopDetailsBtn.innerHTML = `
-                <a href="#" class="primary-btn1 hover-btn3 add-cart-btn" data-product-id="${data.id}">*Drop in Basket*</a>
-                <a href="#" class="primary-btn1 style-3 hover-btn4 shop-now-btn" data-product-id="${data.id}">*Shop Now*</a>
-            `;
-            productDetailsContainer.appendChild(shopDetailsBtn);
-
+                
             // Fetch category name and create product info section
             try {
                 const categoryResponse = await fetch(`http://localhost:3000/category/${data.cat_id}`);
@@ -761,52 +647,160 @@
                 console.error('Error fetching category data:', error);
             }
 
-            // Create and append compare-wishlist area
-            const compareWishlistArea = document.createElement('div');
-            compareWishlistArea.className = 'compare-wishlist-area';
-            const compareWishlistList = document.createElement('ul');
-            
-            let userId = localStorage.getItem("user_id");
-            let wishlistProductIds = [];
 
-            if (userId) {
-                try {
-                    const wishlistResponse = await fetch(`http://localhost:3000/wishlist?userId=${userId}`);
-                    const wishlistData = await wishlistResponse.json();
+                // Fetch category name using cat_id
+                const compareWishlistArea = document.createElement('div');
+                compareWishlistArea.className = 'compare-wishlist-area';
+                const compareWishlistList = document.createElement('ul');
+                let userId = localStorage.getItem("user_id");
+                let wishlistProductIds = [];
+                // Get userId and wishlist data
 
-                    const userWishlist = wishlistData.find(item => item.userId === userId);
-                    if (userWishlist && userWishlist.productId) {
-                        wishlistProductIds = userWishlist.productId;
+                if (userId) {
+                    try {
+                        const wishlistResponse = await fetch(`http://localhost:3000/wishlist?userId=${userId}`);
+                        const wishlistData = await wishlistResponse.json();
+
+                        // Get productIds from wishlist where userId matches
+                        const userWishlist = wishlistData.find(item => item.userId === userId);
+                        if (userWishlist && userWishlist.productId) {
+                            wishlistProductIds = userWishlist.productId;
+                        }
+                    } catch (error) {
+                        console.error("Error fetching wishlist:", error);
                     }
-                } catch (error) {
-                    console.error("Error fetching wishlist:", error);
                 }
+                console.log("wishlistProductIds", wishlistProductIds);
+
+                const isInWishlist = wishlistProductIds.includes(data.id.toString());
+                const heartSVG = isInWishlist
+                    ? `<svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="red" stroke="red" stroke-width="2"/>
+              </svg>`
+                    : `<svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 18 18">
+                <g clip-path="url(#clip0_168_378)">
+                  <path d="M16.528 2.20919C16.0674 1.71411 15.5099 1.31906 14.8902 1.04859C14.2704 0.778112 13.6017 0.637996 12.9255 0.636946C12.2487 0.637725 11.5794 0.777639 10.959 1.048C10.3386 1.31835 9.78042 1.71338 9.31911 2.20854L9.00132 2.54436L8.68352 2.20854C6.83326 0.217151 3.71893 0.102789 1.72758 1.95306C1.63932 2.03507 1.5541 2.12029 1.47209 2.20854C-0.490696 4.32565 -0.490696 7.59753 1.47209 9.71463L8.5343 17.1622C8.77862 17.4201 9.18579 17.4312 9.44373 17.1868C9.45217 17.1788 9.46039 17.1706 9.46838 17.1622L16.528 9.71463C18.4907 7.59776 18.4907 4.32606 16.528 2.20919ZM15.5971 8.82879H15.5965L9.00132 15.7849L2.40553 8.82879C0.90608 7.21113 0.90608 4.7114 2.40553 3.09374C3.76722 1.61789 6.06755 1.52535 7.5434 2.88703C7.61505 2.95314 7.68401 3.0221 7.75012 3.09374L8.5343 3.92104C8.79272 4.17781 9.20995 4.17781 9.46838 3.92104L10.2526 3.09438C11.6142 1.61853 13.9146 1.52599 15.3904 2.88767C15.4621 2.95378 15.531 3.02274 15.5971 3.09438C17.1096 4.71461 17.1207 7.2189 15.5971 8.82879Z" />
+                </g>
+              </svg>`;
+
+                compareWishlistList.innerHTML = `
+            <li>
+                <a href="#" class="wishlist-btn" data-product-id="${data.id}">
+                    <span>${heartSVG}</span>
+                    Add to wishlist
+                </a>
+            </li>
+        `;
+                compareWishlistArea.appendChild(compareWishlistList);
+                productDetailsContainer.appendChild(compareWishlistArea);
+
+                // Add event listener for "Drop in Basket" button
+                document.querySelector('.add-cart-btn').addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const productId = this.getAttribute('data-product-id');
+                    const quantity = parseInt(document.querySelector('.quantity__input').value);
+                    addToCart(productId, quantity);
+                });
+            })
+            .catch(error => console.error('Error fetching product data:', error));
+
+        // Function to add product to cart with quantity
+        function addToCart(productId, quantity) {
+            // Fetch product details from API
+            fetch(`http://localhost:3000/product/${productId}`)
+                .then(response => response.json())
+                .then(product => {
+                    // Create a unique cart ID
+                    const cartId = generateUniqueId();
+
+                    // Retrieve existing cart items from localStorage
+                    let cartProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
+
+                    // Check if the product already exists in the cart
+                    const existingCartItemIndex = cartProducts.findIndex(item => item === productId);
+
+                    if (existingCartItemIndex !== -1) {
+                        // Product exists in cart, fetch the cart item to update quantity
+                        fetch(`http://localhost:3000/cart?productid=${productId}`)
+                            .then(response => response.json())
+                            .then(cartItems => {
+                                if (cartItems.length > 0) {
+                                    const existingCartItem = cartItems[0];
+
+                                    // Update quantity
+                                    existingCartItem.quantity = quantity;
+
+                                    // Update the cart in the API
+                                    fetch(`http://localhost:3000/cart/${existingCartItem.id}`, {
+                                        method: 'PUT',
+                                        headers: {
+                                            'Content-Type': 'application/json',
+                                        },
+                                        body: JSON.stringify(existingCartItem)
+                                    })
+                                        .then(response => {
+                                            if (!response.ok) {
+                                                throw new Error('Failed to update cart');
+                                            }
+                                            console.log('Cart updated successfully with new quantity:', quantity);
+                                            updateCartCount();
+                                        })
+                                        .catch(error => console.error('Error updating cart:', error));
+                                }
+                            })
+                            .catch(error => console.error('Error fetching cart items:', error));
+                    } else {
+                        // Create a new cart item
+                        const cartItem = {
+                            id: cartId,
+                            product_id: product.id,
+                            time: new Date().toISOString(),
+                            quantity: quantity // Use the quantity from the product details page
+                        };
+
+                        // Add product to cart API
+                        fetch('http://localhost:3000/cart', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify(cartItem)
+                        })
+                            .then(response => {
+                                if (!response.ok) {
+                                    throw new Error("Failed to Drop In Basket");
+                                }
+                                console.log('Product added to cart with quantity:', quantity);
+
+                                // Add the new cart item to localStorage
+                                cartProducts.push(cartItem.id);
+                                localStorage.setItem('cartProducts', JSON.stringify(cartProducts));
+
+                                updateCartCount();
+                            })
+                            .catch(error => console.error('Error adding to cart:', error));
+                    }
+                })
+                .catch(error => console.error("Error fetching product:", error));
+        }
+
+        // Function to generate a unique ID
+        function generateUniqueId() {
+            return "cart-" + Math.random().toString(36).substr(2, 9);
+        }
+
+        // Function to update cart count
+        function updateCartCount() {
+            const cartProducts = JSON.parse(localStorage.getItem("cartProducts")) || [];
+            const cartCount = cartProducts.length;
+            const cartCountElement = document.querySelector(".cart-count");
+            if (cartCountElement) {
+                cartCountElement.textContent = cartCount.toString().padStart(2, "0");
             }
+        }
 
-            const isInWishlist = wishlistProductIds.includes(data.id.toString());
-            const heartSVG = isInWishlist
-                ? `<svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24">
-                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="red" stroke="red" stroke-width="2"/>
-                   </svg>`
-                : `<svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 18 18">
-                    <g clip-path="url(#clip0_168_378)">
-                      <path d="M16.528 2.20919C16.0674 1.71411 15.5099 1.31906 14.8902 1.04859C14.2704 0.778112 13.6017 0.637996 12.9255 0.636946C12.2487 0.637725 11.5794 0.777639 10.959 1.048C10.3386 1.31835 9.78042 1.71338 9.31911 2.20854L9.00132 2.54436L8.68352 2.20854C6.83326 0.217151 3.71893 0.102789 1.72758 1.95306C1.63932 2.03507 1.5541 2.12029 1.47209 2.20854C-0.490696 4.32565 -0.490696 7.59753 1.47209 9.71463L8.5343 17.1622C8.77862 17.4201 9.18579 17.4312 9.44373 17.1868C9.45217 17.1788 9.46039 17.1706 9.46838 17.1622L16.528 9.71463C18.4907 7.59776 18.4907 4.32606 16.528 2.20919ZM15.5971 8.82879H15.5965L9.00132 15.7849L2.40553 8.82879C0.90608 7.21113 0.90608 4.7114 2.40553 3.09374C3.76722 1.61789 6.06755 1.52535 7.5434 2.88703C7.61505 2.95314 7.68401 3.0221 7.75012 3.09374L8.5343 3.92104C8.79272 4.17781 9.20995 4.17781 9.46838 3.92104L10.2526 3.09438C11.6142 1.61853 13.9146 1.52599 15.3904 2.88767C15.4621 2.95378 15.531 3.02274 15.5971 3.09438C17.1096 4.71461 17.1207 7.2189 15.5971 8.82879Z" />
-                    </g>
-                   </svg>`;
-
-            compareWishlistList.innerHTML = `
-                <li>
-                    <a href="#" class="wishlist-btn" data-product-id="${data.id}">
-                        <span>${heartSVG}</span>
-                        Add to wishlist
-                    </a>
-                </li>
-            `;
-            compareWishlistArea.appendChild(compareWishlistList);
-            productDetailsContainer.appendChild(compareWishlistArea);
-        })
-        .catch(error => console.error('Error fetching product data:', error));
-
+        // Initial call to set the cart count on page load
+        updateCartCount();
     </script>
     <script>
         // Fetch product details from API

@@ -463,7 +463,8 @@
                     .then(productDetails => {
                         const product = productDetails[0];
                         let price = product.price;
-                        let quantity = 1; // Default quantity
+
+                        let quantity = parseInt(localStorage.getItem(`product_${product.id}_quantity`)) || 1;
 
                         // Clear both product containers
                         document.getElementById('added-products').innerHTML = '';
@@ -483,7 +484,7 @@
                                 <div class="quantity-counter">
                                   
                                     <a href="#" class="quantity__minus"><i class='bx bx-minus'></i></a> 
-                                           <input name="quantity" type="text" class="quantity__input" value="1">
+                                           <input name="quantity" type="text" class="quantity__input" value="${quantity}">
                                             <a href="#" class="quantity__plus"><i class='bx bx-plus'></i></a>
                                 </div>
                                 <strong> <i class="bi bi-x-lg px-2"></i>
@@ -492,7 +493,7 @@
                             </div>
                         </div>
                     </div>
-                `;
+                `;  
 
                         // Check category and display in appropriate section
                         if (product.cat_id === 5 || product.cat_id === 6) {
@@ -789,6 +790,7 @@
             }
         });
     </script>
+
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             // ... existing code ...
