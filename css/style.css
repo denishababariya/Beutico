@@ -10369,7 +10369,7 @@ header.style-2 .nav-right::after {
 .shop-details-top-section .shop-details-img .nav-pills {
   position: absolute;
   left: 20px;
-  top: 30px;
+  top: 15px;
   flex-direction: column;
 }
 
@@ -10416,7 +10416,7 @@ header.style-2 .nav-right::after {
 
 .shop-details-top-section .shop-details-img .nav-pills .nav-link {
   background-color: unset;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
   border-radius: unset;
   padding: 0;
   width: 80px;

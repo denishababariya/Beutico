@@ -739,7 +739,7 @@
         slidesPerView: 1,
         spaceBetween: 15,
       },
-      386: {
+      300: {
         slidesPerView: 2,
       },
       576: {

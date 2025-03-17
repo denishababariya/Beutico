@@ -931,20 +931,29 @@ function createProductModal() {
                   <div class="price-area">
                     <p class="price">$<span class="current-price"></span> <del>$<span class="original-price"></span></del></p>
                   </div>
-                  <div class="quantity-color-area">
-                    <div class="quantity-color">
-                      <h6 class="widget-title">Quantity</h6>
-                      <div class="quantity-counter">
-                        <a href="#" class="quantity__minus"><i class="bx bx-minus"></i></a>
-                        <input name="quantity" type="text" class="quantity__input" value="01">
-                        <a href="#" class="quantity__plus"><i class="bx bx-plus"></i></a>
-                      </div>
-                    </div>
-                  </div>
+                  
+                  
                  <div class="shop-details-btn">
       <a href="shop-list.html" class="primary-btn1 hover-btn3 ">*Shop Now*</a>
       <a href="#" class="primary-btn1 style-3 hover-btn4 add-cart-btn" >*Drop in Basket*</a>
     </div>
+    <ul style="display: flex;flex-wrap: wrap-;padding: 20px 0px;gap:30px;">
+            
+              <li>
+                <svg width="13" height="11" viewBox="0 0 13 11" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.2986 0.0327999C9.89985 0.832756 6.86143 2.97809 4.03623 6.6688L2.36599 4.778C2.09946 4.4871 1.63748 4.4871 1.38872 4.778L0.162693 6.17792C-0.0682981 6.45063 -0.0505298 6.86879 0.19823 7.12332L3.96516 10.814C4.28499 11.1231 4.78251 11.0322 4.99574 10.6504C7.00358 6.92333 9.17134 4.15985 12.7961 0.996384C13.2581 0.596406 12.8672 -0.167189 12.2986 0.0327999Z"></path>
+                </svg>
+                hair extension
+              </li>
+            
+              <li>
+                <svg width="13" height="11" viewBox="0 0 13 11" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.2986 0.0327999C9.89985 0.832756 6.86143 2.97809 4.03623 6.6688L2.36599 4.778C2.09946 4.4871 1.63748 4.4871 1.38872 4.778L0.162693 6.17792C-0.0682981 6.45063 -0.0505298 6.86879 0.19823 7.12332L3.96516 10.814C4.28499 11.1231 4.78251 11.0322 4.99574 10.6504C7.00358 6.92333 9.17134 4.15985 12.7961 0.996384C13.2581 0.596406 12.8672 -0.167189 12.2986 0.0327999Z"></path>
+                </svg>
+                human hair
+              </li>
+            
+          </ul>
                   <div class="product-info">
                     <ul class="product-info-list">
                       <li><span>SKU:</span> <span class="sku-value"></span></li>
@@ -959,16 +968,13 @@ function createProductModal() {
                     </ul>
                   </div>
                   
+                  
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div>
-        <p></p>
-        <p></p>
-        <p></p>
-         <p></p></div>
+      
       </div>
     </div>
   `;
@@ -1075,7 +1081,7 @@ async function fetchAndDisplayProduct(selectedeyeId) {
       document.querySelector(".original-price").textContent = (product.price * 1.2).toFixed(2);
       document.querySelector(".sku-value").textContent = product.sku;
       document.querySelector(".brand-value").textContent = product.brand;
-      document.querySelector(".category-value").textContent = product.category;
+      // document.querySelector(".category-value").textContent = product.category;
       document.querySelector(".main-product-img").src = product.images[0];
       
       // Set product ID on add-cart-btn
@@ -1898,20 +1904,16 @@ async function fetchAndDisplayProduct(selectedeyeId) {
     if (product) {
       // Update modal content with the fetched product data
       document.querySelector(".product-title").textContent = product.name;
-      document.querySelector(".product-description").textContent =
-        product.description;
-      document.querySelector(".current-price").textContent =
-        product.price.toFixed(2);
-      document.querySelector(".original-price").textContent = (
-        product.price * 1.2
-      ).toFixed(2);
+      document.querySelector(".product-description").textContent = product.description;
+      document.querySelector(".current-price").textContent = product.price.toFixed(2);
+      document.querySelector(".original-price").textContent = (product.price * 1.2).toFixed(2);
       document.querySelector(".sku-value").textContent = product.sku;
       document.querySelector(".brand-value").textContent = product.brand;
-      document.querySelector(".category-value").textContent = product.category;
       document.querySelector(".main-product-img").src = product.images[0];
 
+      // Fetch category name based on cat_id
+      fetchCategoryName(product.cat_id);
 
-      
       // Call to create thumbnails if there are multiple images
       createThumbnails(product.images);
     } else {
@@ -1919,6 +1921,23 @@ async function fetchAndDisplayProduct(selectedeyeId) {
     }
   } catch (error) {
     console.error("Error fetching product data:", error);
+  }
+}
+
+// Function to fetch category name using cat_id
+async function fetchCategoryName(cat_id) {
+  try {
+    const response = await fetch("http://localhost:3000/category");
+    const categories = await response.json();
+    const category = categories.find((c) => c.id == cat_id);
+
+    if (category) {
+      document.querySelector(".category-value").textContent = category.cat_name;
+    } else {
+      console.error("Category not found");
+    }
+  } catch (error) {
+    console.error("Error fetching category data:", error);
   }
 }
 
