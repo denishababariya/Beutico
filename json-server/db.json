@@ -9283,11 +9283,11 @@
         "gold"
       ],
       "images": [
-        "../img/skin/SUBCAT1 (1).png",
-        "../img/skin/SUBCAT1 (3).png",
-        "../img/skin/SUBCAT1 (4).png",
-        "../img/skin/SUBCAT1 (5).png",
-        "../img/skin/landscape.png"
+        "../img/rent-product/Pendant/Pendant-1.png",
+        "../img/rent-product/Pendant/Pendant-1.png",
+        "../img/rent-product/Pendant/Pendant-1.png",
+        "../img/rent-product/Pendant/Pendant-1.png",
+        "../img/rent-product/Pendant/Pendant-1.png"
       ]
     },
     {
@@ -9306,11 +9306,11 @@
         "silver"
       ],
       "images": [
-        "../img/skin/SUBCAT1 (1).png",
-        "../img/skin/SUBCAT1 (3).png",
-        "../img/skin/SUBCAT1 (4).png",
-        "../img/skin/SUBCAT1 (5).png",
-        "../img/skin/landscape.png"
+        "../img/rent-product/Pendant/Pendant-2.png",
+        "../img/rent-product/Pendant/Pendant-2.png",
+        "../img/rent-product/Pendant/Pendant-2.png",
+        "../img/rent-product/Pendant/Pendant-2.png",
+        "../img/rent-product/Pendant/Pendant-2.png"
       ]
     },
     {
@@ -9329,11 +9329,11 @@
         "kundan"
       ],
       "images": [
-        "../img/skin/SUBCAT1 (1).png",
-        "../img/skin/SUBCAT1 (3).png",
-        "../img/skin/SUBCAT1 (4).png",
-        "../img/skin/SUBCAT1 (5).png",
-        "../img/skin/landscape.png"
+        "../img/rent-product/Pendant/Pendant-3.png",
+        "../img/rent-product/Pendant/Pendant-3.png",
+        "../img/rent-product/Pendant/Pendant-3.png",
+        "../img/rent-product/Pendant/Pendant-3.png",
+        "../img/rent-product/Pendant/Pendant-3.png"
       ]
     },
     {
@@ -9352,11 +9352,11 @@
         "crystal"
       ],
       "images": [
-        "../img/skin/SUBCAT1 (1).png",
-        "../img/skin/SUBCAT1 (3).png",
-        "../img/skin/SUBCAT1 (4).png",
-        "../img/skin/SUBCAT1 (5).png",
-        "../img/skin/landscape.png"
+        "../img/rent-product/Pendant/Pendant.png",
+        "../img/rent-product/Pendant/Pendant.png",
+        "../img/rent-product/Pendant/Pendant.png",
+        "../img/rent-product/Pendant/Pendant.png",
+        "../img/rent-product/Pendant/Pendant.png"
       ]
     },
     {
@@ -9375,11 +9375,11 @@
         "floral"
       ],
       "images": [
-        "../img/skin/SUBCAT1 (1).png",
-        "../img/skin/SUBCAT1 (3).png",
-        "../img/skin/SUBCAT1 (4).png",
-        "../img/skin/SUBCAT1 (5).png",
-        "../img/skin/landscape.png"
+        "../img/rent-product/Pendant/Pendant-5.png",
+        "../img/rent-product/Pendant/Pendant-5.png",
+        "../img/rent-product/Pendant/Pendant-5.png",
+        "../img/rent-product/Pendant/Pendant-5.png",
+        "../img/rent-product/Pendant/Pendant-5.png"
       ]
     },
     {
@@ -11263,7 +11263,7 @@
         "36",
         "126",
         "341",
-        "173"
+        "431"
       ],
       "id": "cdb6"
     },
@@ -11276,14 +11276,7 @@
       "id": "aaff"
     }
   ],
-  "cart": [
-    {
-      "id": "cart-drmr0odo7",
-      "product_id": "436",
-      "time": "2025-03-17T04:06:17.672Z",
-      "quantity": 5
-    }
-  ],
+  "cart": [],
   "bill": [
     {
       "id": "70a3",
@@ -11580,86 +11573,6 @@
         }
       ],
       "total": "29.97",
-      "payment_method": [
-        "Card"
-      ]
-    },
-    {
-      "id": "28f9",
-      "f_name": "sdgfs",
-      "l_name": "dg",
-      "address": "asdf",
-      "city": "Newyork",
-      "post_code": "sdgfs",
-      "phone_num": "+919106722109",
-      "email": "denisha.kalthiyainfotech@gmail.com",
-      "note": "dsf tgfrtbgf  rfd",
-      "regular_product": [],
-      "rental_product": [
-        {
-          "product_id": "467",
-          "quantity": 1
-        }
-      ],
-      "total": "29.99",
-      "payment_method": [
-        "Cash"
-      ]
-    },
-    {
-      "id": "0fa9",
-      "f_name": "ffssd",
-      "l_name": "babariya",
-      "address": "ssdsd",
-      "city": "Saidpur",
-      "post_code": "ffssd",
-      "phone_num": "9106722109",
-      "email": "ss@gmail.com",
-      "note": "des asd szcd dza",
-      "regular_product": [
-        {
-          "product_id": "271",
-          "quantity": 1
-        }
-      ],
-      "rental_product": [],
-      "total": "9.44",
-      "payment_method": []
-    },
-    {
-      "id": "98c2",
-      "f_name": "denisha",
-      "l_name": "babariya",
-      "address": "112,street,surat",
-      "city": "Saidpur",
-      "post_code": "denisha",
-      "phone_num": "1234567890",
-      "email": "ss@gmail.com",
-      "note": "gjn mhh ll",
-      "regular_product": [],
-      "rental_product": [
-        {
-          "product_id": "436",
-          "quantity": 1
-        },
-        {
-          "product_id": "372",
-          "quantity": 1
-        },
-        {
-          "product_id": "373",
-          "quantity": 1
-        },
-        {
-          "product_id": "374",
-          "quantity": 1
-        },
-        {
-          "product_id": "375",
-          "quantity": 1
-        }
-      ],
-      "total": "147.95",
       "payment_method": [
         "Card"
       ]
