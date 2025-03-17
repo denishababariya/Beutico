@@ -9283,11 +9283,11 @@
         "gold"
       ],
       "images": [
-        "../img/skin/SUBCAT1 (1).png",
-        "../img/skin/SUBCAT1 (3).png",
-        "../img/skin/SUBCAT1 (4).png",
-        "../img/skin/SUBCAT1 (5).png",
-        "../img/skin/landscape.png"
+        "../img/rent-product/Pendant/Pendant-1.png",
+        "../img/rent-product/Pendant/Pendant-1.png",
+        "../img/rent-product/Pendant/Pendant-1.png",
+        "../img/rent-product/Pendant/Pendant-1.png",
+        "../img/rent-product/Pendant/Pendant-1.png"
       ]
     },
     {
@@ -9306,11 +9306,11 @@
         "silver"
       ],
       "images": [
-        "../img/skin/SUBCAT1 (1).png",
-        "../img/skin/SUBCAT1 (3).png",
-        "../img/skin/SUBCAT1 (4).png",
-        "../img/skin/SUBCAT1 (5).png",
-        "../img/skin/landscape.png"
+        "../img/rent-product/Pendant/Pendant-2.png",
+        "../img/rent-product/Pendant/Pendant-2.png",
+        "../img/rent-product/Pendant/Pendant-2.png",
+        "../img/rent-product/Pendant/Pendant-2.png",
+        "../img/rent-product/Pendant/Pendant-2.png"
       ]
     },
     {
@@ -9329,11 +9329,11 @@
         "kundan"
       ],
       "images": [
-        "../img/skin/SUBCAT1 (1).png",
-        "../img/skin/SUBCAT1 (3).png",
-        "../img/skin/SUBCAT1 (4).png",
-        "../img/skin/SUBCAT1 (5).png",
-        "../img/skin/landscape.png"
+        "../img/rent-product/Pendant/Pendant-3.png",
+        "../img/rent-product/Pendant/Pendant-3.png",
+        "../img/rent-product/Pendant/Pendant-3.png",
+        "../img/rent-product/Pendant/Pendant-3.png",
+        "../img/rent-product/Pendant/Pendant-3.png"
       ]
     },
     {
@@ -9352,11 +9352,11 @@
         "crystal"
       ],
       "images": [
-        "../img/skin/SUBCAT1 (1).png",
-        "../img/skin/SUBCAT1 (3).png",
-        "../img/skin/SUBCAT1 (4).png",
-        "../img/skin/SUBCAT1 (5).png",
-        "../img/skin/landscape.png"
+        "../img/rent-product/Pendant/Pendant.png",
+        "../img/rent-product/Pendant/Pendant.png",
+        "../img/rent-product/Pendant/Pendant.png",
+        "../img/rent-product/Pendant/Pendant.png",
+        "../img/rent-product/Pendant/Pendant.png"
       ]
     },
     {
@@ -9375,11 +9375,11 @@
         "floral"
       ],
       "images": [
-        "../img/skin/SUBCAT1 (1).png",
-        "../img/skin/SUBCAT1 (3).png",
-        "../img/skin/SUBCAT1 (4).png",
-        "../img/skin/SUBCAT1 (5).png",
-        "../img/skin/landscape.png"
+        "../img/rent-product/Pendant/Pendant-5.png",
+        "../img/rent-product/Pendant/Pendant-5.png",
+        "../img/rent-product/Pendant/Pendant-5.png",
+        "../img/rent-product/Pendant/Pendant-5.png",
+        "../img/rent-product/Pendant/Pendant-5.png"
       ]
     },
     {
@@ -11263,7 +11263,7 @@
         "36",
         "126",
         "341",
-        "173"
+        "431"
       ],
       "id": "cdb6"
     },
