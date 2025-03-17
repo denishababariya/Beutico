@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 localStorage.setItem("selectedSubcategoryId", sub.id);
                 localStorage.setItem("selectedcategoryId", "");
                 localStorage.removeItem('searchResultIds');
-localStorage.removeItem('searchTerm');
+                localStorage.removeItem('searchTerm');
               });
 
               subLi.appendChild(subA);
@@ -101,19 +101,32 @@ localStorage.removeItem('searchTerm');
             categoryList.appendChild(li);
 
             // Only hover events
-            li.addEventListener("mouseenter", function () {
-              closeAllMegaMenus();
-              li.classList.add("active");
-              megaMenuDiv.style.display = "block";
-              icon.classList.remove("bi-plus");
-              icon.classList.add("bi-dash");
-            });
+            // li.addEventListener("mouseenter", function () {
+            //   closeAllMegaMenus();
+            //   li.classList.add("active");
+            //   megaMenuDiv.style.display = "block";
+            //   icon.classList.remove("bi-plus");
+            //   icon.classList.add("bi-dash");
+            // });
 
-            li.addEventListener("mouseleave", function () {
-              li.classList.remove("active");
-              megaMenuDiv.style.display = "none";
-              icon.classList.remove("bi-dash");
-              icon.classList.add("bi-plus");
+            // li.addEventListener("mouseleave", function () {
+            //   li.classList.remove("active");
+            //   megaMenuDiv.style.display = "none";
+            //   icon.classList.remove("bi-dash");
+            //   icon.classList.add("bi-plus");
+            // });
+
+            li.addEventListener("click", function () {
+              if (megaMenuDiv.style.display === "block") {
+                megaMenuDiv.style.display = "none";
+                icon.classList.remove("bi-plus");
+                icon.classList.add("bi-dash");
+              } else {
+                closeAllMegaMenus();
+                megaMenuDiv.style.display = "block";
+                icon.classList.remove("bi-dash");
+                icon.classList.add("bi-plus");
+              }
             });
           });
 
@@ -233,8 +246,8 @@ document.addEventListener("DOMContentLoaded", function () {
           localStorage.setItem("selectedSubcategoryId", ""); // Set to blank
           localStorage.setItem("selectedcategoryId", category.id); // Store category ID
           localStorage.removeItem('searchResultIds');
-localStorage.removeItem('searchTerm');
-      });
+          localStorage.removeItem('searchTerm');
+        });
       });
     })
     .catch((error) =>
@@ -420,10 +433,10 @@ document.addEventListener("DOMContentLoaded", async function () {
             if (!document.getElementById("product-view")) {
               createProductModal();
             }
-            
+
             // Then fetch and display product data
             fetchAndDisplayProduct(productId);
-            
+
             // Finally show the modal
             const productModal = new bootstrap.Modal(document.getElementById("product-view"));
             productModal.show();
@@ -502,7 +515,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
 
       const heartSVG = isInWishlist
-      
+
         ? `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
       <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="red" stroke="red" stroke-width="2"/>
     </svg>`
@@ -566,10 +579,10 @@ document.addEventListener("DOMContentLoaded", async function () {
         if (!document.getElementById("product-view")) {
           createProductModal();
         }
-        
+
         // Then fetch and display product data
         fetchAndDisplayProduct(productId);
-        
+
         // Finally show the modal
         const productModal = new bootstrap.Modal(document.getElementById("product-view"));
         productModal.show();
@@ -614,7 +627,7 @@ const selectedProductId3 = localStorage.getItem("selectedProductId");
 //               try {
 //                 const wishlistResponse = await fetch(`http://localhost:3000/wishlist?userId=${userId}`);
 //                 const wishlistData = await wishlistResponse.json();
-                
+
 //                 // Get productIds from wishlist where userId matches
 //                 const userWishlist = wishlistData.find(item => item.userId === userId);
 //                 if (userWishlist && userWishlist.productId) {
@@ -635,7 +648,7 @@ const selectedProductId3 = localStorage.getItem("selectedProductId");
 //               productItem.className = "swiper-slide";
 //               const isInWishlist = wishlistProductIds.includes(product.id.toString());
 
-    
+
 //               // Create heart SVG based on wishlist status
 //               const heartSVG = isInWishlist
 //                 ? `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
@@ -682,7 +695,7 @@ const selectedProductId3 = localStorage.getItem("selectedProductId");
 //                                         <h6><a href="product-default.html?id=${product.id}" class="hover-underline" onclick="localStorage.setItem('selectedProductId', '${product.id}')">${product.name}</a></h6>
 //                                         <p><a href="shop-list.html">${product.brand}</a></p>
 //                                         <p class="price">$${product.price} <del>$200.00</del></p>
-                                        
+
 //                                     </div>
 //                                     <span class="for-border"></span>
 //                                 </div>
@@ -700,10 +713,10 @@ const selectedProductId3 = localStorage.getItem("selectedProductId");
 //                 if (!document.getElementById("product-view")) {
 //                   createProductModal();
 //                 }
-                
+
 //                 // Then fetch and display product data
 //                 fetchAndDisplayProduct(productId);
-                
+
 //                 // Finally show the modal
 //                 const productModal = new bootstrap.Modal(document.getElementById("product-view"));
 //                 productModal.show();
@@ -748,7 +761,7 @@ async function fetchAndDisplayRelatedProducts() {
       try {
         const wishlistResponse = await fetch(`http://localhost:3000/wishlist?userId=${userId}`);
         const wishlistData = await wishlistResponse.json();
-        
+
         // Get productIds from wishlist where userId matches
         const userWishlist = wishlistData.find(item => item.userId === userId);
         if (userWishlist && userWishlist.productId) {
@@ -834,10 +847,10 @@ async function fetchAndDisplayRelatedProducts() {
         if (!document.getElementById("product-view")) {
           createProductModal();
         }
-        
+
         // Then fetch and display product data
         fetchAndDisplayProduct(productId);
-        
+
         // Finally show the modal
         const productModal = new bootstrap.Modal(document.getElementById("product-view"));
         productModal.show();
@@ -861,10 +874,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // Check if 'selectedeyeId' is available in localStorage
   const selectedeyeId = localStorage.getItem("selectedeyeId");
   console.log(selectedeyeId);
-  
+
 
   if (selectedeyeId) {
-  console.log(selectedeyeId,"selectedeyeId");
+    console.log(selectedeyeId, "selectedeyeId");
 
     // If valid ID is found, proceed with modal creation and data fetching
     createProductModal();
@@ -1043,7 +1056,7 @@ function initializeModal() {
   }
 
   // Add click event listener for backdrop
-  document.addEventListener('click', function(e) {
+  document.addEventListener('click', function (e) {
     const modal = document.getElementById("product-view");
     if (modal && !modal.contains(e.target) && e.target.classList.contains('modal')) {
       handleModalClose();
@@ -1051,7 +1064,7 @@ function initializeModal() {
   });
 
   // Add escape key listener
-  document.addEventListener('keydown', function(e) {
+  document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') {
       handleModalClose();
     }
@@ -1064,9 +1077,9 @@ async function fetchAndDisplayProduct(selectedeyeId) {
     const response = await fetch("http://localhost:3000/product");
     const products = await response.json();
     const product = products.find(p => p.id.toString() === selectedeyeId.toString());
-      // console.log(product,"product");
-      alert("dvxxcdx")
-    
+    // console.log(product,"product");
+    alert("dvxxcdx")
+
     if (product) {
       // Update modal content
       document.querySelector(".product-title").textContent = product.name;
@@ -1077,17 +1090,17 @@ async function fetchAndDisplayProduct(selectedeyeId) {
       document.querySelector(".brand-value").textContent = product.brand;
       document.querySelector(".category-value").textContent = product.category;
       document.querySelector(".main-product-img").src = product.images[0];
-      
+
       // Set product ID on add-cart-btn
-     // fetchAndDisplayProduct function માં add કરો
-const addCartBtn = document.querySelector(".add-cart-btn");
-if (addCartBtn) {
-  addCartBtn.onclick = function(e) {
-    e.preventDefault();
-    console.log("Selected Product ID:", product.id);
-    // અહીં તમારી cart functionality add કરી શકો છો
-  };
-}
+      // fetchAndDisplayProduct function માં add કરો
+      const addCartBtn = document.querySelector(".add-cart-btn");
+      if (addCartBtn) {
+        addCartBtn.onclick = function (e) {
+          e.preventDefault();
+          console.log("Selected Product ID:", product.id);
+          // અહીં તમારી cart functionality add કરી શકો છો
+        };
+      }
 
       // Create thumbnails if there are multiple images
       createThumbnails(product.images);
@@ -1372,7 +1385,7 @@ function initializeSwiper() {
         document.querySelectorAll('.swiper-slide').forEach(slide => {
           slide.classList.remove('active');
         });
-        
+
         const activeSlide = document.querySelector('.swiper-slide-active');
         if (activeSlide) {
           activeSlide.classList.add('active');
@@ -1385,15 +1398,15 @@ function initializeSwiper() {
 }
 
 // Make sure to call this function after your DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const swiper = initializeSwiper();
-  
+
   // You can also manually add event listeners if needed
-  document.querySelector('.sg-next-btn').addEventListener('click', function() {
+  document.querySelector('.sg-next-btn').addEventListener('click', function () {
     swiper.slideNext();
   });
-  
-  document.querySelector('.sg-prev-btn').addEventListener('click', function() {
+
+  document.querySelector('.sg-prev-btn').addEventListener('click', function () {
     swiper.slidePrev();
   });
 });
@@ -1466,86 +1479,86 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     totalProducts = data.length; // Get total number of products
 
-async function renderProducts(products) {
-  const container = document.getElementById("productContainer");
-  container.innerHTML = ""; // Clear previous content
+    async function renderProducts(products) {
+      const container = document.getElementById("productContainer");
+      container.innerHTML = ""; // Clear previous content
 
-  // Get wishlist data from localStorage
-  let userId = localStorage.getItem("user_id");
-  let wishlistProductIds = [];
-  
-  // If we have userId, get the wishlist data
-  if (userId) {
-    try {
-      const wishlistResponse = await fetch(`http://localhost:3000/wishlist?userId=${userId}`);
-      const wishlistData = await wishlistResponse.json();
-      
-      // Get productIds from wishlist where userId matches
-      const userWishlist = wishlistData.find(item => item.userId === userId);
-      if (userWishlist && userWishlist.productId) {
-        wishlistProductIds = userWishlist.productId;
+      // Get wishlist data from localStorage
+      let userId = localStorage.getItem("user_id");
+      let wishlistProductIds = [];
+
+      // If we have userId, get the wishlist data
+      if (userId) {
+        try {
+          const wishlistResponse = await fetch(`http://localhost:3000/wishlist?userId=${userId}`);
+          const wishlistData = await wishlistResponse.json();
+
+          // Get productIds from wishlist where userId matches
+          const userWishlist = wishlistData.find(item => item.userId === userId);
+          if (userWishlist && userWishlist.productId) {
+            wishlistProductIds = userWishlist.productId;
+          }
+        } catch (error) {
+          console.error("Error fetching wishlist:", error);
+        }
       }
-    } catch (error) {
-      console.error("Error fetching wishlist:", error);
-    }
-  }
-  console.log("wishlistProductIds", wishlistProductIds);
+      console.log("wishlistProductIds", wishlistProductIds);
 
-  // Filter products based on category/subcategory/search
-  let filteredProducts = products;
-  let selectedSubcategoryId = localStorage.getItem("selectedSubcategoryId");
-  let selectedcategoryId = localStorage.getItem("selectedcategoryId");
-  let searchResultIds = JSON.parse(localStorage.getItem("searchResultIds") || "[]");
-  let selectedOption = localStorage.getItem("priceSort");
+      // Filter products based on category/subcategory/search
+      let filteredProducts = products;
+      let selectedSubcategoryId = localStorage.getItem("selectedSubcategoryId");
+      let selectedcategoryId = localStorage.getItem("selectedcategoryId");
+      let searchResultIds = JSON.parse(localStorage.getItem("searchResultIds") || "[]");
+      let selectedOption = localStorage.getItem("priceSort");
 
-  if (searchResultIds.length > 0) {
-    filteredProducts = products.filter(product => 
-      searchResultIds.includes(product.id.toString())
-    );
-  } else if (selectedcategoryId === "7") {
-    filteredProducts = products.filter(
-      (product) => product.cat_id === 5 || product.cat_id === 6
-    );
-  } else if (selectedSubcategoryId) {
-    filteredProducts = products.filter(
-      (product) => product.sub_cat_id == selectedSubcategoryId
-    );
-  } else if (selectedcategoryId) {
-    filteredProducts = products.filter(
-      (product) => product.cat_id == selectedcategoryId
-    );
-  }
+      if (searchResultIds.length > 0) {
+        filteredProducts = products.filter(product =>
+          searchResultIds.includes(product.id.toString())
+        );
+      } else if (selectedcategoryId === "7") {
+        filteredProducts = products.filter(
+          (product) => product.cat_id === 5 || product.cat_id === 6
+        );
+      } else if (selectedSubcategoryId) {
+        filteredProducts = products.filter(
+          (product) => product.sub_cat_id == selectedSubcategoryId
+        );
+      } else if (selectedcategoryId) {
+        filteredProducts = products.filter(
+          (product) => product.cat_id == selectedcategoryId
+        );
+      }
 
-  switch (selectedOption) {
-    case "LowToHigh":
-      filteredProducts.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
-      break;
-    case "HighToLow":
-      filteredProducts.sort((a, b) => parseFloat(b.price) - parseFloat(a.price));
-      break;
-      default:
-        // Keep default order
-        break;
-  }
+      switch (selectedOption) {
+        case "LowToHigh":
+          filteredProducts.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
+          break;
+        case "HighToLow":
+          filteredProducts.sort((a, b) => parseFloat(b.price) - parseFloat(a.price));
+          break;
+        default:
+          // Keep default order
+          break;
+      }
 
-  // Display products
-  filteredProducts.forEach((product) => {
-    // Check if product is in wishlist
-    const isInWishlist = wishlistProductIds.includes(product.id.toString());
+      // Display products
+      filteredProducts.forEach((product) => {
+        // Check if product is in wishlist
+        const isInWishlist = wishlistProductIds.includes(product.id.toString());
 
-    
-    // Create heart SVG based on wishlist status
-    const heartSVG = isInWishlist
-      ? `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
+
+        // Create heart SVG based on wishlist status
+        const heartSVG = isInWishlist
+          ? `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
           <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="red" stroke="red" stroke-width="2"/>
         </svg>`
-      : `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+          : `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
           <g clip-path="url(#clip0_168_378)">
             <path d="M16.528 2.20919C16.0674 1.71411 15.5099 1.31906 14.8902 1.04859C14.2704 0.778112 13.6017 0.637996 12.9255 0.636946C12.2487 0.637725 11.5794 0.777639 10.959 1.048C10.3386 1.31835 9.78042 1.71338 9.31911 2.20854L9.00132 2.54436L8.68352 2.20854C6.83326 0.217151 3.71893 0.102789 1.72758 1.95306C1.63932 2.03507 1.5541 2.12029 1.47209 2.20854C-0.490696 4.32565 -0.490696 7.59753 1.47209 9.71463L8.5343 17.1622C8.77862 17.4201 9.18579 17.4312 9.44373 17.1868C9.45217 17.1788 9.46039 17.1706 9.46838 17.1622L16.528 9.71463C18.4907 7.59776 18.4907 4.32606 16.528 2.20919ZM15.5971 8.82879H15.5965L9.00132 15.7849L2.40553 8.82879C0.90608 7.21113 0.90608 4.7114 2.40553 3.09374C3.76722 1.61789 6.06755 1.52535 7.5434 2.88703C7.61505 2.95314 7.68401 3.0221 7.75012 3.09374L8.5343 3.92104C8.79272 4.17781 9.20995 4.17781 9.46838 3.92104L10.2526 3.09438C11.6142 1.61853 13.9146 1.52599 15.3904 2.88767C15.4621 2.95378 15.531 3.02274 15.5971 3.09438C17.1096 4.71461 17.1207 7.2189 15.5971 8.82879Z" />
           </g>
         </svg>`;
 
-    let productCard = `
+        let productCard = `
       <div class="col-lg-3 col-md-4 col-sm-6 item">
         <div class="product-card style-3 hover-btn">
           <div class="product-card-img">
@@ -1589,29 +1602,29 @@ async function renderProducts(products) {
         </div>
       </div>
     `;
-    container.innerHTML += productCard;
-  });
+        container.innerHTML += productCard;
+      });
 
 
 
-  // Add event listeners for product view buttons
-  document.querySelectorAll(".product-view-btn").forEach((button) => {
-    button.addEventListener("click", function() {
-      const productId = this.getAttribute("data-product-id");
-      localStorage.setItem("selectedeyeId", productId);
-      
-      if (!document.getElementById("product-view")) {
-        createProductModal();
-      }
-      
-      fetchAndDisplayProduct(productId);
-      
-      const productModal = new bootstrap.Modal(document.getElementById("product-view"));
-      productModal.show();
-    });
-  });
-}
-// ... existing code ...
+      // Add event listeners for product view buttons
+      document.querySelectorAll(".product-view-btn").forEach((button) => {
+        button.addEventListener("click", function () {
+          const productId = this.getAttribute("data-product-id");
+          localStorage.setItem("selectedeyeId", productId);
+
+          if (!document.getElementById("product-view")) {
+            createProductModal();
+          }
+
+          fetchAndDisplayProduct(productId);
+
+          const productModal = new bootstrap.Modal(document.getElementById("product-view"));
+          productModal.show();
+        });
+      });
+    }
+    // ... existing code ...
 
     // Function to handle pagination
     function handlePagination(page) {
@@ -1621,18 +1634,18 @@ async function renderProducts(products) {
       const selectedcategoryId = localStorage.getItem(
         "selectedcategoryId"
       );
-      
+
       // Get search result IDs from localStorage if available
       const searchResultIds = JSON.parse(localStorage.getItem("searchResultIds") || "[]");
 
       let selectedOption = localStorage.getItem("priceSort");
-      
+
       // Updated filtering logic for pagination
       let filteredProducts = data;
-      
+
       if (searchResultIds && searchResultIds.length > 0) {
         // Filter products by the IDs in searchResultIds array
-        filteredProducts = data.filter(product => 
+        filteredProducts = data.filter(product =>
           searchResultIds.includes(product.id.toString())
         );
       } else if (selectedcategoryId === "7") {
@@ -1640,7 +1653,7 @@ async function renderProducts(products) {
         filteredProducts = data.filter(
           (product) => product.cat_id === 5 || product.cat_id === 6
         );
-      } else if(selectedSubcategoryId) {
+      } else if (selectedSubcategoryId) {
         // Filter by subcategory if available
         filteredProducts = data.filter(
           (product) => product.sub_cat_id == selectedSubcategoryId
@@ -1658,9 +1671,9 @@ async function renderProducts(products) {
         case "HighToLow":
           filteredProducts.sort((a, b) => parseFloat(b.price) - parseFloat(a.price));
           break;
-          default:
-            // Keep default order
-            break;
+        default:
+          // Keep default order
+          break;
       }
       const start = (page - 1) * productsPerPage;
       const end = start + productsPerPage;
@@ -1775,13 +1788,13 @@ async function renderProducts(products) {
         nextPageItem.appendChild(nextPageLink);
         paginationContainer.appendChild(nextPageItem);
       }
-        const startProduct = (currentPage - 1) * productsPerPage + 1;
-  const endProduct = Math.min(currentPage * productsPerPage, filteredLength);
-  
-  const productCountInfo = document.querySelector(".product-count-info");
-  if (productCountInfo) {
-    productCountInfo.innerHTML = `Showing ${startProduct}–${endProduct} of ${filteredLength} results`;
-  }
+      const startProduct = (currentPage - 1) * productsPerPage + 1;
+      const endProduct = Math.min(currentPage * productsPerPage, filteredLength);
+
+      const productCountInfo = document.querySelector(".product-count-info");
+      if (productCountInfo) {
+        productCountInfo.innerHTML = `Showing ${startProduct}–${endProduct} of ${filteredLength} results`;
+      }
     }
 
     handlePagination(currentPage); // Initial call to render products and pagination
@@ -1865,10 +1878,10 @@ document.querySelectorAll(".product-view-btn").forEach((button) => {
     if (!document.getElementById("product-view")) {
       createProductModal();
     }
-    
+
     // Then fetch and display product data
     fetchAndDisplayProduct(productId);
-    
+
     // Finally show the modal
     const productModal = new bootstrap.Modal(document.getElementById("product-view"));
     productModal.show();
@@ -1911,7 +1924,7 @@ async function fetchAndDisplayProduct(selectedeyeId) {
       document.querySelector(".main-product-img").src = product.images[0];
 
 
-      
+
       // Call to create thumbnails if there are multiple images
       createThumbnails(product.images);
     } else {
@@ -1922,13 +1935,13 @@ async function fetchAndDisplayProduct(selectedeyeId) {
   }
 }
 
-function updatecartcount(){
+function updatecartcount() {
   const cartProducts = JSON.parse(localStorage.getItem("cartProducts")) || [];
-    const cartCount = cartProducts.length; 
-    const cartCountElement = document.querySelector(".cart-count");
-    if (cartCountElement) {
-      cartCountElement.textContent = cartCount;
-    }
+  const cartCount = cartProducts.length;
+  const cartCountElement = document.querySelector(".cart-count");
+  if (cartCountElement) {
+    cartCountElement.textContent = cartCount;
+  }
 }
 
 updatecartcount();
@@ -2321,7 +2334,7 @@ document.addEventListener("click", async (event) => {
       } catch (error) {
         console.error("Error updating wishlist:", error);
       }
-    } 
+    }
   }
 });
 
@@ -2331,53 +2344,53 @@ document.addEventListener("click", async (event) => {
 // redirect shop-list search
 
 async function searchProductByName(productName) {
-    try {
-        const response = await fetch("http://localhost:3000/product");
-        const products = await response.json();
-        
-        // If search input is empty, return all products
-        if (!productName.trim()) {
-            console.log("No search term - showing all products:", products);
-            return products;
-        }
-        
-        // Filter products based on the name if search term exists
-        const relatedProducts = products.filter(product => 
-            product.name.toLowerCase().includes(productName.toLowerCase())
-        );
+  try {
+    const response = await fetch("http://localhost:3000/product");
+    const products = await response.json();
 
-        console.log("Related Products:", relatedProducts);
-        return relatedProducts;
-    } catch (error) {
-        console.error("Error fetching products:", error);
-        return []; // Return empty array in case of error
+    // If search input is empty, return all products
+    if (!productName.trim()) {
+      console.log("No search term - showing all products:", products);
+      return products;
     }
+
+    // Filter products based on the name if search term exists
+    const relatedProducts = products.filter(product =>
+      product.name.toLowerCase().includes(productName.toLowerCase())
+    );
+
+    console.log("Related Products:", relatedProducts);
+    return relatedProducts;
+  } catch (error) {
+    console.error("Error fetching products:", error);
+    return []; // Return empty array in case of error
+  }
 }
 
 // Add event listener to the submit button
-document.querySelector(".form-inner2 button[type='submit']").addEventListener("click", async function(event) {
-    event.preventDefault(); // Prevent the default form submission
-    
-    // Get the input value
-    const productName = document.querySelector(".form-inner2 input[type='text']").value;
-    
-    // Get filtered or all products based on search term
-    const products = await searchProductByName(productName);
+document.querySelector(".form-inner2 button[type='submit']").addEventListener("click", async function (event) {
+  event.preventDefault(); // Prevent the default form submission
 
-     // Redirect to shop-list.html
-     window.location.href = 'shop-list.html';
-    
-    // Get the container where products will be displayed
-    const container = document.getElementById("productContainer");
-    
-    // Clear existing products
-    container.innerHTML = "";
-    
-    // Display products or "no results" message
-    if (products.length > 0) {
-        products.forEach(product => {
-            // Create product card HTML
-            const productCard = `
+  // Get the input value
+  const productName = document.querySelector(".form-inner2 input[type='text']").value;
+
+  // Get filtered or all products based on search term
+  const products = await searchProductByName(productName);
+
+  // Redirect to shop-list.html
+  window.location.href = 'shop-list.html';
+
+  // Get the container where products will be displayed
+  const container = document.getElementById("productContainer");
+
+  // Clear existing products
+  container.innerHTML = "";
+
+  // Display products or "no results" message
+  if (products.length > 0) {
+    products.forEach(product => {
+      // Create product card HTML
+      const productCard = `
                 <div class="col-lg-3 col-md-4 col-sm-6 item">
                     <div class="product-card st768pxyle-3 hover-btn">
                         <div class="product-card-img">
@@ -2427,19 +2440,19 @@ document.querySelector(".form-inner2 button[type='submit']").addEventListener("c
                     </div>
                 </div>
             `;
-            container.innerHTML += productCard;
-        });
-    } else {
-        // Display "no results found" message
-        container.innerHTML = `
+      container.innerHTML += productCard;
+    });
+  } else {
+    // Display "no results found" message
+    container.innerHTML = `
             <div class="col-12 text-center">
                 <h3>No products found matching your search.</h3>
             </div>
         `;
-    }
+  }
 });
 
-// Top-bar 
+// Top-bar
 // ... existing code ...
 // ... existing code ...
 // ... existing code ...

@@ -269,24 +269,27 @@
                 </div>
             </div>
             <script>
-                // Retrieve cart IDs from session storage
+                // Retrieve cart IDs from local storage
                 const cartProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
-                let subtotal = 0; // Initialize subtotal
+                let subtotal = 0;
                 let productToCartMap = {}; // Map to store product ID to cart item ID mapping
+
                 // Fetch cart data for each cart ID
                 async function fetchCartData() {
                     const cartBody = document.getElementById('cartBody');
                     cartBody.innerHTML = ''; // Clear existing content
-                    let existingProducts = {}; // Object to track existing products
+
+                    // Object to store consolidated products by product ID
+                    let consolidatedProducts = {};
                     productToCartMap = {}; // Reset the mapping
 
                     for (const cartId of cartProducts) {
-                        
                         try {
                             // Fetch cart item details
                             const cartResponse = await fetch(`http://localhost:3000/cart/${cartId}`);
                             if (!cartResponse.ok) {
-                                throw new Error('Network response was not ok');
+                                console.error(`Cart item ${cartId} not found`);
+                                continue;
                             }
                             const cartData = await cartResponse.json();
 
@@ -299,174 +302,184 @@
                             // Fetch product details using product_id from cartData
                             const productResponse = await fetch(`http://localhost:3000/product/${cartData.product_id}`);
                             if (!productResponse.ok) {
-                                throw new Error('Network response was not ok');
+                                console.error(`Product ${cartData.product_id} not found`);
+                                continue;
                             }
                             const productData = await productResponse.json();
 
-                            // Check if product already exists in the cart
-                            if (existingProducts[cartData.product_id]) {
-                                debugger
-                                existingProducts[cartData.product_id].quantity += cartData.quantity; // Increment quantity
+                            // Add to consolidated products
+                            if (consolidatedProducts[cartData.product_id]) {
+                                consolidatedProducts[cartData.product_id].quantity += cartData.quantity;
                             } else {
-                                existingProducts[cartData.product_id] = {
+                                consolidatedProducts[cartData.product_id] = {
                                     ...productData,
-                                    quantity: cartData.quantity,
+                                    quantity: cartData.quantity
                                 };
                             }
                         } catch (error) {
                             console.error('Error fetching data:', error);
                         }
                     }
-                    
-                    // Render the cart items
-                    for (const productId in existingProducts) {
-                        const product = existingProducts[productId];
+
+                    // Render the consolidated cart items
+                    for (const productId in consolidatedProducts) {
+                        const product = consolidatedProducts[productId];
                         const total = product.price * product.quantity;
-                        console.log("---",product.quantity)
-                        
 
                         // Create a new row for the cart table
                         const row = `
-                        
-            <tr>
-                <td>
-                    <div class="delete-icon" onclick="deleteCartItem('${productId}')">
-                        <i class="bi bi-x-lg"></i>
-                    </div>
-                </td>
-                <td data-label="Product" class="table-product">
-                    <div class="product-img">
-                        <img src="${product.images[0]}" alt="">
-                    </div>
-                    <div class="product-content">
-                      <h6>
-    <a href="product-default.html" 
-   
-       onclick="localStorage.setItem('selectedProductId', '${product.id}')">${product.name}
-    </a>
-</h6>
-                    </div>
-                </td>
-                <td data-label="Price">
-                    <p class="price">
-                 
-                        $${product.price}
-                    </p>
-                </td>
-                <td data-label="Quantity">
-                    <div class="quantity-counter"> 
-                        <a href="#" class="quantity__minus" onclick="changeQuantity(event, '${productId}', -1)">
-                            <i class='bx bx-minus'></i>
-                        </a>
-                        <input name="quantity" type="text" class="quantity__input" value="${product.quantity}" id="quantity-${productId}" readonly>
-                        <a href="#" class="quantity__plus" onclick="changeQuantity(event, '${productId}', 1)">
-                            <i class='bx bx-plus'></i>
-                        </a>
-                    </div>
-                </td>
-                <td data-label="Total" id="total-${productId}" data-price="${product.price}">
-                    $${total.toFixed(2)}
-                </td>
-            </tr>
+        <tr>
+            <td>
+                <div class="delete-icon" onclick="deleteCartItem('${productId}')">
+                    <i class="bi bi-x-lg"></i>
+                </div>
+            </td>
+            <td data-label="Product" class="table-product">
+                <div class="product-img">
+                    <img src="${product.images[0]}" alt="">
+                </div>
+                <div class="product-content">
+                    <h6><a href="#">${product.name}</a></h6>
+                </div>
+            </td>
+            <td data-label="Price">
+                <p class="price">
+                    <del>$${product.price + 10}</del>
+                    $${product.price}
+                </p>
+            </td>
+            <td data-label="Quantity">
+                <div class="quantity-counter"> 
+                    <a href="#" class="quantity__minus" onclick="changeQuantity(event, '${productId}', -1)">
+                        <i class='bx bx-minus'></i>
+                    </a>
+                    <input name="quantity" type="text" class="quantity__input" value="${product.quantity}" id="quantity-${productId}" readonly>
+                    <a href="#" class="quantity__plus" onclick="changeQuantity(event, '${productId}', 1)">
+                        <i class='bx bx-plus'></i>
+                    </a>
+                </div>
+            </td>
+            <td data-label="Total" id="total-${productId}" data-price="${product.price}">
+                $${total.toFixed(2)}
+            </td>
+        </tr>
         `;
                         cartBody.innerHTML += row; // Append new row to the table body
                     }
 
                     // Calculate subtotal
-                    subtotal = Object.values(existingProducts).reduce((acc, product) => acc + (product.price * product.quantity), 0);
+                    subtotal = Object.values(consolidatedProducts).reduce((acc, product) => acc + (product.price * product.quantity), 0);
                     document.getElementById('cartTotal').innerText = `$${subtotal.toFixed(2)}`;
                 }
 
                 // Call the function to fetch cart data on page load
                 window.onload = fetchCartData;
 
-
+                // Delete cart item function
                 async function deleteCartItem(productId) {
                     try {
-                        // Find all cart items with this product_id
-                        const response = await fetch(`http://localhost:3000/cart?productid=${productId}`);
-                        if (!response.ok) {
-                            throw new Error('Failed to fetch cart items');
-                        }
-                        const cartItems = await response.json();
+                        // Get all cart IDs associated with this product
+                        const cartIds = productToCartMap[productId] || [];
 
-                        // Delete each cart item with matching product_id
-                        for (const item of cartItems) {
-                            const deleteResponse = await fetch(`http://localhost:3000/cart/${item.id}`, {
+                        // Delete each cart item
+                        for (const cartId of cartIds) {
+                            const deleteResponse = await fetch(`http://localhost:3000/cart/${cartId}`, {
                                 method: 'DELETE',
                             });
-                            if (!deleteResponse.ok) {
-                                throw new Error('Failed to delete item from cart');
-                            }
 
-                            // Remove the specific cart ID from local storage
-                            const cartProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
-                            const updatedCartProducts = cartProducts.filter(id => id !== item.id.toString());
-                            localStorage.setItem('cartProducts', JSON.stringify(updatedCartProducts));
+                            if (!deleteResponse.ok) {
+                                console.error(`Failed to delete cart item ${cartId}`);
+                            }
                         }
 
-                        // Refresh the cart data
+                        // Update local storage by removing the deleted cart IDs
+                        let storedCartProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
+                        storedCartProducts = storedCartProducts.filter(id => !cartIds.includes(id));
+                        localStorage.setItem('cartProducts', JSON.stringify(storedCartProducts));
+
+                        // Refresh the cart display
                         await fetchCartData();
                     } catch (error) {
-                        console.error('Error deleting item:', error);
+                        console.error('Error deleting items:', error);
                     }
                 }
 
+                // Change quantity function
                 async function changeQuantity(event, productId, change) {
-                    event.preventDefault(); // Prevent unintended behavior
+                    event.preventDefault();
+
+                    // Get current quantity
                     const quantityInput = document.getElementById(`quantity-${productId}`);
-                    const totalCell = document.getElementById(`total-${productId}`);
                     let currentQuantity = parseInt(quantityInput.value);
 
-                    // Update quantity
+                    // Calculate new quantity
                     currentQuantity += change;
-                    if (currentQuantity < 1) currentQuantity = 1; // Prevent quantity from going below 1
-                    quantityInput.value = currentQuantity;
+                    if (currentQuantity < 1) currentQuantity = 1; // Minimum quantity is 1
 
-                    // Fetch the price from the product data (assuming it's stored in a data attribute)
-                    const productPrice = parseFloat(totalCell.dataset.price);
+                    // Get cart IDs for this product
+                    const cartIds = productToCartMap[productId] || [];
+                    if (cartIds.length === 0) {
+                        console.error(`No cart items found for product ${productId}`);
+                        return;
+                    }
 
-                    // Update total price
-                    const newTotal = productPrice * currentQuantity;
-                    totalCell.innerText = `$${newTotal.toFixed(2)}`;
+                    // If there's only one cart item for this product, update its quantity
+                    if (cartIds.length === 1) {
+                        await updateCartItemQuantity(cartIds[0], currentQuantity);
+                    } else {
+                        // Handle multiple cart items for the same product
+                        // For simplicity, update the first cart item and delete the rest
+                        await updateCartItemQuantity(cartIds[0], currentQuantity);
 
-                    // Get all cart item IDs for this product
-                    const cartItemIds = productToCartMap[productId] || [];
+                        // Delete other cart items
+                        for (let i = 1; i < cartIds.length; i++) {
+                            try {
+                                await fetch(`http://localhost:3000/cart/${cartIds[i]}`, {
+                                    method: 'DELETE',
+                                });
 
-                    if (cartItemIds.length > 0) {
-                        // Calculate quantity per cart item (divide evenly)
-                        const quantityPerItem = Math.floor(currentQuantity / cartItemIds.length);
-                        let remainder = currentQuantity % cartItemIds.length;
-
-                        // Update each cart item
-                        for (let i = 0; i < cartItemIds.length; i++) {
-                            // Add an extra unit to early items if there's a remainder
-                            const itemQuantity = quantityPerItem + (remainder > 0 ? 1 : 0);
-                            if (remainder > 0) remainder--;
-
-                            await updateCartItemQuantity(cartItemIds[i], itemQuantity);
+                                // Remove from local storage
+                                let storedCartProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
+                                storedCartProducts = storedCartProducts.filter(id => id !== cartIds[i]);
+                                localStorage.setItem('cartProducts', JSON.stringify(storedCartProducts));
+                            } catch (error) {
+                                console.error(`Error deleting cart item ${cartIds[i]}:`, error);
+                            }
                         }
                     }
 
-                    // Refresh the cart to update all totals
+                    // Refresh the cart display
                     await fetchCartData();
                 }
 
+                // Function to update cart item quantity
                 async function updateCartItemQuantity(cartId, quantity) {
                     try {
-                        const response = await fetch(`http://localhost:3000/cart/${cartId}`, {
-                            method: 'PATCH', // Updates only the quantity field
+                        // First get the current cart item
+                        const response = await fetch(`http://localhost:3000/cart/${cartId}`);
+                        if (!response.ok) {
+                            throw new Error(`Failed to fetch cart item ${cartId}`);
+                        }
+
+                        const cartItem = await response.json();
+
+                        // Update quantity
+                        cartItem.quantity = quantity;
+
+                        // Send update to server
+                        const updateResponse = await fetch(`http://localhost:3000/cart/${cartId}`, {
+                            method: 'PUT',
                             headers: {
                                 'Content-Type': 'application/json',
                             },
-                            body: JSON.stringify({ quantity }), // Send only the updated quantity
+                            body: JSON.stringify(cartItem),
                         });
 
-                        if (!response.ok) {
-                            throw new Error('Failed to update quantity in cart');
+                        if (!updateResponse.ok) {
+                            throw new Error(`Failed to update cart item ${cartId}`);
                         }
 
-                        console.log('Cart updated successfully!');
+                        console.log(`Cart item ${cartId} quantity updated to ${quantity}`);
                     } catch (error) {
                         console.error('Error updating quantity:', error);
                     }
