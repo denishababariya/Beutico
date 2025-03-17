@@ -499,21 +499,104 @@ async function handleSearch() {
 }
 $(document).ready(function () {
   $(".shop-details-tab-img").mousemove(function (event) {
-      let $image = $(this).find("img");
-      let offset = $(this).offset();
-      let x = ((event.pageX - offset.left) / $(this).width()) * 100;
-      let y = ((event.pageY - offset.top) / $(this).height()) * 100;
-      
-      $image.css({
-          "transform": "scale(1.4)",
-          "transform-origin": x + "% " + y + "%"
-      });
+    let $image = $(this).find("img");
+    let offset = $(this).offset();
+    let x = ((event.pageX - offset.left) / $(this).width()) * 100;
+    let y = ((event.pageY - offset.top) / $(this).height()) * 100;
+
+    $image.css({
+      "transform": "scale(1.4)",
+      "transform-origin": x + "% " + y + "%"
+    });
   });
 
   $(".shop-details-tab-img").mouseleave(function () {
-      $(this).find("img").css({
-          "transform": "scale(1)",
-          "transform-origin": "center center"
+    $(this).find("img").css({
+      "transform": "scale(1)",
+      "transform-origin": "center center"
+    });
+  });
+});
+document.addEventListener('click', function (e) {
+  if (e.target.closest('.shop-now-btn')) {
+    e.preventDefault();
+
+    const userId = localStorage.getItem('user_id');
+
+    if (!userId) {
+      // If no user_id, show login modal
+      openLoginModal();
+      return;
+    }
+
+    // Check if user exists in API
+    fetch(`http://localhost:3000/users?id=${userId}`)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(users => {
+        if (users.length === 0) {
+          // User not found in API
+          localStorage.removeItem('user_id'); // Clear invalid user_id
+          openLoginModal();
+          return;
+        }
+
+        // User exists, proceed with shop now functionality
+        const shopNowBtn = e.target.closest('.shop-now-btn');
+        const productId = shopNowBtn.getAttribute('data-product-id');
+
+        if (productId) {
+          localStorage.setItem('shopnow-id', productId);
+          window.location.href = 'checkout.html';
+        }
+      })
+      .catch(error => {
+        console.error('Error checking user:', error);
+        openLoginModal();
       });
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const niceSelect = document.querySelector(".nice-select");
+  const options = document.querySelectorAll(".nice-select .option");
+  const current = document.querySelector(".nice-select .current");
+
+  if (!niceSelect || options.length === 0 || !current) {
+    console.error("Custom select dropdown not found!");
+    return;
+  }
+
+  // Load the saved value from localStorage (if available)
+  const savedSort = localStorage.getItem("priceSort");
+  if (savedSort) {
+    // Set the selected value in UI
+    options.forEach(option => {
+      if (option.getAttribute("data-value") === savedSort) {
+        options.forEach(opt => opt.classList.remove("selected")); // Remove existing selection
+        option.classList.add("selected"); // Add selected class
+        current.textContent = option.textContent; // Update UI
+      }
+    });
+  }
+
+  // Event listener for clicking on options
+  options.forEach(option => {
+    option.addEventListener("click", function () {
+      const selectedValue = this.getAttribute("data-value");
+
+      // Update localStorage
+      localStorage.setItem("priceSort", selectedValue);
+      console.log("Sorting Preference Saved:", selectedValue);
+
+      // Update UI
+      options.forEach(opt => opt.classList.remove("selected"));
+      this.classList.add("selected");
+      current.textContent = this.textContent;
+    });
   });
 });
