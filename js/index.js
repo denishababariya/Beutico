@@ -931,20 +931,29 @@ function createProductModal() {
                   <div class="price-area">
                     <p class="price">$<span class="current-price"></span> <del>$<span class="original-price"></span></del></p>
                   </div>
-                  <div class="quantity-color-area">
-                    <div class="quantity-color">
-                      <h6 class="widget-title">Quantity</h6>
-                      <div class="quantity-counter">
-                        <a href="#" class="quantity__minus"><i class="bx bx-minus"></i></a>
-                        <input name="quantity" type="text" class="quantity__input" value="01">
-                        <a href="#" class="quantity__plus"><i class="bx bx-plus"></i></a>
-                      </div>
-                    </div>
-                  </div>
+                  
+                  
                  <div class="shop-details-btn">
       <a href="shop-list.html" class="primary-btn1 hover-btn3 ">*Shop Now*</a>
       <a href="#" class="primary-btn1 style-3 hover-btn4 add-cart-btn" >*Drop in Basket*</a>
     </div>
+    <ul style="display: flex;flex-wrap: wrap-;padding: 20px 0px;gap:30px;">
+            
+              <li>
+                <svg width="13" height="11" viewBox="0 0 13 11" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.2986 0.0327999C9.89985 0.832756 6.86143 2.97809 4.03623 6.6688L2.36599 4.778C2.09946 4.4871 1.63748 4.4871 1.38872 4.778L0.162693 6.17792C-0.0682981 6.45063 -0.0505298 6.86879 0.19823 7.12332L3.96516 10.814C4.28499 11.1231 4.78251 11.0322 4.99574 10.6504C7.00358 6.92333 9.17134 4.15985 12.7961 0.996384C13.2581 0.596406 12.8672 -0.167189 12.2986 0.0327999Z"></path>
+                </svg>
+                hair extension
+              </li>
+            
+              <li>
+                <svg width="13" height="11" viewBox="0 0 13 11" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.2986 0.0327999C9.89985 0.832756 6.86143 2.97809 4.03623 6.6688L2.36599 4.778C2.09946 4.4871 1.63748 4.4871 1.38872 4.778L0.162693 6.17792C-0.0682981 6.45063 -0.0505298 6.86879 0.19823 7.12332L3.96516 10.814C4.28499 11.1231 4.78251 11.0322 4.99574 10.6504C7.00358 6.92333 9.17134 4.15985 12.7961 0.996384C13.2581 0.596406 12.8672 -0.167189 12.2986 0.0327999Z"></path>
+                </svg>
+                human hair
+              </li>
+            
+          </ul>
                   <div class="product-info">
                     <ul class="product-info-list">
                       <li><span>SKU:</span> <span class="sku-value"></span></li>
@@ -959,16 +968,13 @@ function createProductModal() {
                     </ul>
                   </div>
                   
+                  
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div>
-        <p></p>
-        <p></p>
-        <p></p>
-         <p></p></div>
+      
       </div>
     </div>
   `;
@@ -1075,7 +1081,7 @@ async function fetchAndDisplayProduct(selectedeyeId) {
       document.querySelector(".original-price").textContent = (product.price * 1.2).toFixed(2);
       document.querySelector(".sku-value").textContent = product.sku;
       document.querySelector(".brand-value").textContent = product.brand;
-      document.querySelector(".category-value").textContent = product.category;
+      // document.querySelector(".category-value").textContent = product.category;
       document.querySelector(".main-product-img").src = product.images[0];
 
       // Set product ID on add-cart-btn
@@ -1898,19 +1904,15 @@ async function fetchAndDisplayProduct(selectedeyeId) {
     if (product) {
       // Update modal content with the fetched product data
       document.querySelector(".product-title").textContent = product.name;
-      document.querySelector(".product-description").textContent =
-        product.description;
-      document.querySelector(".current-price").textContent =
-        product.price.toFixed(2);
-      document.querySelector(".original-price").textContent = (
-        product.price * 1.2
-      ).toFixed(2);
+      document.querySelector(".product-description").textContent = product.description;
+      document.querySelector(".current-price").textContent = product.price.toFixed(2);
+      document.querySelector(".original-price").textContent = (product.price * 1.2).toFixed(2);
       document.querySelector(".sku-value").textContent = product.sku;
       document.querySelector(".brand-value").textContent = product.brand;
-      document.querySelector(".category-value").textContent = product.category;
       document.querySelector(".main-product-img").src = product.images[0];
 
-
+      // Fetch category name based on cat_id
+      fetchCategoryName(product.cat_id);
 
       // Call to create thumbnails if there are multiple images
       createThumbnails(product.images);
@@ -1922,7 +1924,24 @@ async function fetchAndDisplayProduct(selectedeyeId) {
   }
 }
 
-function updatecartcount() {
+// Function to fetch category name using cat_id
+async function fetchCategoryName(cat_id) {
+  try {
+    const response = await fetch("http://localhost:3000/category");
+    const categories = await response.json();
+    const category = categories.find((c) => c.id == cat_id);
+
+    if (category) {
+      document.querySelector(".category-value").textContent = category.cat_name;
+    } else {
+      console.error("Category not found");
+    }
+  } catch (error) {
+    console.error("Error fetching category data:", error);
+  }
+}
+
+function updatecartcount(){
   const cartProducts = JSON.parse(localStorage.getItem("cartProducts")) || [];
   const cartCount = cartProducts.length;
   const cartCountElement = document.querySelector(".cart-count");
@@ -1933,104 +1952,6 @@ function updatecartcount() {
 
 updatecartcount();
 
-
-// Function to update cart count
-// function updateCartCount() {
-//   const cartProducts = JSON.parse(localStorage.getItem("cartProducts")) || [];
-//   const cartCount = cartProducts.length; // Get the count of products in the cart
-//   const cartCountElement = document.querySelector(".cart-count");
-//   if (cartCountElement) {
-//     cartCountElement.textContent = cartCount.toString().padStart(2, "0"); // Update the span with the count
-//   }
-// }
-// Add event listener to "Drop in Basket" button
-
-// Call this function after adding a product to the cart
-// document.addEventListener("click", function (event) {
-//   if (event.target.classList.contains("add-cart-btn")) {
-//     event.preventDefault(); // Prevent default anchor behavior
-//     const productId = event.target.getAttribute("data-product-id");
-
-//     // Fetch product details from localStorage or API
-//     fetch(`http://localhost:3000/product/${productId}`)
-//       .then((response) => response.json())
-//       .then((product) => {
-//         // Create a unique cart ID
-//         const cartId = generateUniqueId(); // Generate a unique ID
-
-//         // Retrieve existing cart items from localStorage
-//         let cartProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
-
-//         // Check if the product already exists in the cart
-//         const existingCartItem = cartProducts.find(item => item.product_id === product.id);
-//         console.log("existingCartItem", existingCartItem);
-
-
-//         if (existingCartItem) {
-//           // Increase the quantity of the existing product in the cart
-//           existingCartItem.quantity += 1; // Increase quantity
-//           console.log('Product quantity increased in the cart.'); // Log message for quantity increase
-
-//           // Update the cart in the API
-//           fetch(`http://localhost:3000/cart/${existingCartItem.id}`, {
-//             method: 'PUT',
-//             headers: {
-//               'Content-Type': 'application/json',
-//             },
-//             body: JSON.stringify(existingCartItem) // Send the updated cart item
-//           })
-//             .then(cartResponse => {
-//               if (!cartResponse.ok) {
-//                 throw new Error('Failed to update cart');
-//               }
-//               console.log('Cart updated successfully.');
-//             })
-//             .catch(error => console.error('Error updating cart:', error));
-//         } else {
-//           // Create a new cart item
-//           const cartItem = {
-//             id: cartId, // Add the unique cart ID
-//             product_id: product.id,
-//             time: new Date().toISOString(), // Current time in ISO format
-//             quantity: 1 // Default quantity, can be modified as needed
-//           };
-
-//           // Add product to cart API
-//           fetch('http://localhost:3000/cart', {
-//             method: 'POST',
-//             headers: {
-//               'Content-Type': 'application/json',
-//             },
-//             body: JSON.stringify(cartItem) // Send the cart item data
-//           })
-//             .then(cartResponse => {
-//               if (!cartResponse.ok) {
-//                 throw new Error("Failed to Drop In Basket");
-//               }
-//               console.log('Product added to cart:', product);
-//             })
-//             .catch(error => console.error('Error adding to cart:', error));
-//           console.log("cartItem", cartItem);
-
-//           // Add the new cart item to localStorage
-//           cartProducts.push(cartItem.id);
-//           localStorage.setItem('cartProducts', JSON.stringify(cartProducts)); // Store updated array in local storage
-
-//         }
-
-//         // Update the cart count display
-//         updateCartCount(); // Call the function to update the cart count
-//       })
-//       .catch((error) => console.error("Error fetching product:", error));
-//   }
-// });
-
-// Initial call to set the cart count on page load
-// updateCartCount();
-// // Function to generate a unique ID
-// function generateUniqueId() {
-//   return "cart-" + Math.random().toString(36).substr(2, 9); // Generates a random ID
-// }
 
 
 document.addEventListener("click", async (e) => {
