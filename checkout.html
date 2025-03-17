@@ -256,12 +256,6 @@
                                         <input type="text" name="lname" placeholder="Your last name" required>
                                     </div>
                                 </div>
-                                <!-- <div class="col-12">
-                                    <div class="form-inner">
-                                        <label>Country / Region</label>
-                                        <input type="text" name="fname" placeholder="Your country name">
-                                    </div>
-                                </div> -->
                                 <div class="col-12">
                                     <div class="form-inner">
                                         <label>Street Address</label>
@@ -271,12 +265,9 @@
                                 <div class="col-12">
                                     <div class="form-inner">
                                         <label>City</label>
-                                        <select name="city" required>
-                                            <option value="">Select your city</option>
-                                            <option value="Dhaka">Dhaka</option>
-                                            <option value="Saidpur">Saidpur</option>
-                                            <option value="Newyork">Newyork</option>
-                                        </select>
+                                        <div class="form-inner">
+                                            <input type="text" name="city" placeholder="city">
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -295,11 +286,6 @@
                                         <input type="email" name="email" placeholder="Your Email Address">
                                     </div>
                                 </div>
-                                <!-- <div class="col-12">
-                                    <div class="form-inner">
-                                        <input type="text" name="postcode" placeholder="Post Code">
-                                    </div>
-                                </div> -->
                                 <div class="col-12">
                                     <div class="form-inner">
                                         <textarea name="message" placeholder="Order Notes (Optional)"
@@ -803,7 +789,7 @@
                 const fName = document.querySelector('input[name="fname"]').value.trim();
                 const lName = document.querySelector('input[name="lname"]').value.trim();
                 const address = document.querySelector('input[name="address"]').value.trim();
-                const city = document.querySelector('select[name="city"]').value;
+                const city = document.querySelector('input[name="city"]').value.trim();
                 const postCode = document.querySelector('input[name="fname"]').value.trim();
                 const phoneNum = document.querySelector('input[name="phone"]').value.trim();
                 const email = document.querySelector('input[name="email"]').value.trim();
@@ -867,6 +853,8 @@
                     body: JSON.stringify(data),
                 })
                     .then(response => {
+                        console.log("response",response);
+                        
                         if (!response.ok) {
                             throw new Error(`HTTP error! status: ${response.status}`);
                         }
@@ -904,6 +892,7 @@
                     });
             });
         });
+     
     </script>
     <!--  Main jQuery  -->
     <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>

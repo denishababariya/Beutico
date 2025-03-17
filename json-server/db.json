@@ -11278,10 +11278,16 @@
   ],
   "cart": [
     {
-      "id": "cart-drmr0odo7",
+      "id": "cart-qnaa239cv",
       "product_id": "436",
-      "time": "2025-03-17T04:06:17.672Z",
+      "time": "2025-03-17T04:36:00.100Z",
       "quantity": 5
+    },
+    {
+      "id": "cart-k9xocs48x",
+      "product_id": "436",
+      "time": "2025-03-17T04:36:18.578Z",
+      "quantity": 8
     }
   ],
   "bill": [
@@ -11662,6 +11668,33 @@
       "total": "147.95",
       "payment_method": [
         "Card"
+      ]
+    },
+    {
+      "id": "5f4e",
+      "f_name": "sdf",
+      "l_name": "adf",
+      "address": "tyujg rykyk 6i sdfvgedf",
+      "city": "SURAT",
+      "post_code": "sdf",
+      "phone_num": "9328430111",
+      "email": "aesha.kalathiyainfotech@gmail.com",
+      "note": "sdg dxfbh xdfb",
+      "regular_product": [],
+      "rental_product": [
+        {
+          "product_id": "436",
+          "quantity": 5
+        },
+        {
+          "product_id": "436",
+          "quantity": 8
+        }
+      ],
+      "total": "194.87",
+      "payment_method": [
+        "Cash",
+        "Check"
       ]
     }
   ],
