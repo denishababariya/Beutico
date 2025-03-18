@@ -11296,12 +11296,6 @@
       "quantity": 4
     },
     {
-      "id": "cart-a170srmiq",
-      "product_id": "460",
-      "time": "2025-03-18T04:04:10.885Z",
-      "quantity": 3
-    },
-    {
       "id": "cart-7w8pt9pis",
       "product_id": "320",
       "time": "2025-03-18T04:04:14.369Z",
@@ -11353,7 +11347,7 @@
       "id": "cart-kwn7xjvsn",
       "product_id": "60",
       "time": "2025-03-18T04:15:40.835Z",
-      "quantity": 3
+      "quantity": 5
     },
     {
       "id": "cart-o4q4wfxty",
@@ -11371,7 +11365,7 @@
       "id": "cart-onasydqua",
       "product_id": "460",
       "time": "2025-03-18T04:16:08.240Z",
-      "quantity": 1
+      "quantity": 7
     },
     {
       "id": "cart-qaep046gh",
@@ -11384,12 +11378,6 @@
       "product_id": "5",
       "time": "2025-03-18T06:33:48.772Z",
       "quantity": 4
-    },
-    {
-      "id": "cart-fgsxfzdk9",
-      "product_id": "60",
-      "time": "2025-03-18T06:46:41.575Z",
-      "quantity": 1
     }
   ],
   "bill": [

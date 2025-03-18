@@ -559,10 +559,20 @@
                             return Promise.reject("No matched products");
                         }
 
+                        // Initialize an object to hold the aggregated quantities
                         const quantityMap = {};
 
+                        // Aggregate quantities for products with the same ID
+                        matchedProducts.forEach(item => {
+                            if (quantityMap[item.product_id]) {
+                                quantityMap[item.product_id].quantity += item.quantity;
+                            } else {
+                                quantityMap[item.product_id] = { ...item, quantity: item.quantity };
+                            }
+                        });
+
                         // Fetch product details and calculate subtotal
-                        return Promise.all(matchedProducts.map(item => {
+                        return Promise.all(Object.values(quantityMap).map(item => {
                             return fetch(`http://localhost:3000/product?id=${item.product_id}`)
                                 .then(response => {
                                     if (!response.ok) {
@@ -574,7 +584,6 @@
                                     const product = productDetails[0]; // Assuming the product details are returned as an array
                                     let price = product.price;
                                     let quantity = item.quantity || 1;
-                                    quantityMap[item.product_id] = quantity;
 
                                     // Check if the product's cat_id is 5 or 6
                                     if (product.cat_id !== 5 && product.cat_id !== 6) {
