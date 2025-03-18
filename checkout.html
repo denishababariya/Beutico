@@ -731,9 +731,12 @@
 
                     if (quantityInput && priceElement) {
                         const quantity = parseInt(quantityInput.value, 10);
-                        const price = parseFloat(priceElement.textContent);
+                        // Remove '$' symbol and convert to float
+                        const price = parseFloat(priceElement.textContent.replace('$', ''));
+                        
                         if (!isNaN(quantity) && !isNaN(price)) {
-                            newRegularSubtotal += price * quantity;
+                            const itemTotal = price * quantity;
+                            newRegularSubtotal += itemTotal;
                         }
                     }
                 });
@@ -745,35 +748,61 @@
 
                     if (quantityInput && priceElement) {
                         const quantity = parseInt(quantityInput.value, 10);
-                        const price = parseFloat(priceElement.textContent);
+                        // Remove '$' symbol and convert to float
+                        const price = parseFloat(priceElement.textContent.replace('$', ''));
+                        
                         if (!isNaN(quantity) && !isNaN(price)) {
-                            newRentalSubtotal += price * quantity;
+                            const itemTotal = price * quantity;
+                            newRentalSubtotal += itemTotal;
                         }
                     }
                 });
 
+                // Get tax rates
+                const igsttax = parseFloat(document.getElementById("total-incl").innerText.replace('%', '')) / 100;
+                const hsttax = parseFloat(document.getElementById("total-excl").innerText.replace('%', '')) / 100;
+                const taxsum = igsttax + hsttax;
+
                 // Calculate tax
                 const newTotalTax = newRegularSubtotal * taxsum;
 
-
-                // Update UI
-                if (document.getElementById('subtotal')) {
-                    document.getElementById('subtotal').textContent = `$${newRegularSubtotal.toFixed(2)}`;
-                }
-
-                if (document.getElementById('tax')) {
-                    document.getElementById('tax').textContent = `$${newTotalTax.toFixed(2)}`;
-                }
-
-                if (document.getElementById('final-total')) {
-                    document.getElementById('final-total').textContent = `$${(newRegularSubtotal + newTotalTax).toFixed(2)}`;
-                }
-
-                if (document.getElementById('final-total1')) {
-                    document.getElementById('final-total1').textContent = `$${newRentalSubtotal.toFixed(2)}`;
-                }
-
+                // Update UI with formatted numbers
+                document.getElementById('subtotal').textContent = `$${newRegularSubtotal.toFixed(2)}`;
+                document.getElementById('tax').textContent = `$${newTotalTax.toFixed(2)}`;
+                document.getElementById('final-total').textContent = `$${(newRegularSubtotal + newTotalTax).toFixed(2)}`;
+                document.getElementById('final-total1').textContent = `$${newRentalSubtotal.toFixed(2)}`;
+                document.getElementById('final-total-both').textContent = 
+                    `$${(newRegularSubtotal + newRentalSubtotal + newTotalTax).toFixed(2)}`;
             }
+
+            // Add event listeners for quantity changes
+            document.addEventListener('DOMContentLoaded', function() {
+                // Initialize quantity controls
+                document.querySelectorAll('.quantity__plus').forEach(button => {
+                    button.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const input = this.parentElement.querySelector('.quantity__input');
+                        let value = parseInt(input.value, 10);
+                        input.value = isNaN(value) ? 1 : value + 1;
+                        updateTotals();
+                    });
+                });
+
+                document.querySelectorAll('.quantity__minus').forEach(button => {
+                    button.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const input = this.parentElement.querySelector('.quantity__input');
+                        let value = parseInt(input.value, 10);
+                        if (value > 1) {
+                            input.value = value - 1;
+                            updateTotals();
+                        }
+                    });
+                });
+
+                // Initial calculation
+                updateTotals();
+            });
         });
     </script>
 
