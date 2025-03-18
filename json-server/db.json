@@ -11378,6 +11378,12 @@
       "product_id": "5",
       "time": "2025-03-18T06:33:48.772Z",
       "quantity": 4
+    },
+    {
+      "id": "cart-1eludkkia",
+      "product_id": "43",
+      "time": "2025-03-18T08:59:18.681Z",
+      "quantity": 1
     }
   ],
   "bill": [
