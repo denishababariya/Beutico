@@ -100,22 +100,6 @@ document.addEventListener("DOMContentLoaded", function () {
             li.appendChild(megaMenuDiv);
             categoryList.appendChild(li);
 
-            // Only hover events
-            // li.addEventListener("mouseenter", function () {
-            //   closeAllMegaMenus();
-            //   li.classList.add("active");
-            //   megaMenuDiv.style.display = "block";
-            //   icon.classList.remove("bi-plus");
-            //   icon.classList.add("bi-dash");
-            // });
-
-            // li.addEventListener("mouseleave", function () {
-            //   li.classList.remove("active");
-            //   megaMenuDiv.style.display = "none";
-            //   icon.classList.remove("bi-dash");
-            //   icon.classList.add("bi-plus");
-            // });
-
             li.addEventListener("click", function () {
               if (megaMenuDiv.style.display === "block") {
                 megaMenuDiv.style.display = "none";
