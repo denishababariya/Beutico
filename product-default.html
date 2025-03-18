@@ -299,7 +299,7 @@
     <div class="shop-details-description mb-110" id="reviews">
         <div class="container-xl container-lg-fluid container">
             <div class="row">
-                <div class="col-12">
+                <div class="col-12" id="nav">
                     <div class="shop-details-description-nav mb-50">
                         <nav>
                             <div class="nav nav-tabs" id="nav-tab" role="tablist">
@@ -505,8 +505,9 @@
     <!-- Swiper slider JS -->
     <script src="/js/swiper-bundle.min.js"></script>
 
-
+    
     <script src="/js/waypoints.min.js"></script>
+    <script src="/js/index.js"></script>
     <script>
         // Fetch product details from API
         const selectedProductId = localStorage.getItem('selectedProductId');
@@ -861,86 +862,86 @@
                 .then(([categories, subcategories, product]) => {
                     createTabs(categories, subcategories, product); // Pass the single product object
                 })
-                .catch(error => console.error('Error fetching data:', error));
+                .catch(error => console.error('Error fetch ing data:', error));
         });
 
-    //     function createTabs(categories, subcategories, product) {
-    //         // Get the tab container
-    //         const tabContent = document.getElementById('nav-tabContent');
-    //         const tabNav = document.querySelector('.nav-tabs'); // Assuming you have a nav-tabs element
+        function createTabs(categories, subcategories, product) {
+            // Get the tab container
+            const tabContent = document.getElementById('#nav nav-tabContent');
+            const tabNav = document.querySelector('#nav .nav-tabs'); // Assuming you have a nav-tabs element
 
-    //         if (!tabContent || !tabNav) {
-    //             console.error('Tab containers not found');
-    //             return;
-    //         }
+            if (!tabContent || !tabNav) {
+                console.error('Tab containers not found');
+                return;
+            }
 
-    //         // Clear existing content
-    //         tabContent.innerHTML = '';
-    //         tabNav.innerHTML = '';
+            // Clear existing content
+            tabContent.innerHTML = '';
+            tabNav.innerHTML = '';
 
-    //         // Create the description tab first (keep it as active initially)
-    //         createDescriptionTab(tabNav, tabContent, product); // Pass the product object
+            // Create the description tab first (keep it as active initially)
+            createDescriptionTab(tabNav, tabContent, product); // Pass the product object
 
-    //         // Create additional info tab
-    //         createAdditionalInfoTab(tabNav, tabContent, product);
+            // Create additional info tab
+            createAdditionalInfoTab(tabNav, tabContent, product);
 
-    //         // Create reviews tab
-    //         createReviewsTab(tabNav, tabContent, product);
+            // Create reviews tab
+            createReviewsTab(tabNav, tabContent, product);
 
-    //         // Create category tabs
-    //         categories.forEach((category, index) => {
-    //             // Filter subcategories for this category
-    //             const categorySubcats = subcategories.filter(sub => sub.cat_id == category.id);
+            // Create category tabs
+            categories.forEach((category, index) => {
+                // Filter subcategories for this category
+                const categorySubcats = subcategories.filter(sub => sub.cat_id == category.id);
 
-    //             // Create tab nav item
-    //             const tabId = `nav-category-${category.id}`;
-    //             const navItem = document.createElement('li');
-    //             navItem.className = 'nav-item';
-    //             navItem.innerHTML = `
-    //   <button class="nav-link" id="${tabId}-tab" data-bs-toggle="tab" 
-    //     data-bs-target="#${tabId}" type="button" role="tab" 
-    //     aria-controls="${tabId}" aria-selected="false">
-    //     ${category.cat_name}
-    //   </button>
-    // `;
-    //             tabNav.appendChild(navItem);
+                // Create tab nav item
+                const tabId = `nav-category-${category.id}`;
+                const navItem = document.createElement('li');
+                navItem.className = 'nav-item';
+                navItem.innerHTML = `
+      <button class="nav-link" id="${tabId}-tab" data-bs-toggle="tab" 
+        data-bs-target="#${tabId}" type="button" role="tab" 
+        aria-controls="${tabId}" aria-selected="false">
+        ${category.cat_name}
+      </button>
+    `;
+                tabNav.appendChild(navItem);
 
-    //             // Create tab content
-    //             const tabPane = document.createElement('div');
-    //             tabPane.className = 'tab-pane fade';
-    //             tabPane.id = tabId;
-    //             tabPane.setAttribute('role', 'tabpanel');
-    //             tabPane.setAttribute('aria-labelledby', `${tabId}-tab`);
+                // Create tab content
+                const tabPane = document.createElement('div');
+                tabPane.className = 'tab-pane fade';
+                tabPane.id = tabId;
+                tabPane.setAttribute('role', 'tabpanel');
+                tabPane.setAttribute('aria-labelledby', `${tabId}-tab`);
 
-    //             // Content for category tab
-    //             let subcatHTML = '<div class="row gy-4">';
-    //             categorySubcats.forEach(subcat => {
-    //                 // Find products for this subcategory
-    //                 const subcatProducts = products.filter(prod => prod.sub_cat_id == subcat.id);
+                // Content for category tab
+                let subcatHTML = '<div class="row gy-4">';
+                categorySubcats.forEach(subcat => {
+                    // Find products for this subcategory
+                    const subcatProducts = products.filter(prod => prod.sub_cat_id == subcat.id);
 
-    //                 subcatHTML += `
-    //     <div class="col-md-4 col-sm-6">
-    //       <div class="subcategory-card">
-    //         <h4>${subcat.sub_name}</h4>
-    //         <p>Products: ${subcatProducts.length}</p>
-    //         <ul>
-    //           ${subcatProducts.slice(0, 3).map(prod =>
-    //                     `<li>${prod.name} - $${prod.price}</li>`
-    //                 ).join('')}
-    //         </ul>
-    //       </div>
-    //     </div>
-    //   `;
-    //             });
-    //             subcatHTML += '</div>';
+                    subcatHTML += `
+        <div class="col-md-4 col-sm-6">
+          <div class="subcategory-card">
+            <h4>${subcat.sub_name}</h4>
+            <p>Products: ${subcatProducts.length}</p>
+            <ul>
+              ${subcatProducts.slice(0, 3).map(prod =>
+                        `<li>${prod.name} - $${prod.price}</li>`
+                    ).join('')}
+            </ul>
+          </div>
+        </div>
+      `;
+                });
+                subcatHTML += '</div>';
 
-    //             tabPane.innerHTML = subcatHTML;
-    //             tabContent.appendChild(tabPane);
-    //         });
+                tabPane.innerHTML = subcatHTML;
+                tabContent.appendChild(tabPane);
+            });
 
-    //         // Initialize Bootstrap tabs if needed
-    //         initializeBootstrapTabs();
-    //     }
+            // Initialize Bootstrap tabs if needed
+            initializeBootstrapTabs();
+        }
 
         function createDescriptionTab(tabNav, tabContent, product) {
             // Create description tab nav item
@@ -993,6 +994,8 @@
         }
 
         function createAdditionalInfoTab(tabNav, tabContent, product) {
+            console.log("jkl",product)
+            
             // Create additional info tab nav item
             const navItem = document.createElement('li');
             navItem.className = 'nav-item';
@@ -1070,9 +1073,8 @@
     </script>
     <!-- main js  -->
     <script src="/js/main.js"></script>
-    <script src="/js/index.js"></script>
-    <script src="/js/footer.js"></script>
     <script src="/js/shop-list.js"></script>
+    <script src="/js/footer.js"></script>
 </body>
 
 <!-- Mirrored from demo-egenslab.b-cdn.net/html/OrnaCare/preview/product-default.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Feb 2025 04:32:13 GMT -->

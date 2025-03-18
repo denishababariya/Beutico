@@ -1938,17 +1938,102 @@ async function fetchCategoryName(cat_id) {
   }
 }
 
-function updatecartcount(){
-  const cartProducts = JSON.parse(localStorage.getItem("cartProducts")) || [];
-  const cartCount = cartProducts.length;
-  const cartCountElement = document.querySelector(".cart-count");
-  if (cartCountElement) {
-    cartCountElement.textContent = cartCount;
+
+document.addEventListener("click", function (event) {
+    if (event.target.classList.contains("add-cart-btn")) {
+      event.preventDefault(); // Prevent default anchor behavior
+      const productId = event.target.getAttribute("data-product-id");
+  
+      // Fetch product details from localStorage or API
+      fetch(`http://localhost:3000/product/${productId}`)
+        .then((response) => response.json())
+        .then((product) => {
+          // Create a unique cart ID
+          const cartId = generateUniqueId(); // Generate a unique ID
+  
+          // Retrieve existing cart items from localStorage
+          let cartProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
+  
+          // Check if the product already exists in the cart
+          const existingCartItem = cartProducts.find(item => item.product_id === product.id);
+          console.log("existingCartItem", existingCartItem);
+  
+  
+          if (existingCartItem) {
+            // Increase the quantity of the existing product in the cart
+            existingCartItem.quantity += 1; // Increase quantity
+            console.log('Product quantity increased in the cart.'); // Log message for quantity increase
+  
+            // Update the cart in the API
+            fetch(`http://localhost:3000/cart/${existingCartItem.id}`, {
+              method: 'PUT',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(existingCartItem) // Send the updated cart item
+            })
+              .then(cartResponse => {
+                if (!cartResponse.ok) {
+                  throw new Error('Failed to update cart');
+                }
+                console.log('Cart updated successfully.');
+              })
+              .catch(error => console.error('Error updating cart:', error));
+          } else {
+            // Create a new cart item
+            const cartItem = {
+              id: cartId, // Add the unique cart ID
+              product_id: product.id,
+              time: new Date().toISOString(), // Current time in ISO format
+              quantity: 1 // Default quantity, can be modified as needed
+            };
+  
+            // Add product to cart API
+            fetch('http://localhost:3000/cart', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(cartItem) // Send the cart item data
+            })
+              .then(cartResponse => {
+                if (!cartResponse.ok) {
+                  throw new Error("Failed to Drop In Basket");
+                }
+                console.log('Product added to cart:', product);
+              })
+              .catch(error => console.error('Error adding to cart:', error));
+            console.log("cartItem", cartItem);
+  
+            // Add the new cart item to localStorage
+            cartProducts.push(cartItem.id);
+            localStorage.setItem('cartProducts', JSON.stringify(cartProducts)); // Store updated array in local storage
+  
+          }
+  
+          // Update the cart count display
+          updateCartCount(); // Call the function to update the cart count
+        })
+        .catch((error) => console.error("Error fetching product:", error));
+    }
+  });
+  
+
+  function updatecartcount(){
+    const cartProducts = JSON.parse(localStorage.getItem("cartProducts")) || [];
+    const cartCount = cartProducts.length;
+    const cartCountElement = document.querySelector(".cart-count");
+    if (cartCountElement) {
+      cartCountElement.textContent = cartCount;
+    }
   }
-}
-
-updatecartcount();
-
+  
+  updatecartcount();
+  
+  function generateUniqueId() {
+    return "cart-" + Math.random().toString(36).substr(2, 9); // Generates a random ID
+  }
+  
 
 
 document.addEventListener("click", async (e) => {
