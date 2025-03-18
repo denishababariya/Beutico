@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   });
-});
+}); 
 
 const apiUrl = "http://localhost:3000/users";
 const currentOTP = "123456"; // Default OTP
@@ -343,47 +343,59 @@ document.addEventListener('DOMContentLoaded', function () {
     const searchTerm = searchInput.value.trim().toLowerCase();
 
     if (searchTerm === '') {
-      console.log('Please enter a search term');
-      return;
+        console.log('Please enter a search term');
+        return;
     }
 
     try {
-      const response = await fetch('http://localhost:3000/product');
-      const products = await response.json();
+        const response = await fetch('http://localhost:3000/product');
+        const products = await response.json();
 
-      // Filter products and get their IDs
-      const searchResults = products.filter(product => {
-        return (
-          (product.name?.toLowerCase()?.includes(searchTerm)) ||
-          (product.description?.toLowerCase()?.includes(searchTerm)) ||
-          (product.category?.toLowerCase()?.includes(searchTerm))
-        );
-      });
+        // Create an array to hold category names
+        const categoryPromises = products.map(async (product) => {
+            // Fetch category name based on cat_id
+            const categoryResponse = await fetch(`http://localhost:3000/category/${product.cat_id}`);
+            const categoryData = await categoryResponse.json();
+            return {
+                ...product,
+                categoryName: categoryData.cat_name // Assuming categoryData has a 'cat_name' field
+            };
+        });
 
-      // Extract IDs from search results
-      const resultIds = searchResults.map(product => product.id);
+        // Wait for all category fetches to complete
+        const productsWithCategories = await Promise.all(categoryPromises);
 
-      // Store search term and result IDs in localStorage
-      localStorage.setItem('searchTerm', searchTerm);
-      localStorage.setItem('searchResultIds', JSON.stringify(resultIds));
+        // Filter products and get their IDs
+        const searchResults = productsWithCategories.filter(product => {
+            return (
+                product.name?.toLowerCase()?.includes(searchTerm) ||
+                product.categoryName?.toLowerCase()?.includes(searchTerm) // Use category name for search
+            );
+        });
 
-      // Clear category and subcategory selections
-      localStorage.removeItem('selectedCategoryId');
-      localStorage.removeItem('selectedSubcategoryId');
+        // Extract IDs from search results
+        const resultIds = searchResults.map(product => product.id);
 
+        // Store search term and result IDs in localStorage
+        localStorage.setItem('searchTerm', searchTerm);
+        localStorage.setItem('searchResultIds', JSON.stringify(resultIds));
 
-      // Log for debugging
-      console.log('Search Results IDs:', resultIds);
-      console.log(`Found ${resultIds.length} products matching "${searchTerm}"`);
-      console.log('Cleared category and subcategory selections');
+        // Clear category and subcategory selections
+        localStorage.removeItem('selectedCategoryId');
+        localStorage.removeItem('selectedSubcategoryId');
 
-      // Redirect to shop-list.html
-      window.location.href = 'shop-list.html';
+        // Log for debugging
+        console.log('Search Results IDs:', resultIds);
+        console.log(`Found ${resultIds.length} products matching "${searchTerm}"`);
+        console.log('Cleared category and subcategory selections');
+
+        // Redirect to shop-list.html
+        window.location.href = 'shop-list.html';
 
     } catch (error) {
-      console.error('Error searching products:', error);
+        console.error('Error searching products:', error);
     }
-  });
+});
 
   // Function to display search results (optional)
 

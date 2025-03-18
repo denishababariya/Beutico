@@ -11353,13 +11353,13 @@
       "id": "cart-kwn7xjvsn",
       "product_id": "60",
       "time": "2025-03-18T04:15:40.835Z",
-      "quantity": 1
+      "quantity": 3
     },
     {
       "id": "cart-o4q4wfxty",
       "product_id": "341",
       "time": "2025-03-18T04:15:47.461Z",
-      "quantity": 1
+      "quantity": 3
     },
     {
       "id": "cart-baciofhqu",
@@ -11371,6 +11371,24 @@
       "id": "cart-onasydqua",
       "product_id": "460",
       "time": "2025-03-18T04:16:08.240Z",
+      "quantity": 1
+    },
+    {
+      "id": "cart-qaep046gh",
+      "product_id": "1",
+      "time": "2025-03-18T06:33:45.439Z",
+      "quantity": 4
+    },
+    {
+      "id": "cart-90jnx1vmg",
+      "product_id": "5",
+      "time": "2025-03-18T06:33:48.772Z",
+      "quantity": 4
+    },
+    {
+      "id": "cart-fgsxfzdk9",
+      "product_id": "60",
+      "time": "2025-03-18T06:46:41.575Z",
       "quantity": 1
     }
   ],
