@@ -223,7 +223,7 @@ async function loginUser() {
       // You can also send this log to your server
       logUserActivity(user.email, "login");
 
-      alert("Login successful!");
+      // alert("Login successful!");
 
       // Transfer wishlist from localStorage to the user's wishlist in the database
       await transferWishlistToUser(user.id);
