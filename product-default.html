@@ -535,23 +535,23 @@
                 priceArea.appendChild(price);
                 productDetailsContainer.appendChild(priceArea);
 
-                // Set default quantity
-                let cartQuantity = 1; // Default quantity if product is not in cart
+                // Set default quantity and check if product exists in cart
+                let cartQuantity = 1; // Default quantity
+                let existingCartItem = null;
 
-                // Check if product exists in cart to get the quantity
                 try {
-                    // Fetch cart items that match the product ID
+                    // Check if product exists in cart
                     const cartResponse = await fetch(`http://localhost:3000/cart?product_id=${data.id}`);
                     const cartItems = await cartResponse.json();
-                    console.log("qqqq", cartItems)
 
+                    // Find the first cart item with this product ID
                     if (cartItems && cartItems.length > 0) {
-                        // Use the quantity from the cart if product exists in cart
-                        cartQuantity = cartItems[0].quantity;
+                        existingCartItem = cartItems[0];
+                        cartQuantity = existingCartItem.quantity;
+                        console.log("Product already in cart with quantity:", cartQuantity);
                     }
                 } catch (error) {
                     console.error("Error fetching cart data:", error);
-                    // If there's an error, fallback to default quantity of 1
                 }
 
                 // Create and append quantity area
@@ -567,7 +567,6 @@
                 quantityCounter.className = 'quantity-counter';
 
                 const formattedQuantity = cartQuantity < 10 ? "0" + cartQuantity : cartQuantity;
-                console.log("----", cartQuantity)
 
                 quantityCounter.innerHTML = `
             <a href="#" class="quantity__minus"><i class='bx bx-minus'></i></a>
@@ -577,15 +576,12 @@
 
                 // Add event listeners for quantity controls
                 quantityCounter.querySelector('.quantity__minus').addEventListener('click', function (e) {
-                    
                     e.preventDefault();
                     const input = this.parentElement.querySelector('.quantity__input');
                     let value = parseInt(input.value);
                     if (value > 1) {
-                        debugger
                         value--;
                         input.value = value < 10 ? "0" + value : value;
-                        localStorage.setItem(`product_${data.id}_quantity`, value);
                     }
                 });
 
@@ -595,7 +591,6 @@
                     let value = parseInt(input.value);
                     value++;
                     input.value = value < 10 ? "0" + value : value;
-                    localStorage.setItem(`product_${data.id}_quantity`, value);
                 });
 
                 // Prevent manual input of invalid values
@@ -605,7 +600,6 @@
                         value = 1;
                     }
                     this.value = value < 10 ? "0" + value : value;
-                    localStorage.setItem(`product_${data.id}_quantity`, value);
                 });
 
                 quantityColorDiv.appendChild(quantityCounter);
@@ -617,44 +611,16 @@
                 shopDetailsBtn.className = 'shop-details-btn';
                 shopDetailsBtn.innerHTML = `
             <a href="#" class="primary-btn1 hover-btn3 add-cart-btn" data-product-id="${data.id}">*Drop in Basket*</a>
-            <a href="#" class="primary-btn1 style-3 hover-btn4 shop-now-btn" data-product-id="${data.id}">*Shop Now*</a>
+            <a href="/checkout.html" class="primary-btn1 style-3 hover-btn4 shop-now-btn" data-product-id="${data.id}">*Shop Now*</a>
         `;
                 productDetailsContainer.appendChild(shopDetailsBtn);
 
-                
-            // Fetch category name and create product info section
-            try {
-                const categoryResponse = await fetch(`http://localhost:3000/category/${data.cat_id}`);
-                const categoryData = await categoryResponse.json();
-
-                // Create product info section
-                const productInfo = document.createElement('div');
-                productInfo.className = 'product-info';
-                
-                productInfo.innerHTML = `
-                    <ul class="product-info-list">
-                        <li><span>SKU:</span> ${data.sku || 'N/A'}</li>
-                        <li><span>Brand:</span> ${data.brand || 'N/A'}</li>
-                        <li>
-                            <span>Category:</span> 
-                        <a href="shop-list.html" onclick="localStorage.setItem('selectedcategoryId', '${data.cat_id}')">${categoryData.cat_name || 'N/A'}</a>
-                        </li>
-                    </ul>
-                `;
-                
-                productDetailsContainer.appendChild(productInfo);
-            } catch (error) {
-                console.error('Error fetching category data:', error);
-            }
-
-
-                // Fetch category name using cat_id
+                // Wishlist functionality
                 const compareWishlistArea = document.createElement('div');
                 compareWishlistArea.className = 'compare-wishlist-area';
                 const compareWishlistList = document.createElement('ul');
                 let userId = localStorage.getItem("user_id");
                 let wishlistProductIds = [];
-                // Get userId and wishlist data
 
                 if (userId) {
                     try {
@@ -670,7 +636,6 @@
                         console.error("Error fetching wishlist:", error);
                     }
                 }
-                console.log("wishlistProductIds", wishlistProductIds);
 
                 const isInWishlist = wishlistProductIds.includes(data.id.toString());
                 const heartSVG = isInWishlist
@@ -706,82 +671,84 @@
 
         // Function to add product to cart with quantity
         function addToCart(productId, quantity) {
-            // Fetch product details from API
-            fetch(`http://localhost:3000/product/${productId}`)
+            // First check if the product already exists in the cart
+            fetch(`http://localhost:3000/cart?product_id=${productId}`)
                 .then(response => response.json())
-                .then(product => {
-                    // Create a unique cart ID
-                    const cartId = generateUniqueId();
+                .then(cartItems => {
+                    if (cartItems && cartItems.length > 0) {
+                        // Product exists in cart, update its quantity
+                        const existingCartItem = cartItems[0];
 
-                    // Retrieve existing cart items from localStorage
-                    let cartProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
+                        // Update quantity
+                        existingCartItem.quantity = quantity;
 
-                    // Check if the product already exists in the cart
-                    const existingCartItemIndex = cartProducts.findIndex(item => item === productId);
-
-                    if (existingCartItemIndex !== -1) {
-                        // Product exists in cart, fetch the cart item to update quantity
-                        fetch(`http://localhost:3000/cart?productid=${productId}`)
-                            .then(response => response.json())
-                            .then(cartItems => {
-                                if (cartItems.length > 0) {
-                                    const existingCartItem = cartItems[0];
-
-                                    // Update quantity
-                                    existingCartItem.quantity = quantity;
-
-                                    // Update the cart in the API
-                                    fetch(`http://localhost:3000/cart/${existingCartItem.id}`, {
-                                        method: 'PUT',
-                                        headers: {
-                                            'Content-Type': 'application/json',
-                                        },
-                                        body: JSON.stringify(existingCartItem)
-                                    })
-                                        .then(response => {
-                                            if (!response.ok) {
-                                                throw new Error('Failed to update cart');
-                                            }
-                                            console.log('Cart updated successfully with new quantity:', quantity);
-                                            updateCartCount();
-                                        })
-                                        .catch(error => console.error('Error updating cart:', error));
-                                }
-                            })
-                            .catch(error => console.error('Error fetching cart items:', error));
-                    } else {
-                        // Create a new cart item
-                        const cartItem = {
-                            id: cartId,
-                            product_id: product.id,
-                            time: new Date().toISOString(),
-                            quantity: quantity // Use the quantity from the product details page
-                        };
-
-                        // Add product to cart API
-                        fetch('http://localhost:3000/cart', {
-                            method: 'POST',
+                        // Update the cart in the API
+                        fetch(`http://localhost:3000/cart/${existingCartItem.id}`, {
+                            method: 'PUT',
                             headers: {
                                 'Content-Type': 'application/json',
                             },
-                            body: JSON.stringify(cartItem)
+                            body: JSON.stringify(existingCartItem)
                         })
                             .then(response => {
                                 if (!response.ok) {
-                                    throw new Error("Failed to Drop In Basket");
+                                    throw new Error('Failed to update cart');
                                 }
-                                console.log('Product added to cart with quantity:', quantity);
+                                console.log('Cart updated successfully with new quantity:', quantity);
 
-                                // Add the new cart item to localStorage
-                                cartProducts.push(cartItem.id);
-                                localStorage.setItem('cartProducts', JSON.stringify(cartProducts));
+                                // Make sure this cart item is in local storage
+                                let cartProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
+                                if (!cartProducts.includes(existingCartItem.id)) {
+                                    cartProducts.push(existingCartItem.id);
+                                    localStorage.setItem('cartProducts', JSON.stringify(cartProducts));
+                                }
 
                                 updateCartCount();
                             })
-                            .catch(error => console.error('Error adding to cart:', error));
+                            .catch(error => console.error('Error updating cart:', error));
+                    } else {
+                        // Product doesn't exist in cart, create a new cart item
+                        fetch(`http://localhost:3000/product/${productId}`)
+                            .then(response => response.json())
+                            .then(product => {
+                                // Create a unique cart ID
+                                const cartId = generateUniqueId();
+
+                                // Create a new cart item
+                                const cartItem = {
+                                    id: cartId,
+                                    product_id: product.id,
+                                    time: new Date().toISOString(),
+                                    quantity: quantity
+                                };
+
+                                // Add product to cart API
+                                fetch('http://localhost:3000/cart', {
+                                    method: 'POST',
+                                    headers: {
+                                        'Content-Type': 'application/json',
+                                    },
+                                    body: JSON.stringify(cartItem)
+                                })
+                                    .then(response => {
+                                        if (!response.ok) {
+                                            throw new Error("Failed to Drop In Basket");
+                                        }
+                                        console.log('Product added to cart with quantity:', quantity);
+
+                                        // Add the new cart item to localStorage
+                                        let cartProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
+                                        cartProducts.push(cartItem.id);
+                                        localStorage.setItem('cartProducts', JSON.stringify(cartProducts));
+
+                                        updateCartCount();
+                                    })
+                                    .catch(error => console.error('Error adding to cart:', error));
+                            })
+                            .catch(error => console.error("Error fetching product:", error));
                     }
                 })
-                .catch(error => console.error("Error fetching product:", error));
+                .catch(error => console.error('Error checking cart:', error));
         }
 
         // Function to generate a unique ID
@@ -897,83 +864,83 @@
                 .catch(error => console.error('Error fetching data:', error));
         });
 
-        function createTabs(categories, subcategories, product) {
-            // Get the tab container
-            const tabContent = document.getElementById('nav-tabContent');
-            const tabNav = document.querySelector('.nav-tabs'); // Assuming you have a nav-tabs element
+    //     function createTabs(categories, subcategories, product) {
+    //         // Get the tab container
+    //         const tabContent = document.getElementById('nav-tabContent');
+    //         const tabNav = document.querySelector('.nav-tabs'); // Assuming you have a nav-tabs element
 
-            if (!tabContent || !tabNav) {
-                console.error('Tab containers not found');
-                return;
-            }
+    //         if (!tabContent || !tabNav) {
+    //             console.error('Tab containers not found');
+    //             return;
+    //         }
 
-            // Clear existing content
-            tabContent.innerHTML = '';
-            tabNav.innerHTML = '';
+    //         // Clear existing content
+    //         tabContent.innerHTML = '';
+    //         tabNav.innerHTML = '';
 
-            // Create the description tab first (keep it as active initially)
-            createDescriptionTab(tabNav, tabContent, product); // Pass the product object
+    //         // Create the description tab first (keep it as active initially)
+    //         createDescriptionTab(tabNav, tabContent, product); // Pass the product object
 
-            // Create additional info tab
-            createAdditionalInfoTab(tabNav, tabContent, product);
+    //         // Create additional info tab
+    //         createAdditionalInfoTab(tabNav, tabContent, product);
 
-            // Create reviews tab
-            createReviewsTab(tabNav, tabContent, product);
+    //         // Create reviews tab
+    //         createReviewsTab(tabNav, tabContent, product);
 
-            // Create category tabs
-            categories.forEach((category, index) => {
-                // Filter subcategories for this category
-                const categorySubcats = subcategories.filter(sub => sub.cat_id == category.id);
+    //         // Create category tabs
+    //         categories.forEach((category, index) => {
+    //             // Filter subcategories for this category
+    //             const categorySubcats = subcategories.filter(sub => sub.cat_id == category.id);
 
-                // Create tab nav item
-                const tabId = `nav-category-${category.id}`;
-                const navItem = document.createElement('li');
-                navItem.className = 'nav-item';
-                navItem.innerHTML = `
-      <button class="nav-link" id="${tabId}-tab" data-bs-toggle="tab" 
-        data-bs-target="#${tabId}" type="button" role="tab" 
-        aria-controls="${tabId}" aria-selected="false">
-        ${category.cat_name}
-      </button>
-    `;
-                tabNav.appendChild(navItem);
+    //             // Create tab nav item
+    //             const tabId = `nav-category-${category.id}`;
+    //             const navItem = document.createElement('li');
+    //             navItem.className = 'nav-item';
+    //             navItem.innerHTML = `
+    //   <button class="nav-link" id="${tabId}-tab" data-bs-toggle="tab" 
+    //     data-bs-target="#${tabId}" type="button" role="tab" 
+    //     aria-controls="${tabId}" aria-selected="false">
+    //     ${category.cat_name}
+    //   </button>
+    // `;
+    //             tabNav.appendChild(navItem);
 
-                // Create tab content
-                const tabPane = document.createElement('div');
-                tabPane.className = 'tab-pane fade';
-                tabPane.id = tabId;
-                tabPane.setAttribute('role', 'tabpanel');
-                tabPane.setAttribute('aria-labelledby', `${tabId}-tab`);
+    //             // Create tab content
+    //             const tabPane = document.createElement('div');
+    //             tabPane.className = 'tab-pane fade';
+    //             tabPane.id = tabId;
+    //             tabPane.setAttribute('role', 'tabpanel');
+    //             tabPane.setAttribute('aria-labelledby', `${tabId}-tab`);
 
-                // Content for category tab
-                let subcatHTML = '<div class="row gy-4">';
-                categorySubcats.forEach(subcat => {
-                    // Find products for this subcategory
-                    const subcatProducts = products.filter(prod => prod.sub_cat_id == subcat.id);
+    //             // Content for category tab
+    //             let subcatHTML = '<div class="row gy-4">';
+    //             categorySubcats.forEach(subcat => {
+    //                 // Find products for this subcategory
+    //                 const subcatProducts = products.filter(prod => prod.sub_cat_id == subcat.id);
 
-                    subcatHTML += `
-        <div class="col-md-4 col-sm-6">
-          <div class="subcategory-card">
-            <h4>${subcat.sub_name}</h4>
-            <p>Products: ${subcatProducts.length}</p>
-            <ul>
-              ${subcatProducts.slice(0, 3).map(prod =>
-                        `<li>${prod.name} - $${prod.price}</li>`
-                    ).join('')}
-            </ul>
-          </div>
-        </div>
-      `;
-                });
-                subcatHTML += '</div>';
+    //                 subcatHTML += `
+    //     <div class="col-md-4 col-sm-6">
+    //       <div class="subcategory-card">
+    //         <h4>${subcat.sub_name}</h4>
+    //         <p>Products: ${subcatProducts.length}</p>
+    //         <ul>
+    //           ${subcatProducts.slice(0, 3).map(prod =>
+    //                     `<li>${prod.name} - $${prod.price}</li>`
+    //                 ).join('')}
+    //         </ul>
+    //       </div>
+    //     </div>
+    //   `;
+    //             });
+    //             subcatHTML += '</div>';
 
-                tabPane.innerHTML = subcatHTML;
-                tabContent.appendChild(tabPane);
-            });
+    //             tabPane.innerHTML = subcatHTML;
+    //             tabContent.appendChild(tabPane);
+    //         });
 
-            // Initialize Bootstrap tabs if needed
-            initializeBootstrapTabs();
-        }
+    //         // Initialize Bootstrap tabs if needed
+    //         initializeBootstrapTabs();
+    //     }
 
         function createDescriptionTab(tabNav, tabContent, product) {
             // Create description tab nav item
