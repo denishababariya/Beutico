@@ -46,8 +46,8 @@ document.addEventListener("DOMContentLoaded", function () {
                             </div>
                             <ul class="widget-list">
                                 <li><a href="contact.html">Help & Contact Us</a></li>
-                                <li><a href="shop-list.html" id="online-stores-link">Online Stores</a></li> <!-- Updated line -->
-                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="shop-list.html" id="online-stores-link">Online Stores</a></li>
+                                <li><a href="/privacyPolicy.html">Privacy Policy</a></li>
                             </ul>
                         </div>
                     </div>
