@@ -3832,6 +3832,7 @@ header.style-2 .nav-right::after {
   padding: 15px;
   transition: 0.5s;
   box-shadow: #f5e6e8 0px 2px 5px;
+  height: 100%;
 }
 
 .product-card .product-card-img {
