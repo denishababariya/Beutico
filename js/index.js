@@ -1,4 +1,3 @@
-
 // header start
 document.addEventListener("DOMContentLoaded", function () {
   fetch("http://localhost:3000/category", {
@@ -87,8 +86,8 @@ document.addEventListener("DOMContentLoaded", function () {
               subA.addEventListener("click", function () {
                 localStorage.setItem("selectedSubcategoryId", sub.id);
                 localStorage.setItem("selectedcategoryId", "");
-                localStorage.removeItem('searchResultIds');
-localStorage.removeItem('searchTerm');
+                localStorage.removeItem("searchResultIds");
+                localStorage.removeItem("searchTerm");
               });
 
               subLi.appendChild(subA);
@@ -103,13 +102,13 @@ localStorage.removeItem('searchTerm');
             li.addEventListener("click", function () {
               if (megaMenuDiv.style.display === "block") {
                 megaMenuDiv.style.display = "none";
-              icon.classList.remove("bi-plus");
-              icon.classList.add("bi-dash");
+                icon.classList.remove("bi-plus");
+                icon.classList.add("bi-dash");
               } else {
                 closeAllMegaMenus();
                 megaMenuDiv.style.display = "block";
-              icon.classList.remove("bi-dash");
-              icon.classList.add("bi-plus");
+                icon.classList.remove("bi-dash");
+                icon.classList.add("bi-plus");
               }
             });
           });
@@ -172,6 +171,53 @@ localStorage.removeItem('searchTerm');
 });
 // header end
 
+// Intercept bootstrap data-api clicks for the product-view modal so the modal
+// is opened with our manual options (backdrop: 'static', keyboard: false).
+// This uses a capture-phase listener to stop Bootstrap's delegated handler.
+document.addEventListener(
+  "click",
+  function (e) {
+    const trigger = e.target.closest(
+      '[data-bs-toggle="modal"][data-bs-target="#product-view"]'
+    );
+    if (trigger) {
+      // Prevent Bootstrap's data-api from handling this click
+      e.preventDefault();
+      e.stopImmediatePropagation();
+
+      // Use data-product-id if present
+      const productId =
+        trigger.dataset.productId || trigger.getAttribute("data-product-id");
+      if (productId) {
+        localStorage.setItem("selectedeyeId", productId);
+      }
+
+      // Ensure modal DOM exists
+      if (!document.getElementById("product-view")) {
+        createProductModal();
+      }
+
+      // Fetch and display product then show modal with static backdrop and no keyboard close
+      try {
+        if (productId) fetchAndDisplayProduct(productId);
+      } catch (err) {
+        // function may not be available yet; swallow silently
+        console.error("Error fetching product for modal trigger:", err);
+      }
+
+      const modalEl = document.getElementById("product-view");
+      if (modalEl) {
+        const productModal = new bootstrap.Modal(modalEl, {
+          backdrop: "static",
+          keyboard: false,
+        });
+        productModal.show();
+      }
+    }
+  },
+  true
+);
+
 // popular categories
 document.addEventListener("DOMContentLoaded", function () {
   // Fetch categories
@@ -229,17 +275,15 @@ document.addEventListener("DOMContentLoaded", function () {
         categoryCard.addEventListener("click", () => {
           localStorage.setItem("selectedSubcategoryId", ""); // Set to blank
           localStorage.setItem("selectedcategoryId", category.id); // Store category ID
-          localStorage.removeItem('searchResultIds');
-localStorage.removeItem('searchTerm');
-      });
+          localStorage.removeItem("searchResultIds");
+          localStorage.removeItem("searchTerm");
+        });
       });
     })
     .catch((error) =>
       console.error("There was a problem with the fetch operation:", error)
     );
 });
-
-
 
 document.addEventListener("DOMContentLoaded", async function () {
   // Fetch user ID from local storage
@@ -343,8 +387,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
           const cartAreaDiv = document.createElement("div");
           cartAreaDiv.className = "cart-area";
-          cartAreaDiv.innerHTML =
-            `<a href="#" class="hover-btn3 add-cart-btn" data-product-id="${product.id}"><i class="bi bi-bag-check"></i> Drop in Basket</a>`; // Use backticks for template literals
+          cartAreaDiv.innerHTML = `<a href="#" class="hover-btn3 add-cart-btn" data-product-id="${product.id}"><i class="bi bi-bag-check"></i> Drop in Basket</a>`; // Use backticks for template literals
 
           overlayDiv.appendChild(cartAreaDiv);
           productCardImg.appendChild(overlayDiv);
@@ -369,21 +412,21 @@ document.addEventListener("DOMContentLoaded", async function () {
 
           // Updated to include the class for wishlist functionality
           viewFavoriteDiv.innerHTML = `
-                    <ul>
-                <li>
-    <a href="#" class="wishlist-btn" data-product-id="${product.id}">
-        ${heartSVG}
-    </a>
+          <ul>
+        <li>
+  <a href="#" class="wishlist-btn" data-product-id="${product.id}">
+    ${heartSVG}
+  </a>
 </li>
-                <li>
-                    <a href="#" class="product-view-btn" data-bs-toggle="modal" data-bs-target="#product-view" data-product-id="${product.id}">
-    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
-        <path d="M21.8601 10.5721C21.6636 10.3032 16.9807 3.98901 10.9999 3.98901C5.019 3.98901 0.335925 10.3032 0.139601 10.5718C0.0488852 10.6961 0 10.846 0 10.9999C0 11.1537 0.0488852 11.3036 0.139601 11.4279C0.335925 11.6967 5.019 18.011 10.9999 18.011C16.9807 18.011 21.6636 11.6967 21.8601 11.4281C21.951 11.3039 21.9999 11.154 21.9999 11.0001C21.9999 10.8462 21.951 10.6963 21.8601 10.5721ZM10.9999 16.5604C6.59432 16.5604 2.77866 12.3696 1.64914 10.9995C2.77719 9.62823 6.58487 5.43955 10.9999 5.43955C15.4052 5.43955 19.2206 9.62969 20.3506 11.0005C19.2225 12.3717 15.4149 16.5604 10.9999 16.5604Z" />
-        <path d="M10.9999 6.64832C8.60039 6.64832 6.64819 8.60051 6.64819 11C6.64819 13.3994 8.60039 15.3516 10.9999 15.3516C13.3993 15.3516 15.3515 13.3994 15.3515 11C15.3515 8.60051 13.3993 6.64832 10.9999 6.64832ZM10.9999 13.9011C9.40013 13.9011 8.09878 12.5997 8.09878 11C8.09878 9.40029 9.40017 8.0989 10.9999 8.0989C12.5995 8.0989 13.9009 9.40029 13.9009 11C13.9009 12.5997 12.5996 13.9011 10.9999 13.9011Z" />
-    </svg>
+        <li>
+          <a href="#" class="product-view-btn" data-product-id="${product.id}">
+  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+    <path d="M21.8601 10.5721C21.6636 10.3032 16.9807 3.98901 10.9999 3.98901C5.019 3.98901 0.335925 10.3032 0.139601 10.5718C0.0488852 10.6961 0 10.846 0 10.9999C0 11.1537 0.0488852 11.3036 0.139601 11.4279C0.335925 11.6967 5.019 18.011 10.9999 18.011C16.9807 18.011 21.6636 11.6967 21.8601 11.4281C21.951 11.3039 21.9999 11.154 21.9999 11.0001C21.9999 10.8462 21.951 10.6963 21.8601 10.5721ZM10.9999 16.5604C6.59432 16.5604 2.77866 12.3696 1.64914 10.9995C2.77719 9.62823 6.58487 5.43955 10.9999 5.43955C15.4052 5.43955 19.2206 9.62969 20.3506 11.0005C19.2225 12.3717 15.4149 16.5604 10.9999 16.5604Z" />
+    <path d="M10.9999 6.64832C8.60039 6.64832 6.64819 8.60051 6.64819 11C6.64819 13.3994 8.60039 15.3516 10.9999 15.3516C13.3993 15.3516 15.3515 13.3994 15.3515 11C15.3515 8.60051 13.3993 6.64832 10.9999 6.64832ZM10.9999 13.9011C9.40013 13.9011 8.09878 12.5997 8.09878 11C8.09878 9.40029 9.40017 8.0989 10.9999 8.0989C12.5995 8.0989 13.9009 9.40029 13.9009 11C13.9009 12.5997 12.5996 13.9011 10.9999 13.9011Z" />
+  </svg>
 </a>
-                </li>
-              </ul>`;
+        </li>
+        </ul>`;
 
           productCardImg.appendChild(viewFavoriteDiv);
           productCard.appendChild(productCardImg);
@@ -391,8 +434,9 @@ document.addEventListener("DOMContentLoaded", async function () {
           const productCardContent = document.createElement("div");
           productCardContent.className = "product-card-content";
           productCardContent.innerHTML = `
-                    <h6><a href="product-default.html" class="hover-underline" onclick="localStorage.setItem('selectedProductId', '${product.id}')">${product.name
-            }</a></h6>
+                    <h6><a href="product-default.html" class="hover-underline" onclick="localStorage.setItem('selectedProductId', '${
+                      product.id
+                    }')">${product.name}</a></h6>
                     <p><a href="shop-list.html">${product.brand}</a></p>
                 <p class="price">$${product.price.toFixed(2)}</p>
                 
@@ -417,12 +461,15 @@ document.addEventListener("DOMContentLoaded", async function () {
             if (!document.getElementById("product-view")) {
               createProductModal();
             }
-            
+
             // Then fetch and display product data
             fetchAndDisplayProduct(productId);
-            
-            // Finally show the modal
-            const productModal = new bootstrap.Modal(document.getElementById("product-view"));
+
+            // Finally show the modal (disable backdrop and Esc-close)
+            const productModal = new bootstrap.Modal(
+              document.getElementById("product-view"),
+              { backdrop: "static", keyboard: false }
+            );
             productModal.show();
           });
         });
@@ -439,7 +486,6 @@ document.addEventListener("DOMContentLoaded", async function () {
 // end rental products
 
 // new releas
-
 
 document.addEventListener("DOMContentLoaded", async function () {
   try {
@@ -497,9 +543,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
       console.log(isInWishlist, "isInWishlist");
 
-
       const heartSVG = isInWishlist
-      
         ? `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
       <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="red" stroke="red" stroke-width="2"/>
     </svg>`
@@ -531,8 +575,8 @@ document.addEventListener("DOMContentLoaded", async function () {
                     ${heartSVG}
                   </a>
                 </li>
-                <li>
-                    <a href="#" class="product-view-btn" data-bs-toggle="modal" data-bs-target="#product-view" data-product-id="${product.id}">
+        <li>
+          <a href="#" class="product-view-btn" data-product-id="${product.id}">
                         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
                             <path d="M21.8601 10.5721C21.6636 10.3032 16.9807 3.98901 10.9999 3.98901C5.019 3.98901 0.335925 10.3032 0.139601 10.5718C0.0488852 10.6961 0 10.846 0 10.9999C0 11.1537 0.0488852 11.3036 0.139601 11.4279C0.335925 11.6967 5.019 18.011 10.9999 18.011C16.9807 18.011 21.6636 11.6967 21.8601 11.4281C21.951 11.3039 21.9999 11.154 21.9999 11.0001C21.9999 10.8462 21.951 10.6963 21.8601 10.5721ZM10.9999 16.5604C6.59432 16.5604 2.77866 12.3696 1.64914 10.9995C2.77719 9.62823 6.58487 5.43955 10.9999 5.43955C15.4052 5.43955 19.2206 9.62969 20.3506 11.0005C19.2225 12.3717 15.4149 16.5604 10.9999 16.5604Z" />
                             <path d="M10.9999 6.64832C8.60039 6.64832 6.64819 8.60051 6.64819 11C6.64819 13.3994 8.60039 15.3516 10.9999 15.3516C13.3993 15.3516 15.3515 13.3994 15.3515 11C15.3515 8.60051 13.3993 6.64832 10.9999 6.64832ZM10.9999 13.9011C9.40013 13.9011 8.09878 12.5997 8.09878 11C8.09878 9.40029 9.40017 8.0989 10.9999 8.0989C12.5995 8.0989 13.9009 9.40029 13.9009 11C13.9009 12.5997 12.5996 13.9011 10.9999 13.9011Z" />
@@ -563,12 +607,15 @@ document.addEventListener("DOMContentLoaded", async function () {
         if (!document.getElementById("product-view")) {
           createProductModal();
         }
-        
+
         // Then fetch and display product data
         fetchAndDisplayProduct(productId);
-        
-        // Finally show the modal
-        const productModal = new bootstrap.Modal(document.getElementById("product-view"));
+
+        // Finally show the modal (disable backdrop and Esc-close)
+        const productModal = new bootstrap.Modal(
+          document.getElementById("product-view"),
+          { backdrop: "static", keyboard: false }
+        );
         productModal.show();
       });
     });
@@ -631,7 +678,6 @@ const selectedProductId3 = localStorage.getItem("selectedProductId");
 //               const productItem = document.createElement("div");
 //               productItem.className = "swiper-slide";
 //               const isInWishlist = wishlistProductIds.includes(product.id.toString());
-
 
 //               // Create heart SVG based on wishlist status
 //               const heartSVG = isInWishlist
@@ -717,37 +763,46 @@ const selectedProductId3 = localStorage.getItem("selectedProductId");
 //       );
 //   });
 
-
 // Fetch product details
 async function fetchAndDisplayRelatedProducts() {
   try {
-    const response = await fetch(`http://localhost:3000/product/${selectedProductId3}`);
+    const response = await fetch(
+      `http://localhost:3000/product/${selectedProductId3}`
+    );
     const data = await response.json();
     console.log(data, "product1");
 
     // Fetch category name using cat_id
-    const categoryResponse = await fetch(`http://localhost:3000/category/${data.cat_id}`);
+    const categoryResponse = await fetch(
+      `http://localhost:3000/category/${data.cat_id}`
+    );
     const categoryData = await categoryResponse.json();
-        console.log(categoryData, "categoryData");
+    console.log(categoryData, "categoryData");
 
-        // Fetch products in the same category
-    const productsResponse = await fetch(`http://localhost:3000/product?cat_id=${data.cat_id}`);
+    // Fetch products in the same category
+    const productsResponse = await fetch(
+      `http://localhost:3000/product?cat_id=${data.cat_id}`
+    );
     const categoryProducts = await productsResponse.json();
-            console.log(categoryProducts, "categoryProducts");
+    console.log(categoryProducts, "categoryProducts");
 
-            // Create and append related products section
+    // Create and append related products section
     const relatedProductsContainer = document.getElementById("x_pd_card");
-            relatedProductsContainer.innerHTML = "";
+    relatedProductsContainer.innerHTML = "";
     let userId = localStorage.getItem("user_id");
     let wishlistProductIds = [];
 
     if (userId) {
       try {
-        const wishlistResponse = await fetch(`http://localhost:3000/wishlist?userId=${userId}`);
+        const wishlistResponse = await fetch(
+          `http://localhost:3000/wishlist?userId=${userId}`
+        );
         const wishlistData = await wishlistResponse.json();
 
         // Get productIds from wishlist where userId matches
-        const userWishlist = wishlistData.find(item => item.userId === userId);
+        const userWishlist = wishlistData.find(
+          (item) => item.userId === userId
+        );
         if (userWishlist && userWishlist.productId) {
           wishlistProductIds = userWishlist.productId;
         }
@@ -757,13 +812,13 @@ async function fetchAndDisplayRelatedProducts() {
     }
 
     console.log("wishlistProductIds", wishlistProductIds);
-            // Shuffle the categoryProducts array
-            categoryProducts.sort(() => 0.5 - Math.random());
-            // Select the first 8 products
-            const randomProducts = categoryProducts.slice(0, 8);
-            randomProducts.forEach((product) => {
-              const productItem = document.createElement("div");
-              productItem.className = "swiper-slide";
+    // Shuffle the categoryProducts array
+    categoryProducts.sort(() => 0.5 - Math.random());
+    // Select the first 8 products
+    const randomProducts = categoryProducts.slice(0, 8);
+    randomProducts.forEach((product) => {
+      const productItem = document.createElement("div");
+      productItem.className = "swiper-slide";
       const isInWishlist = wishlistProductIds.includes(product.id.toString());
 
       // Create heart SVG based on wishlist status
@@ -777,7 +832,7 @@ async function fetchAndDisplayRelatedProducts() {
             </g>
           </svg>`;
 
-              productItem.innerHTML = `
+      productItem.innerHTML = `
                                 <div class="product-card hover-btn">
                                     <div class="product-card-img">
                                         <a href="product-default.html?id=${product.id}">
@@ -798,8 +853,8 @@ async function fetchAndDisplayRelatedProducts() {
                                 ${heartSVG}
                                                     </a>
                                                 </li>
-                                                <li>
-                                                     <a href="#" class="product-view-btn" data-bs-toggle="modal" data-bs-target="#product-view" data-product-id="${product.id}">
+                                        <li>
+                                          <a href="#" class="product-view-btn" data-product-id="${product.id}">
     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
         <path d="M21.8601 10.5721C21.6636 10.3032 16.9807 3.98901 10.9999 3.98901C5.019 3.98901 0.335925 10.3032 0.139601 10.5718C0.0488852 10.6961 0 10.846 0 10.9999C0 11.1537 0.0488852 11.3036 0.139601 11.4279C0.335925 11.6967 5.019 18.011 10.9999 18.011C16.9807 18.011 21.6636 11.6967 21.8601 11.4281C21.951 11.3039 21.9999 11.154 21.9999 11.0001C21.9999 10.8462 21.951 10.6963 21.8601 10.5721ZM10.9999 16.5604C6.59432 16.5604 2.77866 12.3696 1.64914 10.9995C2.77719 9.62823 6.58487 5.43955 10.9999 5.43955C15.4052 5.43955 19.2206 9.62969 20.3506 11.0005C19.2225 12.3717 15.4149 16.5604 10.9999 16.5604Z" />
         <path d="M10.9999 6.64832C8.60039 6.64832 6.64819 8.60051 6.64819 11C6.64819 13.3994 8.60039 15.3516 10.9999 15.3516C13.3993 15.3516 15.3515 13.3994 15.3515 11C15.3515 8.60051 13.3993 6.64832 10.9999 6.64832ZM10.9999 13.9011C9.40013 13.9011 8.09878 12.5997 8.09878 11C8.09878 9.40029 9.40017 8.0989 10.9999 8.0989C12.5995 8.0989 13.9009 9.40029 13.9009 11C13.9009 12.5997 12.5996 13.9011 10.9999 13.9011Z" />
@@ -817,30 +872,32 @@ async function fetchAndDisplayRelatedProducts() {
                                     <span class="for-border"></span>
                             </div>
                             `;
-              relatedProductsContainer.appendChild(productItem);
-            });
+      relatedProductsContainer.appendChild(productItem);
+    });
 
     // Add event listeners to product view buttons
-            document.querySelectorAll(".product-view-btn").forEach((button) => {
-              button.addEventListener("click", function () {
-                const productId = this.getAttribute("data-product-id");
-                localStorage.setItem("selectedeyeId", productId);
-                console.log("Product ID stored:", productId);
+    document.querySelectorAll(".product-view-btn").forEach((button) => {
+      button.addEventListener("click", function () {
+        const productId = this.getAttribute("data-product-id");
+        localStorage.setItem("selectedeyeId", productId);
+        console.log("Product ID stored:", productId);
 
-                // First create the modal if it doesn't exist
-                if (!document.getElementById("product-view")) {
-                  createProductModal();
-                }
-                
-                // Then fetch and display product data
-                fetchAndDisplayProduct(productId);
-                
-                // Finally show the modal
-                const productModal = new bootstrap.Modal(document.getElementById("product-view"));
-                productModal.show();
-              });
-            });
+        // First create the modal if it doesn't exist
+        if (!document.getElementById("product-view")) {
+          createProductModal();
+        }
 
+        // Then fetch and display product data
+        fetchAndDisplayProduct(productId);
+
+        // Finally show the modal (disable backdrop and Esc-close)
+        const productModal = new bootstrap.Modal(
+          document.getElementById("product-view"),
+          { backdrop: "static", keyboard: false }
+        );
+        productModal.show();
+      });
+    });
   } catch (error) {
     console.error("Error in fetchAndDisplayRelatedProducts:", error);
   }
@@ -850,15 +907,12 @@ async function fetchAndDisplayRelatedProducts() {
 fetchAndDisplayRelatedProducts();
 // end releted
 
-
-
 // start model
 
 document.addEventListener("DOMContentLoaded", () => {
   // Check if 'selectedeyeId' is available in localStorage
   const selectedeyeId = localStorage.getItem("selectedeyeId");
   console.log(selectedeyeId);
-  
 
   if (selectedeyeId) {
     console.log(selectedeyeId, "selectedeyeId");
@@ -932,7 +986,6 @@ function createProductModal() {
                   
                  <div class="shop-details-btn">
       <a href="shop-list.html" class="primary-btn1 hover-btn3 ">*Shop Now*</a>
-      <a href="#" class="primary-btn1 style-3 hover-btn4 add-cart-btn" >*Drop in Basket*</a>
     </div>
     <ul style="display: flex;flex-wrap: wrap-;padding: 20px 0px;gap:30px;">
             
@@ -983,14 +1036,14 @@ function createProductModal() {
   initializeModal();
 
   // Add event listeners for modal events
-  modal.addEventListener('hidden.bs.modal', function () {
+  modal.addEventListener("hidden.bs.modal", function () {
     removeBackdrops();
   });
 }
 
 // Add these new functions
 function removeBackdrops() {
-  document.querySelectorAll('.modal-backdrop').forEach(backdrop => {
+  document.querySelectorAll(".modal-backdrop").forEach((backdrop) => {
     backdrop.remove();
   });
 }
@@ -1045,20 +1098,10 @@ function initializeModal() {
     });
   }
 
-  // Add click event listener for backdrop
-  document.addEventListener('click', function (e) {
-    const modal = document.getElementById("product-view");
-    if (modal && !modal.contains(e.target) && e.target.classList.contains('modal')) {
-      handleModalClose();
-    }
-  });
-
-  // Add escape key listener
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') {
-      handleModalClose();
-    }
-  });
+  // Do NOT close modal on backdrop click or Escape key.
+  // Bootstrap modal is instantiated with { backdrop: 'static', keyboard: false } when shown,
+  // so we only wire the explicit close button to close the modal.
+  // (Leave global handlers out to avoid accidental closing of modal on outside click/Escape.)
 }
 
 // Function to fetch product data and update modal
@@ -1066,21 +1109,27 @@ async function fetchAndDisplayProduct(selectedeyeId) {
   try {
     const response = await fetch("http://localhost:3000/product");
     const products = await response.json();
-    const product = products.find(p => p.id.toString() === selectedeyeId.toString());
+    const product = products.find(
+      (p) => p.id.toString() === selectedeyeId.toString()
+    );
     // console.log(product,"product");
-    alert("dvxxcdx")
+    alert("dvxxcdx");
 
     if (product) {
       // Update modal content
       document.querySelector(".product-title").textContent = product.name;
-      document.querySelector(".product-description").textContent = product.description;
-      document.querySelector(".current-price").textContent = product.price.toFixed(2);
-      document.querySelector(".original-price").textContent = (product.price * 1.2).toFixed(2);
+      document.querySelector(".product-description").textContent =
+        product.description;
+      document.querySelector(".current-price").textContent =
+        product.price.toFixed(2);
+      document.querySelector(".original-price").textContent = (
+        product.price * 1.2
+      ).toFixed(2);
       document.querySelector(".sku-value").textContent = product.sku;
       document.querySelector(".brand-value").textContent = product.brand;
       // document.querySelector(".category-value").textContent = product.category;
       document.querySelector(".main-product-img").src = product.images[0];
-      
+
       // Set product ID on add-cart-btn
       // fetchAndDisplayProduct function માં add કરો
       const addCartBtn = document.querySelector(".add-cart-btn");
@@ -1221,16 +1270,18 @@ function createSliderProduct(product) {
           </div>
           <div class="product-card-img">
             <a href="shop-list.html">
-              <img src="${product.images[3]}" class="d_suggest_img" alt="${product.name
-    }" />
+              <img src="${product.images[3]}" class="d_suggest_img" alt="${
+    product.name
+  }" />
             </a>
            
           </div>
           <div class="product-card-content product_text">
             <p><a href="shop-list.html">${product.brand}</a></p>
             <h6>
-              <a href="product-default.html" class="hover-underline" onclick="localStorage.setItem('selectedProductId', '${product.id}')">${product.name
-    }</a>
+              <a href="product-default.html" class="hover-underline" onclick="localStorage.setItem('selectedProductId', '${
+                product.id
+              }')">${product.name}</a>
             </h6>
             <span>$${product.price.toFixed(2)}</span>
             
@@ -1263,20 +1314,24 @@ function createProductCard(product) {
           <div class="batch">
             <span>NEW</span>
           </div>
-          <div class="product-card-img ${product.images.length > 1 ? "double-img" : ""
-    }">
+          <div class="product-card-img ${
+            product.images.length > 1 ? "double-img" : ""
+          }">
             <a href="shop-list.html">
-              <img src="${product.images[0]}" alt="${product.name}" ${product.images.length > 1 ? 'class="img1"' : ""
-    } />
-              ${product.images.length > 1
-      ? `<img src="${product.images[1]}" alt="${product.name}" class="img2" />`
-      : ""
-    }
+              <img src="${product.images[0]}" alt="${product.name}" ${
+    product.images.length > 1 ? 'class="img1"' : ""
+  } />
+              ${
+                product.images.length > 1
+                  ? `<img src="${product.images[1]}" alt="${product.name}" class="img2" />`
+                  : ""
+              }
             </a>
             <div class="cart-btn-area">
               <div class="cart-btn">
-                <a href="cart.html" class="add-cart-btn2 add-cart-btn round hover-btn5" data-product-id="${product.id
-    }">
+                <a href="cart.html" class="add-cart-btn2 add-cart-btn round hover-btn5" data-product-id="${
+                  product.id
+                }">
                   <i class="bi bi-bag-check"></i> Drop in Basket
                 </a>
               </div>
@@ -1284,10 +1339,13 @@ function createProductCard(product) {
             
           </div>
           <div class="product-card-content">
-            <p><a href="shop-list.html" onclick="localStorage.setItem('selectedProductId', '${product.id}')">${product.brand}</a></p>
+            <p><a href="shop-list.html" onclick="localStorage.setItem('selectedProductId', '${
+              product.id
+            }')">${product.brand}</a></p>
             <h6>
-              <a href="product-default.html" class="hover-underline" >${product.name
-    }</a>
+              <a href="product-default.html" class="hover-underline" >${
+                product.name
+              }</a>
             </h6>
             <span>$${product.price.toFixed(2)}</span>
             
@@ -1308,9 +1366,9 @@ function createProductGrid(products) {
         <div class="col-lg-3">
           <div class="row g-4">
             ${regularProducts
-      .slice(0, 2)
-      .map((product) => createProductCard(product))
-      .join("")}
+              .slice(0, 2)
+              .map((product) => createProductCard(product))
+              .join("")}
           </div>
         </div>
         <div class="col-lg-6 position-relative">
@@ -1318,12 +1376,12 @@ function createProductGrid(products) {
             <div class="swiper sg-slider">
               <div class="swiper-wrapper">
                 ${featuredProducts
-      .map((product) => createSliderProduct(product))
-      .join("")}
+                  .map((product) => createSliderProduct(product))
+                  .join("")}
                 ${regularProducts
-      .slice(2) // Add remaining regular products to the Swiper
-      .map((product) => createSliderProduct(product))
-      .join("")}
+                  .slice(2) // Add remaining regular products to the Swiper
+                  .map((product) => createSliderProduct(product))
+                  .join("")}
               </div>
             </div>
             <div class="sg-slider-btn">
@@ -1339,9 +1397,9 @@ function createProductGrid(products) {
         <div class="col-lg-3">
           <div class="row g-4">
             ${regularProducts
-      .slice(4, 6)
-      .map((product) => createProductCard(product))
-      .join("")}
+              .slice(4, 6)
+              .map((product) => createProductCard(product))
+              .join("")}
           </div>
         </div>
       </div>
@@ -1353,7 +1411,7 @@ function createProductGrid(products) {
 // ... existing code ...
 function initializeSwiper() {
   // Destroy existing swiper instance if it exists
-  const existingSwiper = document.querySelector('.sg-slider')?.swiper;
+  const existingSwiper = document.querySelector(".sg-slider")?.swiper;
   if (existingSwiper) {
     existingSwiper.destroy();
   }
@@ -1372,31 +1430,31 @@ function initializeSwiper() {
     },
     on: {
       slideChange: function () {
-    document.querySelectorAll('.swiper-slide').forEach(slide => {
-      slide.classList.remove('active');
-    });
-    
-    const activeSlide = document.querySelector('.swiper-slide-active');
-    if (activeSlide) {
-      activeSlide.classList.add('active');
+        document.querySelectorAll(".swiper-slide").forEach((slide) => {
+          slide.classList.remove("active");
+        });
+
+        const activeSlide = document.querySelector(".swiper-slide-active");
+        if (activeSlide) {
+          activeSlide.classList.add("active");
         }
-      }
-    }
+      },
+    },
   });
-  
+
   return swiper;
 }
 
 // Make sure to call this function after your DOM is loaded
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
   const swiper = initializeSwiper();
-  
+
   // You can also manually add event listeners if needed
-  document.querySelector('.sg-next-btn').addEventListener('click', function () {
+  document.querySelector(".sg-next-btn").addEventListener("click", function () {
     swiper.slideNext();
   });
-  
-  document.querySelector('.sg-prev-btn').addEventListener('click', function () {
+
+  document.querySelector(".sg-prev-btn").addEventListener("click", function () {
     swiper.slidePrev();
   });
 });
@@ -1480,11 +1538,15 @@ document.addEventListener("DOMContentLoaded", async function () {
       // If we have userId, get the wishlist data
       if (userId) {
         try {
-          const wishlistResponse = await fetch(`http://localhost:3000/wishlist?userId=${userId}`);
+          const wishlistResponse = await fetch(
+            `http://localhost:3000/wishlist?userId=${userId}`
+          );
           const wishlistData = await wishlistResponse.json();
 
           // Get productIds from wishlist where userId matches
-          const userWishlist = wishlistData.find(item => item.userId === userId);
+          const userWishlist = wishlistData.find(
+            (item) => item.userId === userId
+          );
           if (userWishlist && userWishlist.productId) {
             wishlistProductIds = userWishlist.productId;
           }
@@ -1495,14 +1557,16 @@ document.addEventListener("DOMContentLoaded", async function () {
       console.log("wishlistProductIds", wishlistProductIds);
 
       // Filter products based on category/subcategory/search
-            let filteredProducts = products;
+      let filteredProducts = products;
       let selectedSubcategoryId = localStorage.getItem("selectedSubcategoryId");
       let selectedcategoryId = localStorage.getItem("selectedcategoryId");
-      let searchResultIds = JSON.parse(localStorage.getItem("searchResultIds") || "[]");
+      let searchResultIds = JSON.parse(
+        localStorage.getItem("searchResultIds") || "[]"
+      );
       let selectedOption = localStorage.getItem("priceSort");
-      
+
       if (searchResultIds.length > 0) {
-        filteredProducts = products.filter(product => 
+        filteredProducts = products.filter((product) =>
           searchResultIds.includes(product.id.toString())
         );
       } else if (selectedcategoryId === "7") {
@@ -1521,10 +1585,14 @@ document.addEventListener("DOMContentLoaded", async function () {
 
       switch (selectedOption) {
         case "LowToHigh":
-          filteredProducts.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
+          filteredProducts.sort(
+            (a, b) => parseFloat(a.price) - parseFloat(b.price)
+          );
           break;
         case "HighToLow":
-          filteredProducts.sort((a, b) => parseFloat(b.price) - parseFloat(a.price));
+          filteredProducts.sort(
+            (a, b) => parseFloat(b.price) - parseFloat(a.price)
+          );
           break;
         default:
           // Keep default order
@@ -1535,7 +1603,6 @@ document.addEventListener("DOMContentLoaded", async function () {
       filteredProducts.forEach((product) => {
         // Check if product is in wishlist
         const isInWishlist = wishlistProductIds.includes(product.id.toString());
-
 
         // Create heart SVG based on wishlist status
         const heartSVG = isInWishlist
@@ -1555,12 +1622,16 @@ document.addEventListener("DOMContentLoaded", async function () {
                   <a href="shop-list.html">
                     <img src="${product.images[0]}" alt="${product.name}">
                     <div class="batch">
-                <span>${product.discount ? "-" + product.discount + "%" : "0%"}</span>
+                <span>${
+                  product.discount ? "-" + product.discount + "%" : "0%"
+                }</span>
                     </div>
                   </a>
                   <div class="overlay">
                     <div class="cart-area">
-                <a href="cart.html" class="hover-btn3 add-cart-btn" data-product-id="${product.id}">
+                <a href="cart.html" class="hover-btn3 add-cart-btn" data-product-id="${
+                  product.id
+                }">
                   <i class="bi bi-bag-check"></i> Drop in Basket
                 </a>
                     </div>
@@ -1568,12 +1639,16 @@ document.addEventListener("DOMContentLoaded", async function () {
                   <div class="view-and-favorite-area">
                     <ul>
                       <li>
-                  <a href="#" class="wishlist-btn" data-product-id="${product.id}">
+                  <a href="#" class="wishlist-btn" data-product-id="${
+                    product.id
+                  }">
                     ${heartSVG}
                         </a>
                       </li>
-                      <li>
-                         <a href="#" class="product-view-btn" data-bs-toggle="modal" data-bs-target="#product-view" data-product-id="${product.id}">
+               <li>
+                 <a href="#" class="product-view-btn" data-product-id="${
+                   product.id
+                 }">
     <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
                       <path d="M21.8601 10.5721C21.6636 10.3032 16.9807 3.98901 10.9999 3.98901C5.019 3.98901 0.335925 10.3032 0.139601 10.5718C0.0488852 10.6961 0 10.846 0 10.9999C0 11.1537 0.0488852 11.3036 0.139601 11.4279C0.335925 11.6967 5.019 18.011 10.9999 18.011C16.9807 18.011 21.6636 11.6967 21.8601 11.4281C21.951 11.3039 21.9999 11.154 21.9999 11.0001C21.9999 10.8462 21.951 10.6963 21.8601 10.5721ZM10.9999 16.5604C6.59432 16.5604 2.77866 12.3696 1.64914 10.9995C2.77719 9.62823 6.58487 5.43955 10.9999 5.43955C15.4052 5.43955 19.2206 9.62969 20.3506 11.0005C19.2225 12.3717 15.4149 16.5604 10.9999 16.5604Z"/>
                       <path d="M10.9999 6.64832C8.60039 6.64832 6.64819 8.60051 6.64819 11C6.64819 13.3994 8.60039 15.3516 10.9999 15.3516C13.3993 15.3516 15.3515 13.3994 15.3515 11C15.3515 8.60051 13.3993 6.64832 10.9999 6.64832ZM10.9999 13.9011C9.40013 13.9011 8.09878 12.5997 8.09878 11C8.09878 9.40029 9.40017 8.0989 10.9999 8.0989C12.5995 8.0989 13.9009 9.40029 13.9009 11C13.9009 12.5997 12.5996 13.9011 10.9999 13.9011Z"/>
@@ -1584,7 +1659,9 @@ document.addEventListener("DOMContentLoaded", async function () {
                   </div>
                 </div>
                 <div class="product-card-content">
-                  <h6><a href="product-default.html" class="hover-underline" onclick="localStorage.setItem('selectedProductId', '${product.id}')">${product.name}</a></h6>
+                  <h6><a href="product-default.html" class="hover-underline" onclick="localStorage.setItem('selectedProductId', '${
+                    product.id
+                  }')">${product.name}</a></h6>
                   <p><a href="shop-list.html">${product.brand}</a></p>
             <p class="price">$${product.price}</p>
                   <span class="for-border"></span>
@@ -1595,8 +1672,6 @@ document.addEventListener("DOMContentLoaded", async function () {
         container.innerHTML += productCard;
       });
 
-
-
       // Add event listeners for product view buttons
       document.querySelectorAll(".product-view-btn").forEach((button) => {
         button.addEventListener("click", function () {
@@ -1606,10 +1681,13 @@ document.addEventListener("DOMContentLoaded", async function () {
           if (!document.getElementById("product-view")) {
             createProductModal();
           }
-          
+
           fetchAndDisplayProduct(productId);
-          
-          const productModal = new bootstrap.Modal(document.getElementById("product-view"));
+
+          const productModal = new bootstrap.Modal(
+            document.getElementById("product-view"),
+            { backdrop: "static", keyboard: false }
+          );
           productModal.show();
         });
       });
@@ -1621,21 +1699,21 @@ document.addEventListener("DOMContentLoaded", async function () {
       const selectedSubcategoryId = localStorage.getItem(
         "selectedSubcategoryId"
       );
-      const selectedcategoryId = localStorage.getItem(
-        "selectedcategoryId"
-      );
-      
+      const selectedcategoryId = localStorage.getItem("selectedcategoryId");
+
       // Get search result IDs from localStorage if available
-      const searchResultIds = JSON.parse(localStorage.getItem("searchResultIds") || "[]");
+      const searchResultIds = JSON.parse(
+        localStorage.getItem("searchResultIds") || "[]"
+      );
 
       let selectedOption = localStorage.getItem("priceSort");
-      
+
       // Updated filtering logic for pagination
       let filteredProducts = data;
-      
+
       if (searchResultIds && searchResultIds.length > 0) {
         // Filter products by the IDs in searchResultIds array
-        filteredProducts = data.filter(product => 
+        filteredProducts = data.filter((product) =>
           searchResultIds.includes(product.id.toString())
         );
       } else if (selectedcategoryId === "7") {
@@ -1656,10 +1734,14 @@ document.addEventListener("DOMContentLoaded", async function () {
       }
       switch (selectedOption) {
         case "LowToHigh":
-          filteredProducts.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
+          filteredProducts.sort(
+            (a, b) => parseFloat(a.price) - parseFloat(b.price)
+          );
           break;
         case "HighToLow":
-          filteredProducts.sort((a, b) => parseFloat(b.price) - parseFloat(a.price));
+          filteredProducts.sort(
+            (a, b) => parseFloat(b.price) - parseFloat(a.price)
+          );
           break;
         default:
           // Keep default order
@@ -1779,7 +1861,10 @@ document.addEventListener("DOMContentLoaded", async function () {
         paginationContainer.appendChild(nextPageItem);
       }
       const startProduct = (currentPage - 1) * productsPerPage + 1;
-      const endProduct = Math.min(currentPage * productsPerPage, filteredLength);
+      const endProduct = Math.min(
+        currentPage * productsPerPage,
+        filteredLength
+      );
 
       const productCountInfo = document.querySelector(".product-count-info");
       if (productCountInfo) {
@@ -1792,7 +1877,6 @@ document.addEventListener("DOMContentLoaded", async function () {
     console.error("Error fetching data:", error);
   }
 });
-
 
 // end shop product
 
@@ -1824,23 +1908,26 @@ document.addEventListener("DOMContentLoaded", async function fetchReviews() {
                   <div class="say-about-card-top">
                       <ul>
                           ${'<li><i class="bi bi-star-fill"></i></li>'.repeat(
-        review.rating || 0
-      )}
+                            review.rating || 0
+                          )}
                       </ul>
                   </div>
                   <p>"${review.review || "No review text available"}"</p>
                   <div class="say-about-card-bottom">
                       <div class="author-area">
                           <div class="author-img">
-                              <img src="${review.author?.image || "default-avatar.png"
-        }" 
-                                   alt="${review.author?.name || "Anonymous"
-        }" />
+                              <img src="${
+                                review.author?.image || "default-avatar.png"
+                              }" 
+                                   alt="${
+                                     review.author?.name || "Anonymous"
+                                   }" />
                           </div>
                           <div class="author">
                               <h5>${review.author?.name || "Anonymous"}</h5>
-                              <p>${review.author?.date || "No date available"
-        }</p>
+                              <p>${
+                                review.author?.date || "No date available"
+                              }</p>
                           </div>
                       </div>
                   </div>
@@ -1868,12 +1955,15 @@ document.querySelectorAll(".product-view-btn").forEach((button) => {
     if (!document.getElementById("product-view")) {
       createProductModal();
     }
-    
+
     // Then fetch and display product data
     fetchAndDisplayProduct(productId);
-    
-    // Finally show the modal
-    const productModal = new bootstrap.Modal(document.getElementById("product-view"));
+
+    // Finally show the modal (disable backdrop and Esc-close)
+    const productModal = new bootstrap.Modal(
+      document.getElementById("product-view"),
+      { backdrop: "static", keyboard: false }
+    );
     productModal.show();
   });
 });
@@ -1901,9 +1991,13 @@ async function fetchAndDisplayProduct(selectedeyeId) {
     if (product) {
       // Update modal content with the fetched product data
       document.querySelector(".product-title").textContent = product.name;
-      document.querySelector(".product-description").textContent = product.description;
-      document.querySelector(".current-price").textContent = product.price.toFixed(2);
-      document.querySelector(".original-price").textContent = (product.price * 1.2).toFixed(2);
+      document.querySelector(".product-description").textContent =
+        product.description;
+      document.querySelector(".current-price").textContent =
+        product.price.toFixed(2);
+      document.querySelector(".original-price").textContent = (
+        product.price * 1.2
+      ).toFixed(2);
       document.querySelector(".sku-value").textContent = product.sku;
       document.querySelector(".brand-value").textContent = product.brand;
       document.querySelector(".main-product-img").src = product.images[0];
@@ -1938,7 +2032,6 @@ async function fetchCategoryName(cat_id) {
   }
 }
 
-
 document.addEventListener("click", function (event) {
   if (event.target.classList.contains("add-cart-btn")) {
     event.preventDefault(); // Prevent default anchor behavior
@@ -1952,63 +2045,64 @@ document.addEventListener("click", function (event) {
         const cartId = generateUniqueId(); // Generate a unique ID
 
         // Retrieve existing cart items from localStorage
-        let cartProducts = JSON.parse(localStorage.getItem('cartProducts')) || [];
+        let cartProducts =
+          JSON.parse(localStorage.getItem("cartProducts")) || [];
 
         // Check if the product already exists in the cart
-        const existingCartItem = cartProducts.find(item => item.product_id === product.id);
+        const existingCartItem = cartProducts.find(
+          (item) => item.product_id === product.id
+        );
         console.log("existingCartItem", existingCartItem);
-
 
         if (existingCartItem) {
           // Increase the quantity of the existing product in the cart
           existingCartItem.quantity += 1; // Increase quantity
-          console.log('Product quantity increased in the cart.'); // Log message for quantity increase
+          console.log("Product quantity increased in the cart."); // Log message for quantity increase
 
           // Update the cart in the API
           fetch(`http://localhost:3000/cart/${existingCartItem.id}`, {
-            method: 'PUT',
+            method: "PUT",
             headers: {
-              'Content-Type': 'application/json',
+              "Content-Type": "application/json",
             },
-            body: JSON.stringify(existingCartItem) // Send the updated cart item
+            body: JSON.stringify(existingCartItem), // Send the updated cart item
           })
-            .then(cartResponse => {
+            .then((cartResponse) => {
               if (!cartResponse.ok) {
-                throw new Error('Failed to update cart');
+                throw new Error("Failed to update cart");
               }
-              console.log('Cart updated successfully.');
+              console.log("Cart updated successfully.");
             })
-            .catch(error => console.error('Error updating cart:', error));
+            .catch((error) => console.error("Error updating cart:", error));
         } else {
           // Create a new cart item
           const cartItem = {
             id: cartId, // Add the unique cart ID
             product_id: product.id,
             time: new Date().toISOString(), // Current time in ISO format
-            quantity: 1 // Default quantity, can be modified as needed
+            quantity: 1, // Default quantity, can be modified as needed
           };
 
           // Add product to cart API
-          fetch('http://localhost:3000/cart', {
-            method: 'POST',
+          fetch("http://localhost:3000/cart", {
+            method: "POST",
             headers: {
-              'Content-Type': 'application/json',
+              "Content-Type": "application/json",
             },
-            body: JSON.stringify(cartItem) // Send the cart item data
+            body: JSON.stringify(cartItem), // Send the cart item data
           })
-            .then(cartResponse => {
+            .then((cartResponse) => {
               if (!cartResponse.ok) {
                 throw new Error("Failed to Drop In Basket");
               }
-              console.log('Product added to cart:', product);
+              console.log("Product added to cart:", product);
             })
-            .catch(error => console.error('Error adding to cart:', error));
+            .catch((error) => console.error("Error adding to cart:", error));
           console.log("cartItem", cartItem);
 
           // Add the new cart item to localStorage
           cartProducts.push(cartItem.id);
-          localStorage.setItem('cartProducts', JSON.stringify(cartProducts)); // Store updated array in local storage
-
+          localStorage.setItem("cartProducts", JSON.stringify(cartProducts)); // Store updated array in local storage
         }
 
         // Update the cart count display
@@ -2018,23 +2112,20 @@ document.addEventListener("click", function (event) {
   }
 });
 
-
-  function updatecartcount(){
-    const cartProducts = JSON.parse(localStorage.getItem("cartProducts")) || [];
-    const cartCount = cartProducts.length;
-    const cartCountElement = document.querySelector(".cart-count");
-    if (cartCountElement) {
-      cartCountElement.textContent = cartCount;
-    }
+function updatecartcount() {
+  const cartProducts = JSON.parse(localStorage.getItem("cartProducts")) || [];
+  const cartCount = cartProducts.length;
+  const cartCountElement = document.querySelector(".cart-count");
+  if (cartCountElement) {
+    cartCountElement.textContent = cartCount;
   }
-  
-  updatecartcount();
-  
+}
+
+updatecartcount();
+
 function generateUniqueId() {
   return "cart-" + Math.random().toString(36).substr(2, 9); // Generates a random ID
 }
-  
-
 
 document.addEventListener("click", async (e) => {
   if (e.target.closest(".wishlist-btn")) {
@@ -2173,11 +2264,10 @@ async function transferWishlistToUser(userId) {
   }
 }
 
-
-// wishlist 
+// wishlist
 
 async function checkUser() {
-  const userId = localStorage.getItem('user_id');
+  const userId = localStorage.getItem("user_id");
   if (!userId) {
     // Open login modal if user_id does not exist
     openLoginModal();
@@ -2190,13 +2280,13 @@ async function checkUser() {
 
       if (data) {
         // Redirect if user exists
-        window.location.href = 'whistlist.html'; // Replace with your actual redirect URL
+        window.location.href = "whistlist.html"; // Replace with your actual redirect URL
       } else {
         // Open login modal if user does not exist
         openLoginModal();
       }
     } catch (error) {
-      console.error('Error checking user:', error);
+      console.error("Error checking user:", error);
       // Open login modal on error
       openLoginModal();
     }
@@ -2211,8 +2301,7 @@ document.querySelectorAll(".save-btn a").forEach((button) => {
   });
 });
 
-
-// wishlist page data 
+// wishlist page data
 // ... existing code ...
 
 // ... existing code ...
@@ -2226,7 +2315,9 @@ async function displayWishlistProducts() {
 
   try {
     // Fetch wishlist data for the user
-    const wishlistResponse = await fetch(`http://localhost:3000/wishlist?userId=${userId}`);
+    const wishlistResponse = await fetch(
+      `http://localhost:3000/wishlist?userId=${userId}`
+    );
     const wishlistData = await wishlistResponse.json();
 
     if (!Array.isArray(wishlistData) || wishlistData.length === 0) {
@@ -2239,13 +2330,15 @@ async function displayWishlistProducts() {
     const allProducts = await productsResponse.json();
 
     // Filter products based on the IDs in the wishlist
-    const wishlistProducts = allProducts.filter(product => productIds.includes(product.id));
+    const wishlistProducts = allProducts.filter((product) =>
+      productIds.includes(product.id)
+    );
 
     // Display the products in the desired format
     const container = document.getElementById("wishlist-container"); // Ensure you have a container in your HTML
     container.innerHTML = ""; // Clear existing content
 
-    wishlistProducts.forEach(product => {
+    wishlistProducts.forEach((product) => {
       const productRow = `
               <tr>
                   <td>
@@ -2258,8 +2351,11 @@ async function displayWishlistProducts() {
                           <img src="${product.images[0]}" alt="${product.name}">
                       </div>
                       <div class="product-content">
-                          <h6><a href="product-default.html?id=${product.id}" onclick="localStorage.setItem('selectedProductId', '${product.id
-        }')">${product.name}</a></h6>
+                          <h6><a href="product-default.html?id=${
+                            product.id
+                          }" onclick="localStorage.setItem('selectedProductId', '${
+        product.id
+      }')">${product.name}</a></h6>
                       </div>
                   </td>
                   <td data-label="Price">
@@ -2270,11 +2366,13 @@ async function displayWishlistProducts() {
                   </td>
               
                   <td>
-                      <a href="cart.html" class="add-cart-btn hover-btn2" data-product-id="${product.id}"><i class="bi bi-bag-check"></i>Drop in Basket</a>
+                      <a href="cart.html" class="add-cart-btn hover-btn2" data-product-id="${
+                        product.id
+                      }"><i class="bi bi-bag-check"></i>Drop in Basket</a>
                   </td>
               </tr>
           `;
-      container.insertAdjacentHTML('beforeend', productRow); // Insert the new row into the table
+      container.insertAdjacentHTML("beforeend", productRow); // Insert the new row into the table
     });
   } catch (error) {
     console.error("Error fetching wishlist products:", error);
@@ -2286,7 +2384,9 @@ document.addEventListener("DOMContentLoaded", displayWishlistProducts);
 document.addEventListener("click", async (event) => {
   if (event.target.closest(".delete-icon")) {
     const productRow = event.target.closest("tr"); // Get the closest row
-    const productId = event.target.closest(".delete-icon").getAttribute("data-id"); // Get product ID directly from data-id attribute
+    const productId = event.target
+      .closest(".delete-icon")
+      .getAttribute("data-id"); // Get product ID directly from data-id attribute
     // Log the product ID
 
     const userId = localStorage.getItem("user_id"); // Get user ID from local storage
@@ -2294,13 +2394,17 @@ document.addEventListener("click", async (event) => {
     if (userId) {
       try {
         // Fetch the user's wishlist
-        const wishlistResponse = await fetch(`http://localhost:3000/wishlist?userId=${userId}`);
+        const wishlistResponse = await fetch(
+          `http://localhost:3000/wishlist?userId=${userId}`
+        );
         const wishlistData = await wishlistResponse.json();
 
         if (wishlistData.length > 0) {
           const userWishlist = wishlistData[0];
 
-          const updatedProductIds = userWishlist.productId.filter(id => id !== productId); // Remove the product ID
+          const updatedProductIds = userWishlist.productId.filter(
+            (id) => id !== productId
+          ); // Remove the product ID
 
           // Update the wishlist in the API
           if (updatedProductIds.length > 0) {
@@ -2334,65 +2438,77 @@ document.addEventListener("click", async (event) => {
 // redirect shop-list search
 
 async function searchProductByName(productName) {
-    try {
-        const response = await fetch("http://localhost:3000/product");
-        const products = await response.json();
-        
-        // If search input is empty, return all products
-        if (!productName.trim()) {
-            console.log("No search term - showing all products:", products);
-            return products;
-        }
-        
-        // Filter products based on the name if search term exists
-        const relatedProducts = products.filter(product => 
-            product.name.toLowerCase().includes(productName.toLowerCase())
-        );
+  try {
+    const response = await fetch("http://localhost:3000/product");
+    const products = await response.json();
 
-        console.log("Related Products:", relatedProducts);
-        return relatedProducts;
-    } catch (error) {
-        console.error("Error fetching products:", error);
-        return []; // Return empty array in case of error
+    // If search input is empty, return all products
+    if (!productName.trim()) {
+      console.log("No search term - showing all products:", products);
+      return products;
     }
+
+    // Filter products based on the name if search term exists
+    const relatedProducts = products.filter((product) =>
+      product.name.toLowerCase().includes(productName.toLowerCase())
+    );
+
+    console.log("Related Products:", relatedProducts);
+    return relatedProducts;
+  } catch (error) {
+    console.error("Error fetching products:", error);
+    return []; // Return empty array in case of error
+  }
 }
 
 // Add event listener to the submit button
-document.querySelector(".form-inner2 button[type='submit']").addEventListener("click", async function (event) {
+document
+  .querySelector(".form-inner2 button[type='submit']")
+  .addEventListener("click", async function (event) {
     event.preventDefault(); // Prevent the default form submission
-    
+
     // Get the input value
-    const productName = document.querySelector(".form-inner2 input[type='text']").value;
-    
+    const productName = document.querySelector(
+      ".form-inner2 input[type='text']"
+    ).value;
+
     // Get filtered or all products based on search term
     const products = await searchProductByName(productName);
 
-     // Redirect to shop-list.html
-     window.location.href = 'shop-list.html';
-    
+    // Redirect to shop-list.html
+    window.location.href = "shop-list.html";
+
     // Get the container where products will be displayed
     const container = document.getElementById("productContainer");
-    
+
     // Clear existing products
     container.innerHTML = "";
-    
+
     // Display products or "no results" message
     if (products.length > 0) {
-        products.forEach(product => {
-            // Create product card HTML
-            const productCard = `
+      products.forEach((product) => {
+        // Create product card HTML
+        const productCard = `
                 <div class="col-lg-3 col-md-4 col-sm-6 item">
                     <div class="product-card st768pxyle-3 hover-btn">
                         <div class="product-card-img">
                             <a href="shop-list.html">
-                                <img src="${product.images[0]}" alt="${product.name}">
+                                <img src="${product.images[0]}" alt="${
+          product.name
+        }">
                                 <div class="batch">
-                                    <span>${product.discount ? "-" + product.discount + "%" : "0%"}</span>
+                                    <span>${
+                                      product.discount
+                                        ? "-" + product.discount + "%"
+                                        : "0%"
+                                    }</span>
                                 </div>
                             </a>
                             <div class="overlay">
                                 <div class="cart-area">
-                                    <a href="cart.html" class="hover-btn3 add-cart-btn" data-product-id="${product.id}">
+                                    <a href="cart.html" class="hover-btn3 add-cart-btn" data-product-id="${
+                                      product.id
+                                    }">
                                         <i class="bi bi-bag-check"></i> Drop in Basket
                                     </a>
                                 </div>
@@ -2400,7 +2516,9 @@ document.querySelector(".form-inner2 button[type='submit']").addEventListener("c
                             <div class="view-and-favorite-area">
                                 <ul>
                                     <li>
-                                        <a href="whistlist.html" class="wishlist-btn" data-product-id="${product.id}">
+                                        <a href="whistlist.html" class="wishlist-btn" data-product-id="${
+                                          product.id
+                                        }">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13">
                                                 <g clip-path="url(#clip0_1106_270)">
                                                     <path d="M11.1281 2.35735C10.8248 2.03132 10.4577 1.77117 10.0496 1.59305C9.64144 1.41493 9.20104 1.32266 8.75574 1.32197C8.31008 1.32248 7.86929 1.41462 7.46073 1.59266C7.05218 1.7707 6.6846 2.03084 6.38081 2.35692L6.17153 2.57807L5.96225 2.35692C4.74378 1.04552 2.69289 0.970207 1.38151 2.18868C1.32339 2.24269 1.26727 2.29881 1.21326 2.35692C-0.0793057 3.75111 -0.0793057 5.90577 1.21326 7.29996L5.86398 12.2044C6.02488 12.3743 6.29301 12.3816 6.46288 12.2207C6.46844 12.2154 6.47385 12.21 6.47911 12.2044L11.1281 7.29996C12.4206 5.90592 12.4206 3.75139 11.1281 2.35735Z"/>
@@ -2408,8 +2526,10 @@ document.querySelector(".form-inner2 button[type='submit']").addEventListener("c
                                             </svg>
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="#" class="product-view-btn" data-bs-toggle="modal" data-bs-target="#product-view" data-product-id="${product.id}">
+                  <li>
+                    <a href="#" class="product-view-btn" data-product-id="${
+                      product.id
+                    }">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
                                                 <path d="M21.8601 10.5721C21.6636 10.3032 16.9807 3.98901 10.9999 3.98901C5.019 3.98901 0.335925 10.3032 0.139601 10.5718C0.0488852 10.6961 0 10.846 0 10.9999C0 11.1537 0.0488852 11.3036 0.139601 11.4279C0.335925 11.6967 5.019 18.011 10.9999 18.011C16.9807 18.011 21.6636 11.6967 21.8601 11.4281C21.951 11.3039 21.9999 11.154 21.9999 11.0001C21.9999 10.8462 21.951 10.6963 21.8601 10.5721ZM10.9999 16.5604C6.59432 16.5604 2.77866 12.3696 1.64914 10.9995C2.77719 9.62823 6.58487 5.43955 10.9999 5.43955C15.4052 5.43955 19.2206 9.62969 20.3506 11.0005C19.2225 12.3717 15.4149 16.5604 10.9999 16.5604Z"/>
                                                 <path d="M10.9999 6.64832C8.60039 6.64832 6.64819 8.60051 6.64819 11C6.64819 13.3994 8.60039 15.3516 10.9999 15.3516C13.3993 15.3516 15.3515 13.3994 15.3515 11C15.3515 8.60051 13.3993 6.64832 10.9999 6.64832ZM10.9999 13.9011C9.40013 13.9011 8.09878 12.5997 8.09878 11C8.09878 9.40029 9.40017 8.0989 10.9999 8.0989C12.5995 8.0989 13.9009 9.40029 13.9009 11C13.9009 12.5997 12.5996 13.9011 10.9999 13.9011Z"/>
@@ -2421,7 +2541,9 @@ document.querySelector(".form-inner2 button[type='submit']").addEventListener("c
                         </div>
                         <div class="product-card-content">
                             <h6>
-                                <a href="product-default.html" class="hover-underline" onclick="localStorage.setItem('selectedProductId', '${product.id}')">${product.name}</a>
+                                <a href="product-default.html" class="hover-underline" onclick="localStorage.setItem('selectedProductId', '${
+                                  product.id
+                                }')">${product.name}</a>
                             </h6>
                             <p><a href="shop-list.html">${product.brand}</a></p>
                             <p class="price">$${product.price.toFixed(2)}</p>
@@ -2430,19 +2552,19 @@ document.querySelector(".form-inner2 button[type='submit']").addEventListener("c
                     </div>
                 </div>
             `;
-            container.innerHTML += productCard;
-        });
+        container.innerHTML += productCard;
+      });
     } else {
-        // Display "no results found" message
-        container.innerHTML = `
+      // Display "no results found" message
+      container.innerHTML = `
             <div class="col-12 text-center">
                 <h3>No products found matching your search.</h3>
             </div>
         `;
     }
-});
+  });
 
-// Top-bar 
+// Top-bar
 // ... existing code ...
 // ... existing code ...
 // ... existing code ...
